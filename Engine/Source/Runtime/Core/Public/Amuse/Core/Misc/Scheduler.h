@@ -187,6 +187,7 @@ namespace Amuse::Core {
 		std::exception_ptr m_exception;
 	};
 
+	//! @cond
 	namespace Internal {
 		enum class ScheduleNodeKind {
 			Task,
@@ -210,6 +211,7 @@ namespace Amuse::Core {
 			ScheduleNodeRef to; //!< 依存先ノード
 		};
 	}
+	//! @endcond
 
 	class ScheduleSet;
 	class TaskGroup;

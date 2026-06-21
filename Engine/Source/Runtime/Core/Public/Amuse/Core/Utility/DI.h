@@ -55,6 +55,7 @@ namespace Amuse::Core {
     };
 
 
+    //! @cond
     namespace Internal {
 
         // remove_cvr_t
@@ -182,6 +183,7 @@ namespace Amuse::Core {
         using Factory = FactoryBase<T, arg_list<T>>;
 
     }
+    //! @endcond
 
 
     //! @brief 生成可能なサービス型 T を登録する。
@@ -263,6 +265,7 @@ namespace Amuse::Core {
         Func<T*()>      m_getter;
     };
 
+    //! @cond
     namespace Internal {
 
         //! @brief 型消去されたサービスインスタンス保持クラスの基底。
@@ -298,6 +301,7 @@ namespace Amuse::Core {
         };
 
     }
+    //! @endcond
 
 
     //! @brief 生成済みサービスの寿命と型インデックスを管理するコンテナ。

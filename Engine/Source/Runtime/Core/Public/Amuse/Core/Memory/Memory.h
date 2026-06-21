@@ -30,6 +30,7 @@ namespace Amuse::Core {
 
 
 
+    //! @cond
     namespace Internal {
 
 		//! @brief メモリシステムの初期化
@@ -61,5 +62,6 @@ namespace Amuse::Core {
         };
 
     }
+    //! @endcond
 
 }

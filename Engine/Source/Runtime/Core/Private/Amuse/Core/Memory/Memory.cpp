@@ -121,6 +121,7 @@ namespace Amuse::Core {
         return s_memoryUsage;
     }
 
+    //! @cond
     namespace Internal {
 
         void InitMemory() {
@@ -135,5 +136,6 @@ namespace Amuse::Core {
         }
 
     }
+    //! @endcond
 
 }
