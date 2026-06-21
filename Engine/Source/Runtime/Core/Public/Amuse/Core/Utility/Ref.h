@@ -1,0 +1,437 @@
+﻿//***********************************************************
+//! @file
+//! @author		Gajumaru
+//***********************************************************
+#pragma once
+#include <Amuse/Core/CorePrivate.h>
+#include <Amuse/Core/Reflection/Type.h>
+#include <Amuse/Core/Thread/Atomic.h>
+
+//! @cond
+
+#define AMUSE_SAFE_RETAIN(p)								\
+    {													\
+        if (p) {										\
+            reinterpret_cast<RefObject*>(p)->retain();	\
+        }												\
+    }
+
+#define AMUSE_SAFE_RELEASE(p)								\
+    {													\
+        if (p) {										\
+            reinterpret_cast<RefObject*>(p)->release(); \
+            (p) = nullptr;								\
+        }												\
+    }
+
+//! @endcond
+
+namespace Amuse::Core {
+
+	//! @brief		参照カウントオブジェクト
+	//! @details	std::shared_ptr と異なり、参照カウントが0になったときの処理を
+	//!				カスタマイズ可能です。
+	class RefObject {
+		template<class T> friend class Ref;
+	protected:
+
+		//! @brief		コンストラクタ
+		//! @details	RefObjectを直接構築することは禁止されています。
+		RefObject();
+
+		//! @brief		デストラクタ
+		virtual ~RefObject();
+
+		//! @brief		参照カウントが0になったときの処理
+		//! @details	デフォルトでは自オブジェクトの解放を行います。
+		//!				オーバーロードする場合は解放漏れに注意してください。
+		virtual void finalize();
+
+	private:
+
+		RefObject(const RefObject&) = delete;
+		void operator=(const RefObject&) = delete;
+
+		void retain();
+		void release();
+
+	private:
+		Atomic<s32> m_referenceCount{ 0 };
+	};
+
+	//! @brief  RefObject 用スマートポインタ
+	template<class T>
+	class Ref {
+	public:
+
+		//! @brief	空の Ref を構築 
+		constexpr Ref() noexcept;
+
+		//! @brief	空の Ref を構築 
+		constexpr Ref(std::nullptr_t) noexcept;
+
+		//! @brief	生ポインタから構築 
+		Ref(T* ptr);
+
+		//! @brief	コピーコンストラクタ
+		Ref(const Ref& ref) noexcept;
+
+		//! @brief	コピーコンストラクタ
+		template<class Y>
+		Ref(const Ref<Y>& ref) noexcept;
+
+		//! @brief	ムーブコンストラクタ
+		Ref(Ref&& ref) noexcept;
+
+		//! @brief	ムーブコンストラクタ
+		template<class Y>
+		Ref(Ref<Y>&& ref) noexcept;
+
+		//! @brief	デストラクタ
+		~Ref();
+
+		//! @brief	コピー代入
+		Ref& operator=(const Ref& ref) noexcept;
+
+		//! @brief	コピー代入
+		template<class Y>
+		Ref& operator=(const Ref<Y>& ref) noexcept;
+
+		//! @brief	ムーブ代入
+		Ref& operator=(Ref&& ref) noexcept;
+
+		//! @brief	ムーブ代入
+		template<class Y>
+		Ref& operator=(Ref<Y>&& ref) noexcept;
+
+		//! @brief	ポインタを間接参照する
+		T& operator*() const noexcept;
+
+		//! @brief	ポインタアクセス 
+		T* operator->() const noexcept;
+
+		//! @brief	有効なポインタを保持しているか 
+		explicit operator bool() const noexcept;
+
+		//! @brief	解放
+		void reset();
+
+		//! @brief	2つの Ref オブジェクトを入れ替える
+		void swap(Ref<T>& other) noexcept;
+
+		//! @brief	保持しているオブジェクトへのポインタを取得 
+		T* get() const;
+
+		//! @brief	オブジェクトのポインタへの変換をサポート
+		//! @note   ここでコンパイルエラーとなる場合、T の定義があるヘッダファイルを include しているか確認すること。
+		operator T* () const;
+
+		//! @brief	派生クラスへキャスト
+		template<class Y>
+		auto cast() const->std::enable_if_t<std::is_base_of_v<T, Y>, Y*>;
+
+	private:
+		RefObject* m_ptr = nullptr;
+	};
+
+
+
+
+
+
+	//===============================================================
+	// インライン関数
+	//===============================================================
+	//! @cond
+
+	//! @brief	空の Ref を構築 
+	template<class T>
+	constexpr Ref<T>::Ref() noexcept
+	{
+	}
+
+	//! @brief	空の Ref を構築 
+	template<class T>
+	constexpr Ref<T>::Ref(std::nullptr_t) noexcept
+	{
+	}
+
+	//! @brief	生ポインタから構築 
+	template<class T>
+	Ref<T>::Ref(T* ptr)
+	{
+		m_ptr = ptr;
+		AMUSE_SAFE_RETAIN(m_ptr);
+	}
+
+	//! @brief	コピーコンストラクタ
+	template<class T>
+	Ref<T>::Ref(const Ref& ref) noexcept
+	{
+		m_ptr = ref.m_ptr;
+		AMUSE_SAFE_RETAIN(m_ptr);
+	}
+
+	//! @brief	コピーコンストラクタ
+	template<class T>
+	template<class Y>
+	Ref<T>::Ref(const Ref<Y>& ref) noexcept
+	{
+		T* obj = ref.get();   // 暗黙変換チェック
+		m_ptr = obj;
+		AMUSE_SAFE_RETAIN(m_ptr);
+	}
+
+	//! @brief	ムーブコンストラクタ
+	template<class T>
+	Ref<T>::Ref(Ref&& ref) noexcept
+	{
+		m_ptr = ref.m_ptr;
+		ref.m_ptr = nullptr;
+	}
+
+	//! @brief	ムーブコンストラクタ
+	template<class T>
+	template<class Y>
+	Ref<T>::Ref(Ref<Y>&& ref) noexcept
+	{
+		// Ref<T>からRef<T>::m_ptrにアクセスできないので参照カウンタの増減を挟む
+		T* obj = ref.get();   // 暗黙変換チェック
+		m_ptr = obj;
+		AMUSE_SAFE_RETAIN(m_ptr);
+		ref.reset();
+	}
+
+	//! @brief	デストラクタ
+	template<class T>
+	Ref<T>::~Ref()
+	{
+		AMUSE_SAFE_RELEASE(m_ptr);
+	}
+
+	//! @brief	コピー代入
+	template<class T>
+	Ref<T>& Ref<T>::operator=(const Ref<T>& ref) noexcept
+	{
+		if (m_ptr != ref.m_ptr) {
+			AMUSE_SAFE_RETAIN(ref.m_ptr);
+			AMUSE_SAFE_RELEASE(m_ptr);
+			m_ptr = ref.m_ptr;
+		}
+		return *this;
+	}
+
+	//! @brief	コピー代入
+	template<class T>
+	template<class Y>
+	Ref<T>& Ref<T>::operator=(const Ref<Y>& ref) noexcept
+	{
+		T* obj = ref.get();   // 暗黙変換チェック
+		if (m_ptr != obj) {
+			AMUSE_SAFE_RETAIN(obj);
+			AMUSE_SAFE_RELEASE(m_ptr);
+			m_ptr = obj;
+		}
+		return *this;
+	}
+
+	//! @brief	ムーブ代入
+	template<class T>
+	Ref<T>& Ref<T>::operator=(Ref&& ref) noexcept
+	{
+		if (m_ptr != ref.m_ptr) {
+			AMUSE_SAFE_RELEASE(m_ptr);
+			m_ptr = ref.m_ptr;
+			ref.m_ptr = nullptr;
+		}
+		return *this;
+	}
+
+	//! @brief	ムーブ代入
+	template<class T>
+	template<class Y>
+	Ref<T>& Ref<T>::operator=(Ref<Y>&& ref) noexcept
+	{
+		// Ref<T>からRef<T>::m_ptrにアクセスできないので参照カウンタの増減を挟む
+		reset();
+		m_ptr = ref.get();
+		ref.reset();
+		return *this;
+	}
+
+	//! @brief	ポインタを間接参照する
+	template<class T>
+	T& Ref<T>::operator*() const noexcept
+	{
+		AMUSE_ASSERT(m_ptr != nullptr,"空の{}にアクセスしました", Type::Get<T>().name());
+		return *reinterpret_cast<T*>(m_ptr);
+	}
+
+	//! @brief	ポインタアクセス 
+	template<class T>
+	T* Ref<T>::operator->() const noexcept
+	{
+		AMUSE_ASSERT(m_ptr != nullptr, "空の{}にアクセスしました", Type::Get<T>().name());
+		return reinterpret_cast<T*>(m_ptr);
+	}
+
+	//! @brief	有効なポインタを保持しているか 
+	template<class T>
+	Ref<T>::operator bool() const noexcept {
+		return m_ptr != nullptr;
+	}
+
+	//! @brief	解放
+	template<class T>
+	void Ref<T>::reset()
+	{
+		AMUSE_SAFE_RELEASE(m_ptr);
+	}
+
+	//! @brief	2つの Ref オブジェクトを入れ替える
+	template<class T>
+	void Ref<T>::swap(Ref<T>& other) noexcept {
+		if (&other != this) {
+			T* t = m_ptr;
+			m_ptr = other.m_ptr;
+			other.m_ptr = t;
+		}
+	}
+
+	//! @brief	保持しているオブジェクトへのポインタを取得 
+	template<class T>
+	T* Ref<T>::get() const
+	{
+		return reinterpret_cast<T*>(m_ptr);
+	}
+
+	//! @brief	オブジェクトのポインタへの変換をサポート
+	//! @note   ここでコンパイルエラーとなる場合、T の定義があるヘッダファイルを include しているか確認すること。
+	template<class T>
+	Ref<T>::operator T* () const {
+		return reinterpret_cast<T*>(m_ptr);
+	}
+
+	//! @brief	派生クラスへキャスト
+	//! @details Tの派生先へキャストしたポインタを取得します。変換チェックは行いません。
+	template<class T>
+	template<class Y>
+	auto Ref<T>::cast() const->std::enable_if_t<std::is_base_of_v<T, Y>, Y*> {
+		return reinterpret_cast<Y*>(m_ptr);
+	}
+
+	// 以下比較関数
+
+	template<class T, class U>
+	bool operator==(const Ref<T>& lhs, const Ref<U>& rhs) noexcept
+	{
+		return (lhs.get() == rhs.get());
+	}
+
+	template<class T>
+	bool operator==(const Ref<T>& lhs, std::nullptr_t) noexcept
+	{
+		return (lhs.get() == nullptr);
+	}
+
+	template<class T>
+	bool operator==(std::nullptr_t, const Ref<T>& rhs) noexcept
+	{
+		return (nullptr == rhs.get());
+	}
+
+	template<class T, class U>
+	bool operator!=(const Ref<T>& lhs, const Ref<U>& rhs) noexcept
+	{
+		return (lhs.get() != rhs.get());
+	}
+
+	template<class T>
+	bool operator!=(const Ref<T>& lhs, std::nullptr_t) noexcept
+	{
+		return (lhs.get() != nullptr);
+	}
+
+	template<class T>
+	bool operator!=(std::nullptr_t, const Ref<T>& rhs) noexcept
+	{
+		return (nullptr != rhs.get());
+	}
+
+	template<class T, class U>
+	bool operator<(const Ref<T>& lhs, const Ref<U>& rhs) noexcept
+	{
+		return (lhs.get() < rhs.get());
+	}
+
+	template<class T>
+	bool operator<(const Ref<T>& lhs, std::nullptr_t) noexcept
+	{
+		return std::less<RefObject*>()(lhs.get(), nullptr);
+	}
+
+	template<class T>
+	bool operator<(std::nullptr_t, const Ref<T>& rhs) noexcept
+	{
+		return std::less<T*>()(nullptr, rhs.get());
+	}
+
+	template<class T, class U>
+	bool operator<=(const Ref<T>& lhs, const Ref<U>& rhs) noexcept
+	{
+		return (lhs.get() <= rhs.get());
+	}
+
+	template<class T>
+	bool operator<=(const Ref<T>& lhs, std::nullptr_t) noexcept
+	{
+		return (lhs.get() <= nullptr);
+	}
+
+	template<class T>
+	bool operator<=(std::nullptr_t, const Ref<T>& rhs) noexcept
+	{
+		return (nullptr <= rhs.get());
+	}
+
+	template<class T, class U>
+	bool operator>(const Ref<T>& lhs, const Ref<U>& rhs) noexcept
+	{
+		return (lhs.get() > rhs.get());
+	}
+
+	template<class T>
+	bool operator>(const Ref<T>& lhs, std::nullptr_t) noexcept
+	{
+		return (lhs.get() > nullptr);
+	}
+
+	template<class T>
+	bool operator>(std::nullptr_t, const Ref<T>& rhs) noexcept
+	{
+		return (nullptr > rhs.get());
+	}
+
+	template<class T, class U>
+	bool operator>=(const Ref<T>& lhs, const Ref<U>& rhs) noexcept
+	{
+		return (lhs.get() >= rhs.get());
+	}
+
+	template<class T>
+	bool operator>=(const Ref<T>& lhs, std::nullptr_t) noexcept
+	{
+		return (lhs.get() >= nullptr);
+	}
+
+	template<class T>
+	bool operator>=(std::nullptr_t, const Ref<T>& rhs) noexcept
+	{
+		return (nullptr >= rhs.get());
+	}
+
+	//! @endcond
+}
+
+#undef AMUSE_SAFE_RETAIN
+#undef AMUSE_SAFE_RELEASE

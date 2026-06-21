@@ -1,0 +1,65 @@
+﻿//***********************************************************
+//! @file
+//! @author		Gajumaru
+//***********************************************************
+#include <Amuse/Core/Geometry/Capsule.h>
+
+using namespace Amuse::Core;
+
+TEST(Capsule, Construct) {
+
+    // 始点 / 終点
+    {
+        Vec3 pos1(1, 2, 3);
+        Vec3 pos2(2, 3, 4);
+        f32 radius = 2.f;
+        Capsule capsule(pos1, pos2, radius);
+        ASSERT_EQ(capsule.pos1, pos1);
+        ASSERT_EQ(capsule.pos2, pos2);
+        ASSERT_EQ(capsule.radius, radius);
+    }
+
+    // 中心 / 高さ / 回転
+    {
+        Vec3 pos(0, 2, 3);
+        f32 height = 4.f;
+        f32 radius = 2.f;
+        Quat quat(90, 0, 0);
+        Capsule capsule(pos, height, radius, quat);
+        ASSERT_EQ(capsule.pos1, Vec3(0 , 2 , 5));
+        ASSERT_EQ(capsule.pos2, Vec3(0 , 2 , 1));
+        ASSERT_EQ(capsule.radius, radius);
+    }
+
+    // 中心 / 高さ / 方向
+    {
+        Vec3 pos(0, 2, 3);
+        f32 height = 4.f;
+        f32 radius = 2.f;
+        Vec3 direction(1, 0, 0);
+        Capsule capsule(pos, height, radius, direction);
+        ASSERT_EQ(capsule.pos1, Vec3(2, 2, 3));
+        ASSERT_EQ(capsule.pos2, Vec3(-2, 2, 3));
+        ASSERT_EQ(capsule.radius, radius);
+    }
+}
+
+
+TEST(Capsule, Getter) {
+    // 高さ
+    {
+        Vec3 pos1(1, 2, 3);
+        Vec3 pos2(2, 3, 4);
+        f32 radius = 2.f;
+        Capsule capsule(pos1, pos2, radius);
+
+        ASSERT_FLOAT_EQ(capsule.height(), Vec3::Dist(pos1, pos2) + radius * 2.0f);
+        ASSERT_FLOAT_EQ(capsule.minHeight(), Vec3::Dist(pos1,pos2));
+    }
+
+    // 中心 / 高さ / 回転
+    {
+        Capsule capsule(Vec3(0,3,3),Vec3(0,5,2),1.0f);
+        ASSERT_EQ(capsule.direction(), Vec3(0, 2, -1).unitVec());
+    }
+}

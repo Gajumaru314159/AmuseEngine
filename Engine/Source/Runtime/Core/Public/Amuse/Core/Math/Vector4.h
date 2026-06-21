@@ -1,0 +1,866 @@
+﻿//***********************************************************
+//! @file
+//! @author Gajumaru
+//***********************************************************
+#pragma once
+#include <Amuse/Core/Math/Math.h>
+
+namespace Amuse::Core {
+
+    struct IntVec4;
+
+    //! @brief 四次元ベクトル
+    struct Vec4 {
+    public:
+
+        //===============================================================
+        //  コンストラクタ / デストラクタ
+        //===============================================================
+
+        //! @brief      デフォルトコンストラクタ(初期化なし)
+        Vec4()noexcept = default;
+
+
+        //! @brief      コンストラクタ(すべての要素を同じ値で初期化)
+        constexpr explicit Vec4(f32 scalar)noexcept;
+
+
+        //! @brief      コンストラクタ(要素を指定して初期化)
+        constexpr Vec4(f32 x, f32 y, f32 z, f32 w)noexcept;
+
+
+        //! @brief      コンストラクタ( IntVec4 初期化)
+        explicit Vec4(const IntVec4& vec)noexcept;
+
+
+        //===============================================================
+        //  オペレータ
+        //===============================================================
+
+        //! @brief      等価演算子 
+        //! 
+        //! @details    2つのベクトルの差が Math::TOLERANCE より小さい場合、2つのベクトルは等しいと
+        //!             見なされます。
+        constexpr bool operator == (const Vec4& v) const noexcept;
+
+
+        //! @brief 否等価演算子
+        //! 
+        //! @details    2つのベクトルの差が Math::TOLERANCE より大きい場合、2つのベクトルは異なると
+        //!             見なされます。
+        constexpr bool operator != (const Vec4& v) const noexcept;
+
+
+        //! @brief 加算演算子
+        constexpr Vec4 operator + (const Vec4& v) const noexcept;
+
+
+        //! @brief 加算演算子(スカラー)
+        constexpr Vec4 operator + (f32 scalar) const noexcept;
+
+
+        //! @brief 減算演算子
+        constexpr Vec4 operator - (const Vec4& v) const noexcept;
+
+
+        //! @brief 減算演算子(スカラー)
+        constexpr Vec4 operator - (f32 scalar) const noexcept;
+
+
+        //! @brief 乗算演算子
+        constexpr Vec4 operator * (const Vec4& v) const noexcept;
+
+
+        //! @brief 乗算演算子(スカラー)
+        constexpr Vec4 operator * (f32 scalar) const noexcept;
+
+
+        //! @brief 除算演算子
+        constexpr Vec4 operator / (const Vec4& v) const noexcept;
+
+
+        //! @brief 除算演算子(スカラー)
+        constexpr Vec4 operator / (f32 scalar) const noexcept;
+
+
+        //! @brief 加算代入演算子
+        constexpr Vec4& operator += (const Vec4& v) noexcept;
+
+
+        //! @brief 加算代入演算子(スカラー)
+        constexpr Vec4& operator += (f32 scalar) noexcept;
+
+
+        //! @brief 減算代入演算子 
+        constexpr Vec4& operator -= (const Vec4& v) noexcept;
+
+
+        //! @brief 減算代入演算子(スカラー)
+        constexpr Vec4& operator -= (f32 scalar) noexcept;
+
+
+        //! @brief 乗算代入演算子 
+        constexpr Vec4& operator *= (const Vec4& v) noexcept;
+
+
+        //! @brief 乗算代入演算子 (スカラー)
+        constexpr Vec4& operator *= (f32 scalar) noexcept;
+
+
+        //! @brief 除算代入演算子 
+        constexpr Vec4& operator /= (const Vec4& v) noexcept;
+
+
+        //! @brief 除算代入演算子(スカラー)
+        constexpr Vec4& operator /= (f32 scalar) noexcept;
+
+
+        //! @brief 単項マイナス演算子
+        constexpr Vec4 operator - () const noexcept;
+
+
+        //! @brief f32*Vec4演算子 
+        friend Vec4 operator * (f32 scalar, const Vec4& v) noexcept;
+
+
+        //! @brief f32/Vec4演算子 
+        friend Vec4 operator / (f32 scalar, const Vec4& v) noexcept;
+
+
+        //! @brief      要素取得
+        //! 
+        //! @details    範囲外の場合は0を返します。  
+        constexpr f32 operator [](size_t index) const noexcept;
+
+
+        //===============================================================
+        //  セッター
+        //===============================================================
+
+        //! @brief 要素を設定
+        constexpr void set(f32 x, f32 y, f32 z, f32 w) noexcept;
+
+
+        //! @brief 要素を設定
+        constexpr void set(const Vec4& v) noexcept;
+
+
+        //! @brief 要素を全て0に設定
+        constexpr void setZero() noexcept;
+
+
+        //! @brief 全ての要素を同じ値で設定
+        constexpr void setAll(f32 scalar) noexcept;
+
+
+        //===============================================================
+        //  ゲッター
+        //===============================================================
+
+        //! @brief 要素の最大を取得
+        constexpr f32 maxComponent() const noexcept;
+
+
+        //! @brief 要素の絶対値の最大を取得
+        constexpr f32 maxAbsComponent() const noexcept;
+
+
+        //! @brief 要素の最小を取得
+        constexpr f32 minComponent() const noexcept;
+
+
+        //! @brief 要素の絶対値の最小を取得
+        constexpr f32 minAbsComponent() const noexcept;
+
+
+        //! @brief ベクトルの長さを取得
+        //! 
+        //! @details 二つのベクトルの長さを比較する場合はsqrMagのほうが高速です。
+        f32     length() const;
+
+
+        //! @brief ベクトルの長さの二乗を取得
+        constexpr f32 sqrLength() const noexcept;
+
+
+        //! @brief              単位ベクトルを取得
+        //! 
+        //! @details            0ベクトルの場合は0ベクトルを返す。
+        //! @param tolerance    ゼロベクトル判定の誤差の許容誤差
+        Vec4    unitVec(f32 tolerance = Math::TOLERANCE)const;
+
+
+        //! @brief              単位ベクトルを取得(ゼロチェックなし)
+        Vec4    getUnitVecUnsafe()const;
+
+
+        //! @brief              方向ベクトルとベクトルの長さを取得
+        //! 
+        //! @param[out] outDir  方向ベクトルの出力
+        //! @param[out] outLen  ベクトルの大きさ
+        void    toDirectionAndLength(Vec4& outDir, f32& outLen)const;
+
+
+        //===========================================================
+        //  変換
+        //===========================================================
+
+        //! @brief              ベクトルの正規化
+        //! 
+        //! @details            0ベクトルの場合は何もしない。
+        //! @param tolerance    ゼロベクトル判定の誤差の許容誤差
+        Vec4& normalize(f32 tolerance = Math::TOLERANCE);
+
+
+        //! @brief              ベクトルの正規化(ゼロチェックなし)
+        Vec4& normalizeUnsafe();
+
+
+        //===============================================================
+        //  判定
+        //===============================================================
+
+        //! @brief 単位ベクトルか判定
+        bool    isUnit(f32 tolerance = Math::TOLERANCE)const;
+
+
+        //! @brief 等価判定(許容誤差指定)
+        //! 
+        //! @param v            比較対象
+        //! @param tolerance    許容誤差
+        constexpr bool equals(const Vec4& v, f32 tolerance = Math::TOLERANCE)const noexcept;
+
+
+        //! @brief すべての要素が同じ値か判定
+        //! 
+        //! @param tolerance    許容誤差
+        constexpr bool allComponentsEqual(f32 tolerance = Math::TOLERANCE)const noexcept;
+
+
+        //! @brief ゼロベクトルか判定
+        constexpr bool isZero(f32 tolerance = Math::TOLERANCE)const noexcept;
+
+
+        //! @brief 要素にNaNを含むか判定
+        bool    isNaN()const;
+
+
+        //! @brief 要素にInfを含むか判定
+        bool    isInf()const;
+
+
+        //! @brief 要素にNaNまたはInfを含むか判定
+        bool    isNaNOrInf()const;
+
+    public:
+
+        //===============================================================
+        //  スタティック関数
+        //===============================================================
+
+        //! @brief ベクトルの各要素の絶対値からベクトルを作成
+        static constexpr Vec4 Abs(const Vec4& v) noexcept;
+
+
+        //! @brief 内積
+        static constexpr f32  Dot(const Vec4& a, const Vec4& b) noexcept;
+
+
+        //! @brief 外積
+        static constexpr Vec4 Cross(const Vec4& a, const Vec4& b) noexcept;
+
+
+        //! @brief  二つのベクトルの距離を計算
+        static f32  Dist(const Vec4& a, const Vec4& b);
+
+
+        //! @brief  二つのベクトルの距離の二乗を計算
+        static constexpr f32  SqrDist(const Vec4& a, const Vec4& b) noexcept;
+
+
+        //! @brief  二つのベクトルのマンハッタン距離を計算
+        static constexpr f32  MDist(const Vec4& a, const Vec4& b) noexcept;
+
+
+        //! @brief 二つのベクトルの線形補間
+        //! 
+        //! @param a    開始ベクトル
+        //! @param b    終了ベクトル
+        //! @param t    補間係数
+        //! @return     t=0のときa、t=1の時bを返す。
+        static constexpr Vec4 Lerp(const Vec4& a, const Vec4& b, f32 t) noexcept;
+
+
+        //! @brief 二つのベクトルの球面補間
+        //! 
+        //! @param a    開始ベクトル
+        //! @param b    終了ベクトル
+        //! @param t    補間係数
+        //! @return     t=0のときa、t=1の時bを返す。
+        static Vec4 Slerp(const Vec4& a, const Vec4& b, f32 t);
+
+
+        //! @brief 二つのベクトルの各要素の大きいほうからベクトルを生成
+        static constexpr Vec4 Max(const Vec4& a, const Vec4& b) noexcept;
+
+
+        //! @brief 二つのベクトルの各要素の小さいほうからベクトルを生成
+        static constexpr Vec4 Min(const Vec4& a, const Vec4& b) noexcept;
+
+
+        //! @brief 二つのベクトルのなす角のコサインを取得
+        static f32  CosAngle(const Vec4& a, const Vec4& b);
+
+
+        //! @brief 二つのベクトルのなす角を取得
+        static f32  Angle(const Vec4& a, const Vec4& b);
+
+    public:
+
+        static const Vec4 Zero;    //!< ( 0.0f, 0.0f, 0.0f, 0.0f)
+        static const Vec4 One;     //!< ( 1.0f, 1.0f, 1.0f, 1.0f)
+        static const Vec4 Minimum; //!< ( -inf, -inf, -inf, -inf)
+        static const Vec4 Maximum; //!< (  inf,  inf,  inf,  inf)
+
+    public:
+
+        f32 x;    //!< ベクトルのX成分
+        f32 y;    //!< ベクトルのY成分
+        f32 z;    //!< ベクトルのZ成分
+        f32 w;    //!< ベクトルのW成分
+
+    };
+
+
+
+
+
+
+    //===============================================================
+    // インライン関数
+    //===============================================================
+    //! @cond
+
+    //! @brief      コンストラクタ(すべての要素を同じ値で初期化)
+    constexpr Vec4::Vec4(f32 scalar) noexcept:Vec4(scalar, scalar, scalar, scalar) {
+    }
+
+
+    //! @brief      コンストラクタ(要素を指定して初期化)
+    constexpr Vec4::Vec4(f32 _x, f32 _y, f32 _z, f32 _w) noexcept
+        : x(_x),y(_y),z(_z),w(_w) 
+    {
+    }
+
+
+    //===============================================================
+    //  オペレータ
+    //===============================================================
+
+    //! @brief      等価演算子 
+    //! 
+    //! @details    2つのベクトルの差が Math::TOLERANCE より小さい場合、2つのベクトルは等しいと
+    //!             見なされます。
+    constexpr bool Vec4::operator == (const Vec4& v) const noexcept {
+        return Math::IsNearEquals(x, v.x) &&
+            Math::IsNearEquals(y, v.y) &&
+            Math::IsNearEquals(z, v.z) &&
+            Math::IsNearEquals(w, v.w);
+    }
+
+
+    //! @brief 否等価演算子
+    //! 
+    //! @details    2つのベクトルの差が Math::TOLERANCE より大きい場合、2つのベクトルは異なると
+    //!             見なされます。
+    constexpr bool Vec4::operator != (const Vec4& v) const noexcept {
+        return !(operator==(v));
+    }
+
+
+    //! @brief 加算演算子
+    constexpr Vec4 Vec4::operator + (const Vec4& v) const noexcept {
+        return Vec4(*this) += v;
+    }
+
+
+    //! @brief 加算演算子(スカラー)
+    constexpr Vec4 Vec4::operator + (f32 scalar) const noexcept {
+        return Vec4(*this) += scalar;
+    }
+
+
+    //! @brief 減算演算子
+    constexpr Vec4 Vec4::operator - (const Vec4& v) const noexcept {
+        return Vec4(*this) -= v;
+    }
+
+
+    //! @brief 減算演算子(スカラー)
+    constexpr Vec4 Vec4::operator - (f32 scalar) const noexcept {
+        return Vec4(*this) -= scalar;
+    }
+
+
+    //! @brief 乗算演算子
+    constexpr Vec4 Vec4::operator * (const Vec4& v) const noexcept {
+        return Vec4(*this) *= v;
+    }
+
+
+    //! @brief 乗算演算子(スカラー)
+    constexpr Vec4 Vec4::operator * (f32 scalar) const noexcept {
+        return Vec4(*this) *= scalar;
+    }
+
+
+    //! @brief 除算演算子
+    constexpr Vec4 Vec4::operator / (const Vec4& v) const noexcept {
+        return Vec4(*this) /= v;
+    }
+
+
+    //! @brief 除算演算子(スカラー)
+    constexpr Vec4 Vec4::operator / (f32 scalar) const noexcept {
+        return Vec4(*this) /= scalar;
+    }
+
+
+    //! @brief 加算代入演算子
+    constexpr Vec4& Vec4::operator += (const Vec4& v) noexcept {
+        x += v.x;
+        y += v.y;
+        z += v.z;
+        w += v.w;
+        return *this;
+    }
+
+
+    //! @brief 加算代入演算子(スカラー)
+    constexpr Vec4& Vec4::operator += (f32 scalar) noexcept {
+        x += scalar;
+        y += scalar;
+        z += scalar;
+        w += scalar;
+        return *this;
+    }
+
+
+    //! @brief 減算代入演算子 
+    constexpr Vec4& Vec4::operator -= (const Vec4& v) noexcept {
+        x -= v.x;
+        y -= v.y;
+        z -= v.z;
+        w -= v.w;
+        return *this;
+    }
+
+
+    //! @brief 減算代入演算子(スカラー)
+    constexpr Vec4& Vec4::operator -= (f32 scalar) noexcept {
+        x -= scalar;
+        y -= scalar;
+        z -= scalar;
+        w -= scalar;
+        return *this;
+    }
+
+
+    //! @brief 乗算代入演算子 
+    constexpr Vec4& Vec4::operator *= (const Vec4& v) noexcept {
+        x *= v.x;
+        y *= v.y;
+        z *= v.z;
+        w *= v.w;
+        return *this;
+    }
+
+
+    //! @brief 乗算代入演算子 (スカラー)
+    constexpr Vec4& Vec4::operator *= (f32 scalar) noexcept {
+        x *= scalar;
+        y *= scalar;
+        z *= scalar;
+        w *= scalar;
+        return *this;
+    }
+
+
+    //! @brief 除算代入演算子 
+    constexpr Vec4& Vec4::operator /= (const Vec4& v) noexcept {
+        x /= v.x;
+        y /= v.y;
+        z /= v.z;
+        w /= v.w;
+        return *this;
+    }
+
+
+    //! @brief 除算代入演算子(スカラー)
+    constexpr Vec4& Vec4::operator /= (f32 scalar) noexcept {
+        x /= scalar;
+        y /= scalar;
+        z /= scalar;
+        w /= scalar;
+        return *this;
+    }
+
+
+    //! @brief 単項マイナス演算子
+    constexpr Vec4 Vec4::operator - () const noexcept {
+        return Vec4(-x, -y, -z, -w);
+    }
+
+
+    //! @brief      要素取得
+    //! 
+    //! @details    範囲外の場合は0を返します。  
+    constexpr f32 Vec4::operator [](size_t index) const noexcept {
+        switch (index) {
+        case 0:return x;
+        case 1:return y;
+        case 2:return z;
+        case 3:return w;
+        default:return 0;
+        }
+    }
+
+
+    //===============================================================
+    //  セッター
+    //===============================================================
+
+    //! @brief 要素を設定
+    constexpr void Vec4::set(f32 x, f32 y, f32 z, f32 w) noexcept {
+        this->x = x;
+        this->y = y;
+        this->z = z;
+        this->w = w;
+    }
+
+
+    //! @brief 要素を設定
+    constexpr void Vec4::set(const Vec4& v) noexcept {
+        set(v.x, v.y, v.z, v.w);
+    }
+
+
+    //! @brief 要素を全て0に設定
+    constexpr void Vec4::setZero() noexcept {
+        set(0.0f, 0.0f, 0.0f, 0.0f);
+    }
+
+
+    //! @brief 全ての要素を同じ値で設定
+    constexpr void Vec4::setAll(f32 scalar) noexcept {
+        set(scalar, scalar, scalar, scalar);
+    }
+
+
+    //===============================================================
+    //  ゲッター
+    //===============================================================
+
+    //! @brief 要素の最大を取得
+    constexpr f32 Vec4::maxComponent() const noexcept {
+        return Math::Max(x, y, z, w);
+    }
+
+
+    //! @brief 要素の絶対値の最大を取得
+    constexpr f32 Vec4::maxAbsComponent() const noexcept {
+        return Math::Max(Math::Abs(x), Math::Abs(y), Math::Abs(z), Math::Abs(w));
+    }
+
+
+    //! @brief 要素の最小を取得
+    constexpr f32 Vec4::minComponent() const noexcept {
+        return Math::Min(x, y, z, w);
+    }
+
+
+    //! @brief 要素の絶対値の最小を取得
+    constexpr f32 Vec4::minAbsComponent() const noexcept {
+        return Math::Min(Math::Abs(x), Math::Abs(y), Math::Abs(z), Math::Abs(w));
+    }
+
+
+    //! @brief ベクトルの長さを取得
+    //! 
+    //! @details 二つのベクトルの長さを比較する場合はSqrMagのほうが高速です。
+    inline f32 Vec4::length() const {
+        return Math::Sqrt(sqrLength());
+    }
+
+
+    //! @brief ベクトルの長さの二乗を取得
+    constexpr f32 Vec4::sqrLength() const noexcept {
+        return x * x + y * y + z * z + w * w;
+    }
+
+
+    //! @brief              単位ベクトルを取得
+    //! 
+    //! @details            0ベクトルの場合は0ベクトルを返す。
+    //! @param tolerance    ゼロベクトル判定の誤差の許容誤差
+    inline Vec4 Vec4::unitVec(f32 tolerance)const {
+        Vec4 unitVec = *this;
+        unitVec.normalize(tolerance);
+        return unitVec;
+    }
+
+
+    //! @brief              単位ベクトルを取得(ゼロチェックなし)
+    inline Vec4 Vec4::getUnitVecUnsafe()const {
+        Vec4 unitVec = *this;
+        unitVec.normalizeUnsafe();
+        return unitVec;
+    }
+
+
+    //! @brief              方向ベクトルとベクトルの長さを取得
+    //! 
+    //! @param[out] outDir  方向ベクトルの出力
+    //! @param[out] outLen  ベクトルの大きさ
+    inline void Vec4::toDirectionAndLength(Vec4& outDir, f32& outLen)const {
+        if (isZero()) {
+            outDir.setZero();
+            outLen = 0.0f;
+            return;
+        }
+        outLen = sqrLength();
+        if (outLen < Math::TOLERANCE) {
+            outDir = Vec4::Zero;
+        } else {
+            outDir = (*this) / outLen;
+        }
+    }
+
+
+    //===========================================================
+    //  変換
+    //===========================================================
+
+    //! @brief              ベクトルの正規化
+    //! 
+    //! @details            0ベクトルの場合は何もしない。
+    //! @param tolerance    ゼロベクトル判定の誤差の許容誤差
+    inline Vec4& Vec4::normalize(f32 tolerance) {
+        f32 f = length();
+        // 0ベクトルの場合は何もしない
+        if (f <= tolerance)return *this;
+        this->operator/=(f);
+        return *this;
+    }
+
+
+    //! @brief              ベクトルの正規化(ゼロチェックなし)
+    inline Vec4& Vec4::normalizeUnsafe() {
+        f32 f = length();
+        this->operator/=(f);
+        return *this;
+    }
+
+
+    //===============================================================
+    //  判定
+    //===============================================================
+
+    //! @brief 単位ベクトルか判定
+    inline bool Vec4::isUnit(f32 tolerance)const {
+        const f32 length = sqrLength();
+        return Math::Abs(length - 1.0f) < tolerance;
+    }
+
+
+    //! @brief 等価判定(許容誤差指定)
+    //!
+    //! @param v            評価値
+    //! @param tolerance    許容誤差
+    constexpr bool Vec4::equals(const Vec4& v, f32 tolerance)const noexcept {
+        return
+            Math::Abs(x - v.x) <= tolerance &&
+            Math::Abs(y - v.y) <= tolerance &&
+            Math::Abs(z - v.z) <= tolerance &&
+            Math::Abs(w - v.w) <= tolerance;
+    }
+
+
+    //! @brief すべての要素が同じ値か判定
+    //! 
+    //! @param tolerance    許容誤差
+    constexpr bool Vec4::allComponentsEqual(f32 tolerance)const noexcept {
+        if (tolerance < Math::Abs(x - y))return false;
+        if (tolerance < Math::Abs(y - z))return false;
+        if (tolerance < Math::Abs(z - w))return false;
+        if (tolerance < Math::Abs(w - x))return false;
+        if (tolerance < Math::Abs(x - z))return false;
+        if (tolerance < Math::Abs(y - w))return false;
+        return true;
+    }
+
+
+    //! @brief ゼロベクトルか判定
+    constexpr bool Vec4::isZero(f32 tolerance)const noexcept {
+        if (tolerance < Math::Abs(x))return false;
+        if (tolerance < Math::Abs(y))return false;
+        if (tolerance < Math::Abs(z))return false;
+        if (tolerance < Math::Abs(w))return false;
+        return true;
+    }
+
+
+    //! @brief 要素にNaNを含むか判定
+    inline bool Vec4::isNaN()const {
+        if (Math::IsNaN(x))return true;
+        if (Math::IsNaN(y))return true;
+        if (Math::IsNaN(z))return true;
+        if (Math::IsNaN(w))return true;
+        return false;
+    }
+
+
+    //! @brief 要素にInfを含むか判定
+    inline bool Vec4::isInf()const {
+        if (Math::IsInf(x))return true;
+        if (Math::IsInf(y))return true;
+        if (Math::IsInf(z))return true;
+        if (Math::IsInf(w))return true;
+        return false;
+    }
+
+
+    //! @brief 要素にNaNまたはInfを含むか判定
+    inline bool Vec4::isNaNOrInf()const {
+        return isNaN() || isInf();
+    }
+
+
+    //===============================================================
+    //  スタティック関数
+    //===============================================================
+
+    //! @brief ベクトルの各要素の絶対値からベクトルを作成
+    constexpr Vec4 Vec4::Abs(const Vec4& v) noexcept {
+        return Vec4(Math::Abs(v.x), Math::Abs(v.y), Math::Abs(v.z), Math::Abs(v.w));
+    }
+
+
+    //! @brief 内積
+    constexpr f32 Vec4::Dot(const Vec4& a, const Vec4& b) noexcept {
+        return a.x * b.x + a.y * b.y + a.z * b.z + a.w * b.w;
+    }
+
+
+    //! @brief 外積
+    constexpr Vec4 Vec4::Cross(const Vec4& a, const Vec4& b) noexcept {
+        return Vec4(a.y * b.z - a.z * b.y, a.z * b.w - a.w * b.z, a.w * b.x - a.x * b.w, a.x * b.y - a.y * b.x);
+    }
+
+
+    //! @brief  二つのベクトルの距離を計算
+    inline f32 Vec4::Dist(const Vec4& a, const Vec4& b) {
+        return (b - a).length();
+    }
+
+
+    //! @brief  二つのベクトルの距離の二乗を計算
+    constexpr f32 Vec4::SqrDist(const Vec4& a, const Vec4& b) noexcept {
+        return (b - a).sqrLength();
+    }
+
+
+    //! @brief  二つのベクトルのマンハッタン距離を計算
+    constexpr f32 Vec4::MDist(const Vec4& a, const Vec4& b) noexcept {
+        return Math::Abs(a.x - b.x) + Math::Abs(a.y - b.y) + Math::Abs(a.z - b.z) + Math::Abs(a.w - b.w);
+    }
+
+
+    //! @brief 二つのベクトルの線形補間
+    //! 
+    //! @param a    開始ベクトル
+    //! @param b    終了ベクトル
+    //! @param t    補間係数
+    //! @return     t=0のときa、t=1の時bを返す。
+    constexpr Vec4 Vec4::Lerp(const Vec4& a, const Vec4& b, f32 t) noexcept {
+        return Vec4(
+            a.x + (b.x - a.x) * t,
+            a.y + (b.y - a.y) * t,
+            a.z + (b.z - a.z) * t,
+            a.w + (b.w - a.w) * t
+        );
+    }
+
+
+    //! @brief 二つのベクトルの球面補間
+    //! 
+    //! @param a    開始ベクトル
+    //! @param b    終了ベクトル
+    //! @param t    補間係数
+    //! @return     t=0のときa、t=1の時bを返す。
+    inline Vec4 Vec4::Slerp(const Vec4& a, const Vec4& b, f32 t) {
+        f32 al, bl;
+        Vec4 an, bn;
+        a.toDirectionAndLength(an, al);
+        b.toDirectionAndLength(bn, bl);
+        f32 angle = Math::Acos(Dot(an, bn));
+        f32 ps = Math::Sin(angle * (1.0f - t)) * Math::Lerp(al, bl, t);
+        f32 pe = Math::Sin(angle * t) * Math::Lerp(al, bl, t);
+
+        return Vec4(
+            an.x * ps + bn.x * pe,
+            an.y * ps + bn.y * pe,
+            an.z * ps + bn.z * pe,
+            an.w * ps + bn.w * pe
+        );
+    }
+
+
+    //! @brief 二つのベクトルの各要素の大きいほうからベクトルを生成
+    constexpr Vec4 Vec4::Max(const Vec4& a, const Vec4& b) noexcept {
+        return Vec4(Math::Max(a.x, b.x), Math::Max(a.y, b.y), Math::Max(a.z, b.z), Math::Max(a.w, b.w));
+    }
+
+
+    //! @brief 二つのベクトルの各要素の小さいほうからベクトルを生成
+    constexpr Vec4 Vec4::Min(const Vec4& a, const Vec4& b) noexcept {
+        return Vec4(Math::Min(a.x, b.x), Math::Min(a.y, b.y), Math::Min(a.z, b.z), Math::Min(a.w, b.w));
+    }
+
+
+    //! @brief 二つのベクトルのなす角のコサインを取得
+    inline f32 Vec4::CosAngle(const Vec4& a, const Vec4& b) {
+        return Dot(a.unitVec(), b.unitVec());
+    }
+
+
+    //! @brief 二つのベクトルのなす角を取得
+    inline f32 Vec4::Angle(const Vec4& a, const Vec4& b) {
+        return Math::AcosD(CosAngle(a, b));
+    }
+
+    //! @endcond
+}
+
+
+//===============================================================
+// フォーマット
+//===============================================================
+//! @cond
+template <> struct std::formatter<Amuse::Core::Vec4, Amuse::Core::Char> : std::formatter<Amuse::Core::f32, Amuse::Core::Char> {
+    using base = std::formatter<Amuse::Core::f32, Amuse::Core::Char>;
+    template<typename FormatContext>
+    auto format(const Amuse::Core::Vec4& value, FormatContext& ctx) const {
+        ctx.advance_to(format_to(ctx.out(), "("));
+        ctx.advance_to(base::format(value.x, ctx));
+        ctx.advance_to(format_to(ctx.out(), ","));
+        ctx.advance_to(base::format(value.y, ctx));
+        ctx.advance_to(format_to(ctx.out(), ","));
+        ctx.advance_to(base::format(value.z, ctx));
+        ctx.advance_to(format_to(ctx.out(), ","));
+        ctx.advance_to(base::format(value.w, ctx));
+        ctx.advance_to(format_to(ctx.out(), ")"));
+        return ctx.out();
+    }
+};
+//! @endcond

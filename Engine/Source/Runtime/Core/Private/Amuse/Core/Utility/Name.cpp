@@ -1,0 +1,70 @@
+﻿//***********************************************************
+//! @file
+//! @author		Gajumaru
+//***********************************************************
+#include <Amuse/Core/Utility/Name.h>
+#include <Amuse/Core/Utility/NameDictionary.h>
+#include <Amuse/Core/Utility/DI.h>
+
+namespace Amuse::Core {
+
+    //! @brief  ServiceInjectorに登録
+    void Name::Register(ServiceInjector& injector) {
+        injector.bind<NameDictionary>();
+    }
+
+
+    //! @brief  デフォルトコンストラクタ
+    Name::Name() {
+        clear();
+    }
+
+    //! @brief  コンストラクタ(文字列から)
+    Name::Name(StringView name) {
+        setName(name);
+    }
+
+    //! @brief  コンストラクタ(ハッシュ値から)
+    //! 
+    //! @details    ハッシュ値の計算は内部実装に依存します。
+    Name::Name(Hash hash) {
+        if (auto system = NameDictionary::Get()) {
+            *this = system->findName(hash);
+        } else {
+            clear();
+        }
+    }
+
+    //! @brief  NameData から生成(NameDictionary用)
+    Name::Name(const internal::NameData& nameData) 
+        : m_view(nameData.getName())
+        , m_hash(nameData.getHash())
+    {
+    }
+
+    //! @brief  代入演算子(StringView)
+    Name& Name::operator=(StringView name) {
+        setName(name);
+        return *this;
+    }
+
+    //! @brief  名前を設定
+    void Name::setName(StringView name) {
+        if (name.empty()) {
+            clear();
+        } else {
+            if (auto system = NameDictionary::Get()) {
+                *this = system->makeName(name);
+            } else {
+                clear();
+            }
+        }
+    }
+
+    //! @brief  クリア
+    void Name::clear() {
+        m_view = StringView();
+        m_hash = 0;
+    }
+
+}

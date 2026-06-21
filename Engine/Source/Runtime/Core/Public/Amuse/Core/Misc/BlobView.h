@@ -1,0 +1,180 @@
+﻿//***********************************************************
+//! @file
+//! @author		Gajumaru
+//***********************************************************
+#pragma once
+#include <Amuse/Core/Misc/Blob.h>
+
+namespace Amuse::Core {
+
+    //! @brief バイナリデータビュー(Binary Large Object View)
+    //! 
+    //! @details    Blob と異なり、内部にバイト列のコピーを持ちません。
+    class BlobView {
+    public:
+
+        using const_iterator = const byte*;                   //!< イテレータ(const)
+
+    public:
+
+        //===============================================================
+        // コンストラクタ
+        //===============================================================
+        
+        //! @brief デフォルトコンストラクタ
+        BlobView() = default;
+
+
+        //! @brief コンストラクタ(Blob指定)
+        BlobView(const Blob& blob)
+        {
+            m_pData = blob.data();
+            m_size = blob.size();
+        }
+
+        //! @brief コンストラクタ(ポインタ指定)
+        BlobView(const void* pData, size_t size)
+        {
+            m_pData = static_cast<const byte*>(pData);
+            m_size = size;
+        }
+
+
+        //! @brief コンストラクタ(vector指定)
+        template<class T>
+        BlobView(const Vector<T>& data) {
+            m_pData = reinterpret_cast<const byte*>(data.data());
+            m_size = data.size() * sizeof(T);
+        }
+
+
+        //! @brief コンストラクタ(配列指定)
+        template<class T,size_t N>
+        BlobView(const T(&data)[N]) {
+            m_pData = reinterpret_cast<const byte*>(data);
+            m_size = N * sizeof(T);
+        }
+
+
+        //! @brief コピーコンストラクタ
+        BlobView(const BlobView& blob) = default;
+
+
+        //! @brief ムーブコンストラクタ(Blob指定)
+        BlobView(BlobView&& blob) = default;
+
+
+        //===============================================================
+        // オペレータ
+        //===============================================================
+
+        //! @brief コピー代入演算子
+        BlobView& operator =(const BlobView& other) = default;
+
+
+        //! @brief ムーブ代入演算子
+        BlobView& operator =(BlobView&& other) = default;
+
+
+        //! @brief 代入演算子(Blob)
+        BlobView& operator =(const Blob& other) {
+            m_pData = other.data();
+            m_size = other.size();
+            return *this;
+        }
+
+
+        //! @brief 代入演算子(Vector)
+        template<class T, std::enable_if_t<!std::is_same_v<T,Blob>>>
+        BlobView& operator =(const Vector<T>& other) {
+            m_pData = static_cast<const byte*>(other.data());
+            m_size = other.size() * sizeof(T);
+            return *this;
+        }
+
+
+        //===============================================================
+        // アクセス
+        //===============================================================
+
+        //! @brief マジックナンバーを持っているか
+        bool magic(const Char magic[5]) const {
+            return 4 <= size() && memcmp(data(), magic, 4) == 0;
+        }
+
+
+        //! @brief マジックナンバーを持っているか
+        bool magic(u32 magic) const {
+            return 4 <= size() && memcmp(data(), &magic, 4) == 0;
+        }
+
+
+        //! @brief バイトアクセス
+        const byte& operator[](const size_t index) const {
+            return m_pData[index];
+        }
+
+
+        //! @brief 先頭データにアクセス
+        const byte* data() const noexcept {
+            return m_pData;
+        }
+
+
+        //! @brief 空か
+        bool empty() const noexcept {
+            return m_pData==nullptr || m_size == 0;
+        }
+
+
+        //! @brief 空か
+        explicit operator bool() const noexcept {
+            return !empty();
+        }
+
+
+        //! @brief データサイズを取得
+        size_t size() const noexcept {
+            return m_size;
+        }
+
+
+        //! @brief データをクリア
+        void clear() {
+            m_pData = nullptr;
+            m_size = 0;
+        }
+
+
+        //! @brief 開始イテレータ(const)
+        const_iterator begin() const noexcept {
+            return m_pData;
+        }
+
+
+        //! @brief 終了イテレータ(const)
+        const_iterator end() const noexcept {
+            return m_pData+m_size;
+        }
+
+
+        //! @brief 開始イテレータ(const)
+        const_iterator cbegin() const noexcept {
+            return m_pData;
+        }
+
+
+        //! @brief 終了イテレータ(const)
+        const_iterator cend() const noexcept {
+            return m_pData + m_size;
+        }
+
+    private:
+
+        const byte* m_pData = nullptr;
+        size_t m_size = 0;
+
+    };
+
+
+}

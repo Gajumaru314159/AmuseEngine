@@ -1,0 +1,133 @@
+﻿//***********************************************************
+//! @file
+//! @author		Gajumaru
+//***********************************************************
+#pragma once
+#include <Amuse/Core/Math/Vector2.h>
+#include <Amuse/Core/Template/include.h>
+
+namespace Amuse::Core {
+
+    //! @brief  スプラインカーブ
+    class Spline2D {
+    public:
+
+        //===============================================================
+        // コンストラクタ / デストラクタ
+        //===============================================================
+
+        //! @brief  コンストラクタ
+        Spline2D() = default;
+
+
+        //! @brief  ポイントリストから構築
+        explicit Spline2D(Span<Vec2>);
+
+
+        //! @brief  ポイントリストから構築
+        explicit Spline2D(const Vector<Vec2>&&);
+
+
+        //! @brief  ポイント・サイズ
+        s32 size()const noexcept;
+
+
+        //! @brief  ポイントが存在するか
+        bool empty()const noexcept;
+
+
+        //! @brief  ポイントリストを空にする
+        void clear();
+
+
+        //! @brief  カーブの長さを計算
+        //! 
+        //! @param resolution いくつの直線で近似した長さを計算するか
+        f32 length(s32 resolution = 100)const;
+
+
+        //! @brief  [t0,t1]のカーブの長さを計算
+        //! 
+        //! @details t0,t1が[0,1]以外の場合は[0,1]にクランプされた値が計算されます。
+        //! @param t0 開始位置[0,t1]
+        //! @param t1 終了位置[t1,1]
+        //! @param resolution いくつの直線で近似した長さを計算するか
+        f32 length(f32 t0, f32 t1, s32 resolution = 100)const;
+
+
+        //! @brief  座標を計算
+        //! 
+        //! @param t 時間[0,1]
+        Vec2 position(f32 t)const;
+
+
+        //! @brief  速度を計算
+        //! 
+        //! @param t 時間[0,1]
+        Vec2 velocity(f32 t)const;
+
+
+        //! @brief  加速度を計算
+        //! 
+        //! @param t 時間[0,1]
+        Vec2 acceleration(f32 t)const;
+
+
+        //! @brief  曲率を計算
+        //! 
+        //! @param t 時間[0,1]
+        f32 curvature(f32 t)const;
+
+    private:
+
+        //! @brief  制御点を取得（範囲外は端点を使用）
+        Vec2 getControlPoint(s32 index) const;
+
+    public:
+
+        Vector<Vec2> points;         //!< ポイントリスト
+        bool        closed{false};  //!< 閉じているか
+
+    };
+
+
+
+
+
+
+    //===============================================================
+    // インライン関数
+    //===============================================================
+    //! @cond
+
+    //! @brief  ポイントリストから構築
+    inline Spline2D::Spline2D(Span<Vec2> another) {
+        points = Vector<Vec2>(another.begin(),another.end());
+    }
+
+
+    //! @brief  ポイントリストから構築
+    inline Spline2D::Spline2D(const Vector<Vec2>&& another) {
+        points = another;
+    }
+
+
+    //! @brief  ポイント・サイズ
+    inline s32 Spline2D::size()const noexcept {
+        return static_cast<s32>(points.size());
+    }
+
+
+    //! @brief  ポイントが存在するか
+    inline bool Spline2D::empty()const noexcept {
+        return points.empty();
+    }
+
+
+    //! @brief  ポイントリストを空にする
+    inline void Spline2D::clear() {
+        points.clear();
+    }
+
+    //! @endcond
+}

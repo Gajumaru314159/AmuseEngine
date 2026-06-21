@@ -1,0 +1,76 @@
+﻿//***********************************************************
+//! @file
+//! @author		Gajumaru
+//***********************************************************
+#pragma once
+#include "Amuse/Core/Memory/Memory.h"
+
+namespace Amuse::Core {
+
+    //! @cond
+    struct STLAllocatorBase {
+    public:
+        // 特殊関数
+        // (デフォルトコンストラクタ、コピーコンストラクタ
+        //  、ムーブコンストラクタ)
+        STLAllocatorBase() = default;
+
+        // メモリ確保
+        void* allocate(size_t size, size_t alignment = alignof(std::max_align_t)) {
+            return Alloc(size, alignment);
+        }
+
+        // メモリ解放
+        void deallocate(void* pBuffer) {
+            Free(pBuffer);
+        }
+    };
+    //! @endcond
+
+
+    //! @brief  STLアロケータ
+    template <class T>
+    struct STLAllocator :public STLAllocatorBase {
+    public:
+
+        using value_type = T;   //!< アロケート要素の型
+
+    public:
+
+        //! @brief コンストラクタ
+        STLAllocator() {}
+
+        //! @brief 別な要素型のアロケータを受け取るコンストラクタ
+        template <class U>
+        STLAllocator(const STLAllocator<U>&) {}
+
+        //! @brief メモリ確保
+        T* allocate(size_t n) {
+            return static_cast<T*>(STLAllocatorBase::allocate(sizeof(T) * n, alignof(T)));
+        }
+
+        //! @brief メモリ解放
+        void deallocate(T* p, [[maybe_unused]]size_t n) {
+            STLAllocatorBase::deallocate(p);
+        }
+    };
+
+
+
+
+
+
+    //! 等価演算子
+    template <class T, class U>
+    bool operator==(const STLAllocator<T>&, const STLAllocator<U>&) {
+        return true;
+    }
+
+
+    //! 否等価演算子
+    template <class T, class U>
+    bool operator!=(const STLAllocator<T>&, const STLAllocator<U>&) {
+        return false;
+    }
+
+}

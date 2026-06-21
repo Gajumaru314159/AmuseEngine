@@ -1,0 +1,152 @@
+﻿//***********************************************************
+//! @file
+//! @author		Gajumaru
+//***********************************************************
+#include <Amuse/Core/Log/Logger.h>
+#include <Amuse/Core/Log/StackTrace.h>
+#include <Amuse/Core/String/StringEncoder.h>
+#include <Amuse/Core/Thread/ScopeLock.h>
+#include <Amuse/Core/Utility/Scope.h>
+
+#include <iostream>
+
+namespace Amuse::Core {
+
+    Logger* Logger::s_instance = nullptr;
+
+    //! @brief コンストラクタ
+    Logger::Logger() {
+
+        assert(s_instance == nullptr);
+        s_instance = this;
+
+        m_useLineOutput = true;
+
+        // デフォルトログイベント
+        auto func = [useLineOutput = m_useLineOutput](const Log& log) {
+
+            // 標準出力
+            if(log.level!=LogLevel::Trace){
+                StringView typeName;
+                switch (log.level) {
+                case LogLevel::Fatal:   typeName = "\033[35m[Fatal]  \033[0m"; break;// マゼンタ
+                case LogLevel::Error:   typeName = "\033[31m[Error]  \033[0m"; break;// 赤
+                case LogLevel::Warning: typeName = "\033[33m[Warning]\033[0m"; break;// 黄色
+                case LogLevel::Info:    typeName = "\033[36m[Info]   \033[0m"; break;// シアン
+                case LogLevel::Trace:   typeName = "\033[38;2;128;128;128m[Trace]  "; break;// グレー
+                default:                typeName = "\033[32m[Unknown]\033[0m"; break;// 緑
+                }
+                // フォーマット
+                const auto message = Format ("{} {}", typeName, log.message);
+
+                // 標準出力
+                std::cout << message << std::endl;
+
+#ifdef OS_LINUX
+                if (useLineOutput||true) {
+                    const auto message2 = Format("{}({})", log.sourceLocation.filePath, log.sourceLocation.line);
+                    std::cout << message2 << std::endl;
+                }
+#endif
+            }
+
+            // IDEのデバッグ出力
+            if (log.level != LogLevel::Trace) {
+                StringView typeName;
+                switch (log.level) {
+                case LogLevel::Fatal:   typeName = "[Fatal]  "; break;
+                case LogLevel::Error:   typeName = "[Error]  "; break;
+                case LogLevel::Warning: typeName = "[Warning]"; break;
+                case LogLevel::Info:    typeName = "[Info]   "; break;
+                case LogLevel::Trace:   typeName = "[Trace]  "; break;
+                default:                typeName = "[Unknown]"; break;
+                }
+                // フォーマット
+                const auto message = Format("{} {}", typeName, log.message);
+
+                // 出力
+                ::OutputDebugLog(message.c_str());
+
+                if (useLineOutput) {
+                    const auto message2 = Format("{}({})", log.sourceLocation.filePath, log.sourceLocation.line);
+                    ::OutputDebugLog(message2.c_str());
+                }
+
+
+                // エラーダイアログ表示
+                if (log.level == LogLevel::Fatal) {
+                    ::ShowMessageBox(message.c_str());
+                }
+            }
+
+            if (log.level == LogLevel::Fatal) {
+
+                ::OutputDebugLog("********************");
+                ::OutputDebugLog("* スタックトレース *");
+                ::OutputDebugLog("********************");
+                
+                for (auto& s : StackTrace::Capture().elements()) {
+                    // auto msg2 = Format("{}\n{}({})\n", s.name, s.filename, s.line);
+                    auto msg2 = Format("{}({})",s.filename, s.line);
+                    ::OutputDebugLog(msg2.c_str());
+                }
+            }
+
+        };
+
+        // std::coutでUTF-8を正しく表示するための対応
+        setlocale(LC_ALL, ".utf8");
+
+
+        addEvent(m_hDebugEvent, func);
+    }
+
+
+    //! @brief デストラクタ
+    Logger::~Logger() {
+        m_hDebugEvent.remove();
+        s_instance = nullptr;
+    }
+
+
+    //! @brief                  ログの追加
+    //! 
+    //! @details                この関数の呼び出しは LOG_INFO_EX や LOG_WARNING_EX マクロから呼び出される。@n
+    //!                         直接呼び出しは非推奨です。
+    //! @param level            ログの種類
+    //! @param sourceLocation   ログ生成場所
+    //! @param category         カテゴリ名
+    //! @param pMessage         メッセージ
+    void Logger::addLog(LogLevel level, const SourceLocation& sourceLocation, const Char* category, const Char* pMessage) {
+
+        thread_local bool logged = false;
+        if (logged)return;// 無限ループ回避のため早期リターン
+
+        ScopeLock lock(m_mutex);
+        logged = true;
+
+        Log log;
+        log.level = level;
+        log.category = category;
+        log.sourceLocation = sourceLocation;
+        log.message = pMessage;
+
+        // 登録されたすべてのリスナに通知
+        m_notifier.invoke(log);
+
+        logged = false;
+    }
+
+
+    //! @brief ログ・イベントの追加
+    void Logger::addEvent(EventHandle& handle, const EventDelegateType& func) {
+        m_notifier.add(handle, func);
+    }
+
+
+    //! @brief ログ・イベントの削除
+    void Logger::removeEvent(EventHandle& handle) {
+        m_notifier.remove(handle);
+    }
+
+}

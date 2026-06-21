@@ -1,0 +1,246 @@
+﻿//***********************************************************
+//! @file
+//! @author		Gajumaru
+//***********************************************************
+#pragma once
+#include <Amuse/Core/Math/Vector3.h>
+
+namespace Amuse::Core {
+
+    //! @brief      ボックス
+    //! 
+    //! @details    ボックスは内部的に中心座標とサイズで管理されます。
+    //! @note       size が負の数の時は未定義動作です。
+    struct Box {
+    public:
+
+        //===============================================================
+        //  コンストラクタ
+        //===============================================================
+
+        //! @brief          デフォルトコンストラクタ(初期化なし)
+        Box()noexcept;
+
+
+        //! @brief          コンストラクタ(サイズ/中心指定)
+        constexpr Box(const Vec3& size, const Vec3& center = Vec3::Zero)noexcept;
+
+
+        //! @brief          コンストラクタ(点群指定)
+        //! 
+        //! @details        指定された点群をすべて含む最小のボックスを構築する。
+        //!                 要素数が1以下の時は Empty が設定される
+        explicit Box(Span<Vec3> points)noexcept;
+
+
+        //! @brief      始点と終点を指定して Box を設定
+        static constexpr Box FromTo(Vec3 from, Vec3 to);
+
+
+        //===============================================================
+        //  オペレータ
+        //===============================================================
+
+        //! @brief          等価演算子
+        constexpr bool operator==(const Box& other)const noexcept;
+
+
+        //! @brief          否等価演算子
+        constexpr bool operator!=(const Box& other)const noexcept;
+
+
+        //! @brief          加算演算子
+        //! 
+        //! @details        ポイントを含むようにボックスを拡大する。
+        //!                 元のボックスが空の場合は何もしない。
+        //! @param point    ポイント
+        constexpr Box  operator+(const Vec3& point)const noexcept;
+
+
+        //! @brief          加算演算子
+        //! 
+        //! @details        ポイントを含むようにボックスを拡大する。
+        //!                 元のボックスが空の場合は何もしない。
+        //! @param point    ポイント
+        constexpr Box& operator+=(const Vec3& point)noexcept;
+
+
+        //===============================================================
+        //  操作
+        //===============================================================
+
+        //! @brief          size を絶対値に更新
+        constexpr Box& normalize()noexcept;
+
+
+        //===============================================================
+        //  ゲッター
+        //===============================================================
+
+        //! @brief      ボックスの起点となる頂点を取得
+        //! 
+        //! @see        max()
+        constexpr Vec3 min()const noexcept;
+
+
+        //! @brief      min() と対角となる頂点を取得
+        //! 
+        //! @see        min()
+        constexpr Vec3 max()const noexcept;
+
+
+        //! @brief      体積を取得
+        constexpr f32 volume()const noexcept;
+
+
+        //===============================================================
+        //  判定
+        //===============================================================
+
+        //! @brief      サイズが0
+        constexpr bool empty()const noexcept;
+
+
+    public:
+
+        //! @brief      補間
+        //! 
+        //! @param a    開始
+        //! @param b    終了
+        //! @param t    補間係数
+        //! @return     t=0のときa、t=1の時bを返す。
+        static constexpr Box Lerp(const Box& a, const Box& b, f32 t)noexcept;
+
+    public:
+
+        Vec3    size;       //!< ボックスのサイズ
+        Vec3    center;     //!< ボックスの中心座標
+
+    public:
+
+        static const Box Empty; //!< 空のBox
+
+    };
+
+
+
+
+
+
+    //===============================================================
+    // インライン関数
+    //===============================================================
+    //! @cond
+
+    //! @brief          デフォルトコンストラクタ(初期化なし)
+    inline Box::Box()noexcept
+    {
+    }
+
+
+    //! @brief          コンストラクタ(サイズ/中心指定)
+    constexpr Box::Box(const Vec3& size, const Vec3& center)noexcept
+        : size(size),center(center)
+    {
+    }
+
+
+    //! @brief          始点と終点を指定して Box を設定
+    constexpr Box Box::FromTo(Vec3 from, Vec3 to) {
+        return {
+            Vec3::Abs(from - to),
+            (from + to) * 0.5f
+        };
+    }
+
+
+    //! @brief          等価演算子
+    constexpr bool Box::operator==(const Box& other)const noexcept {
+        return (center == other.center) && (size == other.size);
+    }
+
+
+    //! @brief          否等価演算子
+    constexpr bool Box::operator!=(const Box& other)const noexcept {
+        return !(*this == other);
+    }
+
+
+    //! @brief          加算演算子
+    //! 
+    //! @details        ポイントを含むようにボックスを拡大する。
+    //!                 元のボックスが空の場合は何もしない。
+    //! @param point    ポイント
+    constexpr Box Box::operator+(const Vec3& point)const noexcept {
+        return Box(*this) += point;
+    }
+
+
+    //! @brief          加算演算子
+    //! 
+    //! @details        ポイントを含むようにボックスを拡大する。
+    //! @param point    ポイント
+    constexpr Box& Box::operator+=(const Vec3& point)noexcept {
+        if (empty()) {
+            return *this;
+        }
+
+        Vec3 min = center - size * 0.5f;
+        Vec3 max = center + size * 0.5f;
+
+        min = Vec3::Min(min, point);
+        max = Vec3::Max(max, point);
+
+        center = (min + max) * 0.5f;
+        size = max - min;
+
+        return *this;
+    }
+
+
+    //! @brief      size を絶対値に更新
+    constexpr Box& Box::normalize()noexcept {
+        size = Vec3::Abs(size);
+        return *this;
+    }
+
+
+    //! @brief      ボックスの起点となる頂点を取得
+    //! 
+    //! @see        GetEnd()
+    constexpr Vec3 Box::min()const noexcept {
+        return center + size * 0.5f;
+    }
+
+
+    //! @brief      GetStart() と対角となる頂点を取得
+    //! 
+    //! @see        GetStart()
+    constexpr Vec3 Box::max()const noexcept {
+        return center - size * 0.5f;
+    }
+
+
+    //! @brief      体積を取得
+    constexpr f32 Box::volume()const noexcept {
+        return size.x * size.y * size.z;
+    }
+
+
+    //! @brief      サイズが0
+    constexpr bool Box::empty()const noexcept {
+        return size.isZero();
+    }
+
+    //! @brief      補間
+    //! 
+    //! @param a    開始
+    //! @param b    終了
+    //! @param t    補間係数
+    //! @return     t=0のときa、t=1の時bを返す。
+    constexpr Box Box::Lerp(const Box& a, const Box& b, f32 t)noexcept {
+        return {Vec3::Lerp(a.size, b.size, t), Vec3::Lerp(a.center, b.center, t)};
+    }
+
+    //! @endcond
+}

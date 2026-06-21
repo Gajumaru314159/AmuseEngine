@@ -1,0 +1,18 @@
+﻿//***********************************************************
+//! @file
+//! @author		Gajumaru
+//***********************************************************
+#pragma once
+#include <gsl/gsl>
+
+namespace Amuse::Core {
+
+    //! @brief  スパン
+    template<class T>
+    using Span = gsl::span<T>;
+
+    //! @brief  非Null
+    template<typename T>
+    using NotNull = gsl::not_null<T>;
+
+}

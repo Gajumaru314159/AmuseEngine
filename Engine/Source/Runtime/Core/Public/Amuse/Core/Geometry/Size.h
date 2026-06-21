@@ -1,0 +1,112 @@
+﻿//***********************************************************
+//! @file
+//! @author		Gajumaru
+//***********************************************************
+#pragma once
+#include <Amuse/Core/Math/Math.h>
+
+namespace Amuse::Core {
+
+    //! @brief  サイズ
+    struct Size {
+    public:
+
+        //===============================================================
+        // コンストラクタ / デストラクタ
+        //===============================================================
+
+        //! @brief  デフォルトコンストラクタ(初期化なし)
+        Size() = default;
+
+
+        //! @brief  コンストラクタ
+        explicit constexpr Size(s32 width)noexcept
+            : Size(width, 1, 1) {}
+
+        //! @brief  コンストラクタ
+        constexpr Size(s32 width, s32 height)noexcept
+            : Size(width, height, 1) {}
+
+
+        //! @brief  コンストラクタ
+        constexpr Size(s32 width, s32 height, s32 depth)noexcept
+            :width(width), height(height), depth(depth) {}
+
+
+        //===============================================================
+        //  オペレータ
+        //===============================================================
+
+        //! @brief          等価演算子
+        constexpr bool operator==(const Size& other)const noexcept {
+            return
+                width == other.width &&
+                height == other.height &&
+                depth == other.depth;
+        }
+
+
+        //! @brief          否等価演算子
+        constexpr bool operator!=(const Size& other)const noexcept {
+            return !(*this==other);
+        }
+
+
+        //===============================================================
+        // ゲッター
+        //===============================================================
+
+        //! @brief  面積
+        constexpr s32 area()const noexcept {
+            return width * height;
+        }
+
+
+        //! @brief  体積
+        constexpr s32 volume()const noexcept {
+            return width * height * depth;
+        }
+
+
+        //===============================================================
+        // 操作
+        //===============================================================
+
+
+        //! @brief  体積
+        constexpr Size& normalize()noexcept {
+            width = Math::Abs(width);
+            height = Math::Abs(height);
+            depth = Math::Abs(depth);
+            return *this;
+        }
+
+    public:
+
+        s32 width = 1;  //!< 幅
+        s32 height = 1; //!< 高さ
+        s32 depth = 1;  //!< 深さ(奥行)
+
+    };
+
+}
+
+//===============================================================
+// フォーマット
+//===============================================================
+//! @cond
+template <> struct std::formatter<Amuse::Core::Size, Amuse::Core::Char> : std::formatter<Amuse::Core::s32, Amuse::Core::Char> {
+    using base = std::formatter<Amuse::Core::s32, Amuse::Core::Char>;
+    template<typename FormatContext>
+    auto format(const Amuse::Core::Size& value, FormatContext& ctx) const {
+        ctx.advance_to(format_to(ctx.out(), "("));
+        ctx.advance_to(base::format(value.width, ctx));
+        ctx.advance_to(format_to(ctx.out(), ","));
+        ctx.advance_to(base::format(value.height, ctx));
+        ctx.advance_to(format_to(ctx.out(), ","));
+        ctx.advance_to(base::format(value.depth, ctx));
+        ctx.advance_to(format_to(ctx.out(), ")"));
+        return ctx.out();
+    }
+};
+//! @endcond

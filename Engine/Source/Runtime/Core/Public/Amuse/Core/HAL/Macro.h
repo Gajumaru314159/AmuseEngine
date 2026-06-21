@@ -1,0 +1,117 @@
+﻿//***********************************************************
+//! @file
+//! @author		Gajumaru
+//***********************************************************
+#pragma once
+#include <Amuse/Core/HAL/Platform.h>
+#include <Amuse/Core/HAL/BuildConfig.h>
+
+#if defined(OS_WINDOWS)
+#include "Windows/Macro.h"
+
+#ifdef _DEBUG
+#include <crtdbg.h> 
+#endif
+
+#elif defined(OS_LINUX)
+#include "Linux/Macro.h"
+
+#else
+#pragma error("Macro("OS_NAME")がありません")
+#endif
+
+
+
+//! @brief      未使用変数の警告抑制
+#define AMUSE_UNUSED(x)                    (void)(x)
+
+
+//! @brief		アライン付き宣言
+#define ALIGN_DECL(type,alignment) ALIGN_DECL_IMPL(type,alignment)
+
+
+//! @brief		アライン付き変数宣言
+#define ALIGN_VAR(var,alignment) ALIGN_VAR_IMPL(var,alignment)
+
+
+//! @brief		強制inline修飾子
+#define FINLINE FINLINE_IMPL
+
+
+//! @brief		restrict型修飾子
+//! @details    RESTRICT で修飾されたポインターによっ てアドレス指定されたメモリーが
+//!             変更された場合、他のポインターはそのメモリーをアクセスしないことをコ
+//!             ンパイラーに伝える。最適化の機能のため、上記の制約を守らない場合プロ
+//!             グラマの責任となる。
+//!             ```
+//!             void foo(s32 n, s32 * RESTRICT a, s32 * RESTRICT b, s32 * RESTRICT c){
+//!                 int i;
+//!                 for (i = 0; i < n; ++i)
+//!                     a[i] = b[i] + c[i];
+//!             }
+//!             ```
+#define RESTRICT RESTRICT_IMPL
+
+
+//! @brief		ディレクトリ文字
+#define DIRECTORY_CHAR DIRECTORY_CHAR_IMPL
+
+
+//! @brief		ディレクトリ文字列
+#define DIRECTORY_STR DIRECTORY_STR_IMPL
+
+
+//! @brief		コンパイラ最適化オプション
+//! @details    式が真であることが多い場合コンパイルが最適化される。
+#define LIKELY(expr) LIKELY_IMPL(expr)
+
+
+//! @brief		コンパイラ最適化オプション
+//! @details	式が偽であることが多い場合コンパイルが最適化される 。
+#define UNLIKELY(expr) UNLIKELY_IMPL(expr)
+
+
+//! @brief		DLL出力
+#define DLL_EXPORT DLL_EXPORT_IMPL
+
+
+//! @brief		DLL入力
+#define DLL_IMPORT DLL_IMPORT_IMPL
+
+
+//! @brief	関数名取得マクロ(詳細版)
+#define FUNC_NAME _internal_FUNC_NAME
+
+
+//! @brief		エディタ専用行
+#if AMUSE_EDITOR
+#define EDITOR_ONLY 
+#else
+#define EDITOR_ONLY /##/
+#endif
+
+
+//! @brief		名前結合
+#define UNIQUE_ID3(prefix,line) prefix##line
+#define UNIQUE_ID2(prefix,line) UNIQUE_ID3(prefix,line)
+#define UNIQUE_ID(prefix) UNIQUE_ID2(prefix, __COUNTER__)
+
+
+//! @brief  システムログ出力 
+extern void OutputDebugLog(const char* message);
+
+//! @brief  メッセージボックス表示
+extern void ShowMessageBox(const char* message);
+
+//! @brief  ブレークポイントを呼び出し
+#ifdef AMUSE_DEBUG
+
+#if defined(_MSC_VER)
+#define CallBreakPoint()  { _CrtDbgBreak(); }
+#elif defined(__clang__) || defined(__GNUC__)
+#define CallBreakPoint()  { __builtin_trap(); }
+#else
+#define CallBreakPoint()  do {} while(0)
+#endif
+
+#endif

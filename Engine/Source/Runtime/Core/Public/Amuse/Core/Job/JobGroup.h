@@ -1,0 +1,90 @@
+﻿//***********************************************************
+//! @file
+//! @author		Gajumaru
+//***********************************************************
+#pragma once
+#include <Amuse/Core/CorePrivate.h>
+#include <Amuse/Core/Template/include.h>
+#include <Amuse/Core/Utility/Ref.h>
+#include <Amuse/Core/Job/JobHandle.h>
+
+namespace Amuse::Core {
+
+    class JobExecutor;
+    class Job;
+    class JobSystem;
+
+    //! @brief		ジョブ・グループ
+    //! @details    JobGroupは実行依存関係を持ちます。
+    //!             同期ポイントはEntryとLeaveがあります。
+    class JobGroup {
+        friend class JobSystem;
+    public:
+
+        //! @brief コンストラクタ
+        JobGroup(JobSystem& sys, StringView name);
+
+        //! @brief デストラクタ
+        ~JobGroup();
+
+        //! @brief 名前を取得
+        auto getName()const->const String&;
+
+        //! @brief サブ JobGroup を作成
+        auto createSub(StringView name) -> Ref<JobGroup>;
+        auto createChild(StringView name) -> Ref<JobGroup>;
+        void addChild(Ref<JobGroup>& group);
+
+        auto addJob(StringView name, Action&& action)-> JobHandle&;
+
+
+    public:
+
+        void execute(JobExecutor& executor);
+        void update(JobExecutor& executor);
+
+        void removeJob(Job&);
+
+        void requestRelease();
+
+    private:
+
+        void onLeaveSubGroup(JobExecutor& executor);
+
+        s32 countLeafGroup()const;
+
+    private:
+
+        String                  m_name;
+        JobSystem& m_system;
+
+        // 所有
+        Vector<Job*>        m_jobs;
+        Vector<JobGroup*>   m_subGroups;
+        Vector<JobGroup*>   m_childGroups;
+
+        // 追加予約
+        SpinLock                m_entryLock;
+        Vector<UPtr<JobGroup>>   m_entrySubGroups;
+        Vector<UPtr<JobGroup>>   m_entryChildGroups;
+        Vector<UPtr<Job>>        m_entryJobs;
+
+        // 解放予約
+        HashSet<Job*>           m_leaveJobs;
+        HashSet<JobGroup*>      m_leaveGroups;
+
+
+        // 実依存
+        Vector<JobGroup*>        m_deps;
+
+
+
+        Atomic<s32>             m_jobIndex;
+        Atomic<s32>             m_childIndex;
+        Atomic<s32>             m_executedNum;
+
+        Atomic<s32>             m_dependParentCount;
+        Atomic<s32>             m_dependSubCount;
+    };
+
+}

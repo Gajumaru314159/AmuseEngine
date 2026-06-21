@@ -1,0 +1,14 @@
+# directory
+/Engine/Build/
+/Engine/Binaries/
+/docs
+
+# IDE
+.vs/
+.idea/
+
+# extention
+.zip
+
+# file
+imgui.ini

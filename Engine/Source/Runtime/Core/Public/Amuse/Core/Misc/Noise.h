@@ -1,0 +1,45 @@
+﻿//***********************************************************
+//! @file
+//! @author		Gajumaru
+//***********************************************************
+#pragma once
+#include <Amuse/Core/CoreTypes.h>
+
+namespace Amuse::Core {
+
+    //! @brief  ノイズ
+    class Noise {
+    public:
+
+        //! @brief  パーリンノイズ
+        //! 
+        //! @param x            サンプリングX座標
+        //! @param y            サンプリングY座標
+        //! @param z            サンプリングZ座標
+        static f32 Perlin(f32 x, f32 y = DefaultY(), f32 z = DefaultZ());
+
+
+        //! @brief  パーリンノイズ
+        //! 
+        //! @param octaves      何回重ね合わせるか
+        //! @param persistence  詳細なノイズの強度
+        //! @param x            サンプリングX座標
+        //! @param y            サンプリングY座標
+        //! @param z            サンプリングZ座標
+        static f32 PerlinOctave(s32 octaves, f32 persistence, f32 x, f32 y = DefaultY(), f32 z = DefaultZ());
+
+
+    private:
+
+
+        static constexpr f32 DefaultY() {
+            return 0.3983755219259f;
+        }
+        static constexpr f32 DefaultZ() {
+            return 0.6932752758284f;
+        }
+
+
+    };
+
+}

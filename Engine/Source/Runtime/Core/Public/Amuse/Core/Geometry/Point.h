@@ -1,0 +1,50 @@
+﻿//***********************************************************
+//! @file
+//! @author		Gajumaru
+//***********************************************************
+#pragma once
+#include <Amuse/Core/CoreTypes.h>
+
+namespace Amuse::Core {
+
+	//! @brief  ポイント
+	struct Point {
+	public:
+
+		//! @brief デフォルトコンストラクタ(初期化なし)
+		Point() = default;
+
+
+		//! @brief コンストラクタ(値で初期化)
+		constexpr Point(s32 x, s32 y, s32 z = 0) noexcept
+			: x(x), y(y), z(z) {}
+
+
+		//===============================================================
+		//  オペレータ
+		//===============================================================
+
+		//! @brief          等価演算子
+		constexpr bool operator==(const Point& other)const noexcept {
+			return
+				x == other.x &&
+				y == other.y &&
+				z == other.z;
+		}
+
+
+		//! @brief          否等価演算子
+		constexpr bool operator!=(const Point& other)const noexcept {
+			return !(*this == other);
+		}
+
+
+	public:
+
+		s32 x;  //!< X座標
+		s32 y;  //!< Y座標
+		s32 z;  //!< Z座標
+
+	};
+
+}

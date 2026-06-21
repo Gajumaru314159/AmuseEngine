@@ -1,0 +1,525 @@
+﻿//***********************************************************
+//! @file
+//! @author		Gajumaru
+//***********************************************************
+#pragma once
+#include <Amuse/Core/Math/Math.h>
+#include <Amuse/Core/Math/Vectors.h>
+#include <Amuse/Core/Graphic/ColorTypes.h>
+#include <Amuse/Core/Graphic/IntColor.h>
+#include <Amuse/Core/String/String.h>
+
+namespace Amuse::Core {
+
+    //! @brief		RGBAカラーを表現するクラス
+    //! 
+    //! @details	各色要素は、0〜1の範囲のf32型で表現されます。アルファ(a)は透過度を表し、0で完全な透明、1で完全な不透明を表します。
+    struct Color {
+    public:
+
+        //===============================================================
+        //  コンストラクタ / デストラクタ
+        //===============================================================
+
+        //! @brief      デフォルトコンストラクタ(初期化なし)
+        Color()noexcept = default;
+
+
+        //! @brief コンストラクタ(各要素を指定して初期化)
+        //! 
+        //! @details		各色成分を指定して初期化します。
+        //! @param r		赤成分
+        //! @param g		緑成分
+        //! @param b		青成分
+        //! @param a		アルファ
+        constexpr Color(f32 r, f32 g, f32 b, f32 a = 1.0f)noexcept;
+
+
+        //! @brief コンストラクタ(輝度とアルファ値を指定して初期化)
+        //! 
+        //! @details		色成分を輝度で指定します。
+        //! @param gray	    輝度
+        //! @param a		アルファ
+        explicit constexpr Color(f32 gray, f32 a = 1.0f)noexcept;
+
+
+        //! @brief ColorU8 を変換して初期化
+        explicit Color(const IntColor& another)noexcept;
+
+
+        //! @brief Vec3 を変換して初期化(アルファは1.0)
+        explicit Color(const Vec3& another)noexcept;
+
+
+        //! @brief Vec4 を変換して初期化
+        explicit Color(const Vec4& another)noexcept;
+
+
+        //===============================================================
+        //  オペレータ
+        //===============================================================
+
+        //! @brief 等価演算子
+        constexpr bool operator == (const Color& another) const noexcept;
+
+
+        //! @brief 否等価演算子
+        constexpr bool operator != (const Color& another) const noexcept;
+
+
+        //! @brief 加算演算子(RGB)
+        constexpr Color operator + (const Color& another) const noexcept;
+
+
+        //! @brief 減算演算子(RGB)
+        constexpr Color operator - (const Color& another) const noexcept;
+
+
+        //! @brief 乗算演算子(RGBA)
+        constexpr Color operator * (const Color& another) const noexcept;
+
+
+        //! @brief スカラー乗算演算子(RGBA)
+        constexpr Color operator * (f32 f) const noexcept;
+
+
+        //! @brief 除算演算子(RGBA)
+        constexpr Color operator / (const Color& another) const noexcept;
+
+
+        //! @brief スカラー除算演算子(RGBA)
+        constexpr Color operator / (f32 f) const noexcept;
+
+
+        //! @brief 加算代入演算子(RGB)
+        constexpr Color& operator += (const Color& another) noexcept;
+
+
+        //! @brief 減算代入演算子(RGB)
+        constexpr Color& operator -= (const Color& another) noexcept;
+
+
+        //! @brief 乗算代入演算子(RGBA)
+        constexpr Color& operator *= (const Color& another) noexcept;
+
+
+        //! @brief スカラー乗算代入演算子(RGBA)
+        constexpr Color& operator *= (f32 f) noexcept;
+
+
+        //! @brief 除算代入演算子(RGBA)
+        constexpr Color& operator /= (const Color& another) noexcept;
+
+
+        //! @brief スカラー除算代入演算子(RGBA)
+        constexpr Color& operator /= (f32 f) noexcept;
+
+
+        //===============================================================
+        //  操作
+        //===============================================================
+
+        //! @brief      カラー要素を0.0～にクランプ
+        //! @details    アルファ要素は0.0～1.0にクランプされます。
+        constexpr Color& clamp() noexcept;
+
+
+        //! @brief      カラー要素を0.0～1.0にクランプ
+        constexpr Color& clamp01() noexcept;
+
+
+        //===============================================================
+        //  ゲッター
+        //===============================================================
+
+        //! @brief      RGBのうち最小の値を取得
+        constexpr f32 minComponent()const noexcept;
+
+
+        //! @brief      RGBのうち最大の値を取得
+        constexpr f32 maxComponent()const noexcept;
+
+
+        //===============================================================
+        //  変換
+        //===============================================================
+
+        //! @brief          色をカラーコードに変換
+        u32  toCode(ColorCodeFormat format = ColorCodeFormat::Default)const noexcept;
+
+
+        //! @brief          IntColor に変換
+        IntColor toIntColor()const noexcept;
+
+
+        //! @brief          Vec4 に変換
+        constexpr Vec4 toVec4()const noexcept;
+
+
+        //! @brief           グレイスケールに変換
+        constexpr Color toGrayscale()const noexcept;
+
+
+        //! @brief          セピアカラーに変換
+        constexpr Color toSepia()const noexcept;
+
+
+        //! @brief          sRGBカラーをリニアカラーに変換
+        Color toLinear()const;
+
+
+        //! @brief          リニアカラーをsRGBカラーに変換
+        Color toSRGB()const;
+
+
+        //===============================================================
+        //  判定
+        //===============================================================
+
+        //! @brief      等価判定(許容誤差指定)
+        constexpr bool equals(const Color& another, f32 tolerance = Math::TOLERANCE)const noexcept;
+
+
+    public:
+
+        //! @brief		色の線形補完
+        //! 
+        //! @details	t が0のとき a を返し、 t が1のとき b を返す。
+        //! @param a    色1
+        //! @param b    色2
+        //! @param t	補完パラメータ
+        //! @return		補完された色オブジェクト
+        static constexpr Color Lerp(const Color& a, const Color& b, f32 t) noexcept;
+
+
+        //! @brief		HSV空間で色の線形補完
+        //! 
+        //! @details	t が0のとき a を返し、 t が1のとき b を返す。
+        //! @param a    色1
+        //! @param b    色2
+        //! @param t	補完パラメータ
+        //! @return		補完された色オブジェクト
+        static Color LerpHSV(const Color& a, const Color& b, f32 t) noexcept;
+
+
+        //! @brief		色のアルファブレンド
+        //! 
+        //! @details	```
+        //!             out.a   = src.a + dst.a*(1-src.a);
+        //!             out.rgb = (src.rgb*src.a + dst.rgb*dst.a * (1-src.a)) / out.a;
+        //!             out.a   = 0 => out.rgb = 0
+        //!             ```
+        //! @param dst  色1
+        //! @param src  色2
+        //! @return		ブレンドされた色オブジェクト
+        static constexpr Color AlphaBlend(const Color& dst, const Color& src) noexcept;
+
+
+        //! @brief		色の事前乗算アルファブレンド
+        //! 
+        //! @details	```
+        //!             out.a   = src.a + dst.a*(1-src.a);
+        //!             out.rgb = src.rgb + dst.rgb * (1-src.a);
+        //!             ```
+        //! @param dst  色1
+        //! @param src  色2
+        //! @return		ブレンドされた色オブジェクト
+        static constexpr Color PremultipliedAlphaBlend(const Color& dst, const Color& src) noexcept;
+
+
+    public:
+
+        static const Color White;		//!< Color(1,1,1,1)
+        static const Color Gray;		//!< Color(0.5,0.5,0.5,1)
+        static const Color Black;		//!< Color(0,0,0,1)
+        static const Color Clear;		//!< Color(0,0,0,0)
+        static const Color Red;			//!< Color(1,0,0,1)
+        static const Color Yellow;		//!< Color(1,1,0,1)
+        static const Color Green;		//!< Color(0,1,0,1)
+        static const Color Cyan;		//!< Color(0,1,1,1)
+        static const Color Blue;		//!< Color(0,0,1,1)
+        static const Color Magenta;		//!< Color(1,0,1,1)
+        static const Color Normal;		//!< Color(0.5,1,0.5,1)
+
+    public:
+
+        f32 r;      //!< 赤成分 [0,1]
+        f32 g;      //!< 緑成分 [0,1]
+        f32 b;      //!< 青成分 [0,1]
+        f32 a;      //!< アルファ成分 [0,1]
+
+    };
+
+
+
+
+
+
+    //=======================================================================
+    // インライン
+    //=======================================================================
+    //! @cond
+
+    //! @brief コンストラクタ(各要素を指定して初期化)
+    //! 
+    //! @details		各色成分を指定して初期化します。
+    //! @param r		赤成分
+    //! @param g		緑成分
+    //! @param b		青成分
+    //! @param a		アルファ
+    constexpr Color::Color(f32 r, f32 g, f32 b, f32 a) noexcept
+        : r(r),g(g),b(b),a(a)
+    {
+    }
+
+
+    //! @brief コンストラクタ(輝度とアルファ値を指定して初期化)
+    //! 
+    //! @details		色成分を輝度で指定します。
+    //! @param gray	    輝度
+    //! @param a		アルファ
+    constexpr Color::Color(f32 gray, f32 a) noexcept 
+        : Color(gray,gray,gray,a)
+    {
+    }
+
+
+    //! @brief 等価演算子
+    constexpr bool Color::operator == (const Color& another) const noexcept {
+        return
+            Math::IsNearEquals(r, another.r) &&
+            Math::IsNearEquals(g, another.g) &&
+            Math::IsNearEquals(b, another.b) &&
+            Math::IsNearEquals(a, another.a);
+    }
+
+
+    //! @brief 否等価演算子
+    constexpr bool Color::operator != (const Color& another) const noexcept {
+        return !(operator==(another));
+    }
+
+
+    //! @brief 加算演算子(RGB)
+    constexpr Color Color::operator + (const Color& another) const noexcept {
+        return Color(*this) += another;
+    }
+
+
+    //! @brief 減算演算子(RGB)
+    constexpr Color Color::operator - (const Color& another) const noexcept {
+        return Color(*this) -= another;
+    }
+
+
+    //! @brief スカラー乗算演算子(RGBA)
+    constexpr Color Color::operator * (f32 f) const noexcept {
+        return Color(*this) *= f;
+    }
+
+
+    //! @brief 乗算演算子(RGBA)
+    constexpr Color Color::operator * (const Color& another) const noexcept {
+        return Color(*this)*=another;
+    }
+
+
+    //! @briefスカラー除算演算子(RGBA)
+    constexpr Color Color::operator / (f32 f) const noexcept {
+        return Color(*this) /= f;
+    }
+
+
+    //! @brief 除算演算子(RGBA)
+    constexpr Color Color::operator / (const Color& another) const noexcept {
+        return Color(*this) /= another;
+    }
+
+
+    //! @brief 加算代入演算子(RGB)
+    constexpr Color& Color::operator += (const Color& another) noexcept {
+        return *this = Color(r + another.r, g + another.g, b + another.b, a);
+    }
+
+
+    //! @brief 減算代入演算子(RGB)
+    constexpr Color& Color::operator -= (const Color& another) noexcept {
+        return *this = Color(r - another.r, g - another.g, b - another.b, a);
+    }
+
+
+    //! @brief スカラー乗算代入演算子(RGBA)
+    constexpr Color& Color::operator *= (f32 f) noexcept {
+        r *= f;
+        g *= f;
+        b *= f;
+        a *= f;
+        return *this;
+    }
+
+
+    //! @brief 乗算代入演算子(RGBA)
+    constexpr Color& Color::operator *= (const Color& another) noexcept {
+        r *= another.r;
+        g *= another.g;
+        b *= another.b;
+        a *= another.a;
+        return *this;
+    }
+
+
+    //! @brief スカラー除算代入演算子(RGBA)
+    constexpr Color& Color::operator /= (f32 f) noexcept {
+        update_max(f, Math::EPSILON);
+        r /= f;
+        g /= f;
+        b /= f;
+        a /= f;
+        return *this;
+    }
+
+
+    //! @brief 除算代入演算子(RGBA)
+    constexpr Color& Color::operator /= (const Color& another) noexcept {
+        r /= Math::Max(another.r,Math::EPSILON);
+        g /= Math::Max(another.g,Math::EPSILON);
+        b /= Math::Max(another.b,Math::EPSILON);
+        a /= Math::Max(another.a,Math::EPSILON);
+        return *this;
+    }
+
+
+    //! @brief      カラー要素を0.0～にクランプ
+    constexpr Color& Color::clamp() noexcept {
+        r = Math::Max(r, 0.0f);
+        g = Math::Max(g, 0.0f);
+        b = Math::Max(b, 0.0f);
+        a = Math::Clamp01(a);
+        return *this;
+    }
+
+    //! @brief      カラー要素を0.0～1.0にクランプ
+    constexpr Color& Color::clamp01() noexcept {
+        r = Math::Clamp01(r);
+        g = Math::Clamp01(g);
+        b = Math::Clamp01(b);
+        a = Math::Clamp01(a);
+        return *this;
+    }
+
+
+    //! @brief      RGBのうち最小の値を取得
+    constexpr f32 Color::minComponent()const noexcept {
+        return Math::Min(r, g, b);
+    }
+
+
+    //! @brief      RGBのうち最大の値を取得
+    constexpr f32 Color::maxComponent()const noexcept {
+        return Math::Max(r, g, b);
+    }
+
+
+    //! @brief          Vec4 に変換
+    constexpr Vec4 Color::toVec4()const noexcept {
+        return {r, g, b, a};
+    }
+
+
+    // @brief      グレイスケールに変換
+    constexpr Color Color::toGrayscale()const noexcept {
+        f32 gray = r * 0.29f + g * 0.57f + b * 0.14f;
+        return Color(gray, a);
+    }
+
+
+    //! @brief      セピアカラーに変換
+    constexpr Color Color::toSepia()const noexcept {
+        Color sepia = this->toGrayscale();
+        sepia.r *= 1.351f;
+        sepia.g *= 1.2f;
+        sepia.b *= 0.934f;
+        sepia.clamp01();
+        return sepia;
+    }
+
+
+    //! @brief      等価判定(許容誤差指定)
+    constexpr bool Color::equals(const Color& another, f32 tolerance)const noexcept {
+        return
+            Math::IsNearEquals(r, another.r, tolerance) &&
+            Math::IsNearEquals(g, another.g, tolerance) &&
+            Math::IsNearEquals(b, another.b, tolerance) &&
+            Math::IsNearEquals(a, another.a, tolerance);
+    }
+
+
+    //! @brief		色の線形補完
+    //! 
+    //! @details	t が0のとき a を返し、 t が1のとき b を返す。
+    //! @param a    色1
+    //! @param b    色2
+    //! @param t	補完パラメータ
+    //! @return		補完された色オブジェクト
+    constexpr Color Color::Lerp(const Color& a, const Color& b, f32 t) noexcept {
+        return (b * t) + (a * (1.0f - t));
+    }
+
+
+    //! @brief		色のアルファブレンド
+    //! 
+    //! @details	```
+    //!             out.a   = src.a + dst.a*(1-src.a);
+    //!             out.rgb = (src.rgb*src.a + dst.rgb*dst.a * (1-src.a)) / out.a;
+    //!             out.a   = 0 => out.rgb = 0
+    //!             ```
+    //! @param dst  色1
+    //! @param src  色2
+    //! @return		ブレンドされた色オブジェクト
+    constexpr Color Color::AlphaBlend(const Color& dst, const Color& src) noexcept {
+        auto a = src.a + dst.a * (1 - src.a);
+        auto rgb = (src * src.a + dst * dst.a * (1 - src.a)) / a;
+        if (Math::IsNearZero(a))rgb = Color(0);
+        return {rgb.r, rgb.g, rgb.a, a};
+    }
+
+    //! @brief		色の事前乗算アルファブレンド
+    //! 
+    //! @details	```
+    //!             out.a   = src.a + dst.a*(1-src.a);
+    //!             out.rgb = src.rgb + dst.rgb * (1-src.a);
+    //!             ```
+    //! @param dst  色1
+    //! @param src  色2
+    //! @return		ブレンドされた色オブジェクト
+    constexpr Color Color::PremultipliedAlphaBlend(const Color& dst, const Color& src) noexcept {
+        auto a = src.a + dst.a * (1 - src.a);
+        auto rgb = src + dst * (1 - src.a);
+        return {rgb.r, rgb.g, rgb.a, a};
+    }
+
+    //! @endcond
+}
+
+
+//===============================================================
+// フォーマット
+//===============================================================
+//! @cond
+template <> struct std::formatter<Amuse::Core::Color, Amuse::Core::Char> : std::formatter<Amuse::Core::f32, Amuse::Core::Char> {
+    using base = std::formatter<Amuse::Core::f32, Amuse::Core::Char>;
+    template<typename FormatContext>
+    auto format(const Amuse::Core::Color& value, FormatContext& ctx) const {
+        ctx.advance_to(format_to(ctx.out(), "("));
+        ctx.advance_to(base::format(value.r, ctx));
+        ctx.advance_to(format_to(ctx.out(), ","));
+        ctx.advance_to(base::format(value.g, ctx));
+        ctx.advance_to(format_to(ctx.out(), ","));
+        ctx.advance_to(base::format(value.b, ctx));
+        ctx.advance_to(format_to(ctx.out(), ","));
+        ctx.advance_to(base::format(value.a, ctx));
+        ctx.advance_to(format_to(ctx.out(), ")"));
+        return ctx.out();
+    }
+};
+//! @endcond

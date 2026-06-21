@@ -1,0 +1,76 @@
+﻿//***********************************************************
+//! @file
+//! @author		Gajumaru
+//***********************************************************
+#pragma once
+#include <Amuse/Core/Template/Utility/Memory.h>
+#include <assert.h>
+
+namespace Amuse::Core {
+
+    //! @brief      Pimplユーティリティ
+    //! 
+    //! @details    unique_ptrからデフォルトコンストラクタ/reset()/release()を削除することでRAIIに対応したPimplを実現する。
+    //!             Pimplを使用するクラスはコンストラクタとデストラクタをソースファイルで実装する必要がある。
+    //!             これはコンストラクタがインライン展開されると翻訳単位にImplの定義が必要なためある。
+    //!             [参照](https://qiita.com/false-git@github/items/79bf1b6acc00dc43d173#comment-9071ab88afe79f2cf834)
+    template<class T>
+    class Pimpl {
+    public:
+
+        //! @brief  コンストラクタ
+        template<typename ...Args>
+        Pimpl(Args&&... args) 
+            : m_impl(std::make_unique<T>(std::forward<Args>(args)...))
+        {}
+
+        //! @brief  ムーブコンストラクタ
+        Pimpl(Pimpl && rhs) noexcept
+            : m_impl(std::move(rhs.m_impl))
+        {}
+
+        //! @brief  ムーブ代入演算子
+        Pimpl& operator =(Pimpl && rhs) noexcept {
+            m_impl = std::move(rhs.m_impl);
+            return *this;
+        }
+
+        //! @brief  ポインタアクセス
+        T* operator ->() noexcept {
+            return m_impl.get();
+        }
+
+        //! @brief  ポインタアクセス(const)
+        const T* operator ->()const noexcept {
+            return m_impl.get();
+        }
+
+		//! @brief  参照アクセス
+        T& operator *() noexcept {
+			assert(m_impl != nullptr);
+            return *m_impl;
+		}
+
+		//! @brief  参照アクセス(const)
+        const T& operator *()const noexcept {
+            assert(m_impl != nullptr);
+            return *m_impl;
+        }
+
+        //! @brief  ポインタアクセス
+        T* get() noexcept {
+            return m_impl.get();
+        }
+
+        //! @brief  ポインタアクセス(const)
+        const T* get()const noexcept {
+            return m_impl.get();
+        }
+
+    private:
+
+        UPtr<T> m_impl{nullptr};
+
+    };
+
+}

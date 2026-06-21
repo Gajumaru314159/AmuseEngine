@@ -1,0 +1,130 @@
+﻿//***********************************************************
+//! @file
+//! @author		Gajumaru
+//***********************************************************
+#pragma once
+#include <Amuse/Core/Math/Vector2.h>
+#include <Amuse/Core/Math/Math.h>
+
+namespace Amuse::Core {
+
+    //! @brief  円
+    struct Circle {
+    public:
+
+        //===============================================================
+        // コンストラクタ
+        //===============================================================
+
+        //! @brief  デフォルトコンストラクタ( 初期化なし )
+        inline Circle() noexcept;
+
+
+        //! @brief  コンストラクタ
+        //! 
+        //! @param center   中心座標
+        //! @param radius   半径
+        constexpr Circle(Vec2 center, f32 radius)noexcept;
+
+
+        //===============================================================
+        //  オペレータ
+        //===============================================================
+
+        //! @brief          等価演算子
+        constexpr bool operator==(const Circle& other)const noexcept;
+
+
+        //! @brief          否等価演算子
+        constexpr bool operator!=(const Circle& other)const noexcept;
+
+
+        //===============================================================
+        //  ゲッター
+        //===============================================================
+
+        //! @brief          面積を取得
+        constexpr f32 area()const noexcept;
+
+
+        //! @brief          円周の長さを取得
+        constexpr f32 perimeter()const noexcept;
+
+
+    public:
+
+        //! @brief      補間
+        //! 
+        //! @param a    開始
+        //! @param b    終了
+        //! @param t    補間係数
+        //! @return     t=0のときa、t=1の時bを返す。
+        static constexpr Circle Lerp(const Circle& a, const Circle& b, f32 t)noexcept;
+
+
+    public:
+
+        Vec2    center; //!< 中心座標
+        f32     radius; //!< 半径
+
+    };
+
+
+
+
+
+
+    //===============================================================
+    // インライン関数
+    //===============================================================
+    //! @cond
+
+    //! @brief  デフォルトコンストラクタ( 初期化なし )
+    inline Circle::Circle()noexcept 
+    {
+    }
+
+
+    //! @brief  コンストラクタ(初期化なし)
+    constexpr Circle::Circle(Vec2 center, f32 radius)noexcept 
+        :center(center), radius(radius) 
+    {
+    }
+
+
+    //! @brief          等価演算子
+    constexpr bool Circle::operator==(const Circle& other)const noexcept {
+        return center == other.center && Math::IsNearEquals(radius,other.radius);
+    }
+
+
+    //! @brief          否等価演算子
+    constexpr bool Circle::operator!=(const Circle& other)const noexcept {
+        return !(*this == other);
+    }
+
+
+    //! @brief          面積を取得
+    constexpr f32 Circle::area()const noexcept {
+        return radius * radius * Math::PI;
+    }
+
+
+    //! @brief          円周の長さを取得
+    constexpr f32 Circle::perimeter()const noexcept {
+        return 2.0f * Math::PI;
+    }
+
+
+    //! @brief      補間
+    //! 
+    //! @param a    開始
+    //! @param b    終了
+    //! @param t    補間係数
+    //! @return     t=0のときa、t=1の時bを返す。
+    constexpr Circle Circle::Lerp(const Circle& a, const Circle& b, f32 t)noexcept {
+        return Circle(Vec2::Lerp(a.center, b.center, t), Math::Lerp(a.radius, b.radius, t));
+    }
+
+    //! @endcond
+}

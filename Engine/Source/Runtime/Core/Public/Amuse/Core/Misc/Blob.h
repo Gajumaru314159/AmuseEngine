@@ -1,0 +1,310 @@
+﻿//***********************************************************
+//! @file
+//! @author		Gajumaru
+//***********************************************************
+#pragma once
+#include <Amuse/Core/CoreTypes.h>
+#include <Amuse/Core/Template/include.h>
+#include <cstring>
+
+namespace Amuse::Core {
+
+    //! @brief バイナリデータ(Binary Large Object)
+    class Blob {
+    public:
+
+        using base_type = Vector<byte>;                                     //!< 内部型
+        using iterator = base_type::iterator;                               //!< イテレータ
+        using const_iterator = base_type::const_iterator;                   //!< イテレータ(const)
+        using reverse_iterator = base_type::reverse_iterator;               //!< 逆イテレータ
+        using const_reverse_iterator = base_type::const_reverse_iterator;   //!< 逆イテレータ(const)
+
+    public:
+
+        //===============================================================
+        // コンストラクタ
+        //===============================================================
+        
+        //! @brief デフォルトコンストラクタ
+        Blob() = default;
+
+
+        //! @brief コピーコンストラクタ
+        Blob(const Blob&) = default;
+
+
+        //! @brief ムーブコンストラクタ
+        Blob(Blob&&) = default;
+
+
+        //! @brief ストリームから生成
+        Blob(class Stream&);
+
+
+        //! @brief コンストラクタ(サイズ指定)
+        explicit Blob(size_t dataSize) {
+            m_data.resize(dataSize);
+        }
+
+
+        //! @brief コンストラクタ(データ指定)
+        Blob(const void* pData, size_t dataSize) {
+            set(pData, dataSize);
+        }
+
+
+        //! @brief コンストラクタ(vector指定)
+        explicit Blob(const Vector<byte>& data) {
+            m_data = data;
+        }
+
+
+        //! @brief コンストラクタ(vector指定)
+        explicit Blob(Vector<byte>&& data) {
+            m_data = data;
+        }
+
+
+        //===============================================================
+        // オペレータ
+        //===============================================================
+
+        //! @brief コピー代入演算子
+        Blob& operator =(const Blob& other) {
+            m_data = other.m_data;
+            return *this;
+        }
+
+
+        //! @brief ムーブ代入演算子
+        Blob& operator =(Blob&& other) noexcept{
+            m_data = other.m_data;
+            return *this;
+        }
+
+
+        //! @brief コピー代入演算子(Vector)
+        Blob& operator =(const Vector<byte>& other) {
+            m_data = other;
+            return *this;
+        }
+
+
+        //! @brief ムーブ代入演算子(Vector)
+        Blob& operator =(Vector<byte>&& other) noexcept{
+            m_data = other;
+            return *this;
+        }
+
+
+        //===============================================================
+        // 設定
+        //===============================================================
+
+        //! @brief データを設定
+        void set(const void* pData, size_t dataSize) {
+            m_data.resize(dataSize);
+            std::memcpy(m_data.data(), pData, dataSize);
+        }
+
+
+        //! @brief データを設定(Vector)
+        void set(const Vector<byte>& data) {
+            m_data = data;
+        }
+
+
+        //! @brief データを追加
+        void append(byte byte) {
+            m_data.push_back(byte);
+        }
+
+
+        //! @brief データを追加
+        void append(const void* pData, size_t dataSize) {
+            auto size = m_data.size();
+            m_data.resize(size +dataSize);
+            std::memcpy(m_data.data() + size, pData, dataSize);
+        }
+
+
+        //! @brief データを追加
+        void append(const Vector<byte>& data) {
+            append(data.data(), data.size());
+        }
+
+
+        //===============================================================
+        // 設定
+        //===============================================================
+
+        //! @brief マジックナンバーを持っているか
+        bool magic(const Char magic[5]) const {
+			return 4 <= size() && std::memcmp(data(), magic, 4) == 0;
+		}
+
+
+        //! @brief マジックナンバーを持っているか
+        bool magic(u32 magic) const {
+            return 4 <= size() && std::memcmp(data(), &magic, 4) == 0;
+        }
+
+
+        //! @brief バイトアクセス
+        const byte& operator[](const size_t index) const {
+            return m_data[index];
+        }
+
+
+        //! @brief バイトアクセス
+        byte& operator[](const size_t index) {
+            return m_data[index];
+        }
+
+
+        //! @brief 先頭データにアクセス
+        const byte* data() const noexcept {
+            return m_data.data();
+        }
+
+
+        //! @brief 先頭データにアクセス
+        byte* data() noexcept {
+            return m_data.data();
+        }
+
+
+        //! @brief Vector にアクセス
+        const Vector<byte>& toVector() const noexcept {
+            return m_data;
+        }
+
+
+        //! @brief 空か
+        bool empty() const noexcept {
+            return m_data.empty();
+        }
+
+
+        //! @brief 空か
+        explicit operator bool() const noexcept {
+            return !empty();
+        }
+
+
+        //! @brief データサイズを取得
+        size_t size() const noexcept {
+            return m_data.size();
+        }
+
+
+        //! @brief キャパシティを取得
+        size_t capacity() const noexcept {
+            return m_data.capacity();
+        }
+
+
+        //! @brief キャパシティを確保
+        void reserve(size_t size) {
+            m_data.reserve(size);
+        }
+
+
+        //! @brief リサイズ
+        void resize(size_t size) {
+            m_data.resize(size);
+        }
+
+
+        //! @brief データサイズを縮める
+        void shrink_to_fit() {
+            m_data.shrink_to_fit();
+        }
+
+
+        //! @brief データをクリア
+        void clear() {
+            m_data.clear();
+        }
+
+
+        //! @brief 開始イテレータ
+        iterator begin() noexcept {
+            return m_data.begin();
+        }
+
+
+        //! @brief 終了イテレータ
+        iterator end() noexcept {
+            return m_data.end();
+        }
+
+
+        //! @brief 開始イテレータ(const)
+        const_iterator begin() const noexcept {
+            return m_data.begin();
+        }
+
+
+        //! @brief 終了イテレータ(const)
+        const_iterator end() const noexcept {
+            return m_data.end();
+        }
+
+
+        //! @brief 開始イテレータ(const)
+        const_iterator cbegin() const noexcept {
+            return m_data.cbegin();
+        }
+
+
+        //! @brief 終了イテレータ(const)
+        const_iterator cend() const noexcept {
+            return m_data.cend();
+        }
+
+
+        //! @brief 逆開始イテレータ
+        reverse_iterator rbegin() noexcept {
+            return m_data.rbegin();
+        }
+
+
+        //! @brief 逆終了イテレータ
+        reverse_iterator rend() noexcept {
+            return m_data.rend();
+        }
+
+
+        //! @brief 逆開始イテレータ(const)
+        const_reverse_iterator rbegin() const noexcept {
+            return m_data.rbegin();
+        }
+
+
+        //! @brief 逆終了イテレータ(const)
+        const_reverse_iterator rend() const noexcept {
+            return m_data.rend();
+        }
+
+
+        //! @brief 逆開始イテレータ(const)
+        const_reverse_iterator crbegin() const noexcept {
+            return m_data.crbegin();
+        }
+
+
+        //! @brief 終了イテレータ(const)
+        const_reverse_iterator crend() const noexcept {
+            return m_data.crend();
+        }
+
+
+    private:
+
+        base_type m_data;       //!< 内部データ
+
+    };
+
+
+}

@@ -1,0 +1,79 @@
+﻿//***********************************************************
+//! @file
+//! @author		Gajumaru
+//! 
+//! @details    AMUSE_ASSERT や AMUSE_ABORT はリリース版でプログラムに含まれません。
+//!             アサーションは主にプログラムの前提条件を表すために使用されます。
+//!             エラー処理には適切に対処してエラーログを出力するか、例外を発生させてください。
+//***********************************************************
+#pragma once
+#include <Amuse/Core/Log/LogMacro.h>
+
+
+//============================================
+// アサーションマクロ
+//============================================
+
+//! @brief      アサーションの基底マクロ
+#define _internal_AMUSE_ASSERT_BASE(expr,format,...)                                           \
+do{                                                                                         \
+    if(UNLIKELY(!(expr))){                                                                  \
+        _internal_AMUSE_LOG_BASE(Amuse::Core::LogLevel::Fatal,"Assertion",format,##__VA_ARGS__);  \
+    }                                                                                       \
+}while(0)
+
+//! @brief      プログラムの前提条件を定義する
+//! 
+//! @details    式がfalseである場合エラーログを出力しプログラムを停止する。
+//! @note       アサートは内部ロジックの前提条件を定義するために使用します。
+//!             APIの使用者の入力が誤っている場合はエラーログや例外出力によって
+//!             回復可能なエラーハンドリングをしてください。
+//! @param expr 式
+//! @param format ログフォーマット
+#define AMUSE_ASSERT(expr,format,...)			_internal_AMUSE_ASSERT_BASE(expr,format,##__VA_ARGS__)
+//! @copydoc AMUSE_ABORT
+#define AMUSE_ASSERT_EXPR(expr)				AMUSE_ASSERT(expr,#expr)
+
+//! @brief      プログラムを中断する。
+//!
+//! @details    エラーログを出力しプログラムを停止する。
+//! @param format ログフォーマット
+#define AMUSE_ABORT(format,...)				AMUSE_ASSERT(false,format,##__VA_ARGS__)
+
+
+//============================================
+// 典型アサーション
+//============================================
+
+//! @brief      OutOfRangeの検出マクロ
+//! 
+//! @details    min<=value<=max でない場合エラーログを出力しプログラムを停止する。
+#define AMUSE_ASSERT_RANGE(value, minVal, maxVal)		            AMUSE_ASSERT(minVal <= value && value <= maxVal,"範囲外アクセス[{},{}) value = {}]",minVal,maxVal,value)
+
+
+//! @brief      到達不能コードをマークするためのマクロ
+//!
+//! @details    式が呼び出された場合、エラーログを出力しプログラムを停止する。
+#define AMUSE_UNREACHABLE()                                        AMUSE_ABORT("到達不能コード")
+
+
+//! @brief      未実装の機能をマークする
+//! 
+//! @details    式が呼び出された場合、Warningログを出力する。
+#define AMUSE_NOTIMPLEMENTED()                                     AMUSE_ABORT("未実装の機能")
+
+
+//============================================
+// 無効化
+//============================================
+//! @cond
+#ifndef AMUSE_ENABLE_REQUIRE
+#undef AMUSE_ASSERT_EXPR
+#define AMUSE_ASSERT_EXPR(expr,format,...) /* space */
+#endif // AMUSE_ENABLE_REQUIRE
+
+#ifndef AMUSE_ENABLE_ENSURE
+#undef AMUSE_ASSERT_EXPR
+#define AMUSE_ASSERT_EXPR(expr,format,...)  /* space */
+#endif // AMUSE_ENABLE_ENSURE
+//! @endcond

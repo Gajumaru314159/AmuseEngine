@@ -1,0 +1,142 @@
+﻿//***********************************************************
+//! @file
+//! @author		Gajumaru
+//***********************************************************
+#pragma once
+#include <Amuse/Core/Math/Vector2.h>
+#include <Amuse/Core/Math/Math.h>
+
+namespace Amuse::Core {
+
+	//! @brief      ビューポート
+	//! 
+	//! @details    全ての値は0～1に正規化された値です。
+	struct Viewport {
+	public:
+
+		//===============================================================
+		//  コンストラクタ / デストラクタ
+		//===============================================================
+
+		//! @brief      コンストラクタ(要素指定)
+		constexpr Viewport(f32 left, f32 top, f32 right, f32 bottom, f32 nearZ = 1.0f, f32 farZ = 0.0f) noexcept;
+
+
+		//! @brief      コンストラクタ(サイズ/中心指定)
+		constexpr Viewport(const Vec2& center, const Vec2& size = Vec2::Zero) noexcept;
+
+		//! @brief      デフォルトコンストラクタ( 初期化なし )
+		constexpr Viewport() noexcept : Viewport(0, 0, 0, 0) {}
+
+		//===============================================================
+		//  オペレータ
+		//===============================================================
+
+		//! @brief      等価演算子
+		constexpr bool operator==(const Viewport& other)const noexcept;
+
+
+		//! @brief      否等価演算子
+		constexpr bool operator!=(const Viewport& other)const noexcept;
+
+
+		//===============================================================
+		//  ゲッター
+		//===============================================================
+
+		//! @brief      幅
+		constexpr f32 width()const noexcept;
+
+
+		//! @brief      高さ
+		constexpr f32 height()const noexcept;
+
+
+		//! @brief      深さ
+		constexpr f32 depth()const noexcept;
+
+
+		//! @brief      アスペクト比
+		constexpr f32 aspect()const noexcept;
+
+
+	public:
+		f32 left;   //!< 左
+		f32 top;    //!< 上
+		f32 right;  //!< 右
+		f32 bottom; //!< 下
+		f32 nearZ;  //!< 近
+		f32 farZ;   //!< 遠
+	};
+
+
+
+
+
+
+	//===============================================================
+	// インライン関数
+	//===============================================================
+	//! @cond
+
+	//! @brief      コンストラクタ(要素指定)
+	constexpr Viewport::Viewport(f32 left, f32 top, f32 right, f32 bottom, f32 nearZ, f32 farZ) noexcept
+		: left(left), top(top), right(right), bottom(bottom), nearZ(nearZ), farZ(farZ)
+	{
+	}
+
+
+	//! @brief      コンストラクタ(サイズ/中心指定)
+	constexpr Viewport::Viewport(const Vec2& center, const Vec2& size) noexcept
+		: left(center.x - size.x * 0.5f)
+		, top(center.y - size.y * 0.5f)
+		, right(center.x + size.x * 0.5f)
+		, bottom(center.y + size.y * 0.5f)
+		, nearZ(0), farZ(1)
+	{
+
+	}
+
+	//! @brief      等価演算子
+	constexpr bool Viewport::operator==(const Viewport& other)const noexcept {
+		return
+			Math::IsNearEquals(left,other.left) &&
+			Math::IsNearEquals(right, other.right) &&
+			Math::IsNearEquals(top, other.top) &&
+			Math::IsNearEquals(bottom, other.bottom) &&
+			Math::IsNearEquals(nearZ, other.nearZ) &&
+			Math::IsNearEquals(farZ, other.farZ);
+	}
+
+
+	//! @brief      否等価演算子
+	constexpr bool Viewport::operator!=(const Viewport& other)const noexcept {
+		return !(*this == other);
+	}
+
+
+	//! @brief      幅
+	constexpr f32 Viewport::width()const noexcept {
+		return right - left;
+	}
+
+
+	//! @brief      高さ
+	constexpr f32 Viewport::height()const noexcept {
+		return bottom - top;
+	}
+
+
+	//! @brief      高さ
+	constexpr f32 Viewport::depth()const noexcept {
+		return Math::Abs(farZ - nearZ);
+	}
+
+
+	//! @brief      アスペクト比
+	constexpr f32 Viewport::aspect()const noexcept {
+		return width() / height();
+	}
+
+	//! @endcond
+}

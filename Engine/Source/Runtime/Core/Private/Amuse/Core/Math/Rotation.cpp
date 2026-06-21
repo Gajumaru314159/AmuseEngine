@@ -1,0 +1,81 @@
+﻿//***********************************************************
+//! @file
+//! @author		Gajumaru
+//***********************************************************
+#include <Amuse/Core/Math/Rotation.h>
+#include <Amuse/Core/Math/Vector3.h>
+#include <Amuse/Core/Math/Quaternion.h>
+
+namespace Amuse::Core {
+
+    const Rot Rot::Identity = Rot(0, 0, 0);
+
+    //! @brief  コンストラクタ(Vec3指定)
+    Rot::Rot()noexcept
+        : Rot(0,0,0)
+    {
+    }
+
+    //! @brief  コンストラクタ(Vec3指定)
+    Rot::Rot(const Vec3& vec)noexcept
+        : x(vec.x),y(vec.y),z(vec.z)
+    {
+    }
+
+
+    //! @brief  コンストラクタ(Quat指定)
+    Rot::Rot(const Quat& quat) {
+        *this = quat.toRot();
+    }
+
+
+    //! @brief  Quatに変換
+    Vec3 Rot::toVec3()const {
+        return Vec3(x, y, z);
+    }
+
+
+    //! @brief  Quatに変換
+     Quat Rot::toQuat()const {
+        return Quat(x, y, z);
+    }
+
+
+    //! @brief  正面ベクトルを取得
+     Vec3 Rot::front()const {
+        return toQuat().front();
+    }
+
+
+    //! @brief  背面ベクトルを取得
+     Vec3 Rot::back()const {
+        return toQuat().back();
+    }
+
+
+    //! @brief  上ベクトルを取得
+     Vec3 Rot::up()const {
+        return toQuat().up();
+    }
+
+
+    //! @brief  下ベクトルを取得
+     Vec3 Rot::down()const {
+        return toQuat().down();
+    }
+
+
+    //! @brief  左ベクトルを取得
+     Vec3 Rot::left()const {
+        return toQuat().left();
+    }
+
+
+    //! @brief  右ベクトルを取得
+     Vec3 Rot::right()const {
+        return toQuat().right();
+    }
+
+
+
+}

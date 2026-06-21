@@ -1,0 +1,106 @@
+﻿//***********************************************************
+//! @file
+//! @author		Gajumaru
+//***********************************************************
+#include <Amuse/Core/Thread/Thread.h>
+#include <Amuse/Core/String/StringEncoder.h>
+#include <Amuse/Core/Profile/Profile.h>
+#include <functional>
+#ifdef OS_WINDOWS
+#include <Windows.h>
+#endif
+#ifdef OS_LINUX
+# include <unistd.h>
+# include <sys/types.h>
+# include <sys/syscall.h>
+#endif
+
+namespace Amuse::Core {
+
+	class ThreadImpl {
+	public:
+		String name;
+		std::thread th;
+	};
+
+}
+
+namespace Amuse::Core {
+
+	//! @brief				デフォルトコンストラクタ
+	Thread::Thread() {
+
+	}
+
+	//! @brief				コンストラクタ
+	//! 
+	//! @param name			スレッド名
+	//! @param desc			定義
+	//! @param entryPoint	実行する関数オブジェクト
+	Thread::Thread(StringView name, const ThreadDesc& desc, const Func<void()>& entryPoint)
+	{
+		m_impl->name = name;
+		m_impl->th = std::thread([this, entryPoint]() {
+			AMUSE_PROFILE_THREAD(m_impl->name.c_str());
+			entryPoint();
+		});
+
+		setup();
+
+#if defined(OS_WINDOWS)
+
+		WString wname;
+		StringEncoder::Encode(name, wname);
+		if (auto hr = ::SetThreadDescription(m_impl->th.native_handle(), wname.c_str());FAILED(hr)) {
+			LOG_WARNING("スレッド名の設定に失敗 [{}]",name);
+		}
+		if (auto hr = ::SetProcessAffinityMask(m_impl->th.native_handle(),desc.affinity);FAILED(hr)) {
+			LOG_WARNING("スレッドのアフィニティマスクの設定に失敗 [{}]",name);
+		}
+#endif
+	}
+
+	//! @brief				デストラクタ
+	//! 
+	//! @details			スレッドが終了するまで待機
+	Thread::~Thread() {
+		join();
+	}
+
+	//! @brief				スレッドが終了するまで待機する
+	void Thread::join() {
+		m_impl->th.join();
+	}
+
+	//! @brief				スレッドの実行を他スレッドに譲る
+	void Thread::YieldThread() {
+		std::this_thread::yield();
+	}
+
+	//! @brief				スレッドの実行を他スレッドに譲る
+	void Thread::Sleep(u32 milliSeconds) {
+		std::this_thread::sleep_for(std::chrono::milliseconds(milliSeconds));
+	}
+
+	//! @brief				現在のスレッドIDを取得
+	u32 Thread::GetCurrentThreadId() {
+#ifdef OS_WINDOWS
+		return static_cast<u32>(::GetCurrentThreadId());
+#elif defined(OS_LINUX)
+		return syscall(SYS_gettid);
+#else
+		//static_assert(false, "Thread::GetCurrentThreadId()が実装されていません。");
+#endif
+	}
+
+	//! @brief				スレッドを実行しているCPUのコア番号を取得
+	u32 Thread::GetCurrentCpuCore() {
+#ifdef OS_WINDOWS
+		return static_cast<u32>(::GetCurrentProcessorNumber());
+#else
+		//static_assert(false, "Thread::GetCurrentCpuCore()が実装されていません。");
+		return 0;
+#endif
+
+	}
+}

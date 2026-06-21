@@ -1,0 +1,443 @@
+﻿//***********************************************************
+//! @file
+//! @author Gajumaru
+//***********************************************************
+#pragma once
+#include <Amuse/Core/Geometry/Size.h>
+#include <Amuse/Core/Math/Vectors.h>
+#include <Amuse/Core/Math/Rotation.h>
+#include <Amuse/Core/Math/Quaternion.h>
+
+namespace Amuse::Core {
+
+	struct Vec3;
+	struct Vec4;
+	struct Quat;
+	struct Rot;
+	struct Frustum;
+
+
+	//! @brief      行列クラス
+	//! 
+	//! @details    数学的表現は列優先表現です。Vec4は列ベクトルとして扱います。DirectXとは異なるので注意してください。
+	//!             行列A、B、Cとベクトルvがあるとき、数学同様<br>
+	//!				```v' = ABCv = A*B*C*v```<br>
+	//!             と記述しても正しい結果を得られますが、プログラムだと<br>
+	//!				```v' = ABCv = ((A*B)*C)*v```<br>
+	//!             というように行列同士の計算が先にされパフォーマンス的に良くありません。
+	//!             複数の行列とベクトルを計算する場合は明示的に行列とベクトルの合成を先にするようにしてください。
+	//!				<br><br>
+	//!				メモリレイアウトはシェーダと合わせるために列優先データです。
+	struct Matrix {
+	public:
+
+		//===============================================================
+		//  コンストラクタ / デストラクタ
+		//===============================================================
+
+		//! @brief		デフォルトコンストラクタ(初期化なし)
+		constexpr Matrix();
+
+
+		//! @brief 要素を指定して初期化
+		constexpr Matrix(
+			f32 m00, f32 m01, f32 m02, f32 m03,
+			f32 m10, f32 m11, f32 m12, f32 m13,
+			f32 m20, f32 m21, f32 m22, f32 m23,
+			f32 m30, f32 m31, f32 m32, f32 m33);
+
+
+		//===============================================================
+		//  オペレータ
+		//===============================================================
+
+		//! @brief 等価演算子
+		bool    operator == (const Matrix& v) const;
+
+
+		//! @brief 否等価演算子 
+		bool    operator != (const Matrix& v) const;
+
+
+		//! @brief 行列演算子
+		constexpr Matrix  operator * (const Matrix& other) const;
+
+
+		//! @brief 行列演算代入演算子 
+		constexpr Matrix&  operator *= (const Matrix& o);
+
+
+		//! @brief Vec3 合成代入演算子
+		Vec3    operator* (const Vec3& v)const;
+
+
+		//===============================================================
+		//  ゲッター / セッター
+		//===============================================================
+
+		//! @brief          行を設定
+		//! 
+		//! @param index    行インデックス
+		//! @param column   行ベクトル
+		Matrix& setColumn(s32 index, Vec4 column);
+
+
+		//! @brief          列を設定
+		//! @param index    列インデックス
+		//! @param row      列ベクトル
+		Matrix& setRow(s32 index, Vec4 row);
+
+
+		//! @brief          行列の行を取得
+		//! 
+		//! @details        存在しない行を取得しようとした場合はエラー
+		//! @param index    行インデックス
+		Vec4 getColumn(s32 index)const;
+
+
+		//! @brief          行列の列を取得
+		//! 
+		//! @details        存在しない列を取得しようとした場合はエラー
+		//! @param index    列インデックス
+		Vec4 getRow(s32 index)const;
+
+
+		//! @brief 行列から回転量を計算
+		Vec3 getTrans()const;
+
+
+		//! @brief 行列から回転量を計算
+		Rot getRot()const;
+
+
+		//! @brief 行列から拡大量を計算
+		Vec3 getScale()const;
+
+
+		//! @brief 行列から回転量を計算
+		Quat getQuat()const;
+
+
+		//! @brief		行列式の計算
+		f32 determinant()const;
+
+
+		//! @brief      逆行列を持つか
+		bool hasInverse()const;
+
+
+		//! @brief		逆行列
+		//! 
+		//! @Internal		逆行列が計算できない場合は単位行列を返す
+		Matrix inverse()const;
+
+
+		//! @brief      転置行列の計算
+		//! 
+		//! @note       直交行列の転置行列は逆行列となる。
+		constexpr Matrix transposed()const;
+
+
+		//===============================================================
+		//  操作
+		//===============================================================
+
+		//! @brief 行列を転置する
+		constexpr Matrix& transpose();
+
+
+		//! @brief 行列に平行移動行列を乗算
+		//! 
+		//! @param x X軸方向の移動量
+		//! @param y Y軸方向の移動量
+		//! @param z Z軸方向の移動量
+		Matrix& translate(f32 x, f32 y, f32 z);
+
+
+		//! @brief 行列に平行移動行列を乗算
+		//! 
+		//! @param trans 移動量
+		Matrix& translate(Vec3 trans);
+
+
+		//! @brief 行列に回転行列を乗算
+		//! 
+		//! @param x X軸の回転量(Degrees)
+		//! @param y Y軸の回転量(Degrees)
+		//! @param z Z軸の回転量(Degrees)
+		Matrix& rotate(f32 x, f32 y, f32 z);
+
+
+		//! @brief 行列に回転行列を乗算
+		//! 
+		//! @param rotation 回転量
+		Matrix& rotate(Rot rotation);
+
+
+		//! @brief 行列に回転行列を乗算
+		//! 
+		//! @param quat 回転量
+		Matrix& rotate(Quat quat);
+
+
+		//! @brief 行列に拡大縮小行列を乗算
+		//! 
+		//! @param x X軸方向の拡大縮小量
+		//! @param y Y軸方向の拡大縮小量
+		//! @param z Z軸方向の拡大縮小量
+		Matrix& scale(f32 x, f32 y, f32 z);
+
+
+		//! @brief 行列に拡大縮小行列を乗算
+		//! 
+		//! @param scale 拡大縮小量
+		Matrix& scale(Vec3 scale);
+
+
+	public:
+
+
+		//! @brief 平行移動行列
+		//! 
+		//! @param x X軸方向の移動量
+		//! @param y Y軸方向の移動量
+		//! @param z Z軸方向の移動量
+		static constexpr Matrix Translate(f32 x, f32 y, f32 z);
+
+
+		//! @brief 平行移動行列
+		//! 
+		//! @param trans 移動量
+		static constexpr Matrix Translate(Vec3 trans);
+
+
+		//! @brief 回転行列
+		//! 
+		//! @param x X軸の回転量(Degrees)
+		//! @param y Y軸の回転量(Degrees)
+		//! @param z Z軸の回転量(Degrees)
+		static Matrix Rotate(f32 x, f32 y, f32 z);
+
+
+		//! @brief 回転行列
+		//! 
+		//! @param rotation 回転量
+		static Matrix Rotate(Rot rotation);
+
+
+		//! @brief 回転行列
+		//! 
+		//! @param quat 回転量
+		static Matrix Rotate(Quat quat);
+
+
+		//! @brief 拡大縮小行列
+		//! 
+		//! @param x X軸方向の拡大縮小量
+		//! @param y Y軸方向の拡大縮小量
+		//! @param z Z軸方向の拡大縮小量
+		static inline Matrix Scale(f32 x, f32 y, f32 z);
+
+
+		//! @brief 拡大縮小行列
+		//! 
+		//! @param scale 拡大縮小量
+		static inline Matrix Scale(Vec3 scale);
+
+
+		//! @brief トランスフォーム行列
+		static inline Matrix TRS(Vec3 trans, Rot rot, Vec3 scale);
+
+
+		//! @brief トランスフォーム行列
+		static inline Matrix TRS(Vec3 trans, Quat rot, Vec3 scale);
+
+
+		//! @brief 透視投影行列の生成
+		static Matrix Perspective(f32 fov, f32 aspect, f32 zNear, f32 zFar);
+		static Matrix Perspective(f32 fov, f32 width, f32 height, f32 zNear, f32 zFar);
+		static Matrix Perspective(f32 fov, Size size, f32 zNear, f32 zFar);
+
+
+		//! @brief  平行投影行列の生成
+		static Matrix Orthographic(f32 left, f32 right, f32 bottom, f32 top, f32 zNear, f32 zFar);
+
+
+	private:
+
+		static constexpr s32 COL = 4;	//! 列
+		static constexpr s32 ROW = 4;	//! 行
+
+	public:
+
+		static const Matrix Identity;   //!< 単位行列
+
+	public:
+
+		union {
+			struct {
+				
+				// 列優先のため数学上の並びと異なります。(m03,m13,m23)が平行移動を表します。
+				// 数学上/ウォッチ式上は以下のレイアウトです。
+				//  m00, m01, m02, m03
+				//  m10, m11, m12, m13
+				//  m20, m21, m22, m23
+				//  m30, m31, m32, m33
+
+				f32 m00, m10, m20, m30;
+				f32 m01, m11, m21, m31;
+				f32 m02, m12, m22, m32;
+				f32 m03, m13, m23, m33;
+			};
+			f32 m[4][4];//!< 内部データ[x][y] (列優先)
+		};
+
+	};
+
+
+
+
+
+
+	//===============================================================
+	// インライン関数
+	//===============================================================
+	//! @cond
+
+	//! @brief		デフォルトコンストラクタ(単位行列初期化)
+	constexpr Matrix::Matrix() {
+	}
+
+
+	//! @brief 要素を指定して初期化
+	constexpr Matrix::Matrix(
+		f32 m00, f32 m01, f32 m02, f32 m03,
+		f32 m10, f32 m11, f32 m12, f32 m13,
+		f32 m20, f32 m21, f32 m22, f32 m23,
+		f32 m30, f32 m31, f32 m32, f32 m33)
+		: m00(m00), m10(m10), m20(m20), m30(m30)
+		, m01(m01), m11(m11), m21(m21), m31(m31)
+		, m02(m02), m12(m12), m22(m22), m32(m32)
+		, m03(m03), m13(m13), m23(m23), m33(m33)
+	{
+	}
+
+
+	//! @brief 行列演算子
+	constexpr Matrix Matrix::operator * (const Matrix& other) const {
+		return Matrix(*this) *= other;
+	}
+
+
+	//! @brief 行列演算代入演算子 
+	constexpr Matrix& Matrix::operator *= (const Matrix& other) {
+
+		Matrix result(
+			0, 0, 0, 0,
+			0, 0, 0, 0,
+			0, 0, 0, 0,
+			0, 0, 0, 0);
+
+		for (s32 y = 0; y < ROW; y++) {
+			for (s32 x = 0; x < COL; x++) {
+				for (s32 i = 0; i < ROW; i++) {
+					result.m[x][y] += m[i][y] * other.m[x][i];
+				}
+			}
+		}
+
+		return *this = result;
+	}
+
+
+	//! @brief      転置行列の計算
+	//! 
+	//! @note       直交行列の転置行列は逆行列となる。
+	constexpr Matrix Matrix::transposed()const {
+		Matrix ret;
+		for (s32 i = 0; i < COL; i++) {
+			for (s32 j = 0; j < ROW; j++) {
+				ret.m[i][j] = m[j][i];
+			}
+		}
+		return ret;
+	}
+
+
+
+	//! @brief 行列を転置する
+	constexpr Matrix& Matrix::transpose() {
+		return *this = transposed();
+	}
+
+
+	//! @brief 平行移動行列
+	//! 
+	//! @param x X軸方向の移動量
+	//! @param y Y軸方向の移動量
+	//! @param z Z軸方向の移動量
+	constexpr Matrix Matrix::Translate(f32 x, f32 y, f32 z) {
+		return Matrix(
+			1, 0, 0, x,
+			0, 1, 0, y,
+			0, 0, 1, z,
+			0, 0, 0, 1);
+	}
+
+
+	//! @brief 平行移動行列
+	//! 
+	//! @param trans 移動量
+	constexpr Matrix Matrix::Translate(Vec3 trans) {
+		return Translate(trans.x, trans.y, trans.z);
+	}
+
+
+	//! @brief 回転行列
+	//! 
+	//! @param rotation 回転量
+	inline Matrix Matrix::Rotate(Rot rotation) {
+		return Rotate(rotation.x, rotation.y, rotation.z);
+	}
+
+
+	//! @brief 回転行列
+	//! 
+	//! @param quat 回転量
+	inline Matrix Matrix::Rotate(Quat quat) {
+		return quat.toMatrix();
+	}
+
+
+	//! @brief 拡大縮小行列
+	//! 
+	//! @param scale 拡大縮小量
+	inline Matrix Matrix::Scale(Vec3 scale) {
+		return Scale(scale.x, scale.y, scale.z);
+	}
+
+	//! @brief 拡大縮小行列
+	//! 
+	//! @param x X軸方向の拡大縮小量
+	//! @param y Y軸方向の拡大縮小量
+	//! @param z Z軸方向の拡大縮小量
+	inline Matrix Matrix::Scale(const f32 x, const f32 y, const f32 z) {
+		return Matrix(
+			x, 0, 0, 0,
+			0, y, 0, 0,
+			0, 0, z, 0,
+			0, 0, 0, 1);
+	}
+
+	//! @brief トランスフォーム行列
+	inline Matrix Matrix::TRS(Vec3 trans, Rot rot, Vec3 scale) {
+		return Translate(trans) * Rotate(rot) * Scale(scale);
+	}
+
+	//! @brief トランスフォーム行列
+	inline Matrix Matrix::TRS(Vec3 trans, Quat rot, Vec3 scale) {
+		return Translate(trans) * Rotate(rot) * Scale(scale);
+	}
+
+	//! @endcond
+}

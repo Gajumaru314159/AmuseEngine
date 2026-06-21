@@ -1,0 +1,228 @@
+﻿//***********************************************************
+//! @file
+//! @author		Gajumaru
+//***********************************************************
+#pragma once
+#include <Amuse/Core/Reflection/Type.h>
+#include <Amuse/Core/Reflection/Any.h>
+#include <Amuse/Core/Template/Container/Vector.h>
+#include <Amuse/Core/Template/Container/Map.h>
+#include <Amuse/Core/Template/Utility/Function.h>
+
+namespace Amuse::Core {
+
+	using ConstructorInvoker = Any(*)(Span<Any> args);
+	using DestructorInvoker = void(*)(void*);
+	using PlacedConstructorInvoker = void(*)(void*, Span<Any> args);
+	using PlacedDestructorInvoker = void(*)(void*);
+	using CopyInvoker = void* (*)(const void*);
+	using AssignInvoker = void(*)(const void*,void*);
+	using MethodInvoker = Func<Any(Any& owner, Span<Any> args)>;
+	using PropertySetter = Func<void(Any& owner, const Any& value)>;
+	using PropertyGetter = Func<Any(const Any& owner)>;
+	using EnumValueGetter = s32(*)(const Any& owner);
+
+
+	//! @brief  タグ情報
+	struct TagInfo {
+		HashMap<StringView, String> tags;
+
+		//! @brief		タグを持っているか
+		bool hasTag(StringView name)const { return tags.contains(name); }
+
+		//! @brief		タグを取得
+		Optional<StringView> findTag(StringView name)const { auto found = tags.find(name); return (found == tags.end()) ? std::nullopt : Optional<StringView>{ found->second }; }
+	};
+
+
+	//! @brief  Enum要素情報
+	struct EnumElementInfo : TagInfo {
+		StringView				name;
+		s32						index;
+		s64						value;
+	};
+
+	//! @brief  引数情報
+	struct ArgumentInfo {
+		Type					type;
+		StringView				name;
+	};
+
+	//! @brief  コンストラクタ情報
+	struct ConstructorInfo : TagInfo {
+		Vector<ArgumentInfo>		arguments;
+		ConstructorInvoker			invoker;
+		PlacedConstructorInvoker	placedInvoker;
+
+		template<class T>
+		UPtr<T> invoke(Span<Any> args) const {
+			return invoker(args).release<T>();
+		}
+		template<class T,class... Args>
+		UPtr<T> invoke(Args&&... args) const {
+			// 0引数に対応するために最後尾に空要素を追加している
+			Any invokeArgs[] = {args...,Any()};
+			return invoker(Span<Any>(invokeArgs,sizeof...(Args))).release<T>();
+		}
+
+		template<class T>
+		void invoke_placed(void* p,Span<Any> args) const {
+			placedInvoker(p,args);
+		}
+		template<class T, class... Args>
+		void invoke_placed(void* p,Args&&... args) const {
+			// 0引数に対応するために最後尾に空要素を追加している
+			Any invokeArgs[] = { args...,Any() };
+			placedInvoker(p, Span<Any>(invokeArgs, sizeof...(Args)));
+		}
+
+		template<class... Args>
+		bool match()const {
+			// 0引数に対応するために最後尾に空要素を追加している
+			Type types[] = { Type::Get<Args>()... ,Type()};
+			return std::equal(arguments.begin(), arguments.end(), std::begin(types), std::end(types)-1, [](const ArgumentInfo& a, const Type& b) {return a.type == b; });
+		}
+	};
+
+	//! @brief  プロパティ情報
+	struct PropertyInfo : TagInfo {
+		Type					type;
+		StringView				name;
+		PropertySetter			setter;
+		PropertyGetter			getter;
+		bool					isReference;
+
+		template<class T,class TOwner>
+		T get(TOwner&& owner) const {
+			return getter(owner).template as<T>();
+		}
+
+		template<class T,class TOwner, class = std::enable_if_t<!std::is_const_v<std::remove_reference_t<TOwner>>>>
+		void set(TOwner&& owner, T&& value) const {
+			if(setter) setter(owner, value);
+		}
+
+		bool					canRead() const { return !!getter; }
+		bool					canWrite() const { return !!setter; }
+		bool					canReadWrite() const { return canRead() && canWrite(); }
+	};
+
+	//! @brief  メソッド情報
+	struct MethodInfo : TagInfo {
+		StringView				name;
+		bool					isConst;
+		Type					returnType;
+		Vector<ArgumentInfo>	arguments;
+		MethodInvoker			invoke;
+	};
+
+	//! @brief  プロパティタイプマップ
+	using PropertyInfoMap = HashMap<StringView, PropertyInfo>;
+
+	//! @brief  メソッドタイプマップ
+	using MethodInfoMap = HashMap<StringView, MethodInfo>;
+
+	//! @brief  タイプ情報
+	struct TypeInfo : TagInfo {
+		Type					type;
+		HashSet<Type>			bases;
+
+		size_t					size;
+		size_t					alignment;
+
+		Vector<ConstructorInfo>	constructors;
+		DestructorInvoker		destructor;
+		PlacedDestructorInvoker placedDestructor;
+		CopyInvoker				copyInvoker;
+		AssignInvoker			assignInvoker;
+
+		PropertyInfoMap			properties;
+		MethodInfoMap			methods;
+
+		Vector<StringView>		propertyOrder;
+		Vector<StringView>		methodOrder;
+
+		bool					isEnum;
+		EnumValueGetter			enumValueGetter;
+		Vector<EnumElementInfo>	enumElements;
+
+		void* copy(const void* pointer)const { return copyInvoker?copyInvoker(pointer):nullptr; }
+		void assign(const void* from, void* to)const { if(assignInvoker) assignInvoker(from,to); }
+		void destroy(void* pointer)const { AMUSE_ASSERT_EXPR(destructor); destructor(pointer); }
+		void destroyPlaced(void* pointer)const { AMUSE_ASSERT_EXPR(placedDestructor);  placedDestructor(pointer); }
+
+		size_t stride()const { return align_up(size,alignment); }
+
+		bool isBaseOf(const Type& super)const;
+
+		template<class T>
+		bool isBaseOf()const {
+			return isBaseOf(Type::Get<T>());
+		}
+
+		bool isSuperClassOf(const Type& base)const;
+
+		template<class T>
+		bool isSuperClassOf()const {
+			return isSuperClassOf(Type::Get<T>());
+		}
+
+		template<class... Args>
+		const ConstructorInfo* findConstructor()const {
+			for (auto& constructor : constructors) {
+				if (constructor.match<Args...>()) {
+					return &constructor;
+				}
+			}
+			return nullptr;
+		}
+
+		template<class T = void>
+		const PropertyInfo* findProperty(StringView name)const {
+			auto itr = properties.find(name);
+			if (itr == properties.end()) return nullptr;
+
+			if constexpr (std::is_same_v<T, void>) {
+				return &itr->second;
+			} else {
+				if (itr->second.type.is<T>()) {
+					return &itr->second;
+				}
+			}
+			return nullptr;
+		}
+
+		const MethodInfo* findMethod(StringView name)const {
+			auto itr = methods.find(name);
+			if (itr == methods.end()) return nullptr;
+			if (!itr->second.invoke) return nullptr;
+			return &itr->second;
+		}
+
+		const EnumElementInfo* findEnumElement(StringView name)const {
+			for (auto& element : enumElements) {
+				if (element.name != name)continue;
+				return &element;
+			}
+			return nullptr;
+		}
+		const EnumElementInfo* findEnumElement(s32 value)const {
+			for (auto& element : enumElements) {
+				if (element.value != value)continue;
+				return &element;
+			}
+			return nullptr;
+		}
+
+	public:
+
+		template<class T>
+		static const TypeInfo* Find() { return Find(Type::Get<T>()); }
+		static const TypeInfo* Find(const Type& type);
+		static const TypeInfo* Find(StringView type);
+		static const TypeInfo* Find(Type::hash_type hash);
+		static void Visit(const std::function<void(const TypeInfo&)> &func);
+
+	};
+
+}

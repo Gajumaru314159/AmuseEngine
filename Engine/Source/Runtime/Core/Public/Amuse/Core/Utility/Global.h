@@ -1,0 +1,53 @@
+﻿//***********************************************************
+//! @file
+//! @author		Gajumaru
+//***********************************************************
+#pragma once
+#include <cassert>
+
+namespace Amuse::Core {
+
+    //! @brief      グローバルインスタンス
+    //! @details    インスタンスの寿命を厳格に管理するためのクラス。
+    //!             Singletonは「インスタンスが1つである」ことを保証するのに対し、
+    //!             Globalは「全体で共有される」ことを保証する。
+    //!             そのためグローバルインスタンスとは別でSystemを単体テストすることも
+    //!             可能となる。
+    //!             ```cpp
+    //!             Global<AssetSystem> assetSystem;
+    //!             if(auto system = Global<AssetSystem>::Instance()){
+    //!                 // 処理
+    //!             }
+    //!             ```
+    template<class T>
+    class Global {
+    public:
+
+        //! @brief      コンストラクタ
+        template<class... Args>
+        Global(Args&&... args) {
+            assert(s_instance == nullptr);
+            s_instance = new T(args...);
+        }
+
+        //! @brief      デストラクタ
+        ~Global() {
+            assert(s_instance != nullptr);
+            delete s_instance;
+        }
+
+        //! @brief      インスタンス取得
+        //! @details    取得する場合はnullチェックを挟むようにしてください。
+        static T* Instance() {
+            return s_instance;
+        }
+
+    private:
+        static T* s_instance;
+    };
+
+
+    template<class T>
+    T* Global<T>::s_instance = nullptr;
+
+}

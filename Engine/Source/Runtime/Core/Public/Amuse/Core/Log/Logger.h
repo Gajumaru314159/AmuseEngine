@@ -1,0 +1,100 @@
+﻿//***********************************************************
+//! @file
+//! @author		Gajumaru
+//***********************************************************
+#pragma once
+#include <Amuse/Core/String/String.h>
+#include <Amuse/Core/String/Format.h>
+#include <Amuse/Core/Thread/Mutex.h>
+#include <Amuse/Core/Log/LogTypes.h>
+#include <Amuse/Core/Template/Event/EventNotifier.h>
+
+
+namespace Amuse::Core {
+
+    //! @brief      ロガー
+    //! 
+    //! @details    登録したイベントにログの追加を通知する。@n
+    //!             このクラスではログの登録と通知のみを行うため、ログウィンドウへの
+    //!             出力やログファイルへの保存をする場合は別途実装し登録する必要があ
+    //!             る。
+    class Logger {
+    public:
+
+        using Notifier = EventNotifier<const Log&>;       //!< イベント・通知型
+        using EventHandle = Notifier::Handle;              //!< イベント・ハンドル型
+        using EventDelegateType = Notifier::delegate_type; //!< イベント・デリゲート型
+
+        //! @brief メッセージの最大バイト数
+        enum {
+            MESSAGE_MAX = 2048, //! メッセージの最大バイト数
+        };
+
+    public:
+
+        //! @brief      インスタンスを取得
+        static Logger* Get()noexcept {
+            return s_instance;
+        }
+
+        //! @brief      インスタンスを取得
+        static Logger& Instance()noexcept {
+            assert(s_instance);
+            // ReSharper disable once CppDFANullDereference
+            return *s_instance;
+        }
+
+    public:
+
+        //! @brief コンストラクタ
+        Logger();
+
+
+        //! @brief デストラクタ
+        ~Logger();
+
+        //! @brief                  ログの追加
+        //! 
+        //! @details                この関数の呼び出しは LOG_INFO_EX や LOG_WARNING_EX マクロから呼び出される。@n
+        //!                         直接呼び出しは非推奨です。
+        //! @param level            ログの種類
+        //! @param sourceLocation   ログ生成場所
+        //! @param category         カテゴリ名
+        //! @param pMessage         メッセージ
+        void addLog(LogLevel level, const SourceLocation& sourceLocation, const Char* category, const Char* pMessage);  // ログの追加
+
+
+        //! @brief                  ログの追加
+        //! 
+        //! @details                この関数の呼び出しは LOG_INFO_EX や LOG_WARNING_EX マクロから呼び出される。@n
+        //!                         直接呼び出しは非推奨です。
+        //! @param level            ログの種類
+        //! @param sourceLocation   ログ生成場所
+        //! @param category         カテゴリ名
+        //! @param pFormat          フォーマット文字列
+        //! @param args             フォーマット引数
+        template<typename... Args>
+        void addLog(LogLevel level, const SourceLocation& sourceLocation, const Char* category, const Char* pFormat, Args&&... args) {
+            String message = Format(pFormat, std::forward<Args>(args)...);
+            addLog(level, sourceLocation, category, message.c_str());
+        }
+
+
+        //! @brief ログ・イベントの追加
+        void addEvent(EventHandle& handle, const EventDelegateType& func);
+
+
+        //! @brief ログ・イベントの削除
+        void removeEvent(EventHandle& handle);
+
+
+    private:
+        bool            m_useLineOutput = false;
+        Mutex           m_mutex;
+        Notifier        m_notifier;
+        EventHandle     m_hDebugEvent;
+        static Logger*  s_instance;
+    };
+
+
+}

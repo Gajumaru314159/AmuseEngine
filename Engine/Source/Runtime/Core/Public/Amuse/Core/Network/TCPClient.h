@@ -1,0 +1,51 @@
+﻿//***********************************************************
+/// @file
+/// @brief  TCPクライアント
+/// @author Gajumaru
+//***********************************************************
+#pragma once
+#include <Amuse/Core/Network/IPAddress.h>
+
+namespace Amuse::Core {
+
+	/// TCPクライアント
+	class TCPClient {
+	public:
+
+		/// コンストラクタ
+		TCPClient();
+
+		/// デストラクタ
+		~TCPClient();
+
+		/// 接続を確立する
+		bool connect(IPAddress ip, u16 port);
+
+		/// データを送信する
+		bool send(const char* data, size_t size);
+
+		/// データを受信する
+		/// @return 受信したデータのサイズ
+		size_t receive(char* data, size_t size);
+
+		/// 接続を閉じる
+		void disconnect();
+
+		/// 接続中かどうか
+		bool isConnected() const;
+
+	private:
+
+		friend class TCPServer;
+
+		/// TCPServerからの接続
+		bool connect(IPAddress ip, u16 port,u64 socket);
+
+	private:
+		IPAddress m_ip;
+		u16 m_port;
+		u64 m_socket;
+	};
+
+
+}

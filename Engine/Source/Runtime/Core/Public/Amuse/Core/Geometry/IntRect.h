@@ -1,0 +1,282 @@
+﻿//***********************************************************
+//! @file
+//! @author		Gajumaru
+//***********************************************************
+#pragma once
+#include <Amuse/Core/Math/IntVector2.h>
+#include <Amuse/Core/Math/Vector2.h>
+
+namespace Amuse::Core {
+
+    //! @brief      矩形
+    //! 
+    //! @details    矩形は内部的に中心座標とサイズで管理されます。
+    struct IntRect {
+    public:
+
+        //===============================================================
+        //  コンストラクタ
+        //===============================================================
+
+        //! @brief      デフォルトコンストラクタ
+        inline IntRect() noexcept;
+
+
+        //! @brief      コンストラクタ(要素指定)
+        constexpr IntRect(s32 left, s32 top, s32 right, s32 bottom) noexcept;
+
+
+        //! @brief      コンストラクタ(角指定)
+        constexpr IntRect(const IntVec2& lt,const IntVec2& rb) noexcept;
+
+
+        //===============================================================
+        //  オペレータ
+        //===============================================================
+
+        //! @brief      比較演算子
+        constexpr bool operator==(const IntRect& other)const noexcept;
+
+
+        //! @brief          ポイントを含むように矩形を拡大する
+        //! 
+        //! @param point    ポイント
+        constexpr IntRect operator+(const IntVec2& point)const noexcept;
+
+
+        //! @brief          ポイントを含むように矩形を拡大する
+        //! 
+        //! @param point    ポイント
+        constexpr IntRect& operator+=(const IntVec2& point) noexcept;
+
+
+        //===============================================================
+        //  ゲッター
+        //===============================================================
+
+        //! @brief      左上
+        constexpr IntVec2 tl()const noexcept;
+
+
+        //! @brief      左上
+        constexpr IntVec2 tr()const noexcept;
+
+
+        //! @brief      左下
+        constexpr IntVec2 bl()const noexcept;
+
+
+        //! @brief      右下
+        constexpr IntVec2 br()const noexcept;
+
+
+        //! @brief      中央
+        constexpr Vec2 center()const noexcept;
+
+
+        //! @brief      上辺の中央
+        constexpr Vec2 topCenter()const noexcept;
+
+
+        //! @brief      下辺の中央
+        constexpr Vec2 bottomCenter()const noexcept;
+
+
+        //! @brief      左辺の中央
+        constexpr Vec2 leftCenter()const noexcept;
+
+
+        //! @brief      右辺の中央
+        constexpr Vec2 rightCenter()const noexcept;
+
+
+        //! @brief      サイズ
+        constexpr IntVec2 size()const noexcept;
+
+
+        //! @brief      幅
+        constexpr s32 width()const noexcept;
+
+
+        //! @brief      高さ
+        constexpr s32 height()const noexcept;
+
+
+        //! @brief      面積
+        constexpr s32 area()const noexcept;
+
+
+        //! @brief      外周の長さ
+        constexpr s32 perimeter()const noexcept;
+
+
+        //===============================================================
+        //  判定
+        //===============================================================
+
+        //! @brief      サイズが0以下であるか
+        constexpr bool empty()const noexcept;
+
+
+    public:
+
+        s32 left;   //!< 左座標
+        s32 top;    //!< 上座標
+        s32 right;  //!< 右座標
+        s32 bottom; //!< 下座標
+
+    };
+
+
+
+
+
+
+    //===============================================================
+    // インライン関数
+    //===============================================================
+    //! @cond
+
+
+    //! @brief      デフォルトコンストラクタ
+	inline IntRect::IntRect() noexcept
+		: left(0), top(0), right(0), bottom(0)
+    {
+    }
+
+
+    //! @brief      コンストラクタ(LTRB指定)
+    constexpr IntRect::IntRect(s32 left, s32 top, s32 right, s32 bottom) noexcept 
+        : left(left),top(top),right(right),bottom(bottom)
+    {
+    }
+
+
+    //! @brief      コンストラクタ(角指定)
+    constexpr IntRect::IntRect(const IntVec2& lt, const IntVec2& rb) noexcept
+		: left(lt.x), top(lt.y), right(rb.x), bottom(rb.y)
+	{
+	}
+
+
+    //! @brief      比較演算子
+    constexpr bool IntRect::operator==(const IntRect& other)const noexcept {
+        return
+            left == other.left &&
+            top == other.top &&
+            right == other.right &&
+            bottom == other.bottom;
+    }
+
+
+    //! @brief          ポイントを含むように矩形を拡大する
+    //! 
+    //! @param point    ポイント
+    constexpr IntRect IntRect::operator+(const IntVec2& point)const noexcept {
+        return IntRect(*this) += point;
+    }
+
+
+    //! @brief          ポイントを含むように矩形を拡大する
+    //! 
+    //! @param point    ポイント
+    constexpr IntRect& IntRect::operator+=(const IntVec2& point) noexcept {
+        left = std::min(point.x, left);
+        right = std::max(point.x, right);
+        top = std::min(point.y, top);
+        bottom = std::max(point.y, bottom);
+        return *this;
+    }
+
+
+    //! @brief      左上
+    constexpr IntVec2 IntRect::tl()const noexcept {
+        return IntVec2(left, top);
+    }
+
+
+    //! @brief      右上
+    constexpr IntVec2 IntRect::tr()const noexcept {
+        return IntVec2(right, top);
+    }
+
+
+    //! @brief      左下
+    constexpr IntVec2 IntRect::bl()const noexcept {
+        return IntVec2(left, bottom);
+    }
+
+
+    //! @brief      右下
+    constexpr IntVec2 IntRect::br()const noexcept {
+        return IntVec2(right, bottom);
+    }
+
+
+    //! @brief      中央
+    constexpr Vec2 IntRect::center()const noexcept {
+        return Vec2((left + right) * 0.5f, (top + bottom) * 0.5f);
+    }
+
+
+    //! @brief      上辺の中央
+    constexpr Vec2 IntRect::topCenter()const noexcept {
+        return Vec2((left + right) * 0.5f, 1.0f * top);
+    }
+
+
+    //! @brief      下辺の中央
+    constexpr Vec2 IntRect::bottomCenter()const noexcept {
+        return Vec2((left + right) * 0.5f, 1.0f * bottom);
+    }
+
+
+    //! @brief      左辺の中央
+    constexpr Vec2 IntRect::leftCenter()const noexcept {
+        return Vec2(1.0f * left, (top + bottom) * 0.5f);
+    }
+
+
+    //! @brief      右辺の中央
+    constexpr Vec2 IntRect::rightCenter()const noexcept {
+        return Vec2(1.0f * right, (top + bottom) * 0.5f);
+    }
+
+
+    //! @brief      サイズ
+    constexpr IntVec2 IntRect::size()const noexcept {
+        return IntVec2(width(), height());
+    }
+
+
+    //! @brief      幅
+    constexpr s32 IntRect::width()const noexcept {
+        return right - left;
+    }
+
+
+    //! @brief      高さ
+    constexpr s32 IntRect::height()const noexcept {
+        return bottom - top;
+    }
+
+
+    //! @brief      面積
+    constexpr s32 IntRect::area()const noexcept {
+        return width() * height();
+    }
+
+
+    //! @brief      外周の長さ
+    constexpr s32 IntRect::perimeter()const noexcept {
+        return (width() + height()) * 2;
+    }
+
+
+    //! @brief      サイズが0以下であるか
+    constexpr bool IntRect::empty()const noexcept {
+        return area() == 0;
+    }
+
+    //! @endcond
+}

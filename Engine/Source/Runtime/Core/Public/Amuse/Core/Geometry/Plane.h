@@ -1,0 +1,137 @@
+﻿//***********************************************************
+//! @file
+//! @author		Gajumaru
+//***********************************************************
+#pragma once
+#include <Amuse/Core/Math/Vector3.h>
+#include <Amuse/Core/Geometry/Triangle.h>
+
+namespace Amuse::Core {
+
+    //! @brief 平面
+    struct Plane {
+    public:
+
+        //===============================================================
+        //  コンストラクタ / デストラクタ
+        //===============================================================
+
+        //! @brief デフォルトコンストラクタ(初期化なし)
+        Plane() = default;
+
+
+        //! @brief コンストラクタ(平面の方程式の係数で初期化)
+        Plane(f32 x, f32 y, f32 z, f32 w) noexcept;
+
+
+        //! @brief コンストラクタ(法線と原点からの距離で初期化)
+        constexpr Plane(Vec3 normal, f32 distance);
+
+
+        //! @brief コンストラクタ(平面上の1点と法線で初期化)
+        Plane(Vec3 base, Vec3 normal);
+
+
+        //! @brief コンストラクタ(3点で初期化)
+        Plane(Vec3 pos1, Vec3 pos2, Vec3 pos3);
+
+
+        //===============================================================
+        //  オペレータ
+        //===============================================================
+        
+		//! @brief 等価比較
+        bool operator==(const Plane& rhs) const noexcept {
+            return normal == rhs.normal && Math::IsNearEquals(distance, rhs.distance);
+        }
+
+        //! @brief 否等価比較
+        bool operator!=(const Plane& rhs) const noexcept {
+            return !(*this == rhs);
+        }
+
+        //===============================================================
+        //  ゲッター
+        //===============================================================
+
+        //! @brief 面を反転
+        constexpr Plane flipped() const noexcept;
+
+
+        //===============================================================
+        //  変換
+        //===============================================================
+
+        //! @brief 面を反転
+        constexpr Plane& flip() noexcept;
+
+
+    public:
+
+        Vec3    normal;         //!< 面の法線
+        f32     distance;       //!< 原点と面の距離
+
+    };
+
+
+
+
+
+
+    //===============================================================
+    // インライン関数
+    //===============================================================
+    //! @cond
+
+    //! @brief コンストラクタ(平面の方程式の係数で初期化)
+    inline Plane::Plane(f32 x, f32 y, f32 z, f32 w) noexcept {
+        normal.set(x, y, z);
+        distance = w * normal.length();
+        normal.normalize();
+    }
+
+
+    //! @brief コンストラクタ(法線と原点からの距離で初期化)
+    constexpr Plane::Plane(Vec3 normal, f32 distance) 
+        : normal(normal),distance(distance)
+    {
+    }
+
+
+    //! @brief コンストラクタ(平面上の1点と法線で初期化)
+    inline Plane::Plane(Vec3 base, Vec3 _normal) {
+        normal = _normal;
+        normal.normalize();
+        distance = Vec3::Dot(normal, base);
+    }
+
+
+    //! @brief コンストラクタ(3点で初期化)
+    inline Plane::Plane(Vec3 pos1, Vec3 pos2, Vec3 pos3) {
+        normal=Triangle(pos1, pos2, pos3).normal();
+        distance = Vec3::Dot(normal, pos1);
+    }
+
+
+    //===============================================================
+    //  ゲッター
+    //===============================================================
+
+    //! @brief 面を反転
+    constexpr Plane Plane::flipped() const noexcept {
+        return {-normal, distance};
+    }
+
+
+    //===============================================================
+    //  変換
+    //===============================================================
+
+    //! @brief 面を反転
+    constexpr Plane& Plane::flip() noexcept {
+        normal *= -1.0f;
+        return *this;
+    }
+
+    //! @endcond
+}
