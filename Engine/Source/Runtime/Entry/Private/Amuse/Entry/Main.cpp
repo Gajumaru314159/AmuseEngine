@@ -3,14 +3,14 @@
 //! @author		Gajumaru
 //***********************************************************
 #include <Amuse/Core/Profile/Profile.h>
-#include <Amuse/Core/Entry/Main.h>
 #include <Amuse/Core/Memory/Memory.h>
+#include <Amuse/Entry/Main.h>
 
-int OctbitInternalMain(int argc, char *argv[])
+int AmuseInternalMain(int argc, char *argv[])
 {
     Amuse::Core::Internal::InitMemory();
 
-    int result = OctbitMain(argc,argv);
+    int result = AmuseMain(argc,argv);
 
     Amuse::Core::Internal::FinalizeMemory();
 

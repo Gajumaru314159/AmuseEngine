@@ -5,4 +5,4 @@
 #pragma once
 
 //! @brief  内部エントリ関数宣言
-int OctbitInternalMain(int argc, char *argv[]);
+int AmuseInternalMain(int argc, char *argv[]);

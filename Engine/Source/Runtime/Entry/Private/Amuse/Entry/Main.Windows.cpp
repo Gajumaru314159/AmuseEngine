@@ -3,7 +3,7 @@
 //! @author		Gajumaru
 //***********************************************************
 #include <Amuse/Core/HAL/Platform.h>
-#include <Amuse/Core/Entry/MainInternal.h>
+#include <Amuse/Entry/MainInternal.h>
 
 #ifdef OS_WINDOWS
 
@@ -24,7 +24,7 @@ int main(int argc, char *argv[]) {
     // dbghelpの初期化
     SymInitialize(GetCurrentProcess(), NULL, TRUE);
 
-    OctbitInternalMain(argc,argv);
+    AmuseInternalMain(argc,argv);
 
     return 0;
 }

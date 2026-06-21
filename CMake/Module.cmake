@@ -140,6 +140,21 @@ function(amuse_add_library)
 endfunction()
 
 #------------------------------------------------------------------------------
+# ライブラリモジュールを追加する
+# 使用方法はEngine/Source/Runtime/Template/CMakeLists.txtを参照してください
+#------------------------------------------------------------------------------
+function(amuse_add_static_library)
+
+	# ソースコードを登録
+	_amuse_glob_sources(sources)
+	add_library(${PROJECT_NAME} STATIC ${sources})
+    
+    # 共通セットアップ
+    _amuse_module_setup()
+
+endfunction()
+
+#------------------------------------------------------------------------------
 # 実行ファイルを追加する
 # 使用方法はEngine/Source/Runtime/Template/CMakeLists.txtを参照してください
 #------------------------------------------------------------------------------
