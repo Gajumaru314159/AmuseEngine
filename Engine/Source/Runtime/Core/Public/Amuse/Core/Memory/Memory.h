@@ -3,7 +3,7 @@
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
-#include "Amuse/Core/Memory/Allocator.h"
+#include <Amuse/Core/Memory/Allocator.h>
 #include "MemoryUtility.h"
 #include <atomic>
 #include <cstddef>
@@ -45,6 +45,7 @@ namespace Amuse::Core {
         private:
             const char* m_store;
         public:
+            //! @brief MemoryCategoryScope を初期化する。
             MemoryCategoryScope(const char* category) {
 				m_store = GetCurrentCategory();
                 std::swap(GetCurrentCategory(),category);
@@ -52,6 +53,7 @@ namespace Amuse::Core {
             ~MemoryCategoryScope() {
                 std::swap(GetCurrentCategory(), m_store);
             }
+            //! @brief 現在のスレッドに設定されているメモリカテゴリを取得する。
             static const char*& GetCurrentCategory() {
                 thread_local const char* category = "Unknown";
                 return category;

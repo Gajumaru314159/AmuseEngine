@@ -13,6 +13,7 @@ namespace Amuse::Core {
 	public:
 
 		template <class T>
+		//! @brief 既存のハッシュシードに値のハッシュを合成する。
 		static constexpr void Combine(size_t& seed, const T& v)
 		{
 			std::hash<T> hasher;
@@ -25,6 +26,7 @@ namespace Amuse::Core {
 		}
 
 		template <class T, class... Args>
+		//! @brief 複数の値のハッシュを順にシードへ合成する。
 		static constexpr void Combine(size_t& seed, const T& v, const Args&... args)
 		{
 			Combine(seed, v);

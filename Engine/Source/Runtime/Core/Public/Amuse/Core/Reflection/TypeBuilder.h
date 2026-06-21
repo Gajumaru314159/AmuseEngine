@@ -9,13 +9,15 @@
 
 namespace Amuse::Core {
 
-	//! @brief		リフレクション登録関数
-	//! @details	リフレクション登録関数を連結リストとして関するためのオブジェクトです。
+	//! @brief 静的初期化で収集されるリフレクション登録関数ノード。
+	//! @details リフレクション登録関数を連結リストとして管理するためのオブジェクトです。
 	struct ReflectionFunction {
+		//! @brief 型情報登録関数の関数ポインタ型。
 		using func_type = void(*)();
+		//! @brief 登録関数を保持するノードを初期化する。
 		ReflectionFunction(func_type func);
-		func_type func;
-		ReflectionFunction* next = nullptr;
+		func_type func; //!< 型情報登録関数
+		ReflectionFunction* next = nullptr; //!< 次の登録関数ノード
 	};
 
 	//! @brief		リフレクション登録関数を追加する
@@ -32,16 +34,18 @@ namespace Amuse::Core {
 	//!	@details	AMUSE_DEFINE_INFO_BASE 経由で使用してください。
 	template<class T>
 	struct TypeRegisterTemplate {
-		//! @brief 明示的なリンクをする
+		//! @brief 対象型の登録関数を明示的にリンクする。
 		//! @details TypeRegister<T>::Link() という風に呼び出すことでリフレクション登録関数を登録します。
 		static void Link();
+		//! @brief 対象型の TypeInfo を登録する。
 		static void Register();
-		static ReflectionFunction s_register;
+		static ReflectionFunction s_register; //!< 型登録インスタンス
 	};
 
 	//! @brief		リフレクション登録関数をリンクする
 	struct TypeRegister {
 		template<class... Ts>
+		//! @brief 指定した型群の登録関数を明示的にリンクする。
 		static void Link() {
 			[[maybe_unused]] auto funcs = { TypeRegisterTemplate<Ts>::Link... };
 		}
@@ -93,17 +97,17 @@ template<> void builder_type<::type>::Register()
 
 namespace Amuse::Core {
 
-	//! @brief		タグ情報ビルダー
+	//! @brief TypeInfo や要素へタグ情報を追加するビルダー。
 	class TagBuilder {
 	public:
 
-		//! @brief		コンストラクタ
+		//! @brief タグを書き込む TagInfo を受け取って初期化する。
 		TagBuilder(TagInfo&);
 
-		//! @brief		タグ追加
+		//! @brief 任意キーと値のタグを追加する。
 		TagBuilder& tag(StringView key, StringView value = "");
 
-		//! @brief		説明をDescriptionタグとして追加
+		//! @brief 説明文を Description タグとして追加する。
 		TagBuilder& desc(StringView value);
 
 	private:
@@ -125,17 +129,17 @@ namespace Amuse::Core {
 		}
 
 	protected:
-		TypeInfo& m_info;
+		TypeInfo& m_info; //!< 登録中のプリミティブ型情報
 	};
 
-	//! @brief		Enum型情報ビルダー
+	//! @brief 列挙型の TypeInfo と列挙要素を登録するビルダー。
 	class EnumBuilder : public TagBuilder {
 	public:
 
 		//! @brief		コンストラクタ
 		EnumBuilder(TypeInfo&);
 
-		//! @brief		要素追加
+		//! @brief 列挙要素を名前と値で追加する。
 		//! @details	追加した順番にインデックスが割り振られます。インデックスは0ベースです。
 		template<typename E>
 		TagBuilder element(StringView name, E value) {
@@ -147,10 +151,10 @@ namespace Amuse::Core {
 		}
 
 	protected:
-		TypeInfo& m_info;
+		TypeInfo& m_info; //!< 登録中の列挙型情報
 	};
 
-	//! @brief		クラス型情報ビルダー
+	//! @brief クラス型の基底、コンストラクタ、プロパティ、メソッドを登録するビルダー。
 	class ClassBuilder : public TagBuilder {
 	public:
 
@@ -159,41 +163,50 @@ namespace Amuse::Core {
 
 	protected:
 
+		//! @brief 引数名未指定時に使用するデフォルト引数名を取得する。
 		static StringView _GetDefaultArgumentName(size_t index);
 
 	protected:
-		TypeInfo& m_info;
+		TypeInfo& m_info; //!< 登録中のクラス型情報
 	};
 
 	//! @brief コンストラクタやデストラクタなどのオペレータを間接的に呼び出すためのクラス
 	template<class T>
 	class ClassTrait {
 	public:
+		//! @brief デフォルトコンストラクタで所有 Any を生成する。
 		static Any _New([[maybe_unused]] Span<Any> args) {
 			return Any::Create<T>();
 		}
+		//! @brief デフォルトコンストラクタで指定メモリ上へ配置構築する。
 		static void _PlacedNew(void* p, [[maybe_unused]] Span<Any> args) {
 			AMUSE_ASSERT(p, "pがnullです");
 			new(p)T;
 		}
+		//! @brief 1 引数コンストラクタで所有 Any を生成する。
 		static Any _NewWith(Span<Any> args) {
 			return Any::Create<T>(args[0].as<T>());
 		}
+		//! @brief 1 引数コンストラクタで指定メモリ上へ配置構築する。
 		static void _PlacedNewWith(void* ptr, Span<Any> args) {
 			AMUSE_ASSERT(ptr, "ptrがnullです"); new(ptr) T(args[0].as<T>());
 		}
+		//! @brief 所有オブジェクトを delete で破棄する。
 		static void _Delete(void* ptr) {
 			AMUSE_ASSERT(ptr, "ptrがnullです");
 			delete static_cast<T*>(ptr);
 		}
+		//! @brief 配置構築済みオブジェクトのデストラクタを呼び出す。
 		static void _PlacedDelete(void* ptr) {
 			AMUSE_ASSERT(ptr, "ptrがnullです");
 			static_cast<T*>(ptr)->~T();
 		}
+		//! @brief コピーコンストラクタで新しいオブジェクトを生成する。
 		static void* _Copy(const void* ptr) {
 			AMUSE_ASSERT(ptr, "ptrがnullです");
 			return static_cast<void *>(new T(*static_cast<const T *>(ptr)));
 		}
+		//! @brief 登録型の代入演算子で値をコピーする。
 		static void _Assign(const void* from, void* to) {
 			AMUSE_ASSERT(from, "fromがnullです");
 			AMUSE_ASSERT(to, "toがnullです");
@@ -206,6 +219,7 @@ namespace Amuse::Core {
 	template<class _T>
 	class PrimitiveBuilderTemplate :public PrimitiveBuilder {
 	public:
+		//! @brief 登録対象のプリミティブ型。
 		using T = _T;
 	public:
 
@@ -249,7 +263,7 @@ namespace Amuse::Core {
 
 	private:
 
-		//! @brief			タイプ登録
+		//! @brief ユーザー定義のプリミティブ型登録内容を TypeInfo へ反映する。
 		void Register() {}
 
 	};
@@ -259,6 +273,7 @@ namespace Amuse::Core {
 	template<class _T>
 	class EnumBuilderTemplate :public EnumBuilder {
 	public:
+		//! @brief 登録対象の列挙型。
 		using T = _T;
 	public:
 
@@ -307,7 +322,7 @@ namespace Amuse::Core {
 		}
 
 	private:
-		//! @brief			タイプ登録
+		//! @brief ユーザー定義の列挙型登録内容を TypeInfo へ反映する。
 		void Register() {}
 
 		static s32 _GetEnumValue(const Any& instance) {
@@ -319,6 +334,7 @@ namespace Amuse::Core {
 	template<class _T>
 	class ClassBuilderTemplate : public ClassBuilder {
 	public:
+		//! @brief 登録対象のクラス型。
 		using T = _T;
 	public:
 
@@ -346,7 +362,7 @@ namespace Amuse::Core {
 
 	private:
 
-		//! @brief			タイプ登録
+		//! @brief ユーザー定義のクラス型登録内容を TypeInfo へ反映する。
 		void Register() {}
 
 		//===============================================================
@@ -454,7 +470,7 @@ namespace Amuse::Core {
 			&& MethodTraits<FCallback>::Count == 0
 			&& std::is_same_v<typename MethodTraits<FCallback>::return_type, void>;
 
-		//! @brief			メソッド追加
+		//! @brief 非 const メソッドをリフレクションへ追加する。
 		template< class R, class... Args, class... Names>
 		auto method(StringView name, R(T::* m)(Args...), Names&&... argNames)
 			-> std::enable_if_t<MethodTraits<decltype(m)>::Count == sizeof...(Names) || 0 == sizeof...(Names), TagBuilder >
@@ -462,7 +478,7 @@ namespace Amuse::Core {
 			return _method_impl<decltype(m),Args...>(name, m, argNames...);
 		}
 
-		//! @brief			メソッド追加 (const)
+		//! @brief const メソッドをリフレクションへ追加する。
 		template< class R, class... Args, class... Names>
 		auto method(StringView name, R(T::* m)(Args...)const, Names&&... argNames)
 			-> std::enable_if_t<MethodTraits<decltype(m)>::Count == sizeof...(Names) || 0 == sizeof...(Names), TagBuilder >
@@ -470,7 +486,7 @@ namespace Amuse::Core {
 			return _method_impl<decltype(m), Args...>(name, m, argNames...);
 		}
 
-		//! @brief			メソッド追加 (noexcept)
+		//! @brief noexcept メソッドをリフレクションへ追加する。
 		template< class R, class... Args, class... Names>
 		auto method(StringView name, R(T::* m)(Args...)noexcept, Names&&... argNames)
 			-> std::enable_if_t<MethodTraits<decltype(m)>::Count == sizeof...(Names) || 0 == sizeof...(Names), TagBuilder >
@@ -478,7 +494,7 @@ namespace Amuse::Core {
 			return _method_impl<decltype(m), Args...>(name, m, argNames...);
 		}
 
-		//! @brief			メソッド追加 (const noexcept)
+		//! @brief const noexcept メソッドをリフレクションへ追加する。
 		template< class R, class... Args, class... Names>
 		auto method(StringView name, R(T::* m)(Args...)const noexcept, Names&&... argNames)
 			-> std::enable_if_t<MethodTraits<decltype(m)>::Count == sizeof...(Names) || 0 == sizeof...(Names), TagBuilder >
@@ -486,7 +502,7 @@ namespace Amuse::Core {
 			return _method_impl<decltype(m), Args...>(name, m, argNames...);
 		}
 
-		//! @brief			メソッド追加 (内部実装)
+		//! @brief メソッド情報と Any 経由の呼び出し関数を登録する。
 		template< class M, class... Args, class... Names>
 		auto _method_impl(StringView name, M method, Names&&... argNames)
 			-> std::enable_if_t<MethodTraits<M>::Count == sizeof...(Names) || 0 == sizeof...(Names), TagBuilder >
@@ -523,7 +539,7 @@ namespace Amuse::Core {
 		//  フィールド
 		//===============================================================
 
-		//! @brief			フィールド追加(メンバ変数)
+		//! @brief メンバ変数を参照プロパティとして追加する。
 		template<class TField, class FCallback = std::nullptr_t>
 		TagBuilder field(StringView name, TField T::* address, FCallback callback = nullptr) {
 			AMUSE_ASSERT(!m_info.properties.contains(name), "{}は登録済みのプロパティです [{}]", name, m_info.type.name());
@@ -559,13 +575,13 @@ namespace Amuse::Core {
 		//  プロパティ
 		//===============================================================
 		
-		//! @brief			プロパティ追加(Getter)
+		//! @brief getter のみを持つ読み取り専用プロパティを追加する。
 		template<class F>
 		TagBuilder property(StringView name, F getter) {
 			return property(name, getter, getter);
 		}
 
-		//! @brief			プロパティ追加(Getter/Setter)
+		//! @brief getter と setter を持つプロパティを追加する。
 		template<class F1, class F2, class FCallback = std::nullptr_t>
 		TagBuilder property(StringView name, F1 getter, F2 setter, FCallback callback = nullptr) {
 			using return_type = typename MethodTraits<F1>::return_type;
@@ -603,7 +619,7 @@ namespace Amuse::Core {
 		//  メソッド定義
 		//===============================================================
 
-		//! @brief			引数なしのメソッド呼び出し
+		//! @brief 引数なしメソッドを Any の所有者から呼び出す。
 		template<class M, class... Args>
 		static Any _InvokeWithoutArgs(Any& owner, [[maybe_unused]] Span<Any>, M method) {
 			if constexpr (std::is_same_v<typename MethodTraits<M>::return_type, void>) {
@@ -614,7 +630,7 @@ namespace Amuse::Core {
 			}
 		}
 
-		//! @brief			引数ありのメソッド呼び出し
+		//! @brief インデックス列で Any 引数を展開してメソッドを呼び出す。
 		template<class M,class... Args, size_t... I>
 		static Any _InvokeMethodImpl(Any& owner, Span<Any> args, M method, std::index_sequence<I...>) {			
 			if constexpr (std::is_same_v<typename MethodTraits<M>::return_type, void>) {
@@ -625,7 +641,7 @@ namespace Amuse::Core {
 			}
 		}
 
-		//! @brief			引数ありのメソッド呼び出し
+		//! @brief Any 引数列を検証して引数ありメソッドを呼び出す。
 		template<class M, class... Args>
 		static Any _InvokeMethod(Any& owner, Span<Any> args, M method) {
 			Type types[] = { Type::Get<Args>()... };
@@ -640,13 +656,13 @@ namespace Amuse::Core {
 		//  コンストラクタ定義
 		//===============================================================
 
-		//! @brief			引数ありのコンストラクタ
+		//! @brief インデックス列で Any 引数を展開して所有 Any を生成する。
 		template<class T,class... Args,size_t ...I>
 		static Any _NewImpl(Span<Any> args, std::index_sequence<I...>) {
 			return Any::Create<T>(args[I].template as<std::remove_reference_t<Args>>()...);
 		}
 
-		//! @brief			引数ありのコンストラクタ
+		//! @brief Any 引数列を検証して所有 Any を生成する。
 		template<class... Args>
 		static Any _New(Span<Any> args) {
 			Type types[] = {Type::Get<Args>()...};
@@ -657,13 +673,13 @@ namespace Amuse::Core {
 			return _NewImpl<T, Args...>(args, std::make_index_sequence<sizeof...(Args)>());
 		}
 
-		//! @brief			引数ありのコンストラクタ
+		//! @brief インデックス列で Any 引数を展開して配置構築する。
 		template<class T, class... Args, size_t ...I>
 		static void _PlacedNewImpl(void* ptr, Span<Any> args, std::index_sequence<I...>) {
 			new(ptr)T(args[I].template as<std::remove_reference_t<Args>>()...);
 		}
 
-		//! @brief			引数ありのコンストラクタ
+		//! @brief Any 引数列を検証して指定メモリ上へ配置構築する。
 		template<class... Args>
 		static void _PlacedNew(void* ptr, Span<Any> args) {
 			Type types[] = { Type::Get<Args>()... };

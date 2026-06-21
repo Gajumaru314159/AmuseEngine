@@ -11,7 +11,7 @@ namespace Amuse::Core {
     //! @brief UUIDクラス
     struct UUID {
     public:
-        u32 data[4];
+        u32 data[4]; //!< 生データ
 
     public:
 

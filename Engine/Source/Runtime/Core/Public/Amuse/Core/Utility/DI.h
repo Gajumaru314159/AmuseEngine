@@ -19,30 +19,30 @@ namespace Amuse::Core {
     class ServiceBuilderBase;   // 生成情報登録(基底)
 
 
-    //! @brief  サービス依存注入クラス
-    //! @details 詳細は @ref DI を確認してください
+    //! @brief 型ごとの生成方法と依存関係を登録するサービス注入器。
+    //! @details 詳細は DI ドキュメントを確認してください
     class ServiceInjector {
     public:
 
-        //! @brief  生成可能なクラスTをバインド
+        //! @brief 生成可能なサービス型 T を登録する。
         template<class T>
         ServiceBuilder<T>& bind();
 
-        //! @brief  インスタンスTをバインド
+        //! @brief 既存インスタンスをサービス型 T として登録する。
         template<class T>
         ServiceBuilder<T>& bind(T& instance);
 
-        //! @brief  サービスを生成
+        //! @brief サービス型 T のインスタンスを依存解決しながら生成する。
         //! @param container 生成されたサービスを管理させるコンテナの参照
         template<class T>
         T* create(ServiceContainer& container)const;
 
-        //! @brief  サービスを生成(複数ルート)
+        //! @brief 複数のルートサービスを依存解決しながら生成する。
         //! @param container 生成されたサービスを管理させるコンテナの参照
         template<class... Ts>
         Tuple<Ts*...> createAll(ServiceContainer& container)const;
 
-        //! @brief      全てのサービスを生成
+        //! @brief 登録済みサービスを登録順にまとめて生成する。
         //! @details    抽象クラスに対して
         //! @param container 生成されたサービスを管理させるコンテナの参照
         void createAll(ServiceContainer& container)const;
@@ -63,16 +63,20 @@ namespace Amuse::Core {
 
         // T(Impl) -> U(Interface) 変換
         template<class T>
+        //! @brief コンストラクタ引数型から必要なサービスを遅延解決する変換オブジェクト。
         struct arg_resolver {
-            const ServiceInjector& injector;
-            ServiceContainer& container;
+            const ServiceInjector& injector; //!< 依存注入定義
+            ServiceContainer& container; //!< サービスコンテナ
 
             // コピーコンストラクタの場合無効化
+            //! @brief コピーコンストラクタ引数と同一型か判定する型特性。
             template<class U> using is_copy_constructor = std::is_same<base_type<T>, base_type<U>>;
+            //! @brief コピーコンストラクタ候補を除外するための SFINAE 型。
             template<class U> using no_copy_constructor = std::enable_if_t<is_copy_constructor<U>::value == false>;
 
             // 型変換(参照)
             template<class U, class = no_copy_constructor<U>>
+            //! @brief 依存サービス U を生成し参照として渡す。
             operator U& () const {
                 auto instance = injector.create<U>(container);
                 if (instance == nullptr) {
@@ -82,6 +86,7 @@ namespace Amuse::Core {
             }
             // 型変換(ポインタ)
             template<class U, class = no_copy_constructor<U>>
+            //! @brief 依存サービス U を生成しポインタとして渡す。
             operator U* () const {
                 return injector.create<U>(container);
             }
@@ -116,27 +121,36 @@ namespace Amuse::Core {
 
         // つくれる場合
         template <class T, size_t... ArgIndex>
+        //! @brief 指定引数数で構築可能な場合のコンストラクタ候補。
         struct constructor<T, std::index_sequence<ArgIndex...>, can_construct_true<T, ArgIndex...>> {
+            //! @brief 依存解決に使うコンストラクタ引数列。
             using args = arg_types<arg_type<T, ArgIndex>...>;
         };
 
         // 引数なしで構築できる場合
         template <class T>
+        //! @brief 引数なしで構築可能な場合のコンストラクタ候補。
         struct constructor<T, std::index_sequence<>, can_construct_true<T>> {
+            //! @brief 空のコンストラクタ引数列。
             using args = arg_types<>;
         };
 
         // つくれない場合
         template <class T, size_t... ArgIndex>
+        //! @brief 構築できない引数数から 1 つ少ない候補へ進む探索ノード。
         struct constructor<T, std::index_sequence<ArgIndex...>, can_construct_false<T, ArgIndex...>> {
+            //! @brief 次に試す、引数数を 1 つ減らしたコンストラクタ候補型。
             using next = constructor<T, std::make_index_sequence<sizeof...(ArgIndex) - 1>>;
+            //! @brief 最終的に見つかった構築可能な引数列。
             using args = typename next::args;
         };
 
         // これ以上引数を減らせない場合
         template <class T>
+        //! @brief 構築可能な引数列が見つからない場合の終端候補。
         struct constructor<T, std::index_sequence<>, can_construct_false<T>> {
             static_assert(can_construct<T>::value, "Type is not constructible with provided dependencies.");
+            //! @brief static_assert 後の形式上の空引数列。
             using args = arg_types<>;
         };
 
@@ -155,7 +169,9 @@ namespace Amuse::Core {
         // 引数の数を取り出したファクトリ
         // Args = arg_array<U,0>;
         template<class T, class... Args>
+        //! @brief 解決済み引数列からサービス実体を生成するファクトリ。
         struct FactoryBase<T, arg_types<Args...>> {
+            //! @brief 依存サービスを引数として解決し T のインスタンスを生成する。
             static void* Create(const ServiceInjector& injector, ServiceContainer& container) {
                 return static_cast<void *>(new T(Args{injector, container}...));
             }
@@ -168,7 +184,7 @@ namespace Amuse::Core {
     }
 
 
-    //! @brief  生成可能なクラスTをバインド
+    //! @brief 生成可能なサービス型 T を登録する。
     template<class T>
     ServiceBuilder<T>& ServiceInjector::bind() {
         // バインド済みであればBuilderを返す
@@ -183,7 +199,7 @@ namespace Amuse::Core {
         return *builder;
     }
 
-    //! @brief  インスタンスTをバインド
+    //! @brief 既存インスタンスをサービス型 T として登録する。
     template<class T>
     ServiceBuilder<T>& ServiceInjector::bind(T& instance) {
         auto builder = new ServiceBuilder<T>(*this,instance);
@@ -193,7 +209,7 @@ namespace Amuse::Core {
     }
 
 
-    //! @brief      サービスビルダー基底
+    //! @brief サービス生成情報を型消去して扱う基底クラス。
     class ServiceBuilderBase {
     public:
         virtual ~ServiceBuilderBase() = default;
@@ -203,11 +219,11 @@ namespace Amuse::Core {
     };
 
 
-    //! @brief      サービスビルダー
+    //! @brief サービス型 T の生成方法と公開する基底型を保持する。
     template<class T>
     class ServiceBuilder :public ServiceBuilderBase {
     public:
-        //! @brief      キャスト可能な基底クラスを追加
+        //! @brief T を指定した基底型から解決できるように登録する。
         template<class... U>
         ServiceBuilder& as() {
             static_assert((std::is_base_of_v<U, T> && ...), "U must be a base class of T.");
@@ -219,14 +235,14 @@ namespace Amuse::Core {
             return *this;
         }
     private:
-        //! @brief      コンストラクタ
+        //! @brief 生成可能なサービスとしてビルダーを初期化する。
         ServiceBuilder(ServiceInjector& injector)
             : m_injector(injector)
         {
             m_bases.emplace(Type::Get<T>());
             m_injector.m_builderMap[Type::Get<T>()].emplace_back(Type::Get<T>());
         }
-        //! @brief      コンストラクタ
+        //! @brief 既存インスタンスを返すサービスとしてビルダーを初期化する。
         ServiceBuilder(ServiceInjector& injector,T& instance)
             : m_injector(injector)
         {
@@ -238,7 +254,7 @@ namespace Amuse::Core {
                 return (T*)(&instance);
             };
         }
-        //! @brief      サービス生成
+        //! @brief サービスを生成または取得し、コンテナへ保持する。
         void* create(ServiceContainer& container) override;
     private:
         friend class ServiceInjector;
@@ -249,17 +265,19 @@ namespace Amuse::Core {
 
     namespace Internal {
 
-        //! @brief      サービスホルダー基底
+        //! @brief 型消去されたサービスインスタンス保持クラスの基底。
         struct ServiceHolderBase {
             virtual ~ServiceHolderBase() = default;
+            //! @brief 保持しているサービスインスタンスを取得する。
             virtual void* get()const = 0;
         };
 
-        //! @brief      サービスホルダー
+        //! @brief サービスインスタンスと破棄責任を保持する。
         //@―--------------------------------------------------------------------------- 
         template<class T>
         class ServiceHolder : public ServiceHolderBase {
         public:
+            //! @brief サービスインスタンスと破棄責任を設定する。
             ServiceHolder(T* instance,bool destructible) {
                 m_instance = instance;
                 m_destructible = destructible;
@@ -270,6 +288,7 @@ namespace Amuse::Core {
                 }
                 m_instance = nullptr;
             }
+            //! @brief 保持しているサービスインスタンスを取得する。
             void* get()const override {
                 return m_instance;
             }
@@ -281,21 +300,21 @@ namespace Amuse::Core {
     }
 
 
-    //! @brief      サービス管理クラス
+    //! @brief 生成済みサービスの寿命と型インデックスを管理するコンテナ。
     class ServiceContainer {
     public:
 
-        //! @brief      コンストラクタ
+        //! @brief 空のサービスコンテナを生成する。
         ServiceContainer() = default;
 
-        //! @brief      デストラクタ
+        //! @brief 生成順と逆順に保持サービスを解放する。
         ~ServiceContainer() {
             for (auto itr = m_services.rbegin(); itr != m_services.rend(); ++itr) {
                 itr->reset();
             }
         }
 
-        //! @brief      サービス取得
+        //! @brief 生成済みサービスを型で取得する。
         template<class T>
         T* get()const {
             auto found = m_indices.find(Type::Get<T>());
@@ -303,12 +322,12 @@ namespace Amuse::Core {
             return static_cast<T*>(m_services.at(found->second)->get());
         }
 
-        //! @brief      サービスが存在しているか
+        //! @brief 指定 Type のサービスが生成済みか判定する。
         bool has(Type type)const {
             return m_indices.contains(type);
         }
 
-        //! @brief      サービスが存在しているか
+        //! @brief テンプレート型 T のサービスが生成済みか判定する。
         template<class T>
         bool has()const {
             return m_indices.contains(Type::Get<T>());
@@ -320,7 +339,7 @@ namespace Amuse::Core {
         HashMap<Type, size_t> m_indices;
     };
 
-    //! @brief  サービスを生成
+    //! @brief 登録済みサービスを登録順にまとめて生成する。
     inline void ServiceInjector::createAll(ServiceContainer& container)const {
         for (auto& type : m_orders) {
             try {
@@ -333,7 +352,7 @@ namespace Amuse::Core {
         }
     }
 
-    //! @brief      サービス生成
+    //! @brief サービスを生成または取得し、コンテナへ保持する。
     template<class T>
     void* ServiceBuilder<T>::create(ServiceContainer& container) {
         // 生成
@@ -357,7 +376,7 @@ namespace Amuse::Core {
         return container.m_services.emplace_back(holder)->get();
     }
 
-    //! @brief  サービスを生成
+    //! @brief サービス型 T のインスタンスを依存解決しながら生成する。
     template<class T>
     T* ServiceInjector::create(ServiceContainer& container)const {
         // 生成済み
@@ -379,7 +398,7 @@ namespace Amuse::Core {
         return nullptr;
     }
 
-    //! @brief  サービスを生成(複数ルート)
+    //! @brief 複数のルートサービスを依存解決しながら生成する。
     //! @param container 生成されたサービスを管理させるコンテナの参照
     template<class... Ts>
     Tuple<Ts*...> ServiceInjector::createAll(ServiceContainer& container)const {

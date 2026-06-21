@@ -12,12 +12,17 @@ namespace Amuse::Core {
     class Transform {
     public:
 
+        //! @brief 等値比較を行う。
         bool operator==(const Transform&)const noexcept;
+        //! @brief 非等値比較を行う。
         bool operator!=(const Transform&)const noexcept;
 
+        //! @brief 2つのトランスフォームを合成した結果を返す。
         Transform operator*(const Transform&)const;
+        //! @brief 右辺のトランスフォームをこのトランスフォームへ合成する。
         Transform operator*=(const Transform&);
 
+        //! @brief Matrix へ型変換する。
         operator Matrix()const;
 
         //! @brief  Matrix に変換

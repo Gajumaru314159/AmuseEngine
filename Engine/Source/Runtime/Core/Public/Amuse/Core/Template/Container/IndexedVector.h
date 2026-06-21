@@ -11,22 +11,26 @@
 namespace Amuse::Core {
 
 	template<class T, class TIndex = uint16_t, class TDataVector = Vector<T>, class TIndexVector = Vector<TIndex>>
+	//! @brief インデックス付きベクターを表す。
 	class IndexedVector {
 	public:
-		static constexpr TIndex NoFreeSlot = std::numeric_limits<TIndex>::max();
+		static constexpr TIndex NoFreeSlot = std::numeric_limits<TIndex>::max(); //!< 空きスロットなしを表す値
 	public:
+		//! @brief 容量を予約する。
 		void reserve(size_t size) {
 			m_indices.reserve(size);
 			m_data.reserve(size);
 			m_free.reserve(size);
 		}
 
+		//! @brief 全要素と空きインデックス情報を取り除く。
 		void clear() {
 			m_indices.clear();
 			m_data.clear();
 			m_free.clear();
 		}
 
+		//! @brief 新しい論理インデックスを確保し、空きスロットがあれば再利用する。
 		TIndex push() {
 
 			// 空き領域がある場合はそこを使用
@@ -49,6 +53,7 @@ namespace Amuse::Core {
 			return index;
 		}
 
+		//! @brief 指定した論理インデックスの要素を取り除き、インデックスを空きスロットに戻す。
 		void erase(TIndex index) {
 			TIndex dataIndex = m_indices.at(index);
 
@@ -60,6 +65,7 @@ namespace Amuse::Core {
 			m_free.push_back(index);
 		}
 
+		//! @brief 指定した要素ポインタに対応する要素を取り除く。
 		void erase(T* data) {
 			if(data == nullptr) {
 				return;
@@ -78,24 +84,31 @@ namespace Amuse::Core {
 			erase(index);
 		}
 
+		//! @brief 指定位置の要素へアクセスする。
 		T& at(TIndex index) {
 			return m_data.at(m_indices.at(index));
 		}
+		//! @brief 指定位置の要素へアクセスする。
 		const T& at(TIndex index) const {			
 			return m_data.at(m_indices.at(index));
 		}
 
+		//! @brief 現在格納している実データの要素数を返す。
 		size_t size() const {
 			return m_data.size();
 		}
+		//! @brief 実データの先頭ポインタを返す。
 		T* data() {
 			return m_data.data();
 		}
+		//! @brief 実データの読み取り専用先頭ポインタを返す。
 		const T* data() const {
 			return m_data.data();
 		}
 
+		//! @brief 実データを保持する内部コンテナへの参照を返す。
 		TDataVector& container() { return m_data; }
+		//! @brief 実データを保持する内部コンテナへの読み取り専用参照を返す。
 		const TDataVector& container() const { return m_data; }
 
 	private:

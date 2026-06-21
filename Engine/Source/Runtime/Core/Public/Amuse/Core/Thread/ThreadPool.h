@@ -9,13 +9,16 @@
 
 namespace Amuse::Core {
 
+	//! @brief スレッドプールを表す。
 	class ThreadPool : public Singleton<ThreadPool> {
 	public:
 
 		ThreadPool();
 		~ThreadPool() override;
 
+		//! @brief ワーカースレッド数を変更する。
 		void resize(s32 threadNum);
+		//! @brief ワーカースレッドで実行するアクションをキューへ追加する。
 		void enqueue(Action&& action);
 
 	private:

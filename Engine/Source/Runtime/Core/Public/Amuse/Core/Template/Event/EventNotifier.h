@@ -33,13 +33,19 @@ namespace Amuse::Core {
 
     public:
 
+        //! @brief イベント通知の購読プロキシを表す。
         class Proxy {
         public:
+            //! @brief Proxy を初期化する。
             Proxy(this_type& notifier):m_notifier(notifier){}
 
+            //! @brief 要素を追加する。
             void add(Handle& handle, const delegate_type& delegate) { m_notifier.add(handle,delegate); }
+            //! @brief 要素を追加する。
             void add(Handle& handle, function_type& function) { m_notifier.add(handle, function); }
+            //! @brief インスタンスとメンバ関数をイベントとして登録する。
             template<class T> void add(Handle& handle, T& instance, method_type<T> pMethod) { m_notifier.add(handle, instance, pMethod); }
+            //! @brief const インスタンスとメンバ関数をイベントとして登録する。
             template<class T> void add(Handle& handle, const T& instance, const_method_type<T> pMethod) { m_notifier.add(handle, instance,pMethod); }
         private:
             this_type& m_notifier;

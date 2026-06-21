@@ -11,15 +11,19 @@ namespace Amuse::Core {
 
 	class Task {
 	public:
+		//! @brief インスタンスを生成する。
 		static Task Create(Action action) {
 
 		}
+		//! @brief アクションをタスクとして開始する。
 		static Task Run(Action action) {
 		}
 
+		//! @brief インデックス付きアクションを並列タスクとして開始する。
 		static Task Parallel(Func<void(s32)> action) {
 		}
 
+		//! @brief 複数タスクの完了を待機する。
 		static void WaitAll(Task& task1, Task& task2) {
 		}
 
@@ -28,8 +32,10 @@ namespace Amuse::Core {
 		// WaitAny
 		// 
 	public:
+		//! @brief 完了済みか判定する。
 		bool isCompleted()const {
 		}
+		//! @brief 完了を待機する。
 		void wait();
 	};
 

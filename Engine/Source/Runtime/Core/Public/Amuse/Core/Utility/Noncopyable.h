@@ -18,7 +18,7 @@ namespace Amuse::Core {
     private:
         Noncopyable(const Noncopyable&) = delete;
         Noncopyable& operator=(const Noncopyable&) = delete;
-        //! @endvond
+        //! @endcond
     };
 
 }

@@ -17,26 +17,30 @@ namespace Amuse::Core {
 
 		~TypedPointer() { m_pointer = nullptr; }
 
+		//! @brief 型情報付きポインタのデバッグ用ストレージをコピーする。
 		TypedPointer(const TypedPointer& other) {
 			m_storage = other.m_storage;
 			m_pointer = reinterpret_cast<Base*>(m_storage.data());
 		}
+		//! @brief 型情報付きポインタのデバッグ用ストレージをコピー代入する。
 		TypedPointer& operator=(const TypedPointer& other) {
 			m_storage = other.m_storage;
 			m_pointer = reinterpret_cast<Base*>(m_storage.data());
 			return *this;
 		}
+		//! @brief 型情報付きポインタのデバッグ用ストレージをムーブする。
 		TypedPointer(TypedPointer&& other) noexcept {
 			m_storage = other.m_storage;
 			m_pointer = reinterpret_cast<Base*>(m_storage.data());
 		}
+		//! @brief 型情報付きポインタのデバッグ用ストレージをムーブ代入する。
 		TypedPointer& operator=(TypedPointer&& other) noexcept {
 			m_storage = other.m_storage;
 			m_pointer = reinterpret_cast<Base*>(m_storage.data());
 			return *this;
 		}
 
-		//! @brief		ポインタを設定
+		//! @brief 型付きポインタをデバッグ表示用ストレージへ設定する。
 		template<class T>
 		TypedPointer(T* pointer) {
 #if AMUSE_TYPED_POINTER_ENABLED
@@ -50,10 +54,12 @@ namespace Amuse::Core {
 #endif
 		}
 
+		//! @brief void ポインタとして空の TypedPointer を生成する。
 		explicit TypedPointer(void* ptr) : m_pointer(nullptr) { }
+		//! @brief nullptr を保持する TypedPointer を生成する。
 		explicit TypedPointer(std::nullptr_t) : m_pointer(nullptr) { }
 
-		//! @brief		ポインタを設定
+		//! @brief 型付きポインタをデバッグ表示用ストレージへ代入する。
 		template<class T>
 		TypedPointer& operator=(T* pointer) {
 #if AMUSE_TYPED_POINTER_ENABLED
@@ -68,8 +74,10 @@ namespace Amuse::Core {
 			return *this;
 		}
 
+		//! @brief 保持ポインタを nullptr に設定する。
 		TypedPointer& operator=(std::nullptr_t) { m_pointer = nullptr; return *this; }
 
+		//! @brief 保持しているポインタを void ポインタとして取得する。
 		void* get() {
 #if AMUSE_TYPED_POINTER_ENABLED
 			return m_pointer ? m_pointer->get() : nullptr;
@@ -77,6 +85,7 @@ namespace Amuse::Core {
 			return m_pointer;
 #endif
 		}
+		//! @brief 保持しているポインタを const void ポインタとして取得する。
 		const void* get() const {
 #if AMUSE_TYPED_POINTER_ENABLED
 			return m_pointer ? m_pointer->get() : nullptr;

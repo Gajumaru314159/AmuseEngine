@@ -11,21 +11,28 @@
 
 namespace Amuse::Core {
 
+	//! @brief 非同期ファイルシステムを表す。
 	class AsyncFileSystem : public Singleton<AsyncFileSystem> {
 	public:
 		AsyncFileSystem();
 		~AsyncFileSystem() override;
 	public:
+		//! @brief 現在の環境で非同期ファイル読み込みを利用できるか判定する。
 		static bool CanUseAsyncFile();
 	};
 
+	//! @brief 非同期ファイル操作のハンドルを表す。
 	class AsyncFileHandle {
 	public:
 		AsyncFileHandle() = default;
+		//! @brief AsyncFileHandle を初期化する。
 		explicit AsyncFileHandle(StringView path);
 		~AsyncFileHandle();
+		//! @brief 対象ファイルのパスを取得する。
 		const String& path()const;
+		//! @brief 空かどうかを判定する。
 		bool empty()const;
+		//! @brief 対象ファイルのバイトサイズを取得する。
 		size_t size()const;
 	private:
 		friend class AsyncFileQueue;
@@ -38,6 +45,7 @@ namespace Amuse::Core {
 	//!				* destが指定されている場合は指定先にファイルの内容が展開されます。
 	//!				* destが指定されていない場合は内部的にバッファを確保し、そのバッファに展開されます。
 	struct AsyncFileRequest {
+		//! @brief 読み込み対象のファイルハンドル。
 		AsyncFileHandle handle;					//! ファイルハンドル
 		size_t			offset = 0;				//! 読み込み開始位置	
 		size_t			size = 0;				//! 読み込みサイズ	
@@ -50,7 +58,9 @@ namespace Amuse::Core {
 	public:
 		AsyncFileEvent();
 		~AsyncFileEvent();
+		//! @brief 非同期読み込みが完了しているか確認する。
 		bool poll() const;
+		//! @brief 完了を待機する。
 		void wait() const;
 	private:
 		friend class AsyncFileQueue;
@@ -59,14 +69,18 @@ namespace Amuse::Core {
 	};
 
 	//! @brief 非同期ファイル読み込みキュー
-	//! @Internal このクラスは非同期ファイル読み込みを管理するキューです。
+	//! @internal このクラスは非同期ファイル読み込みを管理するキューです。
 	class AsyncFileQueue {
 	public:
 		AsyncFileQueue();
 		~AsyncFileQueue();
+		//! @brief ファイル読み込みリクエストをキューへ追加する。
 		void add(const AsyncFileRequest& desc);
+		//! @brief 完了待機用イベントをキューへ追加する。
 		void add(AsyncFileEvent&);
+		//! @brief 完了を待機する。
 		void wait();
+		//! @brief キューに積まれた処理を投入する。
 		void submit();
 	private:
 		struct Impl;

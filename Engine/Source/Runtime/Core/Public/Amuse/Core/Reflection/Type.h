@@ -8,14 +8,15 @@
 
 namespace Amuse::Core {
 
+	//! @cond
 	namespace internal::type_id {
 
-		//! @brief  関数名のPrefixを取得
+		//! @brief コンパイラが出力する関数シグネチャから型名抽出の基準文字列を取得する。
 		constexpr StringView GetTypeName(void) {
 			return FUNC_NAME;
 		}
 
-		//! @brief  型テンプレートTの名前を取得
+		//! @brief テンプレート型 T の完全修飾型名を取得する。
 		template<class T>
 		constexpr StringView GetTypeName(void) {
 
@@ -51,36 +52,38 @@ namespace Amuse::Core {
 		}
 
 	}
+	//! @endcond
 
 #define AMUSE_RTTI()	virtual Type getType()const{return Type::Get<std::remove_cv_t<std::remove_reference_t<decltype(*this)>>>();}
 
-	//! @brief  型ID
+	//! @brief 型名と固定ハッシュでリフレクション対象の型を識別する。
 	class Type {
 	public:
+		//! @brief 型名ハッシュを表す型。
 		using hash_type = u64;
 	public:
-		//! @brief  Type取得
+		//! @brief テンプレート型 T に対応する Type を取得する。
 		template<class T>
 		static constexpr Type Get() {
 			constexpr auto name = internal::type_id::GetTypeName<std::remove_cv_t<std::remove_reference_t<T>>>();
 			return name;
 		}
-		//! @brief  Type取得
+		//! @brief 値の静的型に対応する Type を取得する。
 		template<class T>
 		static constexpr Type Get(T&&) {
 			auto name = internal::type_id::GetTypeName<std::remove_cv_t<std::remove_reference_t<T>>>();
 			return name;
 		}
-		//! @brief  無効なType取得
+		//! @brief 無効な型を表す Type を取得する。
 		static constexpr Type Invalid() {
 			return Type();
 		}
 	public:
 
-		//! @brief		コンストラクタ
+		//! @brief 無効な型を表す Type を生成する。
 		constexpr Type() : Type( Type::Get<InvalidType>().name() ){}
 
-		//! @brief		名前からTypeを生成
+		//! @brief 完全修飾型名から Type を生成する。
 		constexpr Type(StringView fullName)
 			: m_name(fullName)
 			, m_hash(0)
@@ -97,15 +100,15 @@ namespace Amuse::Core {
 			m_hash = result;
 		}
 
-		//! @brief		空か
+		//! @brief 型名が空か判定する。
 		constexpr bool empty()const { return m_name.empty(); }
 
-		//! @brief		型名
+		//! @brief 名前空間を含む型名を取得する。
 		//! @details	名前空間を含みます。
 		//!				未設定の場合は空文字列を返します。
 		constexpr StringView name() const { return m_name; }
 
-		//! @brief		型名
+		//! @brief 名前空間を除いた型名を取得する。
 		//! @details	名前空間を含みません。
 		//!				未設定の場合は空文字列を返します。
 		constexpr StringView shortName() const { 
@@ -120,7 +123,7 @@ namespace Amuse::Core {
 			}		
 		}
 
-		//! @brief		型名
+		//! @brief 型名から名前空間部分を取得する。
 		//! @details	名前空間を含みません。
 		//!				未設定の場合は空文字列を返します。
 		constexpr StringView nameSpace() const {
@@ -135,12 +138,12 @@ namespace Amuse::Core {
 			}
 		}
 
-		//! @brief		ハッシュ値
+		//! @brief 型名から計算した固定ハッシュ値を取得する。
 		//! @details	プラットフォームによらず固定です。
 		//! @note		内部実装は型名のハッシュ値です。
 		constexpr hash_type hash() const { return m_hash; }
 
-		//! @brief		型比較を行う
+		//! @brief 指定したテンプレート型と同じ Type か判定する。
 		//! @details	この比較ではダイナミックキャストを考慮しません。
 		template<class T>
 		constexpr bool is() const { return *this == Type::Get<T>(); }

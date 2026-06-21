@@ -20,6 +20,7 @@ namespace Amuse::Core {
 	template <class R, class... Args, size_t BufferSize>
 	class FixedFunc<R(Args...), BufferSize> {
 	public:
+		//! @brief result_type 型のエイリアス。
 		using result_type = R;
 	private:
 		struct ICallable {
@@ -44,7 +45,8 @@ namespace Amuse::Core {
 			}
 		};
 	private:
-		ICallable* m_callable = nullptr;
+		ICallable* m_callable = nullptr; //!< 呼び出し対象
+		//! @brief 関数オブジェクトをヒープ確保せず配置する固定長バッファ
 		u8			m_buffer[BufferSize + sizeof(void*)] = { 0 };
 	public:
 
@@ -126,8 +128,9 @@ namespace Amuse::Core {
 		void reset() {
 			if (m_callable) {
 				m_callable->~ICallable();
-				m_callable = nullptr;
+				m_callable = nullptr; //!< 呼び出し対象
 			}
+			//! @brief 配置済み関数オブジェクト用の内部バッファをゼロクリアする。
 			std::memset(m_buffer, 0, BufferSize + sizeof(void*));
 		}
 

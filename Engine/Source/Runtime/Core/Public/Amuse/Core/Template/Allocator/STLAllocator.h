@@ -3,7 +3,7 @@
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
-#include "Amuse/Core/Memory/Memory.h"
+#include <Amuse/Core/Memory/Memory.h>
 
 namespace Amuse::Core {
 

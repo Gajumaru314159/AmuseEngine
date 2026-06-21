@@ -14,6 +14,7 @@ namespace Amuse::Core {
 	template<class T>
 	class ComponentManager {
 	public:
+		//! @brief this_type 型のエイリアス。
 		using this_type = ComponentManager;
 	public:
 
@@ -133,13 +134,16 @@ namespace Amuse::Core {
 	template<class T>
 	class ComponentHolder {
 	public:
+		//! @brief manager_type 型のエイリアス。
 		using manager_type = ComponentManager<T>;
 	public:
+		//! @brief ComponentHolder を初期化する。
 		ComponentHolder(Entity entity = ~0ull,manager_type* manager=nullptr) 
 			: m_entity(entity)
 			, m_manager(manager)
 		{	
 		}
+		//! @brief 保持している Entity に対応するコンポーネントを取得する。
 		T* value()const {
 			if (m_manager == nullptr)return nullptr;
 			return m_manager->at(m_entity);

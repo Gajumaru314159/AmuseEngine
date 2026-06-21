@@ -27,9 +27,11 @@ namespace Amuse::Core {
     //!             2回目以降のアクセスが高速になります。
     class Name {
     public:
+        //! @brief Hash 型のエイリアス。
         using Hash = u32;
         friend struct std::hash<Name>;
     public:
+        //! @brief 型情報を登録する。
         static void Register(ServiceInjector&);
     public:
 
@@ -44,14 +46,20 @@ namespace Amuse::Core {
         //! @details    ハッシュ値の計算は内部実装に依存します。
         explicit Name(Hash hash);
 
+        //! @brief 名前オブジェクトをコピー構築する。
         Name(const Name&) = default;
+        //! @brief 名前オブジェクトをムーブ構築する。
         Name(Name&&) = default;
+        //! @brief 値を代入する。
         Name& operator=(const Name&) = default;
+        //! @brief 値を代入する。
         Name& operator=(Name&&) = default;
 
         //! @brief  代入演算子(StringView)
         Name& operator=(StringView name);
+        //! @brief 等値比較を行う。
         bool operator==(const Name&)const;
+        //! @brief 非等値比較を行う。
         bool operator!=(const Name&)const;
 
         //! @brief  名前をStringViewで取得

@@ -17,8 +17,9 @@ namespace Amuse::Core {
     template<class R, class... Args>
     class MiniDelegate<R(Args...)> {
     public:
+        //! @brief StaticFuncPtr 型のエイリアス。
         using StaticFuncPtr = R(*)(Args...);
-        constexpr static size_t kBufferSize = 24; // T (8) + BaseInvoker (8) + Invoker (8) = 24
+        constexpr static size_t kBufferSize = 24; //!< 内部バッファサイズ // T (8) + BaseInvoker (8) + Invoker (8) = 24
 
     public:
         //! @brief      デフォルトコンストラクタ

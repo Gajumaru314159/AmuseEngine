@@ -9,7 +9,7 @@
 
 namespace Amuse::Core {
 
-	//! @brief  スレッド優先順序
+	//! @brief スレッド生成時に指定する実行優先度。
 	enum class ThreadPriority : u32 {
 		Level1,	//!< Critical
 		Level2,	//!< Highest
@@ -19,12 +19,13 @@ namespace Amuse::Core {
 		Level6,	//!< Lowest
 	};
 
-	//! @brief  スレッド優先順序
+	//! @brief スレッドの実行条件を指定する設定。
 	struct ThreadDesc {
-		u32 affinity = 0xFFFFFFFF;
-		ThreadPriority priority = ThreadPriority::Level3;
+		u32 affinity = 0xFFFFFFFF; //!< スレッドアフィニティ
+		ThreadPriority priority = ThreadPriority::Level3; //!< スレッド優先度
 	public:
 		ThreadDesc() = default;
+		//! @brief 優先度だけを指定してスレッド設定を初期化する。
 		ThreadDesc(ThreadPriority p) :priority(p){}
 	};
 
@@ -35,26 +36,26 @@ namespace Amuse::Core {
 		//! @brief				デフォルトコンストラクタ
 		Thread();
 
-		//! @brief				コンストラクタ
+		//! @brief				名前と実行関数を指定してスレッドを開始する
 		//! 
 		//! @param name			スレッド名
-		//! @param entryPoint	実行する関数オブジェクト
+		//! @param entryPoint	新しいスレッド上で呼び出す関数オブジェクト
 		Thread(StringView name, const Func<void()>& entryPoint)
 			: Thread(name, ThreadDesc{},entryPoint){}
 
-		//! @brief				コンストラクタ
+		//! @brief				名前、優先度、実行関数を指定してスレッドを開始する
 		//! 
 		//! @param name			スレッド名
-		//! @param priority		実行優先順序
-		//! @param entryPoint	実行する関数オブジェクト
+		//! @param priority		スレッドの実行優先度
+		//! @param entryPoint	新しいスレッド上で呼び出す関数オブジェクト
 		Thread(StringView name, ThreadPriority priority, const Func<void()>& entryPoint)
 			: Thread(name, ThreadDesc(priority), entryPoint) {}
 
-		//! @brief				コンストラクタ
+		//! @brief				名前、詳細設定、実行関数を指定してスレッドを開始する
 		//! 
 		//! @param name			スレッド名
-		//! @param desc			定義
-		//! @param entryPoint	実行する関数オブジェクト
+		//! @param desc			スレッドの実行設定
+		//! @param entryPoint	新しいスレッド上で呼び出す関数オブジェクト
 		Thread(StringView name, const ThreadDesc& desc, const Func<void()>& entryPoint);
 
 		//! @brief				デストラクタ
@@ -67,10 +68,10 @@ namespace Amuse::Core {
 
 	public:
 
-		//! @brief				スレッドの実行を他スレッドに譲る
+		//! @brief				現在のスレッドの実行権を他スレッドへ譲る
 		static void YieldThread();
 
-		//! @brief				スレッドの実行を他スレッドに譲る
+		//! @brief				現在のスレッドを指定ミリ秒だけ休止する
 		static void Sleep(u32 milliSeconds);
 
 		//! @brief				現在のスレッドIDを取得

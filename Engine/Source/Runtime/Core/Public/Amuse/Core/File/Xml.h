@@ -63,6 +63,7 @@ namespace Amuse::Core {
 		//! @return 最初に見つかった子ノードへの参照
 		//! @throw XmlException 該当する子ノードが存在しない場合
 		XmlNode& at(StringView name);
+		//! @brief 名前を指定して子ノードにアクセス
 		const XmlNode& at(StringView name) const;
 
 		//! @brief 名前とインデックスを指定して子ノードにアクセス
@@ -71,6 +72,7 @@ namespace Amuse::Core {
 		//! @return 該当する子ノードへの参照
 		//! @throw XmlException 該当する子ノードが存在しない場合
 		XmlNode& at(StringView name, size_t index);
+		//! @brief 名前とインデックスを指定して子ノードにアクセス
 		const XmlNode& at(StringView name, size_t index) const;
 
 		//! @brief 子ノードが存在するか確認
@@ -179,8 +181,8 @@ namespace Amuse::Core {
 	//! | 要素 `<tag>`            | ○        |                                           |
 	//! | 属性 `attr="value"`     | ○        |                                           |
 	//! | 空要素 `<tag/>`         | ○        |                                           |
-	//! | コメント `<!-- -->`     | ○        | #comment ノードとして保持                 |
-	//! | テキストノード           | ○        | #text ノードとして保持                    |
+	//! | コメント `<!-- -->`     | ○        | comment ノードとして保持                  |
+	//! | テキストノード           | ○        | text ノードとして保持                     |
 	//! | XML宣言 `<?xml ?>`      | ○        | パース時にスキップ                        |
 	//! | DOCTYPE                 | ○        | パース時にスキップ                        |
 	//! | CDATA `<![CDATA[ ]]>`   | ○        | テキストとして展開                        |
@@ -198,7 +200,7 @@ namespace Amuse::Core {
 	//!
 	//! **サポートしない構文:**
 	//! - 軸指定（`parent::`, `ancestor::` など）
-	//! - 述語内の条件式（`[@attr='value']` など）
+	//! - 述語内の条件式（`[\@attr='value']` など）
 	//! - 関数（`text()`, `contains()` など）
 	//! - `//` による子孫検索
 	//! - ワイルドカード（`*`）
@@ -235,6 +237,7 @@ namespace Amuse::Core {
 		//! @param path パス式
 		//! @return 見つかったノードへのポインタ、見つからない場合nullptr
 		XmlNode* find(StringView path);
+		//! @brief XPathサブセットでノードを検索
 		const XmlNode* find(StringView path) const;
 
 	private:

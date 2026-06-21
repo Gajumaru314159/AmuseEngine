@@ -13,22 +13,23 @@ namespace Amuse::Core {
 	class JobGroup;
 	class Job;
 
+	//! @brief ジョブグループとジョブの生成、実行、待機を管理する。
 	class JobSystem : public Singleton<JobSystem> {
 	public:
 
-		//! @brief コンストラクタ
+		//! @brief ジョブシステムを初期化する。
 		JobSystem();
 
-		//! @brief ジョブの実行を開始
+		//! @brief 登録済みジョブの実行を開始する。
 		void execute();
 
-		//! @brief ジョブの実行完了を待機
+		//! @brief 実行中ジョブの完了を待機する。
 		void wait();
 
-		//! @brief JobGroup を作成
+		//! @brief 指定名の JobGroup を作成する。
 		auto createJobGroup(StringView name)->JobGroup&;
 
-		//! @brief Job を作成
+		//! @brief 指定グループに属する Job を作成する。
 		auto createJob(StringView name, JobGroup& group, Action&& action);
 
 	private:

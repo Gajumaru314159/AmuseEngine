@@ -94,7 +94,7 @@ namespace Amuse::Core {
 
 		Vector<TLSFBlock>  	m_buffer;		//!< バッファ(ブロック実体)
 		Vector<TLSFBlock*> 	m_freeList;		//!< ブロックリスト(実体)
-		Vector<TLSFBlock*> 	m_blocks;       //!< カテゴリに属するブロックの先頭ポインタ
+		Vector<TLSFBlock*> 	m_blocks;       //!< カテゴリ別ブロック先頭ポインタ
 
 	};
 

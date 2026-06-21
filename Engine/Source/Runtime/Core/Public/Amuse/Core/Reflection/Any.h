@@ -22,6 +22,7 @@ namespace Amuse::Core {
 	//! @brief プロパティ
 	class Property {
 	public:
+		//! @brief プロパティ所有者への書き込み可否を表すフラグ型。
 		DEFINE_YES_NO(Writable);
 	public:
 
@@ -47,12 +48,12 @@ namespace Amuse::Core {
 		//! @brief 値をAny型で設定
 		Property& assign(const Any& value);
 
-		//! @brief  プロパティが互換性のある型か
+		//! @brief 指定した型へキャスト可能なプロパティか判定する。
 		bool is(const Type& to) const {
 			return IsCastable(type(), to);
 		}
 
-		//! @brief  プロパティが互換性のある型か
+		//! @brief 指定したテンプレート型へキャスト可能なプロパティか判定する。
 		template<class T>
 		bool is() const {
 			return is(Type::Get<T>());
@@ -65,37 +66,37 @@ namespace Amuse::Core {
 		//! @details Ownerがconst、もしくはプロパティのSetterがない場合はfalseを返します。
 		bool isWritable() const;
 
-		//! @brief PropertyをAny型で取得しなおす
+		//! @brief プロパティ値を Any として取得する。
 		//! @details isReference()がfalseの場合はコピーを返します。
 		Any get();
 
-		//! @brief PropertyをAny型で取得しなおす
+		//! @brief 読み取り専用のプロパティ値を Any として取得する。
 		//! @details isReference()がfalseの場合はコピーを返します。
 		//!		     取得したAnyオブジェクトは書き込み不可としてマークされます。
 		Any get() const;
 
-		//! @brief PropertyをAny型のコピーで取得する
+		//! @brief プロパティ値を所有する Any としてコピーする。
 		Any copy()const;
 
-		//! @brief Propertyをコピーした値で取得する
+		//! @brief プロパティ値を指定型へコピーして取得する。
 		template<class T>
 		auto copy() const->std::enable_if_t<!std::is_reference_v<T>, T>;
 
-		//! @brief  フォールバックを指定してプロパティを特定の特定の型の参照として取得する
+		//! @brief プロパティ値を指定型の参照として取得する。
 		//! @details プロパティの型が異なる型であったり参照型でない場合はassertが発生します。
 		template<class T>
 		auto as() const->std::enable_if_t<std::is_reference_v<T>, const T>;
 
-		//! @brief  プロパティを特定の特定の型の参照として取得する
+		//! @brief 取得できない場合にフォールバックを返す参照取得を行う。
 		template<class T>
 		auto as(const T& fallback) const->std::enable_if_t<std::is_reference_v<T>, const T>;
 
-		//! @brief  プロパティを特定の特定の型のコピーとして取得する
+		//! @brief プロパティ値を指定型へコピーして取得する。
 		//! @details プロパティの型が異なる型の場合はassertが発生します。
 		template<class T>
 		auto as() const->std::enable_if_t<!std::is_reference_v<T>&& std::is_copy_assignable_v<T>, T>;
 
-		//! @brief  フォールバックを指定してプロパティを特定の特定の型のコピーとして取得する
+		//! @brief 取得できない場合にフォールバックを返すコピー取得を行う。
 		template<class T>
 		auto as(const T& fallback) const->std::enable_if_t<!std::is_reference_v<T>&& std::is_copy_assignable_v<T>, T>;
 
@@ -104,8 +105,9 @@ namespace Amuse::Core {
 
 		//------ ラッパー ------//
 
-		//! @brief プロパティのメンバを取得
+		//! @brief プロパティ値が持つ名前付きメンバを取得する。
 		Any operator[](StringView name);
+		//! @brief 読み取り専用でプロパティ値の名前付きメンバを取得する。
 		Any operator[](StringView name) const;
 		
 		//! @brief 空のPropertyか
@@ -122,9 +124,12 @@ namespace Amuse::Core {
 
 		//! @brief プロパティのオーナーを参照のAnyオブジェクトで取得
 		Any owner();
+		//! @brief 読み取り専用でプロパティ所有者を参照する Any を取得する。
 		Any owner()const;
 
+		//! @brief プロパティ値をバイナリライターへシリアライズする。
 		void serialize(BinaryWriter& writer);
+		//! @brief バイナリリーダーからプロパティ値へデシリアライズする。
 		void deserialize(BinaryReader& reader);
 
 	private:
@@ -157,6 +162,7 @@ namespace Amuse::Core {
 		DEFINE_YES_NO(Writable);
 	public:
 		template<class T,class... Args>
+		//! @brief インスタンスを生成する。
 		static Any Create(Args&&... args) {
 			return { GetTypeInfo<T>(),new T(std::forward<Args>(args)...),Reference::No,Writable::Yes};
 		}
@@ -167,6 +173,7 @@ namespace Amuse::Core {
 
 		//! @brief 型情報とポインタから参照Anyオブジェクトを生成
 		Any(const TypeInfo& info, void* ptr) : Any(info, ptr, Reference::Yes, Writable::Yes) { }
+		//! @brief 型情報と const ポインタから読み取り専用の参照 Any を生成する。
 		Any(const TypeInfo& info, const void* ptr) : Any(info,ptr, Reference::Yes, Writable::No) { }
 
 		//! @brief デストラクタ
@@ -251,43 +258,51 @@ namespace Amuse::Core {
 		}
 
 		template<class T>
+		//! @brief 内部オブジェクトを指定型の参照として取得する。
 		T& as() {
 			AMUSE_ASSERT(is<T>(), "型が違います");
 			return *static_cast<T*>(m_pointer);
 		}
 
 		template<class T>
+		//! @brief 内部オブジェクトを指定型の const 参照として取得する。
 		const T& as() const {
 			AMUSE_ASSERT(is<T>(), "型が違います");
 			return *static_cast<const T*>(m_pointer);
 		}
 
 		template<class T>
+		//! @brief 型が一致しない場合にフォールバックを返す参照取得を行う。
 		T& as(T& fallback) const {
 			if (is<T>()) return *static_cast<T*>(m_pointer);
 			return fallback;
 		}
 
 		template<class T>
+		//! @brief 型が一致しない場合にフォールバックを返す const 参照取得を行う。
 		const T& as(const T& fallback) const {
 			if (is<T>()) return *static_cast<T*>(m_pointer);
 			return fallback;
 		}
 
+		//! @brief 内部オブジェクトを参照として保持しているか判定する。
 		bool isReference() const {
 			return static_cast<bool>(m_reference);
 		}
+		//! @brief 内部オブジェクトへ書き込み可能か判定する。
 		bool isWritable() const {
 			return static_cast<bool>(m_writable);
 		}
 
 		template<class T>
+		//! @brief 名前付きプロパティへ値を設定する。
 		Any& set(StringView name, T&& value) {
 			operator[](name) = value;
 			return *this;
 		}
 
 		template< class T, class... TNames>
+		//! @brief ネストした名前付きプロパティへ値を設定する。
 		Any& set(StringView name, TNames&&... names, T value) {
 			auto temp = operator[](name).copy();
 			temp.set(names..., value);
@@ -295,18 +310,22 @@ namespace Amuse::Core {
 			return *this;
 		}
 
+		//! @brief 空かどうかを判定する。
 		bool empty() const {
 			return m_pointer == nullptr || m_info == nullptr;
 		}
 
+		//! @brief 保持している型情報とポインタをクリアする。
 		void clear() {
 			m_info = nullptr;
 			m_pointer = nullptr;
 		}
 
+		//! @brief 値をコピー生成する。
 		Any copy()const;
 
 		template<class T>
+		//! @brief 値をコピー生成する。
 		T copy()const {
 			return T(as<T>());
 		}
@@ -329,7 +348,9 @@ namespace Amuse::Core {
 		// Vector<Any> list();
 		// Map<Any, Any> map();
 
+		//! @brief 内部オブジェクトをバイナリライターへシリアライズする。
 		void serialize([[maybe_unused]] BinaryWriter& writer) {}
+		//! @brief バイナリリーダーから内部オブジェクトへデシリアライズする。
 		void deserialize([[maybe_unused]] BinaryReader& reader) {}
 
 	private:
@@ -376,14 +397,14 @@ namespace Amuse::Core {
 	};
 
 
-	//! @brief Propertyをコピーした値で取得する
+	//! @brief プロパティ値を指定型へコピーして取得する。
 	template<class T>
 	auto Property::copy() const -> std::enable_if_t<!std::is_reference_v<T>, T> {
 		AMUSE_ASSERT(is<T>(), "型が違います");
 		return get().template as<T>();
 	}
 
-	//! @brief  フォールバックを指定してプロパティを特定の特定の型の参照として取得する
+	//! @brief プロパティ値を指定型の参照として取得する。
 	//! @details プロパティの型が異なる型であったり参照型でない場合はassertが発生します。
 	template<class T>
 	auto Property::as() const -> std::enable_if_t<std::is_reference_v<T>, const T> {
@@ -393,14 +414,14 @@ namespace Amuse::Core {
 		return get().template as<std::remove_reference_t<T>>();
 	}
 
-	//! @brief  プロパティを特定の特定の型の参照として取得する
+	//! @brief 取得できない場合にフォールバックを返す参照取得を行う。
 	template<class T>
 	auto Property::as(const T& fallback) const -> std::enable_if_t<std::is_reference_v<T>, const T> {
 		if (empty() || !is<T>() || !isReference()) return fallback;
 		return get().template as<std::remove_reference_t<T>>();
 	}
 
-	//! @brief  プロパティを特定の特定の型のコピーとして取得する
+	//! @brief プロパティ値を指定型へコピーして取得する。
 	//! @details プロパティの型が異なる型の場合はassertが発生します。
 	template<class T>
 	auto Property::as() const -> std::enable_if_t<!std::is_reference_v<T>&& std::is_copy_assignable_v<T>, T> {
@@ -409,7 +430,7 @@ namespace Amuse::Core {
 		return get().template as<T>();
 	}
 
-	//! @brief  フォールバックを指定してプロパティを特定の特定の型のコピーとして取得する
+	//! @brief 取得できない場合にフォールバックを返すコピー取得を行う。
 	template<class T>
 	auto Property::as(const T& fallback) const -> std::enable_if_t<!std::is_reference_v<T>&& std::is_copy_assignable_v<T>, T> {
 		if (empty() || !is<T>())return fallback;

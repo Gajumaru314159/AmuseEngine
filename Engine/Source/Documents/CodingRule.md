@@ -4,7 +4,7 @@
 
 C++17を最低要件として記述してください。noexcept等をマクロで定義しなおす必要はありませんが、C++20やC++23で導入される機能やコンパイラ固有の機能ついてはマクロを使用してコンパイラごとの機能を選択して使用する必要があります。(例：FORCEINLINE)
 
-```c++
+```cpp
 class Hoge{
 public:
 
@@ -19,7 +19,7 @@ public:
 
 最新の言語バージョンで廃止されている機能や非推奨機能は避けるようにしてください。
 
-```c++
+```cpp
 void Func(){
   // 非推奨機能や削除される機能の使用は避けてください
   // std::auto_ptr<Hoge> aptr;
@@ -52,7 +52,7 @@ void Func(){
 ## ヘッダファイル
 
 - ヘッダファイルは自己完結で単体でコンパイルできなくてはいけません。
-- インクルードガードには`#pragma once`を使用してください。
+- インクルードガードには`pragma once`を使用してください。
 - ヘッダの依存を下げるためにPimplイディオムやインターフェイスによる実装を検討してください。
 
 ## インライン関数
@@ -113,9 +113,9 @@ void Func(){
 | マクロ           | SAMPLE_ID            |
 | マクロ(内部)     | \_internal_SAMPLE_ID |
 
-内部で使用する機能は`namespace *::Internal`に実装してください
+内部で使用する機能は`Internal`という名前空間に実装してください (例：`namespace Amuse::Core::Internal`)
 
-```c++
+```cpp
 #define _internal_ADD(a,b) (a+b)
 #define ADD(a,b) _internal_ADD(a,b)
 enum class Type{
@@ -151,7 +151,7 @@ private:
 - Doxygenでドキュメントを自動生成するために、ヘッダには関数やクラスのドキュメントコメントを書くようにしてください。
 - インライン関数の範囲は`@cond`を使用してドキュメントの二重定義を防ぎます。
 
-```c++
+```cpp
 //! @brief      説明
 //! @details    詳細
 //! @param arg  引数説明

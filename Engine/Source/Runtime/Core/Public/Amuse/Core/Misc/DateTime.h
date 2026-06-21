@@ -84,7 +84,7 @@ namespace Amuse::Core {
 		//!				* fff	小数点以下3桁の秒
 		//!				* ff	小数点以下2桁の秒
 		//!				* f		小数点以下1桁の秒
-		//! @ref		https://learn.microsoft.com/ja-jp/dotnet/standard/base-types/custom-date-and-time-format-strings
+		//! @see		https://learn.microsoft.com/ja-jp/dotnet/standard/base-types/custom-date-and-time-format-strings
 		String toString(StringView format = "yyyy-MM-dd HH:mm:ss.ff")const;
 
 	public:

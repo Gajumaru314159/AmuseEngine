@@ -8,13 +8,16 @@
 namespace Amuse::Core {
 
     template<class T>
+    //! @brief スレッドごとのコンテキストを表す。
     class ThreadLocalContext : Nonmovable {
     public:
+        //! @brief 参照先または演算結果を取得する。
         T& operator*()
         {
             return *operator->();
         }
 
+        //! @brief 参照先メンバーへアクセスする。
         T* operator->()
         {
             thread_local T* pStorage = nullptr;
@@ -29,6 +32,7 @@ namespace Amuse::Core {
             return pStorage;
         }
 
+        //! @brief 各スレッドに作成済みのコンテキストを走査する。
         void forEach(Func<void(T&)> visitor)
         {
             if (!visitor) return;
@@ -39,6 +43,7 @@ namespace Amuse::Core {
             }
         }
 
+        //! @brief 各スレッドに作成済みのコンテキストを読み取り専用で走査する。
         void forEach(Func<void(const T&)> visitor) const
         {
             if (!visitor) return;

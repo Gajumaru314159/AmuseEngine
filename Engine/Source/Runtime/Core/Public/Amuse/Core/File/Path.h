@@ -25,7 +25,7 @@ namespace Amuse::Core {
 		static Char Separator();
 
 		//! @brief		パス文字列を正規化する
-		//! @detailas	* lexically_normalを使用して正規化
+		//! @details	* lexically_normalを使用して正規化
 		//!				* 区切り文字を/に統一
 		static String Normalize(StringView path);
 

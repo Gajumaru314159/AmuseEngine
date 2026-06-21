@@ -12,9 +12,12 @@ namespace Amuse::Core {
     class ErrorCode {
     public:
         ErrorCode() : m_value(0) {}
+        //! @brief ErrorCode を初期化する。
         ErrorCode(u32 value) : m_value(value) {}
 
+        //! @brief 数値のエラーコードを取得する。
         u32 value() const { return m_value; }
+        //! @brief エラーコードに対応するメッセージを取得する。
         String message() const;
 
     private:
@@ -38,3 +41,4 @@ template <> struct std::formatter<Amuse::Core::ErrorCode, Amuse::Core::Char> {
         return format_to(ctx.out(), "0x{:08X} {}", value.value(), value.message().c_str());
     }
 };
+//! @endcond

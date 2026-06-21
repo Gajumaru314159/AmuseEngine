@@ -128,7 +128,7 @@ namespace Amuse::Core {
 
 		//! @brief		逆行列
 		//! 
-		//! @Internal		逆行列が計算できない場合は単位行列を返す
+		//! @details	逆行列が計算できない場合は単位行列を返す
 		Matrix inverse()const;
 
 
@@ -255,7 +255,9 @@ namespace Amuse::Core {
 
 		//! @brief 透視投影行列の生成
 		static Matrix Perspective(f32 fov, f32 aspect, f32 zNear, f32 zFar);
+		//! @brief 幅と高さからアスペクト比を求めて透視投影行列を生成する。
 		static Matrix Perspective(f32 fov, f32 width, f32 height, f32 zNear, f32 zFar);
+		//! @brief サイズからアスペクト比を求めて透視投影行列を生成する。
 		static Matrix Perspective(f32 fov, Size size, f32 zNear, f32 zFar);
 
 

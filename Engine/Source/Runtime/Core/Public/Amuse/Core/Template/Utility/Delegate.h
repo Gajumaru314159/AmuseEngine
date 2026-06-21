@@ -20,6 +20,7 @@ namespace Amuse::Core {
 	template <class R, class... Args, std::size_t BufferSize>
 	class Delegate<R(Args...), BufferSize> {
 	public:
+		//! @brief function_type 型のエイリアス。
 		using function_type = FixedFunc<R(Args...), BufferSize>;
 	public:
 

@@ -24,10 +24,11 @@ namespace Amuse::Core {
 		MultiThreaded,
 	};
 
+	//! @brief スケジュール実行設定を表す。
 	struct ScheduleExecutorConfig {
-		s32 workerCount = 0;
-		bool allowWorkerSleep = true;
-		bool enableWorkStealing = true;
+		s32 workerCount = 0; //!< ワーカー数
+		bool allowWorkerSleep = true; //!< ワーカースリープ許可
+		bool enableWorkStealing = true; //!< ワークスティール有効フラグ
 	};
 
 	enum class ScheduleBuildLogLevel {
@@ -44,25 +45,29 @@ namespace Amuse::Core {
 		InvalidNode,
 	};
 
+	//! @brief スケジュール構築エラーを表す。
 	struct ScheduleBuildError {
-		ScheduleBuildErrorType type{};
-		String message;
-		Vector<String> nodes;
+		ScheduleBuildErrorType type{}; //!< 型
+		String message; //!< メッセージ
+		Vector<String> nodes; //!< 対象ノード一覧
 	};
 
+	//! @brief スケジュール構築警告を表す。
 	struct ScheduleBuildWarning {
-		ScheduleBuildErrorType type{};
-		String message;
-		Vector<String> nodes;
+		ScheduleBuildErrorType type{}; //!< 型
+		String message; //!< メッセージ
+		Vector<String> nodes; //!< 対象ノード一覧
 	};
 
+	//! @brief スケジュール構築設定を表す。
 	struct ScheduleBuildSettings {
-		ScheduleBuildLogLevel unresolvedLabel = ScheduleBuildLogLevel::Error;
-		ScheduleBuildLogLevel dependencyCycle = ScheduleBuildLogLevel::Error;
-		bool validateConflictTag = true;
-		bool stableTopologicalSort = true;
+		ScheduleBuildLogLevel unresolvedLabel = ScheduleBuildLogLevel::Error; //!< 未解決ラベル検証フラグ
+		ScheduleBuildLogLevel dependencyCycle = ScheduleBuildLogLevel::Error; //!< 依存循環検証フラグ
+		bool validateConflictTag = true; //!< 競合タグ検証フラグ
+		bool stableTopologicalSort = true; //!< 安定トポロジカルソートフラグ
 	};
 
+	//! @brief スケジュール構築結果を表す。
 	class ScheduleBuildResult {
 	public:
 		//! @brief ビルドが成功したか
@@ -85,6 +90,7 @@ namespace Amuse::Core {
 		Vector<ScheduleBuildWarning> m_warnings;
 	};
 
+	//! @brief スケジュール実行器を表す。
 	class ScheduleExecutor {
 	public:
 		//! @brief Executor を作成
@@ -187,24 +193,28 @@ namespace Amuse::Core {
 			Set,
 		};
 
+		//! @brief スケジュールノード参照を表す。
 		struct ScheduleNodeRef {
-			ScheduleNodeKind kind = ScheduleNodeKind::Task;
-			s32 id = -1;
+			ScheduleNodeKind kind = ScheduleNodeKind::Task; //!< ノード種別
+			s32 id = -1; //!< ノードID
 
+			//! @brief 等値比較を行う。
 			bool operator==(const ScheduleNodeRef& rhs) const {
 				return kind == rhs.kind && id == rhs.id;
 			}
 		};
 
+		//! @brief スケジュールノード間の依存辺を表す。
 		struct ScheduleEdge {
-			ScheduleNodeRef from;
-			ScheduleNodeRef to;
+			ScheduleNodeRef from; //!< 依存元ノード
+			ScheduleNodeRef to; //!< 依存先ノード
 		};
 	}
 
 	class ScheduleSet;
 	class TaskGroup;
 
+	//! @brief 非同期タスクを表す。
 	class Task {
 	public:
 		//! @brief 空のタスクハンドルを作成
@@ -310,6 +320,7 @@ namespace Amuse::Core {
 		AddEdgeFunc m_addEdge = [](void*, Internal::ScheduleNodeRef, Internal::ScheduleNodeRef) {};
 	};
 
+	//! @brief スケジュール集合を表す。
 	class ScheduleSet {
 	public:
 		//! @brief 空のセットハンドルを作成
@@ -385,6 +396,7 @@ namespace Amuse::Core {
 		return *this;
 	}
 
+	//! @brief タスクグループを表す。
 	class TaskGroup {
 	public:
 		//! @brief 空のタスクグループを作成
@@ -420,6 +432,7 @@ namespace Amuse::Core {
 	};
 
 	template<class... Args>
+	//! @brief スケジュールを表す。
 	class Schedule {
 	public:
 		//! @brief スケジュールを作成

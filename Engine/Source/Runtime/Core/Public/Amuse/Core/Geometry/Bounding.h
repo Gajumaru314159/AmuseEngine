@@ -11,21 +11,21 @@ namespace Amuse::Core {
 
 	//! @brief		Axis Aligned Bounding Box
 	struct AABB {
-		Vec3 min;
-		Vec3 max;
+		Vec3 min; //!< 最小座標
+		Vec3 max; //!< 最大座標
 	};
 
 	//! @brief		Oriented Bounding Box
 	struct OBB {
-		Vec3 pos;
-		Vec3 size;
-		Quat rotation;
+		Vec3 pos; //!< 中心座標
+		Vec3 size; //!< バウンディングサイズ
+		Quat rotation; //!< バウンディングの回転量
 	};
 	
 	//! @brief		Box と Sphere
 	struct Bounds {
-		Box		box;
-		Sphere	sphere;
+		Box		box; //!< Box Bounds
+		Sphere	sphere; //!< Sphere Bounds
 	};
 
 }

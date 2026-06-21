@@ -17,8 +17,10 @@ namespace Amuse::Core {
 	class JobHandle : Noncopyable, Nonmovable {
 	public:
 		JobHandle();
+		//! @brief 指定ジョブの寿命監視ハンドルを初期化する。
 		JobHandle(Job&);
 		~JobHandle();
+		//! @brief 所有権を解放する。
 		void release();
 	private:
 		Job* m_job = nullptr;
@@ -31,8 +33,10 @@ namespace Amuse::Core {
 	class JobGroupHandle : Noncopyable, Nonmovable {
 	public:
 		JobGroupHandle();
+		//! @brief 指定ジョブグループの寿命監視ハンドルを初期化する。
 		JobGroupHandle(JobGroup&);
 		~JobGroupHandle();
+		//! @brief 所有権を解放する。
 		void release();
 	private:
 		JobGroup* m_group = nullptr;

@@ -32,19 +32,26 @@ namespace Amuse::Core {
 
         //! @brief サブ JobGroup を作成
         auto createSub(StringView name) -> Ref<JobGroup>;
+        //! @brief このグループの子 JobGroup を作成する。
         auto createChild(StringView name) -> Ref<JobGroup>;
+        //! @brief 既存の JobGroup を子グループとして登録する。
         void addChild(Ref<JobGroup>& group);
 
+        //! @brief このグループにジョブを追加し、寿命管理用ハンドルを返す。
         auto addJob(StringView name, Action&& action)-> JobHandle&;
 
 
     public:
 
+        //! @brief グループ内のジョブを executor へ投入する。
         void execute(JobExecutor& executor);
+        //! @brief 追加予約と解放予約を反映してグループ状態を更新する。
         void update(JobExecutor& executor);
 
+        //! @brief 指定したジョブを解放予約へ移す。
         void removeJob(Job&);
 
+        //! @brief このグループの解放をリクエストする。
         void requestRelease();
 
     private:

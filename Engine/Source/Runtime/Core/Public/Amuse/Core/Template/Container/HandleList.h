@@ -50,33 +50,39 @@ namespace Amuse::Core {
 				remove();
 			}
 
-			//! @brief ハンドルの要素をリストから削除する
+			//! @brief ハンドルが保持する要素を所属リストから取り除く。
 			void remove() {
 				if (!pParent)return;
 				pParent->remove(*this);
 				clear();
 			}
  
+			//! @brief 参照先メンバーへアクセスする。
 			T* operator->() {
 				return &instance.value();
 			}
 
+			//! @brief 参照先メンバーへアクセスする。
 			const T* operator->() const {
 				return &instance.value();
 			}
 
+			//! @brief ハンドルが保持する要素への参照を返す。
 			T& operator*() {
 				return *instance;
 			}
 
+			//! @brief ハンドルが保持する要素への読み取り専用参照を返す。
 			const T& operator*()const {
 				return *instance;
 			}
 
+			//! @brief bool へ型変換する。
 			operator bool()const {
 				return instance.has_value();
 			}
 
+			//! @brief 空かどうかを判定する。
 			bool empty()const {
 				return !instance.has_value();
 			}
@@ -180,6 +186,7 @@ namespace Amuse::Core {
 
 		//! @brief const逆イテレータ
 		using const_reverse_iterator = std::reverse_iterator<const_iterator>;
+		//! @brief 逆順に要素を走査するイテレータ型。
 		using reverse_iterator = std::reverse_iterator<iterator>;
 
 #pragma endregion
@@ -190,7 +197,9 @@ namespace Amuse::Core {
 		// コンストラクタ / デストラクタ
 		//===============================================================
 		HandleList();															// コンストラクタ
+		//! @brief 他のリストからムーブ構築する。
 		HandleList(this_type&& x)noexcept;										// ムーブコンストラクタ
+		//! @brief 他のリストをムーブ代入する。
 		this_type& operator=(this_type&& x)noexcept;                            // ムーブ代入演算子
 		~HandleList();															// デストラクタ
 
@@ -329,84 +338,84 @@ namespace Amuse::Core {
 	}
 
 
-	//! @brief 先頭を指すイテレータを取得する
+	//! @brief 先頭要素を指すイテレータを返す。
 	template<typename T>
 	inline typename HandleList<T>::iterator HandleList<T>::begin()noexcept {
 		return iterator(m_header.pNext);
 	}
 
 
-	//! @brief 先頭を指すイテレータを取得する(const)
+	//! @brief 先頭要素を指す読み取り専用イテレータを返す。
 	template<typename T>
 	inline typename HandleList<T>::const_iterator HandleList<T>::begin()const noexcept {
 		return const_iterator(m_header.pNext);
 	}
 
 
-	//! @brief 末尾の次を指すイテレータを取得する
+	//! @brief 末尾要素の次を指すイテレータを返す。
 	template<typename T>
 	inline typename HandleList<T>::iterator HandleList<T>::end()noexcept {
 		return iterator(&m_header);
 	}
 
 
-	//! @brief 末尾の次を指すイテレータを取得する(const)
+	//! @brief 末尾要素の次を指す読み取り専用イテレータを返す。
 	template<typename T>
 	inline typename HandleList<T>::const_iterator HandleList<T>::end()const noexcept {
 		return const_iterator(&m_header);
 	}
 
 
-	//! @brief 先頭を指すイテレータを取得する(const)
+	//! @brief 先頭要素を指す読み取り専用イテレータを返す。
 	template<typename T>
 	inline typename HandleList<T>::const_iterator HandleList<T>::cbegin()const noexcept {
 		return const_iterator(m_header.pNext);
 	}
 
 
-	//! @brief 末尾の次を指すイテレータを取得する(const)
+	//! @brief 末尾要素の次を指す読み取り専用イテレータを返す。
 	template<typename T>
 	inline typename HandleList<T>::const_iterator HandleList<T>::cend()const noexcept {
 		return const_iterator(&m_header);
 	}
 
 
-	//! @brief 先頭を指す逆イテレータを取得する
+	//! @brief 逆順の先頭要素を指すイテレータを返す。
 	template<typename T>
 	inline typename HandleList<T>::reverse_iterator HandleList<T>::rbegin()noexcept {
 		return reverse_iterator(end());
 	}
 
 
-	//! @brief 先頭を指す逆イテレータを取得する(const)
+	//! @brief 逆順の先頭要素を指す読み取り専用イテレータを返す。
 	template<typename T>
 	inline typename HandleList<T>::const_reverse_iterator HandleList<T>::rbegin()const noexcept {
 		return const_reverse_iterator(end());
 	}
 
 
-	//! @brief 末尾の次を指す逆イテレータを取得する
+	//! @brief 逆順の末尾要素の次を指すイテレータを返す。
 	template<typename T>
 	inline typename HandleList<T>::reverse_iterator HandleList<T>::rend()noexcept {
 		return reverse_iterator(begin());
 	}
 
 
-	//! @brief 末尾の次を指す逆イテレータを取得する(const)
+	//! @brief 逆順の末尾要素の次を指す読み取り専用イテレータを返す。
 	template<typename T>
 	inline typename HandleList<T>::const_reverse_iterator HandleList<T>::rend()const noexcept {
 		return const_reverse_iterator(begin());
 	}
 
 
-	//! @brief 先頭を指す逆イテレータを取得する(const)
+	//! @brief 逆順の先頭要素を指す読み取り専用イテレータを返す。
 	template<typename T>
 	inline typename HandleList<T>::const_reverse_iterator HandleList<T>::crbegin()const noexcept {
 		return const_reverse_iterator(end());
 	}
 
 
-	//! @brief 末尾の次を指す逆イテレータを取得する(const)
+	//! @brief 逆順の末尾要素の次を指す読み取り専用イテレータを返す。
 	template<typename T>
 	inline typename HandleList<T>::const_reverse_iterator HandleList<T>::crend()const noexcept {
 		return const_reverse_iterator(begin());
@@ -421,7 +430,7 @@ namespace Amuse::Core {
 	}
 
 
-	//! @brief 要素数を取得する
+	//! @brief 現在格納している要素数を返す。
 	//! 
 	//! @note  O(n)
 	template<typename T>
@@ -436,7 +445,7 @@ namespace Amuse::Core {
 		return this == handle.pParent;
 	}
 
-	//! @brief 先頭要素への参照を取得する
+	//! @brief 先頭要素への参照を返す。
 	//! 
 	//! @note  コンテナが空の時はassertを発生させる。
 	template<typename T>
@@ -447,7 +456,7 @@ namespace Amuse::Core {
 	}
 
 
-	//! @brief 先頭要素への参照を取得する(const)
+	//! @brief 先頭要素への読み取り専用参照を返す。
 	//! 
 	//! @note  コンテナが空の時はassertを発生させる。
 	template<typename T>
@@ -458,7 +467,7 @@ namespace Amuse::Core {
 	}
 
 
-	//! @brief 末尾要素への参照を取得する
+	//! @brief 末尾要素への参照を返す。
 	//! 
 	//! @note  コンテナが空の時はassertを発生させる。
 	template<typename T>
@@ -469,7 +478,7 @@ namespace Amuse::Core {
 	}
 
 
-	//! @brief 末尾要素への参照を取得する(const)
+	//! @brief 末尾要素への読み取り専用参照を返す。
 	//! 
 	//! @note  コンテナが空の時はassertを発生させる。
 	template<typename T>
@@ -480,7 +489,7 @@ namespace Amuse::Core {
 	}
 
 
-	//! @brief 先頭に要素を追加する
+	//! @brief 先頭に要素をコピー追加し、ハンドルに関連付ける。
 	template<typename T>
 	inline void HandleList<T>::push_front(Handle& h, const T& x) {
 		ScopeLock lock(m_lock);
@@ -489,7 +498,7 @@ namespace Amuse::Core {
 	}
 
 
-	//! @brief 先頭に要素を追加する
+	//! @brief 先頭に要素をムーブ追加し、ハンドルに関連付ける。
 	template<typename T>
 	inline void HandleList<T>::push_front(Handle& h, T&& x) {
 		ScopeLock lock(m_lock);
@@ -498,7 +507,7 @@ namespace Amuse::Core {
 	}
 
 
-	//! @brief 先頭に要素を直接構築して追加する
+	//! @brief 先頭に要素を直接構築して追加し、ハンドルに関連付ける。
 	template<typename T>
 	template<class... Args>
 	inline typename HandleList<T>::reference HandleList<T>::emplace_front(Handle& h, Args&&... args) {
@@ -509,7 +518,7 @@ namespace Amuse::Core {
 	}
 
 
-	//! @brief 末尾に要素を追加する
+	//! @brief 末尾に要素をコピー追加し、ハンドルに関連付ける。
 	template<typename T>
 	inline void HandleList<T>::push_back(Handle& h, const T& x) {
 		ScopeLock lock(m_lock);
@@ -518,7 +527,7 @@ namespace Amuse::Core {
 	}
 
 
-	//! @brief 末尾に要素を追加する
+	//! @brief 末尾に要素をムーブ追加し、ハンドルに関連付ける。
 	template<typename T>
 	inline void HandleList<T>::push_back(Handle& h, T&& x) {
 		ScopeLock lock(m_lock);
@@ -527,7 +536,7 @@ namespace Amuse::Core {
 	}
 
 
-	//! @brief  末尾に要素を直接構築して追加する
+	//! @brief 末尾に要素を直接構築して追加し、ハンドルに関連付ける。
 	//! 
 	//! @return 追加した要素の参照
 	template<typename T>
@@ -540,7 +549,7 @@ namespace Amuse::Core {
 	}
 
 
-	//! @brief  要素を指定位置に挿入する
+	//! @brief 指定位置の前に要素をコピー挿入し、ハンドルに関連付ける。
 	//! 
 	//! @return 挿入した要素のイテレータ
 	template<typename T>
@@ -552,7 +561,7 @@ namespace Amuse::Core {
 	}
 
 
-	//! @brief 要素を指定位置に挿入する
+	//! @brief 指定位置の前に要素をムーブ挿入し、ハンドルに関連付ける。
 	//! 
 	//! @return 挿入した要素のイテレータ
 	template<typename T>
@@ -564,7 +573,7 @@ namespace Amuse::Core {
 	}
 
 
-	//! @brief 要素を指定位置に直接構築して挿入する
+	//! @brief 指定位置の前に要素を直接構築して挿入し、ハンドルに関連付ける。
 	//! 
 	//! @return 挿入した要素のイテレータ
 	template<typename T>
@@ -577,7 +586,7 @@ namespace Amuse::Core {
 	}
 
 
-	//! @brief 先頭から要素を削除する
+	//! @brief 先頭要素を取り除く。
 	//! 
 	//! @details    コンテナが空の場合は何もしない。
 	template<typename T>
@@ -588,7 +597,7 @@ namespace Amuse::Core {
 	}
 
 
-	//! @brief 末尾から要素を削除する
+	//! @brief 末尾要素を取り除く。
 	//! 
 	//! @details    コンテナが空の場合は何もしない。
 	template<typename T>
@@ -599,7 +608,7 @@ namespace Amuse::Core {
 	}
 
 
-	//! @brief 指定位置の要素を削除する
+	//! @brief 指定位置の要素を取り除き、次の要素を指すイテレータを返す。
 	template<typename T>
 	inline typename HandleList<T>::iterator HandleList<T>::erase(const_iterator position) {
 		ScopeLock lock(m_lock);
@@ -607,7 +616,7 @@ namespace Amuse::Core {
 	}
 
 
-	//! @brief      指定範囲の要素を削除する
+	//! @brief 範囲 [position, last) の要素を取り除き、次の要素を指すイテレータを返す。
 	//! 
 	//! @details    [position, last)で示される範囲の要素が削除される。
 	template<typename T>
@@ -623,7 +632,7 @@ namespace Amuse::Core {
 	}
 
 
-	//! @brief 全要素を削除する
+	//! @brief 全要素を取り除き、各ハンドルとの関連付けを解除する。
 	template<typename T>
 	inline void HandleList<T>::clear()noexcept {
 		ScopeLock lock(m_lock);
@@ -637,7 +646,7 @@ namespace Amuse::Core {
 	}
 
 
-	//! @brief 要素を削除する
+	//! @brief 指定ハンドルに関連付いた要素を取り除く。
 	template<typename T>
 	inline void HandleList<T>::remove(Handle& h) {
 		ScopeLock lock(m_lock);
@@ -645,7 +654,7 @@ namespace Amuse::Core {
 	}
 
 
-	//! @brief      条件に合った要素を削除する
+	//! @brief 条件を満たす全要素を取り除く。
 	//! 
 	//! @details    コンテナの全ての要素に対する各イテレータiにおいて、pred(*i) == trueとなる要素を削除する。
 	//!             削除された要素に対するイテレータおよび参照は無効となる。
