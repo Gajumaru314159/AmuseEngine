@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: Runtime/Core/Public/Amuse/Core/Math/Random.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d0/d80/_random_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Random.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//***********************************************************</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"></span><span class="comment">//***********************************************************</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;Amuse/Core/CoreTypes.h&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span>Amuse::Core {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="../../d3/dca/class_amuse_1_1_core_1_1_random.html">   11</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d3/dca/class_amuse_1_1_core_1_1_random.html">Random</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../d3/dca/class_amuse_1_1_core_1_1_random.html#af87df89303f14e0e0fd89a7abafbfdcd">   17</a></span>        <a class="code hl_function" href="../../d3/dca/class_amuse_1_1_core_1_1_random.html#af87df89303f14e0e0fd89a7abafbfdcd">Random</a>();</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="../../d3/dca/class_amuse_1_1_core_1_1_random.html#a1f62ebcd19f4baed877aad20c416ef8e">   21</a></span>        <a class="code hl_function" href="../../d3/dca/class_amuse_1_1_core_1_1_random.html#a1f62ebcd19f4baed877aad20c416ef8e">Random</a>(u32 seed);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../d3/dca/class_amuse_1_1_core_1_1_random.html#a2bc3c4030ca198fbc2b10b985c9173eb">   25</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/dca/class_amuse_1_1_core_1_1_random.html#a2bc3c4030ca198fbc2b10b985c9173eb">setSeed</a>(u32 seed);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="../../d3/dca/class_amuse_1_1_core_1_1_random.html#a064b154d2cc0aab42f84c6b38dcecfaf">   29</a></span>        u32  <a class="code hl_function" href="../../d3/dca/class_amuse_1_1_core_1_1_random.html#a064b154d2cc0aab42f84c6b38dcecfaf">getU32</a>();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../d3/dca/class_amuse_1_1_core_1_1_random.html#a6d7d9e9798aba55846d3ced75adfb54a">   37</a></span>        s32  <a class="code hl_function" href="../../d3/dca/class_amuse_1_1_core_1_1_random.html#a6d7d9e9798aba55846d3ced75adfb54a">range</a>(s32 minimum, s32 maximum);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="../../d3/dca/class_amuse_1_1_core_1_1_random.html#a73a7aa70404641d277aada1dff48fcf4">   45</a></span>        f32  <a class="code hl_function" href="../../d3/dca/class_amuse_1_1_core_1_1_random.html#a73a7aa70404641d277aada1dff48fcf4">range</a>(f32 minimum, f32 maximum);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="../../d3/dca/class_amuse_1_1_core_1_1_random.html#aed07505d76987f6970f1cac7fd772bce">   51</a></span>        f32  <a class="code hl_function" href="../../d3/dca/class_amuse_1_1_core_1_1_random.html#aed07505d76987f6970f1cac7fd772bce">get0_1</a>() {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="../../d3/dca/class_amuse_1_1_core_1_1_random.html#a6d7d9e9798aba55846d3ced75adfb54a">range</a>(0.0f, 1.0f);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="../../d3/dca/class_amuse_1_1_core_1_1_random.html#ae73f7aa8a53f2d8c5167e965085cedb4">   59</a></span>        f32  <a class="code hl_function" href="../../d3/dca/class_amuse_1_1_core_1_1_random.html#ae73f7aa8a53f2d8c5167e965085cedb4">get1_1</a>() {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="../../d3/dca/class_amuse_1_1_core_1_1_random.html#a6d7d9e9798aba55846d3ced75adfb54a">range</a>(-1.0f, 1.0f);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        }</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        u32 x, y, z, w;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    };</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>} </div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_random_html"><div class="ttname"><a href="../../d3/dca/class_amuse_1_1_core_1_1_random.html">Amuse::Core::Random</a></div><div class="ttdoc">乱数生成器</div><div class="ttdef"><b>Definition:</b> Random.h:11</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_random_html_a064b154d2cc0aab42f84c6b38dcecfaf"><div class="ttname"><a href="../../d3/dca/class_amuse_1_1_core_1_1_random.html#a064b154d2cc0aab42f84c6b38dcecfaf">Amuse::Core::Random::getU32</a></div><div class="ttdeci">u32 getU32()</div><div class="ttdoc">u32の乱数を生成する</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_random_html_a1f62ebcd19f4baed877aad20c416ef8e"><div class="ttname"><a href="../../d3/dca/class_amuse_1_1_core_1_1_random.html#a1f62ebcd19f4baed877aad20c416ef8e">Amuse::Core::Random::Random</a></div><div class="ttdeci">Random(u32 seed)</div><div class="ttdoc">コンストラクタ(シード値指定)</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_random_html_a2bc3c4030ca198fbc2b10b985c9173eb"><div class="ttname"><a href="../../d3/dca/class_amuse_1_1_core_1_1_random.html#a2bc3c4030ca198fbc2b10b985c9173eb">Amuse::Core::Random::setSeed</a></div><div class="ttdeci">void setSeed(u32 seed)</div><div class="ttdoc">乱数のシード値を変更</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_random_html_a6d7d9e9798aba55846d3ced75adfb54a"><div class="ttname"><a href="../../d3/dca/class_amuse_1_1_core_1_1_random.html#a6d7d9e9798aba55846d3ced75adfb54a">Amuse::Core::Random::range</a></div><div class="ttdeci">s32 range(s32 minimum, s32 maximum)</div><div class="ttdoc">整数の乱数を生成する</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_random_html_a73a7aa70404641d277aada1dff48fcf4"><div class="ttname"><a href="../../d3/dca/class_amuse_1_1_core_1_1_random.html#a73a7aa70404641d277aada1dff48fcf4">Amuse::Core::Random::range</a></div><div class="ttdeci">f32 range(f32 minimum, f32 maximum)</div><div class="ttdoc">小数の乱数を生成する</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_random_html_ae73f7aa8a53f2d8c5167e965085cedb4"><div class="ttname"><a href="../../d3/dca/class_amuse_1_1_core_1_1_random.html#ae73f7aa8a53f2d8c5167e965085cedb4">Amuse::Core::Random::get1_1</a></div><div class="ttdeci">f32 get1_1()</div><div class="ttdoc">-1～1の乱数を生成する</div><div class="ttdef"><b>Definition:</b> Random.h:59</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_random_html_aed07505d76987f6970f1cac7fd772bce"><div class="ttname"><a href="../../d3/dca/class_amuse_1_1_core_1_1_random.html#aed07505d76987f6970f1cac7fd772bce">Amuse::Core::Random::get0_1</a></div><div class="ttdeci">f32 get0_1()</div><div class="ttdoc">0～1の乱数を生成する</div><div class="ttdef"><b>Definition:</b> Random.h:51</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_random_html_af87df89303f14e0e0fd89a7abafbfdcd"><div class="ttname"><a href="../../d3/dca/class_amuse_1_1_core_1_1_random.html#af87df89303f14e0e0fd89a7abafbfdcd">Amuse::Core::Random::Random</a></div><div class="ttdeci">Random()</div><div class="ttdoc">デフォルトコンストラクタ</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_4f6666a8f2ab10bc970eb7559668f031.html">Runtime</a></li><li class="navelem"><a class="el" href="../../dir_b05c51a7dc61612d752a1d5ca497c54f.html">Core</a></li><li class="navelem"><a class="el" href="../../dir_2704b46b7ef0c98b3ce7738c20dc746e.html">Public</a></li><li class="navelem"><a class="el" href="../../dir_02338155ec8ce976dea76e6f650abf75.html">Amuse</a></li><li class="navelem"><a class="el" href="../../dir_a813c3653225bc50968bea57534cde90.html">Core</a></li><li class="navelem"><a class="el" href="../../dir_3f17769d426cb8d038b1723c723c23ca.html">Math</a></li><li class="navelem"><b>Random.h</b></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
+</body>
+</html>

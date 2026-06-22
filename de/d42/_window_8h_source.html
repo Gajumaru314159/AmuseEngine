@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: Runtime/Platform/Public/Amuse/Platform/Window.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('de/d42/_window_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Window.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//***********************************************************</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"></span><span class="comment">//***********************************************************</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;Amuse/Core/Core.h&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;Amuse/Core/Utility/Ref.h&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;Amuse/Platform/Type/SystemEventType.h&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;Amuse/Platform/Type/WindowDesc.h&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;Amuse/Platform/Type/WindowState.h&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">//===============================================================</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// クラス宣言</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">//===============================================================</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span>Amuse::Platform {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">using namespace </span>Amuse::Core;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html">   19</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html">Window</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d1/d85/class_amuse_1_1_core_1_1_ref_object.html">RefObject</a> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="comment">//===============================================================</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="comment">// 生成</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="comment">//===============================================================</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#afd41f81dbc8837ca824bc943038b953f">   27</a></span>        <span class="keyword">static</span> <a class="code hl_class" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref&lt;Window&gt;</a> <a class="code hl_function" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#afd41f81dbc8837ca824bc943038b953f">Create</a>(<span class="keyword">const</span> <a class="code hl_struct" href="../../d9/d54/struct_amuse_1_1_platform_1_1_window_desc.html">WindowDesc</a>&amp; desc);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="comment">//===============================================================</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="comment">// コンストラクタ / デストラクタ</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="comment">//===============================================================</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#a769c6fb067ada5d2c54d8957145be8ec">   35</a></span>        <span class="keyword">virtual</span> <a class="code hl_function" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#a769c6fb067ada5d2c54d8957145be8ec">~Window</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="comment">//===============================================================</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="comment">// ウィンドウ操作</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="comment">//===============================================================</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#a9daf3035b70cec6598918e56b4fb9d85">   43</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#a9daf3035b70cec6598918e56b4fb9d85">show</a>() = 0;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#ada626fa9caa17d8422d849a4d2e02e47">   47</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#ada626fa9caa17d8422d849a4d2e02e47">close</a>() = 0;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#ae3f5f3a507d54451288990b8d1aa1fd0">   51</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#ae3f5f3a507d54451288990b8d1aa1fd0">maximize</a>() = 0;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#a65eade5006ad528bdba8123370313c64">   55</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#a65eade5006ad528bdba8123370313c64">minimize</a>() = 0;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#a2ba80b88549797f777d577b2b95a8076">   59</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#a2ba80b88549797f777d577b2b95a8076">moveToCenter</a>() = 0;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#a24ac01384c24b8469d2e0ac3c3cae25e">   63</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#a24ac01384c24b8469d2e0ac3c3cae25e">restoreSize</a>() = 0;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="comment">//===============================================================</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="comment">// 情報取得</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="comment">//===============================================================</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#a57652077af223dd571041ea350d0c3ba">   74</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#a57652077af223dd571041ea350d0c3ba">isValid</a>()const noexcept = 0;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#a93f1efa634f0d93938a5adb0666441f9">   78</a></span>        virtual <span class="keywordtype">bool</span> <a class="code hl_function" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#a93f1efa634f0d93938a5adb0666441f9">isMainWindow</a>()const = 0;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#a317b56752d7aa007504649704b5efb3c">   82</a></span>        virtual <a class="code hl_class" href="../../d8/d40/class_amuse_1_1_core_1_1_bit_flags.html">WindowStates</a> <a class="code hl_function" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#a317b56752d7aa007504649704b5efb3c">getState</a>()const = 0;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#af034c7e76d2b2f3a8ed7cca6c14dd800">   90</a></span>        virtual <a class="code hl_struct" href="../../df/d62/struct_amuse_1_1_core_1_1_vec2.html">Vec2</a> <a class="code hl_function" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#af034c7e76d2b2f3a8ed7cca6c14dd800">getScreenPoint</a>(const <a class="code hl_struct" href="../../df/d62/struct_amuse_1_1_core_1_1_vec2.html">Vec2</a>&amp; clientPoint)const = 0;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#ade17085a011f4e6a6d78c695532809c8">   98</a></span>        virtual <a class="code hl_struct" href="../../df/d62/struct_amuse_1_1_core_1_1_vec2.html">Vec2</a> <a class="code hl_function" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#ade17085a011f4e6a6d78c695532809c8">getClientPoint</a>(const <a class="code hl_struct" href="../../df/d62/struct_amuse_1_1_core_1_1_vec2.html">Vec2</a>&amp; screenPoint)const = 0;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#ae3f3e3f555161671412093b11cda6edc">  102</a></span>        virtual <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#ae3f3e3f555161671412093b11cda6edc">setTitle</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> <a class="code hl_function" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#adf3cf10aebc20e702714123b44ff2ed9">getTitle</a>) = 0;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#adf3cf10aebc20e702714123b44ff2ed9">  106</a></span>        virtual const <a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a>&amp; <a class="code hl_function" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#adf3cf10aebc20e702714123b44ff2ed9">getTitle</a>()const = 0;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#af7e0a117346f326924732aa49dd4b27d">  110</a></span>        virtual <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#af7e0a117346f326924732aa49dd4b27d">setPosition</a>(<a class="code hl_struct" href="../../df/d62/struct_amuse_1_1_core_1_1_vec2.html">Vec2</a> position) = 0;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#a80ecc771a02acd94734fdb19fd0f0c4a">  114</a></span>        virtual <a class="code hl_struct" href="../../df/d62/struct_amuse_1_1_core_1_1_vec2.html">Vec2</a> <a class="code hl_function" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#a80ecc771a02acd94734fdb19fd0f0c4a">getPosition</a>()const noexcept = 0;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#a6bd43cc05133f644fb94a4dd3ec62e7a">  118</a></span>        virtual <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#a6bd43cc05133f644fb94a4dd3ec62e7a">setSize</a>(<a class="code hl_struct" href="../../df/d62/struct_amuse_1_1_core_1_1_vec2.html">Vec2</a> size) = 0;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#ae73c559824ff5a25b76acf6aedbc22ea">  122</a></span>        virtual <a class="code hl_struct" href="../../df/d62/struct_amuse_1_1_core_1_1_vec2.html">Vec2</a> <a class="code hl_function" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#ae73c559824ff5a25b76acf6aedbc22ea">getSize</a>()const = 0;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#a57164541c3d379783506df19f787f909">  126</a></span>        virtual WindowMode <a class="code hl_function" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#a57164541c3d379783506df19f787f909">getMode</a>()const = 0;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#a1f8e0e9ff38afb2f0ef2f0036cec572e">  130</a></span>        virtual <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#a1f8e0e9ff38afb2f0ef2f0036cec572e">setMode</a>(WindowMode mode) = 0;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#ad552b0ffb014060822e9a61a155a3148">  134</a></span>        virtual WindowStyle <a class="code hl_function" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#ad552b0ffb014060822e9a61a155a3148">getStyle</a>()const = 0;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#aa01c5a39f0d68c4c05d5686a9e949845">  138</a></span>        virtual <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#aa01c5a39f0d68c4c05d5686a9e949845">setStyle</a>(WindowStyle style) = 0;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#ae71956757eaf138b080593f84071b61d">  146</a></span>        virtual <span class="keywordtype">void</span>* <a class="code hl_function" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#ae71956757eaf138b080593f84071b61d">getHandle</a>()const = 0;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#a31ed246f6b8df5adfd528ce4522911b7">  150</a></span>        virtual <a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a> <a class="code hl_function" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#a31ed246f6b8df5adfd528ce4522911b7">getTextInput</a>() = 0;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        <span class="comment">//===============================================================</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        <span class="comment">// イベント</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        <span class="comment">//===============================================================</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#aaede9426ecf5fbb965c012836d10cdda">  158</a></span>        virtual <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#aaede9426ecf5fbb965c012836d10cdda">addEventListener</a>(WindowEventHandle&amp; handle, <a class="code hl_class" href="../../d3/d42/class_amuse_1_1_core_1_1_event_notifier.html">WindowEventNotifier</a>::delegate_type func) = 0;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    public:</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#af83d6b1bc581303082425c31abbb6442">  164</a></span>        static <a class="code hl_class" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt;<a class="code hl_class" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html">Window</a>&gt; <a class="code hl_function" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#af83d6b1bc581303082425c31abbb6442">Main</a>();</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    protected:</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno"><a class="line" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#adc560c92424b885247a4c8441b861aad">  170</a></span>        <a class="code hl_class" href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html">Window</a>() = default;</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    };</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>}</div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_bit_flags_html"><div class="ttname"><a href="../../d8/d40/class_amuse_1_1_core_1_1_bit_flags.html">Amuse::Core::BitFlags</a></div><div class="ttdoc">enum値をビットフラグとして扱うためのラップクラス</div><div class="ttdef"><b>Definition:</b> BitFlags.h:16</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_event_notifier_html"><div class="ttname"><a href="../../d3/d42/class_amuse_1_1_core_1_1_event_notifier.html">Amuse::Core::EventNotifier</a></div><div class="ttdoc">イベント通知クラス</div><div class="ttdef"><b>Definition:</b> EventNotifier.h:22</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_ref_html"><div class="ttname"><a href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Amuse::Core::Ref</a></div><div class="ttdoc">RefObject 用スマートポインタ</div><div class="ttdef"><b>Definition:</b> Ref.h:64</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_ref_object_html"><div class="ttname"><a href="../../d1/d85/class_amuse_1_1_core_1_1_ref_object.html">Amuse::Core::RefObject</a></div><div class="ttdoc">参照カウントオブジェクト</div><div class="ttdef"><b>Definition:</b> Ref.h:34</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_string_base_html"><div class="ttname"><a href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">Amuse::Core::StringBase&lt; Char &gt;</a></div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_string_view_base_html"><div class="ttname"><a href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">Amuse::Core::StringViewBase&lt; Char &gt;</a></div></div>
+<div class="ttc" id="aclass_amuse_1_1_platform_1_1_window_html"><div class="ttname"><a href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html">Amuse::Platform::Window</a></div><div class="ttdoc">ウィンドウ</div><div class="ttdef"><b>Definition:</b> Window.h:19</div></div>
+<div class="ttc" id="aclass_amuse_1_1_platform_1_1_window_html_a1f8e0e9ff38afb2f0ef2f0036cec572e"><div class="ttname"><a href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#a1f8e0e9ff38afb2f0ef2f0036cec572e">Amuse::Platform::Window::setMode</a></div><div class="ttdeci">virtual void setMode(WindowMode mode)=0</div><div class="ttdoc">ウィンドウ・モードを設定する</div></div>
+<div class="ttc" id="aclass_amuse_1_1_platform_1_1_window_html_a24ac01384c24b8469d2e0ac3c3cae25e"><div class="ttname"><a href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#a24ac01384c24b8469d2e0ac3c3cae25e">Amuse::Platform::Window::restoreSize</a></div><div class="ttdeci">virtual void restoreSize()=0</div><div class="ttdoc">ウィンドウサイズを元のサイズに戻す</div></div>
+<div class="ttc" id="aclass_amuse_1_1_platform_1_1_window_html_a2ba80b88549797f777d577b2b95a8076"><div class="ttname"><a href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#a2ba80b88549797f777d577b2b95a8076">Amuse::Platform::Window::moveToCenter</a></div><div class="ttdeci">virtual void moveToCenter()=0</div><div class="ttdoc">ウィンドウを現在のモニタの中央に移動する</div></div>
+<div class="ttc" id="aclass_amuse_1_1_platform_1_1_window_html_a317b56752d7aa007504649704b5efb3c"><div class="ttname"><a href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#a317b56752d7aa007504649704b5efb3c">Amuse::Platform::Window::getState</a></div><div class="ttdeci">virtual WindowStates getState() const =0</div><div class="ttdoc">ウィンドウの状態を取得する</div></div>
+<div class="ttc" id="aclass_amuse_1_1_platform_1_1_window_html_a31ed246f6b8df5adfd528ce4522911b7"><div class="ttname"><a href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#a31ed246f6b8df5adfd528ce4522911b7">Amuse::Platform::Window::getTextInput</a></div><div class="ttdeci">virtual String getTextInput()=0</div><div class="ttdoc">テキスト入力インターフェースを取得する</div></div>
+<div class="ttc" id="aclass_amuse_1_1_platform_1_1_window_html_a57164541c3d379783506df19f787f909"><div class="ttname"><a href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#a57164541c3d379783506df19f787f909">Amuse::Platform::Window::getMode</a></div><div class="ttdeci">virtual WindowMode getMode() const =0</div><div class="ttdoc">ウィンドウ・モードを取得する</div></div>
+<div class="ttc" id="aclass_amuse_1_1_platform_1_1_window_html_a57652077af223dd571041ea350d0c3ba"><div class="ttname"><a href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#a57652077af223dd571041ea350d0c3ba">Amuse::Platform::Window::isValid</a></div><div class="ttdeci">virtual bool isValid() const noexcept=0</div><div class="ttdoc">妥当な状態か</div></div>
+<div class="ttc" id="aclass_amuse_1_1_platform_1_1_window_html_a65eade5006ad528bdba8123370313c64"><div class="ttname"><a href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#a65eade5006ad528bdba8123370313c64">Amuse::Platform::Window::minimize</a></div><div class="ttdeci">virtual void minimize()=0</div><div class="ttdoc">ウィンドウを最小化する</div></div>
+<div class="ttc" id="aclass_amuse_1_1_platform_1_1_window_html_a6bd43cc05133f644fb94a4dd3ec62e7a"><div class="ttname"><a href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#a6bd43cc05133f644fb94a4dd3ec62e7a">Amuse::Platform::Window::setSize</a></div><div class="ttdeci">virtual void setSize(Vec2 size)=0</div><div class="ttdoc">ウィンドウのサイズを設定する</div></div>
+<div class="ttc" id="aclass_amuse_1_1_platform_1_1_window_html_a769c6fb067ada5d2c54d8957145be8ec"><div class="ttname"><a href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#a769c6fb067ada5d2c54d8957145be8ec">Amuse::Platform::Window::~Window</a></div><div class="ttdeci">virtual ~Window() override</div><div class="ttdoc">デストラクタ</div></div>
+<div class="ttc" id="aclass_amuse_1_1_platform_1_1_window_html_a80ecc771a02acd94734fdb19fd0f0c4a"><div class="ttname"><a href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#a80ecc771a02acd94734fdb19fd0f0c4a">Amuse::Platform::Window::getPosition</a></div><div class="ttdeci">virtual Vec2 getPosition() const noexcept=0</div><div class="ttdoc">ウィンドウの位置を取得する</div></div>
+<div class="ttc" id="aclass_amuse_1_1_platform_1_1_window_html_a93f1efa634f0d93938a5adb0666441f9"><div class="ttname"><a href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#a93f1efa634f0d93938a5adb0666441f9">Amuse::Platform::Window::isMainWindow</a></div><div class="ttdeci">virtual bool isMainWindow() const =0</div><div class="ttdoc">メインウィンドウか</div></div>
+<div class="ttc" id="aclass_amuse_1_1_platform_1_1_window_html_a9daf3035b70cec6598918e56b4fb9d85"><div class="ttname"><a href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#a9daf3035b70cec6598918e56b4fb9d85">Amuse::Platform::Window::show</a></div><div class="ttdeci">virtual void show()=0</div><div class="ttdoc">ウィンドウを表示する</div></div>
+<div class="ttc" id="aclass_amuse_1_1_platform_1_1_window_html_aa01c5a39f0d68c4c05d5686a9e949845"><div class="ttname"><a href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#aa01c5a39f0d68c4c05d5686a9e949845">Amuse::Platform::Window::setStyle</a></div><div class="ttdeci">virtual void setStyle(WindowStyle style)=0</div><div class="ttdoc">ウィンドウのスタイルを設定する</div></div>
+<div class="ttc" id="aclass_amuse_1_1_platform_1_1_window_html_aaede9426ecf5fbb965c012836d10cdda"><div class="ttname"><a href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#aaede9426ecf5fbb965c012836d10cdda">Amuse::Platform::Window::addEventListener</a></div><div class="ttdeci">virtual void addEventListener(WindowEventHandle &amp;handle, WindowEventNotifier::delegate_type func)=0</div><div class="ttdoc">ウィンドウ・イベントのリスナを追加する</div></div>
+<div class="ttc" id="aclass_amuse_1_1_platform_1_1_window_html_ad552b0ffb014060822e9a61a155a3148"><div class="ttname"><a href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#ad552b0ffb014060822e9a61a155a3148">Amuse::Platform::Window::getStyle</a></div><div class="ttdeci">virtual WindowStyle getStyle() const =0</div><div class="ttdoc">ウィンドウのスタイルを取得する</div></div>
+<div class="ttc" id="aclass_amuse_1_1_platform_1_1_window_html_ada626fa9caa17d8422d849a4d2e02e47"><div class="ttname"><a href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#ada626fa9caa17d8422d849a4d2e02e47">Amuse::Platform::Window::close</a></div><div class="ttdeci">virtual void close()=0</div><div class="ttdoc">ウィンドウを閉じる</div></div>
+<div class="ttc" id="aclass_amuse_1_1_platform_1_1_window_html_ade17085a011f4e6a6d78c695532809c8"><div class="ttname"><a href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#ade17085a011f4e6a6d78c695532809c8">Amuse::Platform::Window::getClientPoint</a></div><div class="ttdeci">virtual Vec2 getClientPoint(const Vec2 &amp;screenPoint) const =0</div><div class="ttdoc">クライアント座標を取得</div></div>
+<div class="ttc" id="aclass_amuse_1_1_platform_1_1_window_html_adf3cf10aebc20e702714123b44ff2ed9"><div class="ttname"><a href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#adf3cf10aebc20e702714123b44ff2ed9">Amuse::Platform::Window::getTitle</a></div><div class="ttdeci">virtual const String &amp; getTitle() const =0</div><div class="ttdoc">ウィンドウのタイトルを設定する</div></div>
+<div class="ttc" id="aclass_amuse_1_1_platform_1_1_window_html_ae3f3e3f555161671412093b11cda6edc"><div class="ttname"><a href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#ae3f3e3f555161671412093b11cda6edc">Amuse::Platform::Window::setTitle</a></div><div class="ttdeci">virtual void setTitle(StringView getTitle)=0</div><div class="ttdoc">ウィンドウのタイトルを設定する</div></div>
+<div class="ttc" id="aclass_amuse_1_1_platform_1_1_window_html_ae3f5f3a507d54451288990b8d1aa1fd0"><div class="ttname"><a href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#ae3f5f3a507d54451288990b8d1aa1fd0">Amuse::Platform::Window::maximize</a></div><div class="ttdeci">virtual void maximize()=0</div><div class="ttdoc">ウィンドウを最大化する</div></div>
+<div class="ttc" id="aclass_amuse_1_1_platform_1_1_window_html_ae71956757eaf138b080593f84071b61d"><div class="ttname"><a href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#ae71956757eaf138b080593f84071b61d">Amuse::Platform::Window::getHandle</a></div><div class="ttdeci">virtual void * getHandle() const =0</div><div class="ttdoc">ハンドル取得</div></div>
+<div class="ttc" id="aclass_amuse_1_1_platform_1_1_window_html_ae73c559824ff5a25b76acf6aedbc22ea"><div class="ttname"><a href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#ae73c559824ff5a25b76acf6aedbc22ea">Amuse::Platform::Window::getSize</a></div><div class="ttdeci">virtual Vec2 getSize() const =0</div><div class="ttdoc">ウィンドウサイズを取得</div></div>
+<div class="ttc" id="aclass_amuse_1_1_platform_1_1_window_html_af034c7e76d2b2f3a8ed7cca6c14dd800"><div class="ttname"><a href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#af034c7e76d2b2f3a8ed7cca6c14dd800">Amuse::Platform::Window::getScreenPoint</a></div><div class="ttdeci">virtual Vec2 getScreenPoint(const Vec2 &amp;clientPoint) const =0</div><div class="ttdoc">スクリーン座標を取得</div></div>
+<div class="ttc" id="aclass_amuse_1_1_platform_1_1_window_html_af7e0a117346f326924732aa49dd4b27d"><div class="ttname"><a href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#af7e0a117346f326924732aa49dd4b27d">Amuse::Platform::Window::setPosition</a></div><div class="ttdeci">virtual void setPosition(Vec2 position)=0</div><div class="ttdoc">ウィンドウの位置を設定する</div></div>
+<div class="ttc" id="aclass_amuse_1_1_platform_1_1_window_html_af83d6b1bc581303082425c31abbb6442"><div class="ttname"><a href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#af83d6b1bc581303082425c31abbb6442">Amuse::Platform::Window::Main</a></div><div class="ttdeci">static Ref&lt; Window &gt; Main()</div><div class="ttdoc">メインウィンドウを取得</div></div>
+<div class="ttc" id="aclass_amuse_1_1_platform_1_1_window_html_afd41f81dbc8837ca824bc943038b953f"><div class="ttname"><a href="../../dc/d63/class_amuse_1_1_platform_1_1_window.html#afd41f81dbc8837ca824bc943038b953f">Amuse::Platform::Window::Create</a></div><div class="ttdeci">static Ref&lt; Window &gt; Create(const WindowDesc &amp;desc)</div><div class="ttdoc">ウィンドウを生成</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_vec2_html"><div class="ttname"><a href="../../df/d62/struct_amuse_1_1_core_1_1_vec2.html">Amuse::Core::Vec2</a></div><div class="ttdoc">二次元ベクトル</div><div class="ttdef"><b>Definition:</b> Vector2.h:11</div></div>
+<div class="ttc" id="astruct_amuse_1_1_platform_1_1_window_desc_html"><div class="ttname"><a href="../../d9/d54/struct_amuse_1_1_platform_1_1_window_desc.html">Amuse::Platform::WindowDesc</a></div><div class="ttdoc">ウィンドウ生成設定</div><div class="ttdef"><b>Definition:</b> WindowDesc.h:19</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_4f6666a8f2ab10bc970eb7559668f031.html">Runtime</a></li><li class="navelem"><a class="el" href="../../dir_4ad02d030f19c448d614ceeaad009a55.html">Platform</a></li><li class="navelem"><a class="el" href="../../dir_e539bc958d1c3929baf43bb290746388.html">Public</a></li><li class="navelem"><a class="el" href="../../dir_82cabc53f0ac5a4a95476959b8f90a52.html">Amuse</a></li><li class="navelem"><a class="el" href="../../dir_d37cb17da97c9014486b077f46d97bf1.html">Platform</a></li><li class="navelem"><b>Window.h</b></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
+</body>
+</html>

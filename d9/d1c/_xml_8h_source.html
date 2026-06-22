@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: Runtime/Core/Public/Amuse/Core/File/Xml.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d9/d1c/_xml_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Xml.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//***********************************************************</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"></span><span class="comment">//***********************************************************</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;Amuse/Core/CorePrivate.h&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;Amuse/Core/Exception/Exception.h&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span>Amuse::Core {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="../../da/d0a/class_amuse_1_1_core_1_1_xml_exception.html">   12</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../da/d0a/class_amuse_1_1_core_1_1_xml_exception.html">XmlException</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d7/de5/class_amuse_1_1_core_1_1_exception.html">Exception</a> {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../da/d0a/class_amuse_1_1_core_1_1_xml_exception.html#a49baff161ce6f5cc143b63b53c6b2d85">   15</a></span>        <a class="code hl_function" href="../../da/d0a/class_amuse_1_1_core_1_1_xml_exception.html#a49baff161ce6f5cc143b63b53c6b2d85">XmlException</a>() : <a class="code hl_class" href="../../d7/de5/class_amuse_1_1_core_1_1_exception.html">Exception</a>(), m_line(-1), m_column(-1) {}</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="../../da/d0a/class_amuse_1_1_core_1_1_xml_exception.html#aa9d0f7eddb71c99f8b8b7a7ebd1c5c71">   18</a></span>        <a class="code hl_function" href="../../da/d0a/class_amuse_1_1_core_1_1_xml_exception.html#aa9d0f7eddb71c99f8b8b7a7ebd1c5c71">XmlException</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> message) : <a class="code hl_class" href="../../d7/de5/class_amuse_1_1_core_1_1_exception.html">Exception</a>(message), m_line(-1), m_column(-1) {}</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="../../da/d0a/class_amuse_1_1_core_1_1_xml_exception.html#a24d14846e03fe7c4216dac9ef8decb9b">   21</a></span>        <a class="code hl_function" href="../../da/d0a/class_amuse_1_1_core_1_1_xml_exception.html#a24d14846e03fe7c4216dac9ef8decb9b">XmlException</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> message, s32 <a class="code hl_function" href="../../da/d0a/class_amuse_1_1_core_1_1_xml_exception.html#a7ae1ae7866a4d65f75eb5d8f007f1129">line</a>, s32 <a class="code hl_function" href="../../da/d0a/class_amuse_1_1_core_1_1_xml_exception.html#afc75c1c1142aec07f244f92fd8168275">column</a>)</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            : <a class="code hl_class" href="../../d7/de5/class_amuse_1_1_core_1_1_exception.html">Exception</a>(message), m_line(<a class="code hl_function" href="../../da/d0a/class_amuse_1_1_core_1_1_xml_exception.html#a7ae1ae7866a4d65f75eb5d8f007f1129">line</a>), m_column(<a class="code hl_function" href="../../da/d0a/class_amuse_1_1_core_1_1_xml_exception.html#afc75c1c1142aec07f244f92fd8168275">column</a>) {}</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../da/d0a/class_amuse_1_1_core_1_1_xml_exception.html#a7ae1ae7866a4d65f75eb5d8f007f1129">   25</a></span>        s32 <a class="code hl_function" href="../../da/d0a/class_amuse_1_1_core_1_1_xml_exception.html#a7ae1ae7866a4d65f75eb5d8f007f1129">line</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_line; }</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../da/d0a/class_amuse_1_1_core_1_1_xml_exception.html#afc75c1c1142aec07f244f92fd8168275">   28</a></span>        s32 <a class="code hl_function" href="../../da/d0a/class_amuse_1_1_core_1_1_xml_exception.html#afc75c1c1142aec07f244f92fd8168275">column</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_column; }</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        s32 m_line;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        s32 m_column;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    };</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html">   42</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html">XmlNode</a> {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a792c1a036be124e673d64bf9357d55b6">   44</a></span>        <a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a> <a class="code hl_variable" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a792c1a036be124e673d64bf9357d55b6">name</a>;                            </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a072bde615bb78c7afe095e4a274c4251">   45</a></span>        Map&lt;String, String&gt; <a class="code hl_variable" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a072bde615bb78c7afe095e4a274c4251">attributes</a>;         </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a50f5bbee2fc4a16447dad7ee44c195a8">   46</a></span>        Vector&lt;XmlNode&gt; <a class="code hl_variable" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a50f5bbee2fc4a16447dad7ee44c195a8">children</a>;               </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#ad9a4af5642ad683c2a044c8670a907c5">   50</a></span>        <a class="code hl_function" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#ad9a4af5642ad683c2a044c8670a907c5">XmlNode</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a88e8e7d9c6aad3574e2886091c485bea">   54</a></span>        <span class="keyword">explicit</span> <a class="code hl_function" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a88e8e7d9c6aad3574e2886091c485bea">XmlNode</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> <a class="code hl_variable" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a792c1a036be124e673d64bf9357d55b6">name</a>);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#ae1b3fe60d530947c8406f58001940388">   59</a></span>        <a class="code hl_function" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#ae1b3fe60d530947c8406f58001940388">XmlNode</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> <a class="code hl_variable" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a792c1a036be124e673d64bf9357d55b6">name</a>, Map&lt;String, String&gt; <a class="code hl_variable" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a072bde615bb78c7afe095e4a274c4251">attributes</a>);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a6609d2edcbcbda7d94f7611b746e70d6">   65</a></span>        <a class="code hl_class" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html">XmlNode</a>&amp; <a class="code hl_function" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a6609d2edcbcbda7d94f7611b746e70d6">at</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> <a class="code hl_variable" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a792c1a036be124e673d64bf9357d55b6">name</a>);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a740815fbfc376784a783fa0dc1061340">   67</a></span>        <span class="keyword">const</span> <a class="code hl_class" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html">XmlNode</a>&amp; <a class="code hl_function" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a740815fbfc376784a783fa0dc1061340">at</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> <a class="code hl_variable" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a792c1a036be124e673d64bf9357d55b6">name</a>) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#acb2aa5e80701593e70c28e679b8ad3dd">   74</a></span>        <a class="code hl_class" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html">XmlNode</a>&amp; <a class="code hl_function" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#acb2aa5e80701593e70c28e679b8ad3dd">at</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> <a class="code hl_variable" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a792c1a036be124e673d64bf9357d55b6">name</a>, <span class="keywordtype">size_t</span> index);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a16bbd758840ce825998925af2c8a658a">   76</a></span>        <span class="keyword">const</span> <a class="code hl_class" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html">XmlNode</a>&amp; <a class="code hl_function" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a16bbd758840ce825998925af2c8a658a">at</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> <a class="code hl_variable" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a792c1a036be124e673d64bf9357d55b6">name</a>, <span class="keywordtype">size_t</span> index) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a3ac8806f0d7112d18296a0b2df650e20">   81</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a3ac8806f0d7112d18296a0b2df650e20">has</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> <a class="code hl_variable" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a792c1a036be124e673d64bf9357d55b6">name</a>) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a5f3fc9364cc277d7ebf5832dcc2a0e2e">   86</a></span>        <span class="keywordtype">size_t</span> <a class="code hl_function" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a5f3fc9364cc277d7ebf5832dcc2a0e2e">count</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> <a class="code hl_variable" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a792c1a036be124e673d64bf9357d55b6">name</a>) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a2f7d43d483eff50a2edba3eb13716f27">   91</a></span>        <a class="code hl_class" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html">XmlNode</a>&amp; <a class="code hl_function" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a2f7d43d483eff50a2edba3eb13716f27">add</a>(<a class="code hl_class" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html">XmlNode</a> child);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a46cb4af06c42ac9283f25bf2036cc4e1">   96</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a46cb4af06c42ac9283f25bf2036cc4e1">remove</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> <a class="code hl_variable" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a792c1a036be124e673d64bf9357d55b6">name</a>);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#aeaa713ec7ce7dc93c434289af9c75209">  102</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#aeaa713ec7ce7dc93c434289af9c75209">remove</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> <a class="code hl_variable" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a792c1a036be124e673d64bf9357d55b6">name</a>, <span class="keywordtype">size_t</span> index);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a093bb351290aca4d1b6ee1a5a3120a1e">  107</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a093bb351290aca4d1b6ee1a5a3120a1e">has_attr</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> key) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#af20c6daea0ecfacec452552e44c51f60">  112</a></span>        <a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a>&amp; <a class="code hl_function" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#af20c6daea0ecfacec452552e44c51f60">attr</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> key);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#ab1b965478cb51b8b41726e95f0d9406c">  117</a></span>        <a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a> <a class="code hl_function" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#ab1b965478cb51b8b41726e95f0d9406c">attr</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> key) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a1cdf66720e62e34ef26bccd8733a5c53">  123</a></span>        s32 <a class="code hl_function" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a1cdf66720e62e34ef26bccd8733a5c53">attr_int</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> key, s32 fallback) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a71cb48f9492c3cf34d8ea2492fa41c26">  128</a></span>        Optional&lt;s32&gt; <a class="code hl_function" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a71cb48f9492c3cf34d8ea2492fa41c26">attr_int</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> key) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#ab043e3c92a973b49bb088088bb9730b0">  134</a></span>        f32 <a class="code hl_function" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#ab043e3c92a973b49bb088088bb9730b0">attr_float</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> key, f32 fallback) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#affbf1096edb7d769968bc0fa2ec277c4">  139</a></span>        Optional&lt;f32&gt; <a class="code hl_function" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#affbf1096edb7d769968bc0fa2ec277c4">attr_float</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> key) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a3aec8a642c5329803431e09d88d8e968">  146</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a3aec8a642c5329803431e09d88d8e968">attr_bool</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> key, <span class="keywordtype">bool</span> fallback) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a5742bff79252535b6113e1c82f406f89">  151</a></span>        Optional&lt;bool&gt; <a class="code hl_function" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a5742bff79252535b6113e1c82f406f89">attr_bool</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> key) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#aa72038cc168839503d0e115fbecfe37f">  156</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#aa72038cc168839503d0e115fbecfe37f">remove_attr</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> key);</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#ae98a8a6c4ef86990e1d116dae028ebbb">  161</a></span>        <a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a> <a class="code hl_function" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#ae98a8a6c4ef86990e1d116dae028ebbb">string</a>(s32 indent = 0) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    };</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno"><a class="line" href="../../dd/d97/class_amuse_1_1_core_1_1_xml.html">  207</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../dd/d97/class_amuse_1_1_core_1_1_xml.html">Xml</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html">XmlNode</a> {</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno"><a class="line" href="../../dd/d97/class_amuse_1_1_core_1_1_xml.html#a9e676cc4198a9be2b34a15ef6bd86c56">  210</a></span>        <a class="code hl_function" href="../../dd/d97/class_amuse_1_1_core_1_1_xml.html#a9e676cc4198a9be2b34a15ef6bd86c56">Xml</a>();</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno"><a class="line" href="../../dd/d97/class_amuse_1_1_core_1_1_xml.html#a56b6c691c1bfdead0d5ac268b6f466f4">  214</a></span>        <span class="keyword">explicit</span> <a class="code hl_function" href="../../dd/d97/class_amuse_1_1_core_1_1_xml.html#a56b6c691c1bfdead0d5ac268b6f466f4">Xml</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> path);</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno"><a class="line" href="../../dd/d97/class_amuse_1_1_core_1_1_xml.html#ad01afa2d3349e213e5d26a14f8250747">  219</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../dd/d97/class_amuse_1_1_core_1_1_xml.html#ad01afa2d3349e213e5d26a14f8250747">load</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> path);</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span> </div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno"><a class="line" href="../../dd/d97/class_amuse_1_1_core_1_1_xml.html#a86323907b966eeaa3b8a1aa82fed8bc2">  224</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../dd/d97/class_amuse_1_1_core_1_1_xml.html#a86323907b966eeaa3b8a1aa82fed8bc2">save</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> path = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno"><a class="line" href="../../dd/d97/class_amuse_1_1_core_1_1_xml.html#aa17be7013d8ec56dd13932e96da1f80b">  229</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../dd/d97/class_amuse_1_1_core_1_1_xml.html#aa17be7013d8ec56dd13932e96da1f80b">parse</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> text);</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span> </div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno"><a class="line" href="../../dd/d97/class_amuse_1_1_core_1_1_xml.html#ae91e6d8c27395f437dac098dce5d3c77">  234</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../dd/d97/class_amuse_1_1_core_1_1_xml.html#ae91e6d8c27395f437dac098dce5d3c77">exists</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> path) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> </div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno"><a class="line" href="../../dd/d97/class_amuse_1_1_core_1_1_xml.html#a3d6495c24ad5721d19a49aeed4869c11">  239</a></span>        <a class="code hl_class" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html">XmlNode</a>* <a class="code hl_function" href="../../dd/d97/class_amuse_1_1_core_1_1_xml.html#a3d6495c24ad5721d19a49aeed4869c11">find</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> path);</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno"><a class="line" href="../../dd/d97/class_amuse_1_1_core_1_1_xml.html#aa736004eeb892921030f49c5e2cf3c15">  241</a></span>        <span class="keyword">const</span> <a class="code hl_class" href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html">XmlNode</a>* <a class="code hl_function" href="../../dd/d97/class_amuse_1_1_core_1_1_xml.html#aa736004eeb892921030f49c5e2cf3c15">find</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> path) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span> </div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>        <a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a> m_path;</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    };</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>}</div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_exception_html"><div class="ttname"><a href="../../d7/de5/class_amuse_1_1_core_1_1_exception.html">Amuse::Core::Exception</a></div><div class="ttdoc">例外クラス</div><div class="ttdef"><b>Definition:</b> Exception.h:16</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_string_base_html"><div class="ttname"><a href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">Amuse::Core::StringBase&lt; Char &gt;</a></div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_string_view_base_html"><div class="ttname"><a href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">Amuse::Core::StringViewBase&lt; Char &gt;</a></div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_xml_exception_html"><div class="ttname"><a href="../../da/d0a/class_amuse_1_1_core_1_1_xml_exception.html">Amuse::Core::XmlException</a></div><div class="ttdoc">XMLパースエラーに対する例外クラス</div><div class="ttdef"><b>Definition:</b> Xml.h:12</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_xml_exception_html_a24d14846e03fe7c4216dac9ef8decb9b"><div class="ttname"><a href="../../da/d0a/class_amuse_1_1_core_1_1_xml_exception.html#a24d14846e03fe7c4216dac9ef8decb9b">Amuse::Core::XmlException::XmlException</a></div><div class="ttdeci">XmlException(StringView message, s32 line, s32 column)</div><div class="ttdoc">メッセージと位置情報を指定して生成</div><div class="ttdef"><b>Definition:</b> Xml.h:21</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_xml_exception_html_a49baff161ce6f5cc143b63b53c6b2d85"><div class="ttname"><a href="../../da/d0a/class_amuse_1_1_core_1_1_xml_exception.html#a49baff161ce6f5cc143b63b53c6b2d85">Amuse::Core::XmlException::XmlException</a></div><div class="ttdeci">XmlException()</div><div class="ttdoc">デフォルトコンストラクタ</div><div class="ttdef"><b>Definition:</b> Xml.h:15</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_xml_exception_html_a7ae1ae7866a4d65f75eb5d8f007f1129"><div class="ttname"><a href="../../da/d0a/class_amuse_1_1_core_1_1_xml_exception.html#a7ae1ae7866a4d65f75eb5d8f007f1129">Amuse::Core::XmlException::line</a></div><div class="ttdeci">s32 line() const</div><div class="ttdoc">エラー発生行番号（パースエラー時）</div><div class="ttdef"><b>Definition:</b> Xml.h:25</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_xml_exception_html_aa9d0f7eddb71c99f8b8b7a7ebd1c5c71"><div class="ttname"><a href="../../da/d0a/class_amuse_1_1_core_1_1_xml_exception.html#aa9d0f7eddb71c99f8b8b7a7ebd1c5c71">Amuse::Core::XmlException::XmlException</a></div><div class="ttdeci">XmlException(StringView message)</div><div class="ttdoc">メッセージを指定して生成</div><div class="ttdef"><b>Definition:</b> Xml.h:18</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_xml_exception_html_afc75c1c1142aec07f244f92fd8168275"><div class="ttname"><a href="../../da/d0a/class_amuse_1_1_core_1_1_xml_exception.html#afc75c1c1142aec07f244f92fd8168275">Amuse::Core::XmlException::column</a></div><div class="ttdeci">s32 column() const</div><div class="ttdoc">エラー発生列番号（パースエラー時）</div><div class="ttdef"><b>Definition:</b> Xml.h:28</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_xml_html"><div class="ttname"><a href="../../dd/d97/class_amuse_1_1_core_1_1_xml.html">Amuse::Core::Xml</a></div><div class="ttdoc">XMLドキュメント全体を表現するクラス</div><div class="ttdef"><b>Definition:</b> Xml.h:207</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_xml_html_a3d6495c24ad5721d19a49aeed4869c11"><div class="ttname"><a href="../../dd/d97/class_amuse_1_1_core_1_1_xml.html#a3d6495c24ad5721d19a49aeed4869c11">Amuse::Core::Xml::find</a></div><div class="ttdeci">XmlNode * find(StringView path)</div><div class="ttdoc">XPathサブセットでノードを検索</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_xml_html_a56b6c691c1bfdead0d5ac268b6f466f4"><div class="ttname"><a href="../../dd/d97/class_amuse_1_1_core_1_1_xml.html#a56b6c691c1bfdead0d5ac268b6f466f4">Amuse::Core::Xml::Xml</a></div><div class="ttdeci">Xml(StringView path)</div><div class="ttdoc">ファイルからロードして生成</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_xml_html_a86323907b966eeaa3b8a1aa82fed8bc2"><div class="ttname"><a href="../../dd/d97/class_amuse_1_1_core_1_1_xml.html#a86323907b966eeaa3b8a1aa82fed8bc2">Amuse::Core::Xml::save</a></div><div class="ttdeci">bool save(StringView path=&quot;&quot;)</div><div class="ttdoc">ファイルに保存</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_xml_html_a9e676cc4198a9be2b34a15ef6bd86c56"><div class="ttname"><a href="../../dd/d97/class_amuse_1_1_core_1_1_xml.html#a9e676cc4198a9be2b34a15ef6bd86c56">Amuse::Core::Xml::Xml</a></div><div class="ttdeci">Xml()</div><div class="ttdoc">デフォルトコンストラクタ</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_xml_html_aa17be7013d8ec56dd13932e96da1f80b"><div class="ttname"><a href="../../dd/d97/class_amuse_1_1_core_1_1_xml.html#aa17be7013d8ec56dd13932e96da1f80b">Amuse::Core::Xml::parse</a></div><div class="ttdeci">bool parse(StringView text)</div><div class="ttdoc">文字列からXMLをパース</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_xml_html_aa736004eeb892921030f49c5e2cf3c15"><div class="ttname"><a href="../../dd/d97/class_amuse_1_1_core_1_1_xml.html#aa736004eeb892921030f49c5e2cf3c15">Amuse::Core::Xml::find</a></div><div class="ttdeci">const XmlNode * find(StringView path) const</div><div class="ttdoc">XPathサブセットでノードを検索</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_xml_html_ad01afa2d3349e213e5d26a14f8250747"><div class="ttname"><a href="../../dd/d97/class_amuse_1_1_core_1_1_xml.html#ad01afa2d3349e213e5d26a14f8250747">Amuse::Core::Xml::load</a></div><div class="ttdeci">bool load(StringView path)</div><div class="ttdoc">ファイルから読み込み</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_xml_html_ae91e6d8c27395f437dac098dce5d3c77"><div class="ttname"><a href="../../dd/d97/class_amuse_1_1_core_1_1_xml.html#ae91e6d8c27395f437dac098dce5d3c77">Amuse::Core::Xml::exists</a></div><div class="ttdeci">bool exists(StringView path) const</div><div class="ttdoc">XPathサブセットでノードが存在するか確認</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_xml_node_html"><div class="ttname"><a href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html">Amuse::Core::XmlNode</a></div><div class="ttdoc">XMLの要素を表現するクラス</div><div class="ttdef"><b>Definition:</b> Xml.h:42</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_xml_node_html_a072bde615bb78c7afe095e4a274c4251"><div class="ttname"><a href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a072bde615bb78c7afe095e4a274c4251">Amuse::Core::XmlNode::attributes</a></div><div class="ttdeci">Map&lt; String, String &gt; attributes</div><div class="ttdoc">属性のキーと値のペア</div><div class="ttdef"><b>Definition:</b> Xml.h:45</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_xml_node_html_a093bb351290aca4d1b6ee1a5a3120a1e"><div class="ttname"><a href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a093bb351290aca4d1b6ee1a5a3120a1e">Amuse::Core::XmlNode::has_attr</a></div><div class="ttdeci">bool has_attr(StringView key) const</div><div class="ttdoc">属性が存在するか確認</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_xml_node_html_a16bbd758840ce825998925af2c8a658a"><div class="ttname"><a href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a16bbd758840ce825998925af2c8a658a">Amuse::Core::XmlNode::at</a></div><div class="ttdeci">const XmlNode &amp; at(StringView name, size_t index) const</div><div class="ttdoc">名前とインデックスを指定して子ノードにアクセス</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_xml_node_html_a1cdf66720e62e34ef26bccd8733a5c53"><div class="ttname"><a href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a1cdf66720e62e34ef26bccd8733a5c53">Amuse::Core::XmlNode::attr_int</a></div><div class="ttdeci">s32 attr_int(StringView key, s32 fallback) const</div><div class="ttdoc">属性値を整数として取得</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_xml_node_html_a2f7d43d483eff50a2edba3eb13716f27"><div class="ttname"><a href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a2f7d43d483eff50a2edba3eb13716f27">Amuse::Core::XmlNode::add</a></div><div class="ttdeci">XmlNode &amp; add(XmlNode child)</div><div class="ttdoc">子ノードを追加</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_xml_node_html_a3ac8806f0d7112d18296a0b2df650e20"><div class="ttname"><a href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a3ac8806f0d7112d18296a0b2df650e20">Amuse::Core::XmlNode::has</a></div><div class="ttdeci">bool has(StringView name) const</div><div class="ttdoc">子ノードが存在するか確認</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_xml_node_html_a3aec8a642c5329803431e09d88d8e968"><div class="ttname"><a href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a3aec8a642c5329803431e09d88d8e968">Amuse::Core::XmlNode::attr_bool</a></div><div class="ttdeci">bool attr_bool(StringView key, bool fallback) const</div><div class="ttdoc">属性値を真偽値として取得</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_xml_node_html_a46cb4af06c42ac9283f25bf2036cc4e1"><div class="ttname"><a href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a46cb4af06c42ac9283f25bf2036cc4e1">Amuse::Core::XmlNode::remove</a></div><div class="ttdeci">bool remove(StringView name)</div><div class="ttdoc">子ノードを削除</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_xml_node_html_a50f5bbee2fc4a16447dad7ee44c195a8"><div class="ttname"><a href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a50f5bbee2fc4a16447dad7ee44c195a8">Amuse::Core::XmlNode::children</a></div><div class="ttdeci">Vector&lt; XmlNode &gt; children</div><div class="ttdoc">子ノードのリスト</div><div class="ttdef"><b>Definition:</b> Xml.h:46</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_xml_node_html_a5742bff79252535b6113e1c82f406f89"><div class="ttname"><a href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a5742bff79252535b6113e1c82f406f89">Amuse::Core::XmlNode::attr_bool</a></div><div class="ttdeci">Optional&lt; bool &gt; attr_bool(StringView key) const</div><div class="ttdoc">属性値を真偽値として取得（Optional版）</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_xml_node_html_a5f3fc9364cc277d7ebf5832dcc2a0e2e"><div class="ttname"><a href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a5f3fc9364cc277d7ebf5832dcc2a0e2e">Amuse::Core::XmlNode::count</a></div><div class="ttdeci">size_t count(StringView name) const</div><div class="ttdoc">指定名の子ノード数を取得</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_xml_node_html_a6609d2edcbcbda7d94f7611b746e70d6"><div class="ttname"><a href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a6609d2edcbcbda7d94f7611b746e70d6">Amuse::Core::XmlNode::at</a></div><div class="ttdeci">XmlNode &amp; at(StringView name)</div><div class="ttdoc">名前を指定して子ノードにアクセス</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_xml_node_html_a71cb48f9492c3cf34d8ea2492fa41c26"><div class="ttname"><a href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a71cb48f9492c3cf34d8ea2492fa41c26">Amuse::Core::XmlNode::attr_int</a></div><div class="ttdeci">Optional&lt; s32 &gt; attr_int(StringView key) const</div><div class="ttdoc">属性値を整数として取得（Optional版）</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_xml_node_html_a740815fbfc376784a783fa0dc1061340"><div class="ttname"><a href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a740815fbfc376784a783fa0dc1061340">Amuse::Core::XmlNode::at</a></div><div class="ttdeci">const XmlNode &amp; at(StringView name) const</div><div class="ttdoc">名前を指定して子ノードにアクセス</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_xml_node_html_a792c1a036be124e673d64bf9357d55b6"><div class="ttname"><a href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a792c1a036be124e673d64bf9357d55b6">Amuse::Core::XmlNode::name</a></div><div class="ttdeci">String name</div><div class="ttdoc">要素名</div><div class="ttdef"><b>Definition:</b> Xml.h:44</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_xml_node_html_a88e8e7d9c6aad3574e2886091c485bea"><div class="ttname"><a href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a88e8e7d9c6aad3574e2886091c485bea">Amuse::Core::XmlNode::XmlNode</a></div><div class="ttdeci">XmlNode(StringView name)</div><div class="ttdoc">要素名を指定して生成</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_xml_node_html_aa72038cc168839503d0e115fbecfe37f"><div class="ttname"><a href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#aa72038cc168839503d0e115fbecfe37f">Amuse::Core::XmlNode::remove_attr</a></div><div class="ttdeci">bool remove_attr(StringView key)</div><div class="ttdoc">属性を削除</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_xml_node_html_ab043e3c92a973b49bb088088bb9730b0"><div class="ttname"><a href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#ab043e3c92a973b49bb088088bb9730b0">Amuse::Core::XmlNode::attr_float</a></div><div class="ttdeci">f32 attr_float(StringView key, f32 fallback) const</div><div class="ttdoc">属性値を浮動小数点数として取得</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_xml_node_html_ab1b965478cb51b8b41726e95f0d9406c"><div class="ttname"><a href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#ab1b965478cb51b8b41726e95f0d9406c">Amuse::Core::XmlNode::attr</a></div><div class="ttdeci">String attr(StringView key) const</div><div class="ttdoc">属性値を取得（存在しない場合は空文字列）</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_xml_node_html_acb2aa5e80701593e70c28e679b8ad3dd"><div class="ttname"><a href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#acb2aa5e80701593e70c28e679b8ad3dd">Amuse::Core::XmlNode::at</a></div><div class="ttdeci">XmlNode &amp; at(StringView name, size_t index)</div><div class="ttdoc">名前とインデックスを指定して子ノードにアクセス</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_xml_node_html_ad9a4af5642ad683c2a044c8670a907c5"><div class="ttname"><a href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#ad9a4af5642ad683c2a044c8670a907c5">Amuse::Core::XmlNode::XmlNode</a></div><div class="ttdeci">XmlNode()=default</div><div class="ttdoc">デフォルトコンストラクタ</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_xml_node_html_ae1b3fe60d530947c8406f58001940388"><div class="ttname"><a href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#ae1b3fe60d530947c8406f58001940388">Amuse::Core::XmlNode::XmlNode</a></div><div class="ttdeci">XmlNode(StringView name, Map&lt; String, String &gt; attributes)</div><div class="ttdoc">要素名と属性を指定して生成</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_xml_node_html_ae98a8a6c4ef86990e1d116dae028ebbb"><div class="ttname"><a href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#ae98a8a6c4ef86990e1d116dae028ebbb">Amuse::Core::XmlNode::string</a></div><div class="ttdeci">String string(s32 indent=0) const</div><div class="ttdoc">XMLノードを整形済み文字列に変換</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_xml_node_html_aeaa713ec7ce7dc93c434289af9c75209"><div class="ttname"><a href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#aeaa713ec7ce7dc93c434289af9c75209">Amuse::Core::XmlNode::remove</a></div><div class="ttdeci">bool remove(StringView name, size_t index)</div><div class="ttdoc">指定名・インデックスの子ノードを削除</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_xml_node_html_af20c6daea0ecfacec452552e44c51f60"><div class="ttname"><a href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#af20c6daea0ecfacec452552e44c51f60">Amuse::Core::XmlNode::attr</a></div><div class="ttdeci">String &amp; attr(StringView key)</div><div class="ttdoc">属性値への参照を取得（存在しない場合は作成）</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_xml_node_html_affbf1096edb7d769968bc0fa2ec277c4"><div class="ttname"><a href="../../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#affbf1096edb7d769968bc0fa2ec277c4">Amuse::Core::XmlNode::attr_float</a></div><div class="ttdeci">Optional&lt; f32 &gt; attr_float(StringView key) const</div><div class="ttdoc">属性値を浮動小数点数として取得（Optional版）</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_4f6666a8f2ab10bc970eb7559668f031.html">Runtime</a></li><li class="navelem"><a class="el" href="../../dir_b05c51a7dc61612d752a1d5ca497c54f.html">Core</a></li><li class="navelem"><a class="el" href="../../dir_2704b46b7ef0c98b3ce7738c20dc746e.html">Public</a></li><li class="navelem"><a class="el" href="../../dir_02338155ec8ce976dea76e6f650abf75.html">Amuse</a></li><li class="navelem"><a class="el" href="../../dir_a813c3653225bc50968bea57534cde90.html">Core</a></li><li class="navelem"><a class="el" href="../../dir_2268414a1efdfe5478272d5f64b967b4.html">File</a></li><li class="navelem"><b>Xml.h</b></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
+</body>
+</html>

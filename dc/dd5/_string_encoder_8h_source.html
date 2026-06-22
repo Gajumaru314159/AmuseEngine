@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: Runtime/Core/Public/Amuse/Core/String/StringEncoder.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('dc/dd5/_string_encoder_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">StringEncoder.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//***********************************************************</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"></span><span class="comment">//***********************************************************</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;Amuse/Core/String/String.h&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span>Amuse::Core {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html">   19</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html">StringEncoder</a> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="comment">//===============================================================</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="comment">// char</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="comment">//===============================================================</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#aea71f92235ba5134daa49f265a03e991">   27</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#aea71f92235ba5134daa49f265a03e991">Encode</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringViewBase&lt;char&gt;</a> src, <a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">StringBase&lt;char&gt;</a>&amp; dest);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#a73eec2d2a6a9d670e71022433e5b3dc5">   31</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#a73eec2d2a6a9d670e71022433e5b3dc5">Encode</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringViewBase&lt;char&gt;</a> src, <a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">StringBase&lt;char16_t&gt;</a>&amp; dest);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#a4f29656ecf4c5cc40161501b889e49ea">   35</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#a4f29656ecf4c5cc40161501b889e49ea">Encode</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringViewBase&lt;char&gt;</a> src, <a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">StringBase&lt;char32_t&gt;</a>&amp; dest);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#ad646a1410317a494169b7c020ecdc865">   39</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#ad646a1410317a494169b7c020ecdc865">Encode</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringViewBase&lt;char&gt;</a> src, <a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">StringBase&lt;wchar_t&gt;</a>&amp; dest);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="comment">//===============================================================</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="comment">// char16_t</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="comment">//===============================================================</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#ad6bcf2a3fa3121bb032bbc491ef75819">   48</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#ad6bcf2a3fa3121bb032bbc491ef75819">Encode</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringViewBase&lt;char16_t&gt;</a> src, <a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">StringBase&lt;char&gt;</a>&amp; dest);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#a82fb8b7473e90dcdf926a1646c5be9dd">   52</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#a82fb8b7473e90dcdf926a1646c5be9dd">Encode</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringViewBase&lt;char16_t&gt;</a> src, <a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">StringBase&lt;char16_t&gt;</a>&amp; dest);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#aa48d481647e39f389dd1dda49b6bcf18">   56</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#aa48d481647e39f389dd1dda49b6bcf18">Encode</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringViewBase&lt;char16_t&gt;</a> src, <a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">StringBase&lt;char32_t&gt;</a>&amp; dest);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#a115c81ea008330c1aeab5a2a4e240cba">   60</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#a115c81ea008330c1aeab5a2a4e240cba">Encode</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringViewBase&lt;char16_t&gt;</a> src, <a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">StringBase&lt;wchar_t&gt;</a>&amp; dest);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="comment">//===============================================================</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="comment">// char32_t</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="comment">//===============================================================</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#acb49d5b7ea6e1a782b438ff63979ff82">   69</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#acb49d5b7ea6e1a782b438ff63979ff82">Encode</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringViewBase&lt;char32_t&gt;</a> src, <a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">StringBase&lt;char&gt;</a>&amp; dest);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#ab159460e3f143f05faac6d282a457aae">   73</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#ab159460e3f143f05faac6d282a457aae">Encode</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringViewBase&lt;char32_t&gt;</a> src, <a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">StringBase&lt;char16_t&gt;</a>&amp; dest);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#aed878033a1b00c5f5d2a9c9c9e67def9">   77</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#aed878033a1b00c5f5d2a9c9c9e67def9">Encode</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringViewBase&lt;char32_t&gt;</a> src, <a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">StringBase&lt;char32_t&gt;</a>&amp; dest);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#a7d19b42d25fec66527970b60a7ea9574">   81</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#a7d19b42d25fec66527970b60a7ea9574">Encode</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringViewBase&lt;char32_t&gt;</a> src, <a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">StringBase&lt;wchar_t&gt;</a>&amp; dest);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="comment">//===============================================================</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="comment">// wchar_t</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="comment">//===============================================================</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#a84e5b2cb28710241ab3f4c27ed6c4dc0">   90</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#a84e5b2cb28710241ab3f4c27ed6c4dc0">Encode</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringViewBase&lt;wchar_t&gt;</a> src, <a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">StringBase&lt;char&gt;</a>&amp; dest);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#a1ea7d80cb7e285c7f64df2d125e521e5">   94</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#a1ea7d80cb7e285c7f64df2d125e521e5">Encode</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringViewBase&lt;wchar_t&gt;</a> src, <a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">StringBase&lt;char16_t&gt;</a>&amp; dest);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#a7550ae38987690bb7c57bd0ccef18e4d">   98</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#a7550ae38987690bb7c57bd0ccef18e4d">Encode</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringViewBase&lt;wchar_t&gt;</a> src, <a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">StringBase&lt;char32_t&gt;</a>&amp; dest);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#a4e7d47ddf9151ccf716d9493eec719ca">  102</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#a4e7d47ddf9151ccf716d9493eec719ca">Encode</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringViewBase&lt;wchar_t&gt;</a> src, <a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">StringBase&lt;wchar_t&gt;</a>&amp; dest);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    };</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>}</div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_string_base_html"><div class="ttname"><a href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">Amuse::Core::StringBase</a></div><div class="ttdoc">文字列基底</div><div class="ttdef"><b>Definition:</b> String.h:17</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_string_encoder_html"><div class="ttname"><a href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html">Amuse::Core::StringEncoder</a></div><div class="ttdoc">文字列変換</div><div class="ttdef"><b>Definition:</b> StringEncoder.h:19</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_string_encoder_html_a115c81ea008330c1aeab5a2a4e240cba"><div class="ttname"><a href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#a115c81ea008330c1aeab5a2a4e240cba">Amuse::Core::StringEncoder::Encode</a></div><div class="ttdeci">static bool Encode(StringViewBase&lt; char16_t &gt; src, StringBase&lt; wchar_t &gt; &amp;dest)</div><div class="ttdoc">char16_t から wchar_t に変換する</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_string_encoder_html_a1ea7d80cb7e285c7f64df2d125e521e5"><div class="ttname"><a href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#a1ea7d80cb7e285c7f64df2d125e521e5">Amuse::Core::StringEncoder::Encode</a></div><div class="ttdeci">static bool Encode(StringViewBase&lt; wchar_t &gt; src, StringBase&lt; char16_t &gt; &amp;dest)</div><div class="ttdoc">wchar_t から char16_t に変換する</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_string_encoder_html_a4e7d47ddf9151ccf716d9493eec719ca"><div class="ttname"><a href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#a4e7d47ddf9151ccf716d9493eec719ca">Amuse::Core::StringEncoder::Encode</a></div><div class="ttdeci">static bool Encode(StringViewBase&lt; wchar_t &gt; src, StringBase&lt; wchar_t &gt; &amp;dest)</div><div class="ttdoc">wchar_t から wchar_t に変換する</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_string_encoder_html_a4f29656ecf4c5cc40161501b889e49ea"><div class="ttname"><a href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#a4f29656ecf4c5cc40161501b889e49ea">Amuse::Core::StringEncoder::Encode</a></div><div class="ttdeci">static bool Encode(StringViewBase&lt; char &gt; src, StringBase&lt; char32_t &gt; &amp;dest)</div><div class="ttdoc">char から char32_t に変換する</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_string_encoder_html_a73eec2d2a6a9d670e71022433e5b3dc5"><div class="ttname"><a href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#a73eec2d2a6a9d670e71022433e5b3dc5">Amuse::Core::StringEncoder::Encode</a></div><div class="ttdeci">static bool Encode(StringViewBase&lt; char &gt; src, StringBase&lt; char16_t &gt; &amp;dest)</div><div class="ttdoc">char から char16_t に変換する</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_string_encoder_html_a7550ae38987690bb7c57bd0ccef18e4d"><div class="ttname"><a href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#a7550ae38987690bb7c57bd0ccef18e4d">Amuse::Core::StringEncoder::Encode</a></div><div class="ttdeci">static bool Encode(StringViewBase&lt; wchar_t &gt; src, StringBase&lt; char32_t &gt; &amp;dest)</div><div class="ttdoc">wchar_t から char32_t に変換する</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_string_encoder_html_a7d19b42d25fec66527970b60a7ea9574"><div class="ttname"><a href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#a7d19b42d25fec66527970b60a7ea9574">Amuse::Core::StringEncoder::Encode</a></div><div class="ttdeci">static bool Encode(StringViewBase&lt; char32_t &gt; src, StringBase&lt; wchar_t &gt; &amp;dest)</div><div class="ttdoc">char32_t から wchar_t に変換する</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_string_encoder_html_a82fb8b7473e90dcdf926a1646c5be9dd"><div class="ttname"><a href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#a82fb8b7473e90dcdf926a1646c5be9dd">Amuse::Core::StringEncoder::Encode</a></div><div class="ttdeci">static bool Encode(StringViewBase&lt; char16_t &gt; src, StringBase&lt; char16_t &gt; &amp;dest)</div><div class="ttdoc">char16_t から char16_t に変換する</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_string_encoder_html_a84e5b2cb28710241ab3f4c27ed6c4dc0"><div class="ttname"><a href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#a84e5b2cb28710241ab3f4c27ed6c4dc0">Amuse::Core::StringEncoder::Encode</a></div><div class="ttdeci">static bool Encode(StringViewBase&lt; wchar_t &gt; src, StringBase&lt; char &gt; &amp;dest)</div><div class="ttdoc">wchar_t から char に変換する</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_string_encoder_html_aa48d481647e39f389dd1dda49b6bcf18"><div class="ttname"><a href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#aa48d481647e39f389dd1dda49b6bcf18">Amuse::Core::StringEncoder::Encode</a></div><div class="ttdeci">static bool Encode(StringViewBase&lt; char16_t &gt; src, StringBase&lt; char32_t &gt; &amp;dest)</div><div class="ttdoc">char16_t から char32_t に変換する</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_string_encoder_html_ab159460e3f143f05faac6d282a457aae"><div class="ttname"><a href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#ab159460e3f143f05faac6d282a457aae">Amuse::Core::StringEncoder::Encode</a></div><div class="ttdeci">static bool Encode(StringViewBase&lt; char32_t &gt; src, StringBase&lt; char16_t &gt; &amp;dest)</div><div class="ttdoc">char32_t から char16_t に変換する</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_string_encoder_html_acb49d5b7ea6e1a782b438ff63979ff82"><div class="ttname"><a href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#acb49d5b7ea6e1a782b438ff63979ff82">Amuse::Core::StringEncoder::Encode</a></div><div class="ttdeci">static bool Encode(StringViewBase&lt; char32_t &gt; src, StringBase&lt; char &gt; &amp;dest)</div><div class="ttdoc">char32_t から char に変換する</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_string_encoder_html_ad646a1410317a494169b7c020ecdc865"><div class="ttname"><a href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#ad646a1410317a494169b7c020ecdc865">Amuse::Core::StringEncoder::Encode</a></div><div class="ttdeci">static bool Encode(StringViewBase&lt; char &gt; src, StringBase&lt; wchar_t &gt; &amp;dest)</div><div class="ttdoc">char から wchar_t に変換する</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_string_encoder_html_ad6bcf2a3fa3121bb032bbc491ef75819"><div class="ttname"><a href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#ad6bcf2a3fa3121bb032bbc491ef75819">Amuse::Core::StringEncoder::Encode</a></div><div class="ttdeci">static bool Encode(StringViewBase&lt; char16_t &gt; src, StringBase&lt; char &gt; &amp;dest)</div><div class="ttdoc">char16_t から char に変換する</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_string_encoder_html_aea71f92235ba5134daa49f265a03e991"><div class="ttname"><a href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#aea71f92235ba5134daa49f265a03e991">Amuse::Core::StringEncoder::Encode</a></div><div class="ttdeci">static bool Encode(StringViewBase&lt; char &gt; src, StringBase&lt; char &gt; &amp;dest)</div><div class="ttdoc">char から char に変換する</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_string_encoder_html_aed878033a1b00c5f5d2a9c9c9e67def9"><div class="ttname"><a href="../../dc/d28/class_amuse_1_1_core_1_1_string_encoder.html#aed878033a1b00c5f5d2a9c9c9e67def9">Amuse::Core::StringEncoder::Encode</a></div><div class="ttdeci">static bool Encode(StringViewBase&lt; char32_t &gt; src, StringBase&lt; char32_t &gt; &amp;dest)</div><div class="ttdoc">char32_t から char32_t に変換する</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_string_view_base_html"><div class="ttname"><a href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">Amuse::Core::StringViewBase</a></div><div class="ttdoc">文字列ビュー基底</div><div class="ttdef"><b>Definition:</b> StringView.h:14</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_4f6666a8f2ab10bc970eb7559668f031.html">Runtime</a></li><li class="navelem"><a class="el" href="../../dir_b05c51a7dc61612d752a1d5ca497c54f.html">Core</a></li><li class="navelem"><a class="el" href="../../dir_2704b46b7ef0c98b3ce7738c20dc746e.html">Public</a></li><li class="navelem"><a class="el" href="../../dir_02338155ec8ce976dea76e6f650abf75.html">Amuse</a></li><li class="navelem"><a class="el" href="../../dir_a813c3653225bc50968bea57534cde90.html">Core</a></li><li class="navelem"><a class="el" href="../../dir_ae9a4b74b92b690b52ab3bde7110bef6.html">String</a></li><li class="navelem"><b>StringEncoder.h</b></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
+</body>
+</html>

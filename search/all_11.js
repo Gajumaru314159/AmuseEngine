@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['quality_0',['quality',['../dd/d46/struct_amuse_1_1_r_h_i_1_1_sample_desc.html#aa3c41bd3155836a25842d82605b047be',1,'Amuse::RHI::SampleDesc']]],
+  ['quat_1',['Quat',['../d3/da5/struct_amuse_1_1_core_1_1_quat.html',1,'Amuse::Core::Quat'],['../d3/da5/struct_amuse_1_1_core_1_1_quat.html#a7912b88060b342c8130921eccba7eb2e',1,'Amuse::Core::Quat::Quat() noexcept'],['../d3/da5/struct_amuse_1_1_core_1_1_quat.html#a4f4dea25a212f637253782f85e465aee',1,'Amuse::Core::Quat::Quat(f32 x, f32 y, f32 z, f32 w) noexcept'],['../d3/da5/struct_amuse_1_1_core_1_1_quat.html#aba3397e61048d18f0683a3c92bcdc511',1,'Amuse::Core::Quat::Quat(f32 x, f32 y, f32 z)'],['../d3/da5/struct_amuse_1_1_core_1_1_quat.html#a958132d6b224aa31e0a7c2668cf9102d',1,'Amuse::Core::Quat::Quat(const Rot &amp;rotation)'],['../d3/da5/struct_amuse_1_1_core_1_1_quat.html#a020f8a0acbc9f79367bdbfe5ab48c26f',1,'Amuse::Core::Quat::Quat(Vec3 axis, f32 angle)']]],
+  ['queuewait_2',['queueWait',['../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#afe67ce28d31457cc3136ec077100cc9e',1,'Amuse::RHI::DirectX12Device::queueWait()'],['../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#a645595373939bce2f23b3d7470e65926',1,'Amuse::RHI::Device::queueWait()']]]
+];

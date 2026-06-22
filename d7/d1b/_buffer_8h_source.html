@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: Runtime/RHI/Public/Amuse/RHI/Buffer.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d7/d1b/_buffer_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Buffer.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//***********************************************************</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"></span><span class="comment">//***********************************************************</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;Amuse/Core/Core.h&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;Amuse/RHI/GraphicObject.h&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;Amuse/RHI/Types/BufferDesc.h&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;Amuse/RHI/Types/BindlessHandle.h&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span>Amuse::RHI {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">using namespace </span>Amuse::Core;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">struct </span>DrawParam;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">struct </span>DrawIndexedParam;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">struct </span>DispatchParam;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html">   19</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html">Buffer</a> :<span class="keyword">public</span> <a class="code hl_class" href="../../d2/d2f/class_amuse_1_1_r_h_i_1_1_graphic_object.html">GraphicObject</a> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#ac76fad426fd2ab14cd9aad8896a2c0e5">   22</a></span>        <span class="keyword">using </span><a class="code hl_typedef" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#ac76fad426fd2ab14cd9aad8896a2c0e5">CopyFunc</a> = Func&lt;void(<span class="keywordtype">void</span>*)&gt;;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#a4f91925a57c7c91d1a36b90dafc0acf4">   26</a></span>        <span class="keyword">static</span> <a class="code hl_class" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref&lt;Buffer&gt;</a> <a class="code hl_function" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#a4f91925a57c7c91d1a36b90dafc0acf4">Create</a>(<span class="keyword">const</span> <a class="code hl_struct" href="../../d7/dab/struct_amuse_1_1_r_h_i_1_1_buffer_desc.html">BufferDesc</a>&amp; desc);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#acd210ebaa8c1f96c2d01c79b68ae6617">   29</a></span>        <span class="keyword">static</span> <a class="code hl_class" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref&lt;Buffer&gt;</a> <a class="code hl_function" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#acd210ebaa8c1f96c2d01c79b68ae6617">Create</a>(<span class="keyword">const</span> <a class="code hl_struct" href="../../d7/dab/struct_amuse_1_1_r_h_i_1_1_buffer_desc.html">BufferDesc</a>&amp; desc, <a class="code hl_class" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html">BlobView</a> blob);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#a1bbe08526afb8ef3a6052aea5b9a50eb">   32</a></span>        <span class="keyword">static</span> <a class="code hl_class" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref&lt;Buffer&gt;</a> <a class="code hl_function" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#a1bbe08526afb8ef3a6052aea5b9a50eb">Create</a>(<span class="keyword">const</span> <a class="code hl_struct" href="../../d7/d1b/struct_amuse_1_1_r_h_i_1_1_buffer_view_desc.html">BufferViewDesc</a>&amp; desc);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#aed252721e38714ebd7a80863c245bb1d">   37</a></span>        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code hl_struct" href="../../d7/dab/struct_amuse_1_1_r_h_i_1_1_buffer_desc.html">BufferDesc</a>&amp; <a class="code hl_function" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#aed252721e38714ebd7a80863c245bb1d">getDesc</a>()<span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#ab89a6854c2a0c91e658445e34a1aa12f">   40</a></span>        <span class="keyword">virtual</span> <a class="code hl_struct" href="../../d4/d5b/struct_amuse_1_1_r_h_i_1_1_bindless_handle.html">BindlessHandle</a> <a class="code hl_function" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#ab89a6854c2a0c91e658445e34a1aa12f">getHandle</a>()<span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#ad1a38505fc69f1fff1a8533e1b609df5">   48</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#ad1a38505fc69f1fff1a8533e1b609df5">update</a>(<span class="keywordtype">size_t</span> size, <span class="keyword">const</span> <span class="keywordtype">void</span>* pData, <span class="keywordtype">size_t</span> offset = 0) = 0;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#a2b9f85353d7365a99ea933130003d123">   53</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#a2b9f85353d7365a99ea933130003d123">update</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#ac76fad426fd2ab14cd9aad8896a2c0e5">CopyFunc</a>&amp; func) = 0;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#aac429fd7bf03e9089116bac7dbb5778d">   58</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#aac429fd7bf03e9089116bac7dbb5778d">updateDirect</a>(<span class="keywordtype">size_t</span> size, <span class="keyword">const</span> <span class="keywordtype">void</span>* pData, <span class="keywordtype">size_t</span> offset = 0) = 0;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#a09ecc4fd26a6f84032e42403d5fbd462">   62</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#a09ecc4fd26a6f84032e42403d5fbd462">updateDirect</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#ac76fad426fd2ab14cd9aad8896a2c0e5">CopyFunc</a>&amp; func) = 0;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#afdb2a95f489d013f7c122d882ed6f211">   66</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#afdb2a95f489d013f7c122d882ed6f211">updateDirect</a>(<span class="keyword">const</span> T&amp; value, <span class="keywordtype">size_t</span> offset) {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            <a class="code hl_function" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#aac429fd7bf03e9089116bac7dbb5778d">updateDirect</a>(<span class="keyword">sizeof</span>(T), &amp;value, offset);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#a1b64e3e2571f0bf845f2addb2ccca2ca">   72</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span>* <a class="code hl_function" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#a1b64e3e2571f0bf845f2addb2ccca2ca">map</a>(CpuAccess access) = 0;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#a4662052fc829b8d2bdb62911e0973cb9">   75</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#a4662052fc829b8d2bdb62911e0973cb9">unmap</a>() = 0;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#a52a80c4a2155c1995e3cbc04a210412e">   80</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#a52a80c4a2155c1995e3cbc04a210412e">writeDrawParam</a>(<span class="keyword">const</span> <a class="code hl_struct" href="../../d7/d99/struct_amuse_1_1_r_h_i_1_1_draw_param.html">DrawParam</a>&amp; param, u64 offset = 0);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#a29bbf9ad4dac34e26ef75b5117c6d39f">   83</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#a29bbf9ad4dac34e26ef75b5117c6d39f">writeDrawParams</a>(Span&lt;const DrawParam&gt; params, u64 offset = 0) = 0;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#a1558e2b1f716d4ec52b12641d544ed31">   86</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#a1558e2b1f716d4ec52b12641d544ed31">writeDrawIndexedParam</a>(<span class="keyword">const</span> <a class="code hl_struct" href="../../d4/dc3/struct_amuse_1_1_r_h_i_1_1_draw_indexed_param.html">DrawIndexedParam</a>&amp; param, u64 offset = 0);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#a013a331763dd65786c7e48d107f6a979">   89</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#a013a331763dd65786c7e48d107f6a979">writeDrawIndexedParams</a>(Span&lt;const DrawIndexedParam&gt; params, u64 offset = 0) = 0;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#ae658fee50d2df97ee4192b83a07b8d7d">   92</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#ae658fee50d2df97ee4192b83a07b8d7d">writeDispatchParam</a>(<span class="keyword">const</span> <a class="code hl_struct" href="../../d4/d76/struct_amuse_1_1_r_h_i_1_1_dispatch_param.html">DispatchParam</a>&amp; param, u64 offset = 0);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#a2834c75f289102626f1ba4e491aa0ea5">   95</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#a2834c75f289102626f1ba4e491aa0ea5">writeDispatchParams</a>(Span&lt;const DispatchParam&gt; params, u64 offset = 0) = 0;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    };</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>}</div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_view_html"><div class="ttname"><a href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html">Amuse::Core::BlobView</a></div><div class="ttdoc">バイナリデータビュー(Binary Large Object View)</div><div class="ttdef"><b>Definition:</b> BlobView.h:13</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_ref_html"><div class="ttname"><a href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Amuse::Core::Ref</a></div><div class="ttdoc">RefObject 用スマートポインタ</div><div class="ttdef"><b>Definition:</b> Ref.h:64</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_buffer_html"><div class="ttname"><a href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html">Amuse::RHI::Buffer</a></div><div class="ttdoc">バッファ</div><div class="ttdef"><b>Definition:</b> Buffer.h:19</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_buffer_html_a013a331763dd65786c7e48d107f6a979"><div class="ttname"><a href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#a013a331763dd65786c7e48d107f6a979">Amuse::RHI::Buffer::writeDrawIndexedParams</a></div><div class="ttdeci">virtual void writeDrawIndexedParams(Span&lt; const DrawIndexedParam &gt; params, u64 offset=0)=0</div><div class="ttdoc">drawIndexedIndirect() 用の引数を一括で書き込む</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_buffer_html_a09ecc4fd26a6f84032e42403d5fbd462"><div class="ttname"><a href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#a09ecc4fd26a6f84032e42403d5fbd462">Amuse::RHI::Buffer::updateDirect</a></div><div class="ttdeci">virtual void updateDirect(const CopyFunc &amp;func)=0</div><div class="ttdoc">バッファを更新(直接更新)</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_buffer_html_a1558e2b1f716d4ec52b12641d544ed31"><div class="ttname"><a href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#a1558e2b1f716d4ec52b12641d544ed31">Amuse::RHI::Buffer::writeDrawIndexedParam</a></div><div class="ttdeci">virtual void writeDrawIndexedParam(const DrawIndexedParam &amp;param, u64 offset=0)</div><div class="ttdoc">drawIndexedIndirect() 用の引数を書き込む</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_buffer_html_a1b64e3e2571f0bf845f2addb2ccca2ca"><div class="ttname"><a href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#a1b64e3e2571f0bf845f2addb2ccca2ca">Amuse::RHI::Buffer::map</a></div><div class="ttdeci">virtual void * map(CpuAccess access)=0</div><div class="ttdoc">CPUからバッファをマップ</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_buffer_html_a1bbe08526afb8ef3a6052aea5b9a50eb"><div class="ttname"><a href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#a1bbe08526afb8ef3a6052aea5b9a50eb">Amuse::RHI::Buffer::Create</a></div><div class="ttdeci">static Ref&lt; Buffer &gt; Create(const BufferViewDesc &amp;desc)</div><div class="ttdoc">ベースのバッファを指定して異なるビューを持つバッファを作成</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_buffer_html_a2834c75f289102626f1ba4e491aa0ea5"><div class="ttname"><a href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#a2834c75f289102626f1ba4e491aa0ea5">Amuse::RHI::Buffer::writeDispatchParams</a></div><div class="ttdeci">virtual void writeDispatchParams(Span&lt; const DispatchParam &gt; params, u64 offset=0)=0</div><div class="ttdoc">dispatchIndirect() 用の引数を一括で書き込む</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_buffer_html_a29bbf9ad4dac34e26ef75b5117c6d39f"><div class="ttname"><a href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#a29bbf9ad4dac34e26ef75b5117c6d39f">Amuse::RHI::Buffer::writeDrawParams</a></div><div class="ttdeci">virtual void writeDrawParams(Span&lt; const DrawParam &gt; params, u64 offset=0)=0</div><div class="ttdoc">drawIndirect() 用の引数を一括で書き込む</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_buffer_html_a2b9f85353d7365a99ea933130003d123"><div class="ttname"><a href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#a2b9f85353d7365a99ea933130003d123">Amuse::RHI::Buffer::update</a></div><div class="ttdeci">virtual void update(const CopyFunc &amp;func)=0</div><div class="ttdoc">バッファを更新</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_buffer_html_a4662052fc829b8d2bdb62911e0973cb9"><div class="ttname"><a href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#a4662052fc829b8d2bdb62911e0973cb9">Amuse::RHI::Buffer::unmap</a></div><div class="ttdeci">virtual void unmap()=0</div><div class="ttdoc">CPUからのバッファマップを解除</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_buffer_html_a4f91925a57c7c91d1a36b90dafc0acf4"><div class="ttname"><a href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#a4f91925a57c7c91d1a36b90dafc0acf4">Amuse::RHI::Buffer::Create</a></div><div class="ttdeci">static Ref&lt; Buffer &gt; Create(const BufferDesc &amp;desc)</div><div class="ttdoc">空のバッファを作成</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_buffer_html_a52a80c4a2155c1995e3cbc04a210412e"><div class="ttname"><a href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#a52a80c4a2155c1995e3cbc04a210412e">Amuse::RHI::Buffer::writeDrawParam</a></div><div class="ttdeci">virtual void writeDrawParam(const DrawParam &amp;param, u64 offset=0)</div><div class="ttdoc">drawIndirect() 用の引数を書き込む</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_buffer_html_aac429fd7bf03e9089116bac7dbb5778d"><div class="ttname"><a href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#aac429fd7bf03e9089116bac7dbb5778d">Amuse::RHI::Buffer::updateDirect</a></div><div class="ttdeci">virtual void updateDirect(size_t size, const void *pData, size_t offset=0)=0</div><div class="ttdoc">バッファを更新(直接更新)</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_buffer_html_ab89a6854c2a0c91e658445e34a1aa12f"><div class="ttname"><a href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#ab89a6854c2a0c91e658445e34a1aa12f">Amuse::RHI::Buffer::getHandle</a></div><div class="ttdeci">virtual BindlessHandle getHandle() const =0</div><div class="ttdoc">BindlessHandleを取得</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_buffer_html_ac76fad426fd2ab14cd9aad8896a2c0e5"><div class="ttname"><a href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#ac76fad426fd2ab14cd9aad8896a2c0e5">Amuse::RHI::Buffer::CopyFunc</a></div><div class="ttdeci">Func&lt; void(void *)&gt; CopyFunc</div><div class="ttdoc">バッファコピー関数型</div><div class="ttdef"><b>Definition:</b> Buffer.h:22</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_buffer_html_acd210ebaa8c1f96c2d01c79b68ae6617"><div class="ttname"><a href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#acd210ebaa8c1f96c2d01c79b68ae6617">Amuse::RHI::Buffer::Create</a></div><div class="ttdeci">static Ref&lt; Buffer &gt; Create(const BufferDesc &amp;desc, BlobView blob)</div><div class="ttdoc">初期データを指定してバッファを作成</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_buffer_html_ad1a38505fc69f1fff1a8533e1b609df5"><div class="ttname"><a href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#ad1a38505fc69f1fff1a8533e1b609df5">Amuse::RHI::Buffer::update</a></div><div class="ttdeci">virtual void update(size_t size, const void *pData, size_t offset=0)=0</div><div class="ttdoc">バッファを更新</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_buffer_html_ae658fee50d2df97ee4192b83a07b8d7d"><div class="ttname"><a href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#ae658fee50d2df97ee4192b83a07b8d7d">Amuse::RHI::Buffer::writeDispatchParam</a></div><div class="ttdeci">virtual void writeDispatchParam(const DispatchParam &amp;param, u64 offset=0)</div><div class="ttdoc">dispatchIndirect() 用の引数を書き込む</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_buffer_html_aed252721e38714ebd7a80863c245bb1d"><div class="ttname"><a href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#aed252721e38714ebd7a80863c245bb1d">Amuse::RHI::Buffer::getDesc</a></div><div class="ttdeci">virtual const BufferDesc &amp; getDesc() const =0</div><div class="ttdoc">定義を取得</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_buffer_html_afdb2a95f489d013f7c122d882ed6f211"><div class="ttname"><a href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#afdb2a95f489d013f7c122d882ed6f211">Amuse::RHI::Buffer::updateDirect</a></div><div class="ttdeci">void updateDirect(const T &amp;value, size_t offset)</div><div class="ttdoc">バッファを更新(直接更新)</div><div class="ttdef"><b>Definition:</b> Buffer.h:66</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_graphic_object_html"><div class="ttname"><a href="../../d2/d2f/class_amuse_1_1_r_h_i_1_1_graphic_object.html">Amuse::RHI::GraphicObject</a></div><div class="ttdoc">グラフィック・オブジェクト</div><div class="ttdef"><b>Definition:</b> GraphicObject.h:21</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_bindless_handle_html"><div class="ttname"><a href="../../d4/d5b/struct_amuse_1_1_r_h_i_1_1_bindless_handle.html">Amuse::RHI::BindlessHandle</a></div><div class="ttdoc">バインドレスリソースハンドル</div><div class="ttdef"><b>Definition:</b> BindlessHandle.h:13</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_buffer_desc_html"><div class="ttname"><a href="../../d7/dab/struct_amuse_1_1_r_h_i_1_1_buffer_desc.html">Amuse::RHI::BufferDesc</a></div><div class="ttdoc">バッファ定義</div><div class="ttdef"><b>Definition:</b> BufferDesc.h:84</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_buffer_view_desc_html"><div class="ttname"><a href="../../d7/d1b/struct_amuse_1_1_r_h_i_1_1_buffer_view_desc.html">Amuse::RHI::BufferViewDesc</a></div><div class="ttdoc">既存バッファのビュー生成情報</div><div class="ttdef"><b>Definition:</b> BufferDesc.h:75</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_dispatch_param_html"><div class="ttname"><a href="../../d4/d76/struct_amuse_1_1_r_h_i_1_1_dispatch_param.html">Amuse::RHI::DispatchParam</a></div><div class="ttdoc">CommandList::dispatch() で指定するパラメータ</div><div class="ttdef"><b>Definition:</b> CommandParam.h:47</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_draw_indexed_param_html"><div class="ttname"><a href="../../d4/dc3/struct_amuse_1_1_r_h_i_1_1_draw_indexed_param.html">Amuse::RHI::DrawIndexedParam</a></div><div class="ttdoc">CommandList::drawIndexed() で指定するパラメータ</div><div class="ttdef"><b>Definition:</b> CommandParam.h:38</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_draw_param_html"><div class="ttname"><a href="../../d7/d99/struct_amuse_1_1_r_h_i_1_1_draw_param.html">Amuse::RHI::DrawParam</a></div><div class="ttdoc">CommandList::draw() で指定するパラメータ</div><div class="ttdef"><b>Definition:</b> CommandParam.h:29</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_4f6666a8f2ab10bc970eb7559668f031.html">Runtime</a></li><li class="navelem"><a class="el" href="../../dir_ed0dd943941685375ac149ef30703e8f.html">RHI</a></li><li class="navelem"><a class="el" href="../../dir_80d0fa31a6e3bc7da61af1a1dfa2506f.html">Public</a></li><li class="navelem"><a class="el" href="../../dir_6330f9b43f61349a45429b5fd54fec05.html">Amuse</a></li><li class="navelem"><a class="el" href="../../dir_0830f243940360ab60fcd1783d0d86f9.html">RHI</a></li><li class="navelem"><b>Buffer.h</b></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
+</body>
+</html>

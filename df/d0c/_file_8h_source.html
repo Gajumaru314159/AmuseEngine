@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: Runtime/Core/Public/Amuse/Core/File/File.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('df/d0c/_file_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">File.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//***********************************************************</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"></span><span class="comment">//***********************************************************</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;Amuse/Core/CorePrivate.h&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;Amuse/Core/File/Stream.h&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;Amuse/Core/Misc/Blob.h&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span>Amuse::Core {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html">   13</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html">File</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../df/dc8/class_amuse_1_1_core_1_1_stream.html">Stream</a> {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#a42fb37994ce50ab9e40deae66c4197c2">   17</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#a42fb37994ce50ab9e40deae66c4197c2">Exists</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> path);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#ae23c7762c736401529c90a110e9c5d6f">   20</a></span>        <span class="keyword">static</span> <span class="keywordtype">size_t</span> <a class="code hl_function" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#ae23c7762c736401529c90a110e9c5d6f">Size</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> path);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#aabc3371744fce9a47e0966e9cf6d90b0">   27</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#aabc3371744fce9a47e0966e9cf6d90b0">Copy</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> src, <a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> dst, <a class="code hl_class" href="../../d8/d40/class_amuse_1_1_core_1_1_bit_flags.html">FileCopyOptions</a> options = FileCopyOption::None);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#a0f69c1f079aa93eaa5c8b2df5ef39774">   30</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#a0f69c1f079aa93eaa5c8b2df5ef39774">Delete</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> path);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#adbdd9721e5ce9fea2861658b91340486">   33</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#adbdd9721e5ce9fea2861658b91340486">Move</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> from, <a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> to);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#a23d5be93624af89a5933f1ef98abf39a">   36</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#a23d5be93624af89a5933f1ef98abf39a">Rename</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> from,<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> to);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#a36727c054c5985001cf431fa939c8c96">   39</a></span>        <span class="keyword">static</span> Optional&lt;String&gt; <a class="code hl_function" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#a36727c054c5985001cf431fa939c8c96">ReadAllText</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> path);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#af9a6a353cfe22adaada5f937f53bc729">   42</a></span>        <span class="keyword">static</span> Optional&lt;Blob&gt; <a class="code hl_function" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#af9a6a353cfe22adaada5f937f53bc729">ReadAllByte</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> path);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#a364d72442be110b3411b4b32c12ae2aa">   47</a></span>        <a class="code hl_function" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#a364d72442be110b3411b4b32c12ae2aa">File</a>();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#a2689d11dbb5a2c282a29fa68225852c5">   53</a></span>        <span class="keyword">explicit</span> <a class="code hl_function" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#a2689d11dbb5a2c282a29fa68225852c5">File</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> path, FileOpenMode mode = FileOpenMode::Read);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#ac4f5b9eddddf4cf309852d93b334d5da">   56</a></span>        <a class="code hl_function" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#ac4f5b9eddddf4cf309852d93b334d5da">~File</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#a6ce914f1c4abca60137954c7e0a191b3">   59</a></span>        <span class="keyword">operator</span> bool()<span class="keyword">const</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#ad41007d25a15a2dc4a29360c8dc6aaec">   62</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#ad41007d25a15a2dc4a29360c8dc6aaec">canRead</a>()<span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#a283a4d8fb26226dd45f8d579d5cf2b04">   65</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#a283a4d8fb26226dd45f8d579d5cf2b04">canWrite</a>()<span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#a968355f99f274041fc261173a769baa5">   68</a></span>        <span class="keywordtype">size_t</span> <a class="code hl_function" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#a968355f99f274041fc261173a769baa5">size</a>()<span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#ad8da82dc69cfaa4e85f81f86962d472c">   71</a></span>        <span class="keywordtype">size_t</span> <a class="code hl_function" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#ad8da82dc69cfaa4e85f81f86962d472c">position</a>()<span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#a7444e9eb5b445f575025e7437e4b54e0">   78</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#a7444e9eb5b445f575025e7437e4b54e0">read</a>(<span class="keywordtype">void</span>* buffer, <span class="keywordtype">size_t</span> byteCount) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#a037b430bc8db5961e023e318b104af02">   85</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#a037b430bc8db5961e023e318b104af02">write</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* buffer, <span class="keywordtype">size_t</span> byteCount) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#ad4932b4766eec4d8596c30e196ab27c7">   92</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#ad4932b4766eec4d8596c30e196ab27c7">seek</a>(offset_t offset, SeekOrigin origin) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#aef78d9962b3425aee0c249b772990f43">   97</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#aef78d9962b3425aee0c249b772990f43">flush</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#a750ff98beae5f8b6d2265de37fc66e10">  100</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#a750ff98beae5f8b6d2265de37fc66e10">close</a>();</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        UPtr&lt;class FileImpl&gt; m_impl;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    };</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>}</div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_bit_flags_html"><div class="ttname"><a href="../../d8/d40/class_amuse_1_1_core_1_1_bit_flags.html">Amuse::Core::BitFlags</a></div><div class="ttdoc">enum値をビットフラグとして扱うためのラップクラス</div><div class="ttdef"><b>Definition:</b> BitFlags.h:16</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_file_html"><div class="ttname"><a href="../../da/d8e/class_amuse_1_1_core_1_1_file.html">Amuse::Core::File</a></div><div class="ttdoc">ファイル</div><div class="ttdef"><b>Definition:</b> File.h:13</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_file_html_a037b430bc8db5961e023e318b104af02"><div class="ttname"><a href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#a037b430bc8db5961e023e318b104af02">Amuse::Core::File::write</a></div><div class="ttdeci">bool write(const void *buffer, size_t byteCount) override</div><div class="ttdoc">書き込み</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_file_html_a0f69c1f079aa93eaa5c8b2df5ef39774"><div class="ttname"><a href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#a0f69c1f079aa93eaa5c8b2df5ef39774">Amuse::Core::File::Delete</a></div><div class="ttdeci">static bool Delete(StringView path)</div><div class="ttdoc">ファイルを削除する</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_file_html_a23d5be93624af89a5933f1ef98abf39a"><div class="ttname"><a href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#a23d5be93624af89a5933f1ef98abf39a">Amuse::Core::File::Rename</a></div><div class="ttdeci">static bool Rename(StringView from, StringView to)</div><div class="ttdoc">ファイル名を変更する</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_file_html_a2689d11dbb5a2c282a29fa68225852c5"><div class="ttname"><a href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#a2689d11dbb5a2c282a29fa68225852c5">Amuse::Core::File::File</a></div><div class="ttdeci">File(StringView path, FileOpenMode mode=FileOpenMode::Read)</div><div class="ttdoc">ファイルを開く</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_file_html_a283a4d8fb26226dd45f8d579d5cf2b04"><div class="ttname"><a href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#a283a4d8fb26226dd45f8d579d5cf2b04">Amuse::Core::File::canWrite</a></div><div class="ttdeci">bool canWrite() const override</div><div class="ttdoc">書き込み可能か</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_file_html_a364d72442be110b3411b4b32c12ae2aa"><div class="ttname"><a href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#a364d72442be110b3411b4b32c12ae2aa">Amuse::Core::File::File</a></div><div class="ttdeci">File()</div><div class="ttdoc">デフォルトコンストラクタ</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_file_html_a36727c054c5985001cf431fa939c8c96"><div class="ttname"><a href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#a36727c054c5985001cf431fa939c8c96">Amuse::Core::File::ReadAllText</a></div><div class="ttdeci">static Optional&lt; String &gt; ReadAllText(StringView path)</div><div class="ttdoc">ファイルを文字列として全て読み込む</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_file_html_a42fb37994ce50ab9e40deae66c4197c2"><div class="ttname"><a href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#a42fb37994ce50ab9e40deae66c4197c2">Amuse::Core::File::Exists</a></div><div class="ttdeci">static bool Exists(StringView path)</div><div class="ttdoc">ファイルが存在するか</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_file_html_a7444e9eb5b445f575025e7437e4b54e0"><div class="ttname"><a href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#a7444e9eb5b445f575025e7437e4b54e0">Amuse::Core::File::read</a></div><div class="ttdeci">bool read(void *buffer, size_t byteCount) override</div><div class="ttdoc">読み込み</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_file_html_a750ff98beae5f8b6d2265de37fc66e10"><div class="ttname"><a href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#a750ff98beae5f8b6d2265de37fc66e10">Amuse::Core::File::close</a></div><div class="ttdeci">void close()</div><div class="ttdoc">ファイルをクローズして無効なハンドルにする</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_file_html_a968355f99f274041fc261173a769baa5"><div class="ttname"><a href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#a968355f99f274041fc261173a769baa5">Amuse::Core::File::size</a></div><div class="ttdeci">size_t size() const override</div><div class="ttdoc">サイズ取得</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_file_html_aabc3371744fce9a47e0966e9cf6d90b0"><div class="ttname"><a href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#aabc3371744fce9a47e0966e9cf6d90b0">Amuse::Core::File::Copy</a></div><div class="ttdeci">static bool Copy(StringView src, StringView dst, FileCopyOptions options=FileCopyOption::None)</div><div class="ttdoc">ファイルをコピーする</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_file_html_ac4f5b9eddddf4cf309852d93b334d5da"><div class="ttname"><a href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#ac4f5b9eddddf4cf309852d93b334d5da">Amuse::Core::File::~File</a></div><div class="ttdeci">~File() override</div><div class="ttdoc">デストラクタ</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_file_html_ad41007d25a15a2dc4a29360c8dc6aaec"><div class="ttname"><a href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#ad41007d25a15a2dc4a29360c8dc6aaec">Amuse::Core::File::canRead</a></div><div class="ttdeci">bool canRead() const override</div><div class="ttdoc">読み込み可能か</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_file_html_ad4932b4766eec4d8596c30e196ab27c7"><div class="ttname"><a href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#ad4932b4766eec4d8596c30e196ab27c7">Amuse::Core::File::seek</a></div><div class="ttdeci">bool seek(offset_t offset, SeekOrigin origin) override</div><div class="ttdoc">シーク</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_file_html_ad8da82dc69cfaa4e85f81f86962d472c"><div class="ttname"><a href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#ad8da82dc69cfaa4e85f81f86962d472c">Amuse::Core::File::position</a></div><div class="ttdeci">size_t position() const override</div><div class="ttdoc">シーク位置取得</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_file_html_adbdd9721e5ce9fea2861658b91340486"><div class="ttname"><a href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#adbdd9721e5ce9fea2861658b91340486">Amuse::Core::File::Move</a></div><div class="ttdeci">static bool Move(StringView from, StringView to)</div><div class="ttdoc">ファイルを移動する</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_file_html_ae23c7762c736401529c90a110e9c5d6f"><div class="ttname"><a href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#ae23c7762c736401529c90a110e9c5d6f">Amuse::Core::File::Size</a></div><div class="ttdeci">static size_t Size(StringView path)</div><div class="ttdoc">ファイルサイズを取得</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_file_html_aef78d9962b3425aee0c249b772990f43"><div class="ttname"><a href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#aef78d9962b3425aee0c249b772990f43">Amuse::Core::File::flush</a></div><div class="ttdeci">void flush() override</div><div class="ttdoc">バッファのフラッシュ</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_file_html_af9a6a353cfe22adaada5f937f53bc729"><div class="ttname"><a href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#af9a6a353cfe22adaada5f937f53bc729">Amuse::Core::File::ReadAllByte</a></div><div class="ttdeci">static Optional&lt; Blob &gt; ReadAllByte(StringView path)</div><div class="ttdoc">ファイルをバイナリデータとして全て読み込む</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_stream_html"><div class="ttname"><a href="../../df/dc8/class_amuse_1_1_core_1_1_stream.html">Amuse::Core::Stream</a></div><div class="ttdoc">ストリーム基底型</div><div class="ttdef"><b>Definition:</b> Stream.h:21</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_string_view_base_html"><div class="ttname"><a href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">Amuse::Core::StringViewBase&lt; Char &gt;</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_4f6666a8f2ab10bc970eb7559668f031.html">Runtime</a></li><li class="navelem"><a class="el" href="../../dir_b05c51a7dc61612d752a1d5ca497c54f.html">Core</a></li><li class="navelem"><a class="el" href="../../dir_2704b46b7ef0c98b3ce7738c20dc746e.html">Public</a></li><li class="navelem"><a class="el" href="../../dir_02338155ec8ce976dea76e6f650abf75.html">Amuse</a></li><li class="navelem"><a class="el" href="../../dir_a813c3653225bc50968bea57534cde90.html">Core</a></li><li class="navelem"><a class="el" href="../../dir_2268414a1efdfe5478272d5f64b967b4.html">File</a></li><li class="navelem"><b>File.h</b></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
+</body>
+</html>

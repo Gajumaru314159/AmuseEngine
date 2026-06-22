@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['xml_0',['Xml',['../dd/d97/class_amuse_1_1_core_1_1_xml.html#a9e676cc4198a9be2b34a15ef6bd86c56',1,'Amuse::Core::Xml::Xml()'],['../dd/d97/class_amuse_1_1_core_1_1_xml.html#a56b6c691c1bfdead0d5ac268b6f466f4',1,'Amuse::Core::Xml::Xml(StringView path)']]],
+  ['xmlexception_1',['XmlException',['../da/d0a/class_amuse_1_1_core_1_1_xml_exception.html#a49baff161ce6f5cc143b63b53c6b2d85',1,'Amuse::Core::XmlException::XmlException()'],['../da/d0a/class_amuse_1_1_core_1_1_xml_exception.html#aa9d0f7eddb71c99f8b8b7a7ebd1c5c71',1,'Amuse::Core::XmlException::XmlException(StringView message)'],['../da/d0a/class_amuse_1_1_core_1_1_xml_exception.html#a24d14846e03fe7c4216dac9ef8decb9b',1,'Amuse::Core::XmlException::XmlException(StringView message, s32 line, s32 column)']]],
+  ['xmlnode_2',['XmlNode',['../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#ad9a4af5642ad683c2a044c8670a907c5',1,'Amuse::Core::XmlNode::XmlNode()=default'],['../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a88e8e7d9c6aad3574e2886091c485bea',1,'Amuse::Core::XmlNode::XmlNode(StringView name)'],['../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#ae1b3fe60d530947c8406f58001940388',1,'Amuse::Core::XmlNode::XmlNode(StringView name, Map&lt; String, String &gt; attributes)']]]
+];

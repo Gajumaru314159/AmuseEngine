@@ -1,0 +1,546 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: Amuse::Core::MiniDelegate&lt; R(Args...)&gt; クラステンプレート</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-attribs">静的公開変数類</a> &#124;
+<a href="../../de/daa/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">Amuse::Core::MiniDelegate&lt; R(Args...)&gt; クラステンプレート</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Ownerのみをキャプチャできる軽量デリゲート  
+ <a href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d6/d21/_mini_delegate_8h_source.html">MiniDelegate.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:a58e72c014183b3105ce49c0372a03519"><td class="memItemLeft" align="right" valign="top"><a id="a58e72c014183b3105ce49c0372a03519" name="a58e72c014183b3105ce49c0372a03519"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>StaticFuncPtr</b> = R(*)(Args...)</td></tr>
+<tr class="memdesc:a58e72c014183b3105ce49c0372a03519"><td class="mdescLeft">&#160;</td><td class="mdescRight">StaticFuncPtr 型のエイリアス。 <br /></td></tr>
+<tr class="separator:a58e72c014183b3105ce49c0372a03519"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:aab5514f01da029e3c0621d96e610e54c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#aab5514f01da029e3c0621d96e610e54c">MiniDelegate</a> ()=default</td></tr>
+<tr class="memdesc:aab5514f01da029e3c0621d96e610e54c"><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトコンストラクタ  <br /></td></tr>
+<tr class="separator:aab5514f01da029e3c0621d96e610e54c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa225b27e5a3b440fa57b8b9b166a6b0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#afa225b27e5a3b440fa57b8b9b166a6b0">MiniDelegate</a> (<a class="el" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#a58e72c014183b3105ce49c0372a03519">StaticFuncPtr</a> func)</td></tr>
+<tr class="memdesc:afa225b27e5a3b440fa57b8b9b166a6b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <br /></td></tr>
+<tr class="separator:afa225b27e5a3b440fa57b8b9b166a6b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb42a9d3d3d3a0e5c95930aaa82a3ddb"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:aeb42a9d3d3d3a0e5c95930aaa82a3ddb"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#aeb42a9d3d3d3a0e5c95930aaa82a3ddb">MiniDelegate</a> (T &amp;object, R(T::*func)(Args...))</td></tr>
+<tr class="memdesc:aeb42a9d3d3d3a0e5c95930aaa82a3ddb"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <br /></td></tr>
+<tr class="separator:aeb42a9d3d3d3a0e5c95930aaa82a3ddb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d5d20116cd95f8e57eafe658a43e9f7"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a6d5d20116cd95f8e57eafe658a43e9f7"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#a6d5d20116cd95f8e57eafe658a43e9f7">MiniDelegate</a> (const T &amp;object, R(T::*func)(Args...) const)</td></tr>
+<tr class="memdesc:a6d5d20116cd95f8e57eafe658a43e9f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <br /></td></tr>
+<tr class="separator:a6d5d20116cd95f8e57eafe658a43e9f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0c44dda50d6453e7799fe01a02ded47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#ab0c44dda50d6453e7799fe01a02ded47">assign</a> (<a class="el" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#a58e72c014183b3105ce49c0372a03519">StaticFuncPtr</a> func)</td></tr>
+<tr class="memdesc:ab0c44dda50d6453e7799fe01a02ded47"><td class="mdescLeft">&#160;</td><td class="mdescRight">静的関数ポインタを割り当てる  <br /></td></tr>
+<tr class="separator:ab0c44dda50d6453e7799fe01a02ded47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fd55d0cc00d45aeb5383452edef1952"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a6fd55d0cc00d45aeb5383452edef1952"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#a6fd55d0cc00d45aeb5383452edef1952">assign</a> (T &amp;object, R(T::*func)(Args...))</td></tr>
+<tr class="memdesc:a6fd55d0cc00d45aeb5383452edef1952"><td class="mdescLeft">&#160;</td><td class="mdescRight">オブジェクトとメンバ関数ポインタを割り当てる  <br /></td></tr>
+<tr class="separator:a6fd55d0cc00d45aeb5383452edef1952"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfa2d7e079bd28e885d2c0760cdeabd5"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:acfa2d7e079bd28e885d2c0760cdeabd5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#acfa2d7e079bd28e885d2c0760cdeabd5">assign</a> (const T &amp;object, R(T::*func)(Args...) const)</td></tr>
+<tr class="memdesc:acfa2d7e079bd28e885d2c0760cdeabd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">オブジェクトとメンバ関数ポインタを割り当てる(const)  <br /></td></tr>
+<tr class="separator:acfa2d7e079bd28e885d2c0760cdeabd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca9a1b5697554338208ecd085db00f40"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#aca9a1b5697554338208ecd085db00f40">operator bool</a> () const</td></tr>
+<tr class="memdesc:aca9a1b5697554338208ecd085db00f40"><td class="mdescLeft">&#160;</td><td class="mdescRight">デリゲートが有効かどうかを判定する  <br /></td></tr>
+<tr class="separator:aca9a1b5697554338208ecd085db00f40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc40eff5c2ab5ed5db70b539a83c5f49"><td class="memItemLeft" align="right" valign="top"><a id="afc40eff5c2ab5ed5db70b539a83c5f49" name="afc40eff5c2ab5ed5db70b539a83c5f49"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> ()</td></tr>
+<tr class="memdesc:afc40eff5c2ab5ed5db70b539a83c5f49"><td class="mdescLeft">&#160;</td><td class="mdescRight">デリゲートをリセットする <br /></td></tr>
+<tr class="separator:afc40eff5c2ab5ed5db70b539a83c5f49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a172df118d9d88a1c620d665871d87c87"><td class="memItemLeft" align="right" valign="top">R&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#a172df118d9d88a1c620d665871d87c87">operator()</a> (Args... args) const</td></tr>
+<tr class="memdesc:a172df118d9d88a1c620d665871d87c87"><td class="mdescLeft">&#160;</td><td class="mdescRight">デリゲートを呼び出す  <br /></td></tr>
+<tr class="separator:a172df118d9d88a1c620d665871d87c87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+静的公開変数類</h2></td></tr>
+<tr class="memitem:ace7696185b24e7441efa4d2935a7065a"><td class="memItemLeft" align="right" valign="top"><a id="ace7696185b24e7441efa4d2935a7065a" name="ace7696185b24e7441efa4d2935a7065a"></a>
+static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><b>kBufferSize</b> = 24</td></tr>
+<tr class="memdesc:ace7696185b24e7441efa4d2935a7065a"><td class="mdescLeft">&#160;</td><td class="mdescRight">内部バッファサイズ // T (8) + BaseInvoker (8) + Invoker (8) = 24 <br /></td></tr>
+<tr class="separator:ace7696185b24e7441efa4d2935a7065a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;class R, class... Args&gt;<br />
+class Amuse::Core::MiniDelegate&lt; R(Args...)&gt;</div><p>Ownerのみをキャプチャできる軽量デリゲート </p>
+<p>通常のデリゲートよりも軽量ですが、ラムダ式のように変数をキャプチャすることはできません。 </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="aab5514f01da029e3c0621d96e610e54c" name="aab5514f01da029e3c0621d96e610e54c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab5514f01da029e3c0621d96e610e54c">&#9670;&#160;</a></span>MiniDelegate() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class R , class... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Amuse::Core::MiniDelegate&lt; R(Args...)&gt;::MiniDelegate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>デフォルトコンストラクタ </p>
+<p>MiniDelegateクラスのデフォルトコンストラクタです。 </p>
+
+</div>
+</div>
+<a id="afa225b27e5a3b440fa57b8b9b166a6b0" name="afa225b27e5a3b440fa57b8b9b166a6b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa225b27e5a3b440fa57b8b9b166a6b0">&#9670;&#160;</a></span>MiniDelegate() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class R , class... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Amuse::Core::MiniDelegate&lt; R(Args...)&gt;::MiniDelegate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#a58e72c014183b3105ce49c0372a03519">StaticFuncPtr</a>&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>コンストラクタ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>静的関数ポインタ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aeb42a9d3d3d3a0e5c95930aaa82a3ddb" name="aeb42a9d3d3d3a0e5c95930aaa82a3ddb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb42a9d3d3d3a0e5c95930aaa82a3ddb">&#9670;&#160;</a></span>MiniDelegate() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class R , class... Args&gt; </div>
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Amuse::Core::MiniDelegate&lt; R(Args...)&gt;::MiniDelegate </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">R(T::*)(Args...)&#160;</td>
+          <td class="paramname"><em>func</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>コンストラクタ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">object</td><td>オブジェクトの参照 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>メンバ関数ポインタ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6d5d20116cd95f8e57eafe658a43e9f7" name="a6d5d20116cd95f8e57eafe658a43e9f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d5d20116cd95f8e57eafe658a43e9f7">&#9670;&#160;</a></span>MiniDelegate() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class R , class... Args&gt; </div>
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Amuse::Core::MiniDelegate&lt; R(Args...)&gt;::MiniDelegate </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">R(T::*)(Args...) const&#160;</td>
+          <td class="paramname"><em>func</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>コンストラクタ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">object</td><td>オブジェクトの参照 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>メンバ関数ポインタ(const) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="acfa2d7e079bd28e885d2c0760cdeabd5" name="acfa2d7e079bd28e885d2c0760cdeabd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfa2d7e079bd28e885d2c0760cdeabd5">&#9670;&#160;</a></span>assign() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class R , class... Args&gt; </div>
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Amuse::Core::MiniDelegate&lt; R(Args...)&gt;::assign </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">R(T::*)(Args...) const&#160;</td>
+          <td class="paramname"><em>func</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>オブジェクトとメンバ関数ポインタを割り当てる(const) </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">object</td><td>オブジェクトの参照 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>メンバ関数ポインタ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab0c44dda50d6453e7799fe01a02ded47" name="ab0c44dda50d6453e7799fe01a02ded47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0c44dda50d6453e7799fe01a02ded47">&#9670;&#160;</a></span>assign() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class R , class... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Amuse::Core::MiniDelegate&lt; R(Args...)&gt;::assign </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#a58e72c014183b3105ce49c0372a03519">StaticFuncPtr</a>&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>静的関数ポインタを割り当てる </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>静的関数ポインタ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6fd55d0cc00d45aeb5383452edef1952" name="a6fd55d0cc00d45aeb5383452edef1952"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fd55d0cc00d45aeb5383452edef1952">&#9670;&#160;</a></span>assign() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class R , class... Args&gt; </div>
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Amuse::Core::MiniDelegate&lt; R(Args...)&gt;::assign </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">R(T::*)(Args...)&#160;</td>
+          <td class="paramname"><em>func</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>オブジェクトとメンバ関数ポインタを割り当てる </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">object</td><td>オブジェクトの参照 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>メンバ関数ポインタ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aca9a1b5697554338208ecd085db00f40" name="aca9a1b5697554338208ecd085db00f40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca9a1b5697554338208ecd085db00f40">&#9670;&#160;</a></span>operator bool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class R , class... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Amuse::Core::MiniDelegate&lt; R(Args...)&gt;::operator bool </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>デリゲートが有効かどうかを判定する </p>
+<dl class="section return"><dt>戻り値</dt><dd>デリゲートが有効な場合はtrue、そうでない場合はfalse </dd></dl>
+
+</div>
+</div>
+<a id="a172df118d9d88a1c620d665871d87c87" name="a172df118d9d88a1c620d665871d87c87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a172df118d9d88a1c620d665871d87c87">&#9670;&#160;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class R , class... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">R Amuse::Core::MiniDelegate&lt; R(Args...)&gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">Args...&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>デリゲートを呼び出す </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">args</td><td>関数引数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>関数の戻り値 </dd></dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>Runtime/Core/Public/Amuse/Core/Template/Utility/<a class="el" href="../../d6/d21/_mini_delegate_8h_source.html">MiniDelegate.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><b>Core</b></li><li class="navelem"><a class="el" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html">MiniDelegate&lt; R(Args...)&gt;</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
+</body>
+</html>

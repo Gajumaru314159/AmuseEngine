@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: Runtime/RHI/Public/Amuse/RHI/Types/Barrier.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d5/d3d/_barrier_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Barrier.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//***********************************************************</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"></span><span class="comment">//***********************************************************</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;Amuse/Core/Core.h&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;Amuse/RHI/Forward.h&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;Amuse/RHI/Types/BufferDesc.h&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;Amuse/RHI/Types/TextureDesc.h&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span>Amuse::RHI {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">using namespace </span>Amuse::Core;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../d3/df1/struct_amuse_1_1_r_h_i_1_1_texture_subresource_range.html">   15</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../d3/df1/struct_amuse_1_1_r_h_i_1_1_texture_subresource_range.html">TextureSubresourceRange</a> {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="../../d3/df1/struct_amuse_1_1_r_h_i_1_1_texture_subresource_range.html#a40d1eb55f6144f5d3caf2dfe29653833">   16</a></span>        <span class="keyword">static</span> <span class="keyword">constexpr</span> u32 <a class="code hl_variable" href="../../d3/df1/struct_amuse_1_1_r_h_i_1_1_texture_subresource_range.html#a40d1eb55f6144f5d3caf2dfe29653833">All</a> = <span class="keyword">static_cast&lt;</span>u32<span class="keyword">&gt;</span>(-1); </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="../../d3/df1/struct_amuse_1_1_r_h_i_1_1_texture_subresource_range.html#a16d46d8d023903d5a7e7cdf73751b304">   18</a></span>        u32 <a class="code hl_variable" href="../../d3/df1/struct_amuse_1_1_r_h_i_1_1_texture_subresource_range.html#a16d46d8d023903d5a7e7cdf73751b304">baseMipLevel</a> = 0;       </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="../../d3/df1/struct_amuse_1_1_r_h_i_1_1_texture_subresource_range.html#ababd35a8ad3bdff8d0263a2fb6edd341">   19</a></span>        u32 <a class="code hl_variable" href="../../d3/df1/struct_amuse_1_1_r_h_i_1_1_texture_subresource_range.html#ababd35a8ad3bdff8d0263a2fb6edd341">mipLevelCount</a> = <a class="code hl_variable" href="../../d3/df1/struct_amuse_1_1_r_h_i_1_1_texture_subresource_range.html#a40d1eb55f6144f5d3caf2dfe29653833">All</a>;    </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="../../d3/df1/struct_amuse_1_1_r_h_i_1_1_texture_subresource_range.html#ac994f292435361a89778a46362e36f6c">   20</a></span>        u32 <a class="code hl_variable" href="../../d3/df1/struct_amuse_1_1_r_h_i_1_1_texture_subresource_range.html#ac994f292435361a89778a46362e36f6c">baseArrayLayer</a> = 0;     </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="../../d3/df1/struct_amuse_1_1_r_h_i_1_1_texture_subresource_range.html#a56b16ebe2b0b41f7d8839022385d75df">   21</a></span>        u32 <a class="code hl_variable" href="../../d3/df1/struct_amuse_1_1_r_h_i_1_1_texture_subresource_range.html#a56b16ebe2b0b41f7d8839022385d75df">arrayLayerCount</a> = <a class="code hl_variable" href="../../d3/df1/struct_amuse_1_1_r_h_i_1_1_texture_subresource_range.html#a40d1eb55f6144f5d3caf2dfe29653833">All</a>;  </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    };</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../dc/d9f/struct_amuse_1_1_r_h_i_1_1_texture_barrier.html">   25</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../dc/d9f/struct_amuse_1_1_r_h_i_1_1_texture_barrier.html">TextureBarrier</a> {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="../../dc/d9f/struct_amuse_1_1_r_h_i_1_1_texture_barrier.html#abdc8b39ffc247f4de7aff11d834ea9dc">   26</a></span>        <a class="code hl_class" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref&lt;Texture&gt;</a> <a class="code hl_variable" href="../../dc/d9f/struct_amuse_1_1_r_h_i_1_1_texture_barrier.html#abdc8b39ffc247f4de7aff11d834ea9dc">texture</a>;                           </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="../../dc/d9f/struct_amuse_1_1_r_h_i_1_1_texture_barrier.html#af55ba093a2be35287fae6155ff1e183f">   27</a></span>        <a class="code hl_struct" href="../../d3/df1/struct_amuse_1_1_r_h_i_1_1_texture_subresource_range.html">TextureSubresourceRange</a> <a class="code hl_variable" href="../../dc/d9f/struct_amuse_1_1_r_h_i_1_1_texture_barrier.html#af55ba093a2be35287fae6155ff1e183f">range</a>;                  </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../dc/d9f/struct_amuse_1_1_r_h_i_1_1_texture_barrier.html#ad76a939e26e0b591558ddbd689d299db">   28</a></span>        TextureState <a class="code hl_variable" href="../../dc/d9f/struct_amuse_1_1_r_h_i_1_1_texture_barrier.html#ad76a939e26e0b591558ddbd689d299db">before</a> = TextureState::Unknown;    </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="../../dc/d9f/struct_amuse_1_1_r_h_i_1_1_texture_barrier.html#abd48eafbc054ef6542d2a97afb2e647a">   29</a></span>        TextureState <a class="code hl_variable" href="../../dc/d9f/struct_amuse_1_1_r_h_i_1_1_texture_barrier.html#abd48eafbc054ef6542d2a97afb2e647a">after</a> = TextureState::Unknown;     </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    };</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../d0/d0b/struct_amuse_1_1_r_h_i_1_1_buffer_barrier.html">   33</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../d0/d0b/struct_amuse_1_1_r_h_i_1_1_buffer_barrier.html">BufferBarrier</a> {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="../../d0/d0b/struct_amuse_1_1_r_h_i_1_1_buffer_barrier.html#abee5ff3003585662d2ddb23b26daa535">   34</a></span>        <a class="code hl_class" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref&lt;Buffer&gt;</a> <a class="code hl_variable" href="../../d0/d0b/struct_amuse_1_1_r_h_i_1_1_buffer_barrier.html#abee5ff3003585662d2ddb23b26daa535">buffer</a>;                             </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="../../d0/d0b/struct_amuse_1_1_r_h_i_1_1_buffer_barrier.html#ac366199bdee6c094eed47593b6665ea9">   35</a></span>        BufferState <a class="code hl_variable" href="../../d0/d0b/struct_amuse_1_1_r_h_i_1_1_buffer_barrier.html#ac366199bdee6c094eed47593b6665ea9">before</a> = BufferState::Unknown;      </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../d0/d0b/struct_amuse_1_1_r_h_i_1_1_buffer_barrier.html#ad21fdbeaf28c8aac1f29a2334789e490">   36</a></span>        BufferState <a class="code hl_variable" href="../../d0/d0b/struct_amuse_1_1_r_h_i_1_1_buffer_barrier.html#ad21fdbeaf28c8aac1f29a2334789e490">after</a> = BufferState::Unknown;       </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    };</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>}</div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_ref_html"><div class="ttname"><a href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Amuse::Core::Ref</a></div><div class="ttdoc">RefObject 用スマートポインタ</div><div class="ttdef"><b>Definition:</b> Ref.h:64</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_buffer_barrier_html"><div class="ttname"><a href="../../d0/d0b/struct_amuse_1_1_r_h_i_1_1_buffer_barrier.html">Amuse::RHI::BufferBarrier</a></div><div class="ttdoc">バッファ遷移バリア</div><div class="ttdef"><b>Definition:</b> Barrier.h:33</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_buffer_barrier_html_abee5ff3003585662d2ddb23b26daa535"><div class="ttname"><a href="../../d0/d0b/struct_amuse_1_1_r_h_i_1_1_buffer_barrier.html#abee5ff3003585662d2ddb23b26daa535">Amuse::RHI::BufferBarrier::buffer</a></div><div class="ttdeci">Ref&lt; Buffer &gt; buffer</div><div class="ttdoc">対象バッファ</div><div class="ttdef"><b>Definition:</b> Barrier.h:34</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_buffer_barrier_html_ac366199bdee6c094eed47593b6665ea9"><div class="ttname"><a href="../../d0/d0b/struct_amuse_1_1_r_h_i_1_1_buffer_barrier.html#ac366199bdee6c094eed47593b6665ea9">Amuse::RHI::BufferBarrier::before</a></div><div class="ttdeci">BufferState before</div><div class="ttdoc">遷移前状態</div><div class="ttdef"><b>Definition:</b> Barrier.h:35</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_buffer_barrier_html_ad21fdbeaf28c8aac1f29a2334789e490"><div class="ttname"><a href="../../d0/d0b/struct_amuse_1_1_r_h_i_1_1_buffer_barrier.html#ad21fdbeaf28c8aac1f29a2334789e490">Amuse::RHI::BufferBarrier::after</a></div><div class="ttdeci">BufferState after</div><div class="ttdoc">遷移後状態</div><div class="ttdef"><b>Definition:</b> Barrier.h:36</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_texture_barrier_html"><div class="ttname"><a href="../../dc/d9f/struct_amuse_1_1_r_h_i_1_1_texture_barrier.html">Amuse::RHI::TextureBarrier</a></div><div class="ttdoc">テクスチャ遷移バリア</div><div class="ttdef"><b>Definition:</b> Barrier.h:25</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_texture_barrier_html_abd48eafbc054ef6542d2a97afb2e647a"><div class="ttname"><a href="../../dc/d9f/struct_amuse_1_1_r_h_i_1_1_texture_barrier.html#abd48eafbc054ef6542d2a97afb2e647a">Amuse::RHI::TextureBarrier::after</a></div><div class="ttdeci">TextureState after</div><div class="ttdoc">遷移後状態</div><div class="ttdef"><b>Definition:</b> Barrier.h:29</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_texture_barrier_html_abdc8b39ffc247f4de7aff11d834ea9dc"><div class="ttname"><a href="../../dc/d9f/struct_amuse_1_1_r_h_i_1_1_texture_barrier.html#abdc8b39ffc247f4de7aff11d834ea9dc">Amuse::RHI::TextureBarrier::texture</a></div><div class="ttdeci">Ref&lt; Texture &gt; texture</div><div class="ttdoc">対象テクスチャ</div><div class="ttdef"><b>Definition:</b> Barrier.h:26</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_texture_barrier_html_ad76a939e26e0b591558ddbd689d299db"><div class="ttname"><a href="../../dc/d9f/struct_amuse_1_1_r_h_i_1_1_texture_barrier.html#ad76a939e26e0b591558ddbd689d299db">Amuse::RHI::TextureBarrier::before</a></div><div class="ttdeci">TextureState before</div><div class="ttdoc">遷移前状態</div><div class="ttdef"><b>Definition:</b> Barrier.h:28</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_texture_barrier_html_af55ba093a2be35287fae6155ff1e183f"><div class="ttname"><a href="../../dc/d9f/struct_amuse_1_1_r_h_i_1_1_texture_barrier.html#af55ba093a2be35287fae6155ff1e183f">Amuse::RHI::TextureBarrier::range</a></div><div class="ttdeci">TextureSubresourceRange range</div><div class="ttdoc">対象範囲</div><div class="ttdef"><b>Definition:</b> Barrier.h:27</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_texture_subresource_range_html"><div class="ttname"><a href="../../d3/df1/struct_amuse_1_1_r_h_i_1_1_texture_subresource_range.html">Amuse::RHI::TextureSubresourceRange</a></div><div class="ttdoc">テクスチャサブリソース範囲</div><div class="ttdef"><b>Definition:</b> Barrier.h:15</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_texture_subresource_range_html_a16d46d8d023903d5a7e7cdf73751b304"><div class="ttname"><a href="../../d3/df1/struct_amuse_1_1_r_h_i_1_1_texture_subresource_range.html#a16d46d8d023903d5a7e7cdf73751b304">Amuse::RHI::TextureSubresourceRange::baseMipLevel</a></div><div class="ttdeci">u32 baseMipLevel</div><div class="ttdoc">開始Mip</div><div class="ttdef"><b>Definition:</b> Barrier.h:18</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_texture_subresource_range_html_a40d1eb55f6144f5d3caf2dfe29653833"><div class="ttname"><a href="../../d3/df1/struct_amuse_1_1_r_h_i_1_1_texture_subresource_range.html#a40d1eb55f6144f5d3caf2dfe29653833">Amuse::RHI::TextureSubresourceRange::All</a></div><div class="ttdeci">static constexpr u32 All</div><div class="ttdoc">All</div><div class="ttdef"><b>Definition:</b> Barrier.h:16</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_texture_subresource_range_html_a56b16ebe2b0b41f7d8839022385d75df"><div class="ttname"><a href="../../d3/df1/struct_amuse_1_1_r_h_i_1_1_texture_subresource_range.html#a56b16ebe2b0b41f7d8839022385d75df">Amuse::RHI::TextureSubresourceRange::arrayLayerCount</a></div><div class="ttdeci">u32 arrayLayerCount</div><div class="ttdoc">配列スライス数。Allの場合は残り全て</div><div class="ttdef"><b>Definition:</b> Barrier.h:21</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_texture_subresource_range_html_ababd35a8ad3bdff8d0263a2fb6edd341"><div class="ttname"><a href="../../d3/df1/struct_amuse_1_1_r_h_i_1_1_texture_subresource_range.html#ababd35a8ad3bdff8d0263a2fb6edd341">Amuse::RHI::TextureSubresourceRange::mipLevelCount</a></div><div class="ttdeci">u32 mipLevelCount</div><div class="ttdoc">Mip数。Allの場合は残り全て</div><div class="ttdef"><b>Definition:</b> Barrier.h:19</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_texture_subresource_range_html_ac994f292435361a89778a46362e36f6c"><div class="ttname"><a href="../../d3/df1/struct_amuse_1_1_r_h_i_1_1_texture_subresource_range.html#ac994f292435361a89778a46362e36f6c">Amuse::RHI::TextureSubresourceRange::baseArrayLayer</a></div><div class="ttdeci">u32 baseArrayLayer</div><div class="ttdoc">開始配列スライス</div><div class="ttdef"><b>Definition:</b> Barrier.h:20</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_4f6666a8f2ab10bc970eb7559668f031.html">Runtime</a></li><li class="navelem"><a class="el" href="../../dir_ed0dd943941685375ac149ef30703e8f.html">RHI</a></li><li class="navelem"><a class="el" href="../../dir_80d0fa31a6e3bc7da61af1a1dfa2506f.html">Public</a></li><li class="navelem"><a class="el" href="../../dir_6330f9b43f61349a45429b5fd54fec05.html">Amuse</a></li><li class="navelem"><a class="el" href="../../dir_0830f243940360ab60fcd1783d0d86f9.html">RHI</a></li><li class="navelem"><a class="el" href="../../dir_5761839cb0a5a5a0945e24e2502418de.html">Types</a></li><li class="navelem"><b>Barrier.h</b></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
+</body>
+</html>

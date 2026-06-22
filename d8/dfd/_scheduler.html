@@ -1,0 +1,632 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: Scheduler</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d8/dfd/_scheduler.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Scheduler </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="md_Runtime_Core_Document_Scheduler"></a> </p><h1>概要</h1>
+<p>Scheduler は依存関係のある関数群を登録し、実行可能な順序へコンパイルしてから実行するための仕組みです。</p>
+<p>主な用途は ECS のシステム実行ですが、Core の汎用タスクグラフとしても使えるように、ECS 固有の型には依存しません。ECS 連携では <code>World&amp;</code> や <code>SystemContext&amp;</code> などをテンプレート引数で渡し、システム関数はその引数を受け取って実行します。</p>
+<p>設計方針は以下です。</p>
+<ul>
+<li>Taskflow のように <code>emplace</code> で <code>Task</code> オブジェクトを作り、<code>precede</code> / <code>succeed</code> で依存関係を記述できる。</li>
+<li>Bevy Engine のように <code>Schedule</code>、<code>SystemSet</code>、<code>chain</code> を使って ECS システムの実行順を簡潔に表現できる。</li>
+<li>依存関係がないシステムは並列実行できる。</li>
+<li>明示されていない順序には依存しない。順序が重要な場合は必ず依存関係またはセット順序で表現する。</li>
+<li>コンパイル時に循環依存、未解決ラベル、重複ラベルを検出できる。</li>
+<li>システム間依存は文字列ではなく <code>Task</code> オブジェクトで指定し、名前変更に強い記述にする。</li>
+</ul>
+<h1>参考にする機能</h1>
+<h2>Taskflow 由来の機能</h2>
+<ul>
+<li>タスクをノード、依存関係をエッジとする DAG を構築する。</li>
+<li><code>precede</code> / <code>succeed</code> 相当の API で前後関係を記述する。</li>
+<li><code>placeholder</code> 相当の空ノードを作り、あとから処理や名前を設定できる。</li>
+<li>サブグラフを 1 ノードとして合成できる。</li>
+<li>Executor がワーカースレッドで実行し、完了待機できる。</li>
+<li>プロファイルや可視化用にグラフ情報を出力できる。</li>
+</ul>
+<h2>Bevy 由来の機能</h2>
+<ul>
+<li><code>Schedule</code> はシステム、セット、順序制約を保持する。</li>
+<li><code>SystemSet</code> は複数システムへ共通の順序制約を適用する。</li>
+<li><code>chain</code> は登録順に依存関係を張る簡易 API として提供する。</li>
+<li>明示された依存関係と排他制約から並列実行できるタスクを決定する。</li>
+<li>シングルスレッド実行とマルチスレッド実行を切り替えられる。</li>
+</ul>
+<h1>機能要件</h1>
+<h2>システム登録</h2>
+<ul>
+<li>任意の callable をシステムとして登録できる。</li>
+<li>システムには名前、ラベル、セット、排他制約、実行スレッド指定を付与できる。</li>
+<li>複数システムをまとめて登録できる。</li>
+<li>登録 API は ECS で頻繁に使っても読みやすい記述にする。</li>
+</ul>
+<div class="fragment"><div class="line">Schedule&lt;World&amp;&gt; schedule;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">auto</span> taskA = schedule.emplace(SystemA)</div>
+<div class="line">    .name(<span class="stringliteral">&quot;SystemA&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">auto</span> taskB = schedule.emplace(SystemB)</div>
+<div class="line">    .name(<span class="stringliteral">&quot;SystemB&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">taskA.precede(taskB);</div>
+</div><!-- fragment --><h2>順序制御</h2>
+<ul>
+<li><code>Task::precede</code> で、このタスクを指定タスクより前に実行する制約を追加できる。</li>
+<li><code>Task::succeed</code> で、このタスクを指定タスクより後に実行する制約を追加できる。</li>
+<li><code>chain</code> で複数システムを直列化できる。</li>
+<li>セット同士の順序制約は <code>ScheduleSet</code> ハンドルで指定できる。</li>
+<li>文字列ラベルによるシステム間依存は提供しない。</li>
+<li>依存関係がないシステム同士の実行順は未定義とする。</li>
+</ul>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> taskA = schedule.emplace(SystemA);</div>
+<div class="line"><span class="keyword">auto</span> taskB = schedule.emplace(SystemB);</div>
+<div class="line"><span class="keyword">auto</span> taskC = schedule.emplace(SystemC);</div>
+<div class="line"> </div>
+<div class="line">taskA.precede(taskB, taskC); <span class="comment">// taskA は taskB と taskC より前</span></div>
+<div class="line">taskC.succeed(taskB);        <span class="comment">// taskC は taskB より後</span></div>
+<div class="line"> </div>
+<div class="line">schedule.chain(taskA, taskB, taskC);</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">auto</span> A = schedule.emplace(SystemA);</div>
+<div class="line"><span class="keyword">auto</span> B = schedule.emplace(SystemB);</div>
+<div class="line"><span class="keyword">auto</span> C = schedule.emplace(SystemC);</div>
+<div class="line"><span class="keyword">auto</span> D = schedule.emplace(SystemD);</div>
+<div class="line"> </div>
+<div class="line">A.precede(B, C); <span class="comment">// A は B と C より前</span></div>
+<div class="line">D.succeed(B, C); <span class="comment">// D は B と C より後</span></div>
+</div><!-- fragment --><h2>セット</h2>
+<ul>
+<li>セットはシステムのグループであり、共通の順序制約と実行ポリシーを持つ。</li>
+<li>1 つのシステムは複数セットに所属できる。</li>
+<li>セットは階層化できる。</li>
+<li>セットに対する <code>precede</code> / <code>succeed</code> は所属システム全体に展開される。</li>
+</ul>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> setA = schedule.configureSet(<span class="stringliteral">&quot;SetA&quot;</span>);</div>
+<div class="line"><span class="keyword">auto</span> setB = schedule.configureSet(<span class="stringliteral">&quot;SetB&quot;</span>);</div>
+<div class="line"><span class="keyword">auto</span> setC = schedule.configureSet(<span class="stringliteral">&quot;SetC&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">setA.precede(setB);</div>
+<div class="line">setC.succeed(setB);</div>
+<div class="line"> </div>
+<div class="line">schedule.emplace(SystemB)</div>
+<div class="line">    .inSet(setB)</div>
+<div class="line">    .inSet(schedule.configureSet(<span class="stringliteral">&quot;FixedStep&quot;</span>));</div>
+</div><!-- fragment --><h2>並列実行</h2>
+<ul>
+<li>依存関係と排他制約がないシステムは並列実行できる。</li>
+<li>実行方式は <code>ExecutorKind::SingleThreaded</code> と <code>ExecutorKind::MultiThreaded</code> を選択できる。</li>
+<li>メインスレッドでのみ実行できるシステムを指定できる。</li>
+<li>Scheduler 専用の <code>ScheduleExecutor</code> / <code>WorkerPool</code> を用意し、ECS の実行特性に合わせて制御できる。</li>
+<li>ワーカースレッド数は <code>ScheduleExecutorConfig</code> で指定できる。未指定の場合はハードウェア並列数を基準に決定する。</li>
+</ul>
+<div class="fragment"><div class="line">schedule.setExecutorKind(ExecutorKind::MultiThreaded);</div>
+<div class="line"> </div>
+<div class="line">schedule.emplace(UpdateWindow)</div>
+<div class="line">    .name(<span class="stringliteral">&quot;UpdateWindow&quot;</span>)</div>
+<div class="line">    .mainThread();</div>
+</div><!-- fragment --><h2>排他制約</h2>
+<ul>
+<li>Scheduler は ECS のデータ構造を解析しない。</li>
+<li>並列実行させたくないシステムには、明示的な排他タグを付与できる。</li>
+<li>同じ排他タグを持つシステム同士は同時実行しない。</li>
+<li>排他タグは実行順を保証しない。順序が必要な場合は <code>precede</code> / <code>succeed</code> / <code>chain</code> を使う。</li>
+<li>すべてのシステムと同時実行させたくない場合は <code>exclusive()</code> を指定できる。</li>
+</ul>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> movement = schedule.emplace(UpdateMovement)</div>
+<div class="line">    .conflict(<span class="stringliteral">&quot;WorldMutation&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">auto</span> taskB = schedule.emplace(SystemB)</div>
+<div class="line">    .conflict(<span class="stringliteral">&quot;WorldMutation&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">movement.precede(taskB);</div>
+</div><!-- fragment --><h2>サブスケジュールと合成</h2>
+<ul>
+<li><code>Schedule</code> を別の <code>Schedule</code> の 1 ノードとして合成できる。</li>
+<li>合成されたスケジュールは親から見ると 1 つの依存ノードとして扱う。</li>
+<li>スケジュールの分割単位は Core では定義しない。Engine や App などの上位モジュールが用途に応じて定義する。</li>
+</ul>
+<div class="fragment"><div class="line">Schedule&lt;World&amp;&gt; scheduleA(<span class="stringliteral">&quot;ScheduleA&quot;</span>);</div>
+<div class="line">Schedule&lt;World&amp;&gt; scheduleB(<span class="stringliteral">&quot;ScheduleB&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">Schedule&lt;World&amp;&gt; main(<span class="stringliteral">&quot;Main&quot;</span>);</div>
+<div class="line"><span class="keyword">auto</span> taskA = main.compose(scheduleA).name(<span class="stringliteral">&quot;ScheduleA&quot;</span>);</div>
+<div class="line"><span class="keyword">auto</span> taskB = main.compose(scheduleB).name(<span class="stringliteral">&quot;ScheduleB&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">taskA.precede(taskB);</div>
+</div><!-- fragment --><h2>診断と可視化</h2>
+<ul>
+<li><code>compile()</code> は診断結果を返す。</li>
+<li>循環依存、未解決ラベル、重複ラベル、到達不能ノードを検出する。</li>
+<li>Graphviz DOT または JSON 形式でグラフを出力できる。</li>
+<li>実行時間、待機時間、実行スレッドをプロファイルできる。</li>
+</ul>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> result = schedule.compile();</div>
+<div class="line"><span class="keywordflow">if</span> (!result) {</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; error : result.errors()) {</div>
+<div class="line">        LOG_ERROR(<span class="stringliteral">&quot;Scheduler&quot;</span>, error.message);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">schedule.dumpDot(<span class="stringliteral">&quot;Schedule.dot&quot;</span>);</div>
+<div class="line">schedule.enableProfiler(<span class="keyword">true</span>);</div>
+</div><!-- fragment --><h1>実装要件</h1>
+<ul>
+<li>C++20 で実装する。</li>
+<li><code>Schedule</code> はテンプレートクラスとして実行引数を型で保持する。</li>
+<li>実行時の動的割り当ては登録・コンパイル時に寄せ、<code>run()</code> 中の割り当てを最小化する。</li>
+<li>コンパイル後の <code>run()</code> は同じグラフを毎フレーム再利用できる。</li>
+<li><code>compile()</code> 後に登録内容を変更した場合は dirty 状態になり、次回 <code>run()</code> 前に再コンパイルが必要になる。</li>
+<li>並列実行は Scheduler 専用の軽量 Executor を利用する。</li>
+<li>public メソッドには日本語の Doxygen コメントを付ける。</li>
+<li>例外を投げる API と <code>Result</code> を返す API の使い分けを明確にする。基本は <code>compile()</code> が <code>ScheduleBuildResult</code> を返し、<code>run()</code> は未コンパイルやコンパイル失敗時に例外を投げる。</li>
+</ul>
+<h1>基本設計</h1>
+<h2>主要クラス</h2>
+<div class="fragment"><div class="line"><span class="keyword">namespace </span>Amuse::Core {</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">enum class</span> ExecutorKind {</div>
+<div class="line">    SingleThreaded,</div>
+<div class="line">    MultiThreaded,</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">struct </span>ScheduleExecutorConfig {</div>
+<div class="line">    s32 <a class="code hl_variable" href="../../de/d86/struct_amuse_1_1_core_1_1_schedule_executor_config.html#acfb8e321d979d530161daa81176aa84d">workerCount</a> = 0;</div>
+<div class="line">    <span class="keywordtype">bool</span> <a class="code hl_variable" href="../../de/d86/struct_amuse_1_1_core_1_1_schedule_executor_config.html#a90d5086481b319e7b9b12520baabea63">allowWorkerSleep</a> = <span class="keyword">true</span>;</div>
+<div class="line">    <span class="keywordtype">bool</span> <a class="code hl_variable" href="../../de/d86/struct_amuse_1_1_core_1_1_schedule_executor_config.html#a8ee0c781b05f76eaea2c296fcf16ff68">enableWorkStealing</a> = <span class="keyword">true</span>;</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">enum class</span> ScheduleBuildLogLevel {</div>
+<div class="line">    Ignore,</div>
+<div class="line">    Warn,</div>
+<div class="line">    Error,</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">class </span>Task;</div>
+<div class="line"><span class="keyword">class </span>ScheduleSet;</div>
+<div class="line"><span class="keyword">class </span>ScheduleBuildResult;</div>
+<div class="line"><span class="keyword">class </span>ScheduleProfiler;</div>
+<div class="line"><span class="keyword">class </span>ScheduleExecutor;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">template</span>&lt;<span class="keyword">class</span>... Args&gt;</div>
+<div class="line"><span class="keyword">class </span>Schedule;</div>
+<div class="line"> </div>
+<div class="line">}</div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_schedule_executor_config_html_a8ee0c781b05f76eaea2c296fcf16ff68"><div class="ttname"><a href="../../de/d86/struct_amuse_1_1_core_1_1_schedule_executor_config.html#a8ee0c781b05f76eaea2c296fcf16ff68">Amuse::Core::ScheduleExecutorConfig::enableWorkStealing</a></div><div class="ttdeci">bool enableWorkStealing</div><div class="ttdoc">ワークスティール有効フラグ</div><div class="ttdef"><b>Definition:</b> Scheduler.h:31</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_schedule_executor_config_html_a90d5086481b319e7b9b12520baabea63"><div class="ttname"><a href="../../de/d86/struct_amuse_1_1_core_1_1_schedule_executor_config.html#a90d5086481b319e7b9b12520baabea63">Amuse::Core::ScheduleExecutorConfig::allowWorkerSleep</a></div><div class="ttdeci">bool allowWorkerSleep</div><div class="ttdoc">ワーカースリープ許可</div><div class="ttdef"><b>Definition:</b> Scheduler.h:30</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_schedule_executor_config_html_acfb8e321d979d530161daa81176aa84d"><div class="ttname"><a href="../../de/d86/struct_amuse_1_1_core_1_1_schedule_executor_config.html#acfb8e321d979d530161daa81176aa84d">Amuse::Core::ScheduleExecutorConfig::workerCount</a></div><div class="ttdeci">s32 workerCount</div><div class="ttdoc">ワーカー数</div><div class="ttdef"><b>Definition:</b> Scheduler.h:29</div></div>
+</div><!-- fragment --><h2>データ構造</h2>
+<div class="fragment"><div class="line">Schedule</div>
+<div class="line">  Vector&lt;SystemNode&gt;       systems</div>
+<div class="line">  Vector&lt;SetNode&gt;          sets</div>
+<div class="line">  Vector&lt;Edge&gt;             explicitEdges</div>
+<div class="line">  Vector&lt;Edge&gt;             compiledEdges</div>
+<div class="line">  Vector&lt;ExecutionBatch&gt;   batches</div>
+<div class="line">  ScheduleBuildSettings    buildSettings</div>
+<div class="line">  ExecutorKind             executorKind</div>
+<div class="line">  ScheduleExecutor*        executor</div>
+<div class="line"> </div>
+<div class="line">SystemNode</div>
+<div class="line">  SystemId                 <span class="keywordtype">id</span></div>
+<div class="line">  String                   name</div>
+<div class="line">  Vector&lt;Label&gt;            labels</div>
+<div class="line">  Vector&lt;SetId&gt;            sets</div>
+<div class="line">  Vector&lt;ConflictTag&gt;      conflicts</div>
+<div class="line">  ThreadAffinity           affinity</div>
+<div class="line">  Function                 invoker</div>
+<div class="line"> </div>
+<div class="line">SetNode</div>
+<div class="line">  SetId                    <span class="keywordtype">id</span></div>
+<div class="line">  Label                    label</div>
+<div class="line">  Vector&lt;SetId&gt;            parents</div>
+<div class="line">  Vector&lt;Edge&gt;             edges</div>
+<div class="line"> </div>
+<div class="line">ExecutionBatch</div>
+<div class="line">  Vector&lt;SystemId&gt;         systems</div>
+<div class="line">  <span class="keywordtype">bool</span>                     requiresMainThread</div>
+</div><!-- fragment --><h2>実行フロー</h2>
+<div class="fragment"><div class="line">flowchart TD</div>
+<div class="line">    Register[&quot;システム登録&quot;] --&gt; Configure[&quot;セット・順序制約を設定&quot;]</div>
+<div class="line">    Configure --&gt; Compile[&quot;compile&quot;]</div>
+<div class="line">    Compile --&gt; Validate[&quot;循環依存・未解決ラベル・競合を検証&quot;]</div>
+<div class="line">    Validate --&gt; Plan[&quot;実行バッチを作成&quot;]</div>
+<div class="line">    Plan --&gt; Run[&quot;run&quot;]</div>
+<div class="line">    Run --&gt; Ready[&quot;依存完了を確認&quot;]</div>
+<div class="line">    Ready --&gt; Execute[&quot;実行可能なシステムを実行&quot;]</div>
+<div class="line">    Execute --&gt; Done[&quot;完了&quot;]</div>
+</div><!-- fragment --><h2>最小 API 例</h2>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> SystemA(World&amp; world);</div>
+<div class="line"><span class="keywordtype">void</span> SystemB(World&amp; world);</div>
+<div class="line"><span class="keywordtype">void</span> SystemC(World&amp; world);</div>
+<div class="line"><span class="keywordtype">void</span> SystemD(World&amp; world);</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line">    <span class="keyword">using </span>WorldSchedule = Schedule&lt;World&amp;&gt;;</div>
+<div class="line"> </div>
+<div class="line">    WorldSchedule schedule(<span class="stringliteral">&quot;Update&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">auto</span> taskA = schedule.emplace(SystemA).name(<span class="stringliteral">&quot;SystemA&quot;</span>);</div>
+<div class="line">    <span class="keyword">auto</span> taskB = schedule.emplace(SystemB).name(<span class="stringliteral">&quot;SystemB&quot;</span>);</div>
+<div class="line">    <span class="keyword">auto</span> taskC = schedule.emplace(SystemC).name(<span class="stringliteral">&quot;SystemC&quot;</span>);</div>
+<div class="line">    <span class="keyword">auto</span> taskD = schedule.emplace(SystemD).name(<span class="stringliteral">&quot;SystemD&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">    taskA.precede(taskB);</div>
+<div class="line">    taskB.precede(taskD);</div>
+<div class="line">    schedule.chain(taskA, taskC, taskD);</div>
+<div class="line"> </div>
+<div class="line">    World world;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">auto</span> result = schedule.compile();</div>
+<div class="line">    <span class="keywordflow">if</span> (!result) {</div>
+<div class="line">        <span class="keywordflow">return</span> 1;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    schedule.run(world);</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2>上位モジュールでの利用例</h2>
+<div class="fragment"><div class="line">Schedule&lt;World&amp;&gt; schedule(<span class="stringliteral">&quot;Main&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">auto</span> setA = schedule.configureSet(<span class="stringliteral">&quot;SetA&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">auto</span> setB = schedule.configureSet(<span class="stringliteral">&quot;SetB&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">auto</span> setC = schedule.configureSet(<span class="stringliteral">&quot;SetC&quot;</span>);</div>
+<div class="line"><span class="keyword">auto</span> setD = schedule.configureSet(<span class="stringliteral">&quot;SetD&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">setA.precede(setB);</div>
+<div class="line">setB.precede(setC);</div>
+<div class="line">setC.precede(setD);</div>
+<div class="line"> </div>
+<div class="line">schedule.addSystems(setA,</div>
+<div class="line">    SystemA1,</div>
+<div class="line">    SystemA2,</div>
+<div class="line">    SystemA3</div>
+<div class="line">);</div>
+<div class="line"> </div>
+<div class="line">schedule.addSystems(setB,</div>
+<div class="line">    SystemB1,</div>
+<div class="line">    SystemB2,</div>
+<div class="line">    SystemB3</div>
+<div class="line">);</div>
+<div class="line"> </div>
+<div class="line">schedule.addSystems(setC,</div>
+<div class="line">    SystemC1,</div>
+<div class="line">    SystemC2</div>
+<div class="line">).chain();</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">auto</span> taskD = schedule.emplace(SystemD)</div>
+<div class="line">    .inSet(setD)</div>
+<div class="line">    .mainThread();</div>
+<div class="line"> </div>
+<div class="line">setC.precede(taskD);</div>
+</div><!-- fragment --><h1>詳細設計</h1>
+<h2>Schedule</h2>
+<div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">class</span>... Args&gt;</div>
+<div class="line"><span class="keyword">class </span>Schedule {</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    <span class="keyword">explicit</span> Schedule(StringView name = {});</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">template</span>&lt;<span class="keyword">class</span> F&gt;</div>
+<div class="line">    <span class="keyword">auto</span> emplace(F&amp;&amp; system) -&gt; Task;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">template</span>&lt;<span class="keyword">class</span>... F&gt;</div>
+<div class="line">    <span class="keyword">auto</span> addSystems(F&amp;&amp;... systems) -&gt; TaskGroup;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">template</span>&lt;<span class="keyword">class</span>... F&gt;</div>
+<div class="line">    <span class="keyword">auto</span> addSystems(<span class="keyword">const</span> ScheduleSet&amp; set, F&amp;&amp;... systems) -&gt; TaskGroup;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">auto</span> configureSet(StringView setName) -&gt; ScheduleSet;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">auto</span> compose(Schedule&amp; child) -&gt; Task;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">template</span>&lt;<span class="keyword">class</span>... Nodes&gt;</div>
+<div class="line">    <span class="keywordtype">void</span> chain(Nodes&amp;&amp;... nodes);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">auto</span> compile() -&gt; ScheduleBuildResult;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">void</span> run(Args... args);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">void</span> setExecutorKind(ExecutorKind kind);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">void</span> setExecutor(ScheduleExecutor&amp; executor);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">bool</span> dumpDot(StringView path) <span class="keyword">const</span>;</div>
+<div class="line">};</div>
+</div><!-- fragment --><h2>ScheduleExecutor</h2>
+<p><code>ScheduleExecutor</code> は Scheduler 専用のワーカープールです。初期実装では Core の汎用並列基盤として Scheduler と同じ領域に置き、依存関係、排他制約、メインスレッド実行、フレーム単位の待機に合わせて小さく作ります。</p>
+<div class="fragment"><div class="line"><span class="keyword">class </span>ScheduleExecutor {</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    <span class="keyword">explicit</span> ScheduleExecutor(<span class="keyword">const</span> ScheduleExecutorConfig&amp; config = {});</div>
+<div class="line"> </div>
+<div class="line">    ~ScheduleExecutor();</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">auto</span> workerCount() const -&gt; s32;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">void</span> enqueue(Action&amp;&amp; action);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">void</span> wait();</div>
+<div class="line"> </div>
+<div class="line">    auto isWorkerThread() const -&gt; <span class="keywordtype">bool</span>;</div>
+<div class="line">};</div>
+</div><!-- fragment --><p><code>ScheduleExecutor</code> は Taskflow の Executor ほど多機能にしません。依存関係とサブグラフは <code>Schedule</code> 側のコンパイル済み実行計画で管理し、Executor は ready になった処理を実行するだけにします。</p>
+<h2>Task</h2>
+<p><code>Task</code> は登録済みシステムを指す fluent API 用ハンドルです。システムの所有権は <code>Schedule</code> が持つため、<code>Task</code> は軽量な参照として扱います。</p>
+<p>依存関係は <code>Task</code> オブジェクト同士で指定します。文字列名は表示、診断、可視化のために使い、依存解決には使いません。</p>
+<div class="fragment"><div class="line"><span class="keyword">class </span>Task {</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    <span class="keyword">auto</span> name(StringView name) -&gt; Task&amp;;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">template</span>&lt;<span class="keyword">class</span> Label&gt;</div>
+<div class="line">    <span class="keyword">auto</span> label(Label&amp;&amp; label) -&gt; Task&amp;;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">auto</span> inSet(<span class="keyword">const</span> ScheduleSet&amp; set) -&gt; Task&amp;;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">template</span>&lt;<span class="keyword">class</span>... Tasks&gt;</div>
+<div class="line">    <span class="keyword">auto</span> precede(Tasks&amp;&amp;... tasks) -&gt; Task&amp;;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">template</span>&lt;<span class="keyword">class</span>... Tasks&gt;</div>
+<div class="line">    <span class="keyword">auto</span> succeed(Tasks&amp;&amp;... tasks) -&gt; Task&amp;;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">template</span>&lt;<span class="keyword">class</span> Label&gt;</div>
+<div class="line">    <span class="keyword">auto</span> conflict(Label&amp;&amp; label) -&gt; Task&amp;;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">auto</span> mainThread() -&gt; Task&amp;;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">auto</span> exclusive() -&gt; Task&amp;;</div>
+<div class="line">};</div>
+</div><!-- fragment --><h2>ScheduleSet</h2>
+<div class="fragment"><div class="line"><span class="keyword">class </span>ScheduleSet {</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    <span class="keyword">auto</span> inSet(<span class="keyword">const</span> ScheduleSet&amp; parent) -&gt; ScheduleSet&amp;;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">template</span>&lt;<span class="keyword">class</span>... Nodes&gt;</div>
+<div class="line">    <span class="keyword">auto</span> precede(Nodes&amp;&amp;... nodes) -&gt; ScheduleSet&amp;;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">template</span>&lt;<span class="keyword">class</span>... Nodes&gt;</div>
+<div class="line">    <span class="keyword">auto</span> succeed(Nodes&amp;&amp;... nodes) -&gt; ScheduleSet&amp;;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">auto</span> chain() -&gt; ScheduleSet&amp;;</div>
+<div class="line">};</div>
+</div><!-- fragment --><h2>ラベルとセット名</h2>
+<p>システム間依存にはラベルを使わず、<code>Task</code> オブジェクトを使います。</p>
+<p>セットは <code>configureSet("Name")</code> で作成します。セット名は Graphviz DOT / JSON などの可視化でもそのまま表示名として使います。</p>
+<p>タスクをセットへ所属させるときは、文字列を再指定せず、<code>configureSet</code> が返した <code>ScheduleSet</code> オブジェクトを渡します。これにより、タイプミスやリネーム漏れを避けます。</p>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> setA = schedule.configureSet(<span class="stringliteral">&quot;SetA&quot;</span>);</div>
+<div class="line"><span class="keyword">auto</span> setB = schedule.configureSet(<span class="stringliteral">&quot;SetB&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">setA.precede(setB);</div>
+<div class="line"> </div>
+<div class="line">schedule.emplace(SystemA).inSet(setA);</div>
+<div class="line">schedule.emplace(SystemB).inSet(setB);</div>
+</div><!-- fragment --><p>排他タグと診断用ラベルも <code>StringView</code> を主 API とします。型名や列挙値から文字列を自動生成する API は初期実装では提供しません。</p>
+<p>名前衝突を避けたい場合は、上位モジュール側で名前空間付きの文字列を使います。</p>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> pluginSet = schedule.configureSet(<span class="stringliteral">&quot;Physics.PluginSet&quot;</span>);</div>
+<div class="line"><span class="keyword">auto</span> outputSet = schedule.configureSet(<span class="stringliteral">&quot;Render.OutputSet&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">schedule.emplace(SystemA).inSet(pluginSet);</div>
+</div><!-- fragment --><h2>コンパイル</h2>
+<p><code>compile()</code> は以下の順で実行します。</p>
+<ol type="1">
+<li>システム、セット、ラベルを確定する。</li>
+<li>セット所属とセット階層を展開する。</li>
+<li><code>precede</code> / <code>succeed</code> / <code>chain</code> をエッジへ変換する。</li>
+<li>排他タグから並列実行できないペアを計算する。</li>
+<li>トポロジカルソートで実行順を確定する。</li>
+<li>並列実行可能なバッチまたは ready queue 用の依存カウントを構築する。</li>
+<li>プロファイルと可視化用メタデータを保存する。</li>
+</ol>
+<h2>実行</h2>
+<p><code>ExecutorKind::SingleThreaded</code> の場合は、コンパイル済み順序に従って 1 つずつ実行します。ただし順序制約がないシステムの相対順は仕様上未定義です。</p>
+<p><code>ExecutorKind::MultiThreaded</code> の場合は、依存カウントが 0 で、排他制約がないシステムを <code>ScheduleExecutor</code> に投入します。メインスレッド指定のシステムはワーカーに投入せず、メインスレッド側で依存完了後に実行します。</p>
+<p>状態によって処理を行わない分岐は Scheduler では扱いません。システム関数内で状態を確認して早期 <code>return</code> します。</p>
+<h2>エラーハンドリング</h2>
+<div class="fragment"><div class="line"><span class="keyword">enum class</span> ScheduleBuildErrorType {</div>
+<div class="line">    DuplicateLabel,</div>
+<div class="line">    UnresolvedLabel,</div>
+<div class="line">    DependencyCycle,</div>
+<div class="line">    InvalidSetHierarchy,</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">struct </span>ScheduleBuildError {</div>
+<div class="line">    ScheduleBuildErrorType type;</div>
+<div class="line">    String message;</div>
+<div class="line">    Vector&lt;String&gt; nodes;</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">class </span>ScheduleBuildResult {</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    <span class="keyword">explicit</span> <span class="keyword">operator</span> bool() <span class="keyword">const</span>;</div>
+<div class="line">    <span class="keyword">auto</span> errors() const -&gt; Span&lt;const ScheduleBuildError&gt;;</div>
+<div class="line">    auto warnings() const -&gt; Span&lt;const ScheduleBuildWarning&gt;;</div>
+<div class="line">};</div>
+</div><!-- fragment --><h1>ビルド設定</h1>
+<div class="fragment"><div class="line"><span class="keyword">struct </span>ScheduleBuildSettings {</div>
+<div class="line">    ScheduleBuildLogLevel unresolvedLabel = ScheduleBuildLogLevel::Error;</div>
+<div class="line">    ScheduleBuildLogLevel dependencyCycle = ScheduleBuildLogLevel::Error;</div>
+<div class="line">    <span class="keywordtype">bool</span> validateConflictTag = <span class="keyword">true</span>;</div>
+<div class="line">    <span class="keywordtype">bool</span> stableTopologicalSort = <span class="keyword">true</span>;</div>
+<div class="line">};</div>
+</div><!-- fragment --><ul>
+<li><code>stableTopologicalSort</code> が true の場合、依存関係が同じノードの並びは登録順で安定化する。ただし仕様として順序を保証したい場合は <code>precede</code> / <code>succeed</code> / <code>chain</code> を使う。</li>
+</ul>
+<h1>上位モジュールとの関係</h1>
+<p>Core Scheduler は、スケジュール名や更新フェイズを固定値として持ちません。これらは Engine / App / Editor などの上位モジュールが定義します。</p>
+<p>上位モジュールは、必要に応じて以下のようなスケジュール識別用の型を定義して Core Scheduler に渡します。</p>
+<div class="fragment"><div class="line"><span class="keyword">struct </span>MainSchedule;</div>
+<div class="line"><span class="keyword">struct </span>BackgroundSchedule;</div>
+<div class="line"><span class="keyword">struct </span>CustomSchedule;</div>
+</div><!-- fragment --><p>Core はこれらの意味を解釈しません。実行タイミングや固定時間ステップとの対応は上位モジュール側で管理します。</p>
+<h2>プラグイン向け API</h2>
+<p>プラグインは自分のセットを公開し、他プラグインが順序制約を追加できるようにします。</p>
+<div class="fragment"><div class="line"><span class="keyword">struct </span>ExamplePlugin {</div>
+<div class="line">    <span class="keyword">struct </span>PluginSet;</div>
+<div class="line">    <span class="keyword">struct </span>BaseSet;</div>
+<div class="line">    <span class="keyword">struct </span>OutputSet;</div>
+<div class="line">    <span class="keyword">struct </span>MainSchedule;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">void</span> build(App&amp; app) {</div>
+<div class="line">        <span class="keyword">auto</span> pluginSet = app.configureSet&lt;MainSchedule&gt;(<span class="stringliteral">&quot;Example.PluginSet&quot;</span>);</div>
+<div class="line">        <span class="keyword">auto</span> baseSet = app.configureSet&lt;MainSchedule&gt;(<span class="stringliteral">&quot;Example.BaseSet&quot;</span>);</div>
+<div class="line">        <span class="keyword">auto</span> outputSet = app.configureSet&lt;MainSchedule&gt;(<span class="stringliteral">&quot;Example.OutputSet&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">        pluginSet.succeed(baseSet);</div>
+<div class="line">        pluginSet.precede(outputSet);</div>
+<div class="line"> </div>
+<div class="line">        app.addSystems&lt;MainSchedule&gt;(pluginSet,</div>
+<div class="line">            PluginSystemA,</div>
+<div class="line">            PluginSystemB,</div>
+<div class="line">            PluginSystemC</div>
+<div class="line">        ).chain();</div>
+<div class="line">    }</div>
+<div class="line">};</div>
+</div><!-- fragment --><h2>OneShot</h2>
+<p>イベントやロード完了待ちのように 1 回だけ実行したい処理は、システム内部の状態で制御します。</p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> ShowLoadedMessage(World&amp; world) {</div>
+<div class="line">    <span class="keywordflow">if</span> (!world.isLevelLoaded()) <span class="keywordflow">return</span>;</div>
+<div class="line">    <span class="keywordflow">if</span> (world.hasShownLoadedMessage()) <span class="keywordflow">return</span>;</div>
+<div class="line"> </div>
+<div class="line">    world.showLoadedMessage();</div>
+<div class="line">    world.setShownLoadedMessage(<span class="keyword">true</span>);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Scheduler は OneShot 用の特別な API を持ちません。</p>
+<h1>実装上の注意点</h1>
+<ul>
+<li><code>Schedule</code> は登録フェーズと実行フェーズを明確に分ける。<code>run()</code> 中のシステム追加・削除は初期実装では非対応にする。</li>
+<li>実行中にシステムを有効・無効化したい場合は、システム関数内で状態を確認して早期 <code>return</code> する。</li>
+<li>システム関数が例外を投げた場合は、そのフレームのスケジュール実行を中断し、例外を呼び出し元へ伝播する。並列実行中は最初の例外を保持し、実行中ジョブの完了を待ってから再送出する。</li>
+<li><code>exclusive()</code> は他のすべてのシステムと排他になるものとして扱い、並列実行しない。</li>
+<li><code>mainThread()</code> はスレッド親和性だけを表す。順序制約ではないため、必要な前後関係は別途指定する。</li>
+<li>同じラベルを複数システムに付けたい場合は <code>allowMultiple()</code> のような明示 API を検討する。初期実装では重複ラベルを警告にする。</li>
+<li><code>placeholder</code> は循環参照や初期化順問題を避けるために便利だが、未設定 placeholder は <code>compile()</code> でエラーにする。</li>
+<li>プロファイル情報は Debug ビルドまたは明示有効時のみ収集する。</li>
+</ul>
+<h1>実装ステップ</h1>
+<ol type="1">
+<li><code>Schedule</code>、<code>Task</code>、<code>ScheduleSet</code>、ラベル解決、<code>precede</code> / <code>succeed</code> / <code>chain</code> を実装する。</li>
+<li><code>compile()</code> でトポロジカルソート、循環依存、未解決ラベルを検出する。</li>
+<li><code>SingleThreaded</code> 実行を実装する。</li>
+<li><code>ScheduleExecutor</code> / <code>WorkerPool</code> を使った <code>MultiThreaded</code> 実行を実装する。</li>
+<li>排他タグと排他制約を実装する。</li>
+<li>DOT / JSON 出力とプロファイルを実装する。</li>
+</ol>
+<h1>単体テスト</h1>
+<p>Core-test に以下を追加します。</p>
+<ul>
+<li>依存関係がトポロジカル順に実行される。</li>
+<li><code>chain</code> が登録順に依存エッジを張る。</li>
+<li>循環依存を検出できる。</li>
+<li>未解決ラベルを検出できる。</li>
+<li>セット順序が所属システムへ展開される。</li>
+<li><code>SingleThreaded</code> と <code>MultiThreaded</code> の結果が一致する。</li>
+<li>同じ排他タグを持つシステムは並列実行されない。</li>
+<li><code>mainThread()</code> システムがメインスレッドで実行される。</li>
+<li><code>dumpDot()</code> がノード名とエッジを含むファイルを出力する。</li>
+</ul>
+<p>実行コマンド:</p>
+<div class="fragment"><div class="line">cmd.exe /c Build.bat Core-test</div>
+<div class="line">Build/Bin/Core-test.exe</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d2/de4/_runtime.html">Runtime</a></li><li class="navelem"><a class="el" href="../../d9/dd9/_core.html">Core</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
+</body>
+</html>

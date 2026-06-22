@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: Runtime/Core/Public/Amuse/Core/Misc/MemorySize.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('de/da2/_memory_size_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">MemorySize.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//***********************************************************</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"></span><span class="comment">//***********************************************************</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;Amuse/Core/CoreTypes.h&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span>Amuse::Core {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html">   11</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html">MemorySize</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a731c625ee0450989e902fdf45046ae8b">   13</a></span>        <span class="keywordtype">size_t</span> <a class="code hl_variable" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a731c625ee0450989e902fdf45046ae8b">size</a>; </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keyword">constexpr</span> <a class="code hl_struct" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html">MemorySize</a>() : <a class="code hl_variable" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a731c625ee0450989e902fdf45046ae8b">size</a>(0) {}</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#acff693e2b77f672e0a9b0f28ba5744c1">   17</a></span>        <span class="keyword">constexpr</span> <a class="code hl_function" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#acff693e2b77f672e0a9b0f28ba5744c1">MemorySize</a>(<span class="keywordtype">size_t</span> <a class="code hl_variable" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a731c625ee0450989e902fdf45046ae8b">size</a>) : <a class="code hl_variable" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a731c625ee0450989e902fdf45046ae8b">size</a>(<a class="code hl_variable" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a731c625ee0450989e902fdf45046ae8b">size</a>) {}</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#afd767b9670582c984bd7ac06044541e3">   19</a></span>        <span class="keyword">constexpr</span> <span class="keyword">operator</span> size_t()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a731c625ee0450989e902fdf45046ae8b">size</a>; }</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a6ea3e1a3d8edbbd7ecdb146182f80c49">   21</a></span>        <span class="keyword">constexpr</span> <span class="keywordtype">size_t</span> <a class="code hl_function" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a6ea3e1a3d8edbbd7ecdb146182f80c49">KiB</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a731c625ee0450989e902fdf45046ae8b">size</a> &gt;&gt; 10; }</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a43a93cb49fd0304fa3fdfb11485bc6f3">   23</a></span>        <span class="keyword">constexpr</span> <span class="keywordtype">size_t</span> <a class="code hl_function" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a43a93cb49fd0304fa3fdfb11485bc6f3">MiB</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a731c625ee0450989e902fdf45046ae8b">size</a> &gt;&gt; 20; }</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a83283a3c8568ba55dd693849165a1e3f">   25</a></span>        <span class="keyword">constexpr</span> <span class="keywordtype">size_t</span> <a class="code hl_function" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a83283a3c8568ba55dd693849165a1e3f">GiB</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a731c625ee0450989e902fdf45046ae8b">size</a> &gt;&gt; 30; }</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#abe568d0e04b15b8254981976ec38fd04">   27</a></span>        <span class="keyword">constexpr</span> <span class="keywordtype">size_t</span> <a class="code hl_function" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#abe568d0e04b15b8254981976ec38fd04">TiB</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a731c625ee0450989e902fdf45046ae8b">size</a> &gt;&gt; 40; }</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a6f39dd1f1a12eb0b25cee1bf7bc7f2bc">   29</a></span>        <span class="keyword">constexpr</span> f64 <a class="code hl_function" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a6f39dd1f1a12eb0b25cee1bf7bc7f2bc">KiBF</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> 1.0 * <a class="code hl_variable" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a731c625ee0450989e902fdf45046ae8b">size</a> / (1ull &lt;&lt; 10); }</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a364d7a5815084f0043e4f009d6d6d29f">   31</a></span>        <span class="keyword">constexpr</span> f64 <a class="code hl_function" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a364d7a5815084f0043e4f009d6d6d29f">MiBF</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> 1.0 * <a class="code hl_variable" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a731c625ee0450989e902fdf45046ae8b">size</a> / (1ull &lt;&lt; 20); }</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a7e94ff6aadba68436bac82c153397e90">   33</a></span>        <span class="keyword">constexpr</span> f64 <a class="code hl_function" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a7e94ff6aadba68436bac82c153397e90">GiBF</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> 1.0 * <a class="code hl_variable" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a731c625ee0450989e902fdf45046ae8b">size</a> / (1ull &lt;&lt; 30); }</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a9c28ee226daf33131db20a5eae7b4c96">   35</a></span>        <span class="keyword">constexpr</span> f64 <a class="code hl_function" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a9c28ee226daf33131db20a5eae7b4c96">TiBF</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> 1.0 * <a class="code hl_variable" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a731c625ee0450989e902fdf45046ae8b">size</a> / (1ull &lt;&lt; 40); }</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a26b1103cd401e724f1e2c767dec89de8">   37</a></span>        <span class="keyword">constexpr</span> <span class="keywordtype">size_t</span> <a class="code hl_function" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a26b1103cd401e724f1e2c767dec89de8">KB</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a731c625ee0450989e902fdf45046ae8b">size</a> / 1000ull; }</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a540c39a4f11acf1f8b5a141fe6d612b6">   39</a></span>        <span class="keyword">constexpr</span> <span class="keywordtype">size_t</span> <a class="code hl_function" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a540c39a4f11acf1f8b5a141fe6d612b6">MB</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a731c625ee0450989e902fdf45046ae8b">size</a> / 1000000ull; }</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#ab62f5f9e899c3b1d0e9b108715c0bedc">   41</a></span>        <span class="keyword">constexpr</span> <span class="keywordtype">size_t</span> <a class="code hl_function" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#ab62f5f9e899c3b1d0e9b108715c0bedc">GB</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a731c625ee0450989e902fdf45046ae8b">size</a> / 1000000000ull; }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#aac6e18de2422fb4a09af3b8c1fe09263">   43</a></span>        <span class="keyword">constexpr</span> <span class="keywordtype">size_t</span> <a class="code hl_function" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#aac6e18de2422fb4a09af3b8c1fe09263">TB</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a731c625ee0450989e902fdf45046ae8b">size</a> / 1000000000000ull; }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#aa5d652acaf2e2382656020208ec88b64">   45</a></span>        <span class="keyword">constexpr</span> f64 <a class="code hl_function" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#aa5d652acaf2e2382656020208ec88b64">KBF</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a731c625ee0450989e902fdf45046ae8b">size</a> / 1000.0; }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a0a62c79da4961948514a1cee2dcf8d56">   47</a></span>        <span class="keyword">constexpr</span> f64 <a class="code hl_function" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a0a62c79da4961948514a1cee2dcf8d56">MBF</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a731c625ee0450989e902fdf45046ae8b">size</a> / 1000000.0; }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#abfaa03a1c52fa7bd6cc4ababfe00373f">   49</a></span>        <span class="keyword">constexpr</span> f64 <a class="code hl_function" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#abfaa03a1c52fa7bd6cc4ababfe00373f">GBF</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a731c625ee0450989e902fdf45046ae8b">size</a> / 1000000000.0; }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a2f1449f60d14f93a1f629dc75cbf6f7d">   51</a></span>        <span class="keyword">constexpr</span> f64 <a class="code hl_function" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a2f1449f60d14f93a1f629dc75cbf6f7d">TBF</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a731c625ee0450989e902fdf45046ae8b">size</a> / 1000000000000.0; }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    };</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>}</div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_memory_size_html"><div class="ttname"><a href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html">Amuse::Core::MemorySize</a></div><div class="ttdoc">メモリサイズ値を表す。</div><div class="ttdef"><b>Definition:</b> MemorySize.h:11</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_memory_size_html_a0a62c79da4961948514a1cee2dcf8d56"><div class="ttname"><a href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a0a62c79da4961948514a1cee2dcf8d56">Amuse::Core::MemorySize::MBF</a></div><div class="ttdeci">constexpr f64 MBF() const</div><div class="ttdoc">10進接頭辞の MB 単位へ浮動小数点変換する。</div><div class="ttdef"><b>Definition:</b> MemorySize.h:47</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_memory_size_html_a26b1103cd401e724f1e2c767dec89de8"><div class="ttname"><a href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a26b1103cd401e724f1e2c767dec89de8">Amuse::Core::MemorySize::KB</a></div><div class="ttdeci">constexpr size_t KB() const</div><div class="ttdoc">10進接頭辞の KB 単位へ整数変換する。</div><div class="ttdef"><b>Definition:</b> MemorySize.h:37</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_memory_size_html_a2f1449f60d14f93a1f629dc75cbf6f7d"><div class="ttname"><a href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a2f1449f60d14f93a1f629dc75cbf6f7d">Amuse::Core::MemorySize::TBF</a></div><div class="ttdeci">constexpr f64 TBF() const</div><div class="ttdoc">10進接頭辞の TB 単位へ浮動小数点変換する。</div><div class="ttdef"><b>Definition:</b> MemorySize.h:51</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_memory_size_html_a364d7a5815084f0043e4f009d6d6d29f"><div class="ttname"><a href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a364d7a5815084f0043e4f009d6d6d29f">Amuse::Core::MemorySize::MiBF</a></div><div class="ttdeci">constexpr f64 MiBF() const</div><div class="ttdoc">2進接頭辞の MiB 単位へ浮動小数点変換する。</div><div class="ttdef"><b>Definition:</b> MemorySize.h:31</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_memory_size_html_a43a93cb49fd0304fa3fdfb11485bc6f3"><div class="ttname"><a href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a43a93cb49fd0304fa3fdfb11485bc6f3">Amuse::Core::MemorySize::MiB</a></div><div class="ttdeci">constexpr size_t MiB() const</div><div class="ttdoc">2進接頭辞の MiB 単位へ整数変換する。</div><div class="ttdef"><b>Definition:</b> MemorySize.h:23</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_memory_size_html_a540c39a4f11acf1f8b5a141fe6d612b6"><div class="ttname"><a href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a540c39a4f11acf1f8b5a141fe6d612b6">Amuse::Core::MemorySize::MB</a></div><div class="ttdeci">constexpr size_t MB() const</div><div class="ttdoc">10進接頭辞の MB 単位へ整数変換する。</div><div class="ttdef"><b>Definition:</b> MemorySize.h:39</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_memory_size_html_a6ea3e1a3d8edbbd7ecdb146182f80c49"><div class="ttname"><a href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a6ea3e1a3d8edbbd7ecdb146182f80c49">Amuse::Core::MemorySize::KiB</a></div><div class="ttdeci">constexpr size_t KiB() const</div><div class="ttdoc">2進接頭辞の KiB 単位へ整数変換する。</div><div class="ttdef"><b>Definition:</b> MemorySize.h:21</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_memory_size_html_a6f39dd1f1a12eb0b25cee1bf7bc7f2bc"><div class="ttname"><a href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a6f39dd1f1a12eb0b25cee1bf7bc7f2bc">Amuse::Core::MemorySize::KiBF</a></div><div class="ttdeci">constexpr f64 KiBF() const</div><div class="ttdoc">2進接頭辞の KiB 単位へ浮動小数点変換する。</div><div class="ttdef"><b>Definition:</b> MemorySize.h:29</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_memory_size_html_a731c625ee0450989e902fdf45046ae8b"><div class="ttname"><a href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a731c625ee0450989e902fdf45046ae8b">Amuse::Core::MemorySize::size</a></div><div class="ttdeci">size_t size</div><div class="ttdoc">サイズ</div><div class="ttdef"><b>Definition:</b> MemorySize.h:13</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_memory_size_html_a7e94ff6aadba68436bac82c153397e90"><div class="ttname"><a href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a7e94ff6aadba68436bac82c153397e90">Amuse::Core::MemorySize::GiBF</a></div><div class="ttdeci">constexpr f64 GiBF() const</div><div class="ttdoc">2進接頭辞の GiB 単位へ浮動小数点変換する。</div><div class="ttdef"><b>Definition:</b> MemorySize.h:33</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_memory_size_html_a83283a3c8568ba55dd693849165a1e3f"><div class="ttname"><a href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a83283a3c8568ba55dd693849165a1e3f">Amuse::Core::MemorySize::GiB</a></div><div class="ttdeci">constexpr size_t GiB() const</div><div class="ttdoc">2進接頭辞の GiB 単位へ整数変換する。</div><div class="ttdef"><b>Definition:</b> MemorySize.h:25</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_memory_size_html_a9c28ee226daf33131db20a5eae7b4c96"><div class="ttname"><a href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a9c28ee226daf33131db20a5eae7b4c96">Amuse::Core::MemorySize::TiBF</a></div><div class="ttdeci">constexpr f64 TiBF() const</div><div class="ttdoc">2進接頭辞の TiB 単位へ浮動小数点変換する。</div><div class="ttdef"><b>Definition:</b> MemorySize.h:35</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_memory_size_html_aa5d652acaf2e2382656020208ec88b64"><div class="ttname"><a href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#aa5d652acaf2e2382656020208ec88b64">Amuse::Core::MemorySize::KBF</a></div><div class="ttdeci">constexpr f64 KBF() const</div><div class="ttdoc">10進接頭辞の KB 単位へ浮動小数点変換する。</div><div class="ttdef"><b>Definition:</b> MemorySize.h:45</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_memory_size_html_aac6e18de2422fb4a09af3b8c1fe09263"><div class="ttname"><a href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#aac6e18de2422fb4a09af3b8c1fe09263">Amuse::Core::MemorySize::TB</a></div><div class="ttdeci">constexpr size_t TB() const</div><div class="ttdoc">10進接頭辞の TB 単位へ整数変換する。</div><div class="ttdef"><b>Definition:</b> MemorySize.h:43</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_memory_size_html_ab62f5f9e899c3b1d0e9b108715c0bedc"><div class="ttname"><a href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#ab62f5f9e899c3b1d0e9b108715c0bedc">Amuse::Core::MemorySize::GB</a></div><div class="ttdeci">constexpr size_t GB() const</div><div class="ttdoc">10進接頭辞の GB 単位へ整数変換する。</div><div class="ttdef"><b>Definition:</b> MemorySize.h:41</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_memory_size_html_abe568d0e04b15b8254981976ec38fd04"><div class="ttname"><a href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#abe568d0e04b15b8254981976ec38fd04">Amuse::Core::MemorySize::TiB</a></div><div class="ttdeci">constexpr size_t TiB() const</div><div class="ttdoc">2進接頭辞の TiB 単位へ整数変換する。</div><div class="ttdef"><b>Definition:</b> MemorySize.h:27</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_memory_size_html_abfaa03a1c52fa7bd6cc4ababfe00373f"><div class="ttname"><a href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#abfaa03a1c52fa7bd6cc4ababfe00373f">Amuse::Core::MemorySize::GBF</a></div><div class="ttdeci">constexpr f64 GBF() const</div><div class="ttdoc">10進接頭辞の GB 単位へ浮動小数点変換する。</div><div class="ttdef"><b>Definition:</b> MemorySize.h:49</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_memory_size_html_acff693e2b77f672e0a9b0f28ba5744c1"><div class="ttname"><a href="../../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#acff693e2b77f672e0a9b0f28ba5744c1">Amuse::Core::MemorySize::MemorySize</a></div><div class="ttdeci">constexpr MemorySize(size_t size)</div><div class="ttdoc">MemorySize を初期化する。</div><div class="ttdef"><b>Definition:</b> MemorySize.h:17</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_4f6666a8f2ab10bc970eb7559668f031.html">Runtime</a></li><li class="navelem"><a class="el" href="../../dir_b05c51a7dc61612d752a1d5ca497c54f.html">Core</a></li><li class="navelem"><a class="el" href="../../dir_2704b46b7ef0c98b3ce7738c20dc746e.html">Public</a></li><li class="navelem"><a class="el" href="../../dir_02338155ec8ce976dea76e6f650abf75.html">Amuse</a></li><li class="navelem"><a class="el" href="../../dir_a813c3653225bc50968bea57534cde90.html">Core</a></li><li class="navelem"><a class="el" href="../../dir_0bd0ac283943d945b1cfbbc22cf09ec5.html">Misc</a></li><li class="navelem"><b>MemorySize.h</b></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
+</body>
+</html>
