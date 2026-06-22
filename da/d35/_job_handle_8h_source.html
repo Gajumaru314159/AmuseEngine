@@ -3,19 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AmuseEngine: Runtime/Core/Public/Amuse/Core/Job/JobHandle.h ソースファイル</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../jquery.js"></script>
-<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
 <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
 <script type="text/javascript" src="../../navtreedata.js"></script>
 <script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="../../style.css" rel="stylesheet" type="text/css"/>
@@ -36,23 +42,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.6 -->
+<!-- 構築: Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('../../',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
 });
-/* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -65,10 +93,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('da/d35/_job_handle_8h_source.html','../../'); initResizable(); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('da/d35/_job_handle_8h_source.html','../../',''); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -96,52 +123,55 @@ $(document).ready(function(){initNavTree('da/d35/_job_handle_8h_source.html','..
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//***********************************************************</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"></span><span class="comment">//***********************************************************</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//***********************************************************</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;Amuse/Core/CorePrivate.h&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span>Amuse::Core {</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keyword">class </span>Job;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keyword">class </span>JobGroup;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../da/d98/class_amuse_1_1_core_1_1_job_handle.html">   17</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../da/d98/class_amuse_1_1_core_1_1_job_handle.html">JobHandle</a> : <a class="code hl_class" href="../../dc/d43/class_amuse_1_1_core_1_1_noncopyable.html">Noncopyable</a>, <a class="code hl_class" href="../../d6/d34/class_amuse_1_1_core_1_1_nonmovable.html">Nonmovable</a> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keyword">class </span><a class="code hl_class" href="../../d0/d57/class_amuse_1_1_core_1_1_job_group.html">JobGroup</a>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span></div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../da/d98/class_amuse_1_1_core_1_1_job_handle.html">   17</a></span>    <span class="keyword">class </span>JobHandle : <a class="code hl_class" href="../../dc/d43/class_amuse_1_1_core_1_1_noncopyable.html">Noncopyable</a>, <a class="code hl_class" href="../../d6/d34/class_amuse_1_1_core_1_1_nonmovable.html">Nonmovable</a> {</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <a class="code hl_class" href="../../da/d98/class_amuse_1_1_core_1_1_job_handle.html">JobHandle</a>();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        JobHandle();</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="../../da/d98/class_amuse_1_1_core_1_1_job_handle.html#a9f89ea98b0123a26510600343150c9cd">   21</a></span>        <a class="code hl_function" href="../../da/d98/class_amuse_1_1_core_1_1_job_handle.html#a9f89ea98b0123a26510600343150c9cd">JobHandle</a>(Job&amp;);</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <a class="code hl_class" href="../../da/d98/class_amuse_1_1_core_1_1_job_handle.html">~JobHandle</a>();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        ~JobHandle();</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="../../da/d98/class_amuse_1_1_core_1_1_job_handle.html#aa5f6051e4b9a827878df9382d45b70fa">   24</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../da/d98/class_amuse_1_1_core_1_1_job_handle.html#aa5f6051e4b9a827878df9382d45b70fa">release</a>();</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        Job* m_job = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    };</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../dc/d1f/class_amuse_1_1_core_1_1_job_group_handle.html">   33</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../dc/d1f/class_amuse_1_1_core_1_1_job_group_handle.html">JobGroupHandle</a> : <a class="code hl_class" href="../../dc/d43/class_amuse_1_1_core_1_1_noncopyable.html">Noncopyable</a>, <a class="code hl_class" href="../../d6/d34/class_amuse_1_1_core_1_1_nonmovable.html">Nonmovable</a> {</div>
+</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span></div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="};">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../dc/d1f/class_amuse_1_1_core_1_1_job_group_handle.html">   33</a></span>    <span class="keyword">class </span>JobGroupHandle : <a class="code hl_class" href="../../dc/d43/class_amuse_1_1_core_1_1_noncopyable.html">Noncopyable</a>, <a class="code hl_class" href="../../d6/d34/class_amuse_1_1_core_1_1_nonmovable.html">Nonmovable</a> {</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <a class="code hl_class" href="../../dc/d1f/class_amuse_1_1_core_1_1_job_group_handle.html">JobGroupHandle</a>();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        JobGroupHandle();</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../dc/d1f/class_amuse_1_1_core_1_1_job_group_handle.html#a7f437ad7349c33145951a40ab171bf35">   37</a></span>        <a class="code hl_function" href="../../dc/d1f/class_amuse_1_1_core_1_1_job_group_handle.html#a7f437ad7349c33145951a40ab171bf35">JobGroupHandle</a>(<a class="code hl_class" href="../../d0/d57/class_amuse_1_1_core_1_1_job_group.html">JobGroup</a>&amp;);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <a class="code hl_class" href="../../dc/d1f/class_amuse_1_1_core_1_1_job_group_handle.html">~JobGroupHandle</a>();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        ~JobGroupHandle();</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../dc/d1f/class_amuse_1_1_core_1_1_job_group_handle.html#a62b6407c6ec3d26d6df588fd07b29f71">   40</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d1f/class_amuse_1_1_core_1_1_job_group_handle.html#a62b6407c6ec3d26d6df588fd07b29f71">release</a>();</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <a class="code hl_class" href="../../d0/d57/class_amuse_1_1_core_1_1_job_group.html">JobGroup</a>* m_group = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    };</div>
+</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>}</div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_job_group_handle_html"><div class="ttname"><a href="../../dc/d1f/class_amuse_1_1_core_1_1_job_group_handle.html">Amuse::Core::JobGroupHandle</a></div><div class="ttdoc">ジョブ・グループ・ハンドル</div><div class="ttdef"><b>Definition:</b> JobHandle.h:33</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_job_group_handle_html_a62b6407c6ec3d26d6df588fd07b29f71"><div class="ttname"><a href="../../dc/d1f/class_amuse_1_1_core_1_1_job_group_handle.html#a62b6407c6ec3d26d6df588fd07b29f71">Amuse::Core::JobGroupHandle::release</a></div><div class="ttdeci">void release()</div><div class="ttdoc">所有権を解放する。</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_job_group_handle_html_a7f437ad7349c33145951a40ab171bf35"><div class="ttname"><a href="../../dc/d1f/class_amuse_1_1_core_1_1_job_group_handle.html#a7f437ad7349c33145951a40ab171bf35">Amuse::Core::JobGroupHandle::JobGroupHandle</a></div><div class="ttdeci">JobGroupHandle(JobGroup &amp;)</div><div class="ttdoc">指定ジョブグループの寿命監視ハンドルを初期化する。</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_job_group_html"><div class="ttname"><a href="../../d0/d57/class_amuse_1_1_core_1_1_job_group.html">Amuse::Core::JobGroup</a></div><div class="ttdoc">ジョブ・グループ</div><div class="ttdef"><b>Definition:</b> JobGroup.h:20</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_job_handle_html"><div class="ttname"><a href="../../da/d98/class_amuse_1_1_core_1_1_job_handle.html">Amuse::Core::JobHandle</a></div><div class="ttdoc">ジョブ・ハンドル</div><div class="ttdef"><b>Definition:</b> JobHandle.h:17</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_job_group_html"><div class="ttname"><a href="../../d0/d57/class_amuse_1_1_core_1_1_job_group.html">Amuse::Core::JobGroup</a></div><div class="ttdoc">ジョブ・グループ</div><div class="ttdef"><b>Definition</b> JobGroup.h:20</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_job_handle_html_a9f89ea98b0123a26510600343150c9cd"><div class="ttname"><a href="../../da/d98/class_amuse_1_1_core_1_1_job_handle.html#a9f89ea98b0123a26510600343150c9cd">Amuse::Core::JobHandle::JobHandle</a></div><div class="ttdeci">JobHandle(Job &amp;)</div><div class="ttdoc">指定ジョブの寿命監視ハンドルを初期化する。</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_job_handle_html_aa5f6051e4b9a827878df9382d45b70fa"><div class="ttname"><a href="../../da/d98/class_amuse_1_1_core_1_1_job_handle.html#aa5f6051e4b9a827878df9382d45b70fa">Amuse::Core::JobHandle::release</a></div><div class="ttdeci">void release()</div><div class="ttdoc">所有権を解放する。</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_noncopyable_html"><div class="ttname"><a href="../../dc/d43/class_amuse_1_1_core_1_1_noncopyable.html">Amuse::Core::Noncopyable</a></div><div class="ttdoc">クラスコピーの禁止</div><div class="ttdef"><b>Definition:</b> Noncopyable.h:13</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_nonmovable_html"><div class="ttname"><a href="../../d6/d34/class_amuse_1_1_core_1_1_nonmovable.html">Amuse::Core::Nonmovable</a></div><div class="ttdoc">クラスムーブの禁止</div><div class="ttdef"><b>Definition:</b> Nonmovable.h:13</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_noncopyable_html"><div class="ttname"><a href="../../dc/d43/class_amuse_1_1_core_1_1_noncopyable.html">Amuse::Core::Noncopyable</a></div><div class="ttdoc">クラスコピーの禁止</div><div class="ttdef"><b>Definition</b> Noncopyable.h:13</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_nonmovable_html"><div class="ttname"><a href="../../d6/d34/class_amuse_1_1_core_1_1_nonmovable.html">Amuse::Core::Nonmovable</a></div><div class="ttdoc">クラスムーブの禁止</div><div class="ttdef"><b>Definition</b> Nonmovable.h:13</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_4f6666a8f2ab10bc970eb7559668f031.html">Runtime</a></li><li class="navelem"><a class="el" href="../../dir_b05c51a7dc61612d752a1d5ca497c54f.html">Core</a></li><li class="navelem"><a class="el" href="../../dir_2704b46b7ef0c98b3ce7738c20dc746e.html">Public</a></li><li class="navelem"><a class="el" href="../../dir_02338155ec8ce976dea76e6f650abf75.html">Amuse</a></li><li class="navelem"><a class="el" href="../../dir_a813c3653225bc50968bea57534cde90.html">Core</a></li><li class="navelem"><a class="el" href="../../dir_a920c2b13d6ede0df0847a060e006f1c.html">Job</a></li><li class="navelem"><b>JobHandle.h</b></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="navelem"><b>Runtime</b></li><li class="navelem"><b>Core</b></li><li class="navelem"><b>Public</b></li><li class="navelem"><b>Amuse</b></li><li class="navelem"><b>Core</b></li><li class="navelem"><b>Job</b></li><li class="navelem"><b>JobHandle.h</b></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

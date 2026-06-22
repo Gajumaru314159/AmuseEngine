@@ -3,19 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AmuseEngine: クラスメンバ - 関数</title>
+<link rel="icon" href="logo.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="style.css" rel="stylesheet" type="text/css"/>
@@ -36,23 +42,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.6 -->
+<!-- 構築: Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
 });
-/* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -65,10 +93,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('functions_func_l.html',''); initResizable(); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('functions_func_l.html','',''); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -92,9 +119,11 @@ $(document).ready(function(){initNavTree('functions_func_l.html',''); initResiza
 </div>
 
 <div class="contents">
-&#160;
+<div class="textblock">&#160;</div><br/>
+<div class="qindex"><a class="qindex" href="functions_func.html#index_a">A</a><div class="alphasepar"></div><a class="qindex" href="functions_func_b.html#index_b">B</a><div class="alphasepar"></div><a class="qindex" href="functions_func_c.html#index_c">C</a><div class="alphasepar"></div><a class="qindex" href="functions_func_d.html#index_d">D</a><div class="alphasepar"></div><a class="qindex" href="functions_func_e.html#index_e">E</a><div class="alphasepar"></div><a class="qindex" href="functions_func_f.html#index_f">F</a><div class="alphasepar"></div><a class="qindex" href="functions_func_g.html#index_g">G</a><div class="alphasepar"></div><a class="qindex" href="functions_func_h.html#index_h">H</a><div class="alphasepar"></div><a class="qindex" href="functions_func_i.html#index_i">I</a><div class="alphasepar"></div><a class="qindex" href="functions_func_j.html#index_j">J</a><div class="alphasepar"></div><a class="qindex" href="functions_func_k.html#index_k">K</a><div class="alphasepar"></div><a class="qindex" href="functions_func_l.html#index_l">L</a><div class="alphasepar"></div><a class="qindex" href="functions_func_m.html#index_m">M</a><div class="alphasepar"></div><a class="qindex" href="functions_func_n.html#index_n">N</a><div class="alphasepar"></div><a class="qindex" href="functions_func_o.html#index_o">O</a><div class="alphasepar"></div><a class="qindex" href="functions_func_p.html#index_p">P</a><div class="alphasepar"></div><a class="qindex" href="functions_func_q.html#index_q">Q</a><div class="alphasepar"></div><a class="qindex" href="functions_func_r.html#index_r">R</a><div class="alphasepar"></div><a class="qindex" href="functions_func_s.html#index_s">S</a><div class="alphasepar"></div><a class="qindex" href="functions_func_t.html#index_t">T</a><div class="alphasepar"></div><a class="qindex" href="functions_func_u.html#index_u">U</a><div class="alphasepar"></div><a class="qindex" href="functions_func_v.html#index_v">V</a><div class="alphasepar"></div><a class="qindex" href="functions_func_w.html#index_w">W</a><div class="alphasepar"></div><a class="qindex" href="functions_func_x.html#index_x">X</a><div class="alphasepar"></div><a class="qindex" href="functions_func_y.html#index_y">Y</a><div class="alphasepar"></div><a class="qindex" href="functions_func__.html#index__">_</a><div class="alphasepar"></div><a class="qindex" href="functions_func_~.html#index_~">~</a></div>
 
-<h3><a id="index_l" name="index_l"></a>- l -</h3><ul>
+
+<h3 class="doxsection"><a id="index_l" name="index_l"></a>- l -</h3><ul>
 <li>label()&#160;:&#160;<a class="el" href="db/d92/class_amuse_1_1_core_1_1_task.html#aaac271042e6013fdf2d70d8d7129c1e0">Amuse::Core::Task</a></li>
 <li>language()&#160;:&#160;<a class="el" href="db/d8d/class_amuse_1_1_core_1_1_locale.html#a241189f9a6942f860e2d393ef7c951c7">Amuse::Core::Locale</a></li>
 <li>left()&#160;:&#160;<a class="el" href="d3/da5/struct_amuse_1_1_core_1_1_quat.html#ad152d03a77fbc013124c2b0a589cdbb4">Amuse::Core::Quat</a>, <a class="el" href="da/d68/struct_amuse_1_1_core_1_1_rot.html#a7c3c33f511700ad0c52da403f4f4c32b">Amuse::Core::Rot</a></li>
@@ -107,8 +136,8 @@ $(document).ready(function(){initNavTree('functions_func_l.html',''); initResiza
 <li>line()&#160;:&#160;<a class="el" href="d4/d75/class_amuse_1_1_core_1_1_o_b_j.html#a2d5c13aa68c3d2ed074d74c00626983c">Amuse::Core::OBJ</a>, <a class="el" href="da/d0a/class_amuse_1_1_core_1_1_xml_exception.html#a7ae1ae7866a4d65f75eb5d8f007f1129">Amuse::Core::XmlException</a></li>
 <li>LineBreakSplitView()&#160;:&#160;<a class="el" href="dc/d20/class_amuse_1_1_core_1_1_line_break_split_view.html#a28999071612af252bf9b3403f9c4500a">Amuse::Core::LineBreakSplitView</a></li>
 <li>Link()&#160;:&#160;<a class="el" href="d6/d66/struct_amuse_1_1_core_1_1_type_register.html#a1912865c1fdfa15eebb126ff5c871720">Amuse::Core::TypeRegister</a>, <a class="el" href="d3/d48/struct_amuse_1_1_core_1_1_type_register_template.html#adcd1d7b48699521817da0762af8bd38f">Amuse::Core::TypeRegisterTemplate&lt; T &gt;</a></li>
-<li>load()&#160;:&#160;<a class="el" href="df/d76/class_amuse_1_1_core_1_1_i_n_i.html#a393d0746b4443f020644b60258a9c996">Amuse::Core::INI</a>, <a class="el" href="dd/d97/class_amuse_1_1_core_1_1_xml.html#ad01afa2d3349e213e5d26a14f8250747">Amuse::Core::Xml</a></li>
 <li>Load()&#160;:&#160;<a class="el" href="d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html#a6f2c64ee5a02f2dfd3ed130121967a2a">Amuse::RHI::Shader</a>, <a class="el" href="de/d60/class_amuse_1_1_r_h_i_1_1_texture.html#afb48065d11878f36d269e04e4465364e">Amuse::RHI::Texture</a></li>
+<li>load()&#160;:&#160;<a class="el" href="df/d76/class_amuse_1_1_core_1_1_i_n_i.html#a393d0746b4443f020644b60258a9c996">Amuse::Core::INI</a>, <a class="el" href="dd/d97/class_amuse_1_1_core_1_1_xml.html#ad01afa2d3349e213e5d26a14f8250747">Amuse::Core::Xml</a></li>
 <li>LoadPS()&#160;:&#160;<a class="el" href="d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html#a0ff6b134657d350d5a63d22e64da40e6">Amuse::RHI::Shader</a></li>
 <li>loadShader()&#160;:&#160;<a class="el" href="d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#a6fca285f55dddc49c3ee7bebe524915c">Amuse::RHI::Device</a>, <a class="el" href="d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#aac70e019e094dd398be78b9a8ab1f8b6">Amuse::RHI::DirectX12Device</a></li>
 <li>LoadVS()&#160;:&#160;<a class="el" href="d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html#a88bfbcd09b53936473def82eaf0805a0">Amuse::RHI::Shader</a></li>
@@ -122,10 +151,11 @@ $(document).ready(function(){initNavTree('functions_func_l.html',''); initResiza
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

@@ -3,19 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AmuseEngine: Amuse::Core::TaskGroup クラス</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../jquery.js"></script>
-<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
 <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
 <script type="text/javascript" src="../../navtreedata.js"></script>
 <script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="../../style.css" rel="stylesheet" type="text/css"/>
@@ -36,23 +42,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.6 -->
+<!-- 構築: Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('../../',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
 });
-/* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -65,10 +93,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('de/d28/class_amuse_1_1_core_1_1_task_group.html','../../'); initResizable(); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('de/d28/class_amuse_1_1_core_1_1_task_group.html','../../','d1/df9/class_amuse_1_1_core_1_1_task_group-members'); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -101,48 +128,44 @@ $(document).ready(function(){initNavTree('de/d28/class_amuse_1_1_core_1_1_task_g
 <div class="contents">
 
 <p>タスクグループを表す。  
- <a href="../../de/d28/class_amuse_1_1_core_1_1_task_group.html#details">[詳解]</a></p>
+ <a href="#details">[詳解]</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d4/dfa/_scheduler_8h_source.html">Scheduler.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:ae96746548c37c60ac817c4b7ce27c54f"><td class="memItemLeft" align="right" valign="top"><a id="ae96746548c37c60ac817c4b7ce27c54f" name="ae96746548c37c60ac817c4b7ce27c54f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>TaskGroup</b> ()=default</td></tr>
+<tr class="memitem:ae96746548c37c60ac817c4b7ce27c54f" id="r_ae96746548c37c60ac817c4b7ce27c54f"><td class="memItemLeft"><a id="ae96746548c37c60ac817c4b7ce27c54f" name="ae96746548c37c60ac817c4b7ce27c54f"></a>
+&#160;</td><td class="memItemRight"><b>TaskGroup</b> ()=default</td></tr>
 <tr class="memdesc:ae96746548c37c60ac817c4b7ce27c54f"><td class="mdescLeft">&#160;</td><td class="mdescRight">空のタスクグループを作成 <br /></td></tr>
-<tr class="separator:ae96746548c37c60ac817c4b7ce27c54f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5cd5118e3bae11e21995500e9395302"><td class="memItemLeft" align="right" valign="top"><a id="ae5cd5118e3bae11e21995500e9395302" name="ae5cd5118e3bae11e21995500e9395302"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>chain</b> () -&gt; <a class="el" href="../../de/d28/class_amuse_1_1_core_1_1_task_group.html">TaskGroup</a> &amp;</td></tr>
+<tr class="memitem:ae5cd5118e3bae11e21995500e9395302" id="r_ae5cd5118e3bae11e21995500e9395302"><td class="memItemLeft"><a id="ae5cd5118e3bae11e21995500e9395302" name="ae5cd5118e3bae11e21995500e9395302"></a>
+auto&#160;</td><td class="memItemRight"><b>chain</b> () -&gt; <a class="el" href="#ae96746548c37c60ac817c4b7ce27c54f">TaskGroup</a> &amp;</td></tr>
 <tr class="memdesc:ae5cd5118e3bae11e21995500e9395302"><td class="mdescLeft">&#160;</td><td class="mdescRight">グループ内のタスクを登録順に直列化 <br /></td></tr>
-<tr class="separator:ae5cd5118e3bae11e21995500e9395302"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02b13990782cf5b780a09e4ee5295892"><td class="memItemLeft" align="right" valign="top"><a id="a02b13990782cf5b780a09e4ee5295892" name="a02b13990782cf5b780a09e4ee5295892"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>inSet</b> (const <a class="el" href="../../dd/dff/class_amuse_1_1_core_1_1_schedule_set.html">ScheduleSet</a> &amp;set) -&gt; <a class="el" href="../../de/d28/class_amuse_1_1_core_1_1_task_group.html">TaskGroup</a> &amp;</td></tr>
+<tr class="memitem:a02b13990782cf5b780a09e4ee5295892" id="r_a02b13990782cf5b780a09e4ee5295892"><td class="memItemLeft"><a id="a02b13990782cf5b780a09e4ee5295892" name="a02b13990782cf5b780a09e4ee5295892"></a>
+auto&#160;</td><td class="memItemRight"><b>inSet</b> (const <a class="el" href="../../dd/dff/class_amuse_1_1_core_1_1_schedule_set.html">ScheduleSet</a> &amp;set) -&gt; <a class="el" href="#ae96746548c37c60ac817c4b7ce27c54f">TaskGroup</a> &amp;</td></tr>
 <tr class="memdesc:a02b13990782cf5b780a09e4ee5295892"><td class="mdescLeft">&#160;</td><td class="mdescRight">グループ内のすべてのタスクをセットに所属させる <br /></td></tr>
-<tr class="separator:a02b13990782cf5b780a09e4ee5295892"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9fcf5dff6b496b350d0745c6eea52d61"><td class="memItemLeft" align="right" valign="top"><a id="a9fcf5dff6b496b350d0745c6eea52d61" name="a9fcf5dff6b496b350d0745c6eea52d61"></a>
-const Vector&lt; <a class="el" href="../../db/d92/class_amuse_1_1_core_1_1_task.html">Task</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>tasks</b> () const</td></tr>
+<tr class="memitem:a9fcf5dff6b496b350d0745c6eea52d61" id="r_a9fcf5dff6b496b350d0745c6eea52d61"><td class="memItemLeft"><a id="a9fcf5dff6b496b350d0745c6eea52d61" name="a9fcf5dff6b496b350d0745c6eea52d61"></a>
+const Vector&lt; <a class="el" href="../../db/d92/class_amuse_1_1_core_1_1_task.html">Task</a> &gt; &amp;&#160;</td><td class="memItemRight"><b>tasks</b> () const</td></tr>
 <tr class="memdesc:a9fcf5dff6b496b350d0745c6eea52d61"><td class="mdescLeft">&#160;</td><td class="mdescRight">登録済みタスク一覧を取得 <br /></td></tr>
-<tr class="separator:a9fcf5dff6b496b350d0745c6eea52d61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
 フレンド</h2></td></tr>
-<tr class="memitem:a7f7974bf2cc31313229d9bc494e548aa"><td class="memTemplParams" colspan="2"><a id="a7f7974bf2cc31313229d9bc494e548aa" name="a7f7974bf2cc31313229d9bc494e548aa"></a>
+<tr class="memitem:a7f7974bf2cc31313229d9bc494e548aa" id="r_a7f7974bf2cc31313229d9bc494e548aa"><td class="memTemplParams" colspan="2"><a id="a7f7974bf2cc31313229d9bc494e548aa" name="a7f7974bf2cc31313229d9bc494e548aa"></a>
 template&lt;class... Args&gt; </td></tr>
-<tr class="memitem:a7f7974bf2cc31313229d9bc494e548aa"><td class="memTemplItemLeft" align="right" valign="top">class&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Schedule</b></td></tr>
-<tr class="separator:a7f7974bf2cc31313229d9bc494e548aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f7974bf2cc31313229d9bc494e548aa template"><td class="memItemLeft">class&#160;</td><td class="memItemRight"><b>Schedule</b></td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
 <div class="textblock"><p>タスクグループを表す。 </p>
 </div><hr/>このクラス詳解は次のファイルから抽出されました:<ul>
 <li>Runtime/Core/Public/Amuse/Core/Misc/<a class="el" href="../../d4/dfa/_scheduler_8h_source.html">Scheduler.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>Amuse</b></li><li class="navelem"><b>Core</b></li><li class="navelem"><a class="el" href="../../de/d28/class_amuse_1_1_core_1_1_task_group.html">TaskGroup</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><b>Core</b></li><li class="navelem"><a href="../../de/d28/class_amuse_1_1_core_1_1_task_group.html">TaskGroup</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

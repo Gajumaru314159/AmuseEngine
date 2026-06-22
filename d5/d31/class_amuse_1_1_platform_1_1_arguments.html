@@ -3,19 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AmuseEngine: Amuse::Platform::Arguments クラス</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../jquery.js"></script>
-<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
 <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
 <script type="text/javascript" src="../../navtreedata.js"></script>
 <script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="../../style.css" rel="stylesheet" type="text/css"/>
@@ -36,23 +42,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.6 -->
+<!-- 構築: Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('../../',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
 });
-/* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -65,10 +93,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('d5/d31/class_amuse_1_1_platform_1_1_arguments.html','../../'); initResizable(); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d5/d31/class_amuse_1_1_platform_1_1_arguments.html','../../','dc/d70/class_amuse_1_1_platform_1_1_arguments-members'); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -101,54 +128,45 @@ $(document).ready(function(){initNavTree('d5/d31/class_amuse_1_1_platform_1_1_ar
 <div class="contents">
 
 <p>コマンドライン引数  
- <a href="../../d5/d31/class_amuse_1_1_platform_1_1_arguments.html#details">[詳解]</a></p>
+ <a href="#details">[詳解]</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d3/da0/_arguments_8h_source.html">Arguments.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
 公開型</h2></td></tr>
-<tr class="memitem:a36f608d5c967fffbef96775dce283616"><td class="memItemLeft" align="right" valign="top"><a id="a36f608d5c967fffbef96775dce283616" name="a36f608d5c967fffbef96775dce283616"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>container_type</b> = Vector&lt; <a class="el" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a> &gt;</td></tr>
+<tr class="memitem:a36f608d5c967fffbef96775dce283616" id="r_a36f608d5c967fffbef96775dce283616"><td class="memItemLeft"><a id="a36f608d5c967fffbef96775dce283616" name="a36f608d5c967fffbef96775dce283616"></a>
+using&#160;</td><td class="memItemRight"><b>container_type</b> = Vector&lt;String&gt;</td></tr>
 <tr class="memdesc:a36f608d5c967fffbef96775dce283616"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数コンテナ <br /></td></tr>
-<tr class="separator:a36f608d5c967fffbef96775dce283616"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a276cf6221afe90ff69dfb04e4504d30c"><td class="memItemLeft" align="right" valign="top"><a id="a276cf6221afe90ff69dfb04e4504d30c" name="a276cf6221afe90ff69dfb04e4504d30c"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>iterator</b> = container_type::iterator</td></tr>
+<tr class="memitem:a276cf6221afe90ff69dfb04e4504d30c" id="r_a276cf6221afe90ff69dfb04e4504d30c"><td class="memItemLeft"><a id="a276cf6221afe90ff69dfb04e4504d30c" name="a276cf6221afe90ff69dfb04e4504d30c"></a>
+using&#160;</td><td class="memItemRight"><b>iterator</b> = container_type::iterator</td></tr>
 <tr class="memdesc:a276cf6221afe90ff69dfb04e4504d30c"><td class="mdescLeft">&#160;</td><td class="mdescRight">イテレータ <br /></td></tr>
-<tr class="separator:a276cf6221afe90ff69dfb04e4504d30c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0331cb5e94f52129ee86fa0a03b8ce0f"><td class="memItemLeft" align="right" valign="top"><a id="a0331cb5e94f52129ee86fa0a03b8ce0f" name="a0331cb5e94f52129ee86fa0a03b8ce0f"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>const_iterator</b> = container_type::const_iterator</td></tr>
+<tr class="memitem:a0331cb5e94f52129ee86fa0a03b8ce0f" id="r_a0331cb5e94f52129ee86fa0a03b8ce0f"><td class="memItemLeft"><a id="a0331cb5e94f52129ee86fa0a03b8ce0f" name="a0331cb5e94f52129ee86fa0a03b8ce0f"></a>
+using&#160;</td><td class="memItemRight"><b>const_iterator</b> = container_type::const_iterator</td></tr>
 <tr class="memdesc:a0331cb5e94f52129ee86fa0a03b8ce0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">constイテレータ <br /></td></tr>
-<tr class="separator:a0331cb5e94f52129ee86fa0a03b8ce0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:a6ed050133bc4abf80dc08004218e7757"><td class="memItemLeft" align="right" valign="top"><a id="a6ed050133bc4abf80dc08004218e7757" name="a6ed050133bc4abf80dc08004218e7757"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Arguments</b> ()</td></tr>
+<tr class="memitem:a6ed050133bc4abf80dc08004218e7757" id="r_a6ed050133bc4abf80dc08004218e7757"><td class="memItemLeft"><a id="a6ed050133bc4abf80dc08004218e7757" name="a6ed050133bc4abf80dc08004218e7757"></a>
+&#160;</td><td class="memItemRight"><b>Arguments</b> ()</td></tr>
 <tr class="memdesc:a6ed050133bc4abf80dc08004218e7757"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ <br /></td></tr>
-<tr class="separator:a6ed050133bc4abf80dc08004218e7757"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9f2170d0bc3ca5191f1dbf3cd8535df"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d31/class_amuse_1_1_platform_1_1_arguments.html#ae9f2170d0bc3ca5191f1dbf3cd8535df">at</a> (s32 index) const</td></tr>
+<tr class="memitem:ae9f2170d0bc3ca5191f1dbf3cd8535df" id="r_ae9f2170d0bc3ca5191f1dbf3cd8535df"><td class="memItemLeft">const String &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ae9f2170d0bc3ca5191f1dbf3cd8535df">at</a> (s32 index) const</td></tr>
 <tr class="memdesc:ae9f2170d0bc3ca5191f1dbf3cd8535df"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数を取得  <br /></td></tr>
-<tr class="separator:ae9f2170d0bc3ca5191f1dbf3cd8535df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06f7c20c3f5e1832d04006fe5d3ea1ae"><td class="memItemLeft" align="right" valign="top"><a id="a06f7c20c3f5e1832d04006fe5d3ea1ae" name="a06f7c20c3f5e1832d04006fe5d3ea1ae"></a>
-<a class="el" href="../../d5/d31/class_amuse_1_1_platform_1_1_arguments.html#a0331cb5e94f52129ee86fa0a03b8ce0f">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () const noexcept</td></tr>
+<tr class="memitem:a06f7c20c3f5e1832d04006fe5d3ea1ae" id="r_a06f7c20c3f5e1832d04006fe5d3ea1ae"><td class="memItemLeft"><a id="a06f7c20c3f5e1832d04006fe5d3ea1ae" name="a06f7c20c3f5e1832d04006fe5d3ea1ae"></a>
+<a class="el" href="#a0331cb5e94f52129ee86fa0a03b8ce0f">const_iterator</a>&#160;</td><td class="memItemRight"><b>begin</b> () const noexcept</td></tr>
 <tr class="memdesc:a06f7c20c3f5e1832d04006fe5d3ea1ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">先頭の要素を指す読み取り専用イテレータを取得する <br /></td></tr>
-<tr class="separator:a06f7c20c3f5e1832d04006fe5d3ea1ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acaf849e5d5c5923ab63dda6e5714704b"><td class="memItemLeft" align="right" valign="top"><a id="acaf849e5d5c5923ab63dda6e5714704b" name="acaf849e5d5c5923ab63dda6e5714704b"></a>
-<a class="el" href="../../d5/d31/class_amuse_1_1_platform_1_1_arguments.html#a0331cb5e94f52129ee86fa0a03b8ce0f">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () const noexcept</td></tr>
+<tr class="memitem:acaf849e5d5c5923ab63dda6e5714704b" id="r_acaf849e5d5c5923ab63dda6e5714704b"><td class="memItemLeft"><a id="acaf849e5d5c5923ab63dda6e5714704b" name="acaf849e5d5c5923ab63dda6e5714704b"></a>
+<a class="el" href="#a0331cb5e94f52129ee86fa0a03b8ce0f">const_iterator</a>&#160;</td><td class="memItemRight"><b>end</b> () const noexcept</td></tr>
 <tr class="memdesc:acaf849e5d5c5923ab63dda6e5714704b"><td class="mdescLeft">&#160;</td><td class="mdescRight">末尾の次を指す読み取り専用イテレータを取得する <br /></td></tr>
-<tr class="separator:acaf849e5d5c5923ab63dda6e5714704b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c7e52edd3343ef5841372bc0a023f20"><td class="memItemLeft" align="right" valign="top"><a id="a7c7e52edd3343ef5841372bc0a023f20" name="a7c7e52edd3343ef5841372bc0a023f20"></a>
-s32&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> () const noexcept</td></tr>
+<tr class="memitem:a7c7e52edd3343ef5841372bc0a023f20" id="r_a7c7e52edd3343ef5841372bc0a023f20"><td class="memItemLeft"><a id="a7c7e52edd3343ef5841372bc0a023f20" name="a7c7e52edd3343ef5841372bc0a023f20"></a>
+s32&#160;</td><td class="memItemRight"><b>size</b> () const noexcept</td></tr>
 <tr class="memdesc:a7c7e52edd3343ef5841372bc0a023f20"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数の数を取得する <br /></td></tr>
-<tr class="separator:a7c7e52edd3343ef5841372bc0a023f20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a2b803543a7523960b841ddabfa31f6"><td class="memItemLeft" align="right" valign="top"><a id="a9a2b803543a7523960b841ddabfa31f6" name="a9a2b803543a7523960b841ddabfa31f6"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>empty</b> () const noexcept</td></tr>
+<tr class="memitem:a9a2b803543a7523960b841ddabfa31f6" id="r_a9a2b803543a7523960b841ddabfa31f6"><td class="memItemLeft"><a id="a9a2b803543a7523960b841ddabfa31f6" name="a9a2b803543a7523960b841ddabfa31f6"></a>
+bool&#160;</td><td class="memItemRight"><b>empty</b> () const noexcept</td></tr>
 <tr class="memdesc:a9a2b803543a7523960b841ddabfa31f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">空か <br /></td></tr>
-<tr class="separator:a9a2b803543a7523960b841ddabfa31f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
 <div class="textblock"><p>コマンドライン引数 </p>
-</div><h2 class="groupheader">関数詳解</h2>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
 <a id="ae9f2170d0bc3ca5191f1dbf3cd8535df" name="ae9f2170d0bc3ca5191f1dbf3cd8535df"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae9f2170d0bc3ca5191f1dbf3cd8535df">&#9670;&#160;</a></span>at()</h2>
 
@@ -156,10 +174,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>empty</b> () const no
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a> &amp; Amuse::Platform::Arguments::at </td>
+          <td class="memname">const String &amp; Amuse::Platform::Arguments::at </td>
           <td>(</td>
-          <td class="paramtype">s32&#160;</td>
-          <td class="paramname"><em>index</em></td><td>)</td>
+          <td class="paramtype">s32</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -180,11 +197,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>empty</b> () const no
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>Amuse</b></li><li class="navelem"><b>Platform</b></li><li class="navelem"><a class="el" href="../../d5/d31/class_amuse_1_1_platform_1_1_arguments.html">Arguments</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><b>Platform</b></li><li class="navelem"><a href="../../d5/d31/class_amuse_1_1_platform_1_1_arguments.html">Arguments</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

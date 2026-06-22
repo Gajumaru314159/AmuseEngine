@@ -3,19 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AmuseEngine: Runtime/RHI/Public/Amuse/RHI/Shader.h ソースファイル</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../jquery.js"></script>
-<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
 <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
 <script type="text/javascript" src="../../navtreedata.js"></script>
 <script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="../../style.css" rel="stylesheet" type="text/css"/>
@@ -36,23 +42,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.6 -->
+<!-- 構築: Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('../../',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
 });
-/* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -65,10 +93,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('d8/d34/_shader_8h_source.html','../../'); initResizable(); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d8/d34/_shader_8h_source.html','../../',''); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -96,7 +123,7 @@ $(document).ready(function(){initNavTree('d8/d34/_shader_8h_source.html','../../
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//***********************************************************</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"></span><span class="comment">//***********************************************************</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//***********************************************************</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;Amuse/Core/Core.h&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;Amuse/Core/Misc/BlobView.h&gt;</span></div>
@@ -105,46 +132,49 @@ $(document).ready(function(){initNavTree('d8/d34/_shader_8h_source.html','../../
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span>Amuse::RHI {</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">using namespace </span>Amuse::Core;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span></div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../d9/d3f/struct_amuse_1_1_r_h_i_1_1_shader_compile_desc.html">   15</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../d9/d3f/struct_amuse_1_1_r_h_i_1_1_shader_compile_desc.html">ShaderCompileDesc</a> {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="../../d9/d3f/struct_amuse_1_1_r_h_i_1_1_shader_compile_desc.html#ade488bbb02dc5107994856699c791c1d">   16</a></span>        <a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a>         <a class="code hl_variable" href="../../d9/d3f/struct_amuse_1_1_r_h_i_1_1_shader_compile_desc.html#ade488bbb02dc5107994856699c791c1d">name</a>;            </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../d9/d3f/struct_amuse_1_1_r_h_i_1_1_shader_compile_desc.html#a847bc9334e339a7c5aee1e0f9cf7aa8c">   17</a></span>        <a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a>         <a class="code hl_variable" href="../../d9/d3f/struct_amuse_1_1_r_h_i_1_1_shader_compile_desc.html#a847bc9334e339a7c5aee1e0f9cf7aa8c">code</a>;            </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="../../d9/d3f/struct_amuse_1_1_r_h_i_1_1_shader_compile_desc.html#ade488bbb02dc5107994856699c791c1d">   16</a></span>        String         <a class="code hl_variable" href="../../d9/d3f/struct_amuse_1_1_r_h_i_1_1_shader_compile_desc.html#ade488bbb02dc5107994856699c791c1d">name</a>;            </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../d9/d3f/struct_amuse_1_1_r_h_i_1_1_shader_compile_desc.html#a847bc9334e339a7c5aee1e0f9cf7aa8c">   17</a></span>        String         <a class="code hl_variable" href="../../d9/d3f/struct_amuse_1_1_r_h_i_1_1_shader_compile_desc.html#a847bc9334e339a7c5aee1e0f9cf7aa8c">code</a>;            </div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="../../d9/d3f/struct_amuse_1_1_r_h_i_1_1_shader_compile_desc.html#a13289719eec2caabe748bee65518c410">   18</a></span>        ShaderStage    <a class="code hl_variable" href="../../d9/d3f/struct_amuse_1_1_r_h_i_1_1_shader_compile_desc.html#a13289719eec2caabe748bee65518c410">stage</a>;           </div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="../../d9/d3f/struct_amuse_1_1_r_h_i_1_1_shader_compile_desc.html#ad967c533e28d6648d2d4c15e731967d4">   19</a></span>        Vector&lt;String&gt; <a class="code hl_variable" href="../../d9/d3f/struct_amuse_1_1_r_h_i_1_1_shader_compile_desc.html#ad967c533e28d6648d2d4c15e731967d4">directories</a>;     </div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="../../d9/d3f/struct_amuse_1_1_r_h_i_1_1_shader_compile_desc.html#a825aca9625db3227ca8edba4c3808ca9">   20</a></span>        Vector&lt;String&gt; <a class="code hl_variable" href="../../d9/d3f/struct_amuse_1_1_r_h_i_1_1_shader_compile_desc.html#a825aca9625db3227ca8edba4c3808ca9">macros</a>;          </div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    };</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html">   24</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html">Shader</a> :<span class="keyword">public</span> <a class="code hl_class" href="../../d2/d2f/class_amuse_1_1_r_h_i_1_1_graphic_object.html">GraphicObject</a> {</div>
+</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span></div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html">   24</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html">Shader</a> :<span class="keyword">public</span> <a class="code hl_function" href="../../d2/d2f/class_amuse_1_1_r_h_i_1_1_graphic_object.html#aeb1734e2a8972a85ee117d55b0ed0671">GraphicObject</a> {</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html#aa9b7af66840663664d6fa32bc3cc1929">   48</a></span>        <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html#aa9b7af66840663664d6fa32bc3cc1929">GetEntryName</a>(ShaderStage stage);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span></div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html#a4b0ee4beb6ce9af8e457f7dd991aaf04">   52</a></span>        <span class="keyword">static</span> <a class="code hl_class" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref&lt;Shader&gt;</a> <a class="code hl_function" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html#a4b0ee4beb6ce9af8e457f7dd991aaf04">Compile</a>(<span class="keyword">const</span> <a class="code hl_struct" href="../../d9/d3f/struct_amuse_1_1_r_h_i_1_1_shader_compile_desc.html">ShaderCompileDesc</a>&amp; desc);</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html#a725e35b59657ca796c2d9d946bca6d31">   54</a></span>        <span class="keyword">static</span> <a class="code hl_class" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref&lt;Shader&gt;</a> <a class="code hl_function" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html#a725e35b59657ca796c2d9d946bca6d31">Compile</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a>&amp; code, ShaderStage stage);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html#a83e806a68ceb10e72bda401b0731ca71">   56</a></span>        <span class="keyword">static</span> <a class="code hl_class" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref&lt;Shader&gt;</a> <a class="code hl_function" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html#a83e806a68ceb10e72bda401b0731ca71">CompileVS</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a>&amp; code);</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html#a450dfe3cc0db7bfa8a51aba5502d118f">   58</a></span>        <span class="keyword">static</span> <a class="code hl_class" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref&lt;Shader&gt;</a> <a class="code hl_function" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html#a450dfe3cc0db7bfa8a51aba5502d118f">CompilePS</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a>&amp; code);</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html#a52a95aca955b91c9b8cdf3f9aa72f057">   60</a></span>        <span class="keyword">static</span> <a class="code hl_class" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref&lt;Shader&gt;</a> <a class="code hl_function" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html#a52a95aca955b91c9b8cdf3f9aa72f057">CompileCS</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a>&amp; code);</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html#a725e35b59657ca796c2d9d946bca6d31">   54</a></span>        <span class="keyword">static</span> <a class="code hl_class" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref&lt;Shader&gt;</a> <a class="code hl_function" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html#a725e35b59657ca796c2d9d946bca6d31">Compile</a>(<span class="keyword">const</span> String&amp; code, ShaderStage stage);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html#a83e806a68ceb10e72bda401b0731ca71">   56</a></span>        <span class="keyword">static</span> <a class="code hl_class" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref&lt;Shader&gt;</a> <a class="code hl_function" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html#a83e806a68ceb10e72bda401b0731ca71">CompileVS</a>(<span class="keyword">const</span> String&amp; code);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html#a450dfe3cc0db7bfa8a51aba5502d118f">   58</a></span>        <span class="keyword">static</span> <a class="code hl_class" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref&lt;Shader&gt;</a> <a class="code hl_function" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html#a450dfe3cc0db7bfa8a51aba5502d118f">CompilePS</a>(<span class="keyword">const</span> String&amp; code);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html#a52a95aca955b91c9b8cdf3f9aa72f057">   60</a></span>        <span class="keyword">static</span> <a class="code hl_class" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref&lt;Shader&gt;</a> <a class="code hl_function" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html#a52a95aca955b91c9b8cdf3f9aa72f057">CompileCS</a>(<span class="keyword">const</span> String&amp; code);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span></div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html#a6f2c64ee5a02f2dfd3ed130121967a2a">   68</a></span>        <span class="keyword">static</span> <a class="code hl_class" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref&lt;Shader&gt;</a> <a class="code hl_function" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html#a6f2c64ee5a02f2dfd3ed130121967a2a">Load</a>(<a class="code hl_class" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html">BlobView</a> binary, ShaderStage stage);</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html#a88bfbcd09b53936473def82eaf0805a0">   70</a></span>        <span class="keyword">static</span> <a class="code hl_class" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref&lt;Shader&gt;</a> <a class="code hl_function" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html#a88bfbcd09b53936473def82eaf0805a0">LoadVS</a>(<a class="code hl_class" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html">BlobView</a> binary);</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html#a0ff6b134657d350d5a63d22e64da40e6">   72</a></span>        <span class="keyword">static</span> <a class="code hl_class" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref&lt;Shader&gt;</a> <a class="code hl_function" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html#a0ff6b134657d350d5a63d22e64da40e6">LoadPS</a>(<a class="code hl_class" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html">BlobView</a> binary);</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span></div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html#afe2fbfcaac33d92f0ee1d14490af2544">   77</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html#afe2fbfcaac33d92f0ee1d14490af2544">Supports</a>(ShaderStage stage);</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span></div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html#a8d061ec5b5bd49edd21071a3218f1c2c">   82</a></span>        <span class="keyword">virtual</span> ShaderStage <a class="code hl_function" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html#a8d061ec5b5bd49edd21071a3218f1c2c">getStage</a>()<span class="keyword">const</span> = 0;</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    };</div>
+</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>}</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_view_html"><div class="ttname"><a href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html">Amuse::Core::BlobView</a></div><div class="ttdoc">バイナリデータビュー(Binary Large Object View)</div><div class="ttdef"><b>Definition:</b> BlobView.h:13</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_ref_html"><div class="ttname"><a href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Amuse::Core::Ref</a></div><div class="ttdoc">RefObject 用スマートポインタ</div><div class="ttdef"><b>Definition:</b> Ref.h:64</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_string_base_html"><div class="ttname"><a href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">Amuse::Core::StringBase&lt; Char &gt;</a></div></div>
-<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_graphic_object_html"><div class="ttname"><a href="../../d2/d2f/class_amuse_1_1_r_h_i_1_1_graphic_object.html">Amuse::RHI::GraphicObject</a></div><div class="ttdoc">グラフィック・オブジェクト</div><div class="ttdef"><b>Definition:</b> GraphicObject.h:21</div></div>
-<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_shader_html"><div class="ttname"><a href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html">Amuse::RHI::Shader</a></div><div class="ttdoc">シェーダ</div><div class="ttdef"><b>Definition:</b> Shader.h:24</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_view_html"><div class="ttname"><a href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html">Amuse::Core::BlobView</a></div><div class="ttdoc">バイナリデータビュー(Binary Large Object View)</div><div class="ttdef"><b>Definition</b> BlobView.h:13</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_ref_html"><div class="ttname"><a href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Amuse::Core::Ref</a></div><div class="ttdoc">RefObject 用スマートポインタ</div><div class="ttdef"><b>Definition</b> Ref.h:64</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_graphic_object_html_aeb1734e2a8972a85ee117d55b0ed0671"><div class="ttname"><a href="../../d2/d2f/class_amuse_1_1_r_h_i_1_1_graphic_object.html#aeb1734e2a8972a85ee117d55b0ed0671">Amuse::RHI::GraphicObject::GraphicObject</a></div><div class="ttdeci">GraphicObject()</div><div class="ttdoc">コンストラクタ</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_shader_html"><div class="ttname"><a href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html">Amuse::RHI::Shader</a></div><div class="ttdoc">シェーダ</div><div class="ttdef"><b>Definition</b> Shader.h:24</div></div>
 <div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_shader_html_a0ff6b134657d350d5a63d22e64da40e6"><div class="ttname"><a href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html#a0ff6b134657d350d5a63d22e64da40e6">Amuse::RHI::Shader::LoadPS</a></div><div class="ttdeci">static Ref&lt; Shader &gt; LoadPS(BlobView binary)</div><div class="ttdoc">LoadPS を実行する</div></div>
 <div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_shader_html_a450dfe3cc0db7bfa8a51aba5502d118f"><div class="ttname"><a href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html#a450dfe3cc0db7bfa8a51aba5502d118f">Amuse::RHI::Shader::CompilePS</a></div><div class="ttdeci">static Ref&lt; Shader &gt; CompilePS(const String &amp;code)</div><div class="ttdoc">CompilePS を実行する</div></div>
 <div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_shader_html_a4b0ee4beb6ce9af8e457f7dd991aaf04"><div class="ttname"><a href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html#a4b0ee4beb6ce9af8e457f7dd991aaf04">Amuse::RHI::Shader::Compile</a></div><div class="ttdeci">static Ref&lt; Shader &gt; Compile(const ShaderCompileDesc &amp;desc)</div><div class="ttdoc">シェーダコードをコンパイル</div></div>
@@ -156,19 +186,20 @@ $(document).ready(function(){initNavTree('d8/d34/_shader_8h_source.html','../../
 <div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_shader_html_a8d061ec5b5bd49edd21071a3218f1c2c"><div class="ttname"><a href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html#a8d061ec5b5bd49edd21071a3218f1c2c">Amuse::RHI::Shader::getStage</a></div><div class="ttdeci">virtual ShaderStage getStage() const =0</div><div class="ttdoc">シェーダステージを取得</div></div>
 <div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_shader_html_aa9b7af66840663664d6fa32bc3cc1929"><div class="ttname"><a href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html#aa9b7af66840663664d6fa32bc3cc1929">Amuse::RHI::Shader::GetEntryName</a></div><div class="ttdeci">static const char * GetEntryName(ShaderStage stage)</div><div class="ttdoc">シェーダのエントリ関数名を取得</div></div>
 <div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_shader_html_afe2fbfcaac33d92f0ee1d14490af2544"><div class="ttname"><a href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html#afe2fbfcaac33d92f0ee1d14490af2544">Amuse::RHI::Shader::Supports</a></div><div class="ttdeci">static bool Supports(ShaderStage stage)</div><div class="ttdoc">シェーダステージをサポートしているか</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_shader_compile_desc_html"><div class="ttname"><a href="../../d9/d3f/struct_amuse_1_1_r_h_i_1_1_shader_compile_desc.html">Amuse::RHI::ShaderCompileDesc</a></div><div class="ttdoc">シェーダコンパイル設定</div><div class="ttdef"><b>Definition:</b> Shader.h:15</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_shader_compile_desc_html_a13289719eec2caabe748bee65518c410"><div class="ttname"><a href="../../d9/d3f/struct_amuse_1_1_r_h_i_1_1_shader_compile_desc.html#a13289719eec2caabe748bee65518c410">Amuse::RHI::ShaderCompileDesc::stage</a></div><div class="ttdeci">ShaderStage stage</div><div class="ttdoc">シェーダステージ</div><div class="ttdef"><b>Definition:</b> Shader.h:18</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_shader_compile_desc_html_a825aca9625db3227ca8edba4c3808ca9"><div class="ttname"><a href="../../d9/d3f/struct_amuse_1_1_r_h_i_1_1_shader_compile_desc.html#a825aca9625db3227ca8edba4c3808ca9">Amuse::RHI::ShaderCompileDesc::macros</a></div><div class="ttdeci">Vector&lt; String &gt; macros</div><div class="ttdoc">マクロ定義</div><div class="ttdef"><b>Definition:</b> Shader.h:20</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_shader_compile_desc_html_a847bc9334e339a7c5aee1e0f9cf7aa8c"><div class="ttname"><a href="../../d9/d3f/struct_amuse_1_1_r_h_i_1_1_shader_compile_desc.html#a847bc9334e339a7c5aee1e0f9cf7aa8c">Amuse::RHI::ShaderCompileDesc::code</a></div><div class="ttdeci">String code</div><div class="ttdoc">シェーダコード</div><div class="ttdef"><b>Definition:</b> Shader.h:17</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_shader_compile_desc_html_ad967c533e28d6648d2d4c15e731967d4"><div class="ttname"><a href="../../d9/d3f/struct_amuse_1_1_r_h_i_1_1_shader_compile_desc.html#ad967c533e28d6648d2d4c15e731967d4">Amuse::RHI::ShaderCompileDesc::directories</a></div><div class="ttdeci">Vector&lt; String &gt; directories</div><div class="ttdoc">インクルードディレクトリ</div><div class="ttdef"><b>Definition:</b> Shader.h:19</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_shader_compile_desc_html_ade488bbb02dc5107994856699c791c1d"><div class="ttname"><a href="../../d9/d3f/struct_amuse_1_1_r_h_i_1_1_shader_compile_desc.html#ade488bbb02dc5107994856699c791c1d">Amuse::RHI::ShaderCompileDesc::name</a></div><div class="ttdeci">String name</div><div class="ttdoc">シェーダ名</div><div class="ttdef"><b>Definition:</b> Shader.h:16</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_shader_compile_desc_html"><div class="ttname"><a href="../../d9/d3f/struct_amuse_1_1_r_h_i_1_1_shader_compile_desc.html">Amuse::RHI::ShaderCompileDesc</a></div><div class="ttdoc">シェーダコンパイル設定</div><div class="ttdef"><b>Definition</b> Shader.h:15</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_shader_compile_desc_html_a13289719eec2caabe748bee65518c410"><div class="ttname"><a href="../../d9/d3f/struct_amuse_1_1_r_h_i_1_1_shader_compile_desc.html#a13289719eec2caabe748bee65518c410">Amuse::RHI::ShaderCompileDesc::stage</a></div><div class="ttdeci">ShaderStage stage</div><div class="ttdoc">シェーダステージ</div><div class="ttdef"><b>Definition</b> Shader.h:18</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_shader_compile_desc_html_a825aca9625db3227ca8edba4c3808ca9"><div class="ttname"><a href="../../d9/d3f/struct_amuse_1_1_r_h_i_1_1_shader_compile_desc.html#a825aca9625db3227ca8edba4c3808ca9">Amuse::RHI::ShaderCompileDesc::macros</a></div><div class="ttdeci">Vector&lt; String &gt; macros</div><div class="ttdoc">マクロ定義</div><div class="ttdef"><b>Definition</b> Shader.h:20</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_shader_compile_desc_html_a847bc9334e339a7c5aee1e0f9cf7aa8c"><div class="ttname"><a href="../../d9/d3f/struct_amuse_1_1_r_h_i_1_1_shader_compile_desc.html#a847bc9334e339a7c5aee1e0f9cf7aa8c">Amuse::RHI::ShaderCompileDesc::code</a></div><div class="ttdeci">String code</div><div class="ttdoc">シェーダコード</div><div class="ttdef"><b>Definition</b> Shader.h:17</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_shader_compile_desc_html_ad967c533e28d6648d2d4c15e731967d4"><div class="ttname"><a href="../../d9/d3f/struct_amuse_1_1_r_h_i_1_1_shader_compile_desc.html#ad967c533e28d6648d2d4c15e731967d4">Amuse::RHI::ShaderCompileDesc::directories</a></div><div class="ttdeci">Vector&lt; String &gt; directories</div><div class="ttdoc">インクルードディレクトリ</div><div class="ttdef"><b>Definition</b> Shader.h:19</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_shader_compile_desc_html_ade488bbb02dc5107994856699c791c1d"><div class="ttname"><a href="../../d9/d3f/struct_amuse_1_1_r_h_i_1_1_shader_compile_desc.html#ade488bbb02dc5107994856699c791c1d">Amuse::RHI::ShaderCompileDesc::name</a></div><div class="ttdeci">String name</div><div class="ttdoc">シェーダ名</div><div class="ttdef"><b>Definition</b> Shader.h:16</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_4f6666a8f2ab10bc970eb7559668f031.html">Runtime</a></li><li class="navelem"><a class="el" href="../../dir_ed0dd943941685375ac149ef30703e8f.html">RHI</a></li><li class="navelem"><a class="el" href="../../dir_80d0fa31a6e3bc7da61af1a1dfa2506f.html">Public</a></li><li class="navelem"><a class="el" href="../../dir_6330f9b43f61349a45429b5fd54fec05.html">Amuse</a></li><li class="navelem"><a class="el" href="../../dir_0830f243940360ab60fcd1783d0d86f9.html">RHI</a></li><li class="navelem"><b>Shader.h</b></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="navelem"><b>Runtime</b></li><li class="navelem"><b>RHI</b></li><li class="navelem"><b>Public</b></li><li class="navelem"><b>Amuse</b></li><li class="navelem"><b>RHI</b></li><li class="navelem"><b>Shader.h</b></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

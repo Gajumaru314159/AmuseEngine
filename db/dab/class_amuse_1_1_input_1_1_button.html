@@ -3,19 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AmuseEngine: Amuse::Input::Button クラス</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../jquery.js"></script>
-<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
 <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
 <script type="text/javascript" src="../../navtreedata.js"></script>
 <script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="../../style.css" rel="stylesheet" type="text/css"/>
@@ -36,23 +42,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.6 -->
+<!-- 構築: Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('../../',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
 });
-/* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -65,10 +93,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('db/dab/class_amuse_1_1_input_1_1_button.html','../../'); initResizable(); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('db/dab/class_amuse_1_1_input_1_1_button.html','../../','df/d97/class_amuse_1_1_input_1_1_button-members'); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -100,63 +127,51 @@ $(document).ready(function(){initNavTree('db/dab/class_amuse_1_1_input_1_1_butto
 <div class="contents">
 
 <p>ボタン  
- <a href="../../db/dab/class_amuse_1_1_input_1_1_button.html#details">[詳解]</a></p>
+ <a href="#details">[詳解]</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d2/daa/_button_8h_source.html">Button.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:a745a407c8ca33ecdbbaa4f48ad0b9b8a"><td class="memItemLeft" align="right" valign="top"><a id="a745a407c8ca33ecdbbaa4f48ad0b9b8a" name="a745a407c8ca33ecdbbaa4f48ad0b9b8a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Button</b> ()=default</td></tr>
+<tr class="memitem:a745a407c8ca33ecdbbaa4f48ad0b9b8a" id="r_a745a407c8ca33ecdbbaa4f48ad0b9b8a"><td class="memItemLeft"><a id="a745a407c8ca33ecdbbaa4f48ad0b9b8a" name="a745a407c8ca33ecdbbaa4f48ad0b9b8a"></a>
+&#160;</td><td class="memItemRight"><b>Button</b> ()=default</td></tr>
 <tr class="memdesc:a745a407c8ca33ecdbbaa4f48ad0b9b8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトコンストラクタ <br /></td></tr>
-<tr class="separator:a745a407c8ca33ecdbbaa4f48ad0b9b8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d4f9b6ef52f90f8fa6707a26ecf3a47"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dab/class_amuse_1_1_input_1_1_button.html#a6d4f9b6ef52f90f8fa6707a26ecf3a47">Button</a> (DeviceID deviceID, u32 code, u32 user=0)</td></tr>
+<tr class="memitem:a6d4f9b6ef52f90f8fa6707a26ecf3a47" id="r_a6d4f9b6ef52f90f8fa6707a26ecf3a47"><td class="memItemLeft">constexpr&#160;</td><td class="memItemRight"><a class="el" href="#a6d4f9b6ef52f90f8fa6707a26ecf3a47">Button</a> (DeviceID deviceID, u32 code, u32 user=0)</td></tr>
 <tr class="memdesc:a6d4f9b6ef52f90f8fa6707a26ecf3a47"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <br /></td></tr>
-<tr class="separator:a6d4f9b6ef52f90f8fa6707a26ecf3a47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b482f97cf6a64db754280984477f759"><td class="memTemplParams" colspan="2"><a id="a7b482f97cf6a64db754280984477f759" name="a7b482f97cf6a64db754280984477f759"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a7b482f97cf6a64db754280984477f759"><td class="memTemplItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Button</b> (DeviceID type, T code, u32 user=0)</td></tr>
+<tr class="memitem:a7b482f97cf6a64db754280984477f759" id="r_a7b482f97cf6a64db754280984477f759"><td class="memTemplParams" colspan="2"><a id="a7b482f97cf6a64db754280984477f759" name="a7b482f97cf6a64db754280984477f759"></a>
+template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a7b482f97cf6a64db754280984477f759 template"><td class="memItemLeft">constexpr&#160;</td><td class="memItemRight"><b>Button</b> (DeviceID type, T code, u32 user=0)</td></tr>
 <tr class="memdesc:a7b482f97cf6a64db754280984477f759"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ <br /></td></tr>
-<tr class="separator:a7b482f97cf6a64db754280984477f759"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0cd6c4784e7c79b41da4439594038d09"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dab/class_amuse_1_1_input_1_1_button.html#a0cd6c4784e7c79b41da4439594038d09">is</a> (ButtonState state) const</td></tr>
+<tr class="memitem:a0cd6c4784e7c79b41da4439594038d09" id="r_a0cd6c4784e7c79b41da4439594038d09"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a0cd6c4784e7c79b41da4439594038d09">is</a> (ButtonState state) const</td></tr>
 <tr class="memdesc:a0cd6c4784e7c79b41da4439594038d09"><td class="mdescLeft">&#160;</td><td class="mdescRight">状態が state か  <br /></td></tr>
-<tr class="separator:a0cd6c4784e7c79b41da4439594038d09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac180bac049113715593be085f3479e17"><td class="memItemLeft" align="right" valign="top"><a id="ac180bac049113715593be085f3479e17" name="ac180bac049113715593be085f3479e17"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>down</b> () const</td></tr>
+<tr class="memitem:ac180bac049113715593be085f3479e17" id="r_ac180bac049113715593be085f3479e17"><td class="memItemLeft"><a id="ac180bac049113715593be085f3479e17" name="ac180bac049113715593be085f3479e17"></a>
+bool&#160;</td><td class="memItemRight"><b>down</b> () const</td></tr>
 <tr class="memdesc:ac180bac049113715593be085f3479e17"><td class="mdescLeft">&#160;</td><td class="mdescRight">押された瞬間か <br /></td></tr>
-<tr class="separator:ac180bac049113715593be085f3479e17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10c9af954562e9c66a2c3fac41b511c7"><td class="memItemLeft" align="right" valign="top"><a id="a10c9af954562e9c66a2c3fac41b511c7" name="a10c9af954562e9c66a2c3fac41b511c7"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>up</b> () const</td></tr>
+<tr class="memitem:a10c9af954562e9c66a2c3fac41b511c7" id="r_a10c9af954562e9c66a2c3fac41b511c7"><td class="memItemLeft"><a id="a10c9af954562e9c66a2c3fac41b511c7" name="a10c9af954562e9c66a2c3fac41b511c7"></a>
+bool&#160;</td><td class="memItemRight"><b>up</b> () const</td></tr>
 <tr class="memdesc:a10c9af954562e9c66a2c3fac41b511c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">離された瞬間か <br /></td></tr>
-<tr class="separator:a10c9af954562e9c66a2c3fac41b511c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af640530bf1b95d9faad09b662cd514a3"><td class="memItemLeft" align="right" valign="top"><a id="af640530bf1b95d9faad09b662cd514a3" name="af640530bf1b95d9faad09b662cd514a3"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>pressed</b> () const</td></tr>
+<tr class="memitem:af640530bf1b95d9faad09b662cd514a3" id="r_af640530bf1b95d9faad09b662cd514a3"><td class="memItemLeft"><a id="af640530bf1b95d9faad09b662cd514a3" name="af640530bf1b95d9faad09b662cd514a3"></a>
+bool&#160;</td><td class="memItemRight"><b>pressed</b> () const</td></tr>
 <tr class="memdesc:af640530bf1b95d9faad09b662cd514a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">押されているか <br /></td></tr>
-<tr class="separator:af640530bf1b95d9faad09b662cd514a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a061b9504a7c53f4f166eabab584e3740"><td class="memItemLeft" align="right" valign="top"><a id="a061b9504a7c53f4f166eabab584e3740" name="a061b9504a7c53f4f166eabab584e3740"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>released</b> () const</td></tr>
+<tr class="memitem:a061b9504a7c53f4f166eabab584e3740" id="r_a061b9504a7c53f4f166eabab584e3740"><td class="memItemLeft"><a id="a061b9504a7c53f4f166eabab584e3740" name="a061b9504a7c53f4f166eabab584e3740"></a>
+bool&#160;</td><td class="memItemRight"><b>released</b> () const</td></tr>
 <tr class="memdesc:a061b9504a7c53f4f166eabab584e3740"><td class="mdescLeft">&#160;</td><td class="mdescRight">離されているか <br /></td></tr>
-<tr class="separator:a061b9504a7c53f4f166eabab584e3740"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea0b4014fc1f815c3077f20247f1613a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dab/class_amuse_1_1_input_1_1_button.html#aea0b4014fc1f815c3077f20247f1613a">bindDown</a> (ButtonHandle &amp;handle, const ButtonDelegate &amp;func) const</td></tr>
+<tr class="memitem:aea0b4014fc1f815c3077f20247f1613a" id="r_aea0b4014fc1f815c3077f20247f1613a"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aea0b4014fc1f815c3077f20247f1613a">bindDown</a> (ButtonHandle &amp;handle, const ButtonDelegate &amp;func) const</td></tr>
 <tr class="memdesc:aea0b4014fc1f815c3077f20247f1613a"><td class="mdescLeft">&#160;</td><td class="mdescRight">バインド  <br /></td></tr>
-<tr class="separator:aea0b4014fc1f815c3077f20247f1613a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58c1b55f31d709d0f701f58561d37289"><td class="memItemLeft" align="right" valign="top"><a id="a58c1b55f31d709d0f701f58561d37289" name="a58c1b55f31d709d0f701f58561d37289"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>bindUp</b> (ButtonHandle &amp;handle, const ButtonDelegate &amp;func) const</td></tr>
+<tr class="memitem:a58c1b55f31d709d0f701f58561d37289" id="r_a58c1b55f31d709d0f701f58561d37289"><td class="memItemLeft"><a id="a58c1b55f31d709d0f701f58561d37289" name="a58c1b55f31d709d0f701f58561d37289"></a>
+bool&#160;</td><td class="memItemRight"><b>bindUp</b> (ButtonHandle &amp;handle, const ButtonDelegate &amp;func) const</td></tr>
 <tr class="memdesc:a58c1b55f31d709d0f701f58561d37289"><td class="mdescLeft">&#160;</td><td class="mdescRight">ボタン解放時イベントを登録する <br /></td></tr>
-<tr class="separator:a58c1b55f31d709d0f701f58561d37289"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af88e0294e430649b00930850cb0b4188"><td class="memItemLeft" align="right" valign="top"><a id="af88e0294e430649b00930850cb0b4188" name="af88e0294e430649b00930850cb0b4188"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>bindPressed</b> (ButtonHandle &amp;handle, const ButtonDelegate &amp;func) const</td></tr>
+<tr class="memitem:af88e0294e430649b00930850cb0b4188" id="r_af88e0294e430649b00930850cb0b4188"><td class="memItemLeft"><a id="af88e0294e430649b00930850cb0b4188" name="af88e0294e430649b00930850cb0b4188"></a>
+bool&#160;</td><td class="memItemRight"><b>bindPressed</b> (ButtonHandle &amp;handle, const ButtonDelegate &amp;func) const</td></tr>
 <tr class="memdesc:af88e0294e430649b00930850cb0b4188"><td class="mdescLeft">&#160;</td><td class="mdescRight">ボタン押下中イベントを登録する <br /></td></tr>
-<tr class="separator:af88e0294e430649b00930850cb0b4188"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84fdb922ac0ba589acf2723dc245bfb8"><td class="memItemLeft" align="right" valign="top"><a id="a84fdb922ac0ba589acf2723dc245bfb8" name="a84fdb922ac0ba589acf2723dc245bfb8"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>bindReleased</b> (ButtonHandle &amp;handle, const ButtonDelegate &amp;func) const</td></tr>
+<tr class="memitem:a84fdb922ac0ba589acf2723dc245bfb8" id="r_a84fdb922ac0ba589acf2723dc245bfb8"><td class="memItemLeft"><a id="a84fdb922ac0ba589acf2723dc245bfb8" name="a84fdb922ac0ba589acf2723dc245bfb8"></a>
+bool&#160;</td><td class="memItemRight"><b>bindReleased</b> (ButtonHandle &amp;handle, const ButtonDelegate &amp;func) const</td></tr>
 <tr class="memdesc:a84fdb922ac0ba589acf2723dc245bfb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">ボタン押下時イベントを登録する <br /></td></tr>
-<tr class="separator:a84fdb922ac0ba589acf2723dc245bfb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
 <div class="textblock"><p>ボタン </p>
 <p>「キーボードのAボタン」や「マウスの左ボタン」など、トグル入力を扱います。 </p>
-</div><h2 class="groupheader">構築子と解体子</h2>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">構築子と解体子</h2>
 <a id="a6d4f9b6ef52f90f8fa6707a26ecf3a47" name="a6d4f9b6ef52f90f8fa6707a26ecf3a47"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6d4f9b6ef52f90f8fa6707a26ecf3a47">&#9670;&#160;</a></span>Button()</h2>
 
@@ -167,32 +182,24 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>bindReleased</b> (But
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr Amuse::Input::Button::Button </td>
+          <td class="memname">Amuse::Input::Button::Button </td>
           <td>(</td>
-          <td class="paramtype">DeviceID&#160;</td>
-          <td class="paramname"><em>deviceID</em>, </td>
+          <td class="paramtype">DeviceID</td>          <td class="paramname"><span class="paramname"><em>deviceID</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">u32&#160;</td>
-          <td class="paramname"><em>code</em>, </td>
+          <td class="paramtype">u32</td>          <td class="paramname"><span class="paramname"><em>code</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">u32&#160;</td>
-          <td class="paramname"><em>user</em> = <code>0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">u32</td>          <td class="paramname"><span class="paramname"><em>user</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -209,7 +216,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>bindReleased</b> (But
 
 </div>
 </div>
-<h2 class="groupheader">関数詳解</h2>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
 <a id="aea0b4014fc1f815c3077f20247f1613a" name="aea0b4014fc1f815c3077f20247f1613a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aea0b4014fc1f815c3077f20247f1613a">&#9670;&#160;</a></span>bindDown()</h2>
 
@@ -219,19 +226,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>bindReleased</b> (But
         <tr>
           <td class="memname">bool Amuse::Input::Button::bindDown </td>
           <td>(</td>
-          <td class="paramtype">ButtonHandle &amp;&#160;</td>
-          <td class="paramname"><em>handle</em>, </td>
+          <td class="paramtype">ButtonHandle &amp;</td>          <td class="paramname"><span class="paramname"><em>handle</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const ButtonDelegate &amp;&#160;</td>
-          <td class="paramname"><em>func</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
+          <td class="paramtype">const ButtonDelegate &amp;</td>          <td class="paramname"><span class="paramname"><em>func</em></span>&#160;) const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -256,8 +256,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>bindReleased</b> (But
         <tr>
           <td class="memname">bool Amuse::Input::Button::is </td>
           <td>(</td>
-          <td class="paramtype">ButtonState&#160;</td>
-          <td class="paramname"><em>state</em></td><td>)</td>
+          <td class="paramtype">ButtonState</td>          <td class="paramname"><span class="paramname"><em>state</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -274,11 +273,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>bindReleased</b> (But
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>Amuse</b></li><li class="navelem"><b>Input</b></li><li class="navelem"><a class="el" href="../../db/dab/class_amuse_1_1_input_1_1_button.html">Button</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><b>Input</b></li><li class="navelem"><a href="../../db/dab/class_amuse_1_1_input_1_1_button.html">Button</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

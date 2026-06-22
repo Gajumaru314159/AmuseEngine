@@ -3,19 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AmuseEngine: Amuse::Core::Color 構造体</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../jquery.js"></script>
-<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
 <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
 <script type="text/javascript" src="../../navtreedata.js"></script>
 <script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="../../style.css" rel="stylesheet" type="text/css"/>
@@ -36,23 +42,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.6 -->
+<!-- 構築: Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('../../',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
 });
-/* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -65,10 +93,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('d9/de4/struct_amuse_1_1_core_1_1_color.html','../../'); initResizable(); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d9/de4/struct_amuse_1_1_core_1_1_color.html','../../','d6/d5a/struct_amuse_1_1_core_1_1_color-members'); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -103,223 +130,172 @@ $(document).ready(function(){initNavTree('d9/de4/struct_amuse_1_1_core_1_1_color
 <div class="contents">
 
 <p>RGBAカラーを表現するクラス  
- <a href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html#details">[詳解]</a></p>
+ <a href="#details">[詳解]</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d9/df8/_color_8h_source.html">Color.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:a0d2a0ce39b4267e830bd832605295c1b"><td class="memItemLeft" align="right" valign="top"><a id="a0d2a0ce39b4267e830bd832605295c1b" name="a0d2a0ce39b4267e830bd832605295c1b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Color</b> () noexcept=default</td></tr>
+<tr class="memitem:a0d2a0ce39b4267e830bd832605295c1b" id="r_a0d2a0ce39b4267e830bd832605295c1b"><td class="memItemLeft"><a id="a0d2a0ce39b4267e830bd832605295c1b" name="a0d2a0ce39b4267e830bd832605295c1b"></a>
+&#160;</td><td class="memItemRight"><b>Color</b> () noexcept=default</td></tr>
 <tr class="memdesc:a0d2a0ce39b4267e830bd832605295c1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトコンストラクタ(初期化なし) <br /></td></tr>
-<tr class="separator:a0d2a0ce39b4267e830bd832605295c1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05f664bf9bb0096e20046c5d9e988d7e"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html#a05f664bf9bb0096e20046c5d9e988d7e">Color</a> (f32 <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html#af74ba8fd4f41d785fa3e6ce3d86a9b24">r</a>, f32 <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html#a41813d1a92c2680f8f0e07fbc5e9ddaf">g</a>, f32 <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html#ade3ce42c41c107425022591c2b7e4a69">b</a>, f32 <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html#a2b12cdee291e1e322f675d5caaf68dd7">a</a>=1.0f) noexcept</td></tr>
+<tr class="memitem:a05f664bf9bb0096e20046c5d9e988d7e" id="r_a05f664bf9bb0096e20046c5d9e988d7e"><td class="memItemLeft">constexpr&#160;</td><td class="memItemRight"><a class="el" href="#a05f664bf9bb0096e20046c5d9e988d7e">Color</a> (f32 r, f32 g, f32 b, f32 a=1.0f) noexcept</td></tr>
 <tr class="memdesc:a05f664bf9bb0096e20046c5d9e988d7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ(各要素を指定して初期化)  <br /></td></tr>
-<tr class="separator:a05f664bf9bb0096e20046c5d9e988d7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab763335780756e68903631960e2f4640"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html#ab763335780756e68903631960e2f4640">Color</a> (f32 gray, f32 <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html#a2b12cdee291e1e322f675d5caaf68dd7">a</a>=1.0f) noexcept</td></tr>
+<tr class="memitem:ab763335780756e68903631960e2f4640" id="r_ab763335780756e68903631960e2f4640"><td class="memItemLeft">constexpr&#160;</td><td class="memItemRight"><a class="el" href="#ab763335780756e68903631960e2f4640">Color</a> (f32 gray, f32 a=1.0f) noexcept</td></tr>
 <tr class="memdesc:ab763335780756e68903631960e2f4640"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ(輝度とアルファ値を指定して初期化)  <br /></td></tr>
-<tr class="separator:ab763335780756e68903631960e2f4640"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9419299e37390e657cdf369d0f5df31c"><td class="memItemLeft" align="right" valign="top"><a id="a9419299e37390e657cdf369d0f5df31c" name="a9419299e37390e657cdf369d0f5df31c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Color</b> (const <a class="el" href="../../dc/d7f/struct_amuse_1_1_core_1_1_int_color.html">IntColor</a> &amp;another) noexcept</td></tr>
+<tr class="memitem:a9419299e37390e657cdf369d0f5df31c" id="r_a9419299e37390e657cdf369d0f5df31c"><td class="memItemLeft"><a id="a9419299e37390e657cdf369d0f5df31c" name="a9419299e37390e657cdf369d0f5df31c"></a>
+&#160;</td><td class="memItemRight"><b>Color</b> (const <a class="el" href="../../dc/d7f/struct_amuse_1_1_core_1_1_int_color.html">IntColor</a> &amp;another) noexcept</td></tr>
 <tr class="memdesc:a9419299e37390e657cdf369d0f5df31c"><td class="mdescLeft">&#160;</td><td class="mdescRight">ColorU8 を変換して初期化 <br /></td></tr>
-<tr class="separator:a9419299e37390e657cdf369d0f5df31c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54eb8f48a3a50dd8ae4c3d4afa18124c"><td class="memItemLeft" align="right" valign="top"><a id="a54eb8f48a3a50dd8ae4c3d4afa18124c" name="a54eb8f48a3a50dd8ae4c3d4afa18124c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Color</b> (const <a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a> &amp;another) noexcept</td></tr>
+<tr class="memitem:a54eb8f48a3a50dd8ae4c3d4afa18124c" id="r_a54eb8f48a3a50dd8ae4c3d4afa18124c"><td class="memItemLeft"><a id="a54eb8f48a3a50dd8ae4c3d4afa18124c" name="a54eb8f48a3a50dd8ae4c3d4afa18124c"></a>
+&#160;</td><td class="memItemRight"><b>Color</b> (const <a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a> &amp;another) noexcept</td></tr>
 <tr class="memdesc:a54eb8f48a3a50dd8ae4c3d4afa18124c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html" title="三次元ベクトル">Vec3</a> を変換して初期化(アルファは1.0) <br /></td></tr>
-<tr class="separator:a54eb8f48a3a50dd8ae4c3d4afa18124c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5ac50e8cb629acf9465301577173e04"><td class="memItemLeft" align="right" valign="top"><a id="ab5ac50e8cb629acf9465301577173e04" name="ab5ac50e8cb629acf9465301577173e04"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Color</b> (const <a class="el" href="../../da/da9/struct_amuse_1_1_core_1_1_vec4.html">Vec4</a> &amp;another) noexcept</td></tr>
+<tr class="memitem:ab5ac50e8cb629acf9465301577173e04" id="r_ab5ac50e8cb629acf9465301577173e04"><td class="memItemLeft"><a id="ab5ac50e8cb629acf9465301577173e04" name="ab5ac50e8cb629acf9465301577173e04"></a>
+&#160;</td><td class="memItemRight"><b>Color</b> (const <a class="el" href="../../da/da9/struct_amuse_1_1_core_1_1_vec4.html">Vec4</a> &amp;another) noexcept</td></tr>
 <tr class="memdesc:ab5ac50e8cb629acf9465301577173e04"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../da/da9/struct_amuse_1_1_core_1_1_vec4.html" title="四次元ベクトル">Vec4</a> を変換して初期化 <br /></td></tr>
-<tr class="separator:ab5ac50e8cb629acf9465301577173e04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38935c23a619180b4f36e7dce08278c9"><td class="memItemLeft" align="right" valign="top"><a id="a38935c23a619180b4f36e7dce08278c9" name="a38935c23a619180b4f36e7dce08278c9"></a>
-constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> &amp;another) const noexcept</td></tr>
+<tr class="memitem:a38935c23a619180b4f36e7dce08278c9" id="r_a38935c23a619180b4f36e7dce08278c9"><td class="memItemLeft"><a id="a38935c23a619180b4f36e7dce08278c9" name="a38935c23a619180b4f36e7dce08278c9"></a>
+constexpr bool&#160;</td><td class="memItemRight"><b>operator==</b> (const <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a> &amp;another) const noexcept</td></tr>
 <tr class="memdesc:a38935c23a619180b4f36e7dce08278c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">等価演算子 <br /></td></tr>
-<tr class="separator:a38935c23a619180b4f36e7dce08278c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31b2db145c227ed36e19add9d5ee0e36"><td class="memItemLeft" align="right" valign="top"><a id="a31b2db145c227ed36e19add9d5ee0e36" name="a31b2db145c227ed36e19add9d5ee0e36"></a>
-constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> &amp;another) const noexcept</td></tr>
+<tr class="memitem:a31b2db145c227ed36e19add9d5ee0e36" id="r_a31b2db145c227ed36e19add9d5ee0e36"><td class="memItemLeft"><a id="a31b2db145c227ed36e19add9d5ee0e36" name="a31b2db145c227ed36e19add9d5ee0e36"></a>
+constexpr bool&#160;</td><td class="memItemRight"><b>operator!=</b> (const <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a> &amp;another) const noexcept</td></tr>
 <tr class="memdesc:a31b2db145c227ed36e19add9d5ee0e36"><td class="mdescLeft">&#160;</td><td class="mdescRight">否等価演算子 <br /></td></tr>
-<tr class="separator:a31b2db145c227ed36e19add9d5ee0e36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74f99b4c949a215d77360e274adb12f0"><td class="memItemLeft" align="right" valign="top"><a id="a74f99b4c949a215d77360e274adb12f0" name="a74f99b4c949a215d77360e274adb12f0"></a>
-constexpr <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator+</b> (const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> &amp;another) const noexcept</td></tr>
+<tr class="memitem:a74f99b4c949a215d77360e274adb12f0" id="r_a74f99b4c949a215d77360e274adb12f0"><td class="memItemLeft"><a id="a74f99b4c949a215d77360e274adb12f0" name="a74f99b4c949a215d77360e274adb12f0"></a>
+constexpr <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a>&#160;</td><td class="memItemRight"><b>operator+</b> (const <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a> &amp;another) const noexcept</td></tr>
 <tr class="memdesc:a74f99b4c949a215d77360e274adb12f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">加算演算子(RGB) <br /></td></tr>
-<tr class="separator:a74f99b4c949a215d77360e274adb12f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a19562e87e5a1b837b88e71153517de"><td class="memItemLeft" align="right" valign="top"><a id="a5a19562e87e5a1b837b88e71153517de" name="a5a19562e87e5a1b837b88e71153517de"></a>
-constexpr <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator-</b> (const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> &amp;another) const noexcept</td></tr>
+<tr class="memitem:a5a19562e87e5a1b837b88e71153517de" id="r_a5a19562e87e5a1b837b88e71153517de"><td class="memItemLeft"><a id="a5a19562e87e5a1b837b88e71153517de" name="a5a19562e87e5a1b837b88e71153517de"></a>
+constexpr <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a>&#160;</td><td class="memItemRight"><b>operator-</b> (const <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a> &amp;another) const noexcept</td></tr>
 <tr class="memdesc:a5a19562e87e5a1b837b88e71153517de"><td class="mdescLeft">&#160;</td><td class="mdescRight">減算演算子(RGB) <br /></td></tr>
-<tr class="separator:a5a19562e87e5a1b837b88e71153517de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a696519d2d5f674fa55b3acb02a8aafd7"><td class="memItemLeft" align="right" valign="top"><a id="a696519d2d5f674fa55b3acb02a8aafd7" name="a696519d2d5f674fa55b3acb02a8aafd7"></a>
-constexpr <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> (const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> &amp;another) const noexcept</td></tr>
+<tr class="memitem:a696519d2d5f674fa55b3acb02a8aafd7" id="r_a696519d2d5f674fa55b3acb02a8aafd7"><td class="memItemLeft"><a id="a696519d2d5f674fa55b3acb02a8aafd7" name="a696519d2d5f674fa55b3acb02a8aafd7"></a>
+constexpr <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a>&#160;</td><td class="memItemRight"><b>operator*</b> (const <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a> &amp;another) const noexcept</td></tr>
 <tr class="memdesc:a696519d2d5f674fa55b3acb02a8aafd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">乗算演算子(RGBA) <br /></td></tr>
-<tr class="separator:a696519d2d5f674fa55b3acb02a8aafd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1c0f7e899691be12bf81dfe4dbbdcdf"><td class="memItemLeft" align="right" valign="top"><a id="af1c0f7e899691be12bf81dfe4dbbdcdf" name="af1c0f7e899691be12bf81dfe4dbbdcdf"></a>
-constexpr <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> (f32 f) const noexcept</td></tr>
+<tr class="memitem:af1c0f7e899691be12bf81dfe4dbbdcdf" id="r_af1c0f7e899691be12bf81dfe4dbbdcdf"><td class="memItemLeft"><a id="af1c0f7e899691be12bf81dfe4dbbdcdf" name="af1c0f7e899691be12bf81dfe4dbbdcdf"></a>
+constexpr <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a>&#160;</td><td class="memItemRight"><b>operator*</b> (f32 f) const noexcept</td></tr>
 <tr class="memdesc:af1c0f7e899691be12bf81dfe4dbbdcdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">スカラー乗算演算子(RGBA) <br /></td></tr>
-<tr class="separator:af1c0f7e899691be12bf81dfe4dbbdcdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf9615123d0489e1f3b6c25ed10b7a4a"><td class="memItemLeft" align="right" valign="top"><a id="aaf9615123d0489e1f3b6c25ed10b7a4a" name="aaf9615123d0489e1f3b6c25ed10b7a4a"></a>
-constexpr <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator/</b> (const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> &amp;another) const noexcept</td></tr>
+<tr class="memitem:aaf9615123d0489e1f3b6c25ed10b7a4a" id="r_aaf9615123d0489e1f3b6c25ed10b7a4a"><td class="memItemLeft"><a id="aaf9615123d0489e1f3b6c25ed10b7a4a" name="aaf9615123d0489e1f3b6c25ed10b7a4a"></a>
+constexpr <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a>&#160;</td><td class="memItemRight"><b>operator/</b> (const <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a> &amp;another) const noexcept</td></tr>
 <tr class="memdesc:aaf9615123d0489e1f3b6c25ed10b7a4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">除算演算子(RGBA) <br /></td></tr>
-<tr class="separator:aaf9615123d0489e1f3b6c25ed10b7a4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae915dd08dab96375ac1274f3ebaef5be"><td class="memItemLeft" align="right" valign="top"><a id="ae915dd08dab96375ac1274f3ebaef5be" name="ae915dd08dab96375ac1274f3ebaef5be"></a>
-constexpr <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator/</b> (f32 f) const noexcept</td></tr>
+<tr class="memitem:ae915dd08dab96375ac1274f3ebaef5be" id="r_ae915dd08dab96375ac1274f3ebaef5be"><td class="memItemLeft"><a id="ae915dd08dab96375ac1274f3ebaef5be" name="ae915dd08dab96375ac1274f3ebaef5be"></a>
+constexpr <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a>&#160;</td><td class="memItemRight"><b>operator/</b> (f32 f) const noexcept</td></tr>
 <tr class="memdesc:ae915dd08dab96375ac1274f3ebaef5be"><td class="mdescLeft">&#160;</td><td class="mdescRight">スカラー除算演算子(RGBA) <br /></td></tr>
-<tr class="separator:ae915dd08dab96375ac1274f3ebaef5be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e3e375a60c2c5f76775c0b445c92718"><td class="memItemLeft" align="right" valign="top"><a id="a8e3e375a60c2c5f76775c0b445c92718" name="a8e3e375a60c2c5f76775c0b445c92718"></a>
-constexpr <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator+=</b> (const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> &amp;another) noexcept</td></tr>
+<tr class="memitem:a8e3e375a60c2c5f76775c0b445c92718" id="r_a8e3e375a60c2c5f76775c0b445c92718"><td class="memItemLeft"><a id="a8e3e375a60c2c5f76775c0b445c92718" name="a8e3e375a60c2c5f76775c0b445c92718"></a>
+constexpr <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a> &amp;&#160;</td><td class="memItemRight"><b>operator+=</b> (const <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a> &amp;another) noexcept</td></tr>
 <tr class="memdesc:a8e3e375a60c2c5f76775c0b445c92718"><td class="mdescLeft">&#160;</td><td class="mdescRight">加算代入演算子(RGB) <br /></td></tr>
-<tr class="separator:a8e3e375a60c2c5f76775c0b445c92718"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a742068606533c93d715fef2f6de284a4"><td class="memItemLeft" align="right" valign="top"><a id="a742068606533c93d715fef2f6de284a4" name="a742068606533c93d715fef2f6de284a4"></a>
-constexpr <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator-=</b> (const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> &amp;another) noexcept</td></tr>
+<tr class="memitem:a742068606533c93d715fef2f6de284a4" id="r_a742068606533c93d715fef2f6de284a4"><td class="memItemLeft"><a id="a742068606533c93d715fef2f6de284a4" name="a742068606533c93d715fef2f6de284a4"></a>
+constexpr <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a> &amp;&#160;</td><td class="memItemRight"><b>operator-=</b> (const <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a> &amp;another) noexcept</td></tr>
 <tr class="memdesc:a742068606533c93d715fef2f6de284a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">減算代入演算子(RGB) <br /></td></tr>
-<tr class="separator:a742068606533c93d715fef2f6de284a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0afafe2b6ea1ca87dfb831218f62044c"><td class="memItemLeft" align="right" valign="top"><a id="a0afafe2b6ea1ca87dfb831218f62044c" name="a0afafe2b6ea1ca87dfb831218f62044c"></a>
-constexpr <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator*=</b> (const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> &amp;another) noexcept</td></tr>
+<tr class="memitem:a0afafe2b6ea1ca87dfb831218f62044c" id="r_a0afafe2b6ea1ca87dfb831218f62044c"><td class="memItemLeft"><a id="a0afafe2b6ea1ca87dfb831218f62044c" name="a0afafe2b6ea1ca87dfb831218f62044c"></a>
+constexpr <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a> &amp;&#160;</td><td class="memItemRight"><b>operator*=</b> (const <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a> &amp;another) noexcept</td></tr>
 <tr class="memdesc:a0afafe2b6ea1ca87dfb831218f62044c"><td class="mdescLeft">&#160;</td><td class="mdescRight">乗算代入演算子(RGBA) <br /></td></tr>
-<tr class="separator:a0afafe2b6ea1ca87dfb831218f62044c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3061d8cdccd879ed1ae4298777856e4a"><td class="memItemLeft" align="right" valign="top"><a id="a3061d8cdccd879ed1ae4298777856e4a" name="a3061d8cdccd879ed1ae4298777856e4a"></a>
-constexpr <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator*=</b> (f32 f) noexcept</td></tr>
+<tr class="memitem:a3061d8cdccd879ed1ae4298777856e4a" id="r_a3061d8cdccd879ed1ae4298777856e4a"><td class="memItemLeft"><a id="a3061d8cdccd879ed1ae4298777856e4a" name="a3061d8cdccd879ed1ae4298777856e4a"></a>
+constexpr <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a> &amp;&#160;</td><td class="memItemRight"><b>operator*=</b> (f32 f) noexcept</td></tr>
 <tr class="memdesc:a3061d8cdccd879ed1ae4298777856e4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">スカラー乗算代入演算子(RGBA) <br /></td></tr>
-<tr class="separator:a3061d8cdccd879ed1ae4298777856e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a715012a2724ec5d0ee394505b08b3f"><td class="memItemLeft" align="right" valign="top"><a id="a3a715012a2724ec5d0ee394505b08b3f" name="a3a715012a2724ec5d0ee394505b08b3f"></a>
-constexpr <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator/=</b> (const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> &amp;another) noexcept</td></tr>
+<tr class="memitem:a3a715012a2724ec5d0ee394505b08b3f" id="r_a3a715012a2724ec5d0ee394505b08b3f"><td class="memItemLeft"><a id="a3a715012a2724ec5d0ee394505b08b3f" name="a3a715012a2724ec5d0ee394505b08b3f"></a>
+constexpr <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a> &amp;&#160;</td><td class="memItemRight"><b>operator/=</b> (const <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a> &amp;another) noexcept</td></tr>
 <tr class="memdesc:a3a715012a2724ec5d0ee394505b08b3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">除算代入演算子(RGBA) <br /></td></tr>
-<tr class="separator:a3a715012a2724ec5d0ee394505b08b3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a850f073cbf087f67389057e289d87106"><td class="memItemLeft" align="right" valign="top"><a id="a850f073cbf087f67389057e289d87106" name="a850f073cbf087f67389057e289d87106"></a>
-constexpr <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator/=</b> (f32 f) noexcept</td></tr>
+<tr class="memitem:a850f073cbf087f67389057e289d87106" id="r_a850f073cbf087f67389057e289d87106"><td class="memItemLeft"><a id="a850f073cbf087f67389057e289d87106" name="a850f073cbf087f67389057e289d87106"></a>
+constexpr <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a> &amp;&#160;</td><td class="memItemRight"><b>operator/=</b> (f32 f) noexcept</td></tr>
 <tr class="memdesc:a850f073cbf087f67389057e289d87106"><td class="mdescLeft">&#160;</td><td class="mdescRight">スカラー除算代入演算子(RGBA) <br /></td></tr>
-<tr class="separator:a850f073cbf087f67389057e289d87106"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c38c7ba93fb5a879eb924872fd22ae5"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html#a0c38c7ba93fb5a879eb924872fd22ae5">clamp</a> () noexcept</td></tr>
+<tr class="memitem:a0c38c7ba93fb5a879eb924872fd22ae5" id="r_a0c38c7ba93fb5a879eb924872fd22ae5"><td class="memItemLeft">constexpr <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a0c38c7ba93fb5a879eb924872fd22ae5">clamp</a> () noexcept</td></tr>
 <tr class="memdesc:a0c38c7ba93fb5a879eb924872fd22ae5"><td class="mdescLeft">&#160;</td><td class="mdescRight">カラー要素を0.0～にクランプ  <br /></td></tr>
-<tr class="separator:a0c38c7ba93fb5a879eb924872fd22ae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae92506ffd6fe4c228b3f5294b8c055fc"><td class="memItemLeft" align="right" valign="top"><a id="ae92506ffd6fe4c228b3f5294b8c055fc" name="ae92506ffd6fe4c228b3f5294b8c055fc"></a>
-constexpr <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>clamp01</b> () noexcept</td></tr>
+<tr class="memitem:ae92506ffd6fe4c228b3f5294b8c055fc" id="r_ae92506ffd6fe4c228b3f5294b8c055fc"><td class="memItemLeft"><a id="ae92506ffd6fe4c228b3f5294b8c055fc" name="ae92506ffd6fe4c228b3f5294b8c055fc"></a>
+constexpr <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a> &amp;&#160;</td><td class="memItemRight"><b>clamp01</b> () noexcept</td></tr>
 <tr class="memdesc:ae92506ffd6fe4c228b3f5294b8c055fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">カラー要素を0.0～1.0にクランプ <br /></td></tr>
-<tr class="separator:ae92506ffd6fe4c228b3f5294b8c055fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0756edb61f01fb204e1a031e6d355bd7"><td class="memItemLeft" align="right" valign="top"><a id="a0756edb61f01fb204e1a031e6d355bd7" name="a0756edb61f01fb204e1a031e6d355bd7"></a>
-constexpr f32&#160;</td><td class="memItemRight" valign="bottom"><b>minComponent</b> () const noexcept</td></tr>
+<tr class="memitem:a0756edb61f01fb204e1a031e6d355bd7" id="r_a0756edb61f01fb204e1a031e6d355bd7"><td class="memItemLeft"><a id="a0756edb61f01fb204e1a031e6d355bd7" name="a0756edb61f01fb204e1a031e6d355bd7"></a>
+constexpr f32&#160;</td><td class="memItemRight"><b>minComponent</b> () const noexcept</td></tr>
 <tr class="memdesc:a0756edb61f01fb204e1a031e6d355bd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">RGBのうち最小の値を取得 <br /></td></tr>
-<tr class="separator:a0756edb61f01fb204e1a031e6d355bd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe701c58c27f0e993f27c26861c83adb"><td class="memItemLeft" align="right" valign="top"><a id="abe701c58c27f0e993f27c26861c83adb" name="abe701c58c27f0e993f27c26861c83adb"></a>
-constexpr f32&#160;</td><td class="memItemRight" valign="bottom"><b>maxComponent</b> () const noexcept</td></tr>
+<tr class="memitem:abe701c58c27f0e993f27c26861c83adb" id="r_abe701c58c27f0e993f27c26861c83adb"><td class="memItemLeft"><a id="abe701c58c27f0e993f27c26861c83adb" name="abe701c58c27f0e993f27c26861c83adb"></a>
+constexpr f32&#160;</td><td class="memItemRight"><b>maxComponent</b> () const noexcept</td></tr>
 <tr class="memdesc:abe701c58c27f0e993f27c26861c83adb"><td class="mdescLeft">&#160;</td><td class="mdescRight">RGBのうち最大の値を取得 <br /></td></tr>
-<tr class="separator:abe701c58c27f0e993f27c26861c83adb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41f703449debe856bd581c960a8f5504"><td class="memItemLeft" align="right" valign="top"><a id="a41f703449debe856bd581c960a8f5504" name="a41f703449debe856bd581c960a8f5504"></a>
-u32&#160;</td><td class="memItemRight" valign="bottom"><b>toCode</b> (ColorCodeFormat format=ColorCodeFormat::Default) const noexcept</td></tr>
+<tr class="memitem:a41f703449debe856bd581c960a8f5504" id="r_a41f703449debe856bd581c960a8f5504"><td class="memItemLeft"><a id="a41f703449debe856bd581c960a8f5504" name="a41f703449debe856bd581c960a8f5504"></a>
+u32&#160;</td><td class="memItemRight"><b>toCode</b> (ColorCodeFormat format=ColorCodeFormat::Default) const noexcept</td></tr>
 <tr class="memdesc:a41f703449debe856bd581c960a8f5504"><td class="mdescLeft">&#160;</td><td class="mdescRight">色をカラーコードに変換 <br /></td></tr>
-<tr class="separator:a41f703449debe856bd581c960a8f5504"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d742c79bfd3f6656a10f2624d82e1df"><td class="memItemLeft" align="right" valign="top"><a id="a9d742c79bfd3f6656a10f2624d82e1df" name="a9d742c79bfd3f6656a10f2624d82e1df"></a>
-<a class="el" href="../../dc/d7f/struct_amuse_1_1_core_1_1_int_color.html">IntColor</a>&#160;</td><td class="memItemRight" valign="bottom"><b>toIntColor</b> () const noexcept</td></tr>
+<tr class="memitem:a9d742c79bfd3f6656a10f2624d82e1df" id="r_a9d742c79bfd3f6656a10f2624d82e1df"><td class="memItemLeft"><a id="a9d742c79bfd3f6656a10f2624d82e1df" name="a9d742c79bfd3f6656a10f2624d82e1df"></a>
+<a class="el" href="../../dc/d7f/struct_amuse_1_1_core_1_1_int_color.html">IntColor</a>&#160;</td><td class="memItemRight"><b>toIntColor</b> () const noexcept</td></tr>
 <tr class="memdesc:a9d742c79bfd3f6656a10f2624d82e1df"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../dc/d7f/struct_amuse_1_1_core_1_1_int_color.html" title="整数表現カラークラス">IntColor</a> に変換 <br /></td></tr>
-<tr class="separator:a9d742c79bfd3f6656a10f2624d82e1df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01ca79c0509355a7c8fc874974d79821"><td class="memItemLeft" align="right" valign="top"><a id="a01ca79c0509355a7c8fc874974d79821" name="a01ca79c0509355a7c8fc874974d79821"></a>
-constexpr <a class="el" href="../../da/da9/struct_amuse_1_1_core_1_1_vec4.html">Vec4</a>&#160;</td><td class="memItemRight" valign="bottom"><b>toVec4</b> () const noexcept</td></tr>
+<tr class="memitem:a01ca79c0509355a7c8fc874974d79821" id="r_a01ca79c0509355a7c8fc874974d79821"><td class="memItemLeft"><a id="a01ca79c0509355a7c8fc874974d79821" name="a01ca79c0509355a7c8fc874974d79821"></a>
+constexpr <a class="el" href="../../da/da9/struct_amuse_1_1_core_1_1_vec4.html">Vec4</a>&#160;</td><td class="memItemRight"><b>toVec4</b> () const noexcept</td></tr>
 <tr class="memdesc:a01ca79c0509355a7c8fc874974d79821"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../da/da9/struct_amuse_1_1_core_1_1_vec4.html" title="四次元ベクトル">Vec4</a> に変換 <br /></td></tr>
-<tr class="separator:a01ca79c0509355a7c8fc874974d79821"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a265b9ceceec6f237f27e0818e4813494"><td class="memItemLeft" align="right" valign="top"><a id="a265b9ceceec6f237f27e0818e4813494" name="a265b9ceceec6f237f27e0818e4813494"></a>
-constexpr <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>toGrayscale</b> () const noexcept</td></tr>
+<tr class="memitem:a265b9ceceec6f237f27e0818e4813494" id="r_a265b9ceceec6f237f27e0818e4813494"><td class="memItemLeft"><a id="a265b9ceceec6f237f27e0818e4813494" name="a265b9ceceec6f237f27e0818e4813494"></a>
+constexpr <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a>&#160;</td><td class="memItemRight"><b>toGrayscale</b> () const noexcept</td></tr>
 <tr class="memdesc:a265b9ceceec6f237f27e0818e4813494"><td class="mdescLeft">&#160;</td><td class="mdescRight">グレイスケールに変換 <br /></td></tr>
-<tr class="separator:a265b9ceceec6f237f27e0818e4813494"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00cde3842a4fb24ed4b945bae8a51db1"><td class="memItemLeft" align="right" valign="top"><a id="a00cde3842a4fb24ed4b945bae8a51db1" name="a00cde3842a4fb24ed4b945bae8a51db1"></a>
-constexpr <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>toSepia</b> () const noexcept</td></tr>
+<tr class="memitem:a00cde3842a4fb24ed4b945bae8a51db1" id="r_a00cde3842a4fb24ed4b945bae8a51db1"><td class="memItemLeft"><a id="a00cde3842a4fb24ed4b945bae8a51db1" name="a00cde3842a4fb24ed4b945bae8a51db1"></a>
+constexpr <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a>&#160;</td><td class="memItemRight"><b>toSepia</b> () const noexcept</td></tr>
 <tr class="memdesc:a00cde3842a4fb24ed4b945bae8a51db1"><td class="mdescLeft">&#160;</td><td class="mdescRight">セピアカラーに変換 <br /></td></tr>
-<tr class="separator:a00cde3842a4fb24ed4b945bae8a51db1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a212af9118d5fef7d0c2a5ad22963cca0"><td class="memItemLeft" align="right" valign="top"><a id="a212af9118d5fef7d0c2a5ad22963cca0" name="a212af9118d5fef7d0c2a5ad22963cca0"></a>
-<a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>toLinear</b> () const</td></tr>
+<tr class="memitem:a212af9118d5fef7d0c2a5ad22963cca0" id="r_a212af9118d5fef7d0c2a5ad22963cca0"><td class="memItemLeft"><a id="a212af9118d5fef7d0c2a5ad22963cca0" name="a212af9118d5fef7d0c2a5ad22963cca0"></a>
+<a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a>&#160;</td><td class="memItemRight"><b>toLinear</b> () const</td></tr>
 <tr class="memdesc:a212af9118d5fef7d0c2a5ad22963cca0"><td class="mdescLeft">&#160;</td><td class="mdescRight">sRGBカラーをリニアカラーに変換 <br /></td></tr>
-<tr class="separator:a212af9118d5fef7d0c2a5ad22963cca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8d9f22df3f788c5818e6030b56bb8fc"><td class="memItemLeft" align="right" valign="top"><a id="af8d9f22df3f788c5818e6030b56bb8fc" name="af8d9f22df3f788c5818e6030b56bb8fc"></a>
-<a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>toSRGB</b> () const</td></tr>
+<tr class="memitem:af8d9f22df3f788c5818e6030b56bb8fc" id="r_af8d9f22df3f788c5818e6030b56bb8fc"><td class="memItemLeft"><a id="af8d9f22df3f788c5818e6030b56bb8fc" name="af8d9f22df3f788c5818e6030b56bb8fc"></a>
+<a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a>&#160;</td><td class="memItemRight"><b>toSRGB</b> () const</td></tr>
 <tr class="memdesc:af8d9f22df3f788c5818e6030b56bb8fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">リニアカラーをsRGBカラーに変換 <br /></td></tr>
-<tr class="separator:af8d9f22df3f788c5818e6030b56bb8fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82d15d5903e45a8f4487bb402d59544a"><td class="memItemLeft" align="right" valign="top"><a id="a82d15d5903e45a8f4487bb402d59544a" name="a82d15d5903e45a8f4487bb402d59544a"></a>
-constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><b>equals</b> (const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> &amp;another, f32 tolerance=<a class="el" href="../../df/d2e/class_amuse_1_1_core_1_1_math.html#a89b96a0fa0e71dd91f088e9570a71fee">Math::TOLERANCE</a>) const noexcept</td></tr>
+<tr class="memitem:a82d15d5903e45a8f4487bb402d59544a" id="r_a82d15d5903e45a8f4487bb402d59544a"><td class="memItemLeft"><a id="a82d15d5903e45a8f4487bb402d59544a" name="a82d15d5903e45a8f4487bb402d59544a"></a>
+constexpr bool&#160;</td><td class="memItemRight"><b>equals</b> (const <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a> &amp;another, f32 tolerance=<a class="el" href="../../df/d2e/class_amuse_1_1_core_1_1_math.html#a89b96a0fa0e71dd91f088e9570a71fee">Math::TOLERANCE</a>) const noexcept</td></tr>
 <tr class="memdesc:a82d15d5903e45a8f4487bb402d59544a"><td class="mdescLeft">&#160;</td><td class="mdescRight">等価判定(許容誤差指定) <br /></td></tr>
-<tr class="separator:a82d15d5903e45a8f4487bb402d59544a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静的公開メンバ関数</h2></td></tr>
-<tr class="memitem:a629c93cdf06cf36d30b01400ccda22ee"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html#a629c93cdf06cf36d30b01400ccda22ee">Lerp</a> (const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> &amp;<a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html#a2b12cdee291e1e322f675d5caaf68dd7">a</a>, const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> &amp;<a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html#ade3ce42c41c107425022591c2b7e4a69">b</a>, f32 t) noexcept</td></tr>
+<tr class="memitem:a629c93cdf06cf36d30b01400ccda22ee" id="r_a629c93cdf06cf36d30b01400ccda22ee"><td class="memItemLeft">static constexpr <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="#a629c93cdf06cf36d30b01400ccda22ee">Lerp</a> (const <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a> &amp;a, const <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a> &amp;b, f32 t) noexcept</td></tr>
 <tr class="memdesc:a629c93cdf06cf36d30b01400ccda22ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">色の線形補完  <br /></td></tr>
-<tr class="separator:a629c93cdf06cf36d30b01400ccda22ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a140baf15168a29a00a2998fe3a89fda3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html#a140baf15168a29a00a2998fe3a89fda3">LerpHSV</a> (const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> &amp;<a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html#a2b12cdee291e1e322f675d5caaf68dd7">a</a>, const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> &amp;<a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html#ade3ce42c41c107425022591c2b7e4a69">b</a>, f32 t) noexcept</td></tr>
+<tr class="memitem:a140baf15168a29a00a2998fe3a89fda3" id="r_a140baf15168a29a00a2998fe3a89fda3"><td class="memItemLeft">static <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="#a140baf15168a29a00a2998fe3a89fda3">LerpHSV</a> (const <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a> &amp;a, const <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a> &amp;b, f32 t) noexcept</td></tr>
 <tr class="memdesc:a140baf15168a29a00a2998fe3a89fda3"><td class="mdescLeft">&#160;</td><td class="mdescRight">HSV空間で色の線形補完  <br /></td></tr>
-<tr class="separator:a140baf15168a29a00a2998fe3a89fda3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a756e0d4c430c659489e3237ca4ca63ac"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html#a756e0d4c430c659489e3237ca4ca63ac">AlphaBlend</a> (const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> &amp;dst, const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> &amp;src) noexcept</td></tr>
+<tr class="memitem:a756e0d4c430c659489e3237ca4ca63ac" id="r_a756e0d4c430c659489e3237ca4ca63ac"><td class="memItemLeft">static constexpr <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="#a756e0d4c430c659489e3237ca4ca63ac">AlphaBlend</a> (const <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a> &amp;dst, const <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a> &amp;src) noexcept</td></tr>
 <tr class="memdesc:a756e0d4c430c659489e3237ca4ca63ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">色のアルファブレンド  <br /></td></tr>
-<tr class="separator:a756e0d4c430c659489e3237ca4ca63ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a671e96ea42d9419729918b941d5b6e91"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html#a671e96ea42d9419729918b941d5b6e91">PremultipliedAlphaBlend</a> (const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> &amp;dst, const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> &amp;src) noexcept</td></tr>
+<tr class="memitem:a671e96ea42d9419729918b941d5b6e91" id="r_a671e96ea42d9419729918b941d5b6e91"><td class="memItemLeft">static constexpr <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="#a671e96ea42d9419729918b941d5b6e91">PremultipliedAlphaBlend</a> (const <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a> &amp;dst, const <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a> &amp;src) noexcept</td></tr>
 <tr class="memdesc:a671e96ea42d9419729918b941d5b6e91"><td class="mdescLeft">&#160;</td><td class="mdescRight">色の事前乗算アルファブレンド  <br /></td></tr>
-<tr class="separator:a671e96ea42d9419729918b941d5b6e91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 公開変数類</h2></td></tr>
-<tr class="memitem:af74ba8fd4f41d785fa3e6ce3d86a9b24"><td class="memItemLeft" align="right" valign="top"><a id="af74ba8fd4f41d785fa3e6ce3d86a9b24" name="af74ba8fd4f41d785fa3e6ce3d86a9b24"></a>
-f32&#160;</td><td class="memItemRight" valign="bottom"><b>r</b></td></tr>
+<tr class="memitem:af74ba8fd4f41d785fa3e6ce3d86a9b24" id="r_af74ba8fd4f41d785fa3e6ce3d86a9b24"><td class="memItemLeft"><a id="af74ba8fd4f41d785fa3e6ce3d86a9b24" name="af74ba8fd4f41d785fa3e6ce3d86a9b24"></a>
+f32&#160;</td><td class="memItemRight"><b>r</b></td></tr>
 <tr class="memdesc:af74ba8fd4f41d785fa3e6ce3d86a9b24"><td class="mdescLeft">&#160;</td><td class="mdescRight">赤成分 [0,1] <br /></td></tr>
-<tr class="separator:af74ba8fd4f41d785fa3e6ce3d86a9b24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41813d1a92c2680f8f0e07fbc5e9ddaf"><td class="memItemLeft" align="right" valign="top"><a id="a41813d1a92c2680f8f0e07fbc5e9ddaf" name="a41813d1a92c2680f8f0e07fbc5e9ddaf"></a>
-f32&#160;</td><td class="memItemRight" valign="bottom"><b>g</b></td></tr>
+<tr class="memitem:a41813d1a92c2680f8f0e07fbc5e9ddaf" id="r_a41813d1a92c2680f8f0e07fbc5e9ddaf"><td class="memItemLeft"><a id="a41813d1a92c2680f8f0e07fbc5e9ddaf" name="a41813d1a92c2680f8f0e07fbc5e9ddaf"></a>
+f32&#160;</td><td class="memItemRight"><b>g</b></td></tr>
 <tr class="memdesc:a41813d1a92c2680f8f0e07fbc5e9ddaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">緑成分 [0,1] <br /></td></tr>
-<tr class="separator:a41813d1a92c2680f8f0e07fbc5e9ddaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade3ce42c41c107425022591c2b7e4a69"><td class="memItemLeft" align="right" valign="top"><a id="ade3ce42c41c107425022591c2b7e4a69" name="ade3ce42c41c107425022591c2b7e4a69"></a>
-f32&#160;</td><td class="memItemRight" valign="bottom"><b>b</b></td></tr>
+<tr class="memitem:ade3ce42c41c107425022591c2b7e4a69" id="r_ade3ce42c41c107425022591c2b7e4a69"><td class="memItemLeft"><a id="ade3ce42c41c107425022591c2b7e4a69" name="ade3ce42c41c107425022591c2b7e4a69"></a>
+f32&#160;</td><td class="memItemRight"><b>b</b></td></tr>
 <tr class="memdesc:ade3ce42c41c107425022591c2b7e4a69"><td class="mdescLeft">&#160;</td><td class="mdescRight">青成分 [0,1] <br /></td></tr>
-<tr class="separator:ade3ce42c41c107425022591c2b7e4a69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b12cdee291e1e322f675d5caaf68dd7"><td class="memItemLeft" align="right" valign="top"><a id="a2b12cdee291e1e322f675d5caaf68dd7" name="a2b12cdee291e1e322f675d5caaf68dd7"></a>
-f32&#160;</td><td class="memItemRight" valign="bottom"><b>a</b></td></tr>
+<tr class="memitem:a2b12cdee291e1e322f675d5caaf68dd7" id="r_a2b12cdee291e1e322f675d5caaf68dd7"><td class="memItemLeft"><a id="a2b12cdee291e1e322f675d5caaf68dd7" name="a2b12cdee291e1e322f675d5caaf68dd7"></a>
+f32&#160;</td><td class="memItemRight"><b>a</b></td></tr>
 <tr class="memdesc:a2b12cdee291e1e322f675d5caaf68dd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">アルファ成分 [0,1] <br /></td></tr>
-<tr class="separator:a2b12cdee291e1e322f675d5caaf68dd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 静的公開変数類</h2></td></tr>
-<tr class="memitem:a1ad9485c7164c0431949a3db317df3a0"><td class="memItemLeft" align="right" valign="top"><a id="a1ad9485c7164c0431949a3db317df3a0" name="a1ad9485c7164c0431949a3db317df3a0"></a>
-static const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>White</b></td></tr>
+<tr class="memitem:a1ad9485c7164c0431949a3db317df3a0" id="r_a1ad9485c7164c0431949a3db317df3a0"><td class="memItemLeft"><a id="a1ad9485c7164c0431949a3db317df3a0" name="a1ad9485c7164c0431949a3db317df3a0"></a>
+static const <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a>&#160;</td><td class="memItemRight"><b>White</b></td></tr>
 <tr class="memdesc:a1ad9485c7164c0431949a3db317df3a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Color(1,1,1,1) <br /></td></tr>
-<tr class="separator:a1ad9485c7164c0431949a3db317df3a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac17b11f67d5bab0af1cc1ca2802e56f5"><td class="memItemLeft" align="right" valign="top"><a id="ac17b11f67d5bab0af1cc1ca2802e56f5" name="ac17b11f67d5bab0af1cc1ca2802e56f5"></a>
-static const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Gray</b></td></tr>
+<tr class="memitem:ac17b11f67d5bab0af1cc1ca2802e56f5" id="r_ac17b11f67d5bab0af1cc1ca2802e56f5"><td class="memItemLeft"><a id="ac17b11f67d5bab0af1cc1ca2802e56f5" name="ac17b11f67d5bab0af1cc1ca2802e56f5"></a>
+static const <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a>&#160;</td><td class="memItemRight"><b>Gray</b></td></tr>
 <tr class="memdesc:ac17b11f67d5bab0af1cc1ca2802e56f5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html" title="RGBAカラーを表現するクラス">Color</a>(0.5,0.5,0.5,1) <br /></td></tr>
-<tr class="separator:ac17b11f67d5bab0af1cc1ca2802e56f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a278aff2b97d91ed6717bc92f514a907f"><td class="memItemLeft" align="right" valign="top"><a id="a278aff2b97d91ed6717bc92f514a907f" name="a278aff2b97d91ed6717bc92f514a907f"></a>
-static const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Black</b></td></tr>
+<tr class="memitem:a278aff2b97d91ed6717bc92f514a907f" id="r_a278aff2b97d91ed6717bc92f514a907f"><td class="memItemLeft"><a id="a278aff2b97d91ed6717bc92f514a907f" name="a278aff2b97d91ed6717bc92f514a907f"></a>
+static const <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a>&#160;</td><td class="memItemRight"><b>Black</b></td></tr>
 <tr class="memdesc:a278aff2b97d91ed6717bc92f514a907f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Color(0,0,0,1) <br /></td></tr>
-<tr class="separator:a278aff2b97d91ed6717bc92f514a907f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad7177a8a065fc6d4a1b1d120ea4f87a"><td class="memItemLeft" align="right" valign="top"><a id="aad7177a8a065fc6d4a1b1d120ea4f87a" name="aad7177a8a065fc6d4a1b1d120ea4f87a"></a>
-static const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Clear</b></td></tr>
+<tr class="memitem:aad7177a8a065fc6d4a1b1d120ea4f87a" id="r_aad7177a8a065fc6d4a1b1d120ea4f87a"><td class="memItemLeft"><a id="aad7177a8a065fc6d4a1b1d120ea4f87a" name="aad7177a8a065fc6d4a1b1d120ea4f87a"></a>
+static const <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a>&#160;</td><td class="memItemRight"><b>Clear</b></td></tr>
 <tr class="memdesc:aad7177a8a065fc6d4a1b1d120ea4f87a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Color(0,0,0,0) <br /></td></tr>
-<tr class="separator:aad7177a8a065fc6d4a1b1d120ea4f87a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d4badf16f71d4493077ea2cce1dfaf4"><td class="memItemLeft" align="right" valign="top"><a id="a9d4badf16f71d4493077ea2cce1dfaf4" name="a9d4badf16f71d4493077ea2cce1dfaf4"></a>
-static const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Red</b></td></tr>
+<tr class="memitem:a9d4badf16f71d4493077ea2cce1dfaf4" id="r_a9d4badf16f71d4493077ea2cce1dfaf4"><td class="memItemLeft"><a id="a9d4badf16f71d4493077ea2cce1dfaf4" name="a9d4badf16f71d4493077ea2cce1dfaf4"></a>
+static const <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a>&#160;</td><td class="memItemRight"><b>Red</b></td></tr>
 <tr class="memdesc:a9d4badf16f71d4493077ea2cce1dfaf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Color(1,0,0,1) <br /></td></tr>
-<tr class="separator:a9d4badf16f71d4493077ea2cce1dfaf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aace94a5f67cf5842c4dfbe03c8554aac"><td class="memItemLeft" align="right" valign="top"><a id="aace94a5f67cf5842c4dfbe03c8554aac" name="aace94a5f67cf5842c4dfbe03c8554aac"></a>
-static const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Yellow</b></td></tr>
+<tr class="memitem:aace94a5f67cf5842c4dfbe03c8554aac" id="r_aace94a5f67cf5842c4dfbe03c8554aac"><td class="memItemLeft"><a id="aace94a5f67cf5842c4dfbe03c8554aac" name="aace94a5f67cf5842c4dfbe03c8554aac"></a>
+static const <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a>&#160;</td><td class="memItemRight"><b>Yellow</b></td></tr>
 <tr class="memdesc:aace94a5f67cf5842c4dfbe03c8554aac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Color(1,1,0,1) <br /></td></tr>
-<tr class="separator:aace94a5f67cf5842c4dfbe03c8554aac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86772879aacc1c468a654e9a63e3458a"><td class="memItemLeft" align="right" valign="top"><a id="a86772879aacc1c468a654e9a63e3458a" name="a86772879aacc1c468a654e9a63e3458a"></a>
-static const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Green</b></td></tr>
+<tr class="memitem:a86772879aacc1c468a654e9a63e3458a" id="r_a86772879aacc1c468a654e9a63e3458a"><td class="memItemLeft"><a id="a86772879aacc1c468a654e9a63e3458a" name="a86772879aacc1c468a654e9a63e3458a"></a>
+static const <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a>&#160;</td><td class="memItemRight"><b>Green</b></td></tr>
 <tr class="memdesc:a86772879aacc1c468a654e9a63e3458a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Color(0,1,0,1) <br /></td></tr>
-<tr class="separator:a86772879aacc1c468a654e9a63e3458a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51188a81242ba2364e868f4120f1445f"><td class="memItemLeft" align="right" valign="top"><a id="a51188a81242ba2364e868f4120f1445f" name="a51188a81242ba2364e868f4120f1445f"></a>
-static const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cyan</b></td></tr>
+<tr class="memitem:a51188a81242ba2364e868f4120f1445f" id="r_a51188a81242ba2364e868f4120f1445f"><td class="memItemLeft"><a id="a51188a81242ba2364e868f4120f1445f" name="a51188a81242ba2364e868f4120f1445f"></a>
+static const <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a>&#160;</td><td class="memItemRight"><b>Cyan</b></td></tr>
 <tr class="memdesc:a51188a81242ba2364e868f4120f1445f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Color(0,1,1,1) <br /></td></tr>
-<tr class="separator:a51188a81242ba2364e868f4120f1445f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8327a3c37cfd712c81a0570c77648e1c"><td class="memItemLeft" align="right" valign="top"><a id="a8327a3c37cfd712c81a0570c77648e1c" name="a8327a3c37cfd712c81a0570c77648e1c"></a>
-static const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Blue</b></td></tr>
+<tr class="memitem:a8327a3c37cfd712c81a0570c77648e1c" id="r_a8327a3c37cfd712c81a0570c77648e1c"><td class="memItemLeft"><a id="a8327a3c37cfd712c81a0570c77648e1c" name="a8327a3c37cfd712c81a0570c77648e1c"></a>
+static const <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a>&#160;</td><td class="memItemRight"><b>Blue</b></td></tr>
 <tr class="memdesc:a8327a3c37cfd712c81a0570c77648e1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Color(0,0,1,1) <br /></td></tr>
-<tr class="separator:a8327a3c37cfd712c81a0570c77648e1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48a7a428a1a97df6c8629a1898af2e81"><td class="memItemLeft" align="right" valign="top"><a id="a48a7a428a1a97df6c8629a1898af2e81" name="a48a7a428a1a97df6c8629a1898af2e81"></a>
-static const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Magenta</b></td></tr>
+<tr class="memitem:a48a7a428a1a97df6c8629a1898af2e81" id="r_a48a7a428a1a97df6c8629a1898af2e81"><td class="memItemLeft"><a id="a48a7a428a1a97df6c8629a1898af2e81" name="a48a7a428a1a97df6c8629a1898af2e81"></a>
+static const <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a>&#160;</td><td class="memItemRight"><b>Magenta</b></td></tr>
 <tr class="memdesc:a48a7a428a1a97df6c8629a1898af2e81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Color(1,0,1,1) <br /></td></tr>
-<tr class="separator:a48a7a428a1a97df6c8629a1898af2e81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1d39b20fa5f33288757d33dbe1f3f52"><td class="memItemLeft" align="right" valign="top"><a id="ae1d39b20fa5f33288757d33dbe1f3f52" name="ae1d39b20fa5f33288757d33dbe1f3f52"></a>
-static const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Normal</b></td></tr>
+<tr class="memitem:ae1d39b20fa5f33288757d33dbe1f3f52" id="r_ae1d39b20fa5f33288757d33dbe1f3f52"><td class="memItemLeft"><a id="ae1d39b20fa5f33288757d33dbe1f3f52" name="ae1d39b20fa5f33288757d33dbe1f3f52"></a>
+static const <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a>&#160;</td><td class="memItemRight"><b>Normal</b></td></tr>
 <tr class="memdesc:ae1d39b20fa5f33288757d33dbe1f3f52"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html" title="RGBAカラーを表現するクラス">Color</a>(0.5,1,0.5,1) <br /></td></tr>
-<tr class="separator:ae1d39b20fa5f33288757d33dbe1f3f52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
 <div class="textblock"><p>RGBAカラーを表現するクラス </p>
 <p>各色要素は、0〜1の範囲のf32型で表現されます。アルファ(a)は透過度を表し、0で完全な透明、1で完全な不透明を表します。 </p>
-</div><h2 class="groupheader">構築子と解体子</h2>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">構築子と解体子</h2>
 <a id="a05f664bf9bb0096e20046c5d9e988d7e" name="a05f664bf9bb0096e20046c5d9e988d7e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a05f664bf9bb0096e20046c5d9e988d7e">&#9670;&#160;</a></span>Color() <span class="overload">[1/2]</span></h2>
 
@@ -330,38 +306,29 @@ static const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.ht
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr Amuse::Core::Color::Color </td>
+          <td class="memname">Amuse::Core::Color::Color </td>
           <td>(</td>
-          <td class="paramtype">f32&#160;</td>
-          <td class="paramname"><em>r</em>, </td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">f32&#160;</td>
-          <td class="paramname"><em>g</em>, </td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">f32&#160;</td>
-          <td class="paramname"><em>b</em>, </td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">f32&#160;</td>
-          <td class="paramname"><em>a</em> = <code>1.0f</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>a</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0f</span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -389,26 +356,19 @@ static const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.ht
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr Amuse::Core::Color::Color </td>
+          <td class="memname">Amuse::Core::Color::Color </td>
           <td>(</td>
-          <td class="paramtype">f32&#160;</td>
-          <td class="paramname"><em>gray</em>, </td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>gray</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">f32&#160;</td>
-          <td class="paramname"><em>a</em> = <code>1.0f</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>a</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0f</span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">explicit</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel explicit">explicit</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -424,7 +384,7 @@ static const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.ht
 
 </div>
 </div>
-<h2 class="groupheader">関数詳解</h2>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
 <a id="a756e0d4c430c659489e3237ca4ca63ac" name="a756e0d4c430c659489e3237ca4ca63ac"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a756e0d4c430c659489e3237ca4ca63ac">&#9670;&#160;</a></span>AlphaBlend()</h2>
 
@@ -435,32 +395,29 @@ static const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.ht
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> Amuse::Core::Color::AlphaBlend </td>
+          <td class="memname">constexpr <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a> Amuse::Core::Color::AlphaBlend </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> &amp;&#160;</td>
-          <td class="paramname"><em>dst</em>, </td>
+          <td class="paramtype">const <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>dst</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> &amp;&#160;</td>
-          <td class="paramname"><em>src</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">const <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>src</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>色のアルファブレンド </p>
-<p>``` out.a = src.a + dst.a*(1-src.a); out.rgb = (src.rgb*src.a + dst.rgb*dst.a * (1-src.a)) / out.a; out.a = 0 =&gt; out.rgb = 0 ``` </p><dl class="params"><dt>引数</dt><dd>
+<p><span class="tt">
+            out.a   = src.a + dst.a*(1-src.a);
+            out.rgb = (src.rgb*src.<a class="el" href="#a2b12cdee291e1e322f675d5caaf68dd7" title="アルファ成分 [0,1]">a</a> + dst.rgb*dst.<a class="el" href="#a2b12cdee291e1e322f675d5caaf68dd7" title="アルファ成分 [0,1]">a</a> * (1-src.a)) / out.a;
+            out.a   = 0 =&gt; out.rgb = 0
+            </span> </p><dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">dst</td><td>色1 </td></tr>
     <tr><td class="paramname">src</td><td>色2 </td></tr>
@@ -481,15 +438,15 @@ static const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.ht
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> &amp; Amuse::Core::Color::clamp </td>
+          <td class="memname"><a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a> &amp; Amuse::Core::Color::clamp </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -509,32 +466,24 @@ static const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.ht
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> Amuse::Core::Color::Lerp </td>
+          <td class="memname">constexpr <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a> Amuse::Core::Color::Lerp </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> &amp;&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
+          <td class="paramtype">const <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> &amp;&#160;</td>
-          <td class="paramname"><em>b</em>, </td>
+          <td class="paramtype">const <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">f32&#160;</td>
-          <td class="paramname"><em>t</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>t</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -562,32 +511,24 @@ static const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.ht
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> Amuse::Core::Color::LerpHSV </td>
+          <td class="memname"><a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a> Amuse::Core::Color::LerpHSV </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> &amp;&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
+          <td class="paramtype">const <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> &amp;&#160;</td>
-          <td class="paramname"><em>b</em>, </td>
+          <td class="paramtype">const <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">f32&#160;</td>
-          <td class="paramname"><em>t</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>t</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -615,32 +556,28 @@ static const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.ht
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> Amuse::Core::Color::PremultipliedAlphaBlend </td>
+          <td class="memname">constexpr <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a> Amuse::Core::Color::PremultipliedAlphaBlend </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> &amp;&#160;</td>
-          <td class="paramname"><em>dst</em>, </td>
+          <td class="paramtype">const <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>dst</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> &amp;&#160;</td>
-          <td class="paramname"><em>src</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">const <a class="el" href="#a0d2a0ce39b4267e830bd832605295c1b">Color</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>src</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>色の事前乗算アルファブレンド </p>
-<p>``` out.a = src.a + dst.a*(1-src.a); out.rgb = src.rgb + dst.rgb * (1-src.a); ``` </p><dl class="params"><dt>引数</dt><dd>
+<p><span class="tt">
+            out.a   = src.a + dst.a*(1-src.a);
+            out.rgb = src.rgb + dst.rgb * (1-src.a);
+            </span> </p><dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">dst</td><td>色1 </td></tr>
     <tr><td class="paramname">src</td><td>色2 </td></tr>
@@ -656,11 +593,12 @@ static const <a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.ht
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>Amuse</b></li><li class="navelem"><b>Core</b></li><li class="navelem"><a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><b>Core</b></li><li class="navelem"><a href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

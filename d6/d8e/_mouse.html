@@ -3,19 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AmuseEngine: Mouse</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../jquery.js"></script>
-<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
 <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
 <script type="text/javascript" src="../../navtreedata.js"></script>
 <script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="../../style.css" rel="stylesheet" type="text/css"/>
@@ -36,23 +42,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.6 -->
+<!-- 構築: Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('../../',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
 });
-/* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -65,10 +93,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('d6/d8e/_mouse.html','../../'); initResizable(); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d6/d8e/_mouse.html','../../',''); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -95,14 +122,15 @@ $(document).ready(function(){initNavTree('d6/d8e/_mouse.html','../../'); initRes
   <div class="headertitle"><div class="title">Mouse </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md_Runtime_Input_Document_Mouse"></a> </p><h1>概要</h1>
+<div class="textblock"><p><a class="anchor" id="md__runtime_2_input_2_document_2_mouse"></a></p>
+<h1>概要</h1>
 <p>Mouseは、マウスボタン、ホイール、座標、移動量をButtonまたはAxisとして提供する静的アクセサクラスです。 ボタン入力はButton API、連続値はAxis API、座標取得は専用関数で扱います。</p>
 <h1>機能要件</h1>
 <ul>
 <li>左、右、中、拡張ボタンをButtonとして参照できること。</li>
 <li>ホイール、座標、移動量をAxisとして参照できること。</li>
 <li>現在のマウスポインタ座標とフレーム間移動量を取得できること。</li>
-<li><code>MouseButton</code>または<code>MouseAxis</code>から入力オブジェクトを取得できること。</li>
+<li><span class="tt">MouseButton</span>または<span class="tt">MouseAxis</span>から入力オブジェクトを取得できること。</li>
 </ul>
 <h1>基本設計</h1>
 <div class="fragment"><div class="line"><span class="keywordflow">if</span> (Input::Mouse::Left.down()) {</div>
@@ -113,33 +141,34 @@ $(document).ready(function(){initNavTree('d6/d8e/_mouse.html','../../'); initRes
 <div class="line">f32 wheel = Input::Mouse::Wheel.value();</div>
 <div class="line">Vec2 delta = Input::Mouse::GetDeltaPos();</div>
 </div><!-- fragment --><h1>API</h1>
-<div class="fragment"><div class="line"> </div>
+<div class="fragment"><div class="line"></div>
 <div class="line"><span class="keyword">static</span> <span class="keyword">constexpr</span> Button GetButton(MouseButton key);</div>
-<div class="line"> </div>
+<div class="line"></div>
 <div class="line"><span class="keyword">static</span> <span class="keyword">constexpr</span> Axis GetAxis(MouseAxis axis);</div>
-<div class="line"> </div>
+<div class="line"></div>
 <div class="line"><span class="keyword">static</span> Vec2 GetPos();</div>
-<div class="line"> </div>
+<div class="line"></div>
 <div class="line"><span class="keyword">static</span> Vec2 GetDeltaPos();</div>
 </div><!-- fragment --><h1>主な入力</h1>
 <ul>
-<li>ボタン: <code>Left</code>、<code>Right</code>、<code>Middle</code>、<code>X1</code>、<code>X2</code>、<code>X3</code>、<code>X4</code></li>
-<li>軸: <code>Wheel</code>、<code>WheelX</code>、<code>X</code>、<code>Y</code>、<code>DeltaX</code>、<code>DeltaY</code></li>
+<li>ボタン: <span class="tt">Left</span>、<span class="tt">Right</span>、<span class="tt">Middle</span>、<span class="tt">X1</span>、<span class="tt">X2</span>、<span class="tt">X3</span>、<span class="tt">X4</span></li>
+<li>軸: <span class="tt">Wheel</span>、<span class="tt">WheelX</span>、<span class="tt">X</span>、<span class="tt">Y</span>、<span class="tt">DeltaX</span>、<span class="tt">DeltaY</span></li>
 </ul>
 <h1>実装上の注意点</h1>
 <ul>
 <li>座標系はウィンドウシステムとの連携に依存します。必要に応じてPlatformのWindow座標変換を併用します。</li>
-<li><code>DeltaX</code>と<code>DeltaY</code>は更新単位でリセットされるフレーム差分として扱います。</li>
+<li><span class="tt">DeltaX</span>と<span class="tt">DeltaY</span>は更新単位でリセットされるフレーム差分として扱います。</li>
 <li>マウスデバイスが無効な構成では、状態取得は既定値を返します。 </li>
 </ul>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d2/de4/_runtime.html">Runtime</a></li><li class="navelem"><a class="el" href="../../de/d28/_input.html">Input</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="navelem"><a href="../../d2/de4/_runtime.html">Runtime</a></li><li class="navelem"><a href="../../de/d28/_input.html">Input</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

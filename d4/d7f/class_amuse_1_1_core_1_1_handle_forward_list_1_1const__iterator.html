@@ -3,19 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AmuseEngine: Amuse::Core::HandleForwardList&lt; T &gt;::const_iterator クラス</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../jquery.js"></script>
-<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
 <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
 <script type="text/javascript" src="../../navtreedata.js"></script>
 <script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="../../style.css" rel="stylesheet" type="text/css"/>
@@ -36,23 +42,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.6 -->
+<!-- 構築: Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('../../',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
 });
-/* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -65,10 +93,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('d4/d7f/class_amuse_1_1_core_1_1_handle_forward_list_1_1const__iterator.html','../../'); initResizable(); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d4/d7f/class_amuse_1_1_core_1_1_handle_forward_list_1_1const__iterator.html','../../','dc/d2f/class_amuse_1_1_core_1_1_handle_forward_list_1_1const__iterator-members'); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -104,93 +131,76 @@ $(document).ready(function(){initNavTree('d4/d7f/class_amuse_1_1_core_1_1_handle
 <div class="contents">
 
 <p>constイテレータ  
- <a href="../../d4/d7f/class_amuse_1_1_core_1_1_handle_forward_list_1_1const__iterator.html#details">[詳解]</a></p>
+ <a href="#details">[詳解]</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d8/d6f/_handle_forward_list_8h_source.html">HandleForwardList.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
 公開型</h2></td></tr>
-<tr class="memitem:aa76e8d6e8711e98636fbfe00e8c78658"><td class="memItemLeft" align="right" valign="top"><a id="aa76e8d6e8711e98636fbfe00e8c78658" name="aa76e8d6e8711e98636fbfe00e8c78658"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>this_type</b> = <a class="el" href="../../d4/d7f/class_amuse_1_1_core_1_1_handle_forward_list_1_1const__iterator.html">const_iterator</a></td></tr>
+<tr class="memitem:aa76e8d6e8711e98636fbfe00e8c78658" id="r_aa76e8d6e8711e98636fbfe00e8c78658"><td class="memItemLeft"><a id="aa76e8d6e8711e98636fbfe00e8c78658" name="aa76e8d6e8711e98636fbfe00e8c78658"></a>
+using&#160;</td><td class="memItemRight"><b>this_type</b> = <a class="el" href="#ae1260fe3bdb703aed18661e1dc91d1bd">const_iterator</a></td></tr>
 <tr class="memdesc:aa76e8d6e8711e98636fbfe00e8c78658"><td class="mdescLeft">&#160;</td><td class="mdescRight">型 <br /></td></tr>
-<tr class="separator:aa76e8d6e8711e98636fbfe00e8c78658"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e3580cb6e5cb6be0f63d31937dd38d7"><td class="memItemLeft" align="right" valign="top"><a id="a2e3580cb6e5cb6be0f63d31937dd38d7" name="a2e3580cb6e5cb6be0f63d31937dd38d7"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>difference_type</b> = <a class="el" href="../../d3/ddf/class_amuse_1_1_core_1_1_handle_forward_list.html">HandleForwardList</a>&lt; T &gt;::difference_type</td></tr>
+<tr class="memitem:a2e3580cb6e5cb6be0f63d31937dd38d7" id="r_a2e3580cb6e5cb6be0f63d31937dd38d7"><td class="memItemLeft"><a id="a2e3580cb6e5cb6be0f63d31937dd38d7" name="a2e3580cb6e5cb6be0f63d31937dd38d7"></a>
+using&#160;</td><td class="memItemRight"><b>difference_type</b> = HandleForwardList&lt;T&gt;::difference_type</td></tr>
 <tr class="memdesc:a2e3580cb6e5cb6be0f63d31937dd38d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">ポインタ差分型 <br /></td></tr>
-<tr class="separator:a2e3580cb6e5cb6be0f63d31937dd38d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd877de3077a231930f07f4db8a796bb"><td class="memItemLeft" align="right" valign="top"><a id="afd877de3077a231930f07f4db8a796bb" name="afd877de3077a231930f07f4db8a796bb"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b> = T</td></tr>
+<tr class="memitem:afd877de3077a231930f07f4db8a796bb" id="r_afd877de3077a231930f07f4db8a796bb"><td class="memItemLeft"><a id="afd877de3077a231930f07f4db8a796bb" name="afd877de3077a231930f07f4db8a796bb"></a>
+using&#160;</td><td class="memItemRight"><b>value_type</b> = T</td></tr>
 <tr class="memdesc:afd877de3077a231930f07f4db8a796bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンス型 <br /></td></tr>
-<tr class="separator:afd877de3077a231930f07f4db8a796bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa241e4daa396e966805e547231345774"><td class="memItemLeft" align="right" valign="top"><a id="aa241e4daa396e966805e547231345774" name="aa241e4daa396e966805e547231345774"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>pointer</b> = T *</td></tr>
+<tr class="memitem:aa241e4daa396e966805e547231345774" id="r_aa241e4daa396e966805e547231345774"><td class="memItemLeft"><a id="aa241e4daa396e966805e547231345774" name="aa241e4daa396e966805e547231345774"></a>
+using&#160;</td><td class="memItemRight"><b>pointer</b> = T*</td></tr>
 <tr class="memdesc:aa241e4daa396e966805e547231345774"><td class="mdescLeft">&#160;</td><td class="mdescRight">ポインタ型 <br /></td></tr>
-<tr class="separator:aa241e4daa396e966805e547231345774"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc9e655065a081472b842262c289389b"><td class="memItemLeft" align="right" valign="top"><a id="acc9e655065a081472b842262c289389b" name="acc9e655065a081472b842262c289389b"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>reference</b> = <a class="el" href="../../d4/d7f/class_amuse_1_1_core_1_1_handle_forward_list_1_1const__iterator.html#afd877de3077a231930f07f4db8a796bb">value_type</a> &amp;</td></tr>
+<tr class="memitem:acc9e655065a081472b842262c289389b" id="r_acc9e655065a081472b842262c289389b"><td class="memItemLeft"><a id="acc9e655065a081472b842262c289389b" name="acc9e655065a081472b842262c289389b"></a>
+using&#160;</td><td class="memItemRight"><b>reference</b> = <a class="el" href="#afd877de3077a231930f07f4db8a796bb">value_type</a>&amp;</td></tr>
 <tr class="memdesc:acc9e655065a081472b842262c289389b"><td class="mdescLeft">&#160;</td><td class="mdescRight">参照型 <br /></td></tr>
-<tr class="separator:acc9e655065a081472b842262c289389b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a780b28b720675b616554c0b6d8053a9b"><td class="memItemLeft" align="right" valign="top"><a id="a780b28b720675b616554c0b6d8053a9b" name="a780b28b720675b616554c0b6d8053a9b"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>iterator_category</b> = std::bidirectional_iterator_tag</td></tr>
+<tr class="memitem:a780b28b720675b616554c0b6d8053a9b" id="r_a780b28b720675b616554c0b6d8053a9b"><td class="memItemLeft"><a id="a780b28b720675b616554c0b6d8053a9b" name="a780b28b720675b616554c0b6d8053a9b"></a>
+using&#160;</td><td class="memItemRight"><b>iterator_category</b> = std::bidirectional_iterator_tag</td></tr>
 <tr class="memdesc:a780b28b720675b616554c0b6d8053a9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">イテレータ・カテゴリ <br /></td></tr>
-<tr class="separator:a780b28b720675b616554c0b6d8053a9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:ae1260fe3bdb703aed18661e1dc91d1bd"><td class="memItemLeft" align="right" valign="top"><a id="ae1260fe3bdb703aed18661e1dc91d1bd" name="ae1260fe3bdb703aed18661e1dc91d1bd"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>const_iterator</b> (const <a class="el" href="../../d4/d7f/class_amuse_1_1_core_1_1_handle_forward_list_1_1const__iterator.html#aa76e8d6e8711e98636fbfe00e8c78658">this_type</a> &amp;x) noexcept</td></tr>
+<tr class="memitem:ae1260fe3bdb703aed18661e1dc91d1bd" id="r_ae1260fe3bdb703aed18661e1dc91d1bd"><td class="memItemLeft"><a id="ae1260fe3bdb703aed18661e1dc91d1bd" name="ae1260fe3bdb703aed18661e1dc91d1bd"></a>
+&#160;</td><td class="memItemRight"><b>const_iterator</b> (const <a class="el" href="#aa76e8d6e8711e98636fbfe00e8c78658">this_type</a> &amp;x) noexcept</td></tr>
 <tr class="memdesc:ae1260fe3bdb703aed18661e1dc91d1bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">ムーブコンストラクタ <br /></td></tr>
-<tr class="separator:ae1260fe3bdb703aed18661e1dc91d1bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e06d113d1d08c95198649e0eb7416a2"><td class="memItemLeft" align="right" valign="top"><a id="a6e06d113d1d08c95198649e0eb7416a2" name="a6e06d113d1d08c95198649e0eb7416a2"></a>
-<a class="el" href="../../d4/d7f/class_amuse_1_1_core_1_1_handle_forward_list_1_1const__iterator.html">const_iterator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="../../d4/d7f/class_amuse_1_1_core_1_1_handle_forward_list_1_1const__iterator.html#aa76e8d6e8711e98636fbfe00e8c78658">this_type</a> &amp;x) noexcept</td></tr>
+<tr class="memitem:a6e06d113d1d08c95198649e0eb7416a2" id="r_a6e06d113d1d08c95198649e0eb7416a2"><td class="memItemLeft"><a id="a6e06d113d1d08c95198649e0eb7416a2" name="a6e06d113d1d08c95198649e0eb7416a2"></a>
+<a class="el" href="#ae1260fe3bdb703aed18661e1dc91d1bd">const_iterator</a> &amp;&#160;</td><td class="memItemRight"><b>operator=</b> (const <a class="el" href="#aa76e8d6e8711e98636fbfe00e8c78658">this_type</a> &amp;x) noexcept</td></tr>
 <tr class="memdesc:a6e06d113d1d08c95198649e0eb7416a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">ムーブ代入演算子 <br /></td></tr>
-<tr class="separator:a6e06d113d1d08c95198649e0eb7416a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae055dff0748b59a4604e476707eec160"><td class="memItemLeft" align="right" valign="top"><a id="ae055dff0748b59a4604e476707eec160" name="ae055dff0748b59a4604e476707eec160"></a>
-<a class="el" href="../../d4/d7f/class_amuse_1_1_core_1_1_handle_forward_list_1_1const__iterator.html#acc9e655065a081472b842262c289389b">reference</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> () const noexcept</td></tr>
+<tr class="memitem:ae055dff0748b59a4604e476707eec160" id="r_ae055dff0748b59a4604e476707eec160"><td class="memItemLeft"><a id="ae055dff0748b59a4604e476707eec160" name="ae055dff0748b59a4604e476707eec160"></a>
+<a class="el" href="#acc9e655065a081472b842262c289389b">reference</a>&#160;</td><td class="memItemRight"><b>operator*</b> () const noexcept</td></tr>
 <tr class="memdesc:ae055dff0748b59a4604e476707eec160"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンス参照 <br /></td></tr>
-<tr class="separator:ae055dff0748b59a4604e476707eec160"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeee1d4a4bc800ddf86609703329dd6ef"><td class="memItemLeft" align="right" valign="top"><a id="aeee1d4a4bc800ddf86609703329dd6ef" name="aeee1d4a4bc800ddf86609703329dd6ef"></a>
-<a class="el" href="../../d4/d7f/class_amuse_1_1_core_1_1_handle_forward_list_1_1const__iterator.html#aa241e4daa396e966805e547231345774">pointer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator-&gt;</b> () const noexcept</td></tr>
+<tr class="memitem:aeee1d4a4bc800ddf86609703329dd6ef" id="r_aeee1d4a4bc800ddf86609703329dd6ef"><td class="memItemLeft"><a id="aeee1d4a4bc800ddf86609703329dd6ef" name="aeee1d4a4bc800ddf86609703329dd6ef"></a>
+<a class="el" href="#aa241e4daa396e966805e547231345774">pointer</a>&#160;</td><td class="memItemRight"><b>operator-&gt;</b> () const noexcept</td></tr>
 <tr class="memdesc:aeee1d4a4bc800ddf86609703329dd6ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">メンバアクセス <br /></td></tr>
-<tr class="separator:aeee1d4a4bc800ddf86609703329dd6ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e53f87db90dcf0c7a4581f48010b90d"><td class="memItemLeft" align="right" valign="top"><a id="a5e53f87db90dcf0c7a4581f48010b90d" name="a5e53f87db90dcf0c7a4581f48010b90d"></a>
-<a class="el" href="../../d4/d7f/class_amuse_1_1_core_1_1_handle_forward_list_1_1const__iterator.html#aa76e8d6e8711e98636fbfe00e8c78658">this_type</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator++</b> () noexcept</td></tr>
+<tr class="memitem:a5e53f87db90dcf0c7a4581f48010b90d" id="r_a5e53f87db90dcf0c7a4581f48010b90d"><td class="memItemLeft"><a id="a5e53f87db90dcf0c7a4581f48010b90d" name="a5e53f87db90dcf0c7a4581f48010b90d"></a>
+<a class="el" href="#aa76e8d6e8711e98636fbfe00e8c78658">this_type</a> &amp;&#160;</td><td class="memItemRight"><b>operator++</b> () noexcept</td></tr>
 <tr class="memdesc:a5e53f87db90dcf0c7a4581f48010b90d"><td class="mdescLeft">&#160;</td><td class="mdescRight">インクリメント <br /></td></tr>
-<tr class="separator:a5e53f87db90dcf0c7a4581f48010b90d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af16bcbeee5898b357791db546725e6d4"><td class="memItemLeft" align="right" valign="top"><a id="af16bcbeee5898b357791db546725e6d4" name="af16bcbeee5898b357791db546725e6d4"></a>
-<a class="el" href="../../d4/d7f/class_amuse_1_1_core_1_1_handle_forward_list_1_1const__iterator.html#aa76e8d6e8711e98636fbfe00e8c78658">this_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator++</b> (int) noexcept</td></tr>
+<tr class="memitem:af16bcbeee5898b357791db546725e6d4" id="r_af16bcbeee5898b357791db546725e6d4"><td class="memItemLeft"><a id="af16bcbeee5898b357791db546725e6d4" name="af16bcbeee5898b357791db546725e6d4"></a>
+<a class="el" href="#aa76e8d6e8711e98636fbfe00e8c78658">this_type</a>&#160;</td><td class="memItemRight"><b>operator++</b> (int) noexcept</td></tr>
 <tr class="memdesc:af16bcbeee5898b357791db546725e6d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">後置インクリメント <br /></td></tr>
-<tr class="separator:af16bcbeee5898b357791db546725e6d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5d3ff743512e9a05d38afb6f564d999"><td class="memItemLeft" align="right" valign="top"><a id="aa5d3ff743512e9a05d38afb6f564d999" name="aa5d3ff743512e9a05d38afb6f564d999"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="../../d4/d7f/class_amuse_1_1_core_1_1_handle_forward_list_1_1const__iterator.html#aa76e8d6e8711e98636fbfe00e8c78658">this_type</a> &amp;rhs) const noexcept</td></tr>
+<tr class="memitem:aa5d3ff743512e9a05d38afb6f564d999" id="r_aa5d3ff743512e9a05d38afb6f564d999"><td class="memItemLeft"><a id="aa5d3ff743512e9a05d38afb6f564d999" name="aa5d3ff743512e9a05d38afb6f564d999"></a>
+bool&#160;</td><td class="memItemRight"><b>operator==</b> (const <a class="el" href="#aa76e8d6e8711e98636fbfe00e8c78658">this_type</a> &amp;rhs) const noexcept</td></tr>
 <tr class="memdesc:aa5d3ff743512e9a05d38afb6f564d999"><td class="mdescLeft">&#160;</td><td class="mdescRight">等価演算子 <br /></td></tr>
-<tr class="separator:aa5d3ff743512e9a05d38afb6f564d999"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea41b8426541816947812a0c38133407"><td class="memItemLeft" align="right" valign="top"><a id="aea41b8426541816947812a0c38133407" name="aea41b8426541816947812a0c38133407"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="../../d4/d7f/class_amuse_1_1_core_1_1_handle_forward_list_1_1const__iterator.html#aa76e8d6e8711e98636fbfe00e8c78658">this_type</a> &amp;rhs) const noexcept</td></tr>
+<tr class="memitem:aea41b8426541816947812a0c38133407" id="r_aea41b8426541816947812a0c38133407"><td class="memItemLeft"><a id="aea41b8426541816947812a0c38133407" name="aea41b8426541816947812a0c38133407"></a>
+bool&#160;</td><td class="memItemRight"><b>operator!=</b> (const <a class="el" href="#aa76e8d6e8711e98636fbfe00e8c78658">this_type</a> &amp;rhs) const noexcept</td></tr>
 <tr class="memdesc:aea41b8426541816947812a0c38133407"><td class="mdescLeft">&#160;</td><td class="mdescRight">否等価演算子 <br /></td></tr>
-<tr class="separator:aea41b8426541816947812a0c38133407"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 限定公開メンバ関数</h2></td></tr>
-<tr class="memitem:a1b7f992d0d14ac34044775413bb8b6d1"><td class="memItemLeft" align="right" valign="top"><a id="a1b7f992d0d14ac34044775413bb8b6d1" name="a1b7f992d0d14ac34044775413bb8b6d1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>const_iterator</b> (const HandleBase *<a class="el" href="../../d4/d7f/class_amuse_1_1_core_1_1_handle_forward_list_1_1const__iterator.html#a015eb94863489cfc008b8f913359cdec">pHandle</a>) noexcept</td></tr>
+<tr class="memitem:a1b7f992d0d14ac34044775413bb8b6d1" id="r_a1b7f992d0d14ac34044775413bb8b6d1"><td class="memItemLeft"><a id="a1b7f992d0d14ac34044775413bb8b6d1" name="a1b7f992d0d14ac34044775413bb8b6d1"></a>
+&#160;</td><td class="memItemRight"><b>const_iterator</b> (const HandleBase *pHandle) noexcept</td></tr>
 <tr class="memdesc:a1b7f992d0d14ac34044775413bb8b6d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">ハンドルのポインタから生成(内部用) <br /></td></tr>
-<tr class="separator:a1b7f992d0d14ac34044775413bb8b6d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 限定公開変数類</h2></td></tr>
-<tr class="memitem:a015eb94863489cfc008b8f913359cdec"><td class="memItemLeft" align="right" valign="top"><a id="a015eb94863489cfc008b8f913359cdec" name="a015eb94863489cfc008b8f913359cdec"></a>
-HandleBase *&#160;</td><td class="memItemRight" valign="bottom"><b>pHandle</b></td></tr>
+<tr class="memitem:a015eb94863489cfc008b8f913359cdec" id="r_a015eb94863489cfc008b8f913359cdec"><td class="memItemLeft"><a id="a015eb94863489cfc008b8f913359cdec" name="a015eb94863489cfc008b8f913359cdec"></a>
+HandleBase *&#160;</td><td class="memItemRight"><b>pHandle</b></td></tr>
 <tr class="memdesc:a015eb94863489cfc008b8f913359cdec"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンス・ポインタ <br /></td></tr>
-<tr class="separator:a015eb94863489cfc008b8f913359cdec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
 フレンド</h2></td></tr>
-<tr class="memitem:a04a525062643f9a6f39e0e92522fd8e0"><td class="memItemLeft" align="right" valign="top"><a id="a04a525062643f9a6f39e0e92522fd8e0" name="a04a525062643f9a6f39e0e92522fd8e0"></a>
-class&#160;</td><td class="memItemRight" valign="bottom"><b>HandleForwardList</b></td></tr>
-<tr class="separator:a04a525062643f9a6f39e0e92522fd8e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04a525062643f9a6f39e0e92522fd8e0" id="r_a04a525062643f9a6f39e0e92522fd8e0"><td class="memItemLeft"><a id="a04a525062643f9a6f39e0e92522fd8e0" name="a04a525062643f9a6f39e0e92522fd8e0"></a>
+class&#160;</td><td class="memItemRight"><b>HandleForwardList</b></td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
 class Amuse::Core::HandleForwardList&lt; T &gt;::const_iterator</div><p>constイテレータ </p>
 </div><hr/>このクラス詳解は次のファイルから抽出されました:<ul>
@@ -198,11 +208,12 @@ class Amuse::Core::HandleForwardList&lt; T &gt;::const_iterator</div><p>constイ
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>Amuse</b></li><li class="navelem"><b>Core</b></li><li class="navelem"><a class="el" href="../../d3/ddf/class_amuse_1_1_core_1_1_handle_forward_list.html">HandleForwardList</a></li><li class="navelem"><a class="el" href="../../d4/d7f/class_amuse_1_1_core_1_1_handle_forward_list_1_1const__iterator.html">const_iterator</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><b>Core</b></li><li class="navelem"><a href="../../d3/ddf/class_amuse_1_1_core_1_1_handle_forward_list.html">HandleForwardList</a></li><li class="navelem"><a href="../../d4/d7f/class_amuse_1_1_core_1_1_handle_forward_list_1_1const__iterator.html">const_iterator</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

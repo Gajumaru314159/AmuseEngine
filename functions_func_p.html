@@ -3,19 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AmuseEngine: クラスメンバ - 関数</title>
+<link rel="icon" href="logo.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="style.css" rel="stylesheet" type="text/css"/>
@@ -36,23 +42,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.6 -->
+<!-- 構築: Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
 });
-/* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -65,10 +93,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('functions_func_p.html',''); initResizable(); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('functions_func_p.html','',''); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -92,9 +119,11 @@ $(document).ready(function(){initNavTree('functions_func_p.html',''); initResiza
 </div>
 
 <div class="contents">
-&#160;
+<div class="textblock">&#160;</div><br/>
+<div class="qindex"><a class="qindex" href="functions_func.html#index_a">A</a><div class="alphasepar"></div><a class="qindex" href="functions_func_b.html#index_b">B</a><div class="alphasepar"></div><a class="qindex" href="functions_func_c.html#index_c">C</a><div class="alphasepar"></div><a class="qindex" href="functions_func_d.html#index_d">D</a><div class="alphasepar"></div><a class="qindex" href="functions_func_e.html#index_e">E</a><div class="alphasepar"></div><a class="qindex" href="functions_func_f.html#index_f">F</a><div class="alphasepar"></div><a class="qindex" href="functions_func_g.html#index_g">G</a><div class="alphasepar"></div><a class="qindex" href="functions_func_h.html#index_h">H</a><div class="alphasepar"></div><a class="qindex" href="functions_func_i.html#index_i">I</a><div class="alphasepar"></div><a class="qindex" href="functions_func_j.html#index_j">J</a><div class="alphasepar"></div><a class="qindex" href="functions_func_k.html#index_k">K</a><div class="alphasepar"></div><a class="qindex" href="functions_func_l.html#index_l">L</a><div class="alphasepar"></div><a class="qindex" href="functions_func_m.html#index_m">M</a><div class="alphasepar"></div><a class="qindex" href="functions_func_n.html#index_n">N</a><div class="alphasepar"></div><a class="qindex" href="functions_func_o.html#index_o">O</a><div class="alphasepar"></div><a class="qindex" href="functions_func_p.html#index_p">P</a><div class="alphasepar"></div><a class="qindex" href="functions_func_q.html#index_q">Q</a><div class="alphasepar"></div><a class="qindex" href="functions_func_r.html#index_r">R</a><div class="alphasepar"></div><a class="qindex" href="functions_func_s.html#index_s">S</a><div class="alphasepar"></div><a class="qindex" href="functions_func_t.html#index_t">T</a><div class="alphasepar"></div><a class="qindex" href="functions_func_u.html#index_u">U</a><div class="alphasepar"></div><a class="qindex" href="functions_func_v.html#index_v">V</a><div class="alphasepar"></div><a class="qindex" href="functions_func_w.html#index_w">W</a><div class="alphasepar"></div><a class="qindex" href="functions_func_x.html#index_x">X</a><div class="alphasepar"></div><a class="qindex" href="functions_func_y.html#index_y">Y</a><div class="alphasepar"></div><a class="qindex" href="functions_func__.html#index__">_</a><div class="alphasepar"></div><a class="qindex" href="functions_func_~.html#index_~">~</a></div>
 
-<h3><a id="index_p" name="index_p"></a>- p -</h3><ul>
+
+<h3 class="doxsection"><a id="index_p" name="index_p"></a>- p -</h3><ul>
 <li>Parallel()&#160;:&#160;<a class="el" href="db/d92/class_amuse_1_1_core_1_1_task.html#a957f185fa10ccdbf995f9386abbb0f9a">Amuse::Core::Task</a></li>
 <li>Parent()&#160;:&#160;<a class="el" href="df/db9/class_amuse_1_1_core_1_1_path.html#ab29ec45382fc56a3981c6b26f3e799f9">Amuse::Core::Path</a></li>
 <li>parse()&#160;:&#160;<a class="el" href="df/d76/class_amuse_1_1_core_1_1_i_n_i.html#aa1134e1b239ad409ea2fd5fb0b44e64e">Amuse::Core::INI</a>, <a class="el" href="dd/d97/class_amuse_1_1_core_1_1_xml.html#aa17be7013d8ec56dd13932e96da1f80b">Amuse::Core::Xml</a></li>
@@ -109,7 +138,7 @@ $(document).ready(function(){initNavTree('functions_func_p.html',''); initResiza
 <li>Pimpl()&#160;:&#160;<a class="el" href="d4/d30/class_amuse_1_1_core_1_1_pimpl.html#a145c84e728c4a366d49dd55f20a74343">Amuse::Core::Pimpl&lt; T &gt;</a></li>
 <li>PingPong()&#160;:&#160;<a class="el" href="df/d2e/class_amuse_1_1_core_1_1_math.html#ae173067db255303db1589e190312b855">Amuse::Core::Math</a></li>
 <li>pixelCount()&#160;:&#160;<a class="el" href="d6/d91/class_amuse_1_1_core_1_1_bitmap.html#ab469ea4f4678078abe13d551c01d4854">Amuse::Core::Bitmap</a></li>
-<li>Plane()&#160;:&#160;<a class="el" href="de/ddb/struct_amuse_1_1_core_1_1_plane.html#a7bdcd75de344e6a789fd83659aded67e">Amuse::Core::Plane</a></li>
+<li>Plane()&#160;:&#160;<a class="el" href="de/ddb/struct_amuse_1_1_core_1_1_plane.html#af244612dc08415637f4df2f218bc8d96">Amuse::Core::Plane</a></li>
 <li>Point()&#160;:&#160;<a class="el" href="d9/d4b/struct_amuse_1_1_core_1_1_point.html#a4509fa05e2d2bd3bf39d1b2e313e7976">Amuse::Core::Point</a></li>
 <li>poll()&#160;:&#160;<a class="el" href="d3/dd2/class_amuse_1_1_core_1_1_async_file.html#a27047683d83b96a1ceee7b5364d10cc5">Amuse::Core::AsyncFile</a>, <a class="el" href="d3/d41/class_amuse_1_1_core_1_1_async_file_event.html#a1933a26a927799a21577db973699a80e">Amuse::Core::AsyncFileEvent</a>, <a class="el" href="dc/de0/class_amuse_1_1_r_h_i_1_1_graphic_file_event.html#a7a0dd9c160894f1f049a1796837c91eb">Amuse::RHI::GraphicFileEvent</a></li>
 <li>pollEventQuery()&#160;:&#160;<a class="el" href="d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#ac8a6fb04a3c0a452a334b7902a68a8de">Amuse::RHI::Device</a>, <a class="el" href="d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#a05ca3e2eb94b85b0ae98cd58d8dfe368">Amuse::RHI::DirectX12Device</a></li>
@@ -141,10 +170,11 @@ $(document).ready(function(){initNavTree('functions_func_p.html',''); initResiza
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

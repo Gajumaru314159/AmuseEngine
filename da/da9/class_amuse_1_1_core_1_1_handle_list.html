@@ -3,19 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AmuseEngine: Amuse::Core::HandleList&lt; T &gt; クラステンプレート</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../jquery.js"></script>
-<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
 <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
 <script type="text/javascript" src="../../navtreedata.js"></script>
 <script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="../../style.css" rel="stylesheet" type="text/css"/>
@@ -36,23 +42,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.6 -->
+<!-- 構築: Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('../../',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
 });
-/* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -65,10 +93,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('da/da9/class_amuse_1_1_core_1_1_handle_list.html','../../'); initResizable(); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('da/da9/class_amuse_1_1_core_1_1_handle_list.html','../../','d6/dcb/class_amuse_1_1_core_1_1_handle_list-members'); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -102,202 +129,153 @@ $(document).ready(function(){initNavTree('da/da9/class_amuse_1_1_core_1_1_handle
 <div class="contents">
 
 <p>ハンドル管理式双方向連結リスト  
- <a href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html#details">[詳解]</a></p>
+ <a href="#details">[詳解]</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d8/d1c/_handle_list_8h_source.html">HandleList.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 クラス</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html">const_iterator</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">constイテレータ  <a href="../../d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html#details">[詳解]</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d26/class_amuse_1_1_core_1_1_handle_list_1_1_handle.html">Handle</a></td></tr>
+<tr class="memitem:Handle" id="r_Handle"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../dd/d26/class_amuse_1_1_core_1_1_handle_list_1_1_handle.html">Handle</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ハンドル  <a href="../../dd/d26/class_amuse_1_1_core_1_1_handle_list_1_1_handle.html#details">[詳解]</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d5c/class_amuse_1_1_core_1_1_handle_list_1_1iterator.html">iterator</a></td></tr>
+<tr class="memitem:const_5Fiterator" id="r_const_5Fiterator"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html">const_iterator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">constイテレータ  <a href="../../d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:iterator" id="r_iterator"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d4/d5c/class_amuse_1_1_core_1_1_handle_list_1_1iterator.html">iterator</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">イテレータ  <a href="../../d4/d5c/class_amuse_1_1_core_1_1_handle_list_1_1iterator.html#details">[詳解]</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
 公開型</h2></td></tr>
-<tr class="memitem:a46f0e5de811ba450338fec0b9a3ee053"><td class="memItemLeft" align="right" valign="top"><a id="a46f0e5de811ba450338fec0b9a3ee053" name="a46f0e5de811ba450338fec0b9a3ee053"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>this_type</b> = <a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">HandleList</a>&lt; T &gt;</td></tr>
+<tr class="memitem:a46f0e5de811ba450338fec0b9a3ee053" id="r_a46f0e5de811ba450338fec0b9a3ee053"><td class="memItemLeft"><a id="a46f0e5de811ba450338fec0b9a3ee053" name="a46f0e5de811ba450338fec0b9a3ee053"></a>
+using&#160;</td><td class="memItemRight"><b>this_type</b> = <a class="el" href="#af9d2ec8df7e0509d0b92f8a89b6b93e5">HandleList</a>&lt;T&gt;</td></tr>
 <tr class="memdesc:a46f0e5de811ba450338fec0b9a3ee053"><td class="mdescLeft">&#160;</td><td class="mdescRight">型 <br /></td></tr>
-<tr class="separator:a46f0e5de811ba450338fec0b9a3ee053"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d2e36128cd8f187f2222ea0067c35d1"><td class="memItemLeft" align="right" valign="top"><a id="a8d2e36128cd8f187f2222ea0067c35d1" name="a8d2e36128cd8f187f2222ea0067c35d1"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b> = T</td></tr>
+<tr class="memitem:a8d2e36128cd8f187f2222ea0067c35d1" id="r_a8d2e36128cd8f187f2222ea0067c35d1"><td class="memItemLeft"><a id="a8d2e36128cd8f187f2222ea0067c35d1" name="a8d2e36128cd8f187f2222ea0067c35d1"></a>
+using&#160;</td><td class="memItemRight"><b>value_type</b> = T</td></tr>
 <tr class="memdesc:a8d2e36128cd8f187f2222ea0067c35d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">値型 <br /></td></tr>
-<tr class="separator:a8d2e36128cd8f187f2222ea0067c35d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5aac3eb985965a85f4f725393b7a66f"><td class="memItemLeft" align="right" valign="top"><a id="aa5aac3eb985965a85f4f725393b7a66f" name="aa5aac3eb985965a85f4f725393b7a66f"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>size_type</b> = size_t</td></tr>
+<tr class="memitem:aa5aac3eb985965a85f4f725393b7a66f" id="r_aa5aac3eb985965a85f4f725393b7a66f"><td class="memItemLeft"><a id="aa5aac3eb985965a85f4f725393b7a66f" name="aa5aac3eb985965a85f4f725393b7a66f"></a>
+using&#160;</td><td class="memItemRight"><b>size_type</b> = size_t</td></tr>
 <tr class="memdesc:aa5aac3eb985965a85f4f725393b7a66f"><td class="mdescLeft">&#160;</td><td class="mdescRight">サイズ <br /></td></tr>
-<tr class="separator:aa5aac3eb985965a85f4f725393b7a66f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d1b7e6e56253a064f505585c119c403"><td class="memItemLeft" align="right" valign="top"><a id="a6d1b7e6e56253a064f505585c119c403" name="a6d1b7e6e56253a064f505585c119c403"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>difference_type</b> = int</td></tr>
+<tr class="memitem:a6d1b7e6e56253a064f505585c119c403" id="r_a6d1b7e6e56253a064f505585c119c403"><td class="memItemLeft"><a id="a6d1b7e6e56253a064f505585c119c403" name="a6d1b7e6e56253a064f505585c119c403"></a>
+using&#160;</td><td class="memItemRight"><b>difference_type</b> = int</td></tr>
 <tr class="memdesc:a6d1b7e6e56253a064f505585c119c403"><td class="mdescLeft">&#160;</td><td class="mdescRight">ポインタ差分型 <br /></td></tr>
-<tr class="separator:a6d1b7e6e56253a064f505585c119c403"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33deb047ce40d685b42516a0b3d00a63"><td class="memItemLeft" align="right" valign="top"><a id="a33deb047ce40d685b42516a0b3d00a63" name="a33deb047ce40d685b42516a0b3d00a63"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>pointer</b> = T *</td></tr>
+<tr class="memitem:a33deb047ce40d685b42516a0b3d00a63" id="r_a33deb047ce40d685b42516a0b3d00a63"><td class="memItemLeft"><a id="a33deb047ce40d685b42516a0b3d00a63" name="a33deb047ce40d685b42516a0b3d00a63"></a>
+using&#160;</td><td class="memItemRight"><b>pointer</b> = T*</td></tr>
 <tr class="memdesc:a33deb047ce40d685b42516a0b3d00a63"><td class="mdescLeft">&#160;</td><td class="mdescRight">ポインタ型 <br /></td></tr>
-<tr class="separator:a33deb047ce40d685b42516a0b3d00a63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5e05c02527c7b84ee11e3416266b420"><td class="memItemLeft" align="right" valign="top"><a id="ae5e05c02527c7b84ee11e3416266b420" name="ae5e05c02527c7b84ee11e3416266b420"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>const_pointer</b> = const T *</td></tr>
+<tr class="memitem:ae5e05c02527c7b84ee11e3416266b420" id="r_ae5e05c02527c7b84ee11e3416266b420"><td class="memItemLeft"><a id="ae5e05c02527c7b84ee11e3416266b420" name="ae5e05c02527c7b84ee11e3416266b420"></a>
+using&#160;</td><td class="memItemRight"><b>const_pointer</b> = const T*</td></tr>
 <tr class="memdesc:ae5e05c02527c7b84ee11e3416266b420"><td class="mdescLeft">&#160;</td><td class="mdescRight">constポインタ型 <br /></td></tr>
-<tr class="separator:ae5e05c02527c7b84ee11e3416266b420"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a622b483e442acdc30480f32c82cfcc38"><td class="memItemLeft" align="right" valign="top"><a id="a622b483e442acdc30480f32c82cfcc38" name="a622b483e442acdc30480f32c82cfcc38"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>reference</b> = T &amp;</td></tr>
+<tr class="memitem:a622b483e442acdc30480f32c82cfcc38" id="r_a622b483e442acdc30480f32c82cfcc38"><td class="memItemLeft"><a id="a622b483e442acdc30480f32c82cfcc38" name="a622b483e442acdc30480f32c82cfcc38"></a>
+using&#160;</td><td class="memItemRight"><b>reference</b> = T&amp;</td></tr>
 <tr class="memdesc:a622b483e442acdc30480f32c82cfcc38"><td class="mdescLeft">&#160;</td><td class="mdescRight">参照型 <br /></td></tr>
-<tr class="separator:a622b483e442acdc30480f32c82cfcc38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3163f7f9f8613e39a5f4c47f1cc42fe9"><td class="memItemLeft" align="right" valign="top"><a id="a3163f7f9f8613e39a5f4c47f1cc42fe9" name="a3163f7f9f8613e39a5f4c47f1cc42fe9"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>const_reference</b> = const T &amp;</td></tr>
+<tr class="memitem:a3163f7f9f8613e39a5f4c47f1cc42fe9" id="r_a3163f7f9f8613e39a5f4c47f1cc42fe9"><td class="memItemLeft"><a id="a3163f7f9f8613e39a5f4c47f1cc42fe9" name="a3163f7f9f8613e39a5f4c47f1cc42fe9"></a>
+using&#160;</td><td class="memItemRight"><b>const_reference</b> = const T&amp;</td></tr>
 <tr class="memdesc:a3163f7f9f8613e39a5f4c47f1cc42fe9"><td class="mdescLeft">&#160;</td><td class="mdescRight">const参照型 <br /></td></tr>
-<tr class="separator:a3163f7f9f8613e39a5f4c47f1cc42fe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70afc1601ddd8dee2e9a864cc4a3e946"><td class="memItemLeft" align="right" valign="top"><a id="a70afc1601ddd8dee2e9a864cc4a3e946" name="a70afc1601ddd8dee2e9a864cc4a3e946"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>const_reverse_iterator</b> = std::reverse_iterator&lt; <a class="el" href="../../d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html">const_iterator</a> &gt;</td></tr>
+<tr class="memitem:a70afc1601ddd8dee2e9a864cc4a3e946" id="r_a70afc1601ddd8dee2e9a864cc4a3e946"><td class="memItemLeft"><a id="a70afc1601ddd8dee2e9a864cc4a3e946" name="a70afc1601ddd8dee2e9a864cc4a3e946"></a>
+using&#160;</td><td class="memItemRight"><b>const_reverse_iterator</b> = std::reverse_iterator&lt;<a class="el" href="../../d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html">const_iterator</a>&gt;</td></tr>
 <tr class="memdesc:a70afc1601ddd8dee2e9a864cc4a3e946"><td class="mdescLeft">&#160;</td><td class="mdescRight">const逆イテレータ <br /></td></tr>
-<tr class="separator:a70afc1601ddd8dee2e9a864cc4a3e946"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3142b585cc28f3774cd588a9e1498c24"><td class="memItemLeft" align="right" valign="top"><a id="a3142b585cc28f3774cd588a9e1498c24" name="a3142b585cc28f3774cd588a9e1498c24"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>reverse_iterator</b> = std::reverse_iterator&lt; <a class="el" href="../../d4/d5c/class_amuse_1_1_core_1_1_handle_list_1_1iterator.html">iterator</a> &gt;</td></tr>
+<tr class="memitem:a3142b585cc28f3774cd588a9e1498c24" id="r_a3142b585cc28f3774cd588a9e1498c24"><td class="memItemLeft"><a id="a3142b585cc28f3774cd588a9e1498c24" name="a3142b585cc28f3774cd588a9e1498c24"></a>
+using&#160;</td><td class="memItemRight"><b>reverse_iterator</b> = std::reverse_iterator&lt;<a class="el" href="../../d4/d5c/class_amuse_1_1_core_1_1_handle_list_1_1iterator.html">iterator</a>&gt;</td></tr>
 <tr class="memdesc:a3142b585cc28f3774cd588a9e1498c24"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆順に要素を走査するイテレータ型。 <br /></td></tr>
-<tr class="separator:a3142b585cc28f3774cd588a9e1498c24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:af9d2ec8df7e0509d0b92f8a89b6b93e5"><td class="memItemLeft" align="right" valign="top"><a id="af9d2ec8df7e0509d0b92f8a89b6b93e5" name="af9d2ec8df7e0509d0b92f8a89b6b93e5"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>HandleList</b> ()</td></tr>
+<tr class="memitem:af9d2ec8df7e0509d0b92f8a89b6b93e5" id="r_af9d2ec8df7e0509d0b92f8a89b6b93e5"><td class="memItemLeft"><a id="af9d2ec8df7e0509d0b92f8a89b6b93e5" name="af9d2ec8df7e0509d0b92f8a89b6b93e5"></a>
+&#160;</td><td class="memItemRight"><b>HandleList</b> ()</td></tr>
 <tr class="memdesc:af9d2ec8df7e0509d0b92f8a89b6b93e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトコンストラクタ <br /></td></tr>
-<tr class="separator:af9d2ec8df7e0509d0b92f8a89b6b93e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8422cd2a497bb66e0d89b150d4040f46"><td class="memItemLeft" align="right" valign="top"><a id="a8422cd2a497bb66e0d89b150d4040f46" name="a8422cd2a497bb66e0d89b150d4040f46"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>HandleList</b> (<a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html#a46f0e5de811ba450338fec0b9a3ee053">this_type</a> &amp;&amp;x) noexcept</td></tr>
+<tr class="memitem:a8422cd2a497bb66e0d89b150d4040f46" id="r_a8422cd2a497bb66e0d89b150d4040f46"><td class="memItemLeft"><a id="a8422cd2a497bb66e0d89b150d4040f46" name="a8422cd2a497bb66e0d89b150d4040f46"></a>
+&#160;</td><td class="memItemRight"><b>HandleList</b> (<a class="el" href="#a46f0e5de811ba450338fec0b9a3ee053">this_type</a> &amp;&amp;x) noexcept</td></tr>
 <tr class="memdesc:a8422cd2a497bb66e0d89b150d4040f46"><td class="mdescLeft">&#160;</td><td class="mdescRight">他のリストからムーブ構築する。 <br /></td></tr>
-<tr class="separator:a8422cd2a497bb66e0d89b150d4040f46"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8aa2cf5a2907b2932e3d93bd5e65887e"><td class="memItemLeft" align="right" valign="top"><a id="a8aa2cf5a2907b2932e3d93bd5e65887e" name="a8aa2cf5a2907b2932e3d93bd5e65887e"></a>
-<a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html#a46f0e5de811ba450338fec0b9a3ee053">this_type</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html#a46f0e5de811ba450338fec0b9a3ee053">this_type</a> &amp;&amp;x) noexcept</td></tr>
+<tr class="memitem:a8aa2cf5a2907b2932e3d93bd5e65887e" id="r_a8aa2cf5a2907b2932e3d93bd5e65887e"><td class="memItemLeft"><a id="a8aa2cf5a2907b2932e3d93bd5e65887e" name="a8aa2cf5a2907b2932e3d93bd5e65887e"></a>
+<a class="el" href="#a46f0e5de811ba450338fec0b9a3ee053">this_type</a> &amp;&#160;</td><td class="memItemRight"><b>operator=</b> (<a class="el" href="#a46f0e5de811ba450338fec0b9a3ee053">this_type</a> &amp;&amp;x) noexcept</td></tr>
 <tr class="memdesc:a8aa2cf5a2907b2932e3d93bd5e65887e"><td class="mdescLeft">&#160;</td><td class="mdescRight">他のリストをムーブ代入する。 <br /></td></tr>
-<tr class="separator:a8aa2cf5a2907b2932e3d93bd5e65887e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac16034832fd391c233969cc51157d9ae"><td class="memItemLeft" align="right" valign="top"><a id="ac16034832fd391c233969cc51157d9ae" name="ac16034832fd391c233969cc51157d9ae"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>~HandleList</b> ()</td></tr>
+<tr class="memitem:ac16034832fd391c233969cc51157d9ae" id="r_ac16034832fd391c233969cc51157d9ae"><td class="memItemLeft"><a id="ac16034832fd391c233969cc51157d9ae" name="ac16034832fd391c233969cc51157d9ae"></a>
+&#160;</td><td class="memItemRight"><b>~HandleList</b> ()</td></tr>
 <tr class="memdesc:ac16034832fd391c233969cc51157d9ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ <br /></td></tr>
-<tr class="separator:ac16034832fd391c233969cc51157d9ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5934ab9f4e4c1931f119f73fd46b28cd"><td class="memItemLeft" align="right" valign="top"><a id="a5934ab9f4e4c1931f119f73fd46b28cd" name="a5934ab9f4e4c1931f119f73fd46b28cd"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">HandleList</a>&lt; T &gt; &amp;rhs) const noexcept</td></tr>
+<tr class="memitem:a5934ab9f4e4c1931f119f73fd46b28cd" id="r_a5934ab9f4e4c1931f119f73fd46b28cd"><td class="memItemLeft"><a id="a5934ab9f4e4c1931f119f73fd46b28cd" name="a5934ab9f4e4c1931f119f73fd46b28cd"></a>
+bool&#160;</td><td class="memItemRight"><b>operator==</b> (const <a class="el" href="#af9d2ec8df7e0509d0b92f8a89b6b93e5">HandleList</a>&lt; T &gt; &amp;rhs) const noexcept</td></tr>
 <tr class="memdesc:a5934ab9f4e4c1931f119f73fd46b28cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">等価演算子 <br /></td></tr>
-<tr class="separator:a5934ab9f4e4c1931f119f73fd46b28cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa865da3247d392673b8b104688d0ee9f"><td class="memItemLeft" align="right" valign="top"><a id="aa865da3247d392673b8b104688d0ee9f" name="aa865da3247d392673b8b104688d0ee9f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">HandleList</a>&lt; T &gt; &amp;rhs) const noexcept</td></tr>
+<tr class="memitem:aa865da3247d392673b8b104688d0ee9f" id="r_aa865da3247d392673b8b104688d0ee9f"><td class="memItemLeft"><a id="aa865da3247d392673b8b104688d0ee9f" name="aa865da3247d392673b8b104688d0ee9f"></a>
+bool&#160;</td><td class="memItemRight"><b>operator!=</b> (const <a class="el" href="#af9d2ec8df7e0509d0b92f8a89b6b93e5">HandleList</a>&lt; T &gt; &amp;rhs) const noexcept</td></tr>
 <tr class="memdesc:aa865da3247d392673b8b104688d0ee9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">否等価演算子 <br /></td></tr>
-<tr class="separator:aa865da3247d392673b8b104688d0ee9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9116220648879e919c18ea992a81524"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/d5c/class_amuse_1_1_core_1_1_handle_list_1_1iterator.html">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html#af9116220648879e919c18ea992a81524">begin</a> () noexcept</td></tr>
+<tr class="memitem:af9116220648879e919c18ea992a81524" id="r_af9116220648879e919c18ea992a81524"><td class="memItemLeft"><a class="el" href="../../d4/d5c/class_amuse_1_1_core_1_1_handle_list_1_1iterator.html">iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#af9116220648879e919c18ea992a81524">begin</a> () noexcept</td></tr>
 <tr class="memdesc:af9116220648879e919c18ea992a81524"><td class="mdescLeft">&#160;</td><td class="mdescRight">先頭要素を指すイテレータを返す。  <br /></td></tr>
-<tr class="separator:af9116220648879e919c18ea992a81524"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3921103f83edf9fce18b36b9655e22d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/d5c/class_amuse_1_1_core_1_1_handle_list_1_1iterator.html">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html#a3921103f83edf9fce18b36b9655e22d3">end</a> () noexcept</td></tr>
+<tr class="memitem:a3921103f83edf9fce18b36b9655e22d3" id="r_a3921103f83edf9fce18b36b9655e22d3"><td class="memItemLeft"><a class="el" href="../../d4/d5c/class_amuse_1_1_core_1_1_handle_list_1_1iterator.html">iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3921103f83edf9fce18b36b9655e22d3">end</a> () noexcept</td></tr>
 <tr class="memdesc:a3921103f83edf9fce18b36b9655e22d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">末尾要素の次を指すイテレータを返す。  <br /></td></tr>
-<tr class="separator:a3921103f83edf9fce18b36b9655e22d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82dab028dff185b8cf376789a1d7c05c"><td class="memItemLeft" align="right" valign="top"><a id="a82dab028dff185b8cf376789a1d7c05c" name="a82dab028dff185b8cf376789a1d7c05c"></a>
-<a class="el" href="../../d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cbegin</b> () const noexcept</td></tr>
+<tr class="memitem:a82dab028dff185b8cf376789a1d7c05c" id="r_a82dab028dff185b8cf376789a1d7c05c"><td class="memItemLeft"><a id="a82dab028dff185b8cf376789a1d7c05c" name="a82dab028dff185b8cf376789a1d7c05c"></a>
+<a class="el" href="../../d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html">const_iterator</a>&#160;</td><td class="memItemRight"><b>cbegin</b> () const noexcept</td></tr>
 <tr class="memdesc:a82dab028dff185b8cf376789a1d7c05c"><td class="mdescLeft">&#160;</td><td class="mdescRight">先頭要素を指す読み取り専用イテレータを返す。 <br /></td></tr>
-<tr class="separator:a82dab028dff185b8cf376789a1d7c05c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3ca3ddd1108a0b6efcf45691d3a5ef3"><td class="memItemLeft" align="right" valign="top"><a id="aa3ca3ddd1108a0b6efcf45691d3a5ef3" name="aa3ca3ddd1108a0b6efcf45691d3a5ef3"></a>
-<a class="el" href="../../d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cend</b> () const noexcept</td></tr>
+<tr class="memitem:aa3ca3ddd1108a0b6efcf45691d3a5ef3" id="r_aa3ca3ddd1108a0b6efcf45691d3a5ef3"><td class="memItemLeft"><a id="aa3ca3ddd1108a0b6efcf45691d3a5ef3" name="aa3ca3ddd1108a0b6efcf45691d3a5ef3"></a>
+<a class="el" href="../../d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html">const_iterator</a>&#160;</td><td class="memItemRight"><b>cend</b> () const noexcept</td></tr>
 <tr class="memdesc:aa3ca3ddd1108a0b6efcf45691d3a5ef3"><td class="mdescLeft">&#160;</td><td class="mdescRight">末尾要素の次を指す読み取り専用イテレータを返す。 <br /></td></tr>
-<tr class="separator:aa3ca3ddd1108a0b6efcf45691d3a5ef3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae45183444529db991dc1d3b697aa17b3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html#a3142b585cc28f3774cd588a9e1498c24">reverse_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html#ae45183444529db991dc1d3b697aa17b3">rbegin</a> () noexcept</td></tr>
+<tr class="memitem:ae45183444529db991dc1d3b697aa17b3" id="r_ae45183444529db991dc1d3b697aa17b3"><td class="memItemLeft"><a class="el" href="#a3142b585cc28f3774cd588a9e1498c24">reverse_iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae45183444529db991dc1d3b697aa17b3">rbegin</a> () noexcept</td></tr>
 <tr class="memdesc:ae45183444529db991dc1d3b697aa17b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆順の先頭要素を指すイテレータを返す。  <br /></td></tr>
-<tr class="separator:ae45183444529db991dc1d3b697aa17b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07a7a96ddc6f6bc46b4bf904867a8644"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html#a3142b585cc28f3774cd588a9e1498c24">reverse_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html#a07a7a96ddc6f6bc46b4bf904867a8644">rend</a> () noexcept</td></tr>
+<tr class="memitem:a07a7a96ddc6f6bc46b4bf904867a8644" id="r_a07a7a96ddc6f6bc46b4bf904867a8644"><td class="memItemLeft"><a class="el" href="#a3142b585cc28f3774cd588a9e1498c24">reverse_iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#a07a7a96ddc6f6bc46b4bf904867a8644">rend</a> () noexcept</td></tr>
 <tr class="memdesc:a07a7a96ddc6f6bc46b4bf904867a8644"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆順の末尾要素の次を指すイテレータを返す。  <br /></td></tr>
-<tr class="separator:a07a7a96ddc6f6bc46b4bf904867a8644"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ed88dd68e8aa970f5dd4dd510696849"><td class="memItemLeft" align="right" valign="top"><a id="a8ed88dd68e8aa970f5dd4dd510696849" name="a8ed88dd68e8aa970f5dd4dd510696849"></a>
-<a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html#a70afc1601ddd8dee2e9a864cc4a3e946">const_reverse_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><b>crbegin</b> () const noexcept</td></tr>
+<tr class="memitem:a8ed88dd68e8aa970f5dd4dd510696849" id="r_a8ed88dd68e8aa970f5dd4dd510696849"><td class="memItemLeft"><a id="a8ed88dd68e8aa970f5dd4dd510696849" name="a8ed88dd68e8aa970f5dd4dd510696849"></a>
+<a class="el" href="#a70afc1601ddd8dee2e9a864cc4a3e946">const_reverse_iterator</a>&#160;</td><td class="memItemRight"><b>crbegin</b> () const noexcept</td></tr>
 <tr class="memdesc:a8ed88dd68e8aa970f5dd4dd510696849"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆順の先頭要素を指す読み取り専用イテレータを返す。 <br /></td></tr>
-<tr class="separator:a8ed88dd68e8aa970f5dd4dd510696849"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2fa6965c967922f6c0eaad726f146445"><td class="memItemLeft" align="right" valign="top"><a id="a2fa6965c967922f6c0eaad726f146445" name="a2fa6965c967922f6c0eaad726f146445"></a>
-<a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html#a70afc1601ddd8dee2e9a864cc4a3e946">const_reverse_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><b>crend</b> () const noexcept</td></tr>
+<tr class="memitem:a2fa6965c967922f6c0eaad726f146445" id="r_a2fa6965c967922f6c0eaad726f146445"><td class="memItemLeft"><a id="a2fa6965c967922f6c0eaad726f146445" name="a2fa6965c967922f6c0eaad726f146445"></a>
+<a class="el" href="#a70afc1601ddd8dee2e9a864cc4a3e946">const_reverse_iterator</a>&#160;</td><td class="memItemRight"><b>crend</b> () const noexcept</td></tr>
 <tr class="memdesc:a2fa6965c967922f6c0eaad726f146445"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆順の末尾要素の次を指す読み取り専用イテレータを返す。 <br /></td></tr>
-<tr class="separator:a2fa6965c967922f6c0eaad726f146445"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a324edff5ce66c03957f8e1edecea159a"><td class="memItemLeft" align="right" valign="top"><a id="a324edff5ce66c03957f8e1edecea159a" name="a324edff5ce66c03957f8e1edecea159a"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>empty</b> () const noexcept</td></tr>
+<tr class="memitem:a324edff5ce66c03957f8e1edecea159a" id="r_a324edff5ce66c03957f8e1edecea159a"><td class="memItemLeft"><a id="a324edff5ce66c03957f8e1edecea159a" name="a324edff5ce66c03957f8e1edecea159a"></a>
+bool&#160;</td><td class="memItemRight"><b>empty</b> () const noexcept</td></tr>
 <tr class="memdesc:a324edff5ce66c03957f8e1edecea159a"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンテナが空かどうかを判定する <br /></td></tr>
-<tr class="separator:a324edff5ce66c03957f8e1edecea159a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a552d379b534a8de06224ec28b2f4d4b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html#aa5aac3eb985965a85f4f725393b7a66f">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html#a552d379b534a8de06224ec28b2f4d4b5">size</a> () const noexcept</td></tr>
+<tr class="memitem:a552d379b534a8de06224ec28b2f4d4b5" id="r_a552d379b534a8de06224ec28b2f4d4b5"><td class="memItemLeft"><a class="el" href="#aa5aac3eb985965a85f4f725393b7a66f">size_type</a>&#160;</td><td class="memItemRight"><a class="el" href="#a552d379b534a8de06224ec28b2f4d4b5">size</a> () const noexcept</td></tr>
 <tr class="memdesc:a552d379b534a8de06224ec28b2f4d4b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在格納している要素数を返す。  <br /></td></tr>
-<tr class="separator:a552d379b534a8de06224ec28b2f4d4b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae65228724dd629a0a2c3766321178ab7"><td class="memItemLeft" align="right" valign="top"><a id="ae65228724dd629a0a2c3766321178ab7" name="ae65228724dd629a0a2c3766321178ab7"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>has</b> (const <a class="el" href="../../dd/d26/class_amuse_1_1_core_1_1_handle_list_1_1_handle.html">Handle</a> &amp;handle) const</td></tr>
+<tr class="memitem:ae65228724dd629a0a2c3766321178ab7" id="r_ae65228724dd629a0a2c3766321178ab7"><td class="memItemLeft"><a id="ae65228724dd629a0a2c3766321178ab7" name="ae65228724dd629a0a2c3766321178ab7"></a>
+bool&#160;</td><td class="memItemRight"><b>has</b> (const <a class="el" href="../../dd/d26/class_amuse_1_1_core_1_1_handle_list_1_1_handle.html">Handle</a> &amp;handle) const</td></tr>
 <tr class="memdesc:ae65228724dd629a0a2c3766321178ab7"><td class="mdescLeft">&#160;</td><td class="mdescRight">ハンドルがリストに含まれているか判定する <br /></td></tr>
-<tr class="separator:ae65228724dd629a0a2c3766321178ab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1216419b816b8be4de7cd6fe8c7de791"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html#a622b483e442acdc30480f32c82cfcc38">reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html#a1216419b816b8be4de7cd6fe8c7de791">front</a> ()</td></tr>
+<tr class="memitem:a1216419b816b8be4de7cd6fe8c7de791" id="r_a1216419b816b8be4de7cd6fe8c7de791"><td class="memItemLeft"><a class="el" href="#a622b483e442acdc30480f32c82cfcc38">reference</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1216419b816b8be4de7cd6fe8c7de791">front</a> ()</td></tr>
 <tr class="memdesc:a1216419b816b8be4de7cd6fe8c7de791"><td class="mdescLeft">&#160;</td><td class="mdescRight">先頭要素への参照を返す。  <br /></td></tr>
-<tr class="separator:a1216419b816b8be4de7cd6fe8c7de791"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86aabf51ca6f5457a8652b1ad7f6a912"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html#a622b483e442acdc30480f32c82cfcc38">reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html#a86aabf51ca6f5457a8652b1ad7f6a912">back</a> ()</td></tr>
+<tr class="memitem:a86aabf51ca6f5457a8652b1ad7f6a912" id="r_a86aabf51ca6f5457a8652b1ad7f6a912"><td class="memItemLeft"><a class="el" href="#a622b483e442acdc30480f32c82cfcc38">reference</a>&#160;</td><td class="memItemRight"><a class="el" href="#a86aabf51ca6f5457a8652b1ad7f6a912">back</a> ()</td></tr>
 <tr class="memdesc:a86aabf51ca6f5457a8652b1ad7f6a912"><td class="mdescLeft">&#160;</td><td class="mdescRight">末尾要素への参照を返す。  <br /></td></tr>
-<tr class="separator:a86aabf51ca6f5457a8652b1ad7f6a912"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ed84e5a9d151a98dfc3c20794ac66d5"><td class="memItemLeft" align="right" valign="top"><a id="a7ed84e5a9d151a98dfc3c20794ac66d5" name="a7ed84e5a9d151a98dfc3c20794ac66d5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>push_front</b> (<a class="el" href="../../dd/d26/class_amuse_1_1_core_1_1_handle_list_1_1_handle.html">Handle</a> &amp;h, const T &amp;x)</td></tr>
+<tr class="memitem:a7ed84e5a9d151a98dfc3c20794ac66d5" id="r_a7ed84e5a9d151a98dfc3c20794ac66d5"><td class="memItemLeft"><a id="a7ed84e5a9d151a98dfc3c20794ac66d5" name="a7ed84e5a9d151a98dfc3c20794ac66d5"></a>
+void&#160;</td><td class="memItemRight"><b>push_front</b> (<a class="el" href="../../dd/d26/class_amuse_1_1_core_1_1_handle_list_1_1_handle.html">Handle</a> &amp;h, const T &amp;x)</td></tr>
 <tr class="memdesc:a7ed84e5a9d151a98dfc3c20794ac66d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">先頭に要素をコピー追加し、ハンドルに関連付ける。 <br /></td></tr>
-<tr class="separator:a7ed84e5a9d151a98dfc3c20794ac66d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70c8e3317bbe4cb639e9f50ff50da50a"><td class="memItemLeft" align="right" valign="top"><a id="a70c8e3317bbe4cb639e9f50ff50da50a" name="a70c8e3317bbe4cb639e9f50ff50da50a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>push_front</b> (<a class="el" href="../../dd/d26/class_amuse_1_1_core_1_1_handle_list_1_1_handle.html">Handle</a> &amp;h, T &amp;&amp;x)</td></tr>
+<tr class="memitem:a70c8e3317bbe4cb639e9f50ff50da50a" id="r_a70c8e3317bbe4cb639e9f50ff50da50a"><td class="memItemLeft"><a id="a70c8e3317bbe4cb639e9f50ff50da50a" name="a70c8e3317bbe4cb639e9f50ff50da50a"></a>
+void&#160;</td><td class="memItemRight"><b>push_front</b> (<a class="el" href="../../dd/d26/class_amuse_1_1_core_1_1_handle_list_1_1_handle.html">Handle</a> &amp;h, T &amp;&amp;x)</td></tr>
 <tr class="memdesc:a70c8e3317bbe4cb639e9f50ff50da50a"><td class="mdescLeft">&#160;</td><td class="mdescRight">先頭に要素をムーブ追加し、ハンドルに関連付ける。 <br /></td></tr>
-<tr class="separator:a70c8e3317bbe4cb639e9f50ff50da50a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5b04f437e2c63aa174465cba43c3c97"><td class="memTemplParams" colspan="2"><a id="ad5b04f437e2c63aa174465cba43c3c97" name="ad5b04f437e2c63aa174465cba43c3c97"></a>
+<tr class="memitem:ad5b04f437e2c63aa174465cba43c3c97" id="r_ad5b04f437e2c63aa174465cba43c3c97"><td class="memTemplParams" colspan="2"><a id="ad5b04f437e2c63aa174465cba43c3c97" name="ad5b04f437e2c63aa174465cba43c3c97"></a>
 template&lt;class... Args&gt; </td></tr>
-<tr class="memitem:ad5b04f437e2c63aa174465cba43c3c97"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html#a622b483e442acdc30480f32c82cfcc38">reference</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>emplace_front</b> (<a class="el" href="../../dd/d26/class_amuse_1_1_core_1_1_handle_list_1_1_handle.html">Handle</a> &amp;h, Args &amp;&amp;... args)</td></tr>
+<tr class="memitem:ad5b04f437e2c63aa174465cba43c3c97 template"><td class="memItemLeft"><a class="el" href="#a622b483e442acdc30480f32c82cfcc38">reference</a>&#160;</td><td class="memItemRight"><b>emplace_front</b> (<a class="el" href="../../dd/d26/class_amuse_1_1_core_1_1_handle_list_1_1_handle.html">Handle</a> &amp;h, Args &amp;&amp;... args)</td></tr>
 <tr class="memdesc:ad5b04f437e2c63aa174465cba43c3c97"><td class="mdescLeft">&#160;</td><td class="mdescRight">先頭に要素を直接構築して追加し、ハンドルに関連付ける。 <br /></td></tr>
-<tr class="separator:ad5b04f437e2c63aa174465cba43c3c97"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8b0d460f461ee70774ce453a308bafb"><td class="memItemLeft" align="right" valign="top"><a id="af8b0d460f461ee70774ce453a308bafb" name="af8b0d460f461ee70774ce453a308bafb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>push_back</b> (<a class="el" href="../../dd/d26/class_amuse_1_1_core_1_1_handle_list_1_1_handle.html">Handle</a> &amp;h, const T &amp;x)</td></tr>
+<tr class="memitem:af8b0d460f461ee70774ce453a308bafb" id="r_af8b0d460f461ee70774ce453a308bafb"><td class="memItemLeft"><a id="af8b0d460f461ee70774ce453a308bafb" name="af8b0d460f461ee70774ce453a308bafb"></a>
+void&#160;</td><td class="memItemRight"><b>push_back</b> (<a class="el" href="../../dd/d26/class_amuse_1_1_core_1_1_handle_list_1_1_handle.html">Handle</a> &amp;h, const T &amp;x)</td></tr>
 <tr class="memdesc:af8b0d460f461ee70774ce453a308bafb"><td class="mdescLeft">&#160;</td><td class="mdescRight">末尾に要素をコピー追加し、ハンドルに関連付ける。 <br /></td></tr>
-<tr class="separator:af8b0d460f461ee70774ce453a308bafb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1abea79159ea20b2968d0f630236b771"><td class="memItemLeft" align="right" valign="top"><a id="a1abea79159ea20b2968d0f630236b771" name="a1abea79159ea20b2968d0f630236b771"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>push_back</b> (<a class="el" href="../../dd/d26/class_amuse_1_1_core_1_1_handle_list_1_1_handle.html">Handle</a> &amp;h, T &amp;&amp;x)</td></tr>
+<tr class="memitem:a1abea79159ea20b2968d0f630236b771" id="r_a1abea79159ea20b2968d0f630236b771"><td class="memItemLeft"><a id="a1abea79159ea20b2968d0f630236b771" name="a1abea79159ea20b2968d0f630236b771"></a>
+void&#160;</td><td class="memItemRight"><b>push_back</b> (<a class="el" href="../../dd/d26/class_amuse_1_1_core_1_1_handle_list_1_1_handle.html">Handle</a> &amp;h, T &amp;&amp;x)</td></tr>
 <tr class="memdesc:a1abea79159ea20b2968d0f630236b771"><td class="mdescLeft">&#160;</td><td class="mdescRight">末尾に要素をムーブ追加し、ハンドルに関連付ける。 <br /></td></tr>
-<tr class="separator:a1abea79159ea20b2968d0f630236b771"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60b0605603a9dd4db8c1858be1e365aa"><td class="memTemplParams" colspan="2">template&lt;class... Args&gt; </td></tr>
-<tr class="memitem:a60b0605603a9dd4db8c1858be1e365aa"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html#a622b483e442acdc30480f32c82cfcc38">reference</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html#a60b0605603a9dd4db8c1858be1e365aa">emplace_back</a> (<a class="el" href="../../dd/d26/class_amuse_1_1_core_1_1_handle_list_1_1_handle.html">Handle</a> &amp;h, Args &amp;&amp;... args)</td></tr>
+<tr class="memitem:a60b0605603a9dd4db8c1858be1e365aa" id="r_a60b0605603a9dd4db8c1858be1e365aa"><td class="memTemplParams" colspan="2">template&lt;class... Args&gt; </td></tr>
+<tr class="memitem:a60b0605603a9dd4db8c1858be1e365aa template"><td class="memItemLeft"><a class="el" href="#a622b483e442acdc30480f32c82cfcc38">reference</a>&#160;</td><td class="memItemRight"><a class="el" href="#a60b0605603a9dd4db8c1858be1e365aa">emplace_back</a> (<a class="el" href="../../dd/d26/class_amuse_1_1_core_1_1_handle_list_1_1_handle.html">Handle</a> &amp;h, Args &amp;&amp;... args)</td></tr>
 <tr class="memdesc:a60b0605603a9dd4db8c1858be1e365aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">末尾に要素を直接構築して追加し、ハンドルに関連付ける。  <br /></td></tr>
-<tr class="separator:a60b0605603a9dd4db8c1858be1e365aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49e6816a514f75c3039d991a89dfc8f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/d5c/class_amuse_1_1_core_1_1_handle_list_1_1iterator.html">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html#a49e6816a514f75c3039d991a89dfc8f1">insert</a> (<a class="el" href="../../dd/d26/class_amuse_1_1_core_1_1_handle_list_1_1_handle.html">Handle</a> &amp;h, <a class="el" href="../../d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html">const_iterator</a> position, const T &amp;x)</td></tr>
+<tr class="memitem:a49e6816a514f75c3039d991a89dfc8f1" id="r_a49e6816a514f75c3039d991a89dfc8f1"><td class="memItemLeft"><a class="el" href="../../d4/d5c/class_amuse_1_1_core_1_1_handle_list_1_1iterator.html">iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#a49e6816a514f75c3039d991a89dfc8f1">insert</a> (<a class="el" href="../../dd/d26/class_amuse_1_1_core_1_1_handle_list_1_1_handle.html">Handle</a> &amp;h, <a class="el" href="../../d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html">const_iterator</a> position, const T &amp;x)</td></tr>
 <tr class="memdesc:a49e6816a514f75c3039d991a89dfc8f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定位置の前に要素をコピー挿入し、ハンドルに関連付ける。  <br /></td></tr>
-<tr class="separator:a49e6816a514f75c3039d991a89dfc8f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add9a12582065708dc7b058c40c00b9b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/d5c/class_amuse_1_1_core_1_1_handle_list_1_1iterator.html">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html#add9a12582065708dc7b058c40c00b9b8">insert</a> (<a class="el" href="../../dd/d26/class_amuse_1_1_core_1_1_handle_list_1_1_handle.html">Handle</a> &amp;h, <a class="el" href="../../d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html">const_iterator</a> position, T &amp;&amp;x)</td></tr>
+<tr class="memitem:add9a12582065708dc7b058c40c00b9b8" id="r_add9a12582065708dc7b058c40c00b9b8"><td class="memItemLeft"><a class="el" href="../../d4/d5c/class_amuse_1_1_core_1_1_handle_list_1_1iterator.html">iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#add9a12582065708dc7b058c40c00b9b8">insert</a> (<a class="el" href="../../dd/d26/class_amuse_1_1_core_1_1_handle_list_1_1_handle.html">Handle</a> &amp;h, <a class="el" href="../../d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html">const_iterator</a> position, T &amp;&amp;x)</td></tr>
 <tr class="memdesc:add9a12582065708dc7b058c40c00b9b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定位置の前に要素をムーブ挿入し、ハンドルに関連付ける。  <br /></td></tr>
-<tr class="separator:add9a12582065708dc7b058c40c00b9b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64aaa835d5dd3a66d087be59c1af4a61"><td class="memTemplParams" colspan="2">template&lt;class... Args&gt; </td></tr>
-<tr class="memitem:a64aaa835d5dd3a66d087be59c1af4a61"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d4/d5c/class_amuse_1_1_core_1_1_handle_list_1_1iterator.html">iterator</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html#a64aaa835d5dd3a66d087be59c1af4a61">emplace</a> (<a class="el" href="../../dd/d26/class_amuse_1_1_core_1_1_handle_list_1_1_handle.html">Handle</a> &amp;h, <a class="el" href="../../d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html">const_iterator</a> position, Args &amp;&amp;... args)</td></tr>
+<tr class="memitem:a64aaa835d5dd3a66d087be59c1af4a61" id="r_a64aaa835d5dd3a66d087be59c1af4a61"><td class="memTemplParams" colspan="2">template&lt;class... Args&gt; </td></tr>
+<tr class="memitem:a64aaa835d5dd3a66d087be59c1af4a61 template"><td class="memItemLeft"><a class="el" href="../../d4/d5c/class_amuse_1_1_core_1_1_handle_list_1_1iterator.html">iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#a64aaa835d5dd3a66d087be59c1af4a61">emplace</a> (<a class="el" href="../../dd/d26/class_amuse_1_1_core_1_1_handle_list_1_1_handle.html">Handle</a> &amp;h, <a class="el" href="../../d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html">const_iterator</a> position, Args &amp;&amp;... args)</td></tr>
 <tr class="memdesc:a64aaa835d5dd3a66d087be59c1af4a61"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定位置の前に要素を直接構築して挿入し、ハンドルに関連付ける。  <br /></td></tr>
-<tr class="separator:a64aaa835d5dd3a66d087be59c1af4a61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03fe2bf87aa0b86e99ba9f23cce60a08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html#a03fe2bf87aa0b86e99ba9f23cce60a08">pop_front</a> () noexcept</td></tr>
+<tr class="memitem:a03fe2bf87aa0b86e99ba9f23cce60a08" id="r_a03fe2bf87aa0b86e99ba9f23cce60a08"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a03fe2bf87aa0b86e99ba9f23cce60a08">pop_front</a> () noexcept</td></tr>
 <tr class="memdesc:a03fe2bf87aa0b86e99ba9f23cce60a08"><td class="mdescLeft">&#160;</td><td class="mdescRight">先頭要素を取り除く。  <br /></td></tr>
-<tr class="separator:a03fe2bf87aa0b86e99ba9f23cce60a08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6be2c750ce99363941a6709dfc49a96d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html#a6be2c750ce99363941a6709dfc49a96d">pop_back</a> () noexcept</td></tr>
+<tr class="memitem:a6be2c750ce99363941a6709dfc49a96d" id="r_a6be2c750ce99363941a6709dfc49a96d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6be2c750ce99363941a6709dfc49a96d">pop_back</a> () noexcept</td></tr>
 <tr class="memdesc:a6be2c750ce99363941a6709dfc49a96d"><td class="mdescLeft">&#160;</td><td class="mdescRight">末尾要素を取り除く。  <br /></td></tr>
-<tr class="separator:a6be2c750ce99363941a6709dfc49a96d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2ee80ec774298c81903b5f873333f77"><td class="memItemLeft" align="right" valign="top"><a id="af2ee80ec774298c81903b5f873333f77" name="af2ee80ec774298c81903b5f873333f77"></a>
-<a class="el" href="../../d4/d5c/class_amuse_1_1_core_1_1_handle_list_1_1iterator.html">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><b>erase</b> (<a class="el" href="../../d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html">const_iterator</a> position)</td></tr>
+<tr class="memitem:af2ee80ec774298c81903b5f873333f77" id="r_af2ee80ec774298c81903b5f873333f77"><td class="memItemLeft"><a id="af2ee80ec774298c81903b5f873333f77" name="af2ee80ec774298c81903b5f873333f77"></a>
+<a class="el" href="../../d4/d5c/class_amuse_1_1_core_1_1_handle_list_1_1iterator.html">iterator</a>&#160;</td><td class="memItemRight"><b>erase</b> (<a class="el" href="../../d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html">const_iterator</a> position)</td></tr>
 <tr class="memdesc:af2ee80ec774298c81903b5f873333f77"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定位置の要素を取り除き、次の要素を指すイテレータを返す。 <br /></td></tr>
-<tr class="separator:af2ee80ec774298c81903b5f873333f77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8105dec88dab0d70a17d544dd116326a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/d5c/class_amuse_1_1_core_1_1_handle_list_1_1iterator.html">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html#a8105dec88dab0d70a17d544dd116326a">erase</a> (<a class="el" href="../../d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html">const_iterator</a> position, <a class="el" href="../../d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html">const_iterator</a> last)</td></tr>
+<tr class="memitem:a8105dec88dab0d70a17d544dd116326a" id="r_a8105dec88dab0d70a17d544dd116326a"><td class="memItemLeft"><a class="el" href="../../d4/d5c/class_amuse_1_1_core_1_1_handle_list_1_1iterator.html">iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#a8105dec88dab0d70a17d544dd116326a">erase</a> (<a class="el" href="../../d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html">const_iterator</a> position, <a class="el" href="../../d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html">const_iterator</a> last)</td></tr>
 <tr class="memdesc:a8105dec88dab0d70a17d544dd116326a"><td class="mdescLeft">&#160;</td><td class="mdescRight">範囲 [position, last) の要素を取り除き、次の要素を指すイテレータを返す。  <br /></td></tr>
-<tr class="separator:a8105dec88dab0d70a17d544dd116326a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a018182cfbd76061824df358bcf4d0f47"><td class="memItemLeft" align="right" valign="top"><a id="a018182cfbd76061824df358bcf4d0f47" name="a018182cfbd76061824df358bcf4d0f47"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> () noexcept</td></tr>
+<tr class="memitem:a018182cfbd76061824df358bcf4d0f47" id="r_a018182cfbd76061824df358bcf4d0f47"><td class="memItemLeft"><a id="a018182cfbd76061824df358bcf4d0f47" name="a018182cfbd76061824df358bcf4d0f47"></a>
+void&#160;</td><td class="memItemRight"><b>clear</b> () noexcept</td></tr>
 <tr class="memdesc:a018182cfbd76061824df358bcf4d0f47"><td class="mdescLeft">&#160;</td><td class="mdescRight">全要素を取り除き、各ハンドルとの関連付けを解除する。 <br /></td></tr>
-<tr class="separator:a018182cfbd76061824df358bcf4d0f47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66dd687e4182ef5e18c44e867e16efa3"><td class="memItemLeft" align="right" valign="top"><a id="a66dd687e4182ef5e18c44e867e16efa3" name="a66dd687e4182ef5e18c44e867e16efa3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>remove</b> (<a class="el" href="../../dd/d26/class_amuse_1_1_core_1_1_handle_list_1_1_handle.html">Handle</a> &amp;h)</td></tr>
+<tr class="memitem:a66dd687e4182ef5e18c44e867e16efa3" id="r_a66dd687e4182ef5e18c44e867e16efa3"><td class="memItemLeft"><a id="a66dd687e4182ef5e18c44e867e16efa3" name="a66dd687e4182ef5e18c44e867e16efa3"></a>
+void&#160;</td><td class="memItemRight"><b>remove</b> (<a class="el" href="../../dd/d26/class_amuse_1_1_core_1_1_handle_list_1_1_handle.html">Handle</a> &amp;h)</td></tr>
 <tr class="memdesc:a66dd687e4182ef5e18c44e867e16efa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定ハンドルに関連付いた要素を取り除く。 <br /></td></tr>
-<tr class="separator:a66dd687e4182ef5e18c44e867e16efa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef0177d8b964128a385c9bab8e2b766e"><td class="memTemplParams" colspan="2">template&lt;class Predicate &gt; </td></tr>
-<tr class="memitem:aef0177d8b964128a385c9bab8e2b766e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html#aef0177d8b964128a385c9bab8e2b766e">remove_if</a> (Predicate pred)</td></tr>
+<tr class="memitem:aef0177d8b964128a385c9bab8e2b766e" id="r_aef0177d8b964128a385c9bab8e2b766e"><td class="memTemplParams" colspan="2">template&lt;class Predicate&gt; </td></tr>
+<tr class="memitem:aef0177d8b964128a385c9bab8e2b766e template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aef0177d8b964128a385c9bab8e2b766e">remove_if</a> (Predicate pred)</td></tr>
 <tr class="memdesc:aef0177d8b964128a385c9bab8e2b766e"><td class="mdescLeft">&#160;</td><td class="mdescRight">条件を満たす全要素を取り除く。  <br /></td></tr>
-<tr class="separator:aef0177d8b964128a385c9bab8e2b766e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0767c8b968439427167535f319f8304a"><td class="memItemLeft" align="right" valign="top"><a id="a0767c8b968439427167535f319f8304a" name="a0767c8b968439427167535f319f8304a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>reverse</b> () noexcept</td></tr>
+<tr class="memitem:a0767c8b968439427167535f319f8304a" id="r_a0767c8b968439427167535f319f8304a"><td class="memItemLeft"><a id="a0767c8b968439427167535f319f8304a" name="a0767c8b968439427167535f319f8304a"></a>
+void&#160;</td><td class="memItemRight"><b>reverse</b> () noexcept</td></tr>
 <tr class="memdesc:a0767c8b968439427167535f319f8304a"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンテナを反転する <br /></td></tr>
-<tr class="separator:a0767c8b968439427167535f319f8304a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
 class Amuse::Core::HandleList&lt; T &gt;</div><p>ハンドル管理式双方向連結リスト </p>
 <p>このコンテナは要素をコンテナ内部で管理せずハンドル内で管理する。<br  />
@@ -310,40 +288,42 @@ class Amuse::Core::HandleList&lt; T &gt;</div><p>ハンドル管理式双方向�
 <div class="line"><span class="keyword">using </span><a class="code hl_class" href="../../dd/d26/class_amuse_1_1_core_1_1_handle_list_1_1_handle.html">Handle</a> =  <a class="code hl_class" href="../../dd/d26/class_amuse_1_1_core_1_1_handle_list_1_1_handle.html">Amuse::Core::HandleList&lt;Amuse::Core::s32&gt;::Handle</a>;</div>
 <div class="line">{</div>
 <div class="line">    <a class="code hl_class" href="../../dd/d26/class_amuse_1_1_core_1_1_handle_list_1_1_handle.html">Handle</a> handle;</div>
-<div class="line">    ls.<a class="code hl_function" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html#a60b0605603a9dd4db8c1858be1e365aa">emplace_back</a>(handle,123);</div>
-<div class="line">    std::cout&lt;&lt;ls.<a class="code hl_function" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html#a552d379b534a8de06224ec28b2f4d4b5">size</a>()&lt;&lt;std::endl;    <span class="comment">// 1</span></div>
+<div class="line">    ls.<a class="code hl_function" href="#a60b0605603a9dd4db8c1858be1e365aa">emplace_back</a>(handle,123);</div>
+<div class="line">    std::cout&lt;&lt;ls.<a class="code hl_function" href="#a552d379b534a8de06224ec28b2f4d4b5">size</a>()&lt;&lt;std::endl;    <span class="comment">// 1</span></div>
 <div class="line">}</div>
-<div class="line">std::cout&lt;&lt;ls.<a class="code hl_function" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html#a552d379b534a8de06224ec28b2f4d4b5">size</a>()&lt;&lt;std::endl;    <span class="comment">// 0</span></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_handle_list_1_1_handle_html"><div class="ttname"><a href="../../dd/d26/class_amuse_1_1_core_1_1_handle_list_1_1_handle.html">Amuse::Core::HandleList::Handle</a></div><div class="ttdoc">ハンドル</div><div class="ttdef"><b>Definition:</b> HandleList.h:41</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_handle_list_html"><div class="ttname"><a href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">Amuse::Core::HandleList</a></div><div class="ttdoc">ハンドル管理式双方向連結リスト</div><div class="ttdef"><b>Definition:</b> HandleList.h:37</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_handle_list_html_a552d379b534a8de06224ec28b2f4d4b5"><div class="ttname"><a href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html#a552d379b534a8de06224ec28b2f4d4b5">Amuse::Core::HandleList::size</a></div><div class="ttdeci">size_type size() const noexcept</div><div class="ttdoc">現在格納している要素数を返す。</div><div class="ttdef"><b>Definition:</b> HandleList.h:437</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_handle_list_html_a60b0605603a9dd4db8c1858be1e365aa"><div class="ttname"><a href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html#a60b0605603a9dd4db8c1858be1e365aa">Amuse::Core::HandleList::emplace_back</a></div><div class="ttdeci">reference emplace_back(Handle &amp;h, Args &amp;&amp;... args)</div><div class="ttdoc">末尾に要素を直接構築して追加し、ハンドルに関連付ける。</div><div class="ttdef"><b>Definition:</b> HandleList.h:544</div></div>
-</div><!-- fragment --> </div><h2 class="groupheader">関数詳解</h2>
+<div class="line">std::cout&lt;&lt;ls.<a class="code hl_function" href="#a552d379b534a8de06224ec28b2f4d4b5">size</a>()&lt;&lt;std::endl;    <span class="comment">// 0</span></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_handle_list_1_1_handle_html"><div class="ttname"><a href="../../dd/d26/class_amuse_1_1_core_1_1_handle_list_1_1_handle.html">Amuse::Core::HandleList::Handle</a></div><div class="ttdoc">ハンドル</div><div class="ttdef"><b>Definition</b> HandleList.h:41</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_handle_list_html"><div class="ttname"><a href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">Amuse::Core::HandleList</a></div><div class="ttdoc">ハンドル管理式双方向連結リスト</div><div class="ttdef"><b>Definition</b> HandleList.h:37</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_handle_list_html_a552d379b534a8de06224ec28b2f4d4b5"><div class="ttname"><a href="#a552d379b534a8de06224ec28b2f4d4b5">Amuse::Core::HandleList::size</a></div><div class="ttdeci">size_type size() const noexcept</div><div class="ttdoc">現在格納している要素数を返す。</div><div class="ttdef"><b>Definition</b> HandleList.h:437</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_handle_list_html_a60b0605603a9dd4db8c1858be1e365aa"><div class="ttname"><a href="#a60b0605603a9dd4db8c1858be1e365aa">Amuse::Core::HandleList::emplace_back</a></div><div class="ttdeci">reference emplace_back(Handle &amp;h, Args &amp;&amp;... args)</div><div class="ttdoc">末尾に要素を直接構築して追加し、ハンドルに関連付ける。</div><div class="ttdef"><b>Definition</b> HandleList.h:544</div></div>
+</div><!-- fragment --> </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
 <a id="a86aabf51ca6f5457a8652b1ad7f6a912" name="a86aabf51ca6f5457a8652b1ad7f6a912"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a86aabf51ca6f5457a8652b1ad7f6a912">&#9670;&#160;</a></span>back()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">HandleList</a>&lt; T &gt;<a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html#a3163f7f9f8613e39a5f4c47f1cc42fe9">::const_reference</a> <a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">Amuse::Core::HandleList</a>&lt; T &gt;::back</td>
+          <td class="memname"><a class="el" href="#af9d2ec8df7e0509d0b92f8a89b6b93e5">HandleList</a>&lt; T &gt;<a class="el" href="#a3163f7f9f8613e39a5f4c47f1cc42fe9">::const_reference</a> <a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">Amuse::Core::HandleList</a>&lt; T &gt;::back </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>末尾要素への参照を返す。 </p>
 <p>末尾要素への読み取り専用参照を返す。</p>
-<dl class="section note"><dt>覚え書き</dt><dd>コンテナが空の時はassertを発生させる。</dd></dl>
 <dl class="section note"><dt>覚え書き</dt><dd>コンテナが空の時はassertを発生させる。 </dd></dl>
 
 </div>
@@ -354,18 +334,21 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">HandleList</a>&lt; T &gt;::const_iterator <a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">Amuse::Core::HandleList</a>&lt; T &gt;::begin</td>
+          <td class="memname"><a class="el" href="#af9d2ec8df7e0509d0b92f8a89b6b93e5">HandleList</a>&lt; T &gt;<a class="el" href="../../d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html">::const_iterator</a> <a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">Amuse::Core::HandleList</a>&lt; T &gt;::begin </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -381,7 +364,7 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <div class="memtemplate">
 template&lt;class... Args&gt; </div>
 <table class="mlabels">
@@ -389,32 +372,24 @@ template&lt;class... Args&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">HandleList</a>&lt; T &gt;::iterator <a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">Amuse::Core::HandleList</a>&lt; T &gt;::emplace </td>
+          <td class="memname"><a class="el" href="#af9d2ec8df7e0509d0b92f8a89b6b93e5">HandleList</a>&lt; T &gt;<a class="el" href="../../d4/d5c/class_amuse_1_1_core_1_1_handle_list_1_1iterator.html">::iterator</a> <a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">Amuse::Core::HandleList</a>&lt; T &gt;::emplace </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dd/d26/class_amuse_1_1_core_1_1_handle_list_1_1_handle.html">Handle</a> &amp;&#160;</td>
-          <td class="paramname"><em>h</em>, </td>
+          <td class="paramtype"><a class="el" href="../../dd/d26/class_amuse_1_1_core_1_1_handle_list_1_1_handle.html">Handle</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>h</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html">const_iterator</a>&#160;</td>
-          <td class="paramname"><em>position</em>, </td>
+          <td class="paramtype"><a class="el" href="../../d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html">const_iterator</a></td>          <td class="paramname"><span class="paramname"><em>position</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Args &amp;&amp;...&#160;</td>
-          <td class="paramname"><em>args</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -430,7 +405,7 @@ template&lt;class... Args&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <div class="memtemplate">
 template&lt;class... Args&gt; </div>
 <table class="mlabels">
@@ -438,26 +413,19 @@ template&lt;class... Args&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">HandleList</a>&lt; T &gt;<a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html#a622b483e442acdc30480f32c82cfcc38">::reference</a> <a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">Amuse::Core::HandleList</a>&lt; T &gt;::emplace_back </td>
+          <td class="memname"><a class="el" href="#af9d2ec8df7e0509d0b92f8a89b6b93e5">HandleList</a>&lt; T &gt;<a class="el" href="#a622b483e442acdc30480f32c82cfcc38">::reference</a> <a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">Amuse::Core::HandleList</a>&lt; T &gt;::emplace_back </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dd/d26/class_amuse_1_1_core_1_1_handle_list_1_1_handle.html">Handle</a> &amp;&#160;</td>
-          <td class="paramname"><em>h</em>, </td>
+          <td class="paramtype"><a class="el" href="../../dd/d26/class_amuse_1_1_core_1_1_handle_list_1_1_handle.html">Handle</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>h</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Args &amp;&amp;...&#160;</td>
-          <td class="paramname"><em>args</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -473,18 +441,21 @@ template&lt;class... Args&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">HandleList</a>&lt; T &gt;::const_iterator <a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">Amuse::Core::HandleList</a>&lt; T &gt;::end</td>
+          <td class="memname"><a class="el" href="#af9d2ec8df7e0509d0b92f8a89b6b93e5">HandleList</a>&lt; T &gt;<a class="el" href="../../d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html">::const_iterator</a> <a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">Amuse::Core::HandleList</a>&lt; T &gt;::end </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -500,32 +471,25 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">HandleList</a>&lt; T &gt;::iterator <a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">Amuse::Core::HandleList</a>&lt; T &gt;::erase </td>
+          <td class="memname"><a class="el" href="#af9d2ec8df7e0509d0b92f8a89b6b93e5">HandleList</a>&lt; T &gt;<a class="el" href="../../d4/d5c/class_amuse_1_1_core_1_1_handle_list_1_1iterator.html">::iterator</a> <a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">Amuse::Core::HandleList</a>&lt; T &gt;::erase </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html">const_iterator</a>&#160;</td>
-          <td class="paramname"><em>position</em>, </td>
+          <td class="paramtype"><a class="el" href="../../d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html">const_iterator</a></td>          <td class="paramname"><span class="paramname"><em>position</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html">const_iterator</a>&#160;</td>
-          <td class="paramname"><em>last</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype"><a class="el" href="../../d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html">const_iterator</a></td>          <td class="paramname"><span class="paramname"><em>last</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -541,25 +505,27 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">HandleList</a>&lt; T &gt;<a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html#a3163f7f9f8613e39a5f4c47f1cc42fe9">::const_reference</a> <a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">Amuse::Core::HandleList</a>&lt; T &gt;::front</td>
+          <td class="memname"><a class="el" href="#af9d2ec8df7e0509d0b92f8a89b6b93e5">HandleList</a>&lt; T &gt;<a class="el" href="#a3163f7f9f8613e39a5f4c47f1cc42fe9">::const_reference</a> <a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">Amuse::Core::HandleList</a>&lt; T &gt;::front </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>先頭要素への参照を返す。 </p>
 <p>先頭要素への読み取り専用参照を返す。</p>
-<dl class="section note"><dt>覚え書き</dt><dd>コンテナが空の時はassertを発生させる。</dd></dl>
 <dl class="section note"><dt>覚え書き</dt><dd>コンテナが空の時はassertを発生させる。 </dd></dl>
 
 </div>
@@ -570,38 +536,30 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">HandleList</a>&lt; T &gt;::iterator <a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">Amuse::Core::HandleList</a>&lt; T &gt;::insert </td>
+          <td class="memname"><a class="el" href="#af9d2ec8df7e0509d0b92f8a89b6b93e5">HandleList</a>&lt; T &gt;<a class="el" href="../../d4/d5c/class_amuse_1_1_core_1_1_handle_list_1_1iterator.html">::iterator</a> <a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">Amuse::Core::HandleList</a>&lt; T &gt;::insert </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dd/d26/class_amuse_1_1_core_1_1_handle_list_1_1_handle.html">Handle</a> &amp;&#160;</td>
-          <td class="paramname"><em>h</em>, </td>
+          <td class="paramtype"><a class="el" href="../../dd/d26/class_amuse_1_1_core_1_1_handle_list_1_1_handle.html">Handle</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>h</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html">const_iterator</a>&#160;</td>
-          <td class="paramname"><em>position</em>, </td>
+          <td class="paramtype"><a class="el" href="../../d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html">const_iterator</a></td>          <td class="paramname"><span class="paramname"><em>position</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>x</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>x</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -617,38 +575,30 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">HandleList</a>&lt; T &gt;::iterator <a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">Amuse::Core::HandleList</a>&lt; T &gt;::insert </td>
+          <td class="memname"><a class="el" href="#af9d2ec8df7e0509d0b92f8a89b6b93e5">HandleList</a>&lt; T &gt;<a class="el" href="../../d4/d5c/class_amuse_1_1_core_1_1_handle_list_1_1iterator.html">::iterator</a> <a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">Amuse::Core::HandleList</a>&lt; T &gt;::insert </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dd/d26/class_amuse_1_1_core_1_1_handle_list_1_1_handle.html">Handle</a> &amp;&#160;</td>
-          <td class="paramname"><em>h</em>, </td>
+          <td class="paramtype"><a class="el" href="../../dd/d26/class_amuse_1_1_core_1_1_handle_list_1_1_handle.html">Handle</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>h</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html">const_iterator</a>&#160;</td>
-          <td class="paramname"><em>position</em>, </td>
+          <td class="paramtype"><a class="el" href="../../d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html">const_iterator</a></td>          <td class="paramname"><span class="paramname"><em>position</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">T &amp;&amp;&#160;</td>
-          <td class="paramname"><em>x</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">T &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>x</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -664,18 +614,21 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">Amuse::Core::HandleList</a>&lt; T &gt;::pop_back</td>
+          <td class="memname">void <a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">Amuse::Core::HandleList</a>&lt; T &gt;::pop_back </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -691,18 +644,21 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">Amuse::Core::HandleList</a>&lt; T &gt;::pop_front</td>
+          <td class="memname">void <a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">Amuse::Core::HandleList</a>&lt; T &gt;::pop_front </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -718,18 +674,21 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">HandleList</a>&lt; T &gt;<a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html#a70afc1601ddd8dee2e9a864cc4a3e946">::const_reverse_iterator</a> <a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">Amuse::Core::HandleList</a>&lt; T &gt;::rbegin</td>
+          <td class="memname"><a class="el" href="#af9d2ec8df7e0509d0b92f8a89b6b93e5">HandleList</a>&lt; T &gt;<a class="el" href="#a70afc1601ddd8dee2e9a864cc4a3e946">::const_reverse_iterator</a> <a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">Amuse::Core::HandleList</a>&lt; T &gt;::rbegin </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -745,9 +704,9 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <div class="memtemplate">
-template&lt;class Predicate &gt; </div>
+template&lt;class Predicate&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -755,14 +714,13 @@ template&lt;class Predicate &gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">Amuse::Core::HandleList</a>&lt; T &gt;::remove_if </td>
           <td>(</td>
-          <td class="paramtype">Predicate&#160;</td>
-          <td class="paramname"><em>pred</em></td><td>)</td>
+          <td class="paramtype">Predicate</td>          <td class="paramname"><span class="paramname"><em>pred</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -778,18 +736,21 @@ template&lt;class Predicate &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">HandleList</a>&lt; T &gt;<a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html#a70afc1601ddd8dee2e9a864cc4a3e946">::const_reverse_iterator</a> <a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">Amuse::Core::HandleList</a>&lt; T &gt;::rend</td>
+          <td class="memname"><a class="el" href="#af9d2ec8df7e0509d0b92f8a89b6b93e5">HandleList</a>&lt; T &gt;<a class="el" href="#a70afc1601ddd8dee2e9a864cc4a3e946">::const_reverse_iterator</a> <a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">Amuse::Core::HandleList</a>&lt; T &gt;::rend </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -805,18 +766,21 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">HandleList</a>&lt; T &gt;<a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html#aa5aac3eb985965a85f4f725393b7a66f">::size_type</a> <a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">Amuse::Core::HandleList</a>&lt; T &gt;::size</td>
+          <td class="memname"><a class="el" href="#af9d2ec8df7e0509d0b92f8a89b6b93e5">HandleList</a>&lt; T &gt;<a class="el" href="#aa5aac3eb985965a85f4f725393b7a66f">::size_type</a> <a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">Amuse::Core::HandleList</a>&lt; T &gt;::size </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -831,11 +795,12 @@ template&lt;typename T &gt; </div>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>Amuse</b></li><li class="navelem"><b>Core</b></li><li class="navelem"><a class="el" href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">HandleList</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><b>Core</b></li><li class="navelem"><a href="../../da/da9/class_amuse_1_1_core_1_1_handle_list.html">HandleList</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

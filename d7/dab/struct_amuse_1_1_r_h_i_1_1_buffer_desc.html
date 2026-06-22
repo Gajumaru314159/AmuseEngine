@@ -3,19 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AmuseEngine: Amuse::RHI::BufferDesc 構造体</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../jquery.js"></script>
-<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
 <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
 <script type="text/javascript" src="../../navtreedata.js"></script>
 <script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="../../style.css" rel="stylesheet" type="text/css"/>
@@ -36,23 +42,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.6 -->
+<!-- 構築: Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('../../',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
 });
-/* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -65,10 +93,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('d7/dab/struct_amuse_1_1_r_h_i_1_1_buffer_desc.html','../../'); initResizable(); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d7/dab/struct_amuse_1_1_r_h_i_1_1_buffer_desc.html','../../','dd/dbe/struct_amuse_1_1_r_h_i_1_1_buffer_desc-members'); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -102,74 +129,61 @@ $(document).ready(function(){initNavTree('d7/dab/struct_amuse_1_1_r_h_i_1_1_buff
 <div class="contents">
 
 <p>バッファ定義  
- <a href="../../d7/dab/struct_amuse_1_1_r_h_i_1_1_buffer_desc.html#details">[詳解]</a></p>
+ <a href="#details">[詳解]</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../db/da6/_buffer_desc_8h_source.html">BufferDesc.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:a3388118e7892a06373d28417e6f13f17"><td class="memItemLeft" align="right" valign="top"><a id="a3388118e7892a06373d28417e6f13f17" name="a3388118e7892a06373d28417e6f13f17"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isValid</b> () const</td></tr>
+<tr class="memitem:a3388118e7892a06373d28417e6f13f17" id="r_a3388118e7892a06373d28417e6f13f17"><td class="memItemLeft"><a id="a3388118e7892a06373d28417e6f13f17" name="a3388118e7892a06373d28417e6f13f17"></a>
+bool&#160;</td><td class="memItemRight"><b>isValid</b> () const</td></tr>
 <tr class="memdesc:a3388118e7892a06373d28417e6f13f17"><td class="mdescLeft">&#160;</td><td class="mdescRight">有効な設定か判定する <br /></td></tr>
-<tr class="separator:a3388118e7892a06373d28417e6f13f17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c26fa978babe832bbf8245ecabe3098"><td class="memItemLeft" align="right" valign="top"><a id="a7c26fa978babe832bbf8245ecabe3098" name="a7c26fa978babe832bbf8245ecabe3098"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>BufferDesc</b> ()=default</td></tr>
+<tr class="memitem:a7c26fa978babe832bbf8245ecabe3098" id="r_a7c26fa978babe832bbf8245ecabe3098"><td class="memItemLeft"><a id="a7c26fa978babe832bbf8245ecabe3098" name="a7c26fa978babe832bbf8245ecabe3098"></a>
+&#160;</td><td class="memItemRight"><b>BufferDesc</b> ()=default</td></tr>
 <tr class="memdesc:a7c26fa978babe832bbf8245ecabe3098"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ <br /></td></tr>
-<tr class="separator:a7c26fa978babe832bbf8245ecabe3098"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae37c66a404d47bbbb1ff156ad4315de7"><td class="memItemLeft" align="right" valign="top"><a id="ae37c66a404d47bbbb1ff156ad4315de7" name="ae37c66a404d47bbbb1ff156ad4315de7"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>BufferDesc</b> (BufferState <a class="el" href="../../d7/dab/struct_amuse_1_1_r_h_i_1_1_buffer_desc.html#a1437c88e598da13c7027218e0f2f7f49">state</a>, u64 <a class="el" href="../../d7/dab/struct_amuse_1_1_r_h_i_1_1_buffer_desc.html#a1ba4e20a15da7047177a493985b7e9a7">size</a>, u32 <a class="el" href="../../d7/dab/struct_amuse_1_1_r_h_i_1_1_buffer_desc.html#a9dcae4698279c029b00d221c7308dc3f">stride</a>, <a class="el" href="../../d8/d40/class_amuse_1_1_core_1_1_bit_flags.html">BufferFlags</a> <a class="el" href="../../d7/dab/struct_amuse_1_1_r_h_i_1_1_buffer_desc.html#a0a51198d4627f2856776dcfa4028a072">flags</a>)</td></tr>
+<tr class="memitem:ae37c66a404d47bbbb1ff156ad4315de7" id="r_ae37c66a404d47bbbb1ff156ad4315de7"><td class="memItemLeft"><a id="ae37c66a404d47bbbb1ff156ad4315de7" name="ae37c66a404d47bbbb1ff156ad4315de7"></a>
+&#160;</td><td class="memItemRight"><b>BufferDesc</b> (BufferState state, u64 size, u32 stride, BufferFlags flags)</td></tr>
 <tr class="memdesc:ae37c66a404d47bbbb1ff156ad4315de7"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ <br /></td></tr>
-<tr class="separator:ae37c66a404d47bbbb1ff156ad4315de7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静的公開メンバ関数</h2></td></tr>
-<tr class="memitem:a228d7382ec0e954d03a1f748e24f765d"><td class="memTemplParams" colspan="2"><a id="a228d7382ec0e954d03a1f748e24f765d" name="a228d7382ec0e954d03a1f748e24f765d"></a>
-template&lt;typename TVertex &gt; </td></tr>
-<tr class="memitem:a228d7382ec0e954d03a1f748e24f765d"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="../../d7/dab/struct_amuse_1_1_r_h_i_1_1_buffer_desc.html">BufferDesc</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Vertex</b> (u64 count, <a class="el" href="../../d8/d40/class_amuse_1_1_core_1_1_bit_flags.html">BufferFlags</a> <a class="el" href="../../d7/dab/struct_amuse_1_1_r_h_i_1_1_buffer_desc.html#a0a51198d4627f2856776dcfa4028a072">flags</a>=BufferFlag::Vertex)</td></tr>
+<tr class="memitem:a228d7382ec0e954d03a1f748e24f765d" id="r_a228d7382ec0e954d03a1f748e24f765d"><td class="memTemplParams" colspan="2"><a id="a228d7382ec0e954d03a1f748e24f765d" name="a228d7382ec0e954d03a1f748e24f765d"></a>
+template&lt;typename TVertex&gt; </td></tr>
+<tr class="memitem:a228d7382ec0e954d03a1f748e24f765d template"><td class="memItemLeft">static <a class="el" href="#a7c26fa978babe832bbf8245ecabe3098">BufferDesc</a>&#160;</td><td class="memItemRight"><b>Vertex</b> (u64 count, BufferFlags flags=BufferFlag::Vertex)</td></tr>
 <tr class="memdesc:a228d7382ec0e954d03a1f748e24f765d"><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点バッファ用初期化 <br /></td></tr>
-<tr class="separator:a228d7382ec0e954d03a1f748e24f765d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a54ff788b6c4855eaad9400f17db5de"><td class="memTemplParams" colspan="2"><a id="a3a54ff788b6c4855eaad9400f17db5de" name="a3a54ff788b6c4855eaad9400f17db5de"></a>
-template&lt;typename TIndex &gt; </td></tr>
-<tr class="memitem:a3a54ff788b6c4855eaad9400f17db5de"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="../../d7/dab/struct_amuse_1_1_r_h_i_1_1_buffer_desc.html">BufferDesc</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Index</b> (u64 count, <a class="el" href="../../d8/d40/class_amuse_1_1_core_1_1_bit_flags.html">BufferFlags</a> <a class="el" href="../../d7/dab/struct_amuse_1_1_r_h_i_1_1_buffer_desc.html#a0a51198d4627f2856776dcfa4028a072">flags</a>=BufferFlag::Index)</td></tr>
+<tr class="memitem:a3a54ff788b6c4855eaad9400f17db5de" id="r_a3a54ff788b6c4855eaad9400f17db5de"><td class="memTemplParams" colspan="2"><a id="a3a54ff788b6c4855eaad9400f17db5de" name="a3a54ff788b6c4855eaad9400f17db5de"></a>
+template&lt;typename TIndex&gt; </td></tr>
+<tr class="memitem:a3a54ff788b6c4855eaad9400f17db5de template"><td class="memItemLeft">static <a class="el" href="#a7c26fa978babe832bbf8245ecabe3098">BufferDesc</a>&#160;</td><td class="memItemRight"><b>Index</b> (u64 count, BufferFlags flags=BufferFlag::Index)</td></tr>
 <tr class="memdesc:a3a54ff788b6c4855eaad9400f17db5de"><td class="mdescLeft">&#160;</td><td class="mdescRight">インデックスバッファ用初期化 <br /></td></tr>
-<tr class="separator:a3a54ff788b6c4855eaad9400f17db5de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afefdd1d576c6647ea790684e327d71ca"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d7/dab/struct_amuse_1_1_r_h_i_1_1_buffer_desc.html">BufferDesc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dab/struct_amuse_1_1_r_h_i_1_1_buffer_desc.html#afefdd1d576c6647ea790684e327d71ca">Constant</a> (u64 <a class="el" href="../../d7/dab/struct_amuse_1_1_r_h_i_1_1_buffer_desc.html#a1ba4e20a15da7047177a493985b7e9a7">size</a>, BufferState initialState=BufferState::Constant, <a class="el" href="../../d8/d40/class_amuse_1_1_core_1_1_bit_flags.html">BufferFlags</a> <a class="el" href="../../d7/dab/struct_amuse_1_1_r_h_i_1_1_buffer_desc.html#a0a51198d4627f2856776dcfa4028a072">flags</a>=BufferFlag::Constant)</td></tr>
+<tr class="memitem:afefdd1d576c6647ea790684e327d71ca" id="r_afefdd1d576c6647ea790684e327d71ca"><td class="memItemLeft">static <a class="el" href="#a7c26fa978babe832bbf8245ecabe3098">BufferDesc</a>&#160;</td><td class="memItemRight"><a class="el" href="#afefdd1d576c6647ea790684e327d71ca">Constant</a> (u64 size, BufferState initialState=BufferState::Constant, BufferFlags flags=BufferFlag::Constant)</td></tr>
 <tr class="memdesc:afefdd1d576c6647ea790684e327d71ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">定数バッファ用初期化  <br /></td></tr>
-<tr class="separator:afefdd1d576c6647ea790684e327d71ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a26b305ff16f2090cf7c96a11a6bcff"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d7/dab/struct_amuse_1_1_r_h_i_1_1_buffer_desc.html">BufferDesc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dab/struct_amuse_1_1_r_h_i_1_1_buffer_desc.html#a3a26b305ff16f2090cf7c96a11a6bcff">ByteAddress</a> (u64 <a class="el" href="../../d7/dab/struct_amuse_1_1_r_h_i_1_1_buffer_desc.html#a1ba4e20a15da7047177a493985b7e9a7">size</a>, BufferState initialState=BufferState::ShaderResource, <a class="el" href="../../d8/d40/class_amuse_1_1_core_1_1_bit_flags.html">BufferFlags</a> <a class="el" href="../../d7/dab/struct_amuse_1_1_r_h_i_1_1_buffer_desc.html#a0a51198d4627f2856776dcfa4028a072">flags</a>=BufferFlag::ShaderResource)</td></tr>
+<tr class="memitem:a3a26b305ff16f2090cf7c96a11a6bcff" id="r_a3a26b305ff16f2090cf7c96a11a6bcff"><td class="memItemLeft">static <a class="el" href="#a7c26fa978babe832bbf8245ecabe3098">BufferDesc</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3a26b305ff16f2090cf7c96a11a6bcff">ByteAddress</a> (u64 size, BufferState initialState=BufferState::ShaderResource, BufferFlags flags=BufferFlag::ShaderResource)</td></tr>
 <tr class="memdesc:a3a26b305ff16f2090cf7c96a11a6bcff"><td class="mdescLeft">&#160;</td><td class="mdescRight">ByteAddressバッファ用初期化  <br /></td></tr>
-<tr class="separator:a3a26b305ff16f2090cf7c96a11a6bcff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad686fd971551a35bb1fcba2225ca542d"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ad686fd971551a35bb1fcba2225ca542d"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="../../d7/dab/struct_amuse_1_1_r_h_i_1_1_buffer_desc.html">BufferDesc</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d7/dab/struct_amuse_1_1_r_h_i_1_1_buffer_desc.html#ad686fd971551a35bb1fcba2225ca542d">Structured</a> (u64 count, BufferState initialState=BufferState::ShaderResource, <a class="el" href="../../d8/d40/class_amuse_1_1_core_1_1_bit_flags.html">BufferFlags</a> <a class="el" href="../../d7/dab/struct_amuse_1_1_r_h_i_1_1_buffer_desc.html#a0a51198d4627f2856776dcfa4028a072">flags</a>=BufferFlag::ShaderResource|BufferFlag::UnorderedAccess)</td></tr>
+<tr class="memitem:ad686fd971551a35bb1fcba2225ca542d" id="r_ad686fd971551a35bb1fcba2225ca542d"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:ad686fd971551a35bb1fcba2225ca542d template"><td class="memItemLeft">static <a class="el" href="#a7c26fa978babe832bbf8245ecabe3098">BufferDesc</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad686fd971551a35bb1fcba2225ca542d">Structured</a> (u64 count, BufferState initialState=BufferState::ShaderResource, BufferFlags flags=BufferFlag::ShaderResource|BufferFlag::UnorderedAccess)</td></tr>
 <tr class="memdesc:ad686fd971551a35bb1fcba2225ca542d"><td class="mdescLeft">&#160;</td><td class="mdescRight">ByteAddressバッファ用初期化  <br /></td></tr>
-<tr class="separator:ad686fd971551a35bb1fcba2225ca542d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 公開変数類</h2></td></tr>
-<tr class="memitem:a1b29c76a02d03c94454bc7414e3051f1"><td class="memItemLeft" align="right" valign="top"><a id="a1b29c76a02d03c94454bc7414e3051f1" name="a1b29c76a02d03c94454bc7414e3051f1"></a>
-<a class="el" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
+<tr class="memitem:a1b29c76a02d03c94454bc7414e3051f1" id="r_a1b29c76a02d03c94454bc7414e3051f1"><td class="memItemLeft"><a id="a1b29c76a02d03c94454bc7414e3051f1" name="a1b29c76a02d03c94454bc7414e3051f1"></a>
+String&#160;</td><td class="memItemRight"><b>name</b></td></tr>
 <tr class="memdesc:a1b29c76a02d03c94454bc7414e3051f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">名前 <br /></td></tr>
-<tr class="separator:a1b29c76a02d03c94454bc7414e3051f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1437c88e598da13c7027218e0f2f7f49"><td class="memItemLeft" align="right" valign="top"><a id="a1437c88e598da13c7027218e0f2f7f49" name="a1437c88e598da13c7027218e0f2f7f49"></a>
-BufferState&#160;</td><td class="memItemRight" valign="bottom"><b>state</b></td></tr>
+<tr class="memitem:a1437c88e598da13c7027218e0f2f7f49" id="r_a1437c88e598da13c7027218e0f2f7f49"><td class="memItemLeft"><a id="a1437c88e598da13c7027218e0f2f7f49" name="a1437c88e598da13c7027218e0f2f7f49"></a>
+BufferState&#160;</td><td class="memItemRight"><b>state</b></td></tr>
 <tr class="memdesc:a1437c88e598da13c7027218e0f2f7f49"><td class="mdescLeft">&#160;</td><td class="mdescRight">バッファタイプ <br /></td></tr>
-<tr class="separator:a1437c88e598da13c7027218e0f2f7f49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ba4e20a15da7047177a493985b7e9a7"><td class="memItemLeft" align="right" valign="top"><a id="a1ba4e20a15da7047177a493985b7e9a7" name="a1ba4e20a15da7047177a493985b7e9a7"></a>
-u64&#160;</td><td class="memItemRight" valign="bottom"><b>size</b></td></tr>
+<tr class="memitem:a1ba4e20a15da7047177a493985b7e9a7" id="r_a1ba4e20a15da7047177a493985b7e9a7"><td class="memItemLeft"><a id="a1ba4e20a15da7047177a493985b7e9a7" name="a1ba4e20a15da7047177a493985b7e9a7"></a>
+u64&#160;</td><td class="memItemRight"><b>size</b></td></tr>
 <tr class="memdesc:a1ba4e20a15da7047177a493985b7e9a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">バッファサイズ <br /></td></tr>
-<tr class="separator:a1ba4e20a15da7047177a493985b7e9a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9dcae4698279c029b00d221c7308dc3f"><td class="memItemLeft" align="right" valign="top"><a id="a9dcae4698279c029b00d221c7308dc3f" name="a9dcae4698279c029b00d221c7308dc3f"></a>
-u32&#160;</td><td class="memItemRight" valign="bottom"><b>stride</b></td></tr>
+<tr class="memitem:a9dcae4698279c029b00d221c7308dc3f" id="r_a9dcae4698279c029b00d221c7308dc3f"><td class="memItemLeft"><a id="a9dcae4698279c029b00d221c7308dc3f" name="a9dcae4698279c029b00d221c7308dc3f"></a>
+u32&#160;</td><td class="memItemRight"><b>stride</b></td></tr>
 <tr class="memdesc:a9dcae4698279c029b00d221c7308dc3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">ストライド幅 StructuredBufferで使用する場合structureのサイズを設定する。 <br /></td></tr>
-<tr class="separator:a9dcae4698279c029b00d221c7308dc3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a51198d4627f2856776dcfa4028a072"><td class="memItemLeft" align="right" valign="top"><a id="a0a51198d4627f2856776dcfa4028a072" name="a0a51198d4627f2856776dcfa4028a072"></a>
-<a class="el" href="../../d8/d40/class_amuse_1_1_core_1_1_bit_flags.html">BufferFlags</a>&#160;</td><td class="memItemRight" valign="bottom"><b>flags</b></td></tr>
+<tr class="memitem:a0a51198d4627f2856776dcfa4028a072" id="r_a0a51198d4627f2856776dcfa4028a072"><td class="memItemLeft"><a id="a0a51198d4627f2856776dcfa4028a072" name="a0a51198d4627f2856776dcfa4028a072"></a>
+BufferFlags&#160;</td><td class="memItemRight"><b>flags</b></td></tr>
 <tr class="memdesc:a0a51198d4627f2856776dcfa4028a072"><td class="mdescLeft">&#160;</td><td class="mdescRight">バインドフラグ <br /></td></tr>
-<tr class="separator:a0a51198d4627f2856776dcfa4028a072"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
 <div class="textblock"><p>バッファ定義 </p>
-</div><h2 class="groupheader">関数詳解</h2>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
 <a id="a3a26b305ff16f2090cf7c96a11a6bcff" name="a3a26b305ff16f2090cf7c96a11a6bcff"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3a26b305ff16f2090cf7c96a11a6bcff">&#9670;&#160;</a></span>ByteAddress()</h2>
 
@@ -180,32 +194,24 @@ u32&#160;</td><td class="memItemRight" valign="bottom"><b>stride</b></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="../../d7/dab/struct_amuse_1_1_r_h_i_1_1_buffer_desc.html">BufferDesc</a> Amuse::RHI::BufferDesc::ByteAddress </td>
+          <td class="memname"><a class="el" href="#a7c26fa978babe832bbf8245ecabe3098">BufferDesc</a> Amuse::RHI::BufferDesc::ByteAddress </td>
           <td>(</td>
-          <td class="paramtype">u64&#160;</td>
-          <td class="paramname"><em>size</em>, </td>
+          <td class="paramtype">u64</td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">BufferState&#160;</td>
-          <td class="paramname"><em>initialState</em> = <code>BufferState::ShaderResource</code>, </td>
+          <td class="paramtype">BufferState</td>          <td class="paramname"><span class="paramname"><em>initialState</em></span><span class="paramdefsep"> = </span><span class="paramdefval">BufferState::ShaderResource</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d8/d40/class_amuse_1_1_core_1_1_bit_flags.html">BufferFlags</a>&#160;</td>
-          <td class="paramname"><em>flags</em> = <code>BufferFlag::ShaderResource</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">BufferFlags</td>          <td class="paramname"><span class="paramname"><em>flags</em></span><span class="paramdefsep"> = </span><span class="paramdefval">BufferFlag::ShaderResource</span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -225,32 +231,24 @@ u32&#160;</td><td class="memItemRight" valign="bottom"><b>stride</b></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="../../d7/dab/struct_amuse_1_1_r_h_i_1_1_buffer_desc.html">BufferDesc</a> Amuse::RHI::BufferDesc::Constant </td>
+          <td class="memname"><a class="el" href="#a7c26fa978babe832bbf8245ecabe3098">BufferDesc</a> Amuse::RHI::BufferDesc::Constant </td>
           <td>(</td>
-          <td class="paramtype">u64&#160;</td>
-          <td class="paramname"><em>size</em>, </td>
+          <td class="paramtype">u64</td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">BufferState&#160;</td>
-          <td class="paramname"><em>initialState</em> = <code>BufferState::Constant</code>, </td>
+          <td class="paramtype">BufferState</td>          <td class="paramname"><span class="paramname"><em>initialState</em></span><span class="paramdefsep"> = </span><span class="paramdefval">BufferState::Constant</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d8/d40/class_amuse_1_1_core_1_1_bit_flags.html">BufferFlags</a>&#160;</td>
-          <td class="paramname"><em>flags</em> = <code>BufferFlag::Constant</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">BufferFlags</td>          <td class="paramname"><span class="paramname"><em>flags</em></span><span class="paramdefsep"> = </span><span class="paramdefval">BufferFlag::Constant</span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -266,38 +264,30 @@ u32&#160;</td><td class="memItemRight" valign="bottom"><b>stride</b></td></tr>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="../../d7/dab/struct_amuse_1_1_r_h_i_1_1_buffer_desc.html">BufferDesc</a> Amuse::RHI::BufferDesc::Structured </td>
+          <td class="memname"><a class="el" href="#a7c26fa978babe832bbf8245ecabe3098">BufferDesc</a> Amuse::RHI::BufferDesc::Structured </td>
           <td>(</td>
-          <td class="paramtype">u64&#160;</td>
-          <td class="paramname"><em>count</em>, </td>
+          <td class="paramtype">u64</td>          <td class="paramname"><span class="paramname"><em>count</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">BufferState&#160;</td>
-          <td class="paramname"><em>initialState</em> = <code>BufferState::ShaderResource</code>, </td>
+          <td class="paramtype">BufferState</td>          <td class="paramname"><span class="paramname"><em>initialState</em></span><span class="paramdefsep"> = </span><span class="paramdefval">BufferState::ShaderResource</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d8/d40/class_amuse_1_1_core_1_1_bit_flags.html">BufferFlags</a>&#160;</td>
-          <td class="paramname"><em>flags</em> = <code>BufferFlag::ShaderResource&#160;|&#160;BufferFlag::UnorderedAccess</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">BufferFlags</td>          <td class="paramname"><span class="paramname"><em>flags</em></span><span class="paramdefsep"> = </span><span class="paramdefval">BufferFlag::ShaderResource&#160;|&#160;BufferFlag::UnorderedAccess</span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -312,11 +302,12 @@ template&lt;typename T &gt; </div>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>Amuse</b></li><li class="navelem"><b>RHI</b></li><li class="navelem"><a class="el" href="../../d7/dab/struct_amuse_1_1_r_h_i_1_1_buffer_desc.html">BufferDesc</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><b>RHI</b></li><li class="navelem"><a href="../../d7/dab/struct_amuse_1_1_r_h_i_1_1_buffer_desc.html">BufferDesc</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

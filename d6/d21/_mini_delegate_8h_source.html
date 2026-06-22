@@ -3,19 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AmuseEngine: Runtime/Core/Public/Amuse/Core/Template/Utility/MiniDelegate.h ソースファイル</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../jquery.js"></script>
-<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
 <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
 <script type="text/javascript" src="../../navtreedata.js"></script>
 <script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="../../style.css" rel="stylesheet" type="text/css"/>
@@ -36,23 +42,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.6 -->
+<!-- 構築: Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('../../',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
 });
-/* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -65,10 +93,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('d6/d21/_mini_delegate_8h_source.html','../../'); initResizable(); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d6/d21/_mini_delegate_8h_source.html','../../',''); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -96,69 +123,88 @@ $(document).ready(function(){initNavTree('d6/d21/_mini_delegate_8h_source.html',
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//***********************************************************</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"></span><span class="comment">//***********************************************************</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//***********************************************************</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;cassert&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span>Amuse::Core {</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keyword">template</span>&lt;<span class="keyword">class</span>&gt;</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">class </span>MiniDelegate;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">template</span>&lt;<span class="keyword">class </span>R, <span class="keyword">class</span>... Args&gt;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html">   18</a></span>    <span class="keyword">class </span>MiniDelegate&lt;R(Args...)&gt; {</div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html">   18</a></span>    <span class="keyword">class </span><a class="code hl_function" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#aab5514f01da029e3c0621d96e610e54c">MiniDelegate</a>&lt;R(Args...)&gt; {</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#a58e72c014183b3105ce49c0372a03519">   21</a></span>        <span class="keyword">using </span><a class="code hl_typedef" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#a58e72c014183b3105ce49c0372a03519">StaticFuncPtr</a> = R(*)(Args...);</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#ace7696185b24e7441efa4d2935a7065a">   22</a></span>        <span class="keyword">constexpr</span> <span class="keyword">static</span> <span class="keywordtype">size_t</span> kBufferSize = 24; </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#ace7696185b24e7441efa4d2935a7065a">   22</a></span>        <span class="keyword">constexpr</span> <span class="keyword">static</span> <span class="keywordtype">size_t</span> <a class="code hl_variable" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#ace7696185b24e7441efa4d2935a7065a">kBufferSize</a> = 24; </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#aab5514f01da029e3c0621d96e610e54c">   27</a></span>        <a class="code hl_function" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#aab5514f01da029e3c0621d96e610e54c">MiniDelegate</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span></div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#afa225b27e5a3b440fa57b8b9b166a6b0">   31</a></span>        <a class="code hl_function" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#afa225b27e5a3b440fa57b8b9b166a6b0">MiniDelegate</a>(<a class="code hl_typedef" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#a58e72c014183b3105ce49c0372a03519">StaticFuncPtr</a> func) {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            assign(func);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            <a class="code hl_function" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#ab0c44dda50d6453e7799fe01a02ded47">assign</a>(func);</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        }</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#aeb42a9d3d3d3a0e5c95930aaa82a3ddb">   39</a></span>        <a class="code hl_function" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#aeb42a9d3d3d3a0e5c95930aaa82a3ddb">MiniDelegate</a>(T&amp; <span class="keywordtype">object</span>, R(T::* func)(Args...)) {</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            assign(<span class="keywordtype">object</span>, func);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <a class="code hl_function" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#ab0c44dda50d6453e7799fe01a02ded47">assign</a>(<span class="keywordtype">object</span>, func);</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        }</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span></div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="foldopen" id="foldopen00047" data-start="{" data-end="}">
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#a6d5d20116cd95f8e57eafe658a43e9f7">   47</a></span>        <a class="code hl_function" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#a6d5d20116cd95f8e57eafe658a43e9f7">MiniDelegate</a>(<span class="keyword">const</span> T&amp; <span class="keywordtype">object</span>, R(T::* func)(Args...) <span class="keyword">const</span>) {</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            assign(<span class="keywordtype">object</span>, func);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <a class="code hl_function" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#ab0c44dda50d6453e7799fe01a02ded47">assign</a>(<span class="keywordtype">object</span>, func);</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        }</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span></div>
+<div class="foldopen" id="foldopen00053" data-start="{" data-end="}">
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#ab0c44dda50d6453e7799fe01a02ded47">   53</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#ab0c44dda50d6453e7799fe01a02ded47">assign</a>(<a class="code hl_typedef" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#a58e72c014183b3105ce49c0372a03519">StaticFuncPtr</a> func) {</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            <span class="keyword">static_assert</span>(<span class="keyword">sizeof</span>(StaticInvoker) &lt;= kBufferSize, <span class="stringliteral">&quot;buffer is too small&quot;</span>);</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            reset();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            <span class="keyword">static_assert</span>(<span class="keyword">sizeof</span>(StaticInvoker) &lt;= <a class="code hl_variable" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#ace7696185b24e7441efa4d2935a7065a">kBufferSize</a>, <span class="stringliteral">&quot;buffer is too small&quot;</span>);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <a class="code hl_function" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#afc40eff5c2ab5ed5db70b539a83c5f49">reset</a>();</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <span class="keyword">new</span> (m_buffer.data()) StaticInvoker(func);</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        }</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span></div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="foldopen" id="foldopen00063" data-start="{" data-end="}">
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#a6fd55d0cc00d45aeb5383452edef1952">   63</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#a6fd55d0cc00d45aeb5383452edef1952">assign</a>(T&amp; <span class="keywordtype">object</span>, R(T::* func)(Args...)) {</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            <span class="keyword">static_assert</span>(<span class="keyword">sizeof</span>(Invoker&lt;T&gt;) &lt;= kBufferSize, <span class="stringliteral">&quot;buffer is too small&quot;</span>);</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            reset();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            <span class="keyword">static_assert</span>(<span class="keyword">sizeof</span>(Invoker&lt;T&gt;) &lt;= <a class="code hl_variable" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#ace7696185b24e7441efa4d2935a7065a">kBufferSize</a>, <span class="stringliteral">&quot;buffer is too small&quot;</span>);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <a class="code hl_function" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#afc40eff5c2ab5ed5db70b539a83c5f49">reset</a>();</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            <span class="keyword">new</span> (m_buffer.data()) Invoker&lt;T&gt;(<span class="keywordtype">object</span>, func);</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        }</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span></div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="foldopen" id="foldopen00073" data-start="{" data-end="}">
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#acfa2d7e079bd28e885d2c0760cdeabd5">   73</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#acfa2d7e079bd28e885d2c0760cdeabd5">assign</a>(<span class="keyword">const</span> T&amp; <span class="keywordtype">object</span>, R(T::* func)(Args...) <span class="keyword">const</span>) {</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            <span class="keyword">static_assert</span>(<span class="keyword">sizeof</span>(ConstInvoker&lt;T&gt;) &lt;= kBufferSize, <span class="stringliteral">&quot;buffer is too small&quot;</span>);</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            reset();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            <span class="keyword">static_assert</span>(<span class="keyword">sizeof</span>(ConstInvoker&lt;T&gt;) &lt;= <a class="code hl_variable" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#ace7696185b24e7441efa4d2935a7065a">kBufferSize</a>, <span class="stringliteral">&quot;buffer is too small&quot;</span>);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <a class="code hl_function" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#afc40eff5c2ab5ed5db70b539a83c5f49">reset</a>();</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <span class="keyword">new</span> (m_buffer.data()) ConstInvoker&lt;T&gt;(<span class="keywordtype">object</span>, func);</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        }</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span></div>
+<div class="foldopen" id="foldopen00081" data-start="{" data-end="}">
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#aca9a1b5697554338208ecd085db00f40">   81</a></span>        <span class="keyword">operator</span> bool()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <span class="keywordflow">return</span> std::find(m_buffer.begin(), m_buffer.end(), 0) != m_buffer.end();</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        }</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span></div>
+<div class="foldopen" id="foldopen00086" data-start="{" data-end="}">
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#afc40eff5c2ab5ed5db70b539a83c5f49">   86</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#afc40eff5c2ab5ed5db70b539a83c5f49">reset</a>() {</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            m_buffer.fill(0);</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        }</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span></div>
+<div class="foldopen" id="foldopen00093" data-start="{" data-end="}">
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#a172df118d9d88a1c620d665871d87c87">   93</a></span>        R <a class="code hl_function" href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#a172df118d9d88a1c620d665871d87c87">operator()</a>(Args... args)<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            <span class="keywordflow">return</span> <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span>BaseInvoker*<span class="keyword">&gt;</span>(m_buffer.data())-&gt;invoke(args...);</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        }</div>
+</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
@@ -200,25 +246,28 @@ $(document).ready(function(){initNavTree('d6/d21/_mini_delegate_8h_source.html',
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        Array&lt;size_t, kBufferSize / <span class="keyword">sizeof</span>(size_t)&gt; m_buffer;</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    };</div>
+</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>}</div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4_html_a172df118d9d88a1c620d665871d87c87"><div class="ttname"><a href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#a172df118d9d88a1c620d665871d87c87">Amuse::Core::MiniDelegate&lt; R(Args...)&gt;::operator()</a></div><div class="ttdeci">R operator()(Args... args) const</div><div class="ttdoc">デリゲートを呼び出す</div><div class="ttdef"><b>Definition:</b> MiniDelegate.h:93</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4_html_a58e72c014183b3105ce49c0372a03519"><div class="ttname"><a href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#a58e72c014183b3105ce49c0372a03519">Amuse::Core::MiniDelegate&lt; R(Args...)&gt;::StaticFuncPtr</a></div><div class="ttdeci">R(*)(Args...) StaticFuncPtr</div><div class="ttdoc">StaticFuncPtr 型のエイリアス。</div><div class="ttdef"><b>Definition:</b> MiniDelegate.h:21</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4_html_a6d5d20116cd95f8e57eafe658a43e9f7"><div class="ttname"><a href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#a6d5d20116cd95f8e57eafe658a43e9f7">Amuse::Core::MiniDelegate&lt; R(Args...)&gt;::MiniDelegate</a></div><div class="ttdeci">MiniDelegate(const T &amp;object, R(T::*func)(Args...) const)</div><div class="ttdoc">コンストラクタ</div><div class="ttdef"><b>Definition:</b> MiniDelegate.h:47</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4_html_a6fd55d0cc00d45aeb5383452edef1952"><div class="ttname"><a href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#a6fd55d0cc00d45aeb5383452edef1952">Amuse::Core::MiniDelegate&lt; R(Args...)&gt;::assign</a></div><div class="ttdeci">void assign(T &amp;object, R(T::*func)(Args...))</div><div class="ttdoc">オブジェクトとメンバ関数ポインタを割り当てる</div><div class="ttdef"><b>Definition:</b> MiniDelegate.h:63</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4_html_a172df118d9d88a1c620d665871d87c87"><div class="ttname"><a href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#a172df118d9d88a1c620d665871d87c87">Amuse::Core::MiniDelegate&lt; R(Args...)&gt;::operator()</a></div><div class="ttdeci">R operator()(Args... args) const</div><div class="ttdoc">デリゲートを呼び出す</div><div class="ttdef"><b>Definition</b> MiniDelegate.h:93</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4_html_a58e72c014183b3105ce49c0372a03519"><div class="ttname"><a href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#a58e72c014183b3105ce49c0372a03519">Amuse::Core::MiniDelegate&lt; R(Args...)&gt;::StaticFuncPtr</a></div><div class="ttdeci">R(*)(Args...) StaticFuncPtr</div><div class="ttdoc">StaticFuncPtr 型のエイリアス。</div><div class="ttdef"><b>Definition</b> MiniDelegate.h:21</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4_html_a6d5d20116cd95f8e57eafe658a43e9f7"><div class="ttname"><a href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#a6d5d20116cd95f8e57eafe658a43e9f7">Amuse::Core::MiniDelegate&lt; R(Args...)&gt;::MiniDelegate</a></div><div class="ttdeci">MiniDelegate(const T &amp;object, R(T::*func)(Args...) const)</div><div class="ttdoc">コンストラクタ</div><div class="ttdef"><b>Definition</b> MiniDelegate.h:47</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4_html_a6fd55d0cc00d45aeb5383452edef1952"><div class="ttname"><a href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#a6fd55d0cc00d45aeb5383452edef1952">Amuse::Core::MiniDelegate&lt; R(Args...)&gt;::assign</a></div><div class="ttdeci">void assign(T &amp;object, R(T::*func)(Args...))</div><div class="ttdoc">オブジェクトとメンバ関数ポインタを割り当てる</div><div class="ttdef"><b>Definition</b> MiniDelegate.h:63</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4_html_aab5514f01da029e3c0621d96e610e54c"><div class="ttname"><a href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#aab5514f01da029e3c0621d96e610e54c">Amuse::Core::MiniDelegate&lt; R(Args...)&gt;::MiniDelegate</a></div><div class="ttdeci">MiniDelegate()=default</div><div class="ttdoc">デフォルトコンストラクタ</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4_html_ab0c44dda50d6453e7799fe01a02ded47"><div class="ttname"><a href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#ab0c44dda50d6453e7799fe01a02ded47">Amuse::Core::MiniDelegate&lt; R(Args...)&gt;::assign</a></div><div class="ttdeci">void assign(StaticFuncPtr func)</div><div class="ttdoc">静的関数ポインタを割り当てる</div><div class="ttdef"><b>Definition:</b> MiniDelegate.h:53</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4_html_acfa2d7e079bd28e885d2c0760cdeabd5"><div class="ttname"><a href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#acfa2d7e079bd28e885d2c0760cdeabd5">Amuse::Core::MiniDelegate&lt; R(Args...)&gt;::assign</a></div><div class="ttdeci">void assign(const T &amp;object, R(T::*func)(Args...) const)</div><div class="ttdoc">オブジェクトとメンバ関数ポインタを割り当てる(const)</div><div class="ttdef"><b>Definition:</b> MiniDelegate.h:73</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4_html_aeb42a9d3d3d3a0e5c95930aaa82a3ddb"><div class="ttname"><a href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#aeb42a9d3d3d3a0e5c95930aaa82a3ddb">Amuse::Core::MiniDelegate&lt; R(Args...)&gt;::MiniDelegate</a></div><div class="ttdeci">MiniDelegate(T &amp;object, R(T::*func)(Args...))</div><div class="ttdoc">コンストラクタ</div><div class="ttdef"><b>Definition:</b> MiniDelegate.h:39</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4_html_afa225b27e5a3b440fa57b8b9b166a6b0"><div class="ttname"><a href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#afa225b27e5a3b440fa57b8b9b166a6b0">Amuse::Core::MiniDelegate&lt; R(Args...)&gt;::MiniDelegate</a></div><div class="ttdeci">MiniDelegate(StaticFuncPtr func)</div><div class="ttdoc">コンストラクタ</div><div class="ttdef"><b>Definition:</b> MiniDelegate.h:31</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4_html_afc40eff5c2ab5ed5db70b539a83c5f49"><div class="ttname"><a href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#afc40eff5c2ab5ed5db70b539a83c5f49">Amuse::Core::MiniDelegate&lt; R(Args...)&gt;::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdoc">デリゲートをリセットする</div><div class="ttdef"><b>Definition:</b> MiniDelegate.h:86</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4_html_ab0c44dda50d6453e7799fe01a02ded47"><div class="ttname"><a href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#ab0c44dda50d6453e7799fe01a02ded47">Amuse::Core::MiniDelegate&lt; R(Args...)&gt;::assign</a></div><div class="ttdeci">void assign(StaticFuncPtr func)</div><div class="ttdoc">静的関数ポインタを割り当てる</div><div class="ttdef"><b>Definition</b> MiniDelegate.h:53</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4_html_ace7696185b24e7441efa4d2935a7065a"><div class="ttname"><a href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#ace7696185b24e7441efa4d2935a7065a">Amuse::Core::MiniDelegate&lt; R(Args...)&gt;::kBufferSize</a></div><div class="ttdeci">static constexpr size_t kBufferSize</div><div class="ttdoc">内部バッファサイズ // T (8) + BaseInvoker (8) + Invoker (8) = 24</div><div class="ttdef"><b>Definition</b> MiniDelegate.h:22</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4_html_acfa2d7e079bd28e885d2c0760cdeabd5"><div class="ttname"><a href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#acfa2d7e079bd28e885d2c0760cdeabd5">Amuse::Core::MiniDelegate&lt; R(Args...)&gt;::assign</a></div><div class="ttdeci">void assign(const T &amp;object, R(T::*func)(Args...) const)</div><div class="ttdoc">オブジェクトとメンバ関数ポインタを割り当てる(const)</div><div class="ttdef"><b>Definition</b> MiniDelegate.h:73</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4_html_aeb42a9d3d3d3a0e5c95930aaa82a3ddb"><div class="ttname"><a href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#aeb42a9d3d3d3a0e5c95930aaa82a3ddb">Amuse::Core::MiniDelegate&lt; R(Args...)&gt;::MiniDelegate</a></div><div class="ttdeci">MiniDelegate(T &amp;object, R(T::*func)(Args...))</div><div class="ttdoc">コンストラクタ</div><div class="ttdef"><b>Definition</b> MiniDelegate.h:39</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4_html_afa225b27e5a3b440fa57b8b9b166a6b0"><div class="ttname"><a href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#afa225b27e5a3b440fa57b8b9b166a6b0">Amuse::Core::MiniDelegate&lt; R(Args...)&gt;::MiniDelegate</a></div><div class="ttdeci">MiniDelegate(StaticFuncPtr func)</div><div class="ttdoc">コンストラクタ</div><div class="ttdef"><b>Definition</b> MiniDelegate.h:31</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4_html_afc40eff5c2ab5ed5db70b539a83c5f49"><div class="ttname"><a href="../../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#afc40eff5c2ab5ed5db70b539a83c5f49">Amuse::Core::MiniDelegate&lt; R(Args...)&gt;::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdoc">デリゲートをリセットする</div><div class="ttdef"><b>Definition</b> MiniDelegate.h:86</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_4f6666a8f2ab10bc970eb7559668f031.html">Runtime</a></li><li class="navelem"><a class="el" href="../../dir_b05c51a7dc61612d752a1d5ca497c54f.html">Core</a></li><li class="navelem"><a class="el" href="../../dir_2704b46b7ef0c98b3ce7738c20dc746e.html">Public</a></li><li class="navelem"><a class="el" href="../../dir_02338155ec8ce976dea76e6f650abf75.html">Amuse</a></li><li class="navelem"><a class="el" href="../../dir_a813c3653225bc50968bea57534cde90.html">Core</a></li><li class="navelem"><a class="el" href="../../dir_295976b0cf8517a35b6d4e7f871c2015.html">Template</a></li><li class="navelem"><a class="el" href="../../dir_6e7d3e82bb509c7285a45c87c2e3caa9.html">Utility</a></li><li class="navelem"><b>MiniDelegate.h</b></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="navelem"><b>Runtime</b></li><li class="navelem"><b>Core</b></li><li class="navelem"><b>Public</b></li><li class="navelem"><b>Amuse</b></li><li class="navelem"><b>Core</b></li><li class="navelem"><b>Template</b></li><li class="navelem"><b>Utility</b></li><li class="navelem"><b>MiniDelegate.h</b></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

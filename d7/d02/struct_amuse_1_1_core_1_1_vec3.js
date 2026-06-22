@@ -56,8 +56,8 @@ var struct_amuse_1_1_core_1_1_vec3 =
     [ "translate", "d7/d02/struct_amuse_1_1_core_1_1_vec3.html#aa9d90fed00b92d7331abf46e9c83e5df", null ],
     [ "translate", "d7/d02/struct_amuse_1_1_core_1_1_vec3.html#adb9811e45086c97f354a3ff76b21e8f1", null ],
     [ "unitVec", "d7/d02/struct_amuse_1_1_core_1_1_vec3.html#ad38ed115b482440cd56763276995572a", null ],
-    [ "operator*", "d7/d02/struct_amuse_1_1_core_1_1_vec3.html#a10cd1a2fd8a5bee36c0a28490983d2d0", null ],
-    [ "operator/", "d7/d02/struct_amuse_1_1_core_1_1_vec3.html#af743839d6fa77fde5874c3bd08922802", null ],
+    [ "operator*", "d7/d02/struct_amuse_1_1_core_1_1_vec3.html#adc01230d6b188c049bcc11d2cc85b3f2", null ],
+    [ "operator/", "d7/d02/struct_amuse_1_1_core_1_1_vec3.html#a11cd61ce0c7ebd8c52fdd255e8dee8dd", null ],
     [ "x", "d7/d02/struct_amuse_1_1_core_1_1_vec3.html#ad8efa7bb12d3e95a9ddae867355ab152", null ],
     [ "y", "d7/d02/struct_amuse_1_1_core_1_1_vec3.html#adbf71a8b440e2906e2b770b64c58661e", null ],
     [ "z", "d7/d02/struct_amuse_1_1_core_1_1_vec3.html#a6bc2c7259e2f5f60c89585645aa66838", null ]

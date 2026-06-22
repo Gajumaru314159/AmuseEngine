@@ -6,7 +6,8 @@ var searchData=
   ['handlelist_3',['HandleList',['../da/da9/class_amuse_1_1_core_1_1_handle_list.html',1,'Amuse::Core']]],
   ['handlelist_3c_20delegate_5ftype_20_3e_4',['HandleList&lt; delegate_type &gt;',['../da/da9/class_amuse_1_1_core_1_1_handle_list.html',1,'Amuse::Core']]],
   ['handlemanager_5',['HandleManager',['../da/d02/class_amuse_1_1_core_1_1_handle_manager.html',1,'Amuse::Core']]],
-  ['hash_6',['Hash',['../d5/d6f/class_amuse_1_1_core_1_1_hash.html',1,'Amuse::Core']]],
-  ['hasher_7',['Hasher',['../d0/df7/struct_amuse_1_1_core_1_1_sync_handle_manager_1_1_hasher.html',1,'Amuse::Core::SyncHandleManager']]],
-  ['hsv_8',['HSV',['../d3/d4e/struct_amuse_1_1_core_1_1_h_s_v.html',1,'Amuse::Core']]]
+  ['handlemanager_3c_20t_2c_20deleter_20_3e_6',['HandleManager&lt; T, Deleter &gt;',['../da/d02/class_amuse_1_1_core_1_1_handle_manager.html',1,'Amuse::Core']]],
+  ['hash_7',['Hash',['../d5/d6f/class_amuse_1_1_core_1_1_hash.html',1,'Amuse::Core']]],
+  ['hasher_8',['Hasher',['../d0/df7/struct_amuse_1_1_core_1_1_sync_handle_manager_1_1_hasher.html',1,'Amuse::Core::SyncHandleManager']]],
+  ['hsv_9',['HSV',['../d3/d4e/struct_amuse_1_1_core_1_1_h_s_v.html',1,'Amuse::Core']]]
 ];

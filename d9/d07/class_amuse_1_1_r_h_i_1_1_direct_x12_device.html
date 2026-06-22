@@ -3,19 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AmuseEngine: Amuse::RHI::DirectX12Device クラス</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../jquery.js"></script>
-<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
 <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
 <script type="text/javascript" src="../../navtreedata.js"></script>
 <script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="../../style.css" rel="stylesheet" type="text/css"/>
@@ -36,23 +42,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.6 -->
+<!-- 構築: Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('../../',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
 });
-/* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -65,10 +93,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html','../../'); initResizable(); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html','../../','d1/d06/class_amuse_1_1_r_h_i_1_1_direct_x12_device-members'); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -93,7 +120,6 @@ $(document).ready(function(){initNavTree('d9/d07/class_amuse_1_1_r_h_i_1_1_direc
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">クラス</a> &#124;
 <a href="#pub-methods">公開メンバ関数</a> &#124;
 <a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
 <a href="../../d1/d06/class_amuse_1_1_r_h_i_1_1_direct_x12_device-members.html">全メンバ一覧</a>  </div>
@@ -102,393 +128,196 @@ $(document).ready(function(){initNavTree('d9/d07/class_amuse_1_1_r_h_i_1_1_direc
 <div class="contents">
 
 <p>DirectX 12 RHI デバイス  
- <a href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#details">[詳解]</a></p>
+ <a href="#details">[詳解]</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../db/da3/_direct_x12_device_8h_source.html">DirectX12Device.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:adf29e9b385dd2b9dec6ec7b518eb1ed5"><td class="memItemLeft" align="right" valign="top"><a id="adf29e9b385dd2b9dec6ec7b518eb1ed5" name="adf29e9b385dd2b9dec6ec7b518eb1ed5"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>DirectX12Device</b> (Amuse::Platform::WindowManager &amp;, GraphicObjectManager &amp;, const <a class="el" href="../../d8/d50/struct_amuse_1_1_r_h_i_1_1_r_h_i_config.html">RHIConfig</a> *, const <a class="el" href="../../da/dbf/struct_amuse_1_1_r_h_i_1_1_direct_x12_r_h_i_config.html">DirectX12RHIConfig</a> *)</td></tr>
+<tr class="memitem:adf29e9b385dd2b9dec6ec7b518eb1ed5" id="r_adf29e9b385dd2b9dec6ec7b518eb1ed5"><td class="memItemLeft"><a id="adf29e9b385dd2b9dec6ec7b518eb1ed5" name="adf29e9b385dd2b9dec6ec7b518eb1ed5"></a>
+&#160;</td><td class="memItemRight"><b>DirectX12Device</b> (Amuse::Platform::WindowManager &amp;, GraphicObjectManager &amp;, const <a class="el" href="../../d8/d50/struct_amuse_1_1_r_h_i_1_1_r_h_i_config.html">RHIConfig</a> *, const <a class="el" href="../../da/dbf/struct_amuse_1_1_r_h_i_1_1_direct_x12_r_h_i_config.html">DirectX12RHIConfig</a> *)</td></tr>
 <tr class="memdesc:adf29e9b385dd2b9dec6ec7b518eb1ed5"><td class="mdescLeft">&#160;</td><td class="mdescRight">DirectX 12 デバイスを初期化する <br /></td></tr>
-<tr class="separator:adf29e9b385dd2b9dec6ec7b518eb1ed5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1cc67db2b83c13584b2093ffadec5c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#aa1cc67db2b83c13584b2093ffadec5c7">update</a> () override</td></tr>
+<tr class="memitem:aa1cc67db2b83c13584b2093ffadec5c7" id="r_aa1cc67db2b83c13584b2093ffadec5c7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa1cc67db2b83c13584b2093ffadec5c7">update</a> () override</td></tr>
 <tr class="memdesc:aa1cc67db2b83c13584b2093ffadec5c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">ゲーム更新イベント  <br /></td></tr>
-<tr class="separator:aa1cc67db2b83c13584b2093ffadec5c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd99aaf95d074a7801ae2457b22b8fad"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#acd99aaf95d074a7801ae2457b22b8fad">isValid</a> () const override</td></tr>
+<tr class="memitem:acd99aaf95d074a7801ae2457b22b8fad" id="r_acd99aaf95d074a7801ae2457b22b8fad"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#acd99aaf95d074a7801ae2457b22b8fad">isValid</a> () const override</td></tr>
 <tr class="memdesc:acd99aaf95d074a7801ae2457b22b8fad"><td class="mdescLeft">&#160;</td><td class="mdescRight">妥当な状態か  <br /></td></tr>
-<tr class="separator:acd99aaf95d074a7801ae2457b22b8fad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af194f51834fb39dcd7ec05183137ab43"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#af194f51834fb39dcd7ec05183137ab43">getAPIName</a> () const</td></tr>
+<tr class="memitem:af194f51834fb39dcd7ec05183137ab43" id="r_af194f51834fb39dcd7ec05183137ab43"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#af194f51834fb39dcd7ec05183137ab43">getAPIName</a> () const</td></tr>
 <tr class="memdesc:af194f51834fb39dcd7ec05183137ab43"><td class="mdescLeft">&#160;</td><td class="mdescRight">API名を取得  <br /></td></tr>
-<tr class="separator:af194f51834fb39dcd7ec05183137ab43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf3565b4b2c54139652d674648ce6f45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#adf3565b4b2c54139652d674648ce6f45">entryCommandList</a> (const <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d7/dc8/class_amuse_1_1_r_h_i_1_1_command_list.html">CommandList</a> &gt; &amp;) override</td></tr>
+<tr class="memitem:adf3565b4b2c54139652d674648ce6f45" id="r_adf3565b4b2c54139652d674648ce6f45"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adf3565b4b2c54139652d674648ce6f45">entryCommandList</a> (const <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d7/dc8/class_amuse_1_1_r_h_i_1_1_command_list.html">CommandList</a> &gt; &amp;) override</td></tr>
 <tr class="memdesc:adf3565b4b2c54139652d674648ce6f45"><td class="mdescLeft">&#160;</td><td class="mdescRight">コマンドリストを登録する  <br /></td></tr>
-<tr class="separator:adf3565b4b2c54139652d674648ce6f45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade6a636c3f5c3a2baf9e64d33282b712"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d9/d03/class_amuse_1_1_r_h_i_1_1_fence.html">Fence</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#ade6a636c3f5c3a2baf9e64d33282b712">createFence</a> (const <a class="el" href="../../dd/ded/struct_amuse_1_1_r_h_i_1_1_fence_desc.html">FenceDesc</a> &amp;desc) override</td></tr>
+<tr class="memitem:ade6a636c3f5c3a2baf9e64d33282b712" id="r_ade6a636c3f5c3a2baf9e64d33282b712"><td class="memItemLeft"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d9/d03/class_amuse_1_1_r_h_i_1_1_fence.html">Fence</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ade6a636c3f5c3a2baf9e64d33282b712">createFence</a> (const <a class="el" href="../../dd/ded/struct_amuse_1_1_r_h_i_1_1_fence_desc.html">FenceDesc</a> &amp;desc) override</td></tr>
 <tr class="memdesc:ade6a636c3f5c3a2baf9e64d33282b712"><td class="mdescLeft">&#160;</td><td class="mdescRight">フェンスを生成する  <br /></td></tr>
-<tr class="separator:ade6a636c3f5c3a2baf9e64d33282b712"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b4aa238461dd3049bb176b97e0e4934"><td class="memItemLeft" align="right" valign="top">u64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#a0b4aa238461dd3049bb176b97e0e4934">executeCommandLists</a> (Span&lt; <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d7/dc8/class_amuse_1_1_r_h_i_1_1_command_list.html">CommandList</a> &gt; &gt; commandLists, CommandQueueType queue=CommandQueueType::Graphics) override</td></tr>
+<tr class="memitem:a0b4aa238461dd3049bb176b97e0e4934" id="r_a0b4aa238461dd3049bb176b97e0e4934"><td class="memItemLeft">u64&#160;</td><td class="memItemRight"><a class="el" href="#a0b4aa238461dd3049bb176b97e0e4934">executeCommandLists</a> (Span&lt; <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d7/dc8/class_amuse_1_1_r_h_i_1_1_command_list.html">CommandList</a> &gt; &gt; commandLists, CommandQueueType queue=CommandQueueType::Graphics) override</td></tr>
 <tr class="memdesc:a0b4aa238461dd3049bb176b97e0e4934"><td class="mdescLeft">&#160;</td><td class="mdescRight">コマンドリストを実行する  <br /></td></tr>
-<tr class="separator:a0b4aa238461dd3049bb176b97e0e4934"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a497fe92fd4ae8915158bd7b2e61485e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#a497fe92fd4ae8915158bd7b2e61485e1">waitForIdle</a> (CommandQueueType queue=CommandQueueType::Graphics) override</td></tr>
+<tr class="memitem:a497fe92fd4ae8915158bd7b2e61485e1" id="r_a497fe92fd4ae8915158bd7b2e61485e1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a497fe92fd4ae8915158bd7b2e61485e1">waitForIdle</a> (CommandQueueType queue=CommandQueueType::Graphics) override</td></tr>
 <tr class="memdesc:a497fe92fd4ae8915158bd7b2e61485e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">キューのアイドル状態を待機する  <br /></td></tr>
-<tr class="separator:a497fe92fd4ae8915158bd7b2e61485e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe67ce28d31457cc3136ec077100cc9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#afe67ce28d31457cc3136ec077100cc9e">queueWait</a> (CommandQueueType waitQueue, CommandQueueType executeQueue, u64 fenceValue) override</td></tr>
+<tr class="memitem:afe67ce28d31457cc3136ec077100cc9e" id="r_afe67ce28d31457cc3136ec077100cc9e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afe67ce28d31457cc3136ec077100cc9e">queueWait</a> (CommandQueueType waitQueue, CommandQueueType executeQueue, u64 fenceValue) override</td></tr>
 <tr class="memdesc:afe67ce28d31457cc3136ec077100cc9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">キュー間のフェンス待機を設定する  <br /></td></tr>
-<tr class="separator:afe67ce28d31457cc3136ec077100cc9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7d1cf6ba757f1cc711a91708584dd21"><td class="memItemLeft" align="right" valign="top">Vector&lt; <a class="el" href="../../dd/d49/struct_amuse_1_1_r_h_i_1_1_video_card.html">VideoCard</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#ac7d1cf6ba757f1cc711a91708584dd21">getVideoCards</a> () const override</td></tr>
+<tr class="memitem:ac7d1cf6ba757f1cc711a91708584dd21" id="r_ac7d1cf6ba757f1cc711a91708584dd21"><td class="memItemLeft">Vector&lt; <a class="el" href="../../dd/d49/struct_amuse_1_1_r_h_i_1_1_video_card.html">VideoCard</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ac7d1cf6ba757f1cc711a91708584dd21">getVideoCards</a> () const override</td></tr>
 <tr class="memdesc:ac7d1cf6ba757f1cc711a91708584dd21"><td class="mdescLeft">&#160;</td><td class="mdescRight">利用可能なビデオカード一覧を取得する  <br /></td></tr>
-<tr class="separator:ac7d1cf6ba757f1cc711a91708584dd21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1f1ced8154b47b39e46d5e3bf3d67e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d5/df6/class_amuse_1_1_r_h_i_1_1_swap_chain.html">SwapChain</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#ae1f1ced8154b47b39e46d5e3bf3d67e9">createSwapChain</a> (const <a class="el" href="../../d6/d44/struct_amuse_1_1_r_h_i_1_1_swap_chain_desc.html">SwapChainDesc</a> &amp;desc) override</td></tr>
+<tr class="memitem:ae1f1ced8154b47b39e46d5e3bf3d67e9" id="r_ae1f1ced8154b47b39e46d5e3bf3d67e9"><td class="memItemLeft"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d5/df6/class_amuse_1_1_r_h_i_1_1_swap_chain.html">SwapChain</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ae1f1ced8154b47b39e46d5e3bf3d67e9">createSwapChain</a> (const <a class="el" href="../../d6/d44/struct_amuse_1_1_r_h_i_1_1_swap_chain_desc.html">SwapChainDesc</a> &amp;desc) override</td></tr>
 <tr class="memdesc:ae1f1ced8154b47b39e46d5e3bf3d67e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">スワップ・チェーンを生成  <br /></td></tr>
-<tr class="separator:ae1f1ced8154b47b39e46d5e3bf3d67e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ca5a39e126c18f5ca0e103efee16f2e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d7/dc8/class_amuse_1_1_r_h_i_1_1_command_list.html">CommandList</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#a5ca5a39e126c18f5ca0e103efee16f2e">createCommandList</a> (const <a class="el" href="../../d8/d93/struct_amuse_1_1_r_h_i_1_1_command_list_desc.html">CommandListDesc</a> &amp;desc) override</td></tr>
+<tr class="memitem:a5ca5a39e126c18f5ca0e103efee16f2e" id="r_a5ca5a39e126c18f5ca0e103efee16f2e"><td class="memItemLeft"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d7/dc8/class_amuse_1_1_r_h_i_1_1_command_list.html">CommandList</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a5ca5a39e126c18f5ca0e103efee16f2e">createCommandList</a> (const <a class="el" href="../../d8/d93/struct_amuse_1_1_r_h_i_1_1_command_list_desc.html">CommandListDesc</a> &amp;desc) override</td></tr>
 <tr class="memdesc:a5ca5a39e126c18f5ca0e103efee16f2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">コマンドリスト生成  <br /></td></tr>
-<tr class="separator:a5ca5a39e126c18f5ca0e103efee16f2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b0d7dd315d00629829042b71ce32ec5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../de/d11/class_amuse_1_1_r_h_i_1_1_root_signature.html">RootSignature</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#a6b0d7dd315d00629829042b71ce32ec5">createRootSignature</a> (const <a class="el" href="../../dd/d50/struct_amuse_1_1_r_h_i_1_1_root_signature_desc.html">RootSignatureDesc</a> &amp;desc) override</td></tr>
+<tr class="memitem:a6b0d7dd315d00629829042b71ce32ec5" id="r_a6b0d7dd315d00629829042b71ce32ec5"><td class="memItemLeft"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../de/d11/class_amuse_1_1_r_h_i_1_1_root_signature.html">RootSignature</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a6b0d7dd315d00629829042b71ce32ec5">createRootSignature</a> (const <a class="el" href="../../dd/d50/struct_amuse_1_1_r_h_i_1_1_root_signature_desc.html">RootSignatureDesc</a> &amp;desc) override</td></tr>
 <tr class="memdesc:a6b0d7dd315d00629829042b71ce32ec5"><td class="mdescLeft">&#160;</td><td class="mdescRight">ルートシグネチャを生成  <br /></td></tr>
-<tr class="separator:a6b0d7dd315d00629829042b71ce32ec5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18c4cdcf32004e9d7505500fb1f5f3e7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d6/d59/class_amuse_1_1_r_h_i_1_1_pipeline_state.html">PipelineState</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#a18c4cdcf32004e9d7505500fb1f5f3e7">createPipelineState</a> (const <a class="el" href="../../de/d3f/struct_amuse_1_1_r_h_i_1_1_pipeline_state_desc.html">PipelineStateDesc</a> &amp;desc) override</td></tr>
+<tr class="memitem:a18c4cdcf32004e9d7505500fb1f5f3e7" id="r_a18c4cdcf32004e9d7505500fb1f5f3e7"><td class="memItemLeft"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d6/d59/class_amuse_1_1_r_h_i_1_1_pipeline_state.html">PipelineState</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a18c4cdcf32004e9d7505500fb1f5f3e7">createPipelineState</a> (const <a class="el" href="../../de/d3f/struct_amuse_1_1_r_h_i_1_1_pipeline_state_desc.html">PipelineStateDesc</a> &amp;desc) override</td></tr>
 <tr class="memdesc:a18c4cdcf32004e9d7505500fb1f5f3e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">パイプラインステートを生成  <br /></td></tr>
-<tr class="separator:a18c4cdcf32004e9d7505500fb1f5f3e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8162be95926c4849e1e25be0e6446e2d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d9/dab/class_amuse_1_1_r_h_i_1_1_compute_pipeline_state.html">ComputePipelineState</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#a8162be95926c4849e1e25be0e6446e2d">createComputePipelineState</a> (const <a class="el" href="../../d2/dbc/struct_amuse_1_1_r_h_i_1_1_compute_pipeline_state_desc.html">ComputePipelineStateDesc</a> &amp;desc) override</td></tr>
+<tr class="memitem:a8162be95926c4849e1e25be0e6446e2d" id="r_a8162be95926c4849e1e25be0e6446e2d"><td class="memItemLeft"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d9/dab/class_amuse_1_1_r_h_i_1_1_compute_pipeline_state.html">ComputePipelineState</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a8162be95926c4849e1e25be0e6446e2d">createComputePipelineState</a> (const <a class="el" href="../../d2/dbc/struct_amuse_1_1_r_h_i_1_1_compute_pipeline_state_desc.html">ComputePipelineStateDesc</a> &amp;desc) override</td></tr>
 <tr class="memdesc:a8162be95926c4849e1e25be0e6446e2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンピュートパイプラインステートを生成  <br /></td></tr>
-<tr class="separator:a8162be95926c4849e1e25be0e6446e2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d6b8fab54d681c8e6eee8e4f51dee78"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../de/d60/class_amuse_1_1_r_h_i_1_1_texture.html">Texture</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#a1d6b8fab54d681c8e6eee8e4f51dee78">createTexture</a> (const <a class="el" href="../../df/d82/struct_amuse_1_1_r_h_i_1_1_texture_desc.html">TextureDesc</a> &amp;desc) override</td></tr>
+<tr class="memitem:a1d6b8fab54d681c8e6eee8e4f51dee78" id="r_a1d6b8fab54d681c8e6eee8e4f51dee78"><td class="memItemLeft"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../de/d60/class_amuse_1_1_r_h_i_1_1_texture.html">Texture</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a1d6b8fab54d681c8e6eee8e4f51dee78">createTexture</a> (const <a class="el" href="../../df/d82/struct_amuse_1_1_r_h_i_1_1_texture_desc.html">TextureDesc</a> &amp;desc) override</td></tr>
 <tr class="memdesc:a1d6b8fab54d681c8e6eee8e4f51dee78"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャを生成  <br /></td></tr>
-<tr class="separator:a1d6b8fab54d681c8e6eee8e4f51dee78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a615a8c4f82ed8055a4b2623c37e551d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../de/d60/class_amuse_1_1_r_h_i_1_1_texture.html">Texture</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#a615a8c4f82ed8055a4b2623c37e551d8">createTexture</a> (<a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> name, TextureType type, <a class="el" href="../../de/d30/struct_amuse_1_1_core_1_1_size.html">Size</a> size, Span&lt; const <a class="el" href="../../dc/d7f/struct_amuse_1_1_core_1_1_int_color.html">IntColor</a> &gt; colors) override</td></tr>
+<tr class="memitem:a615a8c4f82ed8055a4b2623c37e551d8" id="r_a615a8c4f82ed8055a4b2623c37e551d8"><td class="memItemLeft"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../de/d60/class_amuse_1_1_r_h_i_1_1_texture.html">Texture</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a615a8c4f82ed8055a4b2623c37e551d8">createTexture</a> (StringView name, TextureType type, <a class="el" href="../../de/d30/struct_amuse_1_1_core_1_1_size.html">Size</a> size, Span&lt; const <a class="el" href="../../dc/d7f/struct_amuse_1_1_core_1_1_int_color.html">IntColor</a> &gt; colors) override</td></tr>
 <tr class="memdesc:a615a8c4f82ed8055a4b2623c37e551d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャを生成する  <br /></td></tr>
-<tr class="separator:a615a8c4f82ed8055a4b2623c37e551d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a861be4445a1032e5cb71301c25019ab5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../de/d60/class_amuse_1_1_r_h_i_1_1_texture.html">Texture</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#a861be4445a1032e5cb71301c25019ab5">createTexture</a> (<a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> name, <a class="el" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html">BlobView</a> blob) override</td></tr>
+<tr class="memitem:a861be4445a1032e5cb71301c25019ab5" id="r_a861be4445a1032e5cb71301c25019ab5"><td class="memItemLeft"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../de/d60/class_amuse_1_1_r_h_i_1_1_texture.html">Texture</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a861be4445a1032e5cb71301c25019ab5">createTexture</a> (StringView name, <a class="el" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html">BlobView</a> blob) override</td></tr>
 <tr class="memdesc:a861be4445a1032e5cb71301c25019ab5"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャを生成する  <br /></td></tr>
-<tr class="separator:a861be4445a1032e5cb71301c25019ab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a274b5b9975c5a495b53fcb63c455f9bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../de/d60/class_amuse_1_1_r_h_i_1_1_texture.html">Texture</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#a274b5b9975c5a495b53fcb63c455f9bf">createTexture</a> (const <a class="el" href="../../d5/d16/struct_amuse_1_1_r_h_i_1_1_texture_view_desc.html">TextureViewDesc</a> &amp;desc) override</td></tr>
+<tr class="memitem:a274b5b9975c5a495b53fcb63c455f9bf" id="r_a274b5b9975c5a495b53fcb63c455f9bf"><td class="memItemLeft"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../de/d60/class_amuse_1_1_r_h_i_1_1_texture.html">Texture</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a274b5b9975c5a495b53fcb63c455f9bf">createTexture</a> (const <a class="el" href="../../d5/d16/struct_amuse_1_1_r_h_i_1_1_texture_view_desc.html">TextureViewDesc</a> &amp;desc) override</td></tr>
 <tr class="memdesc:a274b5b9975c5a495b53fcb63c455f9bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャを生成する  <br /></td></tr>
-<tr class="separator:a274b5b9975c5a495b53fcb63c455f9bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6580efb0c38ed3f3afa445990e3d32a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../da/d86/class_amuse_1_1_r_h_i_1_1_render_texture.html">RenderTexture</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#a6580efb0c38ed3f3afa445990e3d32a6">createRenderTexture</a> (const <a class="el" href="../../d4/dc2/struct_amuse_1_1_r_h_i_1_1_render_texture_desc.html">RenderTextureDesc</a> &amp;desc) override</td></tr>
+<tr class="memitem:a6580efb0c38ed3f3afa445990e3d32a6" id="r_a6580efb0c38ed3f3afa445990e3d32a6"><td class="memItemLeft"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../da/d86/class_amuse_1_1_r_h_i_1_1_render_texture.html">RenderTexture</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a6580efb0c38ed3f3afa445990e3d32a6">createRenderTexture</a> (const <a class="el" href="../../d4/dc2/struct_amuse_1_1_r_h_i_1_1_render_texture_desc.html">RenderTextureDesc</a> &amp;desc) override</td></tr>
 <tr class="memdesc:a6580efb0c38ed3f3afa445990e3d32a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">レンダーテクスチャを生成  <br /></td></tr>
-<tr class="separator:a6580efb0c38ed3f3afa445990e3d32a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed1e8543e323b3fe87c0a7b50881728c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../da/d9b/class_amuse_1_1_r_h_i_1_1_sampler.html">Sampler</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#aed1e8543e323b3fe87c0a7b50881728c">createSampler</a> (const <a class="el" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html">SamplerDesc</a> &amp;desc) override</td></tr>
+<tr class="memitem:aed1e8543e323b3fe87c0a7b50881728c" id="r_aed1e8543e323b3fe87c0a7b50881728c"><td class="memItemLeft"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../da/d9b/class_amuse_1_1_r_h_i_1_1_sampler.html">Sampler</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aed1e8543e323b3fe87c0a7b50881728c">createSampler</a> (const <a class="el" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html">SamplerDesc</a> &amp;desc) override</td></tr>
 <tr class="memdesc:aed1e8543e323b3fe87c0a7b50881728c"><td class="mdescLeft">&#160;</td><td class="mdescRight">サンプラーを生成  <br /></td></tr>
-<tr class="separator:aed1e8543e323b3fe87c0a7b50881728c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8af9b2857398cdc957875432f6840c07"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html">Buffer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#a8af9b2857398cdc957875432f6840c07">createBuffer</a> (const <a class="el" href="../../d7/dab/struct_amuse_1_1_r_h_i_1_1_buffer_desc.html">BufferDesc</a> &amp;desc) override</td></tr>
+<tr class="memitem:a8af9b2857398cdc957875432f6840c07" id="r_a8af9b2857398cdc957875432f6840c07"><td class="memItemLeft"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html">Buffer</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a8af9b2857398cdc957875432f6840c07">createBuffer</a> (const <a class="el" href="../../d7/dab/struct_amuse_1_1_r_h_i_1_1_buffer_desc.html">BufferDesc</a> &amp;desc) override</td></tr>
 <tr class="memdesc:a8af9b2857398cdc957875432f6840c07"><td class="mdescLeft">&#160;</td><td class="mdescRight">バッファーを生成  <br /></td></tr>
-<tr class="separator:a8af9b2857398cdc957875432f6840c07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a1ac34bd1b9150f6a73a06b011c7578"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html">Buffer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#a1a1ac34bd1b9150f6a73a06b011c7578">createBuffer</a> (const <a class="el" href="../../d7/d1b/struct_amuse_1_1_r_h_i_1_1_buffer_view_desc.html">BufferViewDesc</a> &amp;desc) override</td></tr>
+<tr class="memitem:a1a1ac34bd1b9150f6a73a06b011c7578" id="r_a1a1ac34bd1b9150f6a73a06b011c7578"><td class="memItemLeft"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html">Buffer</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a1a1ac34bd1b9150f6a73a06b011c7578">createBuffer</a> (const <a class="el" href="../../d7/d1b/struct_amuse_1_1_r_h_i_1_1_buffer_view_desc.html">BufferViewDesc</a> &amp;desc) override</td></tr>
 <tr class="memdesc:a1a1ac34bd1b9150f6a73a06b011c7578"><td class="mdescLeft">&#160;</td><td class="mdescRight">バッファを生成する  <br /></td></tr>
-<tr class="separator:a1a1ac34bd1b9150f6a73a06b011c7578"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a059dd2893aa96a0ec8df416aeae7ec2d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html">Shader</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#a059dd2893aa96a0ec8df416aeae7ec2d">compileShader</a> (const <a class="el" href="../../d9/d3f/struct_amuse_1_1_r_h_i_1_1_shader_compile_desc.html">ShaderCompileDesc</a> &amp;desc) override</td></tr>
+<tr class="memitem:a059dd2893aa96a0ec8df416aeae7ec2d" id="r_a059dd2893aa96a0ec8df416aeae7ec2d"><td class="memItemLeft"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html">Shader</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a059dd2893aa96a0ec8df416aeae7ec2d">compileShader</a> (const <a class="el" href="../../d9/d3f/struct_amuse_1_1_r_h_i_1_1_shader_compile_desc.html">ShaderCompileDesc</a> &amp;desc) override</td></tr>
 <tr class="memdesc:a059dd2893aa96a0ec8df416aeae7ec2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">シェーダをコンパイル  <br /></td></tr>
-<tr class="separator:a059dd2893aa96a0ec8df416aeae7ec2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac70e019e094dd398be78b9a8ab1f8b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html">Shader</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#aac70e019e094dd398be78b9a8ab1f8b6">loadShader</a> (<a class="el" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html">BlobView</a>, ShaderStage) override</td></tr>
+<tr class="memitem:aac70e019e094dd398be78b9a8ab1f8b6" id="r_aac70e019e094dd398be78b9a8ab1f8b6"><td class="memItemLeft"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html">Shader</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aac70e019e094dd398be78b9a8ab1f8b6">loadShader</a> (<a class="el" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html">BlobView</a>, ShaderStage) override</td></tr>
 <tr class="memdesc:aac70e019e094dd398be78b9a8ab1f8b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">シェーダをロード  <br /></td></tr>
-<tr class="separator:aac70e019e094dd398be78b9a8ab1f8b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6d028737becd9ccd0393a44fc72bec4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../dc/db6/class_amuse_1_1_r_h_i_1_1_descriptor_layout.html">DescriptorLayout</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#ab6d028737becd9ccd0393a44fc72bec4">createDescriptorLayout</a> (const <a class="el" href="../../d5/d72/struct_amuse_1_1_r_h_i_1_1_descriptor_layout_desc.html">DescriptorLayoutDesc</a> &amp;desc) override</td></tr>
+<tr class="memitem:ab6d028737becd9ccd0393a44fc72bec4" id="r_ab6d028737becd9ccd0393a44fc72bec4"><td class="memItemLeft"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../dc/db6/class_amuse_1_1_r_h_i_1_1_descriptor_layout.html">DescriptorLayout</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ab6d028737becd9ccd0393a44fc72bec4">createDescriptorLayout</a> (const <a class="el" href="../../d5/d72/struct_amuse_1_1_r_h_i_1_1_descriptor_layout_desc.html">DescriptorLayoutDesc</a> &amp;desc) override</td></tr>
 <tr class="memdesc:ab6d028737becd9ccd0393a44fc72bec4"><td class="mdescLeft">&#160;</td><td class="mdescRight">デスクリプタ・テーブルを生成  <br /></td></tr>
-<tr class="separator:ab6d028737becd9ccd0393a44fc72bec4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02d3d35493d4f277b94b1a06e1565983"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d2/d8f/class_amuse_1_1_r_h_i_1_1_descriptor_table.html">DescriptorTable</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#a02d3d35493d4f277b94b1a06e1565983">createDescriptorTable</a> (const <a class="el" href="../../d4/df3/struct_amuse_1_1_r_h_i_1_1_descriptor_table_desc.html">DescriptorTableDesc</a> &amp;desc) override</td></tr>
+<tr class="memitem:a02d3d35493d4f277b94b1a06e1565983" id="r_a02d3d35493d4f277b94b1a06e1565983"><td class="memItemLeft"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d2/d8f/class_amuse_1_1_r_h_i_1_1_descriptor_table.html">DescriptorTable</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a02d3d35493d4f277b94b1a06e1565983">createDescriptorTable</a> (const <a class="el" href="../../d4/df3/struct_amuse_1_1_r_h_i_1_1_descriptor_table_desc.html">DescriptorTableDesc</a> &amp;desc) override</td></tr>
 <tr class="memdesc:a02d3d35493d4f277b94b1a06e1565983"><td class="mdescLeft">&#160;</td><td class="mdescRight">ディスクリプタテーブルを生成する  <br /></td></tr>
-<tr class="separator:a02d3d35493d4f277b94b1a06e1565983"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7425f14eabee297907759364d01bad15"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d4/d3a/class_amuse_1_1_r_h_i_1_1_event_query.html">EventQuery</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#a7425f14eabee297907759364d01bad15">createEventQuery</a> () override</td></tr>
+<tr class="memitem:a7425f14eabee297907759364d01bad15" id="r_a7425f14eabee297907759364d01bad15"><td class="memItemLeft"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d4/d3a/class_amuse_1_1_r_h_i_1_1_event_query.html">EventQuery</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a7425f14eabee297907759364d01bad15">createEventQuery</a> () override</td></tr>
 <tr class="memdesc:a7425f14eabee297907759364d01bad15"><td class="mdescLeft">&#160;</td><td class="mdescRight">イベントクエリを生成する  <br /></td></tr>
-<tr class="separator:a7425f14eabee297907759364d01bad15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05ca3e2eb94b85b0ae98cd58d8dfe368"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#a05ca3e2eb94b85b0ae98cd58d8dfe368">pollEventQuery</a> (const <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d4/d3a/class_amuse_1_1_r_h_i_1_1_event_query.html">EventQuery</a> &gt; &amp;query) override</td></tr>
+<tr class="memitem:a05ca3e2eb94b85b0ae98cd58d8dfe368" id="r_a05ca3e2eb94b85b0ae98cd58d8dfe368"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a05ca3e2eb94b85b0ae98cd58d8dfe368">pollEventQuery</a> (const <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d4/d3a/class_amuse_1_1_r_h_i_1_1_event_query.html">EventQuery</a> &gt; &amp;query) override</td></tr>
 <tr class="memdesc:a05ca3e2eb94b85b0ae98cd58d8dfe368"><td class="mdescLeft">&#160;</td><td class="mdescRight">イベントクエリの完了状態を確認する  <br /></td></tr>
-<tr class="separator:a05ca3e2eb94b85b0ae98cd58d8dfe368"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca6acbd9e496c0607a159e3d2c8e7bd6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#aca6acbd9e496c0607a159e3d2c8e7bd6">waitEventQuery</a> (const <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d4/d3a/class_amuse_1_1_r_h_i_1_1_event_query.html">EventQuery</a> &gt; &amp;query) override</td></tr>
+<tr class="memitem:aca6acbd9e496c0607a159e3d2c8e7bd6" id="r_aca6acbd9e496c0607a159e3d2c8e7bd6"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aca6acbd9e496c0607a159e3d2c8e7bd6">waitEventQuery</a> (const <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d4/d3a/class_amuse_1_1_r_h_i_1_1_event_query.html">EventQuery</a> &gt; &amp;query) override</td></tr>
 <tr class="memdesc:aca6acbd9e496c0607a159e3d2c8e7bd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">イベントクエリの完了を待機する  <br /></td></tr>
-<tr class="separator:aca6acbd9e496c0607a159e3d2c8e7bd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8650fc3e2215b68e41e24a4be73d18f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d4/d23/class_amuse_1_1_r_h_i_1_1_timer_query.html">TimerQuery</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#a8650fc3e2215b68e41e24a4be73d18f0">createTimerQuery</a> () override</td></tr>
+<tr class="memitem:a8650fc3e2215b68e41e24a4be73d18f0" id="r_a8650fc3e2215b68e41e24a4be73d18f0"><td class="memItemLeft"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d4/d23/class_amuse_1_1_r_h_i_1_1_timer_query.html">TimerQuery</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a8650fc3e2215b68e41e24a4be73d18f0">createTimerQuery</a> () override</td></tr>
 <tr class="memdesc:a8650fc3e2215b68e41e24a4be73d18f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">タイマークエリを生成する  <br /></td></tr>
-<tr class="separator:a8650fc3e2215b68e41e24a4be73d18f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87d29c55759ea463e3392467dd9256b3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#a87d29c55759ea463e3392467dd9256b3">pollTimerQuery</a> (const <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d4/d23/class_amuse_1_1_r_h_i_1_1_timer_query.html">TimerQuery</a> &gt; &amp;query) override</td></tr>
+<tr class="memitem:a87d29c55759ea463e3392467dd9256b3" id="r_a87d29c55759ea463e3392467dd9256b3"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a87d29c55759ea463e3392467dd9256b3">pollTimerQuery</a> (const <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d4/d23/class_amuse_1_1_r_h_i_1_1_timer_query.html">TimerQuery</a> &gt; &amp;query) override</td></tr>
 <tr class="memdesc:a87d29c55759ea463e3392467dd9256b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">タイマークエリの完了状態を確認する  <br /></td></tr>
-<tr class="separator:a87d29c55759ea463e3392467dd9256b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a092a10f144360867f8f85403cb1f88"><td class="memItemLeft" align="right" valign="top">f32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#a3a092a10f144360867f8f85403cb1f88">getTimerQueryTime</a> (const <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d4/d23/class_amuse_1_1_r_h_i_1_1_timer_query.html">TimerQuery</a> &gt; &amp;query) override</td></tr>
+<tr class="memitem:a3a092a10f144360867f8f85403cb1f88" id="r_a3a092a10f144360867f8f85403cb1f88"><td class="memItemLeft">f32&#160;</td><td class="memItemRight"><a class="el" href="#a3a092a10f144360867f8f85403cb1f88">getTimerQueryTime</a> (const <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d4/d23/class_amuse_1_1_r_h_i_1_1_timer_query.html">TimerQuery</a> &gt; &amp;query) override</td></tr>
 <tr class="memdesc:a3a092a10f144360867f8f85403cb1f88"><td class="mdescLeft">&#160;</td><td class="mdescRight">タイマークエリの計測時間を取得する  <br /></td></tr>
-<tr class="separator:a3a092a10f144360867f8f85403cb1f88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40d8a96eef71584edea6d5d91893407d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../da/db5/class_amuse_1_1_r_h_i_1_1_graphic_file_handle.html">GraphicFileHandle</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#a40d8a96eef71584edea6d5d91893407d">createGraphicFileHandle</a> (<a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> path) override</td></tr>
+<tr class="memitem:a40d8a96eef71584edea6d5d91893407d" id="r_a40d8a96eef71584edea6d5d91893407d"><td class="memItemLeft"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../da/db5/class_amuse_1_1_r_h_i_1_1_graphic_file_handle.html">GraphicFileHandle</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a40d8a96eef71584edea6d5d91893407d">createGraphicFileHandle</a> (StringView path) override</td></tr>
 <tr class="memdesc:a40d8a96eef71584edea6d5d91893407d"><td class="mdescLeft">&#160;</td><td class="mdescRight">GraphicFileHandleを生成  <br /></td></tr>
-<tr class="separator:a40d8a96eef71584edea6d5d91893407d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59ad3e8ca5fd1bb62270f7a4ab4f66ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../dc/de0/class_amuse_1_1_r_h_i_1_1_graphic_file_event.html">GraphicFileEvent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#a59ad3e8ca5fd1bb62270f7a4ab4f66ea">createGraphicFileEvent</a> () override</td></tr>
+<tr class="memitem:a59ad3e8ca5fd1bb62270f7a4ab4f66ea" id="r_a59ad3e8ca5fd1bb62270f7a4ab4f66ea"><td class="memItemLeft"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../dc/de0/class_amuse_1_1_r_h_i_1_1_graphic_file_event.html">GraphicFileEvent</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a59ad3e8ca5fd1bb62270f7a4ab4f66ea">createGraphicFileEvent</a> () override</td></tr>
 <tr class="memdesc:a59ad3e8ca5fd1bb62270f7a4ab4f66ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">GraphicFileEventを生成  <br /></td></tr>
-<tr class="separator:a59ad3e8ca5fd1bb62270f7a4ab4f66ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6efb683dc65d8bc319da35376eb37b9e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d8/d50/class_amuse_1_1_r_h_i_1_1_graphic_file_queue.html">GraphicFileQueue</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#a6efb683dc65d8bc319da35376eb37b9e">createGraphicFileQueue</a> (const <a class="el" href="../../d2/dbf/struct_amuse_1_1_r_h_i_1_1_graphic_file_queue_desc.html">GraphicFileQueueDesc</a> &amp;) override</td></tr>
+<tr class="memitem:a6efb683dc65d8bc319da35376eb37b9e" id="r_a6efb683dc65d8bc319da35376eb37b9e"><td class="memItemLeft"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d8/d50/class_amuse_1_1_r_h_i_1_1_graphic_file_queue.html">GraphicFileQueue</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a6efb683dc65d8bc319da35376eb37b9e">createGraphicFileQueue</a> (const <a class="el" href="../../d2/dbf/struct_amuse_1_1_r_h_i_1_1_graphic_file_queue_desc.html">GraphicFileQueueDesc</a> &amp;) override</td></tr>
 <tr class="memdesc:a6efb683dc65d8bc319da35376eb37b9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">GraphicFileQueueを生成  <br /></td></tr>
-<tr class="separator:a6efb683dc65d8bc319da35376eb37b9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17d9456f89346a4fd593cc2c5ee3dda6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#a17d9456f89346a4fd593cc2c5ee3dda6">generateGraphicFile</a> (<a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> input, <a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> output, s32 compressionLevel) override</td></tr>
+<tr class="memitem:a17d9456f89346a4fd593cc2c5ee3dda6" id="r_a17d9456f89346a4fd593cc2c5ee3dda6"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a17d9456f89346a4fd593cc2c5ee3dda6">generateGraphicFile</a> (StringView input, StringView output, s32 compressionLevel) override</td></tr>
 <tr class="memdesc:a17d9456f89346a4fd593cc2c5ee3dda6"><td class="mdescLeft">&#160;</td><td class="mdescRight">GraphicFileQueueを生成  <br /></td></tr>
-<tr class="separator:a17d9456f89346a4fd593cc2c5ee3dda6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf67c403e6b02c27b7dae1d0a7775920"><td class="memItemLeft" align="right" valign="top">Vector&lt; <a class="el" href="../../d8/d14/struct_amuse_1_1_r_h_i_1_1_graphic_file_mip_info.html">GraphicFileMipInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#abf67c403e6b02c27b7dae1d0a7775920">prepareGraphicFile</a> (<a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> path) override</td></tr>
+<tr class="memitem:abf67c403e6b02c27b7dae1d0a7775920" id="r_abf67c403e6b02c27b7dae1d0a7775920"><td class="memItemLeft">Vector&lt; <a class="el" href="../../d8/d14/struct_amuse_1_1_r_h_i_1_1_graphic_file_mip_info.html">GraphicFileMipInfo</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#abf67c403e6b02c27b7dae1d0a7775920">prepareGraphicFile</a> (StringView path) override</td></tr>
 <tr class="memdesc:abf67c403e6b02c27b7dae1d0a7775920"><td class="mdescLeft">&#160;</td><td class="mdescRight">プラットフォームごとのGraphicFileから事前情報を取得  <br /></td></tr>
-<tr class="separator:abf67c403e6b02c27b7dae1d0a7775920"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9abdc90b753e91af10b1c0bb9501a629"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#a9abdc90b753e91af10b1c0bb9501a629">supports</a> (TextureFormat format, TextureType type) const override</td></tr>
+<tr class="memitem:a9abdc90b753e91af10b1c0bb9501a629" id="r_a9abdc90b753e91af10b1c0bb9501a629"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a9abdc90b753e91af10b1c0bb9501a629">supports</a> (TextureFormat format, TextureType type) const override</td></tr>
 <tr class="memdesc:a9abdc90b753e91af10b1c0bb9501a629"><td class="mdescLeft">&#160;</td><td class="mdescRight">サポートしているテクスチャフォーマットか  <br /></td></tr>
-<tr class="separator:a9abdc90b753e91af10b1c0bb9501a629"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ceac6c65ea357dc2d086f2215b19a51"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#a5ceac6c65ea357dc2d086f2215b19a51">supportsForRenderTexture</a> (TextureFormat format) const override</td></tr>
+<tr class="memitem:a5ceac6c65ea357dc2d086f2215b19a51" id="r_a5ceac6c65ea357dc2d086f2215b19a51"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a5ceac6c65ea357dc2d086f2215b19a51">supportsForRenderTexture</a> (TextureFormat format) const override</td></tr>
 <tr class="memdesc:a5ceac6c65ea357dc2d086f2215b19a51"><td class="mdescLeft">&#160;</td><td class="mdescRight">サポートしているテクスチャフォーマットか  <br /></td></tr>
-<tr class="separator:a5ceac6c65ea357dc2d086f2215b19a51"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb8dcade650f1ea605cb088bc7ab139c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#afb8dcade650f1ea605cb088bc7ab139c">supports</a> (ShaderStage format) const override</td></tr>
+<tr class="memitem:afb8dcade650f1ea605cb088bc7ab139c" id="r_afb8dcade650f1ea605cb088bc7ab139c"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#afb8dcade650f1ea605cb088bc7ab139c">supports</a> (ShaderStage format) const override</td></tr>
 <tr class="memdesc:afb8dcade650f1ea605cb088bc7ab139c"><td class="mdescLeft">&#160;</td><td class="mdescRight">サポートしているシェーダーステージか  <br /></td></tr>
-<tr class="separator:afb8dcade650f1ea605cb088bc7ab139c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7d2ef61209196154301f4ff5e2f59c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/dd6/struct_amuse_1_1_r_h_i_1_1_r_h_i_features.html">RHIFeatures</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#aa7d2ef61209196154301f4ff5e2f59c1">getFeatures</a> () const override</td></tr>
+<tr class="memitem:aa7d2ef61209196154301f4ff5e2f59c1" id="r_aa7d2ef61209196154301f4ff5e2f59c1"><td class="memItemLeft"><a class="el" href="../../d7/dd6/struct_amuse_1_1_r_h_i_1_1_r_h_i_features.html">RHIFeatures</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa7d2ef61209196154301f4ff5e2f59c1">getFeatures</a> () const override</td></tr>
 <tr class="memdesc:aa7d2ef61209196154301f4ff5e2f59c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">サポートしているRHI機能を取得  <br /></td></tr>
-<tr class="separator:aa7d2ef61209196154301f4ff5e2f59c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5347888d61d21e5794b060bec5adcd30"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#a5347888d61d21e5794b060bec5adcd30">supports</a> (TextureFormat format, FormatSupport usage) const override</td></tr>
+<tr class="memitem:a5347888d61d21e5794b060bec5adcd30" id="r_a5347888d61d21e5794b060bec5adcd30"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a5347888d61d21e5794b060bec5adcd30">supports</a> (TextureFormat format, FormatSupport usage) const override</td></tr>
 <tr class="memdesc:a5347888d61d21e5794b060bec5adcd30"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定用途でサポートしているテクスチャフォーマットか  <br /></td></tr>
-<tr class="separator:a5347888d61d21e5794b060bec5adcd30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a491357db4fe12e6f25d29ec006647636"><td class="memItemLeft" align="right" valign="top"><a id="a491357db4fe12e6f25d29ec006647636" name="a491357db4fe12e6f25d29ec006647636"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>clearCommands</b> ()</td></tr>
+<tr class="memitem:a491357db4fe12e6f25d29ec006647636" id="r_a491357db4fe12e6f25d29ec006647636"><td class="memItemLeft"><a id="a491357db4fe12e6f25d29ec006647636" name="a491357db4fe12e6f25d29ec006647636"></a>
+void&#160;</td><td class="memItemRight"><b>clearCommands</b> ()</td></tr>
 <tr class="memdesc:a491357db4fe12e6f25d29ec006647636"><td class="mdescLeft">&#160;</td><td class="mdescRight">保留中のコマンドをクリアする <br /></td></tr>
-<tr class="separator:a491357db4fe12e6f25d29ec006647636"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa60969f745d93cc6191be68ca650e9dc"><td class="memItemLeft" align="right" valign="top"><a id="aa60969f745d93cc6191be68ca650e9dc" name="aa60969f745d93cc6191be68ca650e9dc"></a>
-ComPtr&lt; ID3D12Device8 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getNative</b> ()</td></tr>
+<tr class="memitem:aa60969f745d93cc6191be68ca650e9dc" id="r_aa60969f745d93cc6191be68ca650e9dc"><td class="memItemLeft"><a id="aa60969f745d93cc6191be68ca650e9dc" name="aa60969f745d93cc6191be68ca650e9dc"></a>
+ComPtr&lt; ID3D12Device8 &gt; &amp;&#160;</td><td class="memItemRight"><b>getNative</b> ()</td></tr>
 <tr class="memdesc:aa60969f745d93cc6191be68ca650e9dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネイティブ・デバイスを取得 <br /></td></tr>
-<tr class="separator:aa60969f745d93cc6191be68ca650e9dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aafb7b6505102c07bdca2794e55ec63a3"><td class="memItemLeft" align="right" valign="top"><a id="aafb7b6505102c07bdca2794e55ec63a3" name="aafb7b6505102c07bdca2794e55ec63a3"></a>
-ComPtr&lt; IDXGIFactory7 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getFactory</b> ()</td></tr>
+<tr class="memitem:aafb7b6505102c07bdca2794e55ec63a3" id="r_aafb7b6505102c07bdca2794e55ec63a3"><td class="memItemLeft"><a id="aafb7b6505102c07bdca2794e55ec63a3" name="aafb7b6505102c07bdca2794e55ec63a3"></a>
+ComPtr&lt; IDXGIFactory7 &gt; &amp;&#160;</td><td class="memItemRight"><b>getFactory</b> ()</td></tr>
 <tr class="memdesc:aafb7b6505102c07bdca2794e55ec63a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファクトリを取得 <br /></td></tr>
-<tr class="separator:aafb7b6505102c07bdca2794e55ec63a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f0ecd8369b004c62ce4b4cb2d8eea68"><td class="memItemLeft" align="right" valign="top"><a id="a4f0ecd8369b004c62ce4b4cb2d8eea68" name="a4f0ecd8369b004c62ce4b4cb2d8eea68"></a>
-ComPtr&lt; IDxcCompiler3 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getShaderCompiler</b> ()</td></tr>
+<tr class="memitem:a4f0ecd8369b004c62ce4b4cb2d8eea68" id="r_a4f0ecd8369b004c62ce4b4cb2d8eea68"><td class="memItemLeft"><a id="a4f0ecd8369b004c62ce4b4cb2d8eea68" name="a4f0ecd8369b004c62ce4b4cb2d8eea68"></a>
+ComPtr&lt; IDxcCompiler3 &gt; &amp;&#160;</td><td class="memItemRight"><b>getShaderCompiler</b> ()</td></tr>
 <tr class="memdesc:a4f0ecd8369b004c62ce4b4cb2d8eea68"><td class="mdescLeft">&#160;</td><td class="mdescRight">シェーダーコンパイラ―を取得 <br /></td></tr>
-<tr class="separator:a4f0ecd8369b004c62ce4b4cb2d8eea68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5404a3a83817094d62d4daf6e402536"><td class="memItemLeft" align="right" valign="top"><a id="af5404a3a83817094d62d4daf6e402536" name="af5404a3a83817094d62d4daf6e402536"></a>
-ComPtr&lt; IDxcIncludeHandler &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getIncludeHandler</b> ()</td></tr>
+<tr class="memitem:af5404a3a83817094d62d4daf6e402536" id="r_af5404a3a83817094d62d4daf6e402536"><td class="memItemLeft"><a id="af5404a3a83817094d62d4daf6e402536" name="af5404a3a83817094d62d4daf6e402536"></a>
+ComPtr&lt; IDxcIncludeHandler &gt; &amp;&#160;</td><td class="memItemRight"><b>getIncludeHandler</b> ()</td></tr>
 <tr class="memdesc:af5404a3a83817094d62d4daf6e402536"><td class="mdescLeft">&#160;</td><td class="mdescRight">シェーダーインクルードハンドラーを取得 <br /></td></tr>
-<tr class="separator:af5404a3a83817094d62d4daf6e402536"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c8add1d86bb8aa45e0988950c5bfed9"><td class="memItemLeft" align="right" valign="top"><a id="a1c8add1d86bb8aa45e0988950c5bfed9" name="a1c8add1d86bb8aa45e0988950c5bfed9"></a>
-ComPtr&lt; ID3D12CommandQueue &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getCommandQueue</b> ()</td></tr>
+<tr class="memitem:a1c8add1d86bb8aa45e0988950c5bfed9" id="r_a1c8add1d86bb8aa45e0988950c5bfed9"><td class="memItemLeft"><a id="a1c8add1d86bb8aa45e0988950c5bfed9" name="a1c8add1d86bb8aa45e0988950c5bfed9"></a>
+ComPtr&lt; ID3D12CommandQueue &gt; &amp;&#160;</td><td class="memItemRight"><b>getCommandQueue</b> ()</td></tr>
 <tr class="memdesc:a1c8add1d86bb8aa45e0988950c5bfed9"><td class="mdescLeft">&#160;</td><td class="mdescRight">システム・コマンド・キューを取得 <br /></td></tr>
-<tr class="separator:a1c8add1d86bb8aa45e0988950c5bfed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addf4f36e22c7dff118a5ae2aa51f2c08"><td class="memItemLeft" align="right" valign="top"><a id="addf4f36e22c7dff118a5ae2aa51f2c08" name="addf4f36e22c7dff118a5ae2aa51f2c08"></a>
-DirectX12BufferUploader &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getBufferUploader</b> ()</td></tr>
+<tr class="memitem:addf4f36e22c7dff118a5ae2aa51f2c08" id="r_addf4f36e22c7dff118a5ae2aa51f2c08"><td class="memItemLeft"><a id="addf4f36e22c7dff118a5ae2aa51f2c08" name="addf4f36e22c7dff118a5ae2aa51f2c08"></a>
+DirectX12BufferUploader &amp;&#160;</td><td class="memItemRight"><b>getBufferUploader</b> ()</td></tr>
 <tr class="memdesc:addf4f36e22c7dff118a5ae2aa51f2c08"><td class="mdescLeft">&#160;</td><td class="mdescRight">システム・コマンド・リストを取得 <br /></td></tr>
-<tr class="separator:addf4f36e22c7dff118a5ae2aa51f2c08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3f84ca27e141f494930b4b7ddd4bda1"><td class="memItemLeft" align="right" valign="top"><a id="ac3f84ca27e141f494930b4b7ddd4bda1" name="ac3f84ca27e141f494930b4b7ddd4bda1"></a>
-DirectX12TextureUploader &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getTextureUploader</b> ()</td></tr>
+<tr class="memitem:ac3f84ca27e141f494930b4b7ddd4bda1" id="r_ac3f84ca27e141f494930b4b7ddd4bda1"><td class="memItemLeft"><a id="ac3f84ca27e141f494930b4b7ddd4bda1" name="ac3f84ca27e141f494930b4b7ddd4bda1"></a>
+DirectX12TextureUploader &amp;&#160;</td><td class="memItemRight"><b>getTextureUploader</b> ()</td></tr>
 <tr class="memdesc:ac3f84ca27e141f494930b4b7ddd4bda1"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャアップローダを取得する <br /></td></tr>
-<tr class="separator:ac3f84ca27e141f494930b4b7ddd4bda1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13f6a8679e4500aa964c927f604fb4ca"><td class="memItemLeft" align="right" valign="top"><a id="a13f6a8679e4500aa964c927f604fb4ca" name="a13f6a8679e4500aa964c927f604fb4ca"></a>
-DirectX12DescriptorUploader &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getDescriptorUploader</b> ()</td></tr>
+<tr class="memitem:a13f6a8679e4500aa964c927f604fb4ca" id="r_a13f6a8679e4500aa964c927f604fb4ca"><td class="memItemLeft"><a id="a13f6a8679e4500aa964c927f604fb4ca" name="a13f6a8679e4500aa964c927f604fb4ca"></a>
+DirectX12DescriptorUploader &amp;&#160;</td><td class="memItemRight"><b>getDescriptorUploader</b> ()</td></tr>
 <tr class="memdesc:a13f6a8679e4500aa964c927f604fb4ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">ディスクリプタアップローダを取得する <br /></td></tr>
-<tr class="separator:a13f6a8679e4500aa964c927f604fb4ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03e463a38137f3d2bb8908ebe9aabcd9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#a03e463a38137f3d2bb8908ebe9aabcd9">allocateHandle</a> (DescriptorHeapType type, class DescriptorHandle &amp;handle, s32 size)</td></tr>
+<tr class="memitem:a03e463a38137f3d2bb8908ebe9aabcd9" id="r_a03e463a38137f3d2bb8908ebe9aabcd9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a03e463a38137f3d2bb8908ebe9aabcd9">allocateHandle</a> (DescriptorHeapType type, class DescriptorHandle &amp;handle, s32 size)</td></tr>
 <tr class="memdesc:a03e463a38137f3d2bb8908ebe9aabcd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">ハンドルをアロケート  <br /></td></tr>
-<tr class="separator:a03e463a38137f3d2bb8908ebe9aabcd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a063045eb522bdbaa56743f96cee87b5f"><td class="memItemLeft" align="right" valign="top"><a id="a063045eb522bdbaa56743f96cee87b5f" name="a063045eb522bdbaa56743f96cee87b5f"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>allocateStagingHandle</b> (DescriptorHeapType type, s32 size=1) -&gt; D3D12_CPU_DESCRIPTOR_HANDLE</td></tr>
+<tr class="memitem:a063045eb522bdbaa56743f96cee87b5f" id="r_a063045eb522bdbaa56743f96cee87b5f"><td class="memItemLeft"><a id="a063045eb522bdbaa56743f96cee87b5f" name="a063045eb522bdbaa56743f96cee87b5f"></a>
+auto&#160;</td><td class="memItemRight"><b>allocateStagingHandle</b> (DescriptorHeapType type, s32 size=1) -&gt; D3D12_CPU_DESCRIPTOR_HANDLE</td></tr>
 <tr class="memdesc:a063045eb522bdbaa56743f96cee87b5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">ステージング用ディスクリプタハンドルを確保する <br /></td></tr>
-<tr class="separator:a063045eb522bdbaa56743f96cee87b5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39d0d099d10bb589d5520bb702dd27a1"><td class="memItemLeft" align="right" valign="top"><a id="a39d0d099d10bb589d5520bb702dd27a1" name="a39d0d099d10bb589d5520bb702dd27a1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setDescriptorHeaps</b> (class DirectX12CommandList &amp;cmdList)</td></tr>
+<tr class="memitem:a39d0d099d10bb589d5520bb702dd27a1" id="r_a39d0d099d10bb589d5520bb702dd27a1"><td class="memItemLeft"><a id="a39d0d099d10bb589d5520bb702dd27a1" name="a39d0d099d10bb589d5520bb702dd27a1"></a>
+void&#160;</td><td class="memItemRight"><b>setDescriptorHeaps</b> (class DirectX12CommandList &amp;cmdList)</td></tr>
 <tr class="memdesc:a39d0d099d10bb589d5520bb702dd27a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">デスクリプタヒープを設定 <br /></td></tr>
-<tr class="separator:a39d0d099d10bb589d5520bb702dd27a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26e5c825e2db0e715d8ba1880d8d04b0"><td class="memItemLeft" align="right" valign="top"><a id="a26e5c825e2db0e715d8ba1880d8d04b0" name="a26e5c825e2db0e715d8ba1880d8d04b0"></a>
-ComPtr&lt; IDStorageFactory &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getDirectStorageFactory</b> ()</td></tr>
+<tr class="memitem:a26e5c825e2db0e715d8ba1880d8d04b0" id="r_a26e5c825e2db0e715d8ba1880d8d04b0"><td class="memItemLeft"><a id="a26e5c825e2db0e715d8ba1880d8d04b0" name="a26e5c825e2db0e715d8ba1880d8d04b0"></a>
+ComPtr&lt; IDStorageFactory &gt; &amp;&#160;</td><td class="memItemRight"><b>getDirectStorageFactory</b> ()</td></tr>
 <tr class="memdesc:a26e5c825e2db0e715d8ba1880d8d04b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">IDStorageFactoryを取得 <br /></td></tr>
-<tr class="separator:a26e5c825e2db0e715d8ba1880d8d04b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a766cc85e9bd97126684eefdc57530be0"><td class="memItemLeft" align="right" valign="top"><a id="a766cc85e9bd97126684eefdc57530be0" name="a766cc85e9bd97126684eefdc57530be0"></a>
-SmallBufferAllocator &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getSmallBufferAllocator</b> (BufferFlag flag)</td></tr>
+<tr class="memitem:a766cc85e9bd97126684eefdc57530be0" id="r_a766cc85e9bd97126684eefdc57530be0"><td class="memItemLeft"><a id="a766cc85e9bd97126684eefdc57530be0" name="a766cc85e9bd97126684eefdc57530be0"></a>
+SmallBufferAllocator &amp;&#160;</td><td class="memItemRight"><b>getSmallBufferAllocator</b> (BufferFlag flag)</td></tr>
 <tr class="memdesc:a766cc85e9bd97126684eefdc57530be0"><td class="mdescLeft">&#160;</td><td class="mdescRight">SmallBufferAllocatorを取得 <br /></td></tr>
-<tr class="separator:a766cc85e9bd97126684eefdc57530be0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_amuse_1_1_r_h_i_1_1_device')"><img src="../../closed.png" alt="-"/>&#160;基底クラス <a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html">Amuse::RHI::Device</a> に属する継承公開メンバ関数</td></tr>
-<tr class="memitem:a092a4fef4e61b7b7c3511f5a5c8d296e inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top"><a id="a092a4fef4e61b7b7c3511f5a5c8d296e" name="a092a4fef4e61b7b7c3511f5a5c8d296e"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Device</b> (GraphicObjectManager &amp;, const <a class="el" href="../../d8/d50/struct_amuse_1_1_r_h_i_1_1_r_h_i_config.html">RHIConfig</a> *)</td></tr>
-<tr class="memdesc:a092a4fef4e61b7b7c3511f5a5c8d296e inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ <br /></td></tr>
-<tr class="separator:a092a4fef4e61b7b7c3511f5a5c8d296e inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1b7ecd1f33b7e8d086764854e1f22a6 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top"><a id="af1b7ecd1f33b7e8d086764854e1f22a6" name="af1b7ecd1f33b7e8d086764854e1f22a6"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>~Device</b> () override</td></tr>
-<tr class="memdesc:af1b7ecd1f33b7e8d086764854e1f22a6 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ <br /></td></tr>
-<tr class="separator:af1b7ecd1f33b7e8d086764854e1f22a6 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ec9ad3c20934197e06750b7fe8afe39 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#a5ec9ad3c20934197e06750b7fe8afe39">update</a> ()</td></tr>
-<tr class="memdesc:a5ec9ad3c20934197e06750b7fe8afe39 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバイス内部の遅延処理を更新する  <br /></td></tr>
-<tr class="separator:a5ec9ad3c20934197e06750b7fe8afe39 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c5cc2fc07184aa115e13a0c75fd397d inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#a6c5cc2fc07184aa115e13a0c75fd397d">isValid</a> () const</td></tr>
-<tr class="memdesc:a6c5cc2fc07184aa115e13a0c75fd397d inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">妥当な状態か  <br /></td></tr>
-<tr class="separator:a6c5cc2fc07184aa115e13a0c75fd397d inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a137bf6346bd628fe03b2b9deeac848e6 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#a137bf6346bd628fe03b2b9deeac848e6">getAPIName</a> () const</td></tr>
-<tr class="memdesc:a137bf6346bd628fe03b2b9deeac848e6 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用中のグラフィック API 名を取得する  <br /></td></tr>
-<tr class="separator:a137bf6346bd628fe03b2b9deeac848e6 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a460e2a6dfe12c3d94f9b0438cb5c0291 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#a460e2a6dfe12c3d94f9b0438cb5c0291">entryCommandList</a> (const <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d7/dc8/class_amuse_1_1_r_h_i_1_1_command_list.html">CommandList</a> &gt; &amp;)</td></tr>
-<tr class="memdesc:a460e2a6dfe12c3d94f9b0438cb5c0291 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">コマンドリストを登録する  <br /></td></tr>
-<tr class="separator:a460e2a6dfe12c3d94f9b0438cb5c0291 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a67fd8e6c646e7c7c53407c3e100928 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d9/d03/class_amuse_1_1_r_h_i_1_1_fence.html">Fence</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#a5a67fd8e6c646e7c7c53407c3e100928">createFence</a> (const <a class="el" href="../../dd/ded/struct_amuse_1_1_r_h_i_1_1_fence_desc.html">FenceDesc</a> &amp;desc)</td></tr>
-<tr class="memdesc:a5a67fd8e6c646e7c7c53407c3e100928 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">フェンスを生成する  <br /></td></tr>
-<tr class="separator:a5a67fd8e6c646e7c7c53407c3e100928 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f7e47f2fde90343920bf82663c74cf8 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">virtual u64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#a2f7e47f2fde90343920bf82663c74cf8">executeCommandLists</a> (Span&lt; <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d7/dc8/class_amuse_1_1_r_h_i_1_1_command_list.html">CommandList</a> &gt; &gt; commandLists, CommandQueueType queue=CommandQueueType::Graphics)</td></tr>
-<tr class="memdesc:a2f7e47f2fde90343920bf82663c74cf8 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">コマンドリストを実行する  <br /></td></tr>
-<tr class="separator:a2f7e47f2fde90343920bf82663c74cf8 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8eb06695c01edf2bd2023008f23bc249 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#a8eb06695c01edf2bd2023008f23bc249">waitForIdle</a> (CommandQueueType queue=CommandQueueType::Graphics)</td></tr>
-<tr class="memdesc:a8eb06695c01edf2bd2023008f23bc249 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">キューのアイドル状態を待機する  <br /></td></tr>
-<tr class="separator:a8eb06695c01edf2bd2023008f23bc249 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a645595373939bce2f23b3d7470e65926 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#a645595373939bce2f23b3d7470e65926">queueWait</a> (CommandQueueType waitQueue, CommandQueueType executeQueue, u64 fenceValue)</td></tr>
-<tr class="memdesc:a645595373939bce2f23b3d7470e65926 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">キュー間のフェンス待機を設定する  <br /></td></tr>
-<tr class="separator:a645595373939bce2f23b3d7470e65926 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2963f41c3ee67db0436595449c5503fd inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top"><a id="a2963f41c3ee67db0436595449c5503fd" name="a2963f41c3ee67db0436595449c5503fd"></a>
-virtual u32&#160;</td><td class="memItemRight" valign="bottom"><b>getDrawIndirectArgumentSize</b> () const</td></tr>
-<tr class="memdesc:a2963f41c3ee67db0436595449c5503fd inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">DrawIndirect 用引数のバイトサイズを取得する <br /></td></tr>
-<tr class="separator:a2963f41c3ee67db0436595449c5503fd inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e195bbeae608f932a19a453da1035c8 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top"><a id="a4e195bbeae608f932a19a453da1035c8" name="a4e195bbeae608f932a19a453da1035c8"></a>
-virtual u32&#160;</td><td class="memItemRight" valign="bottom"><b>getDrawIndexedIndirectArgumentSize</b> () const</td></tr>
-<tr class="memdesc:a4e195bbeae608f932a19a453da1035c8 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">DrawIndexedIndirect 用引数のバイトサイズを取得する <br /></td></tr>
-<tr class="separator:a4e195bbeae608f932a19a453da1035c8 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a894767c58543b2571fd8c260d8a2a423 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top"><a id="a894767c58543b2571fd8c260d8a2a423" name="a894767c58543b2571fd8c260d8a2a423"></a>
-virtual u32&#160;</td><td class="memItemRight" valign="bottom"><b>getDispatchIndirectArgumentSize</b> () const</td></tr>
-<tr class="memdesc:a894767c58543b2571fd8c260d8a2a423 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">DispatchIndirect 用引数のバイトサイズを取得する <br /></td></tr>
-<tr class="separator:a894767c58543b2571fd8c260d8a2a423 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae930e0cc753d3425fefb7d69a26a9f09 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top"><a id="ae930e0cc753d3425fefb7d69a26a9f09" name="ae930e0cc753d3425fefb7d69a26a9f09"></a>
-virtual void *&#160;</td><td class="memItemRight" valign="bottom"><b>mapBuffer</b> (const <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html">Buffer</a> &gt; &amp;buffer, CpuAccess access)</td></tr>
-<tr class="memdesc:ae930e0cc753d3425fefb7d69a26a9f09 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPUからバッファをマップ <br /></td></tr>
-<tr class="separator:ae930e0cc753d3425fefb7d69a26a9f09 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13ee56060b22d0a5caba297abeb30560 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top"><a id="a13ee56060b22d0a5caba297abeb30560" name="a13ee56060b22d0a5caba297abeb30560"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>unmapBuffer</b> (const <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html">Buffer</a> &gt; &amp;buffer)</td></tr>
-<tr class="memdesc:a13ee56060b22d0a5caba297abeb30560 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPUからのバッファマップを解除 <br /></td></tr>
-<tr class="separator:a13ee56060b22d0a5caba297abeb30560 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afad758f2cf90ff199135c1a05b65c1d8 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">virtual Vector&lt; <a class="el" href="../../dd/d49/struct_amuse_1_1_r_h_i_1_1_video_card.html">VideoCard</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#afad758f2cf90ff199135c1a05b65c1d8">getVideoCards</a> () const</td></tr>
-<tr class="memdesc:afad758f2cf90ff199135c1a05b65c1d8 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">利用可能なビデオカード一覧を取得する  <br /></td></tr>
-<tr class="separator:afad758f2cf90ff199135c1a05b65c1d8 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a819e12e34ad20fda1143baa880f880d0 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d5/df6/class_amuse_1_1_r_h_i_1_1_swap_chain.html">SwapChain</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#a819e12e34ad20fda1143baa880f880d0">createSwapChain</a> (const <a class="el" href="../../d6/d44/struct_amuse_1_1_r_h_i_1_1_swap_chain_desc.html">SwapChainDesc</a> &amp;desc)</td></tr>
-<tr class="memdesc:a819e12e34ad20fda1143baa880f880d0 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">スワップチェーンを生成する  <br /></td></tr>
-<tr class="separator:a819e12e34ad20fda1143baa880f880d0 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f90247fbe776f4dd19a8832ce68ab35 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d7/dc8/class_amuse_1_1_r_h_i_1_1_command_list.html">CommandList</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#a3f90247fbe776f4dd19a8832ce68ab35">createCommandList</a> (const <a class="el" href="../../d8/d93/struct_amuse_1_1_r_h_i_1_1_command_list_desc.html">CommandListDesc</a> &amp;desc)</td></tr>
-<tr class="memdesc:a3f90247fbe776f4dd19a8832ce68ab35 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">コマンドリストを生成する  <br /></td></tr>
-<tr class="separator:a3f90247fbe776f4dd19a8832ce68ab35 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac543988e996196d280f2f6158d6ba46d inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../de/d11/class_amuse_1_1_r_h_i_1_1_root_signature.html">RootSignature</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#ac543988e996196d280f2f6158d6ba46d">createRootSignature</a> (const <a class="el" href="../../dd/d50/struct_amuse_1_1_r_h_i_1_1_root_signature_desc.html">RootSignatureDesc</a> &amp;desc)</td></tr>
-<tr class="memdesc:ac543988e996196d280f2f6158d6ba46d inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">ルートシグネチャを生成する  <br /></td></tr>
-<tr class="separator:ac543988e996196d280f2f6158d6ba46d inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9571c95ac4cc703cd4625c37a9a85133 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d6/d59/class_amuse_1_1_r_h_i_1_1_pipeline_state.html">PipelineState</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#a9571c95ac4cc703cd4625c37a9a85133">createPipelineState</a> (const <a class="el" href="../../de/d3f/struct_amuse_1_1_r_h_i_1_1_pipeline_state_desc.html">PipelineStateDesc</a> &amp;desc)</td></tr>
-<tr class="memdesc:a9571c95ac4cc703cd4625c37a9a85133 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">グラフィックスパイプラインステートを生成する  <br /></td></tr>
-<tr class="separator:a9571c95ac4cc703cd4625c37a9a85133 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47220dacbabac29684f1a09975d26fc9 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d9/dab/class_amuse_1_1_r_h_i_1_1_compute_pipeline_state.html">ComputePipelineState</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#a47220dacbabac29684f1a09975d26fc9">createComputePipelineState</a> (const <a class="el" href="../../d2/dbc/struct_amuse_1_1_r_h_i_1_1_compute_pipeline_state_desc.html">ComputePipelineStateDesc</a> &amp;desc)</td></tr>
-<tr class="memdesc:a47220dacbabac29684f1a09975d26fc9 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンピュートパイプラインステートを生成する  <br /></td></tr>
-<tr class="separator:a47220dacbabac29684f1a09975d26fc9 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b40d8cb5787455d49beb19a42d8dade inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html">Buffer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#a6b40d8cb5787455d49beb19a42d8dade">createBuffer</a> (const <a class="el" href="../../d7/dab/struct_amuse_1_1_r_h_i_1_1_buffer_desc.html">BufferDesc</a> &amp;desc)</td></tr>
-<tr class="memdesc:a6b40d8cb5787455d49beb19a42d8dade inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">バッファを生成する  <br /></td></tr>
-<tr class="separator:a6b40d8cb5787455d49beb19a42d8dade inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5b41de6d58d7e268afd7ab5547bb67f inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html">Buffer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#aa5b41de6d58d7e268afd7ab5547bb67f">createBuffer</a> (const <a class="el" href="../../d7/d1b/struct_amuse_1_1_r_h_i_1_1_buffer_view_desc.html">BufferViewDesc</a> &amp;desc)</td></tr>
-<tr class="memdesc:aa5b41de6d58d7e268afd7ab5547bb67f inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">バッファを生成する  <br /></td></tr>
-<tr class="separator:aa5b41de6d58d7e268afd7ab5547bb67f inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab42d84d8563f2cab64c875a6d5c35a65 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../de/d60/class_amuse_1_1_r_h_i_1_1_texture.html">Texture</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#ab42d84d8563f2cab64c875a6d5c35a65">createTexture</a> (const <a class="el" href="../../df/d82/struct_amuse_1_1_r_h_i_1_1_texture_desc.html">TextureDesc</a> &amp;desc)</td></tr>
-<tr class="memdesc:ab42d84d8563f2cab64c875a6d5c35a65 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャを生成する  <br /></td></tr>
-<tr class="separator:ab42d84d8563f2cab64c875a6d5c35a65 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab58f8fb1b641cf4ec5eb0daa81d5f127 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../de/d60/class_amuse_1_1_r_h_i_1_1_texture.html">Texture</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#ab58f8fb1b641cf4ec5eb0daa81d5f127">createTexture</a> (<a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> name, <a class="el" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html">BlobView</a> blob)</td></tr>
-<tr class="memdesc:ab58f8fb1b641cf4ec5eb0daa81d5f127 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャを生成する  <br /></td></tr>
-<tr class="separator:ab58f8fb1b641cf4ec5eb0daa81d5f127 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78631fb06403a2e7dee8e8383e89e6e6 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../de/d60/class_amuse_1_1_r_h_i_1_1_texture.html">Texture</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#a78631fb06403a2e7dee8e8383e89e6e6">createTexture</a> (<a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> name, TextureType type, <a class="el" href="../../de/d30/struct_amuse_1_1_core_1_1_size.html">Size</a> size, Span&lt; const <a class="el" href="../../dc/d7f/struct_amuse_1_1_core_1_1_int_color.html">IntColor</a> &gt; colors)</td></tr>
-<tr class="memdesc:a78631fb06403a2e7dee8e8383e89e6e6 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャを生成する  <br /></td></tr>
-<tr class="separator:a78631fb06403a2e7dee8e8383e89e6e6 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7eddbbc3798114edf7435229224065bd inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../de/d60/class_amuse_1_1_r_h_i_1_1_texture.html">Texture</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#a7eddbbc3798114edf7435229224065bd">createTexture</a> (const <a class="el" href="../../d5/d16/struct_amuse_1_1_r_h_i_1_1_texture_view_desc.html">TextureViewDesc</a> &amp;desc)</td></tr>
-<tr class="memdesc:a7eddbbc3798114edf7435229224065bd inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャを生成する  <br /></td></tr>
-<tr class="separator:a7eddbbc3798114edf7435229224065bd inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1521bdf95c991ed71a0796e1e4c0e925 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../da/d86/class_amuse_1_1_r_h_i_1_1_render_texture.html">RenderTexture</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#a1521bdf95c991ed71a0796e1e4c0e925">createRenderTexture</a> (const <a class="el" href="../../d4/dc2/struct_amuse_1_1_r_h_i_1_1_render_texture_desc.html">RenderTextureDesc</a> &amp;desc)</td></tr>
-<tr class="memdesc:a1521bdf95c991ed71a0796e1e4c0e925 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">レンダーターゲットを生成する  <br /></td></tr>
-<tr class="separator:a1521bdf95c991ed71a0796e1e4c0e925 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a248481eae623619a9b3e214882455b6a inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../da/d9b/class_amuse_1_1_r_h_i_1_1_sampler.html">Sampler</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#a248481eae623619a9b3e214882455b6a">createSampler</a> (const <a class="el" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html">SamplerDesc</a> &amp;desc)</td></tr>
-<tr class="memdesc:a248481eae623619a9b3e214882455b6a inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">サンプラを生成する  <br /></td></tr>
-<tr class="separator:a248481eae623619a9b3e214882455b6a inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21238975bdf84a963bb1a7c881ead41c inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html">Shader</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#a21238975bdf84a963bb1a7c881ead41c">compileShader</a> (const <a class="el" href="../../d9/d3f/struct_amuse_1_1_r_h_i_1_1_shader_compile_desc.html">ShaderCompileDesc</a> &amp;desc)</td></tr>
-<tr class="memdesc:a21238975bdf84a963bb1a7c881ead41c inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">シェーダをコンパイルする  <br /></td></tr>
-<tr class="separator:a21238975bdf84a963bb1a7c881ead41c inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6fca285f55dddc49c3ee7bebe524915c inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html">Shader</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#a6fca285f55dddc49c3ee7bebe524915c">loadShader</a> (<a class="el" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html">BlobView</a> binary, ShaderStage stage)</td></tr>
-<tr class="memdesc:a6fca285f55dddc49c3ee7bebe524915c inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">シェーダバイナリを読み込む  <br /></td></tr>
-<tr class="separator:a6fca285f55dddc49c3ee7bebe524915c inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04604499af37cfa931ef546654e1fe78 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../dc/db6/class_amuse_1_1_r_h_i_1_1_descriptor_layout.html">DescriptorLayout</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#a04604499af37cfa931ef546654e1fe78">createDescriptorLayout</a> (const <a class="el" href="../../d5/d72/struct_amuse_1_1_r_h_i_1_1_descriptor_layout_desc.html">DescriptorLayoutDesc</a> &amp;desc)</td></tr>
-<tr class="memdesc:a04604499af37cfa931ef546654e1fe78 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">ディスクリプタレイアウトを生成する  <br /></td></tr>
-<tr class="separator:a04604499af37cfa931ef546654e1fe78 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e20e8bec4822a5c3ed7c0f8c082c564 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d2/d8f/class_amuse_1_1_r_h_i_1_1_descriptor_table.html">DescriptorTable</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#a7e20e8bec4822a5c3ed7c0f8c082c564">createDescriptorTable</a> (const <a class="el" href="../../d4/df3/struct_amuse_1_1_r_h_i_1_1_descriptor_table_desc.html">DescriptorTableDesc</a> &amp;desc)</td></tr>
-<tr class="memdesc:a7e20e8bec4822a5c3ed7c0f8c082c564 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">ディスクリプタテーブルを生成する  <br /></td></tr>
-<tr class="separator:a7e20e8bec4822a5c3ed7c0f8c082c564 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e7f13133de3553fad766c06d60d0332 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d4/d3a/class_amuse_1_1_r_h_i_1_1_event_query.html">EventQuery</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#a2e7f13133de3553fad766c06d60d0332">createEventQuery</a> ()</td></tr>
-<tr class="memdesc:a2e7f13133de3553fad766c06d60d0332 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">イベントクエリを生成する  <br /></td></tr>
-<tr class="separator:a2e7f13133de3553fad766c06d60d0332 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c9fae707acd005cba46add3ce7b03e5 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d4/d23/class_amuse_1_1_r_h_i_1_1_timer_query.html">TimerQuery</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#a4c9fae707acd005cba46add3ce7b03e5">createTimerQuery</a> ()</td></tr>
-<tr class="memdesc:a4c9fae707acd005cba46add3ce7b03e5 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">タイマークエリを生成する  <br /></td></tr>
-<tr class="separator:a4c9fae707acd005cba46add3ce7b03e5 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8a6fb04a3c0a452a334b7902a68a8de inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#ac8a6fb04a3c0a452a334b7902a68a8de">pollEventQuery</a> (const <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d4/d3a/class_amuse_1_1_r_h_i_1_1_event_query.html">EventQuery</a> &gt; &amp;)</td></tr>
-<tr class="memdesc:ac8a6fb04a3c0a452a334b7902a68a8de inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">イベントクエリの完了状態を確認する  <br /></td></tr>
-<tr class="separator:ac8a6fb04a3c0a452a334b7902a68a8de inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a741aeefaa982217552e45adc499582 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#a0a741aeefaa982217552e45adc499582">waitEventQuery</a> (const <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d4/d3a/class_amuse_1_1_r_h_i_1_1_event_query.html">EventQuery</a> &gt; &amp;)</td></tr>
-<tr class="memdesc:a0a741aeefaa982217552e45adc499582 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">イベントクエリの完了を待機する  <br /></td></tr>
-<tr class="separator:a0a741aeefaa982217552e45adc499582 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3da30a57fe8776e8955565837634eee inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#aa3da30a57fe8776e8955565837634eee">pollTimerQuery</a> (const <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d4/d23/class_amuse_1_1_r_h_i_1_1_timer_query.html">TimerQuery</a> &gt; &amp;)</td></tr>
-<tr class="memdesc:aa3da30a57fe8776e8955565837634eee inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">タイマークエリの完了状態を確認する  <br /></td></tr>
-<tr class="separator:aa3da30a57fe8776e8955565837634eee inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c9ddc5cbf27976c8dfec6ffc1f921b1 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">virtual f32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#a0c9ddc5cbf27976c8dfec6ffc1f921b1">getTimerQueryTime</a> (const <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d4/d23/class_amuse_1_1_r_h_i_1_1_timer_query.html">TimerQuery</a> &gt; &amp;)</td></tr>
-<tr class="memdesc:a0c9ddc5cbf27976c8dfec6ffc1f921b1 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">タイマークエリの計測時間を取得する  <br /></td></tr>
-<tr class="separator:a0c9ddc5cbf27976c8dfec6ffc1f921b1 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d6bd23152b54eec57c9ccbac2fc6da4 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../da/db5/class_amuse_1_1_r_h_i_1_1_graphic_file_handle.html">GraphicFileHandle</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#a0d6bd23152b54eec57c9ccbac2fc6da4">createGraphicFileHandle</a> (<a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> path)</td></tr>
-<tr class="memdesc:a0d6bd23152b54eec57c9ccbac2fc6da4 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">グラフィックファイルハンドルを生成する  <br /></td></tr>
-<tr class="separator:a0d6bd23152b54eec57c9ccbac2fc6da4 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a647ff3a0c61fee8204a57d8f5801c00e inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../dc/de0/class_amuse_1_1_r_h_i_1_1_graphic_file_event.html">GraphicFileEvent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#a647ff3a0c61fee8204a57d8f5801c00e">createGraphicFileEvent</a> ()</td></tr>
-<tr class="memdesc:a647ff3a0c61fee8204a57d8f5801c00e inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">グラフィックファイルイベントを生成する  <br /></td></tr>
-<tr class="separator:a647ff3a0c61fee8204a57d8f5801c00e inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c95747ea670d014c2fbb4b9f62df967 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d8/d50/class_amuse_1_1_r_h_i_1_1_graphic_file_queue.html">GraphicFileQueue</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#a8c95747ea670d014c2fbb4b9f62df967">createGraphicFileQueue</a> (const <a class="el" href="../../d2/dbf/struct_amuse_1_1_r_h_i_1_1_graphic_file_queue_desc.html">GraphicFileQueueDesc</a> &amp;)</td></tr>
-<tr class="memdesc:a8c95747ea670d014c2fbb4b9f62df967 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">グラフィックファイルキューを生成する  <br /></td></tr>
-<tr class="separator:a8c95747ea670d014c2fbb4b9f62df967 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d52ab5c5fee330a89e09b9badacd280 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#a4d52ab5c5fee330a89e09b9badacd280">generateGraphicFile</a> (<a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> input, <a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> output, s32 compressionLevel)</td></tr>
-<tr class="memdesc:a4d52ab5c5fee330a89e09b9badacd280 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">グラフィックファイルを生成する  <br /></td></tr>
-<tr class="separator:a4d52ab5c5fee330a89e09b9badacd280 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54c894666c720e9bd230dd2376385f81 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">virtual Vector&lt; <a class="el" href="../../d8/d14/struct_amuse_1_1_r_h_i_1_1_graphic_file_mip_info.html">GraphicFileMipInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#a54c894666c720e9bd230dd2376385f81">prepareGraphicFile</a> (<a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> path)</td></tr>
-<tr class="memdesc:a54c894666c720e9bd230dd2376385f81 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">グラフィックファイルを読み込み準備する  <br /></td></tr>
-<tr class="separator:a54c894666c720e9bd230dd2376385f81 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f4ff82adba2b988e07663cb345d106f inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top"><a id="a2f4ff82adba2b988e07663cb345d106f" name="a2f4ff82adba2b988e07663cb345d106f"></a>
-const <a class="el" href="../../d8/d50/struct_amuse_1_1_r_h_i_1_1_r_h_i_config.html">RHIConfig</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getConfig</b> () const</td></tr>
-<tr class="memdesc:a2f4ff82adba2b988e07663cb345d106f inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">RHI 設定を取得する <br /></td></tr>
-<tr class="separator:a2f4ff82adba2b988e07663cb345d106f inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae24aa3066979af716268d80625a14ff0 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#ae24aa3066979af716268d80625a14ff0">supports</a> (TextureFormat format, TextureType type) const</td></tr>
-<tr class="memdesc:ae24aa3066979af716268d80625a14ff0 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">機能対応状況を確認する  <br /></td></tr>
-<tr class="separator:ae24aa3066979af716268d80625a14ff0 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5333e8322c7c0101851c39ea659ca32e inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#a5333e8322c7c0101851c39ea659ca32e">supportsForRenderTexture</a> (TextureFormat format) const</td></tr>
-<tr class="memdesc:a5333e8322c7c0101851c39ea659ca32e inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">レンダーターゲット対応状況を確認する  <br /></td></tr>
-<tr class="separator:a5333e8322c7c0101851c39ea659ca32e inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3cc78e4009dbc68e208e1e690d0051ff inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#a3cc78e4009dbc68e208e1e690d0051ff">supports</a> (ShaderStage stage) const</td></tr>
-<tr class="memdesc:a3cc78e4009dbc68e208e1e690d0051ff inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">機能対応状況を確認する  <br /></td></tr>
-<tr class="separator:a3cc78e4009dbc68e208e1e690d0051ff inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8537844672b6b3a1a30d26ab4f7fadb inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d7/dd6/struct_amuse_1_1_r_h_i_1_1_r_h_i_features.html">RHIFeatures</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#af8537844672b6b3a1a30d26ab4f7fadb">getFeatures</a> () const</td></tr>
-<tr class="memdesc:af8537844672b6b3a1a30d26ab4f7fadb inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">対応機能一覧を取得する  <br /></td></tr>
-<tr class="separator:af8537844672b6b3a1a30d26ab4f7fadb inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7835df3c9c5be4d3d7f4161886b7747 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#af7835df3c9c5be4d3d7f4161886b7747">supports</a> (TextureFormat format, FormatSupport usage) const</td></tr>
-<tr class="memdesc:af7835df3c9c5be4d3d7f4161886b7747 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">機能対応状況を確認する  <br /></td></tr>
-<tr class="separator:af7835df3c9c5be4d3d7f4161886b7747 inherit pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_amuse_1_1_core_1_1_singleton"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_amuse_1_1_core_1_1_singleton')"><img src="../../closed.png" alt="-"/>&#160;基底クラス <a class="el" href="../../d4/d2f/class_amuse_1_1_core_1_1_singleton.html">Amuse::Core::Singleton&lt; Device &gt;</a> に属する継承公開メンバ関数</td></tr>
-<tr class="memitem:aad6f0940516cfa362202bacdd8836384 inherit pub_methods_class_amuse_1_1_core_1_1_singleton"><td class="memItemLeft" align="right" valign="top"><a id="aad6f0940516cfa362202bacdd8836384" name="aad6f0940516cfa362202bacdd8836384"></a>
-virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~Singleton</b> ()</td></tr>
-<tr class="memdesc:aad6f0940516cfa362202bacdd8836384 inherit pub_methods_class_amuse_1_1_core_1_1_singleton"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ <br /></td></tr>
-<tr class="separator:aad6f0940516cfa362202bacdd8836384 inherit pub_methods_class_amuse_1_1_core_1_1_singleton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td colspan="2">基底クラス <a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html">Amuse::RHI::Device</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a092a4fef4e61b7b7c3511f5a5c8d296e pub_methods_class_amuse_1_1_r_h_i_1_1_device" id="r_a092a4fef4e61b7b7c3511f5a5c8d296e"><td class="memItemLeft">
+&#160;</td><td class="memItemRight"><b>Device</b> (GraphicObjectManager &amp;, const <a class="el" href="../../d8/d50/struct_amuse_1_1_r_h_i_1_1_r_h_i_config.html">RHIConfig</a> *)</td></tr>
+<tr class="memdesc:a092a4fef4e61b7b7c3511f5a5c8d296e pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ <br /></td></tr>
+<tr class="memitem:af1b7ecd1f33b7e8d086764854e1f22a6 pub_methods_class_amuse_1_1_r_h_i_1_1_device" id="r_af1b7ecd1f33b7e8d086764854e1f22a6"><td class="memItemLeft">
+&#160;</td><td class="memItemRight"><b>~Device</b> () override</td></tr>
+<tr class="memdesc:af1b7ecd1f33b7e8d086764854e1f22a6 pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ <br /></td></tr>
+<tr class="memitem:a2963f41c3ee67db0436595449c5503fd pub_methods_class_amuse_1_1_r_h_i_1_1_device" id="r_a2963f41c3ee67db0436595449c5503fd"><td class="memItemLeft">
+virtual u32&#160;</td><td class="memItemRight"><b>getDrawIndirectArgumentSize</b> () const</td></tr>
+<tr class="memdesc:a2963f41c3ee67db0436595449c5503fd pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">DrawIndirect 用引数のバイトサイズを取得する <br /></td></tr>
+<tr class="memitem:a4e195bbeae608f932a19a453da1035c8 pub_methods_class_amuse_1_1_r_h_i_1_1_device" id="r_a4e195bbeae608f932a19a453da1035c8"><td class="memItemLeft">
+virtual u32&#160;</td><td class="memItemRight"><b>getDrawIndexedIndirectArgumentSize</b> () const</td></tr>
+<tr class="memdesc:a4e195bbeae608f932a19a453da1035c8 pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">DrawIndexedIndirect 用引数のバイトサイズを取得する <br /></td></tr>
+<tr class="memitem:a894767c58543b2571fd8c260d8a2a423 pub_methods_class_amuse_1_1_r_h_i_1_1_device" id="r_a894767c58543b2571fd8c260d8a2a423"><td class="memItemLeft">
+virtual u32&#160;</td><td class="memItemRight"><b>getDispatchIndirectArgumentSize</b> () const</td></tr>
+<tr class="memdesc:a894767c58543b2571fd8c260d8a2a423 pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">DispatchIndirect 用引数のバイトサイズを取得する <br /></td></tr>
+<tr class="memitem:ae930e0cc753d3425fefb7d69a26a9f09 pub_methods_class_amuse_1_1_r_h_i_1_1_device" id="r_ae930e0cc753d3425fefb7d69a26a9f09"><td class="memItemLeft">
+virtual void *&#160;</td><td class="memItemRight"><b>mapBuffer</b> (const <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html">Buffer</a> &gt; &amp;buffer, CpuAccess access)</td></tr>
+<tr class="memdesc:ae930e0cc753d3425fefb7d69a26a9f09 pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPUからバッファをマップ <br /></td></tr>
+<tr class="memitem:a13ee56060b22d0a5caba297abeb30560 pub_methods_class_amuse_1_1_r_h_i_1_1_device" id="r_a13ee56060b22d0a5caba297abeb30560"><td class="memItemLeft">
+virtual void&#160;</td><td class="memItemRight"><b>unmapBuffer</b> (const <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html">Buffer</a> &gt; &amp;buffer)</td></tr>
+<tr class="memdesc:a13ee56060b22d0a5caba297abeb30560 pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPUからのバッファマップを解除 <br /></td></tr>
+<tr class="memitem:a2f4ff82adba2b988e07663cb345d106f pub_methods_class_amuse_1_1_r_h_i_1_1_device" id="r_a2f4ff82adba2b988e07663cb345d106f"><td class="memItemLeft">
+const <a class="el" href="../../d8/d50/struct_amuse_1_1_r_h_i_1_1_r_h_i_config.html">RHIConfig</a> &amp;&#160;</td><td class="memItemRight"><b>getConfig</b> () const</td></tr>
+<tr class="memdesc:a2f4ff82adba2b988e07663cb345d106f pub_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">RHI 設定を取得する <br /></td></tr>
+<tr class="inherit_header pub_methods_class_amuse_1_1_core_1_1_singleton"><td colspan="2">基底クラス <a class="el" href="../../d4/d2f/class_amuse_1_1_core_1_1_singleton.html">Amuse::Core::Singleton&lt; Device &gt;</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:aad6f0940516cfa362202bacdd8836384 pub_methods_class_amuse_1_1_core_1_1_singleton" id="r_aad6f0940516cfa362202bacdd8836384"><td class="memItemLeft">
+virtual&#160;</td><td class="memItemRight"><b>~Singleton</b> ()</td></tr>
+<tr class="memdesc:aad6f0940516cfa362202bacdd8836384 pub_methods_class_amuse_1_1_core_1_1_singleton"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ <br /></td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静的公開メンバ関数</h2></td></tr>
-<tr class="memitem:ac2f47e084dcdfe999e8cb68862fb5be2"><td class="memItemLeft" align="right" valign="top"><a id="ac2f47e084dcdfe999e8cb68862fb5be2" name="ac2f47e084dcdfe999e8cb68862fb5be2"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>Inject</b> (<a class="el" href="../../d6/d5f/class_amuse_1_1_core_1_1_service_injector.html">ServiceInjector</a> &amp;)</td></tr>
+<tr class="memitem:ac2f47e084dcdfe999e8cb68862fb5be2" id="r_ac2f47e084dcdfe999e8cb68862fb5be2"><td class="memItemLeft"><a id="ac2f47e084dcdfe999e8cb68862fb5be2" name="ac2f47e084dcdfe999e8cb68862fb5be2"></a>
+static void&#160;</td><td class="memItemRight"><b>Inject</b> (<a class="el" href="../../d6/d5f/class_amuse_1_1_core_1_1_service_injector.html">ServiceInjector</a> &amp;)</td></tr>
 <tr class="memdesc:ac2f47e084dcdfe999e8cb68862fb5be2"><td class="mdescLeft">&#160;</td><td class="mdescRight">DirectX12RHIの起動に必要なサービスを登録 <br /></td></tr>
-<tr class="separator:ac2f47e084dcdfe999e8cb68862fb5be2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_static_methods_class_amuse_1_1_core_1_1_singleton"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_amuse_1_1_core_1_1_singleton')"><img src="../../closed.png" alt="-"/>&#160;基底クラス <a class="el" href="../../d4/d2f/class_amuse_1_1_core_1_1_singleton.html">Amuse::Core::Singleton&lt; Device &gt;</a> に属する継承静的公開メンバ関数</td></tr>
-<tr class="memitem:aa3bf63e8a51588541841c6cbc9d8cf3d inherit pub_static_methods_class_amuse_1_1_core_1_1_singleton"><td class="memItemLeft" align="right" valign="top"><a id="aa3bf63e8a51588541841c6cbc9d8cf3d" name="aa3bf63e8a51588541841c6cbc9d8cf3d"></a>
-static Device *&#160;</td><td class="memItemRight" valign="bottom"><b>Get</b> () noexcept</td></tr>
-<tr class="memdesc:aa3bf63e8a51588541841c6cbc9d8cf3d inherit pub_static_methods_class_amuse_1_1_core_1_1_singleton"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンスを取得 <br /></td></tr>
-<tr class="separator:aa3bf63e8a51588541841c6cbc9d8cf3d inherit pub_static_methods_class_amuse_1_1_core_1_1_singleton"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7bf2d6303e6ff1974f9af581f1002cd inherit pub_static_methods_class_amuse_1_1_core_1_1_singleton"><td class="memItemLeft" align="right" valign="top"><a id="af7bf2d6303e6ff1974f9af581f1002cd" name="af7bf2d6303e6ff1974f9af581f1002cd"></a>
-static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instance</b> () noexcept</td></tr>
-<tr class="memdesc:af7bf2d6303e6ff1974f9af581f1002cd inherit pub_static_methods_class_amuse_1_1_core_1_1_singleton"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンスを取得 <br /></td></tr>
-<tr class="separator:af7bf2d6303e6ff1974f9af581f1002cd inherit pub_static_methods_class_amuse_1_1_core_1_1_singleton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_methods_class_amuse_1_1_core_1_1_singleton"><td colspan="2">基底クラス <a class="el" href="../../d4/d2f/class_amuse_1_1_core_1_1_singleton.html">Amuse::Core::Singleton&lt; Device &gt;</a> に属する継承静的公開メンバ関数</td></tr>
+<tr class="memitem:aa3bf63e8a51588541841c6cbc9d8cf3d pub_static_methods_class_amuse_1_1_core_1_1_singleton" id="r_aa3bf63e8a51588541841c6cbc9d8cf3d"><td class="memItemLeft">
+static Device *&#160;</td><td class="memItemRight"><b>Get</b> () noexcept</td></tr>
+<tr class="memdesc:aa3bf63e8a51588541841c6cbc9d8cf3d pub_static_methods_class_amuse_1_1_core_1_1_singleton"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンスを取得 <br /></td></tr>
+<tr class="memitem:af7bf2d6303e6ff1974f9af581f1002cd pub_static_methods_class_amuse_1_1_core_1_1_singleton" id="r_af7bf2d6303e6ff1974f9af581f1002cd"><td class="memItemLeft">
+static Device &amp;&#160;</td><td class="memItemRight"><b>Instance</b> () noexcept</td></tr>
+<tr class="memdesc:af7bf2d6303e6ff1974f9af581f1002cd pub_static_methods_class_amuse_1_1_core_1_1_singleton"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンスを取得 <br /></td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
 その他の継承メンバ</h2></td></tr>
-<tr class="inherit_header pro_methods_class_amuse_1_1_r_h_i_1_1_device"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_amuse_1_1_r_h_i_1_1_device')"><img src="../../closed.png" alt="-"/>&#160;基底クラス <a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html">Amuse::RHI::Device</a> に属する継承限定公開メンバ関数</td></tr>
-<tr class="memitem:af0bf0ec6bfc2745dccd21eb39618884f inherit pro_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#af0bf0ec6bfc2745dccd21eb39618884f">finalize</a> ()</td></tr>
-<tr class="memdesc:af0bf0ec6bfc2745dccd21eb39618884f inherit pro_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了処理  <br /></td></tr>
-<tr class="separator:af0bf0ec6bfc2745dccd21eb39618884f inherit pro_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_methods_class_amuse_1_1_core_1_1_singleton"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_amuse_1_1_core_1_1_singleton')"><img src="../../closed.png" alt="-"/>&#160;基底クラス <a class="el" href="../../d4/d2f/class_amuse_1_1_core_1_1_singleton.html">Amuse::Core::Singleton&lt; Device &gt;</a> に属する継承限定公開メンバ関数</td></tr>
-<tr class="memitem:a6de97f4f38b23a9b808eb69aa1e4b70a inherit pro_methods_class_amuse_1_1_core_1_1_singleton"><td class="memItemLeft" align="right" valign="top"><a id="a6de97f4f38b23a9b808eb69aa1e4b70a" name="a6de97f4f38b23a9b808eb69aa1e4b70a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Singleton</b> ()</td></tr>
-<tr class="memdesc:a6de97f4f38b23a9b808eb69aa1e4b70a inherit pro_methods_class_amuse_1_1_core_1_1_singleton"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ <br /></td></tr>
-<tr class="separator:a6de97f4f38b23a9b808eb69aa1e4b70a inherit pro_methods_class_amuse_1_1_core_1_1_singleton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_class_amuse_1_1_r_h_i_1_1_device"><td colspan="2">基底クラス <a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html">Amuse::RHI::Device</a> に属する継承限定公開メンバ関数</td></tr>
+<tr class="memitem:af0bf0ec6bfc2745dccd21eb39618884f pro_methods_class_amuse_1_1_r_h_i_1_1_device" id="r_af0bf0ec6bfc2745dccd21eb39618884f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#af0bf0ec6bfc2745dccd21eb39618884f">finalize</a> ()</td></tr>
+<tr class="memdesc:af0bf0ec6bfc2745dccd21eb39618884f pro_methods_class_amuse_1_1_r_h_i_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了処理  <br /></td></tr>
+<tr class="inherit_header pro_methods_class_amuse_1_1_core_1_1_singleton"><td colspan="2">基底クラス <a class="el" href="../../d4/d2f/class_amuse_1_1_core_1_1_singleton.html">Amuse::Core::Singleton&lt; Device &gt;</a> に属する継承限定公開メンバ関数</td></tr>
+<tr class="memitem:a6de97f4f38b23a9b808eb69aa1e4b70a pro_methods_class_amuse_1_1_core_1_1_singleton" id="r_a6de97f4f38b23a9b808eb69aa1e4b70a"><td class="memItemLeft">
+&#160;</td><td class="memItemRight"><b>Singleton</b> ()</td></tr>
+<tr class="memdesc:a6de97f4f38b23a9b808eb69aa1e4b70a pro_methods_class_amuse_1_1_core_1_1_singleton"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ <br /></td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
 <div class="textblock"><p>DirectX 12 RHI デバイス </p>
-</div><h2 class="groupheader">関数詳解</h2>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
 <a id="a03e463a38137f3d2bb8908ebe9aabcd9" name="a03e463a38137f3d2bb8908ebe9aabcd9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a03e463a38137f3d2bb8908ebe9aabcd9">&#9670;&#160;</a></span>allocateHandle()</h2>
 
@@ -498,25 +327,17 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
         <tr>
           <td class="memname">void Amuse::RHI::DirectX12Device::allocateHandle </td>
           <td>(</td>
-          <td class="paramtype">DescriptorHeapType&#160;</td>
-          <td class="paramname"><em>type</em>, </td>
+          <td class="paramtype">DescriptorHeapType</td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">class DescriptorHandle &amp;&#160;</td>
-          <td class="paramname"><em>handle</em>, </td>
+          <td class="paramtype">class DescriptorHandle &amp;</td>          <td class="paramname"><span class="paramname"><em>handle</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">s32&#160;</td>
-          <td class="paramname"><em>size</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">s32</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -545,14 +366,13 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
         <tr>
           <td class="memname"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html">Shader</a> &gt; Amuse::RHI::DirectX12Device::compileShader </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d9/d3f/struct_amuse_1_1_r_h_i_1_1_shader_compile_desc.html">ShaderCompileDesc</a> &amp;&#160;</td>
-          <td class="paramname"><em>desc</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="../../d9/d3f/struct_amuse_1_1_r_h_i_1_1_shader_compile_desc.html">ShaderCompileDesc</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>desc</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -575,14 +395,13 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
         <tr>
           <td class="memname"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html">Buffer</a> &gt; Amuse::RHI::DirectX12Device::createBuffer </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d7/dab/struct_amuse_1_1_r_h_i_1_1_buffer_desc.html">BufferDesc</a> &amp;&#160;</td>
-          <td class="paramname"><em>desc</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="../../d7/dab/struct_amuse_1_1_r_h_i_1_1_buffer_desc.html">BufferDesc</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>desc</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -605,14 +424,13 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
         <tr>
           <td class="memname"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html">Buffer</a> &gt; Amuse::RHI::DirectX12Device::createBuffer </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d7/d1b/struct_amuse_1_1_r_h_i_1_1_buffer_view_desc.html">BufferViewDesc</a> &amp;&#160;</td>
-          <td class="paramname"><em>desc</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="../../d7/d1b/struct_amuse_1_1_r_h_i_1_1_buffer_view_desc.html">BufferViewDesc</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>desc</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -635,14 +453,13 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
         <tr>
           <td class="memname"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d7/dc8/class_amuse_1_1_r_h_i_1_1_command_list.html">CommandList</a> &gt; Amuse::RHI::DirectX12Device::createCommandList </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d8/d93/struct_amuse_1_1_r_h_i_1_1_command_list_desc.html">CommandListDesc</a> &amp;&#160;</td>
-          <td class="paramname"><em>desc</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="../../d8/d93/struct_amuse_1_1_r_h_i_1_1_command_list_desc.html">CommandListDesc</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>desc</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -665,14 +482,13 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
         <tr>
           <td class="memname"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d9/dab/class_amuse_1_1_r_h_i_1_1_compute_pipeline_state.html">ComputePipelineState</a> &gt; Amuse::RHI::DirectX12Device::createComputePipelineState </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d2/dbc/struct_amuse_1_1_r_h_i_1_1_compute_pipeline_state_desc.html">ComputePipelineStateDesc</a> &amp;&#160;</td>
-          <td class="paramname"><em>desc</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="../../d2/dbc/struct_amuse_1_1_r_h_i_1_1_compute_pipeline_state_desc.html">ComputePipelineStateDesc</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>desc</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -695,14 +511,13 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
         <tr>
           <td class="memname"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../dc/db6/class_amuse_1_1_r_h_i_1_1_descriptor_layout.html">DescriptorLayout</a> &gt; Amuse::RHI::DirectX12Device::createDescriptorLayout </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d5/d72/struct_amuse_1_1_r_h_i_1_1_descriptor_layout_desc.html">DescriptorLayoutDesc</a> &amp;&#160;</td>
-          <td class="paramname"><em>desc</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="../../d5/d72/struct_amuse_1_1_r_h_i_1_1_descriptor_layout_desc.html">DescriptorLayoutDesc</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>desc</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -725,14 +540,13 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
         <tr>
           <td class="memname"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d2/d8f/class_amuse_1_1_r_h_i_1_1_descriptor_table.html">DescriptorTable</a> &gt; Amuse::RHI::DirectX12Device::createDescriptorTable </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d4/df3/struct_amuse_1_1_r_h_i_1_1_descriptor_table_desc.html">DescriptorTableDesc</a> &amp;&#160;</td>
-          <td class="paramname"><em>desc</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="../../d4/df3/struct_amuse_1_1_r_h_i_1_1_descriptor_table_desc.html">DescriptorTableDesc</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>desc</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -755,13 +569,13 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
         <tr>
           <td class="memname"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d4/d3a/class_amuse_1_1_r_h_i_1_1_event_query.html">EventQuery</a> &gt; Amuse::RHI::DirectX12Device::createEventQuery </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -784,14 +598,13 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
         <tr>
           <td class="memname"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d9/d03/class_amuse_1_1_r_h_i_1_1_fence.html">Fence</a> &gt; Amuse::RHI::DirectX12Device::createFence </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dd/ded/struct_amuse_1_1_r_h_i_1_1_fence_desc.html">FenceDesc</a> &amp;&#160;</td>
-          <td class="paramname"><em>desc</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="../../dd/ded/struct_amuse_1_1_r_h_i_1_1_fence_desc.html">FenceDesc</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>desc</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -814,13 +627,13 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
         <tr>
           <td class="memname"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../dc/de0/class_amuse_1_1_r_h_i_1_1_graphic_file_event.html">GraphicFileEvent</a> &gt; Amuse::RHI::DirectX12Device::createGraphicFileEvent </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -843,14 +656,13 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
         <tr>
           <td class="memname"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../da/db5/class_amuse_1_1_r_h_i_1_1_graphic_file_handle.html">GraphicFileHandle</a> &gt; Amuse::RHI::DirectX12Device::createGraphicFileHandle </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a>&#160;</td>
-          <td class="paramname"><em>path</em></td><td>)</td>
+          <td class="paramtype">StringView</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -873,14 +685,13 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
         <tr>
           <td class="memname"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d8/d50/class_amuse_1_1_r_h_i_1_1_graphic_file_queue.html">GraphicFileQueue</a> &gt; Amuse::RHI::DirectX12Device::createGraphicFileQueue </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d2/dbf/struct_amuse_1_1_r_h_i_1_1_graphic_file_queue_desc.html">GraphicFileQueueDesc</a> &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="../../d2/dbf/struct_amuse_1_1_r_h_i_1_1_graphic_file_queue_desc.html">GraphicFileQueueDesc</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -903,14 +714,13 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
         <tr>
           <td class="memname"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d6/d59/class_amuse_1_1_r_h_i_1_1_pipeline_state.html">PipelineState</a> &gt; Amuse::RHI::DirectX12Device::createPipelineState </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../de/d3f/struct_amuse_1_1_r_h_i_1_1_pipeline_state_desc.html">PipelineStateDesc</a> &amp;&#160;</td>
-          <td class="paramname"><em>desc</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="../../de/d3f/struct_amuse_1_1_r_h_i_1_1_pipeline_state_desc.html">PipelineStateDesc</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>desc</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -933,14 +743,13 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
         <tr>
           <td class="memname"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../da/d86/class_amuse_1_1_r_h_i_1_1_render_texture.html">RenderTexture</a> &gt; Amuse::RHI::DirectX12Device::createRenderTexture </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d4/dc2/struct_amuse_1_1_r_h_i_1_1_render_texture_desc.html">RenderTextureDesc</a> &amp;&#160;</td>
-          <td class="paramname"><em>desc</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="../../d4/dc2/struct_amuse_1_1_r_h_i_1_1_render_texture_desc.html">RenderTextureDesc</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>desc</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -963,14 +772,13 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
         <tr>
           <td class="memname"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../de/d11/class_amuse_1_1_r_h_i_1_1_root_signature.html">RootSignature</a> &gt; Amuse::RHI::DirectX12Device::createRootSignature </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dd/d50/struct_amuse_1_1_r_h_i_1_1_root_signature_desc.html">RootSignatureDesc</a> &amp;&#160;</td>
-          <td class="paramname"><em>desc</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="../../dd/d50/struct_amuse_1_1_r_h_i_1_1_root_signature_desc.html">RootSignatureDesc</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>desc</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -993,14 +801,13 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
         <tr>
           <td class="memname"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../da/d9b/class_amuse_1_1_r_h_i_1_1_sampler.html">Sampler</a> &gt; Amuse::RHI::DirectX12Device::createSampler </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html">SamplerDesc</a> &amp;&#160;</td>
-          <td class="paramname"><em>desc</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html">SamplerDesc</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>desc</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1023,14 +830,13 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
         <tr>
           <td class="memname"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d5/df6/class_amuse_1_1_r_h_i_1_1_swap_chain.html">SwapChain</a> &gt; Amuse::RHI::DirectX12Device::createSwapChain </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d6/d44/struct_amuse_1_1_r_h_i_1_1_swap_chain_desc.html">SwapChainDesc</a> &amp;&#160;</td>
-          <td class="paramname"><em>desc</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="../../d6/d44/struct_amuse_1_1_r_h_i_1_1_swap_chain_desc.html">SwapChainDesc</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>desc</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1053,14 +859,13 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
         <tr>
           <td class="memname"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../de/d60/class_amuse_1_1_r_h_i_1_1_texture.html">Texture</a> &gt; Amuse::RHI::DirectX12Device::createTexture </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../df/d82/struct_amuse_1_1_r_h_i_1_1_texture_desc.html">TextureDesc</a> &amp;&#160;</td>
-          <td class="paramname"><em>desc</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="../../df/d82/struct_amuse_1_1_r_h_i_1_1_texture_desc.html">TextureDesc</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>desc</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1083,14 +888,13 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
         <tr>
           <td class="memname"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../de/d60/class_amuse_1_1_r_h_i_1_1_texture.html">Texture</a> &gt; Amuse::RHI::DirectX12Device::createTexture </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d5/d16/struct_amuse_1_1_r_h_i_1_1_texture_view_desc.html">TextureViewDesc</a> &amp;&#160;</td>
-          <td class="paramname"><em>desc</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="../../d5/d16/struct_amuse_1_1_r_h_i_1_1_texture_view_desc.html">TextureViewDesc</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>desc</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1113,24 +917,17 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
         <tr>
           <td class="memname"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../de/d60/class_amuse_1_1_r_h_i_1_1_texture.html">Texture</a> &gt; Amuse::RHI::DirectX12Device::createTexture </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a>&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">StringView</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html">BlobView</a>&#160;</td>
-          <td class="paramname"><em>blob</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype"><a class="el" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html">BlobView</a></td>          <td class="paramname"><span class="paramname"><em>blob</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1153,36 +950,27 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
         <tr>
           <td class="memname"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../de/d60/class_amuse_1_1_r_h_i_1_1_texture.html">Texture</a> &gt; Amuse::RHI::DirectX12Device::createTexture </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a>&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">StringView</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">TextureType&#160;</td>
-          <td class="paramname"><em>type</em>, </td>
+          <td class="paramtype">TextureType</td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../de/d30/struct_amuse_1_1_core_1_1_size.html">Size</a>&#160;</td>
-          <td class="paramname"><em>size</em>, </td>
+          <td class="paramtype"><a class="el" href="../../de/d30/struct_amuse_1_1_core_1_1_size.html">Size</a></td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Span&lt; const <a class="el" href="../../dc/d7f/struct_amuse_1_1_core_1_1_int_color.html">IntColor</a> &gt;&#160;</td>
-          <td class="paramname"><em>colors</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">Span&lt; const <a class="el" href="../../dc/d7f/struct_amuse_1_1_core_1_1_int_color.html">IntColor</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>colors</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1205,13 +993,13 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
         <tr>
           <td class="memname"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d4/d23/class_amuse_1_1_r_h_i_1_1_timer_query.html">TimerQuery</a> &gt; Amuse::RHI::DirectX12Device::createTimerQuery </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1234,14 +1022,13 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
         <tr>
           <td class="memname">void Amuse::RHI::DirectX12Device::entryCommandList </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d7/dc8/class_amuse_1_1_r_h_i_1_1_command_list.html">CommandList</a> &gt; &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d7/dc8/class_amuse_1_1_r_h_i_1_1_command_list.html">CommandList</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1264,24 +1051,17 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
         <tr>
           <td class="memname">u64 Amuse::RHI::DirectX12Device::executeCommandLists </td>
           <td>(</td>
-          <td class="paramtype">Span&lt; <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d7/dc8/class_amuse_1_1_r_h_i_1_1_command_list.html">CommandList</a> &gt; &gt;&#160;</td>
-          <td class="paramname"><em>commandLists</em>, </td>
+          <td class="paramtype">Span&lt; <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d7/dc8/class_amuse_1_1_r_h_i_1_1_command_list.html">CommandList</a> &gt; &gt;</td>          <td class="paramname"><span class="paramname"><em>commandLists</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">CommandQueueType&#160;</td>
-          <td class="paramname"><em>queue</em> = <code>CommandQueueType::Graphics</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">CommandQueueType</td>          <td class="paramname"><span class="paramname"><em>queue</em></span><span class="paramdefsep"> = </span><span class="paramdefval">CommandQueueType::Graphics</span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1304,30 +1084,22 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
         <tr>
           <td class="memname">bool Amuse::RHI::DirectX12Device::generateGraphicFile </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a>&#160;</td>
-          <td class="paramname"><em>input</em>, </td>
+          <td class="paramtype">StringView</td>          <td class="paramname"><span class="paramname"><em>input</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a>&#160;</td>
-          <td class="paramname"><em>output</em>, </td>
+          <td class="paramtype">StringView</td>          <td class="paramname"><span class="paramname"><em>output</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">s32&#160;</td>
-          <td class="paramname"><em>compressionLevel</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">s32</td>          <td class="paramname"><span class="paramname"><em>compressionLevel</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1348,15 +1120,15 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a> Amuse::RHI::DirectX12Device::getAPIName </td>
+          <td class="memname">String Amuse::RHI::DirectX12Device::getAPIName </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1379,13 +1151,13 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
         <tr>
           <td class="memname"><a class="el" href="../../d7/dd6/struct_amuse_1_1_r_h_i_1_1_r_h_i_features.html">RHIFeatures</a> Amuse::RHI::DirectX12Device::getFeatures </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1408,14 +1180,13 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
         <tr>
           <td class="memname">f32 Amuse::RHI::DirectX12Device::getTimerQueryTime </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d4/d23/class_amuse_1_1_r_h_i_1_1_timer_query.html">TimerQuery</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>query</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d4/d23/class_amuse_1_1_r_h_i_1_1_timer_query.html">TimerQuery</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>query</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1438,13 +1209,13 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
         <tr>
           <td class="memname">Vector&lt; <a class="el" href="../../dd/d49/struct_amuse_1_1_r_h_i_1_1_video_card.html">VideoCard</a> &gt; Amuse::RHI::DirectX12Device::getVideoCards </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1467,13 +1238,13 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
         <tr>
           <td class="memname">bool Amuse::RHI::DirectX12Device::isValid </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1496,24 +1267,17 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
         <tr>
           <td class="memname"><a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html">Shader</a> &gt; Amuse::RHI::DirectX12Device::loadShader </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html">BlobView</a>&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramtype"><a class="el" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html">BlobView</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">ShaderStage&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">ShaderStage</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1536,14 +1300,13 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
         <tr>
           <td class="memname">bool Amuse::RHI::DirectX12Device::pollEventQuery </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d4/d3a/class_amuse_1_1_r_h_i_1_1_event_query.html">EventQuery</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>query</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d4/d3a/class_amuse_1_1_r_h_i_1_1_event_query.html">EventQuery</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>query</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1566,14 +1329,13 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
         <tr>
           <td class="memname">bool Amuse::RHI::DirectX12Device::pollTimerQuery </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d4/d23/class_amuse_1_1_r_h_i_1_1_timer_query.html">TimerQuery</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>query</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d4/d23/class_amuse_1_1_r_h_i_1_1_timer_query.html">TimerQuery</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>query</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1596,14 +1358,13 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
         <tr>
           <td class="memname">Vector&lt; <a class="el" href="../../d8/d14/struct_amuse_1_1_r_h_i_1_1_graphic_file_mip_info.html">GraphicFileMipInfo</a> &gt; Amuse::RHI::DirectX12Device::prepareGraphicFile </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a>&#160;</td>
-          <td class="paramname"><em>path</em></td><td>)</td>
+          <td class="paramtype">StringView</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1626,30 +1387,22 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
         <tr>
           <td class="memname">void Amuse::RHI::DirectX12Device::queueWait </td>
           <td>(</td>
-          <td class="paramtype">CommandQueueType&#160;</td>
-          <td class="paramname"><em>waitQueue</em>, </td>
+          <td class="paramtype">CommandQueueType</td>          <td class="paramname"><span class="paramname"><em>waitQueue</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">CommandQueueType&#160;</td>
-          <td class="paramname"><em>executeQueue</em>, </td>
+          <td class="paramtype">CommandQueueType</td>          <td class="paramname"><span class="paramname"><em>executeQueue</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">u64&#160;</td>
-          <td class="paramname"><em>fenceValue</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">u64</td>          <td class="paramname"><span class="paramname"><em>fenceValue</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1672,14 +1425,13 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
         <tr>
           <td class="memname">bool Amuse::RHI::DirectX12Device::supports </td>
           <td>(</td>
-          <td class="paramtype">ShaderStage&#160;</td>
-          <td class="paramname"><em>format</em></td><td>)</td>
+          <td class="paramtype">ShaderStage</td>          <td class="paramname"><span class="paramname"><em>format</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1702,24 +1454,17 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
         <tr>
           <td class="memname">bool Amuse::RHI::DirectX12Device::supports </td>
           <td>(</td>
-          <td class="paramtype">TextureFormat&#160;</td>
-          <td class="paramname"><em>format</em>, </td>
+          <td class="paramtype">TextureFormat</td>          <td class="paramname"><span class="paramname"><em>format</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">FormatSupport&#160;</td>
-          <td class="paramname"><em>usage</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
+          <td class="paramtype">FormatSupport</td>          <td class="paramname"><span class="paramname"><em>usage</em></span>&#160;) const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1742,24 +1487,17 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
         <tr>
           <td class="memname">bool Amuse::RHI::DirectX12Device::supports </td>
           <td>(</td>
-          <td class="paramtype">TextureFormat&#160;</td>
-          <td class="paramname"><em>format</em>, </td>
+          <td class="paramtype">TextureFormat</td>          <td class="paramname"><span class="paramname"><em>format</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">TextureType&#160;</td>
-          <td class="paramname"><em>type</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
+          <td class="paramtype">TextureType</td>          <td class="paramname"><span class="paramname"><em>type</em></span>&#160;) const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1782,14 +1520,13 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
         <tr>
           <td class="memname">bool Amuse::RHI::DirectX12Device::supportsForRenderTexture </td>
           <td>(</td>
-          <td class="paramtype">TextureFormat&#160;</td>
-          <td class="paramname"><em>format</em></td><td>)</td>
+          <td class="paramtype">TextureFormat</td>          <td class="paramname"><span class="paramname"><em>format</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1812,13 +1549,13 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
         <tr>
           <td class="memname">void Amuse::RHI::DirectX12Device::update </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1841,14 +1578,13 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
         <tr>
           <td class="memname">void Amuse::RHI::DirectX12Device::waitEventQuery </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d4/d3a/class_amuse_1_1_r_h_i_1_1_event_query.html">EventQuery</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>query</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d4/d3a/class_amuse_1_1_r_h_i_1_1_event_query.html">EventQuery</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>query</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1871,14 +1607,13 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
         <tr>
           <td class="memname">void Amuse::RHI::DirectX12Device::waitForIdle </td>
           <td>(</td>
-          <td class="paramtype">CommandQueueType&#160;</td>
-          <td class="paramname"><em>queue</em> = <code>CommandQueueType::Graphics</code></td><td>)</td>
+          <td class="paramtype">CommandQueueType</td>          <td class="paramname"><span class="paramname"><em>queue</em></span><span class="paramdefsep"> = </span><span class="paramdefval">CommandQueueType::Graphics</span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1894,11 +1629,12 @@ static Device &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instan
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>Amuse</b></li><li class="navelem"><b>RHI</b></li><li class="navelem"><a class="el" href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html">DirectX12Device</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><b>RHI</b></li><li class="navelem"><a href="../../d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html">DirectX12Device</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

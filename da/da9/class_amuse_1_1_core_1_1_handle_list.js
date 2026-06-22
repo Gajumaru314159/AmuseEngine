@@ -1,7 +1,7 @@
 var class_amuse_1_1_core_1_1_handle_list =
 [
-    [ "const_iterator", "d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html", "d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator" ],
     [ "Handle", "dd/d26/class_amuse_1_1_core_1_1_handle_list_1_1_handle.html", "dd/d26/class_amuse_1_1_core_1_1_handle_list_1_1_handle" ],
+    [ "const_iterator", "d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html", "d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator" ],
     [ "iterator", "d4/d5c/class_amuse_1_1_core_1_1_handle_list_1_1iterator.html", "d4/d5c/class_amuse_1_1_core_1_1_handle_list_1_1iterator" ],
     [ "const_pointer", "da/da9/class_amuse_1_1_core_1_1_handle_list.html#ae5e05c02527c7b84ee11e3416266b420", null ],
     [ "const_reference", "da/da9/class_amuse_1_1_core_1_1_handle_list.html#a3163f7f9f8613e39a5f4c47f1cc42fe9", null ],

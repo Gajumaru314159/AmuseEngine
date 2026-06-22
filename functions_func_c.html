@@ -3,19 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AmuseEngine: クラスメンバ - 関数</title>
+<link rel="icon" href="logo.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="style.css" rel="stylesheet" type="text/css"/>
@@ -36,23 +42,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.6 -->
+<!-- 構築: Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
 });
-/* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -65,10 +93,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('functions_func_c.html',''); initResizable(); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('functions_func_c.html','',''); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -92,15 +119,17 @@ $(document).ready(function(){initNavTree('functions_func_c.html',''); initResiza
 </div>
 
 <div class="contents">
-&#160;
+<div class="textblock">&#160;</div><br/>
+<div class="qindex"><a class="qindex" href="functions_func.html#index_a">A</a><div class="alphasepar"></div><a class="qindex" href="functions_func_b.html#index_b">B</a><div class="alphasepar"></div><a class="qindex" href="functions_func_c.html#index_c">C</a><div class="alphasepar"></div><a class="qindex" href="functions_func_d.html#index_d">D</a><div class="alphasepar"></div><a class="qindex" href="functions_func_e.html#index_e">E</a><div class="alphasepar"></div><a class="qindex" href="functions_func_f.html#index_f">F</a><div class="alphasepar"></div><a class="qindex" href="functions_func_g.html#index_g">G</a><div class="alphasepar"></div><a class="qindex" href="functions_func_h.html#index_h">H</a><div class="alphasepar"></div><a class="qindex" href="functions_func_i.html#index_i">I</a><div class="alphasepar"></div><a class="qindex" href="functions_func_j.html#index_j">J</a><div class="alphasepar"></div><a class="qindex" href="functions_func_k.html#index_k">K</a><div class="alphasepar"></div><a class="qindex" href="functions_func_l.html#index_l">L</a><div class="alphasepar"></div><a class="qindex" href="functions_func_m.html#index_m">M</a><div class="alphasepar"></div><a class="qindex" href="functions_func_n.html#index_n">N</a><div class="alphasepar"></div><a class="qindex" href="functions_func_o.html#index_o">O</a><div class="alphasepar"></div><a class="qindex" href="functions_func_p.html#index_p">P</a><div class="alphasepar"></div><a class="qindex" href="functions_func_q.html#index_q">Q</a><div class="alphasepar"></div><a class="qindex" href="functions_func_r.html#index_r">R</a><div class="alphasepar"></div><a class="qindex" href="functions_func_s.html#index_s">S</a><div class="alphasepar"></div><a class="qindex" href="functions_func_t.html#index_t">T</a><div class="alphasepar"></div><a class="qindex" href="functions_func_u.html#index_u">U</a><div class="alphasepar"></div><a class="qindex" href="functions_func_v.html#index_v">V</a><div class="alphasepar"></div><a class="qindex" href="functions_func_w.html#index_w">W</a><div class="alphasepar"></div><a class="qindex" href="functions_func_x.html#index_x">X</a><div class="alphasepar"></div><a class="qindex" href="functions_func_y.html#index_y">Y</a><div class="alphasepar"></div><a class="qindex" href="functions_func__.html#index__">_</a><div class="alphasepar"></div><a class="qindex" href="functions_func_~.html#index_~">~</a></div>
 
-<h3><a id="index_c" name="index_c"></a>- c -</h3><ul>
+
+<h3 class="doxsection"><a id="index_c" name="index_c"></a>- c -</h3><ul>
 <li>canRead()&#160;:&#160;<a class="el" href="d6/d31/class_amuse_1_1_core_1_1_binary_stream.html#a4a0e8785f3d70cdd554e1440453eb75e">Amuse::Core::BinaryStream</a>, <a class="el" href="da/d8e/class_amuse_1_1_core_1_1_file.html#ad41007d25a15a2dc4a29360c8dc6aaec">Amuse::Core::File</a>, <a class="el" href="d7/dd1/struct_amuse_1_1_core_1_1_property_info.html#a36feb0e21ee43e002fc301b4f676eb6c">Amuse::Core::PropertyInfo</a>, <a class="el" href="df/dc8/class_amuse_1_1_core_1_1_stream.html#ae9a684805323441ffdd3a3cb33aa479a">Amuse::Core::Stream</a></li>
 <li>canReadWrite()&#160;:&#160;<a class="el" href="d7/dd1/struct_amuse_1_1_core_1_1_property_info.html#a27c9a12de936d805ee899e30b489837e">Amuse::Core::PropertyInfo</a></li>
 <li>CanUseAsyncFile()&#160;:&#160;<a class="el" href="d6/d37/class_amuse_1_1_core_1_1_async_file_system.html#a4d919cf428424f2b0eb70b32f396f7a8">Amuse::Core::AsyncFileSystem</a></li>
 <li>canWrite()&#160;:&#160;<a class="el" href="d6/d31/class_amuse_1_1_core_1_1_binary_stream.html#a632ef56962ef56027c60117fb862a437">Amuse::Core::BinaryStream</a>, <a class="el" href="da/d8e/class_amuse_1_1_core_1_1_file.html#a283a4d8fb26226dd45f8d579d5cf2b04">Amuse::Core::File</a>, <a class="el" href="d7/dd1/struct_amuse_1_1_core_1_1_property_info.html#a806c5e663f252e375df6b9558219ff72">Amuse::Core::PropertyInfo</a>, <a class="el" href="df/dc8/class_amuse_1_1_core_1_1_stream.html#add7b6a3ff4bd6df954f84ad9f474a269">Amuse::Core::Stream</a></li>
 <li>capacity()&#160;:&#160;<a class="el" href="df/d96/class_amuse_1_1_core_1_1_blob.html#ab3389cf651efe44c7e570726314f403e">Amuse::Core::Blob</a>, <a class="el" href="d3/dc2/class_amuse_1_1_core_1_1_fixed_vector.html#a003c63caf8c4ab95f16ee6bc9dd742c6">Amuse::Core::FixedVector&lt; T, N &gt;</a>, <a class="el" href="d7/ddc/class_amuse_1_1_core_1_1_index_map.html#a86e004716a3d86366a7d630d80c5c943">Amuse::Core::IndexMap&lt; TKey, TValue, THasher, TKeyEqual, TAllocator &gt;</a>, <a class="el" href="dc/d9f/class_amuse_1_1_core_1_1_t_l_s_f_mapper.html#adc6221a1b2b238a36826bd1c93606a24">Amuse::Core::TLSFMapper</a></li>
-<li>Capsule()&#160;:&#160;<a class="el" href="d9/da8/struct_amuse_1_1_core_1_1_capsule.html#a1f98e2456af198dca85ddc3697f6afb7">Amuse::Core::Capsule</a></li>
+<li>Capsule()&#160;:&#160;<a class="el" href="d9/da8/struct_amuse_1_1_core_1_1_capsule.html#a7d64cd75e23a9bc2bce0e15a18910b28">Amuse::Core::Capsule</a></li>
 <li>Capture()&#160;:&#160;<a class="el" href="da/d85/struct_amuse_1_1_core_1_1_stack_trace.html#ac9cc4faf4ad89007edcdddcc47ddd702">Amuse::Core::StackTrace</a></li>
 <li>cast()&#160;:&#160;<a class="el" href="d8/d51/class_amuse_1_1_core_1_1_ref.html#ae275be7f2b1ceb67c9a2448e68a89f31">Amuse::Core::Ref&lt; T &gt;</a></li>
 <li>Catmull()&#160;:&#160;<a class="el" href="d3/de7/class_amuse_1_1_core_1_1_spline.html#a18d5ffce701749161d0255083d3cdb1b">Amuse::Core::Spline</a></li>
@@ -115,10 +144,10 @@ $(document).ready(function(){initNavTree('functions_func_c.html',''); initResiza
 <li>Check()&#160;:&#160;<a class="el" href="de/d60/class_amuse_1_1_r_h_i_1_1_texture.html#a245b19da44d2591b6da363cfd7f58427">Amuse::RHI::Texture</a></li>
 <li>Circle()&#160;:&#160;<a class="el" href="db/d9f/struct_amuse_1_1_core_1_1_circle.html#afa38b04be0be4ee0e47e1885ca3735e0">Amuse::Core::Circle</a></li>
 <li>circumcenter()&#160;:&#160;<a class="el" href="d9/ddf/class_amuse_1_1_core_1_1_triangle.html#a5b06fce9360dc6897a65e433fd0c278b">Amuse::Core::Triangle</a></li>
-<li>clamp()&#160;:&#160;<a class="el" href="d9/de4/struct_amuse_1_1_core_1_1_color.html#a0c38c7ba93fb5a879eb924872fd22ae5">Amuse::Core::Color</a>, <a class="el" href="d3/d4e/struct_amuse_1_1_core_1_1_h_s_v.html#a3528a7bb24e457914201e7b95fbf22e6">Amuse::Core::HSV</a></li>
 <li>Clamp()&#160;:&#160;<a class="el" href="df/d2e/class_amuse_1_1_core_1_1_math.html#a5ed2cdab9b18c5033d9daea95fdada83">Amuse::Core::Math</a></li>
-<li>clamp01()&#160;:&#160;<a class="el" href="d9/de4/struct_amuse_1_1_core_1_1_color.html#ae92506ffd6fe4c228b3f5294b8c055fc">Amuse::Core::Color</a>, <a class="el" href="d3/d4e/struct_amuse_1_1_core_1_1_h_s_v.html#aa7b592177b63120e2daa7957a6a024da">Amuse::Core::HSV</a></li>
+<li>clamp()&#160;:&#160;<a class="el" href="d9/de4/struct_amuse_1_1_core_1_1_color.html#a0c38c7ba93fb5a879eb924872fd22ae5">Amuse::Core::Color</a>, <a class="el" href="d3/d4e/struct_amuse_1_1_core_1_1_h_s_v.html#a3528a7bb24e457914201e7b95fbf22e6">Amuse::Core::HSV</a></li>
 <li>Clamp01()&#160;:&#160;<a class="el" href="df/d2e/class_amuse_1_1_core_1_1_math.html#aa33ad9ae95ffc2e1faa5d25bb303b7c3">Amuse::Core::Math</a></li>
+<li>clamp01()&#160;:&#160;<a class="el" href="d9/de4/struct_amuse_1_1_core_1_1_color.html#ae92506ffd6fe4c228b3f5294b8c055fc">Amuse::Core::Color</a>, <a class="el" href="d3/d4e/struct_amuse_1_1_core_1_1_h_s_v.html#aa7b592177b63120e2daa7957a6a024da">Amuse::Core::HSV</a></li>
 <li>ClassBuilder()&#160;:&#160;<a class="el" href="d0/d95/class_amuse_1_1_core_1_1_class_builder.html#a44244c74ed2480e0d15df94c9e323c5a">Amuse::Core::ClassBuilder</a></li>
 <li>ClassBuilderTemplate()&#160;:&#160;<a class="el" href="da/d8a/class_amuse_1_1_core_1_1_class_builder_template.html#a6b46742962359e6f4514aed764480568">Amuse::Core::ClassBuilderTemplate&lt; _T &gt;</a></li>
 <li>clear()&#160;:&#160;<a class="el" href="d3/d9a/class_amuse_1_1_core_1_1_any.html#aed245fd57bd02d554bc75b95cae7d976">Amuse::Core::Any</a>, <a class="el" href="d8/d40/class_amuse_1_1_core_1_1_bit_flags.html#ab7f3effc1bd2beeb240e17bbb8d46fcf">Amuse::Core::BitFlags&lt; TEnum, TBitsType &gt;</a>, <a class="el" href="d6/d91/class_amuse_1_1_core_1_1_bitmap.html#acde3eb8ea18c545020f3ec3ae025b34d">Amuse::Core::Bitmap</a>, <a class="el" href="df/d96/class_amuse_1_1_core_1_1_blob.html#ac35a479865ff03d22dc5a0c9b0f1eb29">Amuse::Core::Blob</a>, <a class="el" href="d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a5646fa3f43f7085f30b0071423ca5242">Amuse::Core::BlobView</a>, <a class="el" href="d8/d02/class_amuse_1_1_core_1_1_component_manager.html#a53f848b6e70e9b866a6dcc7996a2183a">Amuse::Core::ComponentManager&lt; T &gt;</a>, <a class="el" href="d3/d42/class_amuse_1_1_core_1_1_event_notifier.html#af70e6fefa3d2f3d9cd19737c89d1e1a7">Amuse::Core::EventNotifier&lt; Args &gt;</a>, <a class="el" href="d3/dc2/class_amuse_1_1_core_1_1_fixed_vector.html#a9f9ca37e5f3e14abd3de8dae98435c80">Amuse::Core::FixedVector&lt; T, N &gt;</a>, <a class="el" href="d3/ddf/class_amuse_1_1_core_1_1_handle_forward_list.html#a3ef3cdf8da462680a502af32f8adb5de">Amuse::Core::HandleForwardList&lt; T &gt;</a>, <a class="el" href="da/da9/class_amuse_1_1_core_1_1_handle_list.html#a018182cfbd76061824df358bcf4d0f47">Amuse::Core::HandleList&lt; T &gt;</a>, <a class="el" href="db/dbd/class_amuse_1_1_core_1_1_handle_manager_1_1_handle.html#ae3735ea5b2d3365cfd55f45af24e7939">Amuse::Core::HandleManager&lt; T, Deleter &gt;::Handle</a>, <a class="el" href="db/d95/class_amuse_1_1_core_1_1_indexed_vector.html#a9b4e5879e40099e63f9e511532521e5a">Amuse::Core::IndexedVector&lt; T, TIndex, TDataVector, TIndexVector &gt;</a>, <a class="el" href="d7/ddc/class_amuse_1_1_core_1_1_index_map.html#a5a5911f51fd33b72384d8a2f4065f2d6">Amuse::Core::IndexMap&lt; TKey, TValue, THasher, TKeyEqual, TAllocator &gt;</a>, <a class="el" href="df/d76/class_amuse_1_1_core_1_1_i_n_i.html#af1b11f04ce89a2bcd005700322c9ba88">Amuse::Core::INI</a>, <a class="el" href="d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html#a37ec8f43f84ece8a42a38294f0b6a352">Amuse::Core::INISection</a>, <a class="el" href="d4/d06/class_amuse_1_1_core_1_1_intrusive_queue.html#a924a88f13b50fa8cdd18a12dcae4ed30">Amuse::Core::IntrusiveQueue&lt; T, pMember &gt;</a>, <a class="el" href="d7/d3a/class_amuse_1_1_core_1_1_property.html#a826626b22324b96a3c67adf3c0249202">Amuse::Core::Property</a>, <a class="el" href="db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a3eea6f1202f9b0b21e015f4f8c65e8d1">Amuse::Core::Spline2D</a>, <a class="el" href="de/dfa/class_amuse_1_1_core_1_1_swapper.html#a1263c28c66dcc274aabeee65f896dde9">Amuse::Core::Swapper&lt; T &gt;</a></li>
@@ -130,12 +159,12 @@ $(document).ready(function(){initNavTree('functions_func_c.html',''); initResiza
 <li>close()&#160;:&#160;<a class="el" href="da/d8e/class_amuse_1_1_core_1_1_file.html#a750ff98beae5f8b6d2265de37fc66e10">Amuse::Core::File</a>, <a class="el" href="d1/d28/class_amuse_1_1_core_1_1_t_c_p_server.html#a4373fddeae6f0df01fccc7ba5f7273f5">Amuse::Core::TCPServer</a>, <a class="el" href="dc/d63/class_amuse_1_1_platform_1_1_window.html#ada626fa9caa17d8422d849a4d2e02e47">Amuse::Platform::Window</a></li>
 <li>Color()&#160;:&#160;<a class="el" href="d9/de4/struct_amuse_1_1_core_1_1_color.html#a0d2a0ce39b4267e830bd832605295c1b">Amuse::Core::Color</a></li>
 <li>column()&#160;:&#160;<a class="el" href="da/d0a/class_amuse_1_1_core_1_1_xml_exception.html#afc75c1c1142aec07f244f92fd8168275">Amuse::Core::XmlException</a></li>
-<li>Combine()&#160;:&#160;<a class="el" href="d5/d6f/class_amuse_1_1_core_1_1_hash.html#a674a6282c261022216e1273e7386722a">Amuse::Core::Hash</a>, <a class="el" href="df/db9/class_amuse_1_1_core_1_1_path.html#ab5c509e31dff3241121d2b7875eee3d7">Amuse::Core::Path</a></li>
+<li>Combine()&#160;:&#160;<a class="el" href="d5/d6f/class_amuse_1_1_core_1_1_hash.html#a4e3f756e8ee02dd701b6b9e4e5950e4d">Amuse::Core::Hash</a>, <a class="el" href="df/db9/class_amuse_1_1_core_1_1_path.html#ab5c509e31dff3241121d2b7875eee3d7">Amuse::Core::Path</a></li>
 <li>CommaSplitView()&#160;:&#160;<a class="el" href="d6/d6a/class_amuse_1_1_core_1_1_comma_split_view.html#a6893c587da30596f1dddec6ef301dd54">Amuse::Core::CommaSplitView</a></li>
 <li>comment()&#160;:&#160;<a class="el" href="d4/d75/class_amuse_1_1_core_1_1_o_b_j.html#a902795c6c4deeb67dddee980e5980349">Amuse::Core::OBJ</a></li>
 <li>commitBarriers()&#160;:&#160;<a class="el" href="d7/dc8/class_amuse_1_1_r_h_i_1_1_command_list.html#a74cc4e380eef3d7d205b2c67f7dca34b">Amuse::RHI::CommandList</a></li>
-<li>compile()&#160;:&#160;<a class="el" href="da/d73/class_amuse_1_1_core_1_1_schedule.html#ade5c2346ebc69ec2bcac4199e76e56df">Amuse::Core::Schedule&lt; Args &gt;</a></li>
 <li>Compile()&#160;:&#160;<a class="el" href="d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html#a4b0ee4beb6ce9af8e457f7dd991aaf04">Amuse::RHI::Shader</a></li>
+<li>compile()&#160;:&#160;<a class="el" href="da/d73/class_amuse_1_1_core_1_1_schedule.html#ade5c2346ebc69ec2bcac4199e76e56df">Amuse::Core::Schedule&lt; Args &gt;</a></li>
 <li>CompileCS()&#160;:&#160;<a class="el" href="d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html#a52a95aca955b91c9b8cdf3f9aa72f057">Amuse::RHI::Shader</a></li>
 <li>CompilePS()&#160;:&#160;<a class="el" href="d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html#a450dfe3cc0db7bfa8a51aba5502d118f">Amuse::RHI::Shader</a></li>
 <li>compileShader()&#160;:&#160;<a class="el" href="d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#a21238975bdf84a963bb1a7c881ead41c">Amuse::RHI::Device</a>, <a class="el" href="d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#a059dd2893aa96a0ec8df416aeae7ec2d">Amuse::RHI::DirectX12Device</a></li>
@@ -143,24 +172,23 @@ $(document).ready(function(){initNavTree('functions_func_c.html',''); initResiza
 <li>ComponentHolder()&#160;:&#160;<a class="el" href="d5/df2/class_amuse_1_1_core_1_1_component_holder.html#a3ca298ee5a9048d8d268f6499e98f699">Amuse::Core::ComponentHolder&lt; T &gt;</a></li>
 <li>compose()&#160;:&#160;<a class="el" href="da/d73/class_amuse_1_1_core_1_1_schedule.html#a65171c574f65e12802e3a5c82ac85e5b">Amuse::Core::Schedule&lt; Args &gt;</a></li>
 <li>Compress()&#160;:&#160;<a class="el" href="d4/dbe/class_amuse_1_1_core_1_1_g_deflate.html#a902627fc1fbe865d936c7601473ead0d">Amuse::Core::GDeflate</a></li>
-<li>Compute()&#160;:&#160;<a class="el" href="d6/d57/class_amuse_1_1_core_1_1_c_r_c_hash.html#a7dd990e308fd0c445862ce83adedc30a">Amuse::Core::CRCHash</a></li>
+<li>Compute()&#160;:&#160;<a class="el" href="d6/d57/class_amuse_1_1_core_1_1_c_r_c_hash.html#a595c52ac38a23a564fdc375607fc43b9">Amuse::Core::CRCHash</a></li>
 <li>configureSet()&#160;:&#160;<a class="el" href="da/d73/class_amuse_1_1_core_1_1_schedule.html#a5df68ca91fdbe7de4fcae3a05a37bfd2">Amuse::Core::Schedule&lt; Args &gt;</a></li>
 <li>conflict()&#160;:&#160;<a class="el" href="db/d92/class_amuse_1_1_core_1_1_task.html#a5b976257bd6fba1bdc2c83b4043d3bf7">Amuse::Core::Task</a></li>
 <li>connect()&#160;:&#160;<a class="el" href="da/dce/class_amuse_1_1_core_1_1_t_c_p_client.html#a45fd285b6073961e745805da237abde4">Amuse::Core::TCPClient</a></li>
 <li>consolidate()&#160;:&#160;<a class="el" href="de/dff/class_amuse_1_1_core_1_1_span_allocator.html#a75e4dafe2c79c47103a47022e7302c7c">Amuse::Core::SpanAllocator</a></li>
-<li>const_iterator()&#160;:&#160;<a class="el" href="d4/d7f/class_amuse_1_1_core_1_1_handle_forward_list_1_1const__iterator.html#ae1260fe3bdb703aed18661e1dc91d1bd">Amuse::Core::HandleForwardList&lt; T &gt;::const_iterator</a>, <a class="el" href="d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html#a41221959db202da840d9b6b626b18fcd">Amuse::Core::HandleList&lt; T &gt;::const_iterator</a></li>
+<li>const_iterator()&#160;:&#160;<a class="el" href="d4/d7f/class_amuse_1_1_core_1_1_handle_forward_list_1_1const__iterator.html#ae1260fe3bdb703aed18661e1dc91d1bd">Amuse::Core::HandleForwardList&lt; T &gt;::const_iterator</a>, <a class="el" href="d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html#ab588634d056046115d9b51982a18b4dd">Amuse::Core::HandleList&lt; T &gt;::const_iterator</a></li>
 <li>Constant()&#160;:&#160;<a class="el" href="d7/dab/struct_amuse_1_1_r_h_i_1_1_buffer_desc.html#afefdd1d576c6647ea790684e327d71ca">Amuse::RHI::BufferDesc</a></li>
 <li>construct()&#160;:&#160;<a class="el" href="d5/d6f/class_amuse_1_1_core_1_1_memory_storage_base.html#a22a25e36f48c860eebc417f55063dad0">Amuse::Core::MemoryStorageBase&lt; T, SIZE, ALIGN &gt;</a></li>
 <li>container()&#160;:&#160;<a class="el" href="db/d95/class_amuse_1_1_core_1_1_indexed_vector.html#a8cb667e6b44cb7dd7a36bc20236dcd00">Amuse::Core::IndexedVector&lt; T, TIndex, TDataVector, TIndexVector &gt;</a></li>
-<li>contains()&#160;:&#160;<a class="el" href="d3/daa/class_amuse_1_1_core_1_1_any_container.html#a21003077838acbf78280ee14844a7ebd">Amuse::Core::AnyContainer</a>, <a class="el" href="d8/d02/class_amuse_1_1_core_1_1_component_manager.html#a04f94595ce90b0b1b5dbb78886f05f45">Amuse::Core::ComponentManager&lt; T &gt;</a>, <a class="el" href="d7/ddc/class_amuse_1_1_core_1_1_index_map.html#a02d83c86670209010db5be968e6053c7">Amuse::Core::IndexMap&lt; TKey, TValue, THasher, TKeyEqual, TAllocator &gt;</a>, <a class="el" href="db/d8d/class_amuse_1_1_core_1_1_locale.html#a9da8f6c2e00c7ceedb51e523577bc4e2">Amuse::Core::Locale</a>, <a class="el" href="d5/d54/struct_amuse_1_1_core_1_1_range.html#a4893dd6f95ba7acff41a68bc7a713254">Amuse::Core::Range</a>, <a class="el" href="dc/d9f/class_amuse_1_1_core_1_1_t_l_s_f_mapper.html#a40d57243f5d40cc352c5b8e49f55279d">Amuse::Core::TLSFMapper</a></li>
+<li>contains()&#160;:&#160;<a class="el" href="d3/daa/class_amuse_1_1_core_1_1_any_container.html#aa36158ef5a11f480350e40db6f5b1731">Amuse::Core::AnyContainer</a>, <a class="el" href="d8/d02/class_amuse_1_1_core_1_1_component_manager.html#a04f94595ce90b0b1b5dbb78886f05f45">Amuse::Core::ComponentManager&lt; T &gt;</a>, <a class="el" href="d7/ddc/class_amuse_1_1_core_1_1_index_map.html#a02d83c86670209010db5be968e6053c7">Amuse::Core::IndexMap&lt; TKey, TValue, THasher, TKeyEqual, TAllocator &gt;</a>, <a class="el" href="db/d8d/class_amuse_1_1_core_1_1_locale.html#a9da8f6c2e00c7ceedb51e523577bc4e2">Amuse::Core::Locale</a>, <a class="el" href="d5/d54/struct_amuse_1_1_core_1_1_range.html#a4893dd6f95ba7acff41a68bc7a713254">Amuse::Core::Range</a>, <a class="el" href="dc/d9f/class_amuse_1_1_core_1_1_t_l_s_f_mapper.html#a40d57243f5d40cc352c5b8e49f55279d">Amuse::Core::TLSFMapper</a></li>
 <li>containsCC()&#160;:&#160;<a class="el" href="d5/d54/struct_amuse_1_1_core_1_1_range.html#a4a4cd557e93c5b3ec64b53d199baa8c8">Amuse::Core::Range</a></li>
 <li>containsCO()&#160;:&#160;<a class="el" href="d5/d54/struct_amuse_1_1_core_1_1_range.html#a5708ce505e6ff062f6b270b9184f413f">Amuse::Core::Range</a></li>
 <li>containsOC()&#160;:&#160;<a class="el" href="d5/d54/struct_amuse_1_1_core_1_1_range.html#a4a7bbd9b50a732dcfea22c137afbd30b">Amuse::Core::Range</a></li>
 <li>containsOO()&#160;:&#160;<a class="el" href="d5/d54/struct_amuse_1_1_core_1_1_range.html#adb442a34471a3263ac6fbe2a8723b006">Amuse::Core::Range</a></li>
 <li>Contents()&#160;:&#160;<a class="el" href="d8/d6b/class_amuse_1_1_core_1_1_directory.html#a6e91e56ca9ce7e7ca3a2b2807db62c64">Amuse::Core::Directory</a></li>
-<li>copy()&#160;:&#160;<a class="el" href="d3/d9a/class_amuse_1_1_core_1_1_any.html#ad55c3c3bf8d06a308a8ddaf8c3b1b20d">Amuse::Core::Any</a>, <a class="el" href="d8/d02/class_amuse_1_1_core_1_1_component_manager.html#a3afede8a57addc76793e61afe7f5874c">Amuse::Core::ComponentManager&lt; T &gt;</a></li>
 <li>Copy()&#160;:&#160;<a class="el" href="d8/d6b/class_amuse_1_1_core_1_1_directory.html#a263043931daf0c78c18941147a5ed2d9">Amuse::Core::Directory</a>, <a class="el" href="da/d8e/class_amuse_1_1_core_1_1_file.html#aabc3371744fce9a47e0966e9cf6d90b0">Amuse::Core::File</a></li>
-<li>copy()&#160;:&#160;<a class="el" href="d7/d3a/class_amuse_1_1_core_1_1_property.html#a8f6b3921e1eeb7cccf408a2619ff3156">Amuse::Core::Property</a>, <a class="el" href="d3/d31/struct_amuse_1_1_core_1_1_type_info.html#a92b2ce6e369e741a2e9c7588fdb40153">Amuse::Core::TypeInfo</a></li>
+<li>copy()&#160;:&#160;<a class="el" href="d3/d9a/class_amuse_1_1_core_1_1_any.html#ad55c3c3bf8d06a308a8ddaf8c3b1b20d">Amuse::Core::Any</a>, <a class="el" href="d8/d02/class_amuse_1_1_core_1_1_component_manager.html#a3afede8a57addc76793e61afe7f5874c">Amuse::Core::ComponentManager&lt; T &gt;</a>, <a class="el" href="d7/d3a/class_amuse_1_1_core_1_1_property.html#a3dacf88559a4f809cc249af6791e35b2">Amuse::Core::Property</a>, <a class="el" href="d3/d31/struct_amuse_1_1_core_1_1_type_info.html#a92b2ce6e369e741a2e9c7588fdb40153">Amuse::Core::TypeInfo</a></li>
 <li>copyBuffer()&#160;:&#160;<a class="el" href="d7/dc8/class_amuse_1_1_r_h_i_1_1_command_list.html#a1bb4ed793cc22aa4e36836de9dc8489a">Amuse::RHI::CommandList</a></li>
 <li>copyBufferToTexture()&#160;:&#160;<a class="el" href="d7/dc8/class_amuse_1_1_r_h_i_1_1_command_list.html#ad6eb6a54ee0b604446cf404dd448512c">Amuse::RHI::CommandList</a></li>
 <li>copyTexture()&#160;:&#160;<a class="el" href="d7/dc8/class_amuse_1_1_r_h_i_1_1_command_list.html#a91d1fd1896fad41fdf6b0a53e1f987da">Amuse::RHI::CommandList</a></li>
@@ -170,13 +198,10 @@ $(document).ready(function(){initNavTree('functions_func_c.html',''); initResiza
 <li>CosD()&#160;:&#160;<a class="el" href="df/d2e/class_amuse_1_1_core_1_1_math.html#aec3d16ab6c8a2e972f35db27c86f8cc0">Amuse::Core::Math</a></li>
 <li>count()&#160;:&#160;<a class="el" href="d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a5f3fc9364cc277d7ebf5832dcc2a0e2e">Amuse::Core::XmlNode</a></li>
 <li>crbegin()&#160;:&#160;<a class="el" href="d6/d91/class_amuse_1_1_core_1_1_bitmap.html#a543c9c9a5933e272af39987acd537515">Amuse::Core::Bitmap</a>, <a class="el" href="df/d96/class_amuse_1_1_core_1_1_blob.html#af195722a435251f7bf78bc46c92e389a">Amuse::Core::Blob</a>, <a class="el" href="d3/dc2/class_amuse_1_1_core_1_1_fixed_vector.html#a233a44704cde89c7e273ec25fe4044dd">Amuse::Core::FixedVector&lt; T, N &gt;</a>, <a class="el" href="da/da9/class_amuse_1_1_core_1_1_handle_list.html#a8ed88dd68e8aa970f5dd4dd510696849">Amuse::Core::HandleList&lt; T &gt;</a>, <a class="el" href="d7/ddc/class_amuse_1_1_core_1_1_index_map.html#a3a0919962e615df81cecd4b17bbcb2ea">Amuse::Core::IndexMap&lt; TKey, TValue, THasher, TKeyEqual, TAllocator &gt;</a></li>
-<li>Create()&#160;:&#160;<a class="el" href="d3/d9a/class_amuse_1_1_core_1_1_any.html#a86ecb000afc9e2e64137cce0ba72aaef">Amuse::Core::Any</a></li>
-<li>create()&#160;:&#160;<a class="el" href="d8/d02/class_amuse_1_1_core_1_1_component_manager.html#ab9eb353bd3423a1f2e118a3b9237202d">Amuse::Core::ComponentManager&lt; T &gt;</a></li>
-<li>Create()&#160;:&#160;<a class="el" href="d8/d6b/class_amuse_1_1_core_1_1_directory.html#acb01d3f4dc5f8f991d3ae095281923f4">Amuse::Core::Directory</a></li>
-<li>create()&#160;:&#160;<a class="el" href="d6/d5f/class_amuse_1_1_core_1_1_service_injector.html#a5a23feff29077144505f32c9f0c921fe">Amuse::Core::ServiceInjector</a></li>
-<li>Create()&#160;:&#160;<a class="el" href="db/d92/class_amuse_1_1_core_1_1_task.html#a408a9fe25d5ad012059d3b9564f2cbbc">Amuse::Core::Task</a>, <a class="el" href="dc/d63/class_amuse_1_1_platform_1_1_window.html#afd41f81dbc8837ca824bc943038b953f">Amuse::Platform::Window</a>, <a class="el" href="d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#a1bbe08526afb8ef3a6052aea5b9a50eb">Amuse::RHI::Buffer</a>, <a class="el" href="d7/dc8/class_amuse_1_1_r_h_i_1_1_command_list.html#a9e8a217c5a1343052626173195c954e2">Amuse::RHI::CommandList</a>, <a class="el" href="d9/dab/class_amuse_1_1_r_h_i_1_1_compute_pipeline_state.html#a59b9aa314ae07d85889a38d99c6d44ea">Amuse::RHI::ComputePipelineState</a>, <a class="el" href="dc/db6/class_amuse_1_1_r_h_i_1_1_descriptor_layout.html#a8ca14cd7db626dfc61ed6d31b51f6ec4">Amuse::RHI::DescriptorLayout</a>, <a class="el" href="d2/d8f/class_amuse_1_1_r_h_i_1_1_descriptor_table.html#ae351d3edbf1b4f79bad048d5276e5427">Amuse::RHI::DescriptorTable</a>, <a class="el" href="d4/d3a/class_amuse_1_1_r_h_i_1_1_event_query.html#a4e3cb269c2e0202a6fa62503666c4b4e">Amuse::RHI::EventQuery</a>, <a class="el" href="d9/d03/class_amuse_1_1_r_h_i_1_1_fence.html#aaecc84d95fd9f54028f74571c45b7ea6">Amuse::RHI::Fence</a>, <a class="el" href="dc/de0/class_amuse_1_1_r_h_i_1_1_graphic_file_event.html#a0eb6d1de9b3ea99953b6eba3350e32a0">Amuse::RHI::GraphicFileEvent</a>, <a class="el" href="da/db5/class_amuse_1_1_r_h_i_1_1_graphic_file_handle.html#af7f6641fcd3ea99bba86d1da70c96efe">Amuse::RHI::GraphicFileHandle</a>, <a class="el" href="d8/d50/class_amuse_1_1_r_h_i_1_1_graphic_file_queue.html#ae8c61af9f852bf8a3c5bb089654cbda4">Amuse::RHI::GraphicFileQueue</a>, <a class="el" href="d6/d59/class_amuse_1_1_r_h_i_1_1_pipeline_state.html#a9e6dd36491d35361690de95b824a247d">Amuse::RHI::PipelineState</a>, <a class="el" href="da/d86/class_amuse_1_1_r_h_i_1_1_render_texture.html#a32796a84fc5cb696dc10670d8c4b6410">Amuse::RHI::RenderTexture</a>, <a class="el" href="de/d11/class_amuse_1_1_r_h_i_1_1_root_signature.html#a5078d8cd980882646110a1fa51915dcb">Amuse::RHI::RootSignature</a>, <a class="el" href="da/d9b/class_amuse_1_1_r_h_i_1_1_sampler.html#a7d252ceb99edfa8556655c7ca6d025a8">Amuse::RHI::Sampler</a>, <a class="el" href="d5/df6/class_amuse_1_1_r_h_i_1_1_swap_chain.html#ae56f8dc020e0c19a393a1b7efa867677">Amuse::RHI::SwapChain</a>, <a class="el" href="de/d60/class_amuse_1_1_r_h_i_1_1_texture.html#a8e786d1afeab971b182b486fa51eb160">Amuse::RHI::Texture</a>, <a class="el" href="d4/d23/class_amuse_1_1_r_h_i_1_1_timer_query.html#a314e778e5424ffb189b9d14120391425">Amuse::RHI::TimerQuery</a>, <a class="el" href="dc/df3/class_amuse_1_1_r_h_i_1_1_vertex_layout.html#a29f5f48f6b64e6373791d3cfd71ac1ff">Amuse::RHI::VertexLayout</a></li>
+<li>Create()&#160;:&#160;<a class="el" href="d3/d9a/class_amuse_1_1_core_1_1_any.html#a86ecb000afc9e2e64137cce0ba72aaef">Amuse::Core::Any</a>, <a class="el" href="d8/d6b/class_amuse_1_1_core_1_1_directory.html#acb01d3f4dc5f8f991d3ae095281923f4">Amuse::Core::Directory</a>, <a class="el" href="db/d92/class_amuse_1_1_core_1_1_task.html#a408a9fe25d5ad012059d3b9564f2cbbc">Amuse::Core::Task</a>, <a class="el" href="dc/d63/class_amuse_1_1_platform_1_1_window.html#afd41f81dbc8837ca824bc943038b953f">Amuse::Platform::Window</a>, <a class="el" href="d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html#a4f91925a57c7c91d1a36b90dafc0acf4">Amuse::RHI::Buffer</a>, <a class="el" href="d7/dc8/class_amuse_1_1_r_h_i_1_1_command_list.html#a9e8a217c5a1343052626173195c954e2">Amuse::RHI::CommandList</a>, <a class="el" href="d9/dab/class_amuse_1_1_r_h_i_1_1_compute_pipeline_state.html#a59b9aa314ae07d85889a38d99c6d44ea">Amuse::RHI::ComputePipelineState</a>, <a class="el" href="dc/db6/class_amuse_1_1_r_h_i_1_1_descriptor_layout.html#a8ca14cd7db626dfc61ed6d31b51f6ec4">Amuse::RHI::DescriptorLayout</a>, <a class="el" href="d2/d8f/class_amuse_1_1_r_h_i_1_1_descriptor_table.html#ae351d3edbf1b4f79bad048d5276e5427">Amuse::RHI::DescriptorTable</a>, <a class="el" href="d4/d3a/class_amuse_1_1_r_h_i_1_1_event_query.html#a4e3cb269c2e0202a6fa62503666c4b4e">Amuse::RHI::EventQuery</a>, <a class="el" href="d9/d03/class_amuse_1_1_r_h_i_1_1_fence.html#aaecc84d95fd9f54028f74571c45b7ea6">Amuse::RHI::Fence</a>, <a class="el" href="dc/de0/class_amuse_1_1_r_h_i_1_1_graphic_file_event.html#a0eb6d1de9b3ea99953b6eba3350e32a0">Amuse::RHI::GraphicFileEvent</a>, <a class="el" href="da/db5/class_amuse_1_1_r_h_i_1_1_graphic_file_handle.html#af7f6641fcd3ea99bba86d1da70c96efe">Amuse::RHI::GraphicFileHandle</a>, <a class="el" href="d8/d50/class_amuse_1_1_r_h_i_1_1_graphic_file_queue.html#ae8c61af9f852bf8a3c5bb089654cbda4">Amuse::RHI::GraphicFileQueue</a>, <a class="el" href="d6/d59/class_amuse_1_1_r_h_i_1_1_pipeline_state.html#a9e6dd36491d35361690de95b824a247d">Amuse::RHI::PipelineState</a>, <a class="el" href="da/d86/class_amuse_1_1_r_h_i_1_1_render_texture.html#a32796a84fc5cb696dc10670d8c4b6410">Amuse::RHI::RenderTexture</a>, <a class="el" href="de/d11/class_amuse_1_1_r_h_i_1_1_root_signature.html#a5078d8cd980882646110a1fa51915dcb">Amuse::RHI::RootSignature</a>, <a class="el" href="da/d9b/class_amuse_1_1_r_h_i_1_1_sampler.html#a7d252ceb99edfa8556655c7ca6d025a8">Amuse::RHI::Sampler</a>, <a class="el" href="d5/df6/class_amuse_1_1_r_h_i_1_1_swap_chain.html#ae56f8dc020e0c19a393a1b7efa867677">Amuse::RHI::SwapChain</a>, <a class="el" href="de/d60/class_amuse_1_1_r_h_i_1_1_texture.html#a8e786d1afeab971b182b486fa51eb160">Amuse::RHI::Texture</a>, <a class="el" href="d4/d23/class_amuse_1_1_r_h_i_1_1_timer_query.html#a314e778e5424ffb189b9d14120391425">Amuse::RHI::TimerQuery</a>, <a class="el" href="dc/df3/class_amuse_1_1_r_h_i_1_1_vertex_layout.html#a29f5f48f6b64e6373791d3cfd71ac1ff">Amuse::RHI::VertexLayout</a></li>
+<li>create()&#160;:&#160;<a class="el" href="d8/d02/class_amuse_1_1_core_1_1_component_manager.html#ab9eb353bd3423a1f2e118a3b9237202d">Amuse::Core::ComponentManager&lt; T &gt;</a>, <a class="el" href="d6/d5f/class_amuse_1_1_core_1_1_service_injector.html#a5a23feff29077144505f32c9f0c921fe">Amuse::Core::ServiceInjector</a></li>
 <li>createAll()&#160;:&#160;<a class="el" href="d6/d5f/class_amuse_1_1_core_1_1_service_injector.html#a34c4307dec0391e83e7049be01b64c10">Amuse::Core::ServiceInjector</a></li>
-<li>createBuffer()&#160;:&#160;<a class="el" href="d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#aa5b41de6d58d7e268afd7ab5547bb67f">Amuse::RHI::Device</a>, <a class="el" href="d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#a1a1ac34bd1b9150f6a73a06b011c7578">Amuse::RHI::DirectX12Device</a></li>
+<li>createBuffer()&#160;:&#160;<a class="el" href="d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#a6b40d8cb5787455d49beb19a42d8dade">Amuse::RHI::Device</a>, <a class="el" href="d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#a8af9b2857398cdc957875432f6840c07">Amuse::RHI::DirectX12Device</a></li>
 <li>createChild()&#160;:&#160;<a class="el" href="d0/d57/class_amuse_1_1_core_1_1_job_group.html#a2a5e73f539132d69b02fabc3f894ef1e">Amuse::Core::JobGroup</a></li>
 <li>createCommandList()&#160;:&#160;<a class="el" href="d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#a3f90247fbe776f4dd19a8832ce68ab35">Amuse::RHI::Device</a>, <a class="el" href="d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#a5ca5a39e126c18f5ca0e103efee16f2e">Amuse::RHI::DirectX12Device</a></li>
 <li>createComputePipelineState()&#160;:&#160;<a class="el" href="d1/d22/class_amuse_1_1_r_h_i_1_1_device.html#a47220dacbabac29684f1a09975d26fc9">Amuse::RHI::Device</a>, <a class="el" href="d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html#a8162be95926c4849e1e25be0e6446e2d">Amuse::RHI::DirectX12Device</a></li>
@@ -207,10 +232,11 @@ $(document).ready(function(){initNavTree('functions_func_c.html',''); initResiza
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

@@ -3,19 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AmuseEngine: Runtime/Core/Public/Amuse/Core/File/INI.h ソースファイル</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../jquery.js"></script>
-<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
 <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
 <script type="text/javascript" src="../../navtreedata.js"></script>
 <script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="../../style.css" rel="stylesheet" type="text/css"/>
@@ -36,23 +42,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.6 -->
+<!-- 構築: Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('../../',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
 });
-/* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -65,10 +93,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('d7/d38/_i_n_i_8h_source.html','../../'); initResizable(); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d7/d38/_i_n_i_8h_source.html','../../',''); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -96,118 +123,120 @@ $(document).ready(function(){initNavTree('d7/d38/_i_n_i_8h_source.html','../../'
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//***********************************************************</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"></span><span class="comment">//***********************************************************</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//***********************************************************</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;Amuse/Core/CorePrivate.h&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span>Amuse::Core {</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="../../d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html">   11</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html">INISection</a> {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span></div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="../../d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html">   11</a></span>    <span class="keyword">class </span>INISection {</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <a class="code hl_class" href="../../d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html">INISection</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="../../d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html#ae95cb78b4a673f4162d225df7c59de4e">   16</a></span>        <a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a>&amp; <a class="code hl_function" href="../../d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html#ae95cb78b4a673f4162d225df7c59de4e">operator[]</a>(<a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a> key);</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="../../d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html#a78821aeb6e87449f6de00a1c654b516d">   19</a></span>        <a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a> <a class="code hl_function" href="../../d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html#a78821aeb6e87449f6de00a1c654b516d">get</a>(<a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a> key, <a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a> fallback)<span class="keyword">const</span>;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html#a917906afa30276ee637e9b7d0da8b874">   22</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html#a917906afa30276ee637e9b7d0da8b874">has</a>(<a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a> key)<span class="keyword">const</span>;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html#aa8a55ada9f2f1940cf4b95f9905d63bc">   25</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html#aa8a55ada9f2f1940cf4b95f9905d63bc">remove</a>(<a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a> key);</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        INISection() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="../../d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html#ae95cb78b4a673f4162d225df7c59de4e">   16</a></span>        String&amp; <a class="code hl_function" href="../../d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html#ae95cb78b4a673f4162d225df7c59de4e">operator[]</a>(String key);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="../../d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html#a78821aeb6e87449f6de00a1c654b516d">   19</a></span>        String <a class="code hl_function" href="../../d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html#a78821aeb6e87449f6de00a1c654b516d">get</a>(String key, String fallback)<span class="keyword">const</span>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html#a917906afa30276ee637e9b7d0da8b874">   22</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html#a917906afa30276ee637e9b7d0da8b874">has</a>(String key)<span class="keyword">const</span>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html#aa8a55ada9f2f1940cf4b95f9905d63bc">   25</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html#aa8a55ada9f2f1940cf4b95f9905d63bc">remove</a>(String key);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html#a37ec8f43f84ece8a42a38294f0b6a352">   28</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html#a37ec8f43f84ece8a42a38294f0b6a352">clear</a>();</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="../../d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html#af19e75a0433acf241009a34caca83836">   31</a></span>        <span class="keywordtype">size_t</span> <a class="code hl_function" href="../../d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html#af19e75a0433acf241009a34caca83836">size</a>()<span class="keyword">const</span>;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span></div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="../../d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html#a7caa8e70472608ae818b1a44424089fa">   34</a></span>        <span class="keyword">auto</span> <a class="code hl_function" href="../../d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html#a7caa8e70472608ae818b1a44424089fa">begin</a>()<span class="keyword">const </span>{ <span class="keywordflow">return</span> m_container.cbegin(); }</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span></div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html#aea3f351436f2354b70feb5682ec74146">   37</a></span>        <span class="keyword">auto</span> <a class="code hl_function" href="../../d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html#aea3f351436f2354b70feb5682ec74146">end</a>()<span class="keyword">const </span>{ <span class="keywordflow">return</span> m_container.cend(); }</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        Map&lt;String, String&gt; m_container;</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    };</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html">   44</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html">INI</a> {</div>
+</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span></div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="};">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html">   44</a></span>    <span class="keyword">class </span><a class="code hl_function" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#abd29f6e59c2786b00371d1af1eb5a754">INI</a> {</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span></div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#abd29f6e59c2786b00371d1af1eb5a754">   48</a></span>        <a class="code hl_function" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#abd29f6e59c2786b00371d1af1eb5a754">INI</a>();</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#a4825a38b85cc417ffc7d27a83a6997b4">   51</a></span>        <span class="keyword">explicit</span> <a class="code hl_function" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#a4825a38b85cc417ffc7d27a83a6997b4">INI</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> path);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#a4825a38b85cc417ffc7d27a83a6997b4">   51</a></span>        <span class="keyword">explicit</span> <a class="code hl_function" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#a4825a38b85cc417ffc7d27a83a6997b4">INI</a>(StringView path);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span></div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#aef53a7e24ec797293ee0403400fc28f4">   54</a></span>        <a class="code hl_function" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#aef53a7e24ec797293ee0403400fc28f4">~INI</a>();</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#a393d0746b4443f020644b60258a9c996">   57</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#a393d0746b4443f020644b60258a9c996">load</a>(<a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a> path);</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#a0a8afba5fc81fd4a6802110594a7c515">   61</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#a0a8afba5fc81fd4a6802110594a7c515">save</a>(<a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a> path = <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#aa1134e1b239ad409ea2fd5fb0b44e64e">   64</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#aa1134e1b239ad409ea2fd5fb0b44e64e">parse</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> text);</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#addcd27d9eabea697ddb8cf759f7d1e7b">   67</a></span>        <a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a> <a class="code hl_function" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#addcd27d9eabea697ddb8cf759f7d1e7b">string</a>();</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#acd32284489ff33275c6637b3be787efa">   70</a></span>        <a class="code hl_class" href="../../d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html">INISection</a>&amp; <a class="code hl_function" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#acd32284489ff33275c6637b3be787efa">operator[]</a>(<a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a> key);</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#addf3dbf428b7835e74b9a62ad9493971">   73</a></span>        <a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a> <a class="code hl_function" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#addf3dbf428b7835e74b9a62ad9493971">get</a>(<a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a> section, <a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a> key, <a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a> fallback = <span class="stringliteral">&quot;&quot;</span>)<span class="keyword">const</span>;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#addcfa2a27d9abd520cf7826682ce682d">   76</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#addcfa2a27d9abd520cf7826682ce682d">has</a>(<a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a> section)<span class="keyword">const</span>;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#a6adfe8e1f40d7838fbd51d7c642a3432">   79</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#a6adfe8e1f40d7838fbd51d7c642a3432">has</a>(<a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a> section,<a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a> key)<span class="keyword">const</span>;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#a39f438e94b9f5baaa1d5c4c041c4f0ca">   82</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#a39f438e94b9f5baaa1d5c4c041c4f0ca">remove</a>(<a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a> section);</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#a8d5a2d24509df57ada7f6e4d62097121">   85</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#a8d5a2d24509df57ada7f6e4d62097121">remove</a>(<a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a> section,<a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a> key);</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#a393d0746b4443f020644b60258a9c996">   57</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#a393d0746b4443f020644b60258a9c996">load</a>(String path);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#a0a8afba5fc81fd4a6802110594a7c515">   61</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#a0a8afba5fc81fd4a6802110594a7c515">save</a>(String path = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#aa1134e1b239ad409ea2fd5fb0b44e64e">   64</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#aa1134e1b239ad409ea2fd5fb0b44e64e">parse</a>(StringView text);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#addcd27d9eabea697ddb8cf759f7d1e7b">   67</a></span>        String <a class="code hl_function" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#addcd27d9eabea697ddb8cf759f7d1e7b">string</a>();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#acd32284489ff33275c6637b3be787efa">   70</a></span>        <a class="code hl_class" href="../../d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html">INISection</a>&amp; <a class="code hl_function" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#acd32284489ff33275c6637b3be787efa">operator[]</a>(String key);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#addf3dbf428b7835e74b9a62ad9493971">   73</a></span>        String <a class="code hl_function" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#addf3dbf428b7835e74b9a62ad9493971">get</a>(String section, String key, String fallback = <span class="stringliteral">&quot;&quot;</span>)<span class="keyword">const</span>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#addcfa2a27d9abd520cf7826682ce682d">   76</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#addcfa2a27d9abd520cf7826682ce682d">has</a>(String section)<span class="keyword">const</span>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#a6adfe8e1f40d7838fbd51d7c642a3432">   79</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#a6adfe8e1f40d7838fbd51d7c642a3432">has</a>(String section,String key)<span class="keyword">const</span>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#a39f438e94b9f5baaa1d5c4c041c4f0ca">   82</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#a39f438e94b9f5baaa1d5c4c041c4f0ca">remove</a>(String section);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#a8d5a2d24509df57ada7f6e4d62097121">   85</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#a8d5a2d24509df57ada7f6e4d62097121">remove</a>(String section,String key);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span></div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#af1b11f04ce89a2bcd005700322c9ba88">   88</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#af1b11f04ce89a2bcd005700322c9ba88">clear</a>();</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span></div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#a3dc30016313417e101f403756ef69c6d">   91</a></span>        <span class="keywordtype">size_t</span> <a class="code hl_function" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#a3dc30016313417e101f403756ef69c6d">size</a>()<span class="keyword">const</span>;</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span></div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#aa1d60757507704ada2a96a04b931be1f">   94</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#aa1d60757507704ada2a96a04b931be1f">empty</a>()<span class="keyword">const</span>;</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span></div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#ac6a8e5f8e9d4a20f0c2f5ece281edaa6">   97</a></span>        <span class="keyword">auto</span> <a class="code hl_function" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#ac6a8e5f8e9d4a20f0c2f5ece281edaa6">begin</a>()<span class="keyword">const </span>{ <span class="keywordflow">return</span> m_container.cbegin(); }</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span></div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#a7390a6d708ce13a484fda8391b25ceb9">  100</a></span>        <span class="keyword">auto</span> <a class="code hl_function" href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#a7390a6d708ce13a484fda8391b25ceb9">end</a>()<span class="keyword">const </span>{ <span class="keywordflow">return</span> m_container.cend(); }</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a> m_path;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        String m_path;</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        Map&lt;String, INISection&gt; m_container;</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    };</div>
+</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>}</div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_i_n_i_html"><div class="ttname"><a href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html">Amuse::Core::INI</a></div><div class="ttdoc">INIオブジェクト</div><div class="ttdef"><b>Definition:</b> INI.h:44</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_i_n_i_html_a0a8afba5fc81fd4a6802110594a7c515"><div class="ttname"><a href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#a0a8afba5fc81fd4a6802110594a7c515">Amuse::Core::INI::save</a></div><div class="ttdeci">bool save(String path=&quot;&quot;)</div><div class="ttdoc">ファイルに設定をセーブ</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_i_n_i_html_a393d0746b4443f020644b60258a9c996"><div class="ttname"><a href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#a393d0746b4443f020644b60258a9c996">Amuse::Core::INI::load</a></div><div class="ttdeci">bool load(String path)</div><div class="ttdoc">ファイルから設定をロード</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_i_n_i_html_a39f438e94b9f5baaa1d5c4c041c4f0ca"><div class="ttname"><a href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#a39f438e94b9f5baaa1d5c4c041c4f0ca">Amuse::Core::INI::remove</a></div><div class="ttdeci">void remove(String section)</div><div class="ttdoc">対象のセクションを削除</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_i_n_i_html_a3dc30016313417e101f403756ef69c6d"><div class="ttname"><a href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#a3dc30016313417e101f403756ef69c6d">Amuse::Core::INI::size</a></div><div class="ttdeci">size_t size() const</div><div class="ttdoc">要素数</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_i_n_i_html_a4825a38b85cc417ffc7d27a83a6997b4"><div class="ttname"><a href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#a4825a38b85cc417ffc7d27a83a6997b4">Amuse::Core::INI::INI</a></div><div class="ttdeci">INI(StringView path)</div><div class="ttdoc">ファイルから設定をロードして生成</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_i_n_i_html_a6adfe8e1f40d7838fbd51d7c642a3432"><div class="ttname"><a href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#a6adfe8e1f40d7838fbd51d7c642a3432">Amuse::Core::INI::has</a></div><div class="ttdeci">bool has(String section, String key) const</div><div class="ttdoc">対象のキーが存在するか</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_i_n_i_html_a7390a6d708ce13a484fda8391b25ceb9"><div class="ttname"><a href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#a7390a6d708ce13a484fda8391b25ceb9">Amuse::Core::INI::end</a></div><div class="ttdeci">auto end() const</div><div class="ttdoc">Endイテレータ</div><div class="ttdef"><b>Definition:</b> INI.h:100</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_i_n_i_html_a7390a6d708ce13a484fda8391b25ceb9"><div class="ttname"><a href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#a7390a6d708ce13a484fda8391b25ceb9">Amuse::Core::INI::end</a></div><div class="ttdeci">auto end() const</div><div class="ttdoc">Endイテレータ</div><div class="ttdef"><b>Definition</b> INI.h:100</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_i_n_i_html_a8d5a2d24509df57ada7f6e4d62097121"><div class="ttname"><a href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#a8d5a2d24509df57ada7f6e4d62097121">Amuse::Core::INI::remove</a></div><div class="ttdeci">void remove(String section, String key)</div><div class="ttdoc">対象のキーを削除</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_i_n_i_html_aa1134e1b239ad409ea2fd5fb0b44e64e"><div class="ttname"><a href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#aa1134e1b239ad409ea2fd5fb0b44e64e">Amuse::Core::INI::parse</a></div><div class="ttdeci">bool parse(StringView text)</div><div class="ttdoc">文字列から設定をロード</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_i_n_i_html_aa1d60757507704ada2a96a04b931be1f"><div class="ttname"><a href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#aa1d60757507704ada2a96a04b931be1f">Amuse::Core::INI::empty</a></div><div class="ttdeci">bool empty() const</div><div class="ttdoc">要素が空か</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_i_n_i_html_abd29f6e59c2786b00371d1af1eb5a754"><div class="ttname"><a href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#abd29f6e59c2786b00371d1af1eb5a754">Amuse::Core::INI::INI</a></div><div class="ttdeci">INI()</div><div class="ttdoc">INIオブジェクトを生成</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_i_n_i_html_ac6a8e5f8e9d4a20f0c2f5ece281edaa6"><div class="ttname"><a href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#ac6a8e5f8e9d4a20f0c2f5ece281edaa6">Amuse::Core::INI::begin</a></div><div class="ttdeci">auto begin() const</div><div class="ttdoc">Beginイテレータ</div><div class="ttdef"><b>Definition:</b> INI.h:97</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_i_n_i_html_ac6a8e5f8e9d4a20f0c2f5ece281edaa6"><div class="ttname"><a href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#ac6a8e5f8e9d4a20f0c2f5ece281edaa6">Amuse::Core::INI::begin</a></div><div class="ttdeci">auto begin() const</div><div class="ttdoc">Beginイテレータ</div><div class="ttdef"><b>Definition</b> INI.h:97</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_i_n_i_html_acd32284489ff33275c6637b3be787efa"><div class="ttname"><a href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#acd32284489ff33275c6637b3be787efa">Amuse::Core::INI::operator[]</a></div><div class="ttdeci">INISection &amp; operator[](String key)</div><div class="ttdoc">キーを指定して要素アクセス</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_i_n_i_html_addcd27d9eabea697ddb8cf759f7d1e7b"><div class="ttname"><a href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#addcd27d9eabea697ddb8cf759f7d1e7b">Amuse::Core::INI::string</a></div><div class="ttdeci">String string()</div><div class="ttdoc">文字列として出力</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_i_n_i_html_addcfa2a27d9abd520cf7826682ce682d"><div class="ttname"><a href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#addcfa2a27d9abd520cf7826682ce682d">Amuse::Core::INI::has</a></div><div class="ttdeci">bool has(String section) const</div><div class="ttdoc">対象のセクションが存在するか</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_i_n_i_html_addf3dbf428b7835e74b9a62ad9493971"><div class="ttname"><a href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#addf3dbf428b7835e74b9a62ad9493971">Amuse::Core::INI::get</a></div><div class="ttdeci">String get(String section, String key, String fallback=&quot;&quot;) const</div><div class="ttdoc">キーとフォールバックを指定して要素を取得</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_i_n_i_html_aef53a7e24ec797293ee0403400fc28f4"><div class="ttname"><a href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#aef53a7e24ec797293ee0403400fc28f4">Amuse::Core::INI::~INI</a></div><div class="ttdeci">~INI()</div><div class="ttdoc">~デストラクタ</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_i_n_i_html_af1b11f04ce89a2bcd005700322c9ba88"><div class="ttname"><a href="../../df/d76/class_amuse_1_1_core_1_1_i_n_i.html#af1b11f04ce89a2bcd005700322c9ba88">Amuse::Core::INI::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">要素をすべて削除</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_i_n_i_section_html"><div class="ttname"><a href="../../d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html">Amuse::Core::INISection</a></div><div class="ttdoc">INIセクションオブジェクト</div><div class="ttdef"><b>Definition:</b> INI.h:11</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_i_n_i_section_html"><div class="ttname"><a href="../../d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html">Amuse::Core::INISection</a></div><div class="ttdoc">INIセクションオブジェクト</div><div class="ttdef"><b>Definition</b> INI.h:11</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_i_n_i_section_html_a37ec8f43f84ece8a42a38294f0b6a352"><div class="ttname"><a href="../../d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html#a37ec8f43f84ece8a42a38294f0b6a352">Amuse::Core::INISection::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">要素をすべて削除</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_i_n_i_section_html_a78821aeb6e87449f6de00a1c654b516d"><div class="ttname"><a href="../../d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html#a78821aeb6e87449f6de00a1c654b516d">Amuse::Core::INISection::get</a></div><div class="ttdeci">String get(String key, String fallback) const</div><div class="ttdoc">キーとフォールバックを指定して要素を取得</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_i_n_i_section_html_a7caa8e70472608ae818b1a44424089fa"><div class="ttname"><a href="../../d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html#a7caa8e70472608ae818b1a44424089fa">Amuse::Core::INISection::begin</a></div><div class="ttdeci">auto begin() const</div><div class="ttdoc">Beginイテレータ</div><div class="ttdef"><b>Definition:</b> INI.h:34</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_i_n_i_section_html_a7caa8e70472608ae818b1a44424089fa"><div class="ttname"><a href="../../d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html#a7caa8e70472608ae818b1a44424089fa">Amuse::Core::INISection::begin</a></div><div class="ttdeci">auto begin() const</div><div class="ttdoc">Beginイテレータ</div><div class="ttdef"><b>Definition</b> INI.h:34</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_i_n_i_section_html_a917906afa30276ee637e9b7d0da8b874"><div class="ttname"><a href="../../d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html#a917906afa30276ee637e9b7d0da8b874">Amuse::Core::INISection::has</a></div><div class="ttdeci">bool has(String key) const</div><div class="ttdoc">対象のキーが存在するか</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_i_n_i_section_html_aa8a55ada9f2f1940cf4b95f9905d63bc"><div class="ttname"><a href="../../d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html#aa8a55ada9f2f1940cf4b95f9905d63bc">Amuse::Core::INISection::remove</a></div><div class="ttdeci">bool remove(String key)</div><div class="ttdoc">対象のキーを削除</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_i_n_i_section_html_ae95cb78b4a673f4162d225df7c59de4e"><div class="ttname"><a href="../../d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html#ae95cb78b4a673f4162d225df7c59de4e">Amuse::Core::INISection::operator[]</a></div><div class="ttdeci">String &amp; operator[](String key)</div><div class="ttdoc">キーを指定して要素アクセス</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_i_n_i_section_html_aea3f351436f2354b70feb5682ec74146"><div class="ttname"><a href="../../d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html#aea3f351436f2354b70feb5682ec74146">Amuse::Core::INISection::end</a></div><div class="ttdeci">auto end() const</div><div class="ttdoc">Endイテレータ</div><div class="ttdef"><b>Definition:</b> INI.h:37</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_i_n_i_section_html_aea3f351436f2354b70feb5682ec74146"><div class="ttname"><a href="../../d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html#aea3f351436f2354b70feb5682ec74146">Amuse::Core::INISection::end</a></div><div class="ttdeci">auto end() const</div><div class="ttdoc">Endイテレータ</div><div class="ttdef"><b>Definition</b> INI.h:37</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_i_n_i_section_html_af19e75a0433acf241009a34caca83836"><div class="ttname"><a href="../../d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html#af19e75a0433acf241009a34caca83836">Amuse::Core::INISection::size</a></div><div class="ttdeci">size_t size() const</div><div class="ttdoc">要素数</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_string_base_html"><div class="ttname"><a href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">Amuse::Core::StringBase&lt; Char &gt;</a></div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_string_view_base_html"><div class="ttname"><a href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">Amuse::Core::StringViewBase&lt; Char &gt;</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_4f6666a8f2ab10bc970eb7559668f031.html">Runtime</a></li><li class="navelem"><a class="el" href="../../dir_b05c51a7dc61612d752a1d5ca497c54f.html">Core</a></li><li class="navelem"><a class="el" href="../../dir_2704b46b7ef0c98b3ce7738c20dc746e.html">Public</a></li><li class="navelem"><a class="el" href="../../dir_02338155ec8ce976dea76e6f650abf75.html">Amuse</a></li><li class="navelem"><a class="el" href="../../dir_a813c3653225bc50968bea57534cde90.html">Core</a></li><li class="navelem"><a class="el" href="../../dir_2268414a1efdfe5478272d5f64b967b4.html">File</a></li><li class="navelem"><b>INI.h</b></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="navelem"><b>Runtime</b></li><li class="navelem"><b>Core</b></li><li class="navelem"><b>Public</b></li><li class="navelem"><b>Amuse</b></li><li class="navelem"><b>Core</b></li><li class="navelem"><b>File</b></li><li class="navelem"><b>INI.h</b></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

@@ -3,19 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AmuseEngine: Runtime/RHI/Public/Amuse/RHI/Types/RenderTextureDesc.h ソースファイル</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../jquery.js"></script>
-<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
 <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
 <script type="text/javascript" src="../../navtreedata.js"></script>
 <script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="../../style.css" rel="stylesheet" type="text/css"/>
@@ -36,23 +42,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.6 -->
+<!-- 構築: Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('../../',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
 });
-/* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -65,10 +93,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('d0/d51/_render_texture_desc_8h_source.html','../../'); initResizable(); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d0/d51/_render_texture_desc_8h_source.html','../../',''); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -96,51 +123,55 @@ $(document).ready(function(){initNavTree('d0/d51/_render_texture_desc_8h_source.
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//***********************************************************</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"></span><span class="comment">//***********************************************************</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//***********************************************************</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;Amuse/Core/Core.h&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;Amuse/RHI/Types/TextureDesc.h&gt;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span>Amuse::RHI {</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keyword">using namespace </span>Amuse::Core;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span></div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../dc/d68/struct_amuse_1_1_r_h_i_1_1_clear_color.html">   13</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../dc/d68/struct_amuse_1_1_r_h_i_1_1_clear_color.html">ClearColor</a> {</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="../../dc/d68/struct_amuse_1_1_r_h_i_1_1_clear_color.html#a6b6d7a942b5d2048028be6e5268c62ac">   14</a></span>        <a class="code hl_struct" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> <a class="code hl_variable" href="../../dc/d68/struct_amuse_1_1_r_h_i_1_1_clear_color.html#a6b6d7a942b5d2048028be6e5268c62ac">color</a> = <a class="code hl_variable" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html#a1ad9485c7164c0431949a3db317df3a0">Color::White</a>; </div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../dc/d68/struct_amuse_1_1_r_h_i_1_1_clear_color.html#a934da0d4ff7a48ffa65ff4c6223d2573">   15</a></span>        f32 <a class="code hl_variable" href="../../dc/d68/struct_amuse_1_1_r_h_i_1_1_clear_color.html#a934da0d4ff7a48ffa65ff4c6223d2573">depth</a> = 0.0f; </div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="../../dc/d68/struct_amuse_1_1_r_h_i_1_1_clear_color.html#a16eba719f6807b736879ac3e081d015e">   16</a></span>        u32 <a class="code hl_variable" href="../../dc/d68/struct_amuse_1_1_r_h_i_1_1_clear_color.html#a16eba719f6807b736879ac3e081d015e">stencil</a> = 0; </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    };</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span></div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="../../d4/dc2/struct_amuse_1_1_r_h_i_1_1_render_texture_desc.html">   20</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../d4/dc2/struct_amuse_1_1_r_h_i_1_1_render_texture_desc.html">RenderTextureDesc</a> {</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="../../d4/dc2/struct_amuse_1_1_r_h_i_1_1_render_texture_desc.html#a852a7088dfc00188729cd6e4ee07a5b2">   21</a></span>        <a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a>          <a class="code hl_variable" href="../../d4/dc2/struct_amuse_1_1_r_h_i_1_1_render_texture_desc.html#a852a7088dfc00188729cd6e4ee07a5b2">name</a>; </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="../../d4/dc2/struct_amuse_1_1_r_h_i_1_1_render_texture_desc.html#a852a7088dfc00188729cd6e4ee07a5b2">   21</a></span>        String          <a class="code hl_variable" href="../../d4/dc2/struct_amuse_1_1_r_h_i_1_1_render_texture_desc.html#a852a7088dfc00188729cd6e4ee07a5b2">name</a>; </div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../d4/dc2/struct_amuse_1_1_r_h_i_1_1_render_texture_desc.html#a4f0f30b7453319575d26d1e6f2debbf2">   22</a></span>        TextureFormat   <a class="code hl_variable" href="../../d4/dc2/struct_amuse_1_1_r_h_i_1_1_render_texture_desc.html#a4f0f30b7453319575d26d1e6f2debbf2">format</a> = TextureFormat::RGBA8;  </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="../../d4/dc2/struct_amuse_1_1_r_h_i_1_1_render_texture_desc.html#a83013d20120531a10d6a78a7f120732f">   23</a></span>        <a class="code hl_struct" href="../../de/d30/struct_amuse_1_1_core_1_1_size.html">Size</a>            <a class="code hl_variable" href="../../d4/dc2/struct_amuse_1_1_r_h_i_1_1_render_texture_desc.html#a83013d20120531a10d6a78a7f120732f">size</a> = { 0,0,0 };               </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="../../d4/dc2/struct_amuse_1_1_r_h_i_1_1_render_texture_desc.html#a30820a89bf4d6b621106dc193c5d7bac">   24</a></span>        <a class="code hl_struct" href="../../dc/d68/struct_amuse_1_1_r_h_i_1_1_clear_color.html">ClearColor</a>      <a class="code hl_variable" href="../../d4/dc2/struct_amuse_1_1_r_h_i_1_1_render_texture_desc.html#a30820a89bf4d6b621106dc193c5d7bac">clear</a>;                          </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="../../d4/dc2/struct_amuse_1_1_r_h_i_1_1_render_texture_desc.html#ac285529596fce3508c268f3b954c9423">   27</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d4/dc2/struct_amuse_1_1_r_h_i_1_1_render_texture_desc.html#ac285529596fce3508c268f3b954c9423">isValid</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    };</div>
+</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>}</div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_string_base_html"><div class="ttname"><a href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">Amuse::Core::StringBase&lt; Char &gt;</a></div></div>
-<div class="ttc" id="astruct_amuse_1_1_core_1_1_color_html"><div class="ttname"><a href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Amuse::Core::Color</a></div><div class="ttdoc">RGBAカラーを表現するクラス</div><div class="ttdef"><b>Definition:</b> Color.h:17</div></div>
-<div class="ttc" id="astruct_amuse_1_1_core_1_1_color_html_a1ad9485c7164c0431949a3db317df3a0"><div class="ttname"><a href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html#a1ad9485c7164c0431949a3db317df3a0">Amuse::Core::Color::White</a></div><div class="ttdeci">static const Color White</div><div class="ttdoc">Color(1,1,1,1)</div><div class="ttdef"><b>Definition:</b> Color.h:232</div></div>
-<div class="ttc" id="astruct_amuse_1_1_core_1_1_size_html"><div class="ttname"><a href="../../de/d30/struct_amuse_1_1_core_1_1_size.html">Amuse::Core::Size</a></div><div class="ttdoc">サイズ</div><div class="ttdef"><b>Definition:</b> Size.h:11</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_clear_color_html"><div class="ttname"><a href="../../dc/d68/struct_amuse_1_1_r_h_i_1_1_clear_color.html">Amuse::RHI::ClearColor</a></div><div class="ttdoc">クリアカラー</div><div class="ttdef"><b>Definition:</b> RenderTextureDesc.h:13</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_clear_color_html_a16eba719f6807b736879ac3e081d015e"><div class="ttname"><a href="../../dc/d68/struct_amuse_1_1_r_h_i_1_1_clear_color.html#a16eba719f6807b736879ac3e081d015e">Amuse::RHI::ClearColor::stencil</a></div><div class="ttdeci">u32 stencil</div><div class="ttdoc">ステンシル値</div><div class="ttdef"><b>Definition:</b> RenderTextureDesc.h:16</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_clear_color_html_a6b6d7a942b5d2048028be6e5268c62ac"><div class="ttname"><a href="../../dc/d68/struct_amuse_1_1_r_h_i_1_1_clear_color.html#a6b6d7a942b5d2048028be6e5268c62ac">Amuse::RHI::ClearColor::color</a></div><div class="ttdeci">Color color</div><div class="ttdoc">クリアカラー</div><div class="ttdef"><b>Definition:</b> RenderTextureDesc.h:14</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_clear_color_html_a934da0d4ff7a48ffa65ff4c6223d2573"><div class="ttname"><a href="../../dc/d68/struct_amuse_1_1_r_h_i_1_1_clear_color.html#a934da0d4ff7a48ffa65ff4c6223d2573">Amuse::RHI::ClearColor::depth</a></div><div class="ttdeci">f32 depth</div><div class="ttdoc">深度値</div><div class="ttdef"><b>Definition:</b> RenderTextureDesc.h:15</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_render_texture_desc_html"><div class="ttname"><a href="../../d4/dc2/struct_amuse_1_1_r_h_i_1_1_render_texture_desc.html">Amuse::RHI::RenderTextureDesc</a></div><div class="ttdoc">レンダーテクスチャ定義</div><div class="ttdef"><b>Definition:</b> RenderTextureDesc.h:20</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_render_texture_desc_html_a30820a89bf4d6b621106dc193c5d7bac"><div class="ttname"><a href="../../d4/dc2/struct_amuse_1_1_r_h_i_1_1_render_texture_desc.html#a30820a89bf4d6b621106dc193c5d7bac">Amuse::RHI::RenderTextureDesc::clear</a></div><div class="ttdeci">ClearColor clear</div><div class="ttdoc">クリアカラー</div><div class="ttdef"><b>Definition:</b> RenderTextureDesc.h:24</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_render_texture_desc_html_a4f0f30b7453319575d26d1e6f2debbf2"><div class="ttname"><a href="../../d4/dc2/struct_amuse_1_1_r_h_i_1_1_render_texture_desc.html#a4f0f30b7453319575d26d1e6f2debbf2">Amuse::RHI::RenderTextureDesc::format</a></div><div class="ttdeci">TextureFormat format</div><div class="ttdoc">テクスチャフォーマット</div><div class="ttdef"><b>Definition:</b> RenderTextureDesc.h:22</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_render_texture_desc_html_a83013d20120531a10d6a78a7f120732f"><div class="ttname"><a href="../../d4/dc2/struct_amuse_1_1_r_h_i_1_1_render_texture_desc.html#a83013d20120531a10d6a78a7f120732f">Amuse::RHI::RenderTextureDesc::size</a></div><div class="ttdeci">Size size</div><div class="ttdoc">サイズ</div><div class="ttdef"><b>Definition:</b> RenderTextureDesc.h:23</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_render_texture_desc_html_a852a7088dfc00188729cd6e4ee07a5b2"><div class="ttname"><a href="../../d4/dc2/struct_amuse_1_1_r_h_i_1_1_render_texture_desc.html#a852a7088dfc00188729cd6e4ee07a5b2">Amuse::RHI::RenderTextureDesc::name</a></div><div class="ttdeci">String name</div><div class="ttdoc">名前</div><div class="ttdef"><b>Definition:</b> RenderTextureDesc.h:21</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_color_html"><div class="ttname"><a href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Amuse::Core::Color</a></div><div class="ttdoc">RGBAカラーを表現するクラス</div><div class="ttdef"><b>Definition</b> Color.h:17</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_color_html_a1ad9485c7164c0431949a3db317df3a0"><div class="ttname"><a href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html#a1ad9485c7164c0431949a3db317df3a0">Amuse::Core::Color::White</a></div><div class="ttdeci">static const Color White</div><div class="ttdoc">Color(1,1,1,1)</div><div class="ttdef"><b>Definition</b> Color.h:232</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_size_html"><div class="ttname"><a href="../../de/d30/struct_amuse_1_1_core_1_1_size.html">Amuse::Core::Size</a></div><div class="ttdoc">サイズ</div><div class="ttdef"><b>Definition</b> Size.h:11</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_clear_color_html"><div class="ttname"><a href="../../dc/d68/struct_amuse_1_1_r_h_i_1_1_clear_color.html">Amuse::RHI::ClearColor</a></div><div class="ttdoc">クリアカラー</div><div class="ttdef"><b>Definition</b> RenderTextureDesc.h:13</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_clear_color_html_a16eba719f6807b736879ac3e081d015e"><div class="ttname"><a href="../../dc/d68/struct_amuse_1_1_r_h_i_1_1_clear_color.html#a16eba719f6807b736879ac3e081d015e">Amuse::RHI::ClearColor::stencil</a></div><div class="ttdeci">u32 stencil</div><div class="ttdoc">ステンシル値</div><div class="ttdef"><b>Definition</b> RenderTextureDesc.h:16</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_clear_color_html_a6b6d7a942b5d2048028be6e5268c62ac"><div class="ttname"><a href="../../dc/d68/struct_amuse_1_1_r_h_i_1_1_clear_color.html#a6b6d7a942b5d2048028be6e5268c62ac">Amuse::RHI::ClearColor::color</a></div><div class="ttdeci">Color color</div><div class="ttdoc">クリアカラー</div><div class="ttdef"><b>Definition</b> RenderTextureDesc.h:14</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_clear_color_html_a934da0d4ff7a48ffa65ff4c6223d2573"><div class="ttname"><a href="../../dc/d68/struct_amuse_1_1_r_h_i_1_1_clear_color.html#a934da0d4ff7a48ffa65ff4c6223d2573">Amuse::RHI::ClearColor::depth</a></div><div class="ttdeci">f32 depth</div><div class="ttdoc">深度値</div><div class="ttdef"><b>Definition</b> RenderTextureDesc.h:15</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_render_texture_desc_html"><div class="ttname"><a href="../../d4/dc2/struct_amuse_1_1_r_h_i_1_1_render_texture_desc.html">Amuse::RHI::RenderTextureDesc</a></div><div class="ttdoc">レンダーテクスチャ定義</div><div class="ttdef"><b>Definition</b> RenderTextureDesc.h:20</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_render_texture_desc_html_a30820a89bf4d6b621106dc193c5d7bac"><div class="ttname"><a href="../../d4/dc2/struct_amuse_1_1_r_h_i_1_1_render_texture_desc.html#a30820a89bf4d6b621106dc193c5d7bac">Amuse::RHI::RenderTextureDesc::clear</a></div><div class="ttdeci">ClearColor clear</div><div class="ttdoc">クリアカラー</div><div class="ttdef"><b>Definition</b> RenderTextureDesc.h:24</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_render_texture_desc_html_a4f0f30b7453319575d26d1e6f2debbf2"><div class="ttname"><a href="../../d4/dc2/struct_amuse_1_1_r_h_i_1_1_render_texture_desc.html#a4f0f30b7453319575d26d1e6f2debbf2">Amuse::RHI::RenderTextureDesc::format</a></div><div class="ttdeci">TextureFormat format</div><div class="ttdoc">テクスチャフォーマット</div><div class="ttdef"><b>Definition</b> RenderTextureDesc.h:22</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_render_texture_desc_html_a83013d20120531a10d6a78a7f120732f"><div class="ttname"><a href="../../d4/dc2/struct_amuse_1_1_r_h_i_1_1_render_texture_desc.html#a83013d20120531a10d6a78a7f120732f">Amuse::RHI::RenderTextureDesc::size</a></div><div class="ttdeci">Size size</div><div class="ttdoc">サイズ</div><div class="ttdef"><b>Definition</b> RenderTextureDesc.h:23</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_render_texture_desc_html_a852a7088dfc00188729cd6e4ee07a5b2"><div class="ttname"><a href="../../d4/dc2/struct_amuse_1_1_r_h_i_1_1_render_texture_desc.html#a852a7088dfc00188729cd6e4ee07a5b2">Amuse::RHI::RenderTextureDesc::name</a></div><div class="ttdeci">String name</div><div class="ttdoc">名前</div><div class="ttdef"><b>Definition</b> RenderTextureDesc.h:21</div></div>
 <div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_render_texture_desc_html_ac285529596fce3508c268f3b954c9423"><div class="ttname"><a href="../../d4/dc2/struct_amuse_1_1_r_h_i_1_1_render_texture_desc.html#ac285529596fce3508c268f3b954c9423">Amuse::RHI::RenderTextureDesc::isValid</a></div><div class="ttdeci">bool isValid() const</div><div class="ttdoc">有効な設定か判定する</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_4f6666a8f2ab10bc970eb7559668f031.html">Runtime</a></li><li class="navelem"><a class="el" href="../../dir_ed0dd943941685375ac149ef30703e8f.html">RHI</a></li><li class="navelem"><a class="el" href="../../dir_80d0fa31a6e3bc7da61af1a1dfa2506f.html">Public</a></li><li class="navelem"><a class="el" href="../../dir_6330f9b43f61349a45429b5fd54fec05.html">Amuse</a></li><li class="navelem"><a class="el" href="../../dir_0830f243940360ab60fcd1783d0d86f9.html">RHI</a></li><li class="navelem"><a class="el" href="../../dir_5761839cb0a5a5a0945e24e2502418de.html">Types</a></li><li class="navelem"><b>RenderTextureDesc.h</b></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="navelem"><b>Runtime</b></li><li class="navelem"><b>RHI</b></li><li class="navelem"><b>Public</b></li><li class="navelem"><b>Amuse</b></li><li class="navelem"><b>RHI</b></li><li class="navelem"><b>Types</b></li><li class="navelem"><b>RenderTextureDesc.h</b></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

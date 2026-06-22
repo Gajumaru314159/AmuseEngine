@@ -3,19 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AmuseEngine: Amuse::Core::File クラス</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../jquery.js"></script>
-<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
 <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
 <script type="text/javascript" src="../../navtreedata.js"></script>
 <script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="../../style.css" rel="stylesheet" type="text/css"/>
@@ -36,23 +42,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.6 -->
+<!-- 構築: Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('../../',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
 });
-/* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -65,10 +93,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('da/d8e/class_amuse_1_1_core_1_1_file.html','../../'); initResizable(); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('da/d8e/class_amuse_1_1_core_1_1_file.html','../../','d9/d0a/class_amuse_1_1_core_1_1_file-members'); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -101,117 +128,72 @@ $(document).ready(function(){initNavTree('da/d8e/class_amuse_1_1_core_1_1_file.h
 <div class="contents">
 
 <p>ファイル  
- <a href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#details">[詳解]</a></p>
+ <a href="#details">[詳解]</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../df/d0c/_file_8h_source.html">File.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:a364d72442be110b3411b4b32c12ae2aa"><td class="memItemLeft" align="right" valign="top"><a id="a364d72442be110b3411b4b32c12ae2aa" name="a364d72442be110b3411b4b32c12ae2aa"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>File</b> ()</td></tr>
+<tr class="memitem:a364d72442be110b3411b4b32c12ae2aa" id="r_a364d72442be110b3411b4b32c12ae2aa"><td class="memItemLeft"><a id="a364d72442be110b3411b4b32c12ae2aa" name="a364d72442be110b3411b4b32c12ae2aa"></a>
+&#160;</td><td class="memItemRight"><b>File</b> ()</td></tr>
 <tr class="memdesc:a364d72442be110b3411b4b32c12ae2aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトコンストラクタ <br /></td></tr>
-<tr class="separator:a364d72442be110b3411b4b32c12ae2aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2689d11dbb5a2c282a29fa68225852c5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#a2689d11dbb5a2c282a29fa68225852c5">File</a> (<a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> path, FileOpenMode mode=FileOpenMode::Read)</td></tr>
+<tr class="memitem:a2689d11dbb5a2c282a29fa68225852c5" id="r_a2689d11dbb5a2c282a29fa68225852c5"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a2689d11dbb5a2c282a29fa68225852c5">File</a> (StringView path, FileOpenMode mode=FileOpenMode::Read)</td></tr>
 <tr class="memdesc:a2689d11dbb5a2c282a29fa68225852c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルを開く  <br /></td></tr>
-<tr class="separator:a2689d11dbb5a2c282a29fa68225852c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4f5b9eddddf4cf309852d93b334d5da"><td class="memItemLeft" align="right" valign="top"><a id="ac4f5b9eddddf4cf309852d93b334d5da" name="ac4f5b9eddddf4cf309852d93b334d5da"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>~File</b> () override</td></tr>
+<tr class="memitem:ac4f5b9eddddf4cf309852d93b334d5da" id="r_ac4f5b9eddddf4cf309852d93b334d5da"><td class="memItemLeft"><a id="ac4f5b9eddddf4cf309852d93b334d5da" name="ac4f5b9eddddf4cf309852d93b334d5da"></a>
+&#160;</td><td class="memItemRight"><b>~File</b> () override</td></tr>
 <tr class="memdesc:ac4f5b9eddddf4cf309852d93b334d5da"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ <br /></td></tr>
-<tr class="separator:ac4f5b9eddddf4cf309852d93b334d5da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ce914f1c4abca60137954c7e0a191b3"><td class="memItemLeft" align="right" valign="top"><a id="a6ce914f1c4abca60137954c7e0a191b3" name="a6ce914f1c4abca60137954c7e0a191b3"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> () const</td></tr>
+<tr class="memitem:a6ce914f1c4abca60137954c7e0a191b3" id="r_a6ce914f1c4abca60137954c7e0a191b3"><td class="memItemLeft"><a id="a6ce914f1c4abca60137954c7e0a191b3" name="a6ce914f1c4abca60137954c7e0a191b3"></a>
+&#160;</td><td class="memItemRight"><b>operator bool</b> () const</td></tr>
 <tr class="memdesc:a6ce914f1c4abca60137954c7e0a191b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">有効な状態か <br /></td></tr>
-<tr class="separator:a6ce914f1c4abca60137954c7e0a191b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad41007d25a15a2dc4a29360c8dc6aaec"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#ad41007d25a15a2dc4a29360c8dc6aaec">canRead</a> () const override</td></tr>
+<tr class="memitem:ad41007d25a15a2dc4a29360c8dc6aaec" id="r_ad41007d25a15a2dc4a29360c8dc6aaec"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ad41007d25a15a2dc4a29360c8dc6aaec">canRead</a> () const override</td></tr>
 <tr class="memdesc:ad41007d25a15a2dc4a29360c8dc6aaec"><td class="mdescLeft">&#160;</td><td class="mdescRight">読み込み可能か  <br /></td></tr>
-<tr class="separator:ad41007d25a15a2dc4a29360c8dc6aaec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a283a4d8fb26226dd45f8d579d5cf2b04"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#a283a4d8fb26226dd45f8d579d5cf2b04">canWrite</a> () const override</td></tr>
+<tr class="memitem:a283a4d8fb26226dd45f8d579d5cf2b04" id="r_a283a4d8fb26226dd45f8d579d5cf2b04"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a283a4d8fb26226dd45f8d579d5cf2b04">canWrite</a> () const override</td></tr>
 <tr class="memdesc:a283a4d8fb26226dd45f8d579d5cf2b04"><td class="mdescLeft">&#160;</td><td class="mdescRight">書き込み可能か  <br /></td></tr>
-<tr class="separator:a283a4d8fb26226dd45f8d579d5cf2b04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a968355f99f274041fc261173a769baa5"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#a968355f99f274041fc261173a769baa5">size</a> () const override</td></tr>
+<tr class="memitem:a968355f99f274041fc261173a769baa5" id="r_a968355f99f274041fc261173a769baa5"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#a968355f99f274041fc261173a769baa5">size</a> () const override</td></tr>
 <tr class="memdesc:a968355f99f274041fc261173a769baa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">サイズ取得  <br /></td></tr>
-<tr class="separator:a968355f99f274041fc261173a769baa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8da82dc69cfaa4e85f81f86962d472c"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#ad8da82dc69cfaa4e85f81f86962d472c">position</a> () const override</td></tr>
+<tr class="memitem:ad8da82dc69cfaa4e85f81f86962d472c" id="r_ad8da82dc69cfaa4e85f81f86962d472c"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#ad8da82dc69cfaa4e85f81f86962d472c">position</a> () const override</td></tr>
 <tr class="memdesc:ad8da82dc69cfaa4e85f81f86962d472c"><td class="mdescLeft">&#160;</td><td class="mdescRight">シーク位置取得  <br /></td></tr>
-<tr class="separator:ad8da82dc69cfaa4e85f81f86962d472c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7444e9eb5b445f575025e7437e4b54e0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#a7444e9eb5b445f575025e7437e4b54e0">read</a> (void *buffer, size_t byteCount) override</td></tr>
+<tr class="memitem:a7444e9eb5b445f575025e7437e4b54e0" id="r_a7444e9eb5b445f575025e7437e4b54e0"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a7444e9eb5b445f575025e7437e4b54e0">read</a> (void *buffer, size_t byteCount) override</td></tr>
 <tr class="memdesc:a7444e9eb5b445f575025e7437e4b54e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">読み込み  <br /></td></tr>
-<tr class="separator:a7444e9eb5b445f575025e7437e4b54e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a037b430bc8db5961e023e318b104af02"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#a037b430bc8db5961e023e318b104af02">write</a> (const void *buffer, size_t byteCount) override</td></tr>
+<tr class="memitem:a037b430bc8db5961e023e318b104af02" id="r_a037b430bc8db5961e023e318b104af02"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a037b430bc8db5961e023e318b104af02">write</a> (const void *buffer, size_t byteCount) override</td></tr>
 <tr class="memdesc:a037b430bc8db5961e023e318b104af02"><td class="mdescLeft">&#160;</td><td class="mdescRight">書き込み  <br /></td></tr>
-<tr class="separator:a037b430bc8db5961e023e318b104af02"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4932b4766eec4d8596c30e196ab27c7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#ad4932b4766eec4d8596c30e196ab27c7">seek</a> (offset_t offset, SeekOrigin origin) override</td></tr>
+<tr class="memitem:ad4932b4766eec4d8596c30e196ab27c7" id="r_ad4932b4766eec4d8596c30e196ab27c7"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ad4932b4766eec4d8596c30e196ab27c7">seek</a> (offset_t offset, SeekOrigin origin) override</td></tr>
 <tr class="memdesc:ad4932b4766eec4d8596c30e196ab27c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">シーク  <br /></td></tr>
-<tr class="separator:ad4932b4766eec4d8596c30e196ab27c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef78d9962b3425aee0c249b772990f43"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#aef78d9962b3425aee0c249b772990f43">flush</a> () override</td></tr>
+<tr class="memitem:aef78d9962b3425aee0c249b772990f43" id="r_aef78d9962b3425aee0c249b772990f43"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aef78d9962b3425aee0c249b772990f43">flush</a> () override</td></tr>
 <tr class="memdesc:aef78d9962b3425aee0c249b772990f43"><td class="mdescLeft">&#160;</td><td class="mdescRight">バッファのフラッシュ  <br /></td></tr>
-<tr class="separator:aef78d9962b3425aee0c249b772990f43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a750ff98beae5f8b6d2265de37fc66e10"><td class="memItemLeft" align="right" valign="top"><a id="a750ff98beae5f8b6d2265de37fc66e10" name="a750ff98beae5f8b6d2265de37fc66e10"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>close</b> ()</td></tr>
+<tr class="memitem:a750ff98beae5f8b6d2265de37fc66e10" id="r_a750ff98beae5f8b6d2265de37fc66e10"><td class="memItemLeft"><a id="a750ff98beae5f8b6d2265de37fc66e10" name="a750ff98beae5f8b6d2265de37fc66e10"></a>
+void&#160;</td><td class="memItemRight"><b>close</b> ()</td></tr>
 <tr class="memdesc:a750ff98beae5f8b6d2265de37fc66e10"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルをクローズして無効なハンドルにする <br /></td></tr>
-<tr class="separator:a750ff98beae5f8b6d2265de37fc66e10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9a684805323441ffdd3a3cb33aa479a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc8/class_amuse_1_1_core_1_1_stream.html#ae9a684805323441ffdd3a3cb33aa479a">canRead</a> () const =0</td></tr>
-<tr class="memdesc:ae9a684805323441ffdd3a3cb33aa479a"><td class="mdescLeft">&#160;</td><td class="mdescRight">読み込み可能か  <br /></td></tr>
-<tr class="separator:ae9a684805323441ffdd3a3cb33aa479a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add7b6a3ff4bd6df954f84ad9f474a269"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc8/class_amuse_1_1_core_1_1_stream.html#add7b6a3ff4bd6df954f84ad9f474a269">canWrite</a> () const =0</td></tr>
-<tr class="memdesc:add7b6a3ff4bd6df954f84ad9f474a269"><td class="mdescLeft">&#160;</td><td class="mdescRight">書き込み可能か  <br /></td></tr>
-<tr class="separator:add7b6a3ff4bd6df954f84ad9f474a269"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a3ec466f3ae65eb3b0e1c82f479864f"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc8/class_amuse_1_1_core_1_1_stream.html#a6a3ec466f3ae65eb3b0e1c82f479864f">size</a> () const =0</td></tr>
-<tr class="memdesc:a6a3ec466f3ae65eb3b0e1c82f479864f"><td class="mdescLeft">&#160;</td><td class="mdescRight">サイズ取得  <br /></td></tr>
-<tr class="separator:a6a3ec466f3ae65eb3b0e1c82f479864f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9b6543a1226f1f905ae1e779d9b9a64"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc8/class_amuse_1_1_core_1_1_stream.html#aa9b6543a1226f1f905ae1e779d9b9a64">position</a> () const =0</td></tr>
-<tr class="memdesc:aa9b6543a1226f1f905ae1e779d9b9a64"><td class="mdescLeft">&#160;</td><td class="mdescRight">シーク位置取得  <br /></td></tr>
-<tr class="separator:aa9b6543a1226f1f905ae1e779d9b9a64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a401eadedd2445c1cbb2ffdc4b7e50bd9"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc8/class_amuse_1_1_core_1_1_stream.html#a401eadedd2445c1cbb2ffdc4b7e50bd9">read</a> (void *buffer, size_t byteCount)=0</td></tr>
-<tr class="memdesc:a401eadedd2445c1cbb2ffdc4b7e50bd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">読み込み  <br /></td></tr>
-<tr class="separator:a401eadedd2445c1cbb2ffdc4b7e50bd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af83c6d11d3294ed1fb672d6671fd7c4d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc8/class_amuse_1_1_core_1_1_stream.html#af83c6d11d3294ed1fb672d6671fd7c4d">write</a> (const void *buffer, size_t byteCount)=0</td></tr>
-<tr class="memdesc:af83c6d11d3294ed1fb672d6671fd7c4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">書き込み  <br /></td></tr>
-<tr class="separator:af83c6d11d3294ed1fb672d6671fd7c4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7bbd67009a28636a789515649e3667e"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc8/class_amuse_1_1_core_1_1_stream.html#ac7bbd67009a28636a789515649e3667e">seek</a> (offset_t offset, SeekOrigin origin)=0</td></tr>
-<tr class="memdesc:ac7bbd67009a28636a789515649e3667e"><td class="mdescLeft">&#160;</td><td class="mdescRight">シーク  <br /></td></tr>
-<tr class="separator:ac7bbd67009a28636a789515649e3667e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca43b4dac920416c95b0cd09763a2c1f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc8/class_amuse_1_1_core_1_1_stream.html#aca43b4dac920416c95b0cd09763a2c1f">flush</a> ()=0</td></tr>
-<tr class="memdesc:aca43b4dac920416c95b0cd09763a2c1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">バッファのフラッシュ  <br /></td></tr>
-<tr class="separator:aca43b4dac920416c95b0cd09763a2c1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静的公開メンバ関数</h2></td></tr>
-<tr class="memitem:a42fb37994ce50ab9e40deae66c4197c2"><td class="memItemLeft" align="right" valign="top"><a id="a42fb37994ce50ab9e40deae66c4197c2" name="a42fb37994ce50ab9e40deae66c4197c2"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><b>Exists</b> (<a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> path)</td></tr>
+<tr class="memitem:a42fb37994ce50ab9e40deae66c4197c2" id="r_a42fb37994ce50ab9e40deae66c4197c2"><td class="memItemLeft"><a id="a42fb37994ce50ab9e40deae66c4197c2" name="a42fb37994ce50ab9e40deae66c4197c2"></a>
+static bool&#160;</td><td class="memItemRight"><b>Exists</b> (StringView path)</td></tr>
 <tr class="memdesc:a42fb37994ce50ab9e40deae66c4197c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルが存在するか <br /></td></tr>
-<tr class="separator:a42fb37994ce50ab9e40deae66c4197c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae23c7762c736401529c90a110e9c5d6f"><td class="memItemLeft" align="right" valign="top"><a id="ae23c7762c736401529c90a110e9c5d6f" name="ae23c7762c736401529c90a110e9c5d6f"></a>
-static size_t&#160;</td><td class="memItemRight" valign="bottom"><b>Size</b> (<a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> path)</td></tr>
+<tr class="memitem:ae23c7762c736401529c90a110e9c5d6f" id="r_ae23c7762c736401529c90a110e9c5d6f"><td class="memItemLeft"><a id="ae23c7762c736401529c90a110e9c5d6f" name="ae23c7762c736401529c90a110e9c5d6f"></a>
+static size_t&#160;</td><td class="memItemRight"><b>Size</b> (StringView path)</td></tr>
 <tr class="memdesc:ae23c7762c736401529c90a110e9c5d6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルサイズを取得 <br /></td></tr>
-<tr class="separator:ae23c7762c736401529c90a110e9c5d6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabc3371744fce9a47e0966e9cf6d90b0"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html#aabc3371744fce9a47e0966e9cf6d90b0">Copy</a> (<a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> src, <a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> dst, <a class="el" href="../../d8/d40/class_amuse_1_1_core_1_1_bit_flags.html">FileCopyOptions</a> options=FileCopyOption::None)</td></tr>
+<tr class="memitem:aabc3371744fce9a47e0966e9cf6d90b0" id="r_aabc3371744fce9a47e0966e9cf6d90b0"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#aabc3371744fce9a47e0966e9cf6d90b0">Copy</a> (StringView src, StringView dst, FileCopyOptions options=FileCopyOption::None)</td></tr>
 <tr class="memdesc:aabc3371744fce9a47e0966e9cf6d90b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルをコピーする  <br /></td></tr>
-<tr class="separator:aabc3371744fce9a47e0966e9cf6d90b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f69c1f079aa93eaa5c8b2df5ef39774"><td class="memItemLeft" align="right" valign="top"><a id="a0f69c1f079aa93eaa5c8b2df5ef39774" name="a0f69c1f079aa93eaa5c8b2df5ef39774"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><b>Delete</b> (<a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> path)</td></tr>
+<tr class="memitem:a0f69c1f079aa93eaa5c8b2df5ef39774" id="r_a0f69c1f079aa93eaa5c8b2df5ef39774"><td class="memItemLeft"><a id="a0f69c1f079aa93eaa5c8b2df5ef39774" name="a0f69c1f079aa93eaa5c8b2df5ef39774"></a>
+static bool&#160;</td><td class="memItemRight"><b>Delete</b> (StringView path)</td></tr>
 <tr class="memdesc:a0f69c1f079aa93eaa5c8b2df5ef39774"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルを削除する <br /></td></tr>
-<tr class="separator:a0f69c1f079aa93eaa5c8b2df5ef39774"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adbdd9721e5ce9fea2861658b91340486"><td class="memItemLeft" align="right" valign="top"><a id="adbdd9721e5ce9fea2861658b91340486" name="adbdd9721e5ce9fea2861658b91340486"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><b>Move</b> (<a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> from, <a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> to)</td></tr>
+<tr class="memitem:adbdd9721e5ce9fea2861658b91340486" id="r_adbdd9721e5ce9fea2861658b91340486"><td class="memItemLeft"><a id="adbdd9721e5ce9fea2861658b91340486" name="adbdd9721e5ce9fea2861658b91340486"></a>
+static bool&#160;</td><td class="memItemRight"><b>Move</b> (StringView from, StringView to)</td></tr>
 <tr class="memdesc:adbdd9721e5ce9fea2861658b91340486"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルを移動する <br /></td></tr>
-<tr class="separator:adbdd9721e5ce9fea2861658b91340486"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23d5be93624af89a5933f1ef98abf39a"><td class="memItemLeft" align="right" valign="top"><a id="a23d5be93624af89a5933f1ef98abf39a" name="a23d5be93624af89a5933f1ef98abf39a"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><b>Rename</b> (<a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> from, <a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> to)</td></tr>
+<tr class="memitem:a23d5be93624af89a5933f1ef98abf39a" id="r_a23d5be93624af89a5933f1ef98abf39a"><td class="memItemLeft"><a id="a23d5be93624af89a5933f1ef98abf39a" name="a23d5be93624af89a5933f1ef98abf39a"></a>
+static bool&#160;</td><td class="memItemRight"><b>Rename</b> (StringView from, StringView to)</td></tr>
 <tr class="memdesc:a23d5be93624af89a5933f1ef98abf39a"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイル名を変更する <br /></td></tr>
-<tr class="separator:a23d5be93624af89a5933f1ef98abf39a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36727c054c5985001cf431fa939c8c96"><td class="memItemLeft" align="right" valign="top"><a id="a36727c054c5985001cf431fa939c8c96" name="a36727c054c5985001cf431fa939c8c96"></a>
-static Optional&lt; <a class="el" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ReadAllText</b> (<a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> path)</td></tr>
+<tr class="memitem:a36727c054c5985001cf431fa939c8c96" id="r_a36727c054c5985001cf431fa939c8c96"><td class="memItemLeft"><a id="a36727c054c5985001cf431fa939c8c96" name="a36727c054c5985001cf431fa939c8c96"></a>
+static Optional&lt; String &gt;&#160;</td><td class="memItemRight"><b>ReadAllText</b> (StringView path)</td></tr>
 <tr class="memdesc:a36727c054c5985001cf431fa939c8c96"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルを文字列として全て読み込む <br /></td></tr>
-<tr class="separator:a36727c054c5985001cf431fa939c8c96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9a6a353cfe22adaada5f937f53bc729"><td class="memItemLeft" align="right" valign="top"><a id="af9a6a353cfe22adaada5f937f53bc729" name="af9a6a353cfe22adaada5f937f53bc729"></a>
-static Optional&lt; <a class="el" href="../../df/d96/class_amuse_1_1_core_1_1_blob.html">Blob</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ReadAllByte</b> (<a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> path)</td></tr>
+<tr class="memitem:af9a6a353cfe22adaada5f937f53bc729" id="r_af9a6a353cfe22adaada5f937f53bc729"><td class="memItemLeft"><a id="af9a6a353cfe22adaada5f937f53bc729" name="af9a6a353cfe22adaada5f937f53bc729"></a>
+static Optional&lt; <a class="el" href="../../df/d96/class_amuse_1_1_core_1_1_blob.html">Blob</a> &gt;&#160;</td><td class="memItemRight"><b>ReadAllByte</b> (StringView path)</td></tr>
 <tr class="memdesc:af9a6a353cfe22adaada5f937f53bc729"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルをバイナリデータとして全て読み込む <br /></td></tr>
-<tr class="separator:af9a6a353cfe22adaada5f937f53bc729"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
 <div class="textblock"><p>ファイル </p>
-</div><h2 class="groupheader">構築子と解体子</h2>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">構築子と解体子</h2>
 <a id="a2689d11dbb5a2c282a29fa68225852c5" name="a2689d11dbb5a2c282a29fa68225852c5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2689d11dbb5a2c282a29fa68225852c5">&#9670;&#160;</a></span>File()</h2>
 
@@ -224,24 +206,17 @@ static Optional&lt; <a class="el" href="../../df/d96/class_amuse_1_1_core_1_1_bl
         <tr>
           <td class="memname">Amuse::Core::File::File </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a>&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
+          <td class="paramtype">StringView</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">FileOpenMode&#160;</td>
-          <td class="paramname"><em>mode</em> = <code>FileOpenMode::Read</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">FileOpenMode</td>          <td class="paramname"><span class="paramname"><em>mode</em></span><span class="paramdefsep"> = </span><span class="paramdefval">FileOpenMode::Read</span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -257,7 +232,7 @@ static Optional&lt; <a class="el" href="../../df/d96/class_amuse_1_1_core_1_1_bl
 
 </div>
 </div>
-<h2 class="groupheader">関数詳解</h2>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
 <a id="ad41007d25a15a2dc4a29360c8dc6aaec" name="ad41007d25a15a2dc4a29360c8dc6aaec"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad41007d25a15a2dc4a29360c8dc6aaec">&#9670;&#160;</a></span>canRead()</h2>
 
@@ -270,13 +245,13 @@ static Optional&lt; <a class="el" href="../../df/d96/class_amuse_1_1_core_1_1_bl
         <tr>
           <td class="memname">bool Amuse::Core::File::canRead </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -299,13 +274,13 @@ static Optional&lt; <a class="el" href="../../df/d96/class_amuse_1_1_core_1_1_bl
         <tr>
           <td class="memname">bool Amuse::Core::File::canWrite </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -326,32 +301,24 @@ static Optional&lt; <a class="el" href="../../df/d96/class_amuse_1_1_core_1_1_bl
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool Amuse::Core::File::Copy </td>
+          <td class="memname">bool Amuse::Core::File::Copy </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a>&#160;</td>
-          <td class="paramname"><em>src</em>, </td>
+          <td class="paramtype">StringView</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a>&#160;</td>
-          <td class="paramname"><em>dst</em>, </td>
+          <td class="paramtype">StringView</td>          <td class="paramname"><span class="paramname"><em>dst</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d8/d40/class_amuse_1_1_core_1_1_bit_flags.html">FileCopyOptions</a>&#160;</td>
-          <td class="paramname"><em>options</em> = <code>FileCopyOption::None</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">FileCopyOptions</td>          <td class="paramname"><span class="paramname"><em>options</em></span><span class="paramdefsep"> = </span><span class="paramdefval">FileCopyOption::None</span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -381,13 +348,13 @@ static Optional&lt; <a class="el" href="../../df/d96/class_amuse_1_1_core_1_1_bl
         <tr>
           <td class="memname">void Amuse::Core::File::flush </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -411,13 +378,13 @@ static Optional&lt; <a class="el" href="../../df/d96/class_amuse_1_1_core_1_1_bl
         <tr>
           <td class="memname">size_t Amuse::Core::File::position </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -440,24 +407,17 @@ static Optional&lt; <a class="el" href="../../df/d96/class_amuse_1_1_core_1_1_bl
         <tr>
           <td class="memname">bool Amuse::Core::File::read </td>
           <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>buffer</em>, </td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>byteCount</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>byteCount</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -488,24 +448,17 @@ static Optional&lt; <a class="el" href="../../df/d96/class_amuse_1_1_core_1_1_bl
         <tr>
           <td class="memname">bool Amuse::Core::File::seek </td>
           <td>(</td>
-          <td class="paramtype">offset_t&#160;</td>
-          <td class="paramname"><em>offset</em>, </td>
+          <td class="paramtype">offset_t</td>          <td class="paramname"><span class="paramname"><em>offset</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">SeekOrigin&#160;</td>
-          <td class="paramname"><em>origin</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">SeekOrigin</td>          <td class="paramname"><span class="paramname"><em>origin</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -536,13 +489,13 @@ static Optional&lt; <a class="el" href="../../df/d96/class_amuse_1_1_core_1_1_bl
         <tr>
           <td class="memname">size_t Amuse::Core::File::size </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -565,24 +518,17 @@ static Optional&lt; <a class="el" href="../../df/d96/class_amuse_1_1_core_1_1_bl
         <tr>
           <td class="memname">bool Amuse::Core::File::write </td>
           <td>(</td>
-          <td class="paramtype">const void *&#160;</td>
-          <td class="paramname"><em>buffer</em>, </td>
+          <td class="paramtype">const void *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>byteCount</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>byteCount</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -606,11 +552,12 @@ static Optional&lt; <a class="el" href="../../df/d96/class_amuse_1_1_core_1_1_bl
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>Amuse</b></li><li class="navelem"><b>Core</b></li><li class="navelem"><a class="el" href="../../da/d8e/class_amuse_1_1_core_1_1_file.html">File</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><b>Core</b></li><li class="navelem"><a href="../../da/d8e/class_amuse_1_1_core_1_1_file.html">File</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

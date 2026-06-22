@@ -3,19 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AmuseEngine: Runtime/Core/Public/Amuse/Core/Misc/BlobView.h ソースファイル</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../jquery.js"></script>
-<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
 <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
 <script type="text/javascript" src="../../navtreedata.js"></script>
 <script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="../../style.css" rel="stylesheet" type="text/css"/>
@@ -36,23 +42,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.6 -->
+<!-- 構築: Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('../../',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
 });
-/* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -65,10 +93,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('d1/d60/_blob_view_8h_source.html','../../'); initResizable(); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d1/d60/_blob_view_8h_source.html','../../',''); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -96,13 +123,14 @@ $(document).ready(function(){initNavTree('d1/d60/_blob_view_8h_source.html','../
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//***********************************************************</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"></span><span class="comment">//***********************************************************</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//***********************************************************</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;Amuse/Core/Misc/Blob.h&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span>Amuse::Core {</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html">   13</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html">BlobView</a> {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span></div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html">   13</a></span>    <span class="keyword">class </span><a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a55fcc5c54bb72d7a3d8b45f2843c445a">BlobView</a> {</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a5eba75b7c78737b664cee1250f4748bc">   16</a></span>        <span class="keyword">using </span><a class="code hl_typedef" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a5eba75b7c78737b664cee1250f4748bc">const_iterator</a> = <span class="keyword">const</span> <span class="keywordtype">byte</span>*;                   </div>
@@ -115,128 +143,164 @@ $(document).ready(function(){initNavTree('d1/d60/_blob_view_8h_source.html','../
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a55fcc5c54bb72d7a3d8b45f2843c445a">   25</a></span>        <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a55fcc5c54bb72d7a3d8b45f2843c445a">BlobView</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#af3babc3099e5b881c9ba51c8f78669be">   29</a></span>        <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#af3babc3099e5b881c9ba51c8f78669be">BlobView</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../df/d96/class_amuse_1_1_core_1_1_blob.html">Blob</a>&amp; blob)</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        {</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            m_pData = blob.<a class="code hl_function" href="../../df/d96/class_amuse_1_1_core_1_1_blob.html#af148b44e6a25cfe960106f8b2958c122">data</a>();</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            m_size = blob.<a class="code hl_function" href="../../df/d96/class_amuse_1_1_core_1_1_blob.html#aa9796333c3282af9a12eaa95ea614db1">size</a>();</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        }</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a0273f713852a01853c3a86240a59a81e">   36</a></span>        <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a0273f713852a01853c3a86240a59a81e">BlobView</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* pData, <span class="keywordtype">size_t</span> <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a5726a023783e9282f8b960065d934216">size</a>)</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        {</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            m_pData = <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">byte</span>*<span class="keyword">&gt;</span>(pData);</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            m_size = <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a5726a023783e9282f8b960065d934216">size</a>;</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        }</div>
+</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span></div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#adae5c30070e58766fc749a1c278e5331">   45</a></span>        <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#adae5c30070e58766fc749a1c278e5331">BlobView</a>(<span class="keyword">const</span> Vector&lt;T&gt;&amp; <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a38053df9ec96f810db493c6cb2dd19ce">data</a>) {</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            m_pData = <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">byte</span>*<span class="keyword">&gt;</span>(<a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a38053df9ec96f810db493c6cb2dd19ce">data</a>.data());</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            m_size = <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a38053df9ec96f810db493c6cb2dd19ce">data</a>.size() * <span class="keyword">sizeof</span>(T);</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        }</div>
+</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span></div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keyword">template</span>&lt;<span class="keyword">class</span> T,<span class="keywordtype">size_t</span> N&gt;</div>
+<div class="foldopen" id="foldopen00053" data-start="{" data-end="}">
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#aef324c9d6874fa923c50a2f855cb0230">   53</a></span>        <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#aef324c9d6874fa923c50a2f855cb0230">BlobView</a>(<span class="keyword">const</span> T(&amp;<a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a38053df9ec96f810db493c6cb2dd19ce">data</a>)[N]) {</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            m_pData = <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">byte</span>*<span class="keyword">&gt;</span>(<a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a38053df9ec96f810db493c6cb2dd19ce">data</a>);</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            m_size = N * <span class="keyword">sizeof</span>(T);</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        }</div>
+</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a5b6cb46cdf2f90d75b53f7462c51014e">   60</a></span>        <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a5b6cb46cdf2f90d75b53f7462c51014e">BlobView</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html">BlobView</a>&amp; blob) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a5b6cb46cdf2f90d75b53f7462c51014e">   60</a></span>        <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a5b6cb46cdf2f90d75b53f7462c51014e">BlobView</a>(<span class="keyword">const</span> <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a55fcc5c54bb72d7a3d8b45f2843c445a">BlobView</a>&amp; blob) = <span class="keywordflow">default</span>;</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a667fedc7192a2c6e38446fb2f80efb9b">   64</a></span>        <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a667fedc7192a2c6e38446fb2f80efb9b">BlobView</a>(<a class="code hl_class" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html">BlobView</a>&amp;&amp; blob) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a667fedc7192a2c6e38446fb2f80efb9b">   64</a></span>        <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a667fedc7192a2c6e38446fb2f80efb9b">BlobView</a>(<a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a55fcc5c54bb72d7a3d8b45f2843c445a">BlobView</a>&amp;&amp; blob) = <span class="keywordflow">default</span>;</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="comment">//===============================================================</span></div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="comment">// オペレータ</span></div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="comment">//===============================================================</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a82c6a356bb39ce9e4ecf1a7d7811cca1">   72</a></span>        <a class="code hl_class" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html">BlobView</a>&amp; <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a82c6a356bb39ce9e4ecf1a7d7811cca1">operator =</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html">BlobView</a>&amp; other) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a82c6a356bb39ce9e4ecf1a7d7811cca1">   72</a></span>        <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a55fcc5c54bb72d7a3d8b45f2843c445a">BlobView</a>&amp; <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a82c6a356bb39ce9e4ecf1a7d7811cca1">operator =</a>(<span class="keyword">const</span> <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a55fcc5c54bb72d7a3d8b45f2843c445a">BlobView</a>&amp; other) = <span class="keywordflow">default</span>;</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a7718d2f5d27b73122b432d9e26720a54">   76</a></span>        <a class="code hl_class" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html">BlobView</a>&amp; <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a82c6a356bb39ce9e4ecf1a7d7811cca1">operator =</a>(<a class="code hl_class" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html">BlobView</a>&amp;&amp; other) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a7718d2f5d27b73122b432d9e26720a54">   76</a></span>        <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a55fcc5c54bb72d7a3d8b45f2843c445a">BlobView</a>&amp; <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a82c6a356bb39ce9e4ecf1a7d7811cca1">operator =</a>(<a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a55fcc5c54bb72d7a3d8b45f2843c445a">BlobView</a>&amp;&amp; other) = <span class="keywordflow">default</span>;</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#ab70fc4777b7c7a13d1eb69256a838804">   80</a></span>        <a class="code hl_class" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html">BlobView</a>&amp; <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a82c6a356bb39ce9e4ecf1a7d7811cca1">operator =</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../df/d96/class_amuse_1_1_core_1_1_blob.html">Blob</a>&amp; other) {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span></div>
+<div class="foldopen" id="foldopen00080" data-start="{" data-end="}">
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#ab70fc4777b7c7a13d1eb69256a838804">   80</a></span>        <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a55fcc5c54bb72d7a3d8b45f2843c445a">BlobView</a>&amp; <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a82c6a356bb39ce9e4ecf1a7d7811cca1">operator =</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../df/d96/class_amuse_1_1_core_1_1_blob.html">Blob</a>&amp; other) {</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            m_pData = other.<a class="code hl_function" href="../../df/d96/class_amuse_1_1_core_1_1_blob.html#af148b44e6a25cfe960106f8b2958c122">data</a>();</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            m_size = other.<a class="code hl_function" href="../../df/d96/class_amuse_1_1_core_1_1_blob.html#aa9796333c3282af9a12eaa95ea614db1">size</a>();</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        }</div>
+</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span></div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keyword">template</span>&lt;<span class="keyword">class</span> T, std::enable_if_t&lt;!std::is_same_v&lt;T,Blob&gt;&gt;&gt;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a49af1dbb023d43e255fce2be389869e3">   89</a></span>        <a class="code hl_class" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html">BlobView</a>&amp; <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a82c6a356bb39ce9e4ecf1a7d7811cca1">operator =</a>(<span class="keyword">const</span> Vector&lt;T&gt;&amp; other) {</div>
+<div class="foldopen" id="foldopen00089" data-start="{" data-end="}">
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a49af1dbb023d43e255fce2be389869e3">   89</a></span>        <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a55fcc5c54bb72d7a3d8b45f2843c445a">BlobView</a>&amp; <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a82c6a356bb39ce9e4ecf1a7d7811cca1">operator =</a>(<span class="keyword">const</span> Vector&lt;T&gt;&amp; other) {</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            m_pData = <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">byte</span>*<span class="keyword">&gt;</span>(other.data());</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            m_size = other.size() * <span class="keyword">sizeof</span>(T);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            m_size = other.<a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a5726a023783e9282f8b960065d934216">size</a>() * <span class="keyword">sizeof</span>(T);</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        }</div>
+</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="comment">//===============================================================</span></div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="comment">// アクセス</span></div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="comment">//===============================================================</span></div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span></div>
+<div class="foldopen" id="foldopen00101" data-start="{" data-end="}">
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#ac06a0a4b631f3ea0d069b671979a7740">  101</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#ac06a0a4b631f3ea0d069b671979a7740">magic</a>(<span class="keyword">const</span> Char <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#ac06a0a4b631f3ea0d069b671979a7740">magic</a>[5])<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            <span class="keywordflow">return</span> 4 &lt;= <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a5726a023783e9282f8b960065d934216">size</a>() &amp;&amp; memcmp(<a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a38053df9ec96f810db493c6cb2dd19ce">data</a>(), <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#ac06a0a4b631f3ea0d069b671979a7740">magic</a>, 4) == 0;</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        }</div>
+</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span></div>
+<div class="foldopen" id="foldopen00107" data-start="{" data-end="}">
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a7e2c174c018aa1cc753d86765a7885be">  107</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a7e2c174c018aa1cc753d86765a7885be">magic</a>(u32 <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#ac06a0a4b631f3ea0d069b671979a7740">magic</a>)<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            <span class="keywordflow">return</span> 4 &lt;= <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a5726a023783e9282f8b960065d934216">size</a>() &amp;&amp; memcmp(<a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a38053df9ec96f810db493c6cb2dd19ce">data</a>(), &amp;<a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#ac06a0a4b631f3ea0d069b671979a7740">magic</a>, 4) == 0;</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        }</div>
+</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span></div>
+<div class="foldopen" id="foldopen00113" data-start="{" data-end="}">
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a2994a6da61d181e19ba5788d96dda6b6">  113</a></span>        <span class="keyword">const</span> <span class="keywordtype">byte</span>&amp; <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a2994a6da61d181e19ba5788d96dda6b6">operator[]</a>(<span class="keyword">const</span> <span class="keywordtype">size_t</span> index)<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            <span class="keywordflow">return</span> m_pData[index];</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        }</div>
+</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span></div>
+<div class="foldopen" id="foldopen00119" data-start="{" data-end="}">
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a38053df9ec96f810db493c6cb2dd19ce">  119</a></span>        <span class="keyword">const</span> <span class="keywordtype">byte</span>* <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a38053df9ec96f810db493c6cb2dd19ce">data</a>() const noexcept {</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            <span class="keywordflow">return</span> m_pData;</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        }</div>
+</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span></div>
+<div class="foldopen" id="foldopen00125" data-start="{" data-end="}">
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a1c702bceab200e5be7692a74c2478c5f">  125</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a1c702bceab200e5be7692a74c2478c5f">empty</a>() const noexcept {</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            <span class="keywordflow">return</span> m_pData==<span class="keyword">nullptr</span> || m_size == 0;</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        }</div>
+</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span></div>
+<div class="foldopen" id="foldopen00131" data-start="{" data-end="}">
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#ae8b9e0c33daf568e946683523445563b">  131</a></span>        <span class="keyword">explicit</span> <span class="keyword">operator</span> bool() const noexcept {</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            <span class="keywordflow">return</span> !<a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a1c702bceab200e5be7692a74c2478c5f">empty</a>();</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        }</div>
+</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span></div>
+<div class="foldopen" id="foldopen00137" data-start="{" data-end="}">
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a5726a023783e9282f8b960065d934216">  137</a></span>        <span class="keywordtype">size_t</span> <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a5726a023783e9282f8b960065d934216">size</a>() const noexcept {</div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>            <span class="keywordflow">return</span> m_size;</div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        }</div>
+</div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span></div>
+<div class="foldopen" id="foldopen00143" data-start="{" data-end="}">
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a5646fa3f43f7085f30b0071423ca5242">  143</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a5646fa3f43f7085f30b0071423ca5242">clear</a>() {</div>
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>            m_pData = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>            m_size = 0;</div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        }</div>
+</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span></div>
+<div class="foldopen" id="foldopen00150" data-start="{" data-end="}">
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#ad40d6c77dc7e1c07fae8f4028b3a0f2b">  150</a></span>        <a class="code hl_typedef" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a5eba75b7c78737b664cee1250f4748bc">const_iterator</a> <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#ad40d6c77dc7e1c07fae8f4028b3a0f2b">begin</a>() const noexcept {</div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>            <span class="keywordflow">return</span> m_pData;</div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        }</div>
+</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span></div>
+<div class="foldopen" id="foldopen00156" data-start="{" data-end="}">
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a7f44cbce58f32a58b40cc064d4399992">  156</a></span>        <a class="code hl_typedef" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a5eba75b7c78737b664cee1250f4748bc">const_iterator</a> <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a7f44cbce58f32a58b40cc064d4399992">end</a>() const noexcept {</div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>            <span class="keywordflow">return</span> m_pData+m_size;</div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        }</div>
+</div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span></div>
+<div class="foldopen" id="foldopen00162" data-start="{" data-end="}">
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno"><a class="line" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a95e6398f92cdcb6969c6936d67af5232">  162</a></span>        <a class="code hl_typedef" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a5eba75b7c78737b664cee1250f4748bc">const_iterator</a> <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a95e6398f92cdcb6969c6936d67af5232">cbegin</a>() const noexcept {</div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>            <span class="keywordflow">return</span> m_pData;</div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        }</div>
+</div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span></div>
+<div class="foldopen" id="foldopen00168" data-start="{" data-end="}">
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno"><a class="line" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a15dfe92139ddc599c8dc3b99ed69d640">  168</a></span>        <a class="code hl_typedef" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a5eba75b7c78737b664cee1250f4748bc">const_iterator</a> <a class="code hl_function" href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a15dfe92139ddc599c8dc3b99ed69d640">cend</a>() const noexcept {</div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>            <span class="keywordflow">return</span> m_pData + m_size;</div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        }</div>
+</div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
@@ -244,40 +308,41 @@ $(document).ready(function(){initNavTree('d1/d60/_blob_view_8h_source.html','../
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        <span class="keywordtype">size_t</span> m_size = 0;</div>
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    };</div>
+</div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span> </div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>}</div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_html"><div class="ttname"><a href="../../df/d96/class_amuse_1_1_core_1_1_blob.html">Amuse::Core::Blob</a></div><div class="ttdoc">バイナリデータ(Binary Large Object)</div><div class="ttdef"><b>Definition:</b> Blob.h:13</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_html_aa9796333c3282af9a12eaa95ea614db1"><div class="ttname"><a href="../../df/d96/class_amuse_1_1_core_1_1_blob.html#aa9796333c3282af9a12eaa95ea614db1">Amuse::Core::Blob::size</a></div><div class="ttdeci">size_t size() const noexcept</div><div class="ttdoc">データサイズを取得</div><div class="ttdef"><b>Definition:</b> Blob.h:196</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_html_af148b44e6a25cfe960106f8b2958c122"><div class="ttname"><a href="../../df/d96/class_amuse_1_1_core_1_1_blob.html#af148b44e6a25cfe960106f8b2958c122">Amuse::Core::Blob::data</a></div><div class="ttdeci">const byte * data() const noexcept</div><div class="ttdoc">先頭データにアクセス</div><div class="ttdef"><b>Definition:</b> Blob.h:166</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_view_html"><div class="ttname"><a href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html">Amuse::Core::BlobView</a></div><div class="ttdoc">バイナリデータビュー(Binary Large Object View)</div><div class="ttdef"><b>Definition:</b> BlobView.h:13</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_view_html_a0273f713852a01853c3a86240a59a81e"><div class="ttname"><a href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a0273f713852a01853c3a86240a59a81e">Amuse::Core::BlobView::BlobView</a></div><div class="ttdeci">BlobView(const void *pData, size_t size)</div><div class="ttdoc">コンストラクタ(ポインタ指定)</div><div class="ttdef"><b>Definition:</b> BlobView.h:36</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_view_html_a15dfe92139ddc599c8dc3b99ed69d640"><div class="ttname"><a href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a15dfe92139ddc599c8dc3b99ed69d640">Amuse::Core::BlobView::cend</a></div><div class="ttdeci">const_iterator cend() const noexcept</div><div class="ttdoc">終了イテレータ(const)</div><div class="ttdef"><b>Definition:</b> BlobView.h:168</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_view_html_a1c702bceab200e5be7692a74c2478c5f"><div class="ttname"><a href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a1c702bceab200e5be7692a74c2478c5f">Amuse::Core::BlobView::empty</a></div><div class="ttdeci">bool empty() const noexcept</div><div class="ttdoc">空か</div><div class="ttdef"><b>Definition:</b> BlobView.h:125</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_view_html_a2994a6da61d181e19ba5788d96dda6b6"><div class="ttname"><a href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a2994a6da61d181e19ba5788d96dda6b6">Amuse::Core::BlobView::operator[]</a></div><div class="ttdeci">const byte &amp; operator[](const size_t index) const</div><div class="ttdoc">バイトアクセス</div><div class="ttdef"><b>Definition:</b> BlobView.h:113</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_view_html_a38053df9ec96f810db493c6cb2dd19ce"><div class="ttname"><a href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a38053df9ec96f810db493c6cb2dd19ce">Amuse::Core::BlobView::data</a></div><div class="ttdeci">const byte * data() const noexcept</div><div class="ttdoc">先頭データにアクセス</div><div class="ttdef"><b>Definition:</b> BlobView.h:119</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_html"><div class="ttname"><a href="../../df/d96/class_amuse_1_1_core_1_1_blob.html">Amuse::Core::Blob</a></div><div class="ttdoc">バイナリデータ(Binary Large Object)</div><div class="ttdef"><b>Definition</b> Blob.h:13</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_html_aa9796333c3282af9a12eaa95ea614db1"><div class="ttname"><a href="../../df/d96/class_amuse_1_1_core_1_1_blob.html#aa9796333c3282af9a12eaa95ea614db1">Amuse::Core::Blob::size</a></div><div class="ttdeci">size_t size() const noexcept</div><div class="ttdoc">データサイズを取得</div><div class="ttdef"><b>Definition</b> Blob.h:196</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_html_af148b44e6a25cfe960106f8b2958c122"><div class="ttname"><a href="../../df/d96/class_amuse_1_1_core_1_1_blob.html#af148b44e6a25cfe960106f8b2958c122">Amuse::Core::Blob::data</a></div><div class="ttdeci">const byte * data() const noexcept</div><div class="ttdoc">先頭データにアクセス</div><div class="ttdef"><b>Definition</b> Blob.h:166</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_view_html_a0273f713852a01853c3a86240a59a81e"><div class="ttname"><a href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a0273f713852a01853c3a86240a59a81e">Amuse::Core::BlobView::BlobView</a></div><div class="ttdeci">BlobView(const void *pData, size_t size)</div><div class="ttdoc">コンストラクタ(ポインタ指定)</div><div class="ttdef"><b>Definition</b> BlobView.h:36</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_view_html_a15dfe92139ddc599c8dc3b99ed69d640"><div class="ttname"><a href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a15dfe92139ddc599c8dc3b99ed69d640">Amuse::Core::BlobView::cend</a></div><div class="ttdeci">const_iterator cend() const noexcept</div><div class="ttdoc">終了イテレータ(const)</div><div class="ttdef"><b>Definition</b> BlobView.h:168</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_view_html_a1c702bceab200e5be7692a74c2478c5f"><div class="ttname"><a href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a1c702bceab200e5be7692a74c2478c5f">Amuse::Core::BlobView::empty</a></div><div class="ttdeci">bool empty() const noexcept</div><div class="ttdoc">空か</div><div class="ttdef"><b>Definition</b> BlobView.h:125</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_view_html_a2994a6da61d181e19ba5788d96dda6b6"><div class="ttname"><a href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a2994a6da61d181e19ba5788d96dda6b6">Amuse::Core::BlobView::operator[]</a></div><div class="ttdeci">const byte &amp; operator[](const size_t index) const</div><div class="ttdoc">バイトアクセス</div><div class="ttdef"><b>Definition</b> BlobView.h:113</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_view_html_a38053df9ec96f810db493c6cb2dd19ce"><div class="ttname"><a href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a38053df9ec96f810db493c6cb2dd19ce">Amuse::Core::BlobView::data</a></div><div class="ttdeci">const byte * data() const noexcept</div><div class="ttdoc">先頭データにアクセス</div><div class="ttdef"><b>Definition</b> BlobView.h:119</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_view_html_a55fcc5c54bb72d7a3d8b45f2843c445a"><div class="ttname"><a href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a55fcc5c54bb72d7a3d8b45f2843c445a">Amuse::Core::BlobView::BlobView</a></div><div class="ttdeci">BlobView()=default</div><div class="ttdoc">デフォルトコンストラクタ</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_view_html_a5646fa3f43f7085f30b0071423ca5242"><div class="ttname"><a href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a5646fa3f43f7085f30b0071423ca5242">Amuse::Core::BlobView::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">データをクリア</div><div class="ttdef"><b>Definition:</b> BlobView.h:143</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_view_html_a5726a023783e9282f8b960065d934216"><div class="ttname"><a href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a5726a023783e9282f8b960065d934216">Amuse::Core::BlobView::size</a></div><div class="ttdeci">size_t size() const noexcept</div><div class="ttdoc">データサイズを取得</div><div class="ttdef"><b>Definition:</b> BlobView.h:137</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_view_html_a5646fa3f43f7085f30b0071423ca5242"><div class="ttname"><a href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a5646fa3f43f7085f30b0071423ca5242">Amuse::Core::BlobView::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">データをクリア</div><div class="ttdef"><b>Definition</b> BlobView.h:143</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_view_html_a5726a023783e9282f8b960065d934216"><div class="ttname"><a href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a5726a023783e9282f8b960065d934216">Amuse::Core::BlobView::size</a></div><div class="ttdeci">size_t size() const noexcept</div><div class="ttdoc">データサイズを取得</div><div class="ttdef"><b>Definition</b> BlobView.h:137</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_view_html_a5b6cb46cdf2f90d75b53f7462c51014e"><div class="ttname"><a href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a5b6cb46cdf2f90d75b53f7462c51014e">Amuse::Core::BlobView::BlobView</a></div><div class="ttdeci">BlobView(const BlobView &amp;blob)=default</div><div class="ttdoc">コピーコンストラクタ</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_view_html_a5eba75b7c78737b664cee1250f4748bc"><div class="ttname"><a href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a5eba75b7c78737b664cee1250f4748bc">Amuse::Core::BlobView::const_iterator</a></div><div class="ttdeci">const byte * const_iterator</div><div class="ttdoc">イテレータ(const)</div><div class="ttdef"><b>Definition:</b> BlobView.h:16</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_view_html_a5eba75b7c78737b664cee1250f4748bc"><div class="ttname"><a href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a5eba75b7c78737b664cee1250f4748bc">Amuse::Core::BlobView::const_iterator</a></div><div class="ttdeci">const byte * const_iterator</div><div class="ttdoc">イテレータ(const)</div><div class="ttdef"><b>Definition</b> BlobView.h:16</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_view_html_a667fedc7192a2c6e38446fb2f80efb9b"><div class="ttname"><a href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a667fedc7192a2c6e38446fb2f80efb9b">Amuse::Core::BlobView::BlobView</a></div><div class="ttdeci">BlobView(BlobView &amp;&amp;blob)=default</div><div class="ttdoc">ムーブコンストラクタ(Blob指定)</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_view_html_a7e2c174c018aa1cc753d86765a7885be"><div class="ttname"><a href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a7e2c174c018aa1cc753d86765a7885be">Amuse::Core::BlobView::magic</a></div><div class="ttdeci">bool magic(u32 magic) const</div><div class="ttdoc">マジックナンバーを持っているか</div><div class="ttdef"><b>Definition:</b> BlobView.h:107</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_view_html_a7f44cbce58f32a58b40cc064d4399992"><div class="ttname"><a href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a7f44cbce58f32a58b40cc064d4399992">Amuse::Core::BlobView::end</a></div><div class="ttdeci">const_iterator end() const noexcept</div><div class="ttdoc">終了イテレータ(const)</div><div class="ttdef"><b>Definition:</b> BlobView.h:156</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_view_html_a7e2c174c018aa1cc753d86765a7885be"><div class="ttname"><a href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a7e2c174c018aa1cc753d86765a7885be">Amuse::Core::BlobView::magic</a></div><div class="ttdeci">bool magic(u32 magic) const</div><div class="ttdoc">マジックナンバーを持っているか</div><div class="ttdef"><b>Definition</b> BlobView.h:107</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_view_html_a7f44cbce58f32a58b40cc064d4399992"><div class="ttname"><a href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a7f44cbce58f32a58b40cc064d4399992">Amuse::Core::BlobView::end</a></div><div class="ttdeci">const_iterator end() const noexcept</div><div class="ttdoc">終了イテレータ(const)</div><div class="ttdef"><b>Definition</b> BlobView.h:156</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_view_html_a82c6a356bb39ce9e4ecf1a7d7811cca1"><div class="ttname"><a href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a82c6a356bb39ce9e4ecf1a7d7811cca1">Amuse::Core::BlobView::operator=</a></div><div class="ttdeci">BlobView &amp; operator=(const BlobView &amp;other)=default</div><div class="ttdoc">コピー代入演算子</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_view_html_a95e6398f92cdcb6969c6936d67af5232"><div class="ttname"><a href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a95e6398f92cdcb6969c6936d67af5232">Amuse::Core::BlobView::cbegin</a></div><div class="ttdeci">const_iterator cbegin() const noexcept</div><div class="ttdoc">開始イテレータ(const)</div><div class="ttdef"><b>Definition:</b> BlobView.h:162</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_view_html_ac06a0a4b631f3ea0d069b671979a7740"><div class="ttname"><a href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#ac06a0a4b631f3ea0d069b671979a7740">Amuse::Core::BlobView::magic</a></div><div class="ttdeci">bool magic(const Char magic[5]) const</div><div class="ttdoc">マジックナンバーを持っているか</div><div class="ttdef"><b>Definition:</b> BlobView.h:101</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_view_html_ad40d6c77dc7e1c07fae8f4028b3a0f2b"><div class="ttname"><a href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#ad40d6c77dc7e1c07fae8f4028b3a0f2b">Amuse::Core::BlobView::begin</a></div><div class="ttdeci">const_iterator begin() const noexcept</div><div class="ttdoc">開始イテレータ(const)</div><div class="ttdef"><b>Definition:</b> BlobView.h:150</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_view_html_adae5c30070e58766fc749a1c278e5331"><div class="ttname"><a href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#adae5c30070e58766fc749a1c278e5331">Amuse::Core::BlobView::BlobView</a></div><div class="ttdeci">BlobView(const Vector&lt; T &gt; &amp;data)</div><div class="ttdoc">コンストラクタ(vector指定)</div><div class="ttdef"><b>Definition:</b> BlobView.h:45</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_view_html_aef324c9d6874fa923c50a2f855cb0230"><div class="ttname"><a href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#aef324c9d6874fa923c50a2f855cb0230">Amuse::Core::BlobView::BlobView</a></div><div class="ttdeci">BlobView(const T(&amp;data)[N])</div><div class="ttdoc">コンストラクタ(配列指定)</div><div class="ttdef"><b>Definition:</b> BlobView.h:53</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_view_html_af3babc3099e5b881c9ba51c8f78669be"><div class="ttname"><a href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#af3babc3099e5b881c9ba51c8f78669be">Amuse::Core::BlobView::BlobView</a></div><div class="ttdeci">BlobView(const Blob &amp;blob)</div><div class="ttdoc">コンストラクタ(Blob指定)</div><div class="ttdef"><b>Definition:</b> BlobView.h:29</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_view_html_a95e6398f92cdcb6969c6936d67af5232"><div class="ttname"><a href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a95e6398f92cdcb6969c6936d67af5232">Amuse::Core::BlobView::cbegin</a></div><div class="ttdeci">const_iterator cbegin() const noexcept</div><div class="ttdoc">開始イテレータ(const)</div><div class="ttdef"><b>Definition</b> BlobView.h:162</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_view_html_ac06a0a4b631f3ea0d069b671979a7740"><div class="ttname"><a href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#ac06a0a4b631f3ea0d069b671979a7740">Amuse::Core::BlobView::magic</a></div><div class="ttdeci">bool magic(const Char magic[5]) const</div><div class="ttdoc">マジックナンバーを持っているか</div><div class="ttdef"><b>Definition</b> BlobView.h:101</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_view_html_ad40d6c77dc7e1c07fae8f4028b3a0f2b"><div class="ttname"><a href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#ad40d6c77dc7e1c07fae8f4028b3a0f2b">Amuse::Core::BlobView::begin</a></div><div class="ttdeci">const_iterator begin() const noexcept</div><div class="ttdoc">開始イテレータ(const)</div><div class="ttdef"><b>Definition</b> BlobView.h:150</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_view_html_adae5c30070e58766fc749a1c278e5331"><div class="ttname"><a href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#adae5c30070e58766fc749a1c278e5331">Amuse::Core::BlobView::BlobView</a></div><div class="ttdeci">BlobView(const Vector&lt; T &gt; &amp;data)</div><div class="ttdoc">コンストラクタ(vector指定)</div><div class="ttdef"><b>Definition</b> BlobView.h:45</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_view_html_aef324c9d6874fa923c50a2f855cb0230"><div class="ttname"><a href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#aef324c9d6874fa923c50a2f855cb0230">Amuse::Core::BlobView::BlobView</a></div><div class="ttdeci">BlobView(const T(&amp;data)[N])</div><div class="ttdoc">コンストラクタ(配列指定)</div><div class="ttdef"><b>Definition</b> BlobView.h:53</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_blob_view_html_af3babc3099e5b881c9ba51c8f78669be"><div class="ttname"><a href="../../d6/d80/class_amuse_1_1_core_1_1_blob_view.html#af3babc3099e5b881c9ba51c8f78669be">Amuse::Core::BlobView::BlobView</a></div><div class="ttdeci">BlobView(const Blob &amp;blob)</div><div class="ttdoc">コンストラクタ(Blob指定)</div><div class="ttdef"><b>Definition</b> BlobView.h:29</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_4f6666a8f2ab10bc970eb7559668f031.html">Runtime</a></li><li class="navelem"><a class="el" href="../../dir_b05c51a7dc61612d752a1d5ca497c54f.html">Core</a></li><li class="navelem"><a class="el" href="../../dir_2704b46b7ef0c98b3ce7738c20dc746e.html">Public</a></li><li class="navelem"><a class="el" href="../../dir_02338155ec8ce976dea76e6f650abf75.html">Amuse</a></li><li class="navelem"><a class="el" href="../../dir_a813c3653225bc50968bea57534cde90.html">Core</a></li><li class="navelem"><a class="el" href="../../dir_0bd0ac283943d945b1cfbbc22cf09ec5.html">Misc</a></li><li class="navelem"><b>BlobView.h</b></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="navelem"><b>Runtime</b></li><li class="navelem"><b>Core</b></li><li class="navelem"><b>Public</b></li><li class="navelem"><b>Amuse</b></li><li class="navelem"><b>Core</b></li><li class="navelem"><b>Misc</b></li><li class="navelem"><b>BlobView.h</b></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

@@ -3,19 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AmuseEngine: クラスメンバ - 型定義</title>
+<link rel="icon" href="logo.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="style.css" rel="stylesheet" type="text/css"/>
@@ -36,23 +42,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.6 -->
+<!-- 構築: Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
 });
-/* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -65,10 +93,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('functions_type.html',''); initResizable(); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('functions_type.html','',''); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -92,19 +119,21 @@ $(document).ready(function(){initNavTree('functions_type.html',''); initResizabl
 </div>
 
 <div class="contents">
-&#160;
+<div class="textblock">&#160;</div><br/>
+<div class="qindex"><a class="qindex" href="#index_a">A</a><div class="alphasepar"></div><a class="qindex" href="#index_b">B</a><div class="alphasepar"></div><a class="qindex" href="#index_c">C</a><div class="alphasepar"></div><a class="qindex" href="#index_d">D</a><div class="alphasepar"></div><a class="qindex" href="#index_e">E</a><div class="alphasepar"></div><a class="qindex" href="#index_f">F</a><div class="alphasepar"></div><a class="qindex" href="#index_h">H</a><div class="alphasepar"></div><a class="qindex" href="#index_i">I</a><div class="alphasepar"></div><a class="qindex" href="#index_k">K</a><div class="alphasepar"></div><a class="qindex" href="#index_m">M</a><div class="alphasepar"></div><a class="qindex" href="#index_n">N</a><div class="alphasepar"></div><a class="qindex" href="#index_p">P</a><div class="alphasepar"></div><a class="qindex" href="#index_r">R</a><div class="alphasepar"></div><a class="qindex" href="#index_s">S</a><div class="alphasepar"></div><a class="qindex" href="#index_t">T</a><div class="alphasepar"></div><a class="qindex" href="#index_v">V</a></div>
 
-<h3><a id="index_a" name="index_a"></a>- a -</h3><ul>
+
+<h3 class="doxsection"><a id="index_a" name="index_a"></a>- a -</h3><ul>
 <li>allocator_type&#160;:&#160;<a class="el" href="d7/ddc/class_amuse_1_1_core_1_1_index_map.html#a1a6fc27cc1bda0787bc2897c25502b4c">Amuse::Core::IndexMap&lt; TKey, TValue, THasher, TKeyEqual, TAllocator &gt;</a></li>
 </ul>
 
 
-<h3><a id="index_b" name="index_b"></a>- b -</h3><ul>
+<h3 class="doxsection"><a id="index_b" name="index_b"></a>- b -</h3><ul>
 <li>base_type&#160;:&#160;<a class="el" href="d6/d91/class_amuse_1_1_core_1_1_bitmap.html#a55b7eb5834342b590ddfd93683f7aca8">Amuse::Core::Bitmap</a>, <a class="el" href="df/d96/class_amuse_1_1_core_1_1_blob.html#a480918dfa0d64364cad6a6ac431ca427">Amuse::Core::Blob</a></li>
 </ul>
 
 
-<h3><a id="index_c" name="index_c"></a>- c -</h3><ul>
+<h3 class="doxsection"><a id="index_c" name="index_c"></a>- c -</h3><ul>
 <li>const_iterator&#160;:&#160;<a class="el" href="d6/d91/class_amuse_1_1_core_1_1_bitmap.html#a5f8afc0ceeee589bda4541bbbb71dde6">Amuse::Core::Bitmap</a>, <a class="el" href="df/d96/class_amuse_1_1_core_1_1_blob.html#a3e6b12ff4e9aada356fa6a69ef688e1a">Amuse::Core::Blob</a>, <a class="el" href="d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a5eba75b7c78737b664cee1250f4748bc">Amuse::Core::BlobView</a>, <a class="el" href="d3/dc2/class_amuse_1_1_core_1_1_fixed_vector.html#a7a0d1c61e631c791ec832d4287f1720c">Amuse::Core::FixedVector&lt; T, N &gt;</a>, <a class="el" href="d7/ddc/class_amuse_1_1_core_1_1_index_map.html#a1c23f18f01c21c359d77a26de55382ba">Amuse::Core::IndexMap&lt; TKey, TValue, THasher, TKeyEqual, TAllocator &gt;</a>, <a class="el" href="d5/d31/class_amuse_1_1_platform_1_1_arguments.html#a0331cb5e94f52129ee86fa0a03b8ce0f">Amuse::Platform::Arguments</a></li>
 <li>const_method_type&#160;:&#160;<a class="el" href="d3/d42/class_amuse_1_1_core_1_1_event_notifier.html#a723a6ae1d4a416e76b8d98ef8e8f2b99">Amuse::Core::EventNotifier&lt; Args &gt;</a></li>
 <li>const_pointer&#160;:&#160;<a class="el" href="d3/dc2/class_amuse_1_1_core_1_1_fixed_vector.html#aeb1bfdb73d431fa3d123addc4617c4be">Amuse::Core::FixedVector&lt; T, N &gt;</a>, <a class="el" href="d3/ddf/class_amuse_1_1_core_1_1_handle_forward_list.html#a8a04b9f95e73d0a7a8169b2093e1b8b0">Amuse::Core::HandleForwardList&lt; T &gt;</a>, <a class="el" href="da/da9/class_amuse_1_1_core_1_1_handle_list.html#ae5e05c02527c7b84ee11e3416266b420">Amuse::Core::HandleList&lt; T &gt;</a>, <a class="el" href="d7/ddc/class_amuse_1_1_core_1_1_index_map.html#a204f61307ebaf18241d85f53a07b6cab">Amuse::Core::IndexMap&lt; TKey, TValue, THasher, TKeyEqual, TAllocator &gt;</a></li>
@@ -115,25 +144,25 @@ $(document).ready(function(){initNavTree('functions_type.html',''); initResizabl
 </ul>
 
 
-<h3><a id="index_d" name="index_d"></a>- d -</h3><ul>
+<h3 class="doxsection"><a id="index_d" name="index_d"></a>- d -</h3><ul>
 <li>delegate_type&#160;:&#160;<a class="el" href="d3/d42/class_amuse_1_1_core_1_1_event_notifier.html#a9d92832cb70432b969d4a05e1f28bccb">Amuse::Core::EventNotifier&lt; Args &gt;</a></li>
 <li>difference_type&#160;:&#160;<a class="el" href="d4/ddd/class_amuse_1_1_core_1_1_fixed_string_base.html#a37a5b819778b2b651920d7d5c8406f55">Amuse::Core::FixedStringBase&lt; TChar, N &gt;</a>, <a class="el" href="d3/dc2/class_amuse_1_1_core_1_1_fixed_vector.html#ad7e39d5f675a66cbd80523cd85bf50e8">Amuse::Core::FixedVector&lt; T, N &gt;</a>, <a class="el" href="d4/d7f/class_amuse_1_1_core_1_1_handle_forward_list_1_1const__iterator.html#a2e3580cb6e5cb6be0f63d31937dd38d7">Amuse::Core::HandleForwardList&lt; T &gt;::const_iterator</a>, <a class="el" href="d3/ddf/class_amuse_1_1_core_1_1_handle_forward_list.html#ab50fb5ef220d648f370b2ce08131d0bd">Amuse::Core::HandleForwardList&lt; T &gt;</a>, <a class="el" href="d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html#aa225b265daf2bfeeced637c4eba8a931">Amuse::Core::HandleList&lt; T &gt;::const_iterator</a>, <a class="el" href="da/da9/class_amuse_1_1_core_1_1_handle_list.html#a6d1b7e6e56253a064f505585c119c403">Amuse::Core::HandleList&lt; T &gt;</a>, <a class="el" href="d7/ddc/class_amuse_1_1_core_1_1_index_map.html#acb75f1d159afd14b8199c41e106699b9">Amuse::Core::IndexMap&lt; TKey, TValue, THasher, TKeyEqual, TAllocator &gt;</a></li>
 </ul>
 
 
-<h3><a id="index_e" name="index_e"></a>- e -</h3><ul>
+<h3 class="doxsection"><a id="index_e" name="index_e"></a>- e -</h3><ul>
 <li>EventDelegateType&#160;:&#160;<a class="el" href="d6/ded/class_amuse_1_1_core_1_1_logger.html#a1b4fc85e9e252d537906e0b6749481bc">Amuse::Core::Logger</a></li>
 <li>EventHandle&#160;:&#160;<a class="el" href="d6/ded/class_amuse_1_1_core_1_1_logger.html#a881dec07d0cf05d6ee6ca53271cdca39">Amuse::Core::Logger</a></li>
 </ul>
 
 
-<h3><a id="index_f" name="index_f"></a>- f -</h3><ul>
+<h3 class="doxsection"><a id="index_f" name="index_f"></a>- f -</h3><ul>
 <li>func_type&#160;:&#160;<a class="el" href="d1/d4b/struct_amuse_1_1_core_1_1_reflection_function.html#a670ebddbd8b148ea10f28972eb1fc46d">Amuse::Core::ReflectionFunction</a></li>
 <li>function_type&#160;:&#160;<a class="el" href="d6/d24/class_amuse_1_1_core_1_1_delegate_3_01_r_07_args_8_8_8_08_00_01_buffer_size_01_4.html#a8c4eaa7aed92bbc68d905cea7bb989de">Amuse::Core::Delegate&lt; R(Args...), BufferSize &gt;</a>, <a class="el" href="d3/d42/class_amuse_1_1_core_1_1_event_notifier.html#aa820bd54d8027e2e782d681215095e5d">Amuse::Core::EventNotifier&lt; Args &gt;</a></li>
 </ul>
 
 
-<h3><a id="index_h" name="index_h"></a>- h -</h3><ul>
+<h3 class="doxsection"><a id="index_h" name="index_h"></a>- h -</h3><ul>
 <li>Handle&#160;:&#160;<a class="el" href="d3/d42/class_amuse_1_1_core_1_1_event_notifier.html#ad67cee127afc1d6fa7b6a44c814dc41d">Amuse::Core::EventNotifier&lt; Args &gt;</a></li>
 <li>handle_type&#160;:&#160;<a class="el" href="d7/d21/class_amuse_1_1_core_1_1_sync_handle_manager.html#a22ba68c264d7e1f20ae31c7bb6ab0485">Amuse::Core::SyncHandleManager&lt; T, Deleter &gt;</a></li>
 <li>Hash&#160;:&#160;<a class="el" href="d0/d53/class_amuse_1_1_core_1_1_name.html#a86e007d4de6539de091e738aa67eecd2">Amuse::Core::Name</a></li>
@@ -142,65 +171,66 @@ $(document).ready(function(){initNavTree('functions_type.html',''); initResizabl
 </ul>
 
 
-<h3><a id="index_i" name="index_i"></a>- i -</h3><ul>
+<h3 class="doxsection"><a id="index_i" name="index_i"></a>- i -</h3><ul>
 <li>IndexType&#160;:&#160;<a class="el" href="d3/d60/class_amuse_1_1_core_1_1_handle.html#a008573d00dc17f2b1c89fa24df628459">Amuse::Core::Handle&lt; T, TNamespace &gt;</a></li>
 <li>iterator&#160;:&#160;<a class="el" href="d6/d91/class_amuse_1_1_core_1_1_bitmap.html#a341b78330bd57a7b6b19c612592b7372">Amuse::Core::Bitmap</a>, <a class="el" href="df/d96/class_amuse_1_1_core_1_1_blob.html#a0c0c0347ea14c730cce02b8f7ca65e09">Amuse::Core::Blob</a>, <a class="el" href="d3/dc2/class_amuse_1_1_core_1_1_fixed_vector.html#aed99d2ad655e1d25eb6148239c5a602d">Amuse::Core::FixedVector&lt; T, N &gt;</a>, <a class="el" href="d7/ddc/class_amuse_1_1_core_1_1_index_map.html#aba5caa986c690afe1623cc32c0e04e3a">Amuse::Core::IndexMap&lt; TKey, TValue, THasher, TKeyEqual, TAllocator &gt;</a>, <a class="el" href="d5/d31/class_amuse_1_1_platform_1_1_arguments.html#a276cf6221afe90ff69dfb04e4504d30c">Amuse::Platform::Arguments</a></li>
 <li>iterator_category&#160;:&#160;<a class="el" href="d4/d7f/class_amuse_1_1_core_1_1_handle_forward_list_1_1const__iterator.html#a780b28b720675b616554c0b6d8053a9b">Amuse::Core::HandleForwardList&lt; T &gt;::const_iterator</a>, <a class="el" href="d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html#a1705f7f99f0bc2cffbb927117f3b2ccd">Amuse::Core::HandleList&lt; T &gt;::const_iterator</a></li>
 </ul>
 
 
-<h3><a id="index_k" name="index_k"></a>- k -</h3><ul>
+<h3 class="doxsection"><a id="index_k" name="index_k"></a>- k -</h3><ul>
 <li>key_equal&#160;:&#160;<a class="el" href="d7/ddc/class_amuse_1_1_core_1_1_index_map.html#aaaeb06cf95a52f39d9e893e9f3c33df6">Amuse::Core::IndexMap&lt; TKey, TValue, THasher, TKeyEqual, TAllocator &gt;</a></li>
 <li>key_type&#160;:&#160;<a class="el" href="d7/ddc/class_amuse_1_1_core_1_1_index_map.html#a5f67bcdd1525b8ff4c2803c305f9b919">Amuse::Core::IndexMap&lt; TKey, TValue, THasher, TKeyEqual, TAllocator &gt;</a></li>
 </ul>
 
 
-<h3><a id="index_m" name="index_m"></a>- m -</h3><ul>
+<h3 class="doxsection"><a id="index_m" name="index_m"></a>- m -</h3><ul>
 <li>manager_type&#160;:&#160;<a class="el" href="d5/df2/class_amuse_1_1_core_1_1_component_holder.html#a01e13263954c2b812c7b82bb12e233c9">Amuse::Core::ComponentHolder&lt; T &gt;</a>, <a class="el" href="d7/d21/class_amuse_1_1_core_1_1_sync_handle_manager.html#a71f48332a88ca869f0614d8aa8370dbf">Amuse::Core::SyncHandleManager&lt; T, Deleter &gt;</a></li>
 <li>mapped_type&#160;:&#160;<a class="el" href="d7/ddc/class_amuse_1_1_core_1_1_index_map.html#a20584edfde3b39c7aaaa3ab4d9189598">Amuse::Core::IndexMap&lt; TKey, TValue, THasher, TKeyEqual, TAllocator &gt;</a></li>
 <li>method_type&#160;:&#160;<a class="el" href="d3/d42/class_amuse_1_1_core_1_1_event_notifier.html#a76eeb00856e3889451816137755d2eea">Amuse::Core::EventNotifier&lt; Args &gt;</a></li>
 </ul>
 
 
-<h3><a id="index_n" name="index_n"></a>- n -</h3><ul>
+<h3 class="doxsection"><a id="index_n" name="index_n"></a>- n -</h3><ul>
 <li>NotificationHandler&#160;:&#160;<a class="el" href="d7/de5/class_amuse_1_1_core_1_1_exception.html#abc6e1f136f2b96c4ca390e796aa89480">Amuse::Core::Exception</a></li>
 <li>Notifier&#160;:&#160;<a class="el" href="d6/ded/class_amuse_1_1_core_1_1_logger.html#a42adec7f0395ce4ce9c79a6dbffeebb4">Amuse::Core::Logger</a></li>
 </ul>
 
 
-<h3><a id="index_p" name="index_p"></a>- p -</h3><ul>
+<h3 class="doxsection"><a id="index_p" name="index_p"></a>- p -</h3><ul>
 <li>pointer&#160;:&#160;<a class="el" href="d4/ddd/class_amuse_1_1_core_1_1_fixed_string_base.html#acc054302fe39bdbc204db1f9890f2a7b">Amuse::Core::FixedStringBase&lt; TChar, N &gt;</a>, <a class="el" href="d3/dc2/class_amuse_1_1_core_1_1_fixed_vector.html#a4e813dcfbab6052a1771adeb91f38e6a">Amuse::Core::FixedVector&lt; T, N &gt;</a>, <a class="el" href="d4/d7f/class_amuse_1_1_core_1_1_handle_forward_list_1_1const__iterator.html#aa241e4daa396e966805e547231345774">Amuse::Core::HandleForwardList&lt; T &gt;::const_iterator</a>, <a class="el" href="d0/dce/class_amuse_1_1_core_1_1_handle_forward_list_1_1iterator.html#af8d4831cbf46d328a9fbc8b323235d03">Amuse::Core::HandleForwardList&lt; T &gt;::iterator</a>, <a class="el" href="d3/ddf/class_amuse_1_1_core_1_1_handle_forward_list.html#a6b56ef01e78f874b1c316d7ea01c379c">Amuse::Core::HandleForwardList&lt; T &gt;</a>, <a class="el" href="d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html#ac9ea076967e2178c1fb170a5c440f225">Amuse::Core::HandleList&lt; T &gt;::const_iterator</a>, <a class="el" href="d4/d5c/class_amuse_1_1_core_1_1_handle_list_1_1iterator.html#aea14ce3b5823cc54cf565aefd797a5fe">Amuse::Core::HandleList&lt; T &gt;::iterator</a>, <a class="el" href="da/da9/class_amuse_1_1_core_1_1_handle_list.html#a33deb047ce40d685b42516a0b3d00a63">Amuse::Core::HandleList&lt; T &gt;</a>, <a class="el" href="d7/ddc/class_amuse_1_1_core_1_1_index_map.html#a3433c5d209ef9150d7e573b87d20bdd8">Amuse::Core::IndexMap&lt; TKey, TValue, THasher, TKeyEqual, TAllocator &gt;</a></li>
 </ul>
 
 
-<h3><a id="index_r" name="index_r"></a>- r -</h3><ul>
+<h3 class="doxsection"><a id="index_r" name="index_r"></a>- r -</h3><ul>
 <li>reference&#160;:&#160;<a class="el" href="d4/ddd/class_amuse_1_1_core_1_1_fixed_string_base.html#a0290283d465d2946777608b02c216f2e">Amuse::Core::FixedStringBase&lt; TChar, N &gt;</a>, <a class="el" href="d3/dc2/class_amuse_1_1_core_1_1_fixed_vector.html#a9fd879ce66f015093d3075f8af2067cd">Amuse::Core::FixedVector&lt; T, N &gt;</a>, <a class="el" href="d4/d7f/class_amuse_1_1_core_1_1_handle_forward_list_1_1const__iterator.html#acc9e655065a081472b842262c289389b">Amuse::Core::HandleForwardList&lt; T &gt;::const_iterator</a>, <a class="el" href="d0/dce/class_amuse_1_1_core_1_1_handle_forward_list_1_1iterator.html#a48029522bc08db7560fd8baae6e36581">Amuse::Core::HandleForwardList&lt; T &gt;::iterator</a>, <a class="el" href="d3/ddf/class_amuse_1_1_core_1_1_handle_forward_list.html#ac7c30e379ff62683546fd6e127de33cd">Amuse::Core::HandleForwardList&lt; T &gt;</a>, <a class="el" href="d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html#a7fabe552bc3f4b7a733e13124f5e6009">Amuse::Core::HandleList&lt; T &gt;::const_iterator</a>, <a class="el" href="d4/d5c/class_amuse_1_1_core_1_1_handle_list_1_1iterator.html#ad5fa67a47c33cf59fc305e79e040447a">Amuse::Core::HandleList&lt; T &gt;::iterator</a>, <a class="el" href="da/da9/class_amuse_1_1_core_1_1_handle_list.html#a622b483e442acdc30480f32c82cfcc38">Amuse::Core::HandleList&lt; T &gt;</a>, <a class="el" href="d7/ddc/class_amuse_1_1_core_1_1_index_map.html#a557135ed17790c2ad289b6c422fc3bde">Amuse::Core::IndexMap&lt; TKey, TValue, THasher, TKeyEqual, TAllocator &gt;</a></li>
 <li>result_type&#160;:&#160;<a class="el" href="d4/db1/class_amuse_1_1_core_1_1_fixed_func_3_01_r_07_args_8_8_8_08_00_01_buffer_size_01_4.html#afc950e89a072665e776d8ad582e93036">Amuse::Core::FixedFunc&lt; R(Args...), BufferSize &gt;</a></li>
 <li>reverse_iterator&#160;:&#160;<a class="el" href="d6/d91/class_amuse_1_1_core_1_1_bitmap.html#a00bf006dfba4589bde1782541e2287c6">Amuse::Core::Bitmap</a>, <a class="el" href="df/d96/class_amuse_1_1_core_1_1_blob.html#ae14b55af4e94fab51ae514c0b414fa23">Amuse::Core::Blob</a>, <a class="el" href="d3/dc2/class_amuse_1_1_core_1_1_fixed_vector.html#a3f295958cbfd9e0eb458e97e2b0cfaad">Amuse::Core::FixedVector&lt; T, N &gt;</a>, <a class="el" href="da/da9/class_amuse_1_1_core_1_1_handle_list.html#a3142b585cc28f3774cd588a9e1498c24">Amuse::Core::HandleList&lt; T &gt;</a>, <a class="el" href="d7/ddc/class_amuse_1_1_core_1_1_index_map.html#ac91bad772d972ed53382da37529a658d">Amuse::Core::IndexMap&lt; TKey, TValue, THasher, TKeyEqual, TAllocator &gt;</a></li>
 </ul>
 
 
-<h3><a id="index_s" name="index_s"></a>- s -</h3><ul>
+<h3 class="doxsection"><a id="index_s" name="index_s"></a>- s -</h3><ul>
 <li>size_type&#160;:&#160;<a class="el" href="d3/dc2/class_amuse_1_1_core_1_1_fixed_vector.html#a59a8e99598e6e4008629b792341d01f7">Amuse::Core::FixedVector&lt; T, N &gt;</a>, <a class="el" href="d3/ddf/class_amuse_1_1_core_1_1_handle_forward_list.html#a489ea5eec271fffeaec85ef12b31fd78">Amuse::Core::HandleForwardList&lt; T &gt;</a>, <a class="el" href="da/da9/class_amuse_1_1_core_1_1_handle_list.html#aa5aac3eb985965a85f4f725393b7a66f">Amuse::Core::HandleList&lt; T &gt;</a>, <a class="el" href="d7/ddc/class_amuse_1_1_core_1_1_index_map.html#a0f2b1d156248bcdfbacb41957afb807a">Amuse::Core::IndexMap&lt; TKey, TValue, THasher, TKeyEqual, TAllocator &gt;</a></li>
 <li>StaticFuncPtr&#160;:&#160;<a class="el" href="d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#a58e72c014183b3105ce49c0372a03519">Amuse::Core::MiniDelegate&lt; R(Args...)&gt;</a></li>
 </ul>
 
 
-<h3><a id="index_t" name="index_t"></a>- t -</h3><ul>
+<h3 class="doxsection"><a id="index_t" name="index_t"></a>- t -</h3><ul>
 <li>T&#160;:&#160;<a class="el" href="da/d8a/class_amuse_1_1_core_1_1_class_builder_template.html#a52d76118996f4bbb895508f603d04197">Amuse::Core::ClassBuilderTemplate&lt; _T &gt;</a>, <a class="el" href="d1/dcb/class_amuse_1_1_core_1_1_enum_builder_template.html#ad9ecf7d573284c655d072a411f0d044e">Amuse::Core::EnumBuilderTemplate&lt; _T &gt;</a>, <a class="el" href="db/d67/class_amuse_1_1_core_1_1_primitive_builder_template.html#a4e5e4ef49701802f2762ade906959d67">Amuse::Core::PrimitiveBuilderTemplate&lt; _T &gt;</a></li>
 <li>this_type&#160;:&#160;<a class="el" href="d8/d40/class_amuse_1_1_core_1_1_bit_flags.html#aab636c3636b8fcfe40e6adf91ae10568">Amuse::Core::BitFlags&lt; TEnum, TBitsType &gt;</a>, <a class="el" href="d8/d02/class_amuse_1_1_core_1_1_component_manager.html#a8be82ee0928dbb4d70c801697ea32839">Amuse::Core::ComponentManager&lt; T &gt;</a>, <a class="el" href="d3/d42/class_amuse_1_1_core_1_1_event_notifier.html#ab0192596a7dc24efd9a6fbff68278d81">Amuse::Core::EventNotifier&lt; Args &gt;</a>, <a class="el" href="d4/d7f/class_amuse_1_1_core_1_1_handle_forward_list_1_1const__iterator.html#aa76e8d6e8711e98636fbfe00e8c78658">Amuse::Core::HandleForwardList&lt; T &gt;::const_iterator</a>, <a class="el" href="d0/dce/class_amuse_1_1_core_1_1_handle_forward_list_1_1iterator.html#a8431dbe451c09bfc2c6bccd041e31fc6">Amuse::Core::HandleForwardList&lt; T &gt;::iterator</a>, <a class="el" href="d3/ddf/class_amuse_1_1_core_1_1_handle_forward_list.html#a0a2965d83337aeff898bc36d3cd322fc">Amuse::Core::HandleForwardList&lt; T &gt;</a>, <a class="el" href="d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html#a0973afdc6e2b2a926e1221f5f5621ba7">Amuse::Core::HandleList&lt; T &gt;::const_iterator</a>, <a class="el" href="d4/d5c/class_amuse_1_1_core_1_1_handle_list_1_1iterator.html#af6b6f4c954a5227d4a4b734a829d9e31">Amuse::Core::HandleList&lt; T &gt;::iterator</a>, <a class="el" href="da/da9/class_amuse_1_1_core_1_1_handle_list.html#a46f0e5de811ba450338fec0b9a3ee053">Amuse::Core::HandleList&lt; T &gt;</a>, <a class="el" href="d4/d06/class_amuse_1_1_core_1_1_intrusive_queue.html#a7c35fa3c0ca35daeaf80c14db95952a2">Amuse::Core::IntrusiveQueue&lt; T, pMember &gt;</a></li>
 </ul>
 
 
-<h3><a id="index_v" name="index_v"></a>- v -</h3><ul>
+<h3 class="doxsection"><a id="index_v" name="index_v"></a>- v -</h3><ul>
 <li>value_type&#160;:&#160;<a class="el" href="d4/ddd/class_amuse_1_1_core_1_1_fixed_string_base.html#aff390ef681d5fee4f6fa2610d9d2380d">Amuse::Core::FixedStringBase&lt; TChar, N &gt;</a>, <a class="el" href="d3/dc2/class_amuse_1_1_core_1_1_fixed_vector.html#a51b9790e18660370e2dc49bc21adeb7c">Amuse::Core::FixedVector&lt; T, N &gt;</a>, <a class="el" href="d4/d7f/class_amuse_1_1_core_1_1_handle_forward_list_1_1const__iterator.html#afd877de3077a231930f07f4db8a796bb">Amuse::Core::HandleForwardList&lt; T &gt;::const_iterator</a>, <a class="el" href="d0/dce/class_amuse_1_1_core_1_1_handle_forward_list_1_1iterator.html#ac3ab77bd30f8313ee970973838035806">Amuse::Core::HandleForwardList&lt; T &gt;::iterator</a>, <a class="el" href="d3/ddf/class_amuse_1_1_core_1_1_handle_forward_list.html#ac349f20bfc560ebdb13a80a04b0abc1f">Amuse::Core::HandleForwardList&lt; T &gt;</a>, <a class="el" href="d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html#af10dba34244eb910373b15d3535140bc">Amuse::Core::HandleList&lt; T &gt;::const_iterator</a>, <a class="el" href="d4/d5c/class_amuse_1_1_core_1_1_handle_list_1_1iterator.html#a2fd7c0af8aadcdba35af1b7b2a068a0f">Amuse::Core::HandleList&lt; T &gt;::iterator</a>, <a class="el" href="da/da9/class_amuse_1_1_core_1_1_handle_list.html#a8d2e36128cd8f187f2222ea0067c35d1">Amuse::Core::HandleList&lt; T &gt;</a>, <a class="el" href="d7/ddc/class_amuse_1_1_core_1_1_index_map.html#ae6b9e0f635cb8eeaa551582ba54efa16">Amuse::Core::IndexMap&lt; TKey, TValue, THasher, TKeyEqual, TAllocator &gt;</a>, <a class="el" href="d8/d54/struct_amuse_1_1_core_1_1_s_t_l_allocator.html#a7b07cb76506b1d2cea2ddd74a0217382">Amuse::Core::STLAllocator&lt; T &gt;</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

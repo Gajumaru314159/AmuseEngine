@@ -3,19 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AmuseEngine: Runtime/RHI/Public/Amuse/RHI/VertexLayout.h ソースファイル</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../jquery.js"></script>
-<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
 <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
 <script type="text/javascript" src="../../navtreedata.js"></script>
 <script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="../../style.css" rel="stylesheet" type="text/css"/>
@@ -36,23 +42,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.6 -->
+<!-- 構築: Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('../../',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
 });
-/* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -65,10 +93,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('d5/d37/_vertex_layout_8h_source.html','../../'); initResizable(); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d5/d37/_vertex_layout_8h_source.html','../../',''); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -96,7 +123,7 @@ $(document).ready(function(){initNavTree('d5/d37/_vertex_layout_8h_source.html',
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//***********************************************************</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"></span><span class="comment">//***********************************************************</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//***********************************************************</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;Amuse/Core/Core.h&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
@@ -105,51 +132,54 @@ $(document).ready(function(){initNavTree('d5/d37/_vertex_layout_8h_source.html',
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span>Amuse::RHI {</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">using namespace </span>Amuse::Core;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../dc/df3/class_amuse_1_1_r_h_i_1_1_vertex_layout.html">   15</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../dc/df3/class_amuse_1_1_r_h_i_1_1_vertex_layout.html">VertexLayout</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d2/d2f/class_amuse_1_1_r_h_i_1_1_graphic_object.html">GraphicObject</a> {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span></div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../dc/df3/class_amuse_1_1_r_h_i_1_1_vertex_layout.html">   15</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../dc/df3/class_amuse_1_1_r_h_i_1_1_vertex_layout.html">VertexLayout</a> : <span class="keyword">public</span> <a class="code hl_function" href="../../d2/d2f/class_amuse_1_1_r_h_i_1_1_graphic_object.html#aeb1734e2a8972a85ee117d55b0ed0671">GraphicObject</a> {</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="../../dc/df3/class_amuse_1_1_r_h_i_1_1_vertex_layout.html#a29f5f48f6b64e6373791d3cfd71ac1ff">   19</a></span>        <span class="keyword">static</span> <a class="code hl_class" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref&lt;VertexLayout&gt;</a> <a class="code hl_function" href="../../dc/df3/class_amuse_1_1_r_h_i_1_1_vertex_layout.html#a29f5f48f6b64e6373791d3cfd71ac1ff">Create</a>(<span class="keyword">const</span> <a class="code hl_struct" href="../../dc/dd6/struct_amuse_1_1_r_h_i_1_1_vertex_layout_desc.html">VertexLayoutDesc</a>&amp; desc);</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keyword">template</span>&lt;<span class="keyword">class</span>... TArgs&gt;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="../../dc/df3/class_amuse_1_1_r_h_i_1_1_vertex_layout.html#aed8e87979953214b6d329e3d4126362f">   23</a></span>        <span class="keyword">static</span> <a class="code hl_class" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref&lt;VertexLayout&gt;</a> <a class="code hl_function" href="../../dc/df3/class_amuse_1_1_r_h_i_1_1_vertex_layout.html#aed8e87979953214b6d329e3d4126362f">Create</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> name, s32 vertexStride, TArgs&amp;&amp;... attributes) {</div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="}">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="../../dc/df3/class_amuse_1_1_r_h_i_1_1_vertex_layout.html#aed8e87979953214b6d329e3d4126362f">   23</a></span>        <span class="keyword">static</span> <a class="code hl_class" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref&lt;VertexLayout&gt;</a> <a class="code hl_function" href="../../dc/df3/class_amuse_1_1_r_h_i_1_1_vertex_layout.html#aed8e87979953214b6d329e3d4126362f">Create</a>(StringView name, s32 vertexStride, TArgs&amp;&amp;... attributes) {</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            <a class="code hl_struct" href="../../dc/dd6/struct_amuse_1_1_r_h_i_1_1_vertex_layout_desc.html">VertexLayoutDesc</a> desc;</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            desc.<a class="code hl_variable" href="../../dc/dd6/struct_amuse_1_1_r_h_i_1_1_vertex_layout_desc.html#a7ac54205d9c58d95431de86ef625c892">name</a> = name;</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            desc.<a class="code hl_variable" href="../../dc/dd6/struct_amuse_1_1_r_h_i_1_1_vertex_layout_desc.html#ac1c89d4a3d776a21482f5bb3cedebc72">vertexStride</a> = vertexStride;</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            (desc.<a class="code hl_variable" href="../../dc/dd6/struct_amuse_1_1_r_h_i_1_1_vertex_layout_desc.html#ab7b2f39359213c8cd30d93cc9ca7ebc1">attributes</a>.<a class="code hl_function" href="../../d3/dc2/class_amuse_1_1_core_1_1_fixed_vector.html#a1ed5ae76e3d5daa861b6a51effe07a35">emplace_back</a>(std::forward&lt;TArgs&gt;(attributes)), ...);</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="../../dc/df3/class_amuse_1_1_r_h_i_1_1_vertex_layout.html#a29f5f48f6b64e6373791d3cfd71ac1ff">Create</a>(desc);</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        }</div>
+</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span></div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="../../dc/df3/class_amuse_1_1_r_h_i_1_1_vertex_layout.html#a5ff61dfd7e3dd5e66156f82f925bea65">   34</a></span>        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code hl_struct" href="../../dc/dd6/struct_amuse_1_1_r_h_i_1_1_vertex_layout_desc.html">VertexLayoutDesc</a>&amp; <a class="code hl_function" href="../../dc/df3/class_amuse_1_1_r_h_i_1_1_vertex_layout.html#a5ff61dfd7e3dd5e66156f82f925bea65">getDesc</a>()<span class="keyword">const</span> = 0;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../dc/df3/class_amuse_1_1_r_h_i_1_1_vertex_layout.html#ae48fad90206164734e275f2e34d2368a">   37</a></span>        <span class="keyword">const</span> <a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a>&amp; <a class="code hl_function" href="../../dc/df3/class_amuse_1_1_r_h_i_1_1_vertex_layout.html#ae48fad90206164734e275f2e34d2368a">getName</a>()<span class="keyword">const override </span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="../../dc/df3/class_amuse_1_1_r_h_i_1_1_vertex_layout.html#a5ff61dfd7e3dd5e66156f82f925bea65">getDesc</a>().<a class="code hl_variable" href="../../dc/dd6/struct_amuse_1_1_r_h_i_1_1_vertex_layout_desc.html#a7ac54205d9c58d95431de86ef625c892">name</a>; }</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../dc/df3/class_amuse_1_1_r_h_i_1_1_vertex_layout.html#ae48fad90206164734e275f2e34d2368a">   37</a></span>        <span class="keyword">const</span> String&amp; <a class="code hl_function" href="../../dc/df3/class_amuse_1_1_r_h_i_1_1_vertex_layout.html#ae48fad90206164734e275f2e34d2368a">getName</a>()<span class="keyword">const override </span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="../../dc/df3/class_amuse_1_1_r_h_i_1_1_vertex_layout.html#a5ff61dfd7e3dd5e66156f82f925bea65">getDesc</a>().<a class="code hl_variable" href="../../dc/dd6/struct_amuse_1_1_r_h_i_1_1_vertex_layout_desc.html#a7ac54205d9c58d95431de86ef625c892">name</a>; }</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    };</div>
+</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>}</div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_fixed_vector_html_a1ed5ae76e3d5daa861b6a51effe07a35"><div class="ttname"><a href="../../d3/dc2/class_amuse_1_1_core_1_1_fixed_vector.html#a1ed5ae76e3d5daa861b6a51effe07a35">Amuse::Core::FixedVector::emplace_back</a></div><div class="ttdeci">constexpr reference emplace_back(Args &amp;&amp;... args)</div><div class="ttdoc">末尾に要素を直接構築する。</div><div class="ttdef"><b>Definition:</b> FixedVector.h:284</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_ref_html"><div class="ttname"><a href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Amuse::Core::Ref</a></div><div class="ttdoc">RefObject 用スマートポインタ</div><div class="ttdef"><b>Definition:</b> Ref.h:64</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_string_base_html"><div class="ttname"><a href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">Amuse::Core::StringBase&lt; Char &gt;</a></div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_string_view_base_html"><div class="ttname"><a href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">Amuse::Core::StringViewBase&lt; Char &gt;</a></div></div>
-<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_graphic_object_html"><div class="ttname"><a href="../../d2/d2f/class_amuse_1_1_r_h_i_1_1_graphic_object.html">Amuse::RHI::GraphicObject</a></div><div class="ttdoc">グラフィック・オブジェクト</div><div class="ttdef"><b>Definition:</b> GraphicObject.h:21</div></div>
-<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_vertex_layout_html"><div class="ttname"><a href="../../dc/df3/class_amuse_1_1_r_h_i_1_1_vertex_layout.html">Amuse::RHI::VertexLayout</a></div><div class="ttdoc">頂点レイアウト</div><div class="ttdef"><b>Definition:</b> VertexLayout.h:15</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_fixed_vector_html_a1ed5ae76e3d5daa861b6a51effe07a35"><div class="ttname"><a href="../../d3/dc2/class_amuse_1_1_core_1_1_fixed_vector.html#a1ed5ae76e3d5daa861b6a51effe07a35">Amuse::Core::FixedVector::emplace_back</a></div><div class="ttdeci">constexpr reference emplace_back(Args &amp;&amp;... args)</div><div class="ttdoc">末尾に要素を直接構築する。</div><div class="ttdef"><b>Definition</b> FixedVector.h:284</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_ref_html"><div class="ttname"><a href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Amuse::Core::Ref</a></div><div class="ttdoc">RefObject 用スマートポインタ</div><div class="ttdef"><b>Definition</b> Ref.h:64</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_graphic_object_html_aeb1734e2a8972a85ee117d55b0ed0671"><div class="ttname"><a href="../../d2/d2f/class_amuse_1_1_r_h_i_1_1_graphic_object.html#aeb1734e2a8972a85ee117d55b0ed0671">Amuse::RHI::GraphicObject::GraphicObject</a></div><div class="ttdeci">GraphicObject()</div><div class="ttdoc">コンストラクタ</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_vertex_layout_html"><div class="ttname"><a href="../../dc/df3/class_amuse_1_1_r_h_i_1_1_vertex_layout.html">Amuse::RHI::VertexLayout</a></div><div class="ttdoc">頂点レイアウト</div><div class="ttdef"><b>Definition</b> VertexLayout.h:15</div></div>
 <div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_vertex_layout_html_a29f5f48f6b64e6373791d3cfd71ac1ff"><div class="ttname"><a href="../../dc/df3/class_amuse_1_1_r_h_i_1_1_vertex_layout.html#a29f5f48f6b64e6373791d3cfd71ac1ff">Amuse::RHI::VertexLayout::Create</a></div><div class="ttdeci">static Ref&lt; VertexLayout &gt; Create(const VertexLayoutDesc &amp;desc)</div><div class="ttdoc">生成</div></div>
 <div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_vertex_layout_html_a5ff61dfd7e3dd5e66156f82f925bea65"><div class="ttname"><a href="../../dc/df3/class_amuse_1_1_r_h_i_1_1_vertex_layout.html#a5ff61dfd7e3dd5e66156f82f925bea65">Amuse::RHI::VertexLayout::getDesc</a></div><div class="ttdeci">virtual const VertexLayoutDesc &amp; getDesc() const =0</div><div class="ttdoc">定義を取得</div></div>
-<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_vertex_layout_html_ae48fad90206164734e275f2e34d2368a"><div class="ttname"><a href="../../dc/df3/class_amuse_1_1_r_h_i_1_1_vertex_layout.html#ae48fad90206164734e275f2e34d2368a">Amuse::RHI::VertexLayout::getName</a></div><div class="ttdeci">const String &amp; getName() const override</div><div class="ttdoc">名前を取得</div><div class="ttdef"><b>Definition:</b> VertexLayout.h:37</div></div>
-<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_vertex_layout_html_aed8e87979953214b6d329e3d4126362f"><div class="ttname"><a href="../../dc/df3/class_amuse_1_1_r_h_i_1_1_vertex_layout.html#aed8e87979953214b6d329e3d4126362f">Amuse::RHI::VertexLayout::Create</a></div><div class="ttdeci">static Ref&lt; VertexLayout &gt; Create(StringView name, s32 vertexStride, TArgs &amp;&amp;... attributes)</div><div class="ttdoc">生成</div><div class="ttdef"><b>Definition:</b> VertexLayout.h:23</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_vertex_layout_desc_html"><div class="ttname"><a href="../../dc/dd6/struct_amuse_1_1_r_h_i_1_1_vertex_layout_desc.html">Amuse::RHI::VertexLayoutDesc</a></div><div class="ttdoc">頂点レイアウト</div><div class="ttdef"><b>Definition:</b> VertexLayout.h:94</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_vertex_layout_desc_html_a7ac54205d9c58d95431de86ef625c892"><div class="ttname"><a href="../../dc/dd6/struct_amuse_1_1_r_h_i_1_1_vertex_layout_desc.html#a7ac54205d9c58d95431de86ef625c892">Amuse::RHI::VertexLayoutDesc::name</a></div><div class="ttdeci">String name</div><div class="ttdoc">名前</div><div class="ttdef"><b>Definition:</b> VertexLayout.h:95</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_vertex_layout_desc_html_ab7b2f39359213c8cd30d93cc9ca7ebc1"><div class="ttname"><a href="../../dc/dd6/struct_amuse_1_1_r_h_i_1_1_vertex_layout_desc.html#ab7b2f39359213c8cd30d93cc9ca7ebc1">Amuse::RHI::VertexLayoutDesc::attributes</a></div><div class="ttdeci">VertexAttributeArray attributes</div><div class="ttdoc">属性リスト</div><div class="ttdef"><b>Definition:</b> VertexLayout.h:96</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_vertex_layout_desc_html_ac1c89d4a3d776a21482f5bb3cedebc72"><div class="ttname"><a href="../../dc/dd6/struct_amuse_1_1_r_h_i_1_1_vertex_layout_desc.html#ac1c89d4a3d776a21482f5bb3cedebc72">Amuse::RHI::VertexLayoutDesc::vertexStride</a></div><div class="ttdeci">s32 vertexStride</div><div class="ttdoc">ストライド幅</div><div class="ttdef"><b>Definition:</b> VertexLayout.h:97</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_vertex_layout_html_ae48fad90206164734e275f2e34d2368a"><div class="ttname"><a href="../../dc/df3/class_amuse_1_1_r_h_i_1_1_vertex_layout.html#ae48fad90206164734e275f2e34d2368a">Amuse::RHI::VertexLayout::getName</a></div><div class="ttdeci">const String &amp; getName() const override</div><div class="ttdoc">名前を取得</div><div class="ttdef"><b>Definition</b> VertexLayout.h:37</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_vertex_layout_html_aed8e87979953214b6d329e3d4126362f"><div class="ttname"><a href="../../dc/df3/class_amuse_1_1_r_h_i_1_1_vertex_layout.html#aed8e87979953214b6d329e3d4126362f">Amuse::RHI::VertexLayout::Create</a></div><div class="ttdeci">static Ref&lt; VertexLayout &gt; Create(StringView name, s32 vertexStride, TArgs &amp;&amp;... attributes)</div><div class="ttdoc">生成</div><div class="ttdef"><b>Definition</b> VertexLayout.h:23</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_vertex_layout_desc_html"><div class="ttname"><a href="../../dc/dd6/struct_amuse_1_1_r_h_i_1_1_vertex_layout_desc.html">Amuse::RHI::VertexLayoutDesc</a></div><div class="ttdoc">頂点レイアウト</div><div class="ttdef"><b>Definition</b> VertexLayout.h:94</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_vertex_layout_desc_html_a7ac54205d9c58d95431de86ef625c892"><div class="ttname"><a href="../../dc/dd6/struct_amuse_1_1_r_h_i_1_1_vertex_layout_desc.html#a7ac54205d9c58d95431de86ef625c892">Amuse::RHI::VertexLayoutDesc::name</a></div><div class="ttdeci">String name</div><div class="ttdoc">名前</div><div class="ttdef"><b>Definition</b> VertexLayout.h:95</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_vertex_layout_desc_html_ab7b2f39359213c8cd30d93cc9ca7ebc1"><div class="ttname"><a href="../../dc/dd6/struct_amuse_1_1_r_h_i_1_1_vertex_layout_desc.html#ab7b2f39359213c8cd30d93cc9ca7ebc1">Amuse::RHI::VertexLayoutDesc::attributes</a></div><div class="ttdeci">VertexAttributeArray attributes</div><div class="ttdoc">属性リスト</div><div class="ttdef"><b>Definition</b> VertexLayout.h:96</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_vertex_layout_desc_html_ac1c89d4a3d776a21482f5bb3cedebc72"><div class="ttname"><a href="../../dc/dd6/struct_amuse_1_1_r_h_i_1_1_vertex_layout_desc.html#ac1c89d4a3d776a21482f5bb3cedebc72">Amuse::RHI::VertexLayoutDesc::vertexStride</a></div><div class="ttdeci">s32 vertexStride</div><div class="ttdoc">ストライド幅</div><div class="ttdef"><b>Definition</b> VertexLayout.h:97</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_4f6666a8f2ab10bc970eb7559668f031.html">Runtime</a></li><li class="navelem"><a class="el" href="../../dir_ed0dd943941685375ac149ef30703e8f.html">RHI</a></li><li class="navelem"><a class="el" href="../../dir_80d0fa31a6e3bc7da61af1a1dfa2506f.html">Public</a></li><li class="navelem"><a class="el" href="../../dir_6330f9b43f61349a45429b5fd54fec05.html">Amuse</a></li><li class="navelem"><a class="el" href="../../dir_0830f243940360ab60fcd1783d0d86f9.html">RHI</a></li><li class="navelem"><b>VertexLayout.h</b></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="navelem"><b>Runtime</b></li><li class="navelem"><b>RHI</b></li><li class="navelem"><b>Public</b></li><li class="navelem"><b>Amuse</b></li><li class="navelem"><b>RHI</b></li><li class="navelem"><b>VertexLayout.h</b></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

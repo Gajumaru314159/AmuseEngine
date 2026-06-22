@@ -17,12 +17,7 @@ var hierarchy =
     [ "Amuse::RHI::Binding", "d5/d13/struct_amuse_1_1_r_h_i_1_1_binding.html", null ],
     [ "Amuse::RHI::BindingItem", "d7/d74/struct_amuse_1_1_r_h_i_1_1_binding_item.html", null ],
     [ "Amuse::RHI::BindlessHandle", "d4/d5b/struct_amuse_1_1_r_h_i_1_1_bindless_handle.html", null ],
-    [ "Amuse::Core::BitFlags< TEnum, TBitsType >", "d8/d40/class_amuse_1_1_core_1_1_bit_flags.html", null ],
-    [ "Amuse::Core::BitFlags< BufferFlag >", "d8/d40/class_amuse_1_1_core_1_1_bit_flags.html", null ],
-    [ "Amuse::Core::BitFlags< ColorComponent >", "d8/d40/class_amuse_1_1_core_1_1_bit_flags.html", null ],
-    [ "Amuse::Core::BitFlags< RenderPassFlag >", "d8/d40/class_amuse_1_1_core_1_1_bit_flags.html", null ],
-    [ "Amuse::Core::BitFlags< RootSignatureFlag >", "d8/d40/class_amuse_1_1_core_1_1_bit_flags.html", null ],
-    [ "Amuse::Core::BitFlags< TextureFlag >", "d8/d40/class_amuse_1_1_core_1_1_bit_flags.html", null ],
+    [ "Amuse::Core::BitFlags&lt; TEnum, TBitsType &gt;", "d8/d40/class_amuse_1_1_core_1_1_bit_flags.html", null ],
     [ "Amuse::Core::Bitmap", "d6/d91/class_amuse_1_1_core_1_1_bitmap.html", null ],
     [ "Amuse::Core::BitOp", "dc/df9/struct_amuse_1_1_core_1_1_bit_op.html", null ],
     [ "Amuse::RHI::BlendDesc", "d2/df6/struct_amuse_1_1_r_h_i_1_1_blend_desc.html", null ],
@@ -39,26 +34,26 @@ var hierarchy =
     [ "Amuse::Input::Button", "db/dab/class_amuse_1_1_input_1_1_button.html", null ],
     [ "Amuse::Core::Capsule", "d9/da8/struct_amuse_1_1_core_1_1_capsule.html", null ],
     [ "Amuse::Core::Circle", "db/d9f/struct_amuse_1_1_core_1_1_circle.html", null ],
-    [ "Amuse::Core::ClassTrait< T >", "de/d38/class_amuse_1_1_core_1_1_class_trait.html", null ],
+    [ "Amuse::Core::ClassTrait&lt; T &gt;", "de/d38/class_amuse_1_1_core_1_1_class_trait.html", null ],
     [ "Amuse::RHI::ClearColor", "dc/d68/struct_amuse_1_1_r_h_i_1_1_clear_color.html", null ],
     [ "Amuse::Core::Color", "d9/de4/struct_amuse_1_1_core_1_1_color.html", null ],
     [ "Amuse::RHI::CommandListDesc", "d8/d93/struct_amuse_1_1_r_h_i_1_1_command_list_desc.html", null ],
-    [ "Amuse::Core::ComponentHolder< T >", "d5/df2/class_amuse_1_1_core_1_1_component_holder.html", null ],
-    [ "Amuse::Core::ComponentManager< T >", "d8/d02/class_amuse_1_1_core_1_1_component_manager.html", null ],
+    [ "Amuse::Core::ComponentHolder&lt; T &gt;", "d5/df2/class_amuse_1_1_core_1_1_component_holder.html", null ],
+    [ "Amuse::Core::ComponentManager&lt; T &gt;", "d8/d02/class_amuse_1_1_core_1_1_component_manager.html", null ],
     [ "Amuse::Core::Compression", "de/de3/class_amuse_1_1_core_1_1_compression.html", null ],
     [ "Amuse::RHI::ComputePipelineStateDesc", "d2/dbc/struct_amuse_1_1_r_h_i_1_1_compute_pipeline_state_desc.html", null ],
-    [ "Amuse::Core::HandleForwardList< T >::const_iterator", "d4/d7f/class_amuse_1_1_core_1_1_handle_forward_list_1_1const__iterator.html", [
+    [ "Amuse::Core::HandleForwardList&lt; T &gt;::const_iterator", "d4/d7f/class_amuse_1_1_core_1_1_handle_forward_list_1_1const__iterator.html", [
       [ "Amuse::Core::HandleForwardList< T >::iterator", "d0/dce/class_amuse_1_1_core_1_1_handle_forward_list_1_1iterator.html", null ]
     ] ],
-    [ "Amuse::Core::HandleList< T >::const_iterator", "d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html", [
+    [ "Amuse::Core::HandleList&lt; T &gt;::const_iterator", "d3/de2/class_amuse_1_1_core_1_1_handle_list_1_1const__iterator.html", [
       [ "Amuse::Core::HandleList< T >::iterator", "d4/d5c/class_amuse_1_1_core_1_1_handle_list_1_1iterator.html", null ]
     ] ],
-    [ "Amuse::Core::ConstValue< T, N >", "df/d46/struct_amuse_1_1_core_1_1_const_value.html", null ],
+    [ "Amuse::Core::ConstValue&lt; T, N &gt;", "df/d46/struct_amuse_1_1_core_1_1_const_value.html", null ],
     [ "Amuse::RHI::CopyTextureParam", "d4/dc4/struct_amuse_1_1_r_h_i_1_1_copy_texture_param.html", null ],
     [ "Amuse::Core::CRCHash", "d6/d57/class_amuse_1_1_core_1_1_c_r_c_hash.html", null ],
     [ "Amuse::Core::Cylinder", "dc/d5d/struct_amuse_1_1_core_1_1_cylinder.html", null ],
     [ "Amuse::Core::DateTime", "df/def/struct_amuse_1_1_core_1_1_date_time.html", null ],
-    [ "Amuse::Core::Delegate< R(Args...), BufferSize >", "d6/d24/class_amuse_1_1_core_1_1_delegate_3_01_r_07_args_8_8_8_08_00_01_buffer_size_01_4.html", null ],
+    [ "Amuse::Core::Delegate&lt; R(Args...), BufferSize &gt;", "d6/d24/class_amuse_1_1_core_1_1_delegate_3_01_r_07_args_8_8_8_08_00_01_buffer_size_01_4.html", null ],
     [ "Amuse::RHI::DepthStencilDesc", "db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html", null ],
     [ "Amuse::RHI::DescriptorLayoutDesc", "d5/d72/struct_amuse_1_1_r_h_i_1_1_descriptor_layout_desc.html", null ],
     [ "Amuse::RHI::DescriptorTableDesc", "d4/df3/struct_amuse_1_1_r_h_i_1_1_descriptor_table_desc.html", null ],
@@ -88,49 +83,50 @@ var hierarchy =
       ] ]
     ] ],
     [ "std::false_type", null, [
+      [ "Amuse::Core::is_map< HashMap< TKey, TValue > >", "dc/d63/struct_amuse_1_1_core_1_1is__map_3_01_hash_map_3_01_t_key_00_01_t_value_01_4_01_4.html", null ],
+      [ "Amuse::Core::is_map< Map< TKey, TValue > >", "d8/da4/struct_amuse_1_1_core_1_1is__map_3_01_map_3_01_t_key_00_01_t_value_01_4_01_4.html", null ],
+      [ "Amuse::Core::is_sequence< Array< T, N > >", "d4/d8c/struct_amuse_1_1_core_1_1is__sequence_3_01_array_3_01_t_00_01_n_01_4_01_4.html", null ],
+      [ "Amuse::Core::is_sequence< HashSet< T, ALLOCATOR > >", "dd/d3c/struct_amuse_1_1_core_1_1is__sequence_3_01_hash_set_3_01_t_00_01_a_l_l_o_c_a_t_o_r_01_4_01_4.html", null ],
+      [ "Amuse::Core::is_sequence< List< T, ALLOCATOR > >", "d6/d92/struct_amuse_1_1_core_1_1is__sequence_3_01_list_3_01_t_00_01_a_l_l_o_c_a_t_o_r_01_4_01_4.html", null ],
+      [ "Amuse::Core::is_sequence< Set< T, ALLOCATOR > >", "d1/dfc/struct_amuse_1_1_core_1_1is__sequence_3_01_set_3_01_t_00_01_a_l_l_o_c_a_t_o_r_01_4_01_4.html", null ],
+      [ "Amuse::Core::is_sequence< T[N]>", "d6/d8f/struct_amuse_1_1_core_1_1is__sequence_3_01_t_0f_n_0e_4.html", null ],
+      [ "Amuse::Core::is_sequence< Vector< T, ALLOCATOR > >", "da/d1b/struct_amuse_1_1_core_1_1is__sequence_3_01_vector_3_01_t_00_01_a_l_l_o_c_a_t_o_r_01_4_01_4.html", null ],
       [ "Amuse::Core::is_iterator< class, class >", "d8/d3d/struct_amuse_1_1_core_1_1is__iterator.html", null ],
       [ "Amuse::Core::is_map< T >", "d2/d16/struct_amuse_1_1_core_1_1is__map.html", null ],
       [ "Amuse::Core::is_sequence< T >", "d3/dfb/struct_amuse_1_1_core_1_1is__sequence.html", null ]
     ] ],
     [ "Amuse::RHI::FenceDesc", "dd/ded/struct_amuse_1_1_r_h_i_1_1_fence_desc.html", null ],
-    [ "Amuse::Core::FixedFunc< R(Args...), BufferSize >", "d4/db1/class_amuse_1_1_core_1_1_fixed_func_3_01_r_07_args_8_8_8_08_00_01_buffer_size_01_4.html", null ],
-    [ "Amuse::Core::FixedStringBase< TChar, N >", "d4/ddd/class_amuse_1_1_core_1_1_fixed_string_base.html", null ],
-    [ "Amuse::Core::FixedVector< T, N >", "d3/dc2/class_amuse_1_1_core_1_1_fixed_vector.html", null ],
-    [ "Amuse::Core::FixedVector< RenderPassTargetDesc, RENDER_TARGET_MAX >", "d3/dc2/class_amuse_1_1_core_1_1_fixed_vector.html", null ],
-    [ "Amuse::Core::FixedVector< StaticSamplerDesc, STATIC_SAMPLER_MAX >", "d3/dc2/class_amuse_1_1_core_1_1_fixed_vector.html", null ],
-    [ "Amuse::Core::FixedVector< std::stacktrace_entry, MAX_ENTRY_COUNT >", "d3/dc2/class_amuse_1_1_core_1_1_fixed_vector.html", null ],
-    [ "Amuse::Core::FixedVector< TextureFormat, RENDER_TARGET_MAX >", "d3/dc2/class_amuse_1_1_core_1_1_fixed_vector.html", null ],
-    [ "Amuse::Core::FixedVector< u8, 8 >", "d3/dc2/class_amuse_1_1_core_1_1_fixed_vector.html", null ],
-    [ "Amuse::Core::FixedVector< VertexAttribute, VERTEX_ATTRIBUTE_MAX >", "d3/dc2/class_amuse_1_1_core_1_1_fixed_vector.html", null ],
+    [ "Amuse::Core::FixedFunc&lt; R(Args...), BufferSize &gt;", "d4/db1/class_amuse_1_1_core_1_1_fixed_func_3_01_r_07_args_8_8_8_08_00_01_buffer_size_01_4.html", null ],
+    [ "Amuse::Core::FixedStringBase&lt; TChar, N &gt;", "d4/ddd/class_amuse_1_1_core_1_1_fixed_string_base.html", null ],
+    [ "Amuse::Core::FixedVector&lt; T, N &gt;", "d3/dc2/class_amuse_1_1_core_1_1_fixed_vector.html", null ],
     [ "Amuse::Core::FloatCompression", "da/d8a/class_amuse_1_1_core_1_1_float_compression.html", null ],
     [ "Amuse::Core::Frustum", "db/d2e/struct_amuse_1_1_core_1_1_frustum.html", null ],
     [ "Amuse::Core::GDeflate", "d4/dbe/class_amuse_1_1_core_1_1_g_deflate.html", null ],
-    [ "Amuse::Core::Global< T >", "d7/d77/class_amuse_1_1_core_1_1_global.html", null ],
+    [ "Amuse::Core::Global&lt; T &gt;", "d7/d77/class_amuse_1_1_core_1_1_global.html", null ],
     [ "Amuse::RHI::GraphicFile", "da/d89/class_amuse_1_1_r_h_i_1_1_graphic_file.html", null ],
     [ "Amuse::RHI::GraphicFileMipInfo", "d8/d14/struct_amuse_1_1_r_h_i_1_1_graphic_file_mip_info.html", null ],
     [ "Amuse::RHI::GraphicFileQueueDesc", "d2/dbf/struct_amuse_1_1_r_h_i_1_1_graphic_file_queue_desc.html", null ],
     [ "Amuse::RHI::GraphicFileRequest", "d7/dc9/struct_amuse_1_1_r_h_i_1_1_graphic_file_request.html", null ],
     [ "Amuse::Core::HalfLine", "db/d03/class_amuse_1_1_core_1_1_half_line.html", null ],
-    [ "Amuse::Core::Handle< T, TNamespace >", "d3/d60/class_amuse_1_1_core_1_1_handle.html", null ],
-    [ "Amuse::Core::HandleManager< T, Deleter >::Handle", "db/dbd/class_amuse_1_1_core_1_1_handle_manager_1_1_handle.html", null ],
+    [ "Amuse::Core::Handle&lt; T, TNamespace &gt;", "d3/d60/class_amuse_1_1_core_1_1_handle.html", null ],
+    [ "Amuse::Core::HandleManager&lt; T, Deleter &gt;::Handle", "db/dbd/class_amuse_1_1_core_1_1_handle_manager_1_1_handle.html", null ],
     [ "HandleBase", null, [
       [ "Amuse::Core::HandleForwardList< T >::Handle", "dc/d57/class_amuse_1_1_core_1_1_handle_forward_list_1_1_handle.html", null ]
     ] ],
-    [ "Amuse::Core::HandleManager< T, Deleter >", "da/d02/class_amuse_1_1_core_1_1_handle_manager.html", null ],
+    [ "Amuse::Core::HandleManager&lt; T, Deleter &gt;", "da/d02/class_amuse_1_1_core_1_1_handle_manager.html", null ],
     [ "Amuse::Core::Hash", "d5/d6f/class_amuse_1_1_core_1_1_hash.html", null ],
-    [ "Amuse::Core::SyncHandleManager< T, Deleter >::Hasher", "d0/df7/struct_amuse_1_1_core_1_1_sync_handle_manager_1_1_hasher.html", null ],
+    [ "Amuse::Core::SyncHandleManager&lt; T, Deleter &gt;::Hasher", "d0/df7/struct_amuse_1_1_core_1_1_sync_handle_manager_1_1_hasher.html", null ],
     [ "Amuse::Core::HSV", "d3/d4e/struct_amuse_1_1_core_1_1_h_s_v.html", null ],
     [ "Amuse::Input::IInputDevice", "dc/dcb/class_amuse_1_1_input_1_1_i_input_device.html", null ],
-    [ "Amuse::Core::IndexedVector< T, TIndex, TDataVector, TIndexVector >", "db/d95/class_amuse_1_1_core_1_1_indexed_vector.html", null ],
-    [ "Amuse::Core::IndexMap< TKey, TValue, THasher, TKeyEqual, TAllocator >", "d7/ddc/class_amuse_1_1_core_1_1_index_map.html", null ],
+    [ "Amuse::Core::IndexedVector&lt; T, TIndex, TDataVector, TIndexVector &gt;", "db/d95/class_amuse_1_1_core_1_1_indexed_vector.html", null ],
+    [ "Amuse::Core::IndexMap&lt; TKey, TValue, THasher, TKeyEqual, TAllocator &gt;", "d7/ddc/class_amuse_1_1_core_1_1_index_map.html", null ],
     [ "Amuse::RHI::IndirectCommandParam", "d9/d89/struct_amuse_1_1_r_h_i_1_1_indirect_command_param.html", null ],
     [ "Amuse::Core::INI", "df/d76/class_amuse_1_1_core_1_1_i_n_i.html", null ],
     [ "Amuse::Core::INISection", "d4/d97/class_amuse_1_1_core_1_1_i_n_i_section.html", null ],
     [ "Amuse::Input::InputConfig", "d0/d4b/struct_amuse_1_1_input_1_1_input_config.html", null ],
     [ "Amuse::Core::IntColor", "dc/d7f/struct_amuse_1_1_core_1_1_int_color.html", null ],
     [ "Amuse::Core::IntRect", "d9/dbf/struct_amuse_1_1_core_1_1_int_rect.html", null ],
-    [ "Amuse::Core::IntrusiveQueue< T, pMember >", "d4/d06/class_amuse_1_1_core_1_1_intrusive_queue.html", null ],
-    [ "Amuse::Core::IntrusiveQueue< Amuse::Core::HandleManager::Node, &Node::next >", "d4/d06/class_amuse_1_1_core_1_1_intrusive_queue.html", null ],
+    [ "Amuse::Core::IntrusiveQueue&lt; T, pMember &gt;", "d4/d06/class_amuse_1_1_core_1_1_intrusive_queue.html", null ],
     [ "Amuse::Core::IntVec2", "d7/db0/struct_amuse_1_1_core_1_1_int_vec2.html", null ],
     [ "Amuse::Core::IntVec3", "df/db7/struct_amuse_1_1_core_1_1_int_vec3.html", null ],
     [ "Amuse::Core::IntVec4", "d8/dad/struct_amuse_1_1_core_1_1_int_vec4.html", null ],
@@ -146,21 +142,26 @@ var hierarchy =
     [ "Amuse::Core::Math", "df/d2e/class_amuse_1_1_core_1_1_math.html", null ],
     [ "Amuse::Core::Matrix", "dc/d67/struct_amuse_1_1_core_1_1_matrix.html", null ],
     [ "Amuse::Core::MemorySize", "d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html", null ],
-    [ "Amuse::Core::MiniDelegate< R(Args...)>", "d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html", null ],
+    [ "Amuse::Core::MiniDelegate&lt; R(Args...)&gt;", "d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html", null ],
     [ "Amuse::Input::Mouse", "dd/d1c/class_amuse_1_1_input_1_1_mouse.html", null ],
     [ "Amuse::Core::MTL", "dc/d59/class_amuse_1_1_core_1_1_m_t_l.html", null ],
     [ "Amuse::Core::Name", "d0/d53/class_amuse_1_1_core_1_1_name.html", null ],
     [ "Amuse::Core::Network", "d9/d11/class_amuse_1_1_core_1_1_network.html", null ],
-    [ "Amuse::Core::HandleManager< T, Deleter >::Node", "d6/d5d/struct_amuse_1_1_core_1_1_handle_manager_1_1_node.html", null ],
+    [ "Amuse::Core::HandleManager&lt; T, Deleter &gt;::Node", "d6/d5d/struct_amuse_1_1_core_1_1_handle_manager_1_1_node.html", null ],
     [ "Amuse::Core::Noise", "d4/d41/class_amuse_1_1_core_1_1_noise.html", null ],
     [ "Amuse::Core::Noncopyable", "dc/d43/class_amuse_1_1_core_1_1_noncopyable.html", [
       [ "Amuse::Core::EventNotifier< const Log & >", "d3/d42/class_amuse_1_1_core_1_1_event_notifier.html", null ],
+      [ "Amuse::Core::EventNotifier< Args... >", "d3/d42/class_amuse_1_1_core_1_1_event_notifier.html", null ],
+      [ "Amuse::Core::EventNotifier<>", "d3/d42/class_amuse_1_1_core_1_1_event_notifier.html", null ],
+      [ "Amuse::Core::EventNotifier< f32 >", "d3/d42/class_amuse_1_1_core_1_1_event_notifier.html", null ],
+      [ "Amuse::Core::EventNotifier< const WindowEventArgs & >", "d3/d42/class_amuse_1_1_core_1_1_event_notifier.html", null ],
+      [ "Amuse::Core::difference_type< T >", "d3/ddf/class_amuse_1_1_core_1_1_handle_forward_list.html", null ],
+      [ "Amuse::Core::const_iterator< T >", "da/da9/class_amuse_1_1_core_1_1_handle_list.html", null ],
+      [ "Amuse::Core::difference_type< T >", "da/da9/class_amuse_1_1_core_1_1_handle_list.html", null ],
       [ "Amuse::Core::HandleList< delegate_type >", "da/da9/class_amuse_1_1_core_1_1_handle_list.html", null ],
+      [ "Amuse::Core::MemoryStorageBase< T, sizeof(T), alignof(T)>", "d5/d6f/class_amuse_1_1_core_1_1_memory_storage_base.html", null ],
       [ "Amuse::Core::MemoryStorageBase< Impl, 128, 8 >", "d5/d6f/class_amuse_1_1_core_1_1_memory_storage_base.html", null ],
       [ "Amuse::Core::MemoryStorageBase< Impl, 32, 8 >", "d5/d6f/class_amuse_1_1_core_1_1_memory_storage_base.html", null ],
-      [ "Amuse::Core::MemoryStorageBase< DirectX12BufferUploader >", "d5/d6f/class_amuse_1_1_core_1_1_memory_storage_base.html", null ],
-      [ "Amuse::Core::MemoryStorageBase< DirectX12TextureUploader >", "d5/d6f/class_amuse_1_1_core_1_1_memory_storage_base.html", null ],
-      [ "Amuse::Core::MemoryStorageBase< DirectX12DescriptorUploader >", "d5/d6f/class_amuse_1_1_core_1_1_memory_storage_base.html", null ],
       [ "Amuse::Core::AnyContainer", "d3/daa/class_amuse_1_1_core_1_1_any_container.html", null ],
       [ "Amuse::Core::EventNotifier< Args >", "d3/d42/class_amuse_1_1_core_1_1_event_notifier.html", null ],
       [ "Amuse::Core::HandleForwardList< T >", "d3/ddf/class_amuse_1_1_core_1_1_handle_forward_list.html", null ],
@@ -177,12 +178,12 @@ var hierarchy =
       [ "Amuse::Core::Thread", "d4/dc8/class_amuse_1_1_core_1_1_thread.html", null ]
     ] ],
     [ "Amuse::Core::Nonmovable", "d6/d34/class_amuse_1_1_core_1_1_nonmovable.html", [
+      [ "Amuse::Core::const_iterator< T >", "da/da9/class_amuse_1_1_core_1_1_handle_list.html", null ],
+      [ "Amuse::Core::difference_type< T >", "da/da9/class_amuse_1_1_core_1_1_handle_list.html", null ],
       [ "Amuse::Core::HandleList< delegate_type >", "da/da9/class_amuse_1_1_core_1_1_handle_list.html", null ],
+      [ "Amuse::Core::MemoryStorageBase< T, sizeof(T), alignof(T)>", "d5/d6f/class_amuse_1_1_core_1_1_memory_storage_base.html", null ],
       [ "Amuse::Core::MemoryStorageBase< Impl, 128, 8 >", "d5/d6f/class_amuse_1_1_core_1_1_memory_storage_base.html", null ],
       [ "Amuse::Core::MemoryStorageBase< Impl, 32, 8 >", "d5/d6f/class_amuse_1_1_core_1_1_memory_storage_base.html", null ],
-      [ "Amuse::Core::MemoryStorageBase< DirectX12BufferUploader >", "d5/d6f/class_amuse_1_1_core_1_1_memory_storage_base.html", null ],
-      [ "Amuse::Core::MemoryStorageBase< DirectX12TextureUploader >", "d5/d6f/class_amuse_1_1_core_1_1_memory_storage_base.html", null ],
-      [ "Amuse::Core::MemoryStorageBase< DirectX12DescriptorUploader >", "d5/d6f/class_amuse_1_1_core_1_1_memory_storage_base.html", null ],
       [ "Amuse::Core::AnyContainer", "d3/daa/class_amuse_1_1_core_1_1_any_container.html", null ],
       [ "Amuse::Core::HandleForwardList< T >::Handle", "dc/d57/class_amuse_1_1_core_1_1_handle_forward_list_1_1_handle.html", null ],
       [ "Amuse::Core::HandleList< T >", "da/da9/class_amuse_1_1_core_1_1_handle_list.html", null ],
@@ -196,32 +197,18 @@ var hierarchy =
     [ "Amuse::Core::OBJ", "d4/d75/class_amuse_1_1_core_1_1_o_b_j.html", null ],
     [ "Amuse::Core::Path", "df/db9/class_amuse_1_1_core_1_1_path.html", null ],
     [ "Amuse::Core::Periodic", "da/d51/class_amuse_1_1_core_1_1_periodic.html", null ],
-    [ "Amuse::Core::Pimpl< T >", "d4/d30/class_amuse_1_1_core_1_1_pimpl.html", null ],
-    [ "Amuse::Core::Pimpl< class JobSystemImpl >", "d4/d30/class_amuse_1_1_core_1_1_pimpl.html", null ],
-    [ "Amuse::Core::Pimpl< class MutexImpl >", "d4/d30/class_amuse_1_1_core_1_1_pimpl.html", null ],
-    [ "Amuse::Core::Pimpl< class ThreadImpl >", "d4/d30/class_amuse_1_1_core_1_1_pimpl.html", null ],
+    [ "Amuse::Core::Pimpl&lt; T &gt;", "d4/d30/class_amuse_1_1_core_1_1_pimpl.html", null ],
     [ "Amuse::RHI::PipelineStateDesc", "de/d3f/struct_amuse_1_1_r_h_i_1_1_pipeline_state_desc.html", null ],
     [ "Amuse::Core::Plane", "de/ddb/struct_amuse_1_1_core_1_1_plane.html", null ],
     [ "Amuse::Core::Point", "d9/d4b/struct_amuse_1_1_core_1_1_point.html", null ],
     [ "Amuse::Core::Property", "d7/d3a/class_amuse_1_1_core_1_1_property.html", null ],
-    [ "Amuse::Core::EventNotifier< Args >::Proxy", "d7/d60/class_amuse_1_1_core_1_1_event_notifier_1_1_proxy.html", null ],
+    [ "Amuse::Core::EventNotifier&lt; Args &gt;::Proxy", "d7/d60/class_amuse_1_1_core_1_1_event_notifier_1_1_proxy.html", null ],
     [ "Amuse::Core::Quat", "d3/da5/struct_amuse_1_1_core_1_1_quat.html", null ],
     [ "Amuse::Core::Random", "d3/dca/class_amuse_1_1_core_1_1_random.html", null ],
     [ "Amuse::Core::Range", "d5/d54/struct_amuse_1_1_core_1_1_range.html", null ],
     [ "Amuse::RHI::RasterizerDesc", "d7/dac/struct_amuse_1_1_r_h_i_1_1_rasterizer_desc.html", null ],
     [ "Amuse::Core::Rect", "d8/d17/struct_amuse_1_1_core_1_1_rect.html", null ],
-    [ "Amuse::Core::Ref< T >", "d8/d51/class_amuse_1_1_core_1_1_ref.html", null ],
-    [ "Amuse::Core::Ref< Amuse::Platform::Window >", "d8/d51/class_amuse_1_1_core_1_1_ref.html", null ],
-    [ "Amuse::Core::Ref< Amuse::RHI::Buffer >", "d8/d51/class_amuse_1_1_core_1_1_ref.html", null ],
-    [ "Amuse::Core::Ref< Amuse::RHI::CommandList >", "d8/d51/class_amuse_1_1_core_1_1_ref.html", null ],
-    [ "Amuse::Core::Ref< Amuse::RHI::DescriptorLayout >", "d8/d51/class_amuse_1_1_core_1_1_ref.html", null ],
-    [ "Amuse::Core::Ref< Amuse::RHI::DescriptorTable >", "d8/d51/class_amuse_1_1_core_1_1_ref.html", null ],
-    [ "Amuse::Core::Ref< Amuse::RHI::GraphicFileHandle >", "d8/d51/class_amuse_1_1_core_1_1_ref.html", null ],
-    [ "Amuse::Core::Ref< Amuse::RHI::RenderTexture >", "d8/d51/class_amuse_1_1_core_1_1_ref.html", null ],
-    [ "Amuse::Core::Ref< Amuse::RHI::RootSignature >", "d8/d51/class_amuse_1_1_core_1_1_ref.html", null ],
-    [ "Amuse::Core::Ref< Amuse::RHI::Shader >", "d8/d51/class_amuse_1_1_core_1_1_ref.html", null ],
-    [ "Amuse::Core::Ref< Amuse::RHI::Texture >", "d8/d51/class_amuse_1_1_core_1_1_ref.html", null ],
-    [ "Amuse::Core::Ref< Amuse::RHI::VertexLayout >", "d8/d51/class_amuse_1_1_core_1_1_ref.html", null ],
+    [ "Amuse::Core::Ref&lt; T &gt;", "d8/d51/class_amuse_1_1_core_1_1_ref.html", null ],
     [ "Amuse::Core::ReflectionFunction", "d1/d4b/struct_amuse_1_1_core_1_1_reflection_function.html", null ],
     [ "Amuse::Core::RefObject", "d1/d85/class_amuse_1_1_core_1_1_ref_object.html", [
       [ "Amuse::Platform::Window", "dc/d63/class_amuse_1_1_platform_1_1_window.html", null ],
@@ -260,7 +247,7 @@ var hierarchy =
     [ "Amuse::RHI::SamplerDesc", "d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html", null ],
     [ "Amuse::RHI::SamplerDescEqual", "d9/d32/struct_amuse_1_1_r_h_i_1_1_sampler_desc_equal.html", null ],
     [ "Amuse::RHI::SamplerDescHasher", "da/dda/struct_amuse_1_1_r_h_i_1_1_sampler_desc_hasher.html", null ],
-    [ "Amuse::Core::Schedule< Args >", "da/d73/class_amuse_1_1_core_1_1_schedule.html", null ],
+    [ "Amuse::Core::Schedule&lt; Args &gt;", "da/d73/class_amuse_1_1_core_1_1_schedule.html", null ],
     [ "Amuse::Core::ScheduleBuildError", "d8/de7/struct_amuse_1_1_core_1_1_schedule_build_error.html", null ],
     [ "Amuse::Core::ScheduleBuildResult", "d0/d98/class_amuse_1_1_core_1_1_schedule_build_result.html", null ],
     [ "Amuse::Core::ScheduleBuildSettings", "d5/d45/struct_amuse_1_1_core_1_1_schedule_build_settings.html", null ],
@@ -269,7 +256,7 @@ var hierarchy =
     [ "Amuse::Core::ScheduleExecutorConfig", "de/d86/struct_amuse_1_1_core_1_1_schedule_executor_config.html", null ],
     [ "Amuse::Core::ScheduleSet", "dd/dff/class_amuse_1_1_core_1_1_schedule_set.html", null ],
     [ "Amuse::Core::ScopeOutAction", "d3/d65/class_amuse_1_1_core_1_1_scope_out_action.html", null ],
-    [ "Amuse::Core::ScopeValue< T, V >", "d3/da5/class_amuse_1_1_core_1_1_scope_value.html", null ],
+    [ "Amuse::Core::ScopeValue&lt; T, V &gt;", "d3/da5/class_amuse_1_1_core_1_1_scope_value.html", null ],
     [ "Amuse::Core::Segment", "d1/de2/class_amuse_1_1_core_1_1_segment.html", null ],
     [ "Amuse::Core::ServiceBuilderBase", "d5/d79/class_amuse_1_1_core_1_1_service_builder_base.html", [
       [ "Amuse::Core::ServiceBuilder< T >", "d7/d66/class_amuse_1_1_core_1_1_service_builder.html", null ]
@@ -279,25 +266,25 @@ var hierarchy =
     [ "Amuse::RHI::SetDescriptorTableParam", "db/dbb/struct_amuse_1_1_r_h_i_1_1_set_descriptor_table_param.html", null ],
     [ "Amuse::RHI::SetRootConstantsParam", "d7/d56/struct_amuse_1_1_r_h_i_1_1_set_root_constants_param.html", null ],
     [ "Amuse::RHI::ShaderCompileDesc", "d9/d3f/struct_amuse_1_1_r_h_i_1_1_shader_compile_desc.html", null ],
-    [ "Amuse::Core::Singleton< T >", "d4/d2f/class_amuse_1_1_core_1_1_singleton.html", null ],
-    [ "Amuse::Core::Singleton< AsyncFileSystem >", "d4/d2f/class_amuse_1_1_core_1_1_singleton.html", [
+    [ "Amuse::Core::Singleton&lt; T &gt;", "d4/d2f/class_amuse_1_1_core_1_1_singleton.html", null ],
+    [ "Amuse::Core::Singleton&lt; AsyncFileSystem &gt;", "d4/d2f/class_amuse_1_1_core_1_1_singleton.html", [
       [ "Amuse::Core::AsyncFileSystem", "d6/d37/class_amuse_1_1_core_1_1_async_file_system.html", null ]
     ] ],
-    [ "Amuse::Core::Singleton< Device >", "d4/d2f/class_amuse_1_1_core_1_1_singleton.html", [
+    [ "Amuse::Core::Singleton&lt; Device &gt;", "d4/d2f/class_amuse_1_1_core_1_1_singleton.html", [
       [ "Amuse::RHI::Device", "d1/d22/class_amuse_1_1_r_h_i_1_1_device.html", [
         [ "Amuse::RHI::DirectX12Device", "d9/d07/class_amuse_1_1_r_h_i_1_1_direct_x12_device.html", null ]
       ] ]
     ] ],
-    [ "Amuse::Core::Singleton< InputModule >", "d4/d2f/class_amuse_1_1_core_1_1_singleton.html", [
+    [ "Amuse::Core::Singleton&lt; InputModule &gt;", "d4/d2f/class_amuse_1_1_core_1_1_singleton.html", [
       [ "Amuse::Input::InputModule", "d6/d81/class_amuse_1_1_input_1_1_input_module.html", null ]
     ] ],
-    [ "Amuse::Core::Singleton< JobSystem >", "d4/d2f/class_amuse_1_1_core_1_1_singleton.html", [
+    [ "Amuse::Core::Singleton&lt; JobSystem &gt;", "d4/d2f/class_amuse_1_1_core_1_1_singleton.html", [
       [ "Amuse::Core::JobSystem", "da/d28/class_amuse_1_1_core_1_1_job_system.html", null ]
     ] ],
-    [ "Amuse::Core::Singleton< ThreadPool >", "d4/d2f/class_amuse_1_1_core_1_1_singleton.html", [
+    [ "Amuse::Core::Singleton&lt; ThreadPool &gt;", "d4/d2f/class_amuse_1_1_core_1_1_singleton.html", [
       [ "Amuse::Core::ThreadPool", "dc/dbe/class_amuse_1_1_core_1_1_thread_pool.html", null ]
     ] ],
-    [ "Amuse::Core::Singleton< TypeInfoManager >", "d4/d2f/class_amuse_1_1_core_1_1_singleton.html", [
+    [ "Amuse::Core::Singleton&lt; TypeInfoManager &gt;", "d4/d2f/class_amuse_1_1_core_1_1_singleton.html", [
       [ "Amuse::Core::TypeInfoManager", "da/d48/class_amuse_1_1_core_1_1_type_info_manager.html", null ]
     ] ],
     [ "Amuse::Core::Size", "de/d30/struct_amuse_1_1_core_1_1_size.html", null ],
@@ -316,19 +303,17 @@ var hierarchy =
       [ "Amuse::Core::BinaryStream", "d6/d31/class_amuse_1_1_core_1_1_binary_stream.html", null ],
       [ "Amuse::Core::File", "da/d8e/class_amuse_1_1_core_1_1_file.html", null ]
     ] ],
-    [ "Amuse::Core::StringBase< TChar >", "da/d7a/class_amuse_1_1_core_1_1_string_base.html", null ],
-    [ "Amuse::Core::StringBase< Char >", "da/d7a/class_amuse_1_1_core_1_1_string_base.html", null ],
+    [ "Amuse::Core::StringBase&lt; TChar &gt;", "da/d7a/class_amuse_1_1_core_1_1_string_base.html", null ],
     [ "Amuse::Core::StringEncoder", "dc/d28/class_amuse_1_1_core_1_1_string_encoder.html", null ],
     [ "Amuse::Core::StringSplitView", "d3/d99/class_amuse_1_1_core_1_1_string_split_view.html", [
       [ "Amuse::Core::CommaSplitView", "d6/d6a/class_amuse_1_1_core_1_1_comma_split_view.html", null ],
       [ "Amuse::Core::LineBreakSplitView", "dc/d20/class_amuse_1_1_core_1_1_line_break_split_view.html", null ],
       [ "Amuse::Core::TabSplitView", "d4/d55/class_amuse_1_1_core_1_1_tab_split_view.html", null ]
     ] ],
-    [ "Amuse::Core::StringViewBase< TChar >", "d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html", null ],
-    [ "Amuse::Core::StringViewBase< Char >", "d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html", null ],
+    [ "Amuse::Core::StringViewBase&lt; TChar &gt;", "d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html", null ],
     [ "Amuse::RHI::SwapChainDesc", "d6/d44/struct_amuse_1_1_r_h_i_1_1_swap_chain_desc.html", null ],
-    [ "Amuse::Core::Swapper< T >", "de/dfa/class_amuse_1_1_core_1_1_swapper.html", null ],
-    [ "Amuse::Core::SyncHandleManager< T, Deleter >", "d7/d21/class_amuse_1_1_core_1_1_sync_handle_manager.html", null ],
+    [ "Amuse::Core::Swapper&lt; T &gt;", "de/dfa/class_amuse_1_1_core_1_1_swapper.html", null ],
+    [ "Amuse::Core::SyncHandleManager&lt; T, Deleter &gt;", "d7/d21/class_amuse_1_1_core_1_1_sync_handle_manager.html", null ],
     [ "Amuse::RHI::SystemDesc", "da/da9/struct_amuse_1_1_r_h_i_1_1_system_desc.html", null ],
     [ "Amuse::Core::TagBuilder", "d5/d17/class_amuse_1_1_core_1_1_tag_builder.html", [
       [ "Amuse::Core::ClassBuilder", "d0/d95/class_amuse_1_1_core_1_1_class_builder.html", [
@@ -381,7 +366,7 @@ var hierarchy =
     [ "Amuse::Core::Type", "dd/db0/class_amuse_1_1_core_1_1_type.html", null ],
     [ "Amuse::Core::TypedPointer", "d7/dd5/class_amuse_1_1_core_1_1_typed_pointer.html", null ],
     [ "Amuse::Core::TypeRegister", "d6/d66/struct_amuse_1_1_core_1_1_type_register.html", null ],
-    [ "Amuse::Core::TypeRegisterTemplate< T >", "d3/d48/struct_amuse_1_1_core_1_1_type_register_template.html", null ],
+    [ "Amuse::Core::TypeRegisterTemplate&lt; T &gt;", "d3/d48/struct_amuse_1_1_core_1_1_type_register_template.html", null ],
     [ "Amuse::Core::UUID", "d0/d96/struct_amuse_1_1_core_1_1_u_u_i_d.html", null ],
     [ "Amuse::Core::Vec2", "df/d62/struct_amuse_1_1_core_1_1_vec2.html", null ],
     [ "Amuse::Core::Vec3", "d7/d02/struct_amuse_1_1_core_1_1_vec3.html", null ],
@@ -398,5 +383,5 @@ var hierarchy =
     [ "Amuse::Core::XmlNode", "d9/d2d/class_amuse_1_1_core_1_1_xml_node.html", [
       [ "Amuse::Core::Xml", "dd/d97/class_amuse_1_1_core_1_1_xml.html", null ]
     ] ],
-    [ "Amuse::Core::YesNo< Tag >", "d1/d0c/class_amuse_1_1_core_1_1_yes_no.html", null ]
+    [ "Amuse::Core::YesNo&lt; Tag &gt;", "d1/d0c/class_amuse_1_1_core_1_1_yes_no.html", null ]
 ];

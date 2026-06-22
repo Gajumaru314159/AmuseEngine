@@ -3,19 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AmuseEngine: クラスメンバ - 関数</title>
+<link rel="icon" href="logo.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="style.css" rel="stylesheet" type="text/css"/>
@@ -36,23 +42,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.6 -->
+<!-- 構築: Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
 });
-/* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -65,10 +93,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('functions_func_d.html',''); initResizable(); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('functions_func_d.html','',''); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -92,19 +119,21 @@ $(document).ready(function(){initNavTree('functions_func_d.html',''); initResiza
 </div>
 
 <div class="contents">
-&#160;
+<div class="textblock">&#160;</div><br/>
+<div class="qindex"><a class="qindex" href="functions_func.html#index_a">A</a><div class="alphasepar"></div><a class="qindex" href="functions_func_b.html#index_b">B</a><div class="alphasepar"></div><a class="qindex" href="functions_func_c.html#index_c">C</a><div class="alphasepar"></div><a class="qindex" href="functions_func_d.html#index_d">D</a><div class="alphasepar"></div><a class="qindex" href="functions_func_e.html#index_e">E</a><div class="alphasepar"></div><a class="qindex" href="functions_func_f.html#index_f">F</a><div class="alphasepar"></div><a class="qindex" href="functions_func_g.html#index_g">G</a><div class="alphasepar"></div><a class="qindex" href="functions_func_h.html#index_h">H</a><div class="alphasepar"></div><a class="qindex" href="functions_func_i.html#index_i">I</a><div class="alphasepar"></div><a class="qindex" href="functions_func_j.html#index_j">J</a><div class="alphasepar"></div><a class="qindex" href="functions_func_k.html#index_k">K</a><div class="alphasepar"></div><a class="qindex" href="functions_func_l.html#index_l">L</a><div class="alphasepar"></div><a class="qindex" href="functions_func_m.html#index_m">M</a><div class="alphasepar"></div><a class="qindex" href="functions_func_n.html#index_n">N</a><div class="alphasepar"></div><a class="qindex" href="functions_func_o.html#index_o">O</a><div class="alphasepar"></div><a class="qindex" href="functions_func_p.html#index_p">P</a><div class="alphasepar"></div><a class="qindex" href="functions_func_q.html#index_q">Q</a><div class="alphasepar"></div><a class="qindex" href="functions_func_r.html#index_r">R</a><div class="alphasepar"></div><a class="qindex" href="functions_func_s.html#index_s">S</a><div class="alphasepar"></div><a class="qindex" href="functions_func_t.html#index_t">T</a><div class="alphasepar"></div><a class="qindex" href="functions_func_u.html#index_u">U</a><div class="alphasepar"></div><a class="qindex" href="functions_func_v.html#index_v">V</a><div class="alphasepar"></div><a class="qindex" href="functions_func_w.html#index_w">W</a><div class="alphasepar"></div><a class="qindex" href="functions_func_x.html#index_x">X</a><div class="alphasepar"></div><a class="qindex" href="functions_func_y.html#index_y">Y</a><div class="alphasepar"></div><a class="qindex" href="functions_func__.html#index__">_</a><div class="alphasepar"></div><a class="qindex" href="functions_func_~.html#index_~">~</a></div>
 
-<h3><a id="index_d" name="index_d"></a>- d -</h3><ul>
+
+<h3 class="doxsection"><a id="index_d" name="index_d"></a>- d -</h3><ul>
 <li>data()&#160;:&#160;<a class="el" href="d3/dd2/class_amuse_1_1_core_1_1_async_file.html#a9671a8b4615634b3b4cb40250a58e31b">Amuse::Core::AsyncFile</a>, <a class="el" href="d6/d91/class_amuse_1_1_core_1_1_bitmap.html#acceca298c12e050e1d73a4bea20cfe6d">Amuse::Core::Bitmap</a>, <a class="el" href="df/d96/class_amuse_1_1_core_1_1_blob.html#af148b44e6a25cfe960106f8b2958c122">Amuse::Core::Blob</a>, <a class="el" href="d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a38053df9ec96f810db493c6cb2dd19ce">Amuse::Core::BlobView</a>, <a class="el" href="d4/ddd/class_amuse_1_1_core_1_1_fixed_string_base.html#a8f0c0fe422cd43a092ed389a497cd3ff">Amuse::Core::FixedStringBase&lt; TChar, N &gt;</a>, <a class="el" href="d3/dc2/class_amuse_1_1_core_1_1_fixed_vector.html#acc95f998f11ecdface78211a9db93b9b">Amuse::Core::FixedVector&lt; T, N &gt;</a>, <a class="el" href="db/d95/class_amuse_1_1_core_1_1_indexed_vector.html#ab4397997056ee4b9d4a99f3cbe5654bb">Amuse::Core::IndexedVector&lt; T, TIndex, TDataVector, TIndexVector &gt;</a>, <a class="el" href="d7/ddc/class_amuse_1_1_core_1_1_index_map.html#a01b9c0090d9360bab45654eef87b4f3c">Amuse::Core::IndexMap&lt; TKey, TValue, THasher, TKeyEqual, TAllocator &gt;</a></li>
 <li>DayInMonth()&#160;:&#160;<a class="el" href="df/def/struct_amuse_1_1_core_1_1_date_time.html#a876e0411625480ea01dadf3d751b8af5">Amuse::Core::DateTime</a></li>
 <li>dayOfWeek()&#160;:&#160;<a class="el" href="df/def/struct_amuse_1_1_core_1_1_date_time.html#af66cf4d7b01a1422ddbaf09237c76f1e">Amuse::Core::DateTime</a></li>
-<li>days()&#160;:&#160;<a class="el" href="db/df5/class_amuse_1_1_core_1_1_time_span.html#a5bafb87bb230140c3c6b89ddf499e49a">Amuse::Core::TimeSpan</a></li>
 <li>Days()&#160;:&#160;<a class="el" href="db/df5/class_amuse_1_1_core_1_1_time_span.html#a69e166a6204ff19467275019817e0f70">Amuse::Core::TimeSpan</a></li>
+<li>days()&#160;:&#160;<a class="el" href="db/df5/class_amuse_1_1_core_1_1_time_span.html#a5bafb87bb230140c3c6b89ddf499e49a">Amuse::Core::TimeSpan</a></li>
 <li>daysF()&#160;:&#160;<a class="el" href="db/df5/class_amuse_1_1_core_1_1_time_span.html#aefc60844f3dc239aca7e81a2060e0367">Amuse::Core::TimeSpan</a></li>
 <li>daysInYear()&#160;:&#160;<a class="el" href="df/def/struct_amuse_1_1_core_1_1_date_time.html#a2c6403f240ed965502066a92d6af2025">Amuse::Core::DateTime</a></li>
 <li>deallocate()&#160;:&#160;<a class="el" href="d8/d54/struct_amuse_1_1_core_1_1_s_t_l_allocator.html#a9ce6241fba9d87ee887f2330356510a1">Amuse::Core::STLAllocator&lt; T &gt;</a></li>
 <li>decal()&#160;:&#160;<a class="el" href="dc/d59/class_amuse_1_1_core_1_1_m_t_l.html#a2def7c120b5019654909b610d6d6b24d">Amuse::Core::MTL</a></li>
-<li>DECL_BINDING()&#160;:&#160;<a class="el" href="d5/d13/struct_amuse_1_1_r_h_i_1_1_binding.html#a33e9c37f7ab40d3bbcce514b85b4075d">Amuse::RHI::Binding</a></li>
+<li>DECL_BINDING()&#160;:&#160;<a class="el" href="d5/d13/struct_amuse_1_1_r_h_i_1_1_binding.html#ac0edb883c6bbd8b3f7f0c7449d770cd5">Amuse::RHI::Binding</a></li>
 <li>Decompress()&#160;:&#160;<a class="el" href="d4/dbe/class_amuse_1_1_core_1_1_g_deflate.html#ad9aa5aace81c03cec31ebc2841c5b6ea">Amuse::Core::GDeflate</a></li>
 <li>Default()&#160;:&#160;<a class="el" href="da/d9b/class_amuse_1_1_r_h_i_1_1_sampler.html#afbbef9a4bdcb45e4d38bf3f041ae146d">Amuse::RHI::Sampler</a></li>
 <li>DEFINE_YES_NO()&#160;:&#160;<a class="el" href="d7/d3a/class_amuse_1_1_core_1_1_property.html#abe6d90a0d7c22b5057fb5fb1a205c64d">Amuse::Core::Property</a></li>
@@ -146,10 +175,11 @@ $(document).ready(function(){initNavTree('functions_func_d.html',''); initResiza
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

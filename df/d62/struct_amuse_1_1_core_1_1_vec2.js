@@ -45,8 +45,8 @@ var struct_amuse_1_1_core_1_1_vec2 =
     [ "sqrLength", "df/d62/struct_amuse_1_1_core_1_1_vec2.html#ab636c017a621de9a83f93220b6d3d5f0", null ],
     [ "toDirectionAndLength", "df/d62/struct_amuse_1_1_core_1_1_vec2.html#a061c920dab7c5736b29ed580235c92c9", null ],
     [ "unitVec", "df/d62/struct_amuse_1_1_core_1_1_vec2.html#a9fedbec57b73a89b85e4776bf16e5e30", null ],
-    [ "operator*", "df/d62/struct_amuse_1_1_core_1_1_vec2.html#acbb85f7620866f76b41b85c498fb179e", null ],
-    [ "operator/", "df/d62/struct_amuse_1_1_core_1_1_vec2.html#a009406728799d712b8173c0d8421c2b6", null ],
+    [ "operator*", "df/d62/struct_amuse_1_1_core_1_1_vec2.html#a6c0b9296a9eab0bfe2ac79939a03ca35", null ],
+    [ "operator/", "df/d62/struct_amuse_1_1_core_1_1_vec2.html#a0984f52c9cd7b69b7ad39fc49bf1530c", null ],
     [ "x", "df/d62/struct_amuse_1_1_core_1_1_vec2.html#abfc3c0d80096a01185677e5b706e8820", null ],
     [ "y", "df/d62/struct_amuse_1_1_core_1_1_vec2.html#a007bea56996886e498d6d72b64b20820", null ]
 ];

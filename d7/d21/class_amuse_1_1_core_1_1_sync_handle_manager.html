@@ -3,19 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AmuseEngine: Amuse::Core::SyncHandleManager&lt; T, Deleter &gt; クラステンプレート</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../jquery.js"></script>
-<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
 <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
 <script type="text/javascript" src="../../navtreedata.js"></script>
 <script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="../../style.css" rel="stylesheet" type="text/css"/>
@@ -36,23 +42,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.6 -->
+<!-- 構築: Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('../../',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
 });
-/* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -65,10 +93,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('d7/d21/class_amuse_1_1_core_1_1_sync_handle_manager.html','../../'); initResizable(); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d7/d21/class_amuse_1_1_core_1_1_sync_handle_manager.html','../../','d9/dca/class_amuse_1_1_core_1_1_sync_handle_manager-members'); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -102,55 +129,46 @@ $(document).ready(function(){initNavTree('d7/d21/class_amuse_1_1_core_1_1_sync_h
 <div class="contents">
 
 <p>同期付きハンドルマネージャを表す。  
- <a href="../../d7/d21/class_amuse_1_1_core_1_1_sync_handle_manager.html#details">[詳解]</a></p>
+ <a href="#details">[詳解]</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../dc/d0b/_handle_manager_8h_source.html">HandleManager.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 クラス</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/df7/struct_amuse_1_1_core_1_1_sync_handle_manager_1_1_hasher.html">Hasher</a></td></tr>
+<tr class="memitem:Hasher" id="r_Hasher"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d0/df7/struct_amuse_1_1_core_1_1_sync_handle_manager_1_1_hasher.html">Hasher</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ハンドル用ハッシュ関数を表す。  <a href="../../d0/df7/struct_amuse_1_1_core_1_1_sync_handle_manager_1_1_hasher.html#details">[詳解]</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
 公開型</h2></td></tr>
-<tr class="memitem:a71f48332a88ca869f0614d8aa8370dbf"><td class="memItemLeft" align="right" valign="top"><a id="a71f48332a88ca869f0614d8aa8370dbf" name="a71f48332a88ca869f0614d8aa8370dbf"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>manager_type</b> = <a class="el" href="../../da/d02/class_amuse_1_1_core_1_1_handle_manager.html">HandleManager</a>&lt; T, Deleter &gt;</td></tr>
-<tr class="memdesc:a71f48332a88ca869f0614d8aa8370dbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">manager_type 型のエイリアス。 <br /></td></tr>
-<tr class="separator:a71f48332a88ca869f0614d8aa8370dbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22ba68c264d7e1f20ae31c7bb6ab0485"><td class="memItemLeft" align="right" valign="top"><a id="a22ba68c264d7e1f20ae31c7bb6ab0485" name="a22ba68c264d7e1f20ae31c7bb6ab0485"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>handle_type</b> = typename <a class="el" href="../../db/dbd/class_amuse_1_1_core_1_1_handle_manager_1_1_handle.html">manager_type::Handle</a></td></tr>
-<tr class="memdesc:a22ba68c264d7e1f20ae31c7bb6ab0485"><td class="mdescLeft">&#160;</td><td class="mdescRight">handle_type 型のエイリアス。 <br /></td></tr>
-<tr class="separator:a22ba68c264d7e1f20ae31c7bb6ab0485"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71f48332a88ca869f0614d8aa8370dbf" id="r_a71f48332a88ca869f0614d8aa8370dbf"><td class="memItemLeft"><a id="a71f48332a88ca869f0614d8aa8370dbf" name="a71f48332a88ca869f0614d8aa8370dbf"></a>
+using&#160;</td><td class="memItemRight"><b>manager_type</b> = <a class="el" href="../../da/d02/class_amuse_1_1_core_1_1_handle_manager.html">HandleManager</a>&lt;T, Deleter&gt;</td></tr>
+<tr class="memdesc:a71f48332a88ca869f0614d8aa8370dbf"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="#a71f48332a88ca869f0614d8aa8370dbf" title="manager_type 型のエイリアス。">manager_type</a> 型のエイリアス。 <br /></td></tr>
+<tr class="memitem:a22ba68c264d7e1f20ae31c7bb6ab0485" id="r_a22ba68c264d7e1f20ae31c7bb6ab0485"><td class="memItemLeft"><a id="a22ba68c264d7e1f20ae31c7bb6ab0485" name="a22ba68c264d7e1f20ae31c7bb6ab0485"></a>
+using&#160;</td><td class="memItemRight"><b>handle_type</b> = typename manager_type::Handle</td></tr>
+<tr class="memdesc:a22ba68c264d7e1f20ae31c7bb6ab0485"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="#a22ba68c264d7e1f20ae31c7bb6ab0485" title="handle_type 型のエイリアス。">handle_type</a> 型のエイリアス。 <br /></td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:a87e908024083c67d2cc6eecf78959a4a"><td class="memItemLeft" align="right" valign="top"><a id="a87e908024083c67d2cc6eecf78959a4a" name="a87e908024083c67d2cc6eecf78959a4a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>SyncHandleManager</b> (size_t capacity)</td></tr>
+<tr class="memitem:a87e908024083c67d2cc6eecf78959a4a" id="r_a87e908024083c67d2cc6eecf78959a4a"><td class="memItemLeft"><a id="a87e908024083c67d2cc6eecf78959a4a" name="a87e908024083c67d2cc6eecf78959a4a"></a>
+&#160;</td><td class="memItemRight"><b>SyncHandleManager</b> (size_t capacity)</td></tr>
 <tr class="memdesc:a87e908024083c67d2cc6eecf78959a4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定容量の同期付きハンドル管理領域を初期化する。 <br /></td></tr>
-<tr class="separator:a87e908024083c67d2cc6eecf78959a4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc89ebdc92ddf2a61dc2f497b4694e6a"><td class="memItemLeft" align="right" valign="top"><a id="acc89ebdc92ddf2a61dc2f497b4694e6a" name="acc89ebdc92ddf2a61dc2f497b4694e6a"></a>
-<a class="el" href="../../d7/d21/class_amuse_1_1_core_1_1_sync_handle_manager.html#a22ba68c264d7e1f20ae31c7bb6ab0485">handle_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>add</b> (T *instance)</td></tr>
+<tr class="memitem:acc89ebdc92ddf2a61dc2f497b4694e6a" id="r_acc89ebdc92ddf2a61dc2f497b4694e6a"><td class="memItemLeft"><a id="acc89ebdc92ddf2a61dc2f497b4694e6a" name="acc89ebdc92ddf2a61dc2f497b4694e6a"></a>
+<a class="el" href="#a22ba68c264d7e1f20ae31c7bb6ab0485">handle_type</a>&#160;</td><td class="memItemRight"><b>add</b> (T *instance)</td></tr>
 <tr class="memdesc:acc89ebdc92ddf2a61dc2f497b4694e6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンスを同期的に登録してハンドルを発行する。 <br /></td></tr>
-<tr class="separator:acc89ebdc92ddf2a61dc2f497b4694e6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a187641ce10109fc86a992c28e6651e81"><td class="memItemLeft" align="right" valign="top"><a id="a187641ce10109fc86a992c28e6651e81" name="a187641ce10109fc86a992c28e6651e81"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>remove</b> (const <a class="el" href="../../d7/d21/class_amuse_1_1_core_1_1_sync_handle_manager.html#a22ba68c264d7e1f20ae31c7bb6ab0485">handle_type</a> &amp;handle)</td></tr>
+<tr class="memitem:a187641ce10109fc86a992c28e6651e81" id="r_a187641ce10109fc86a992c28e6651e81"><td class="memItemLeft"><a id="a187641ce10109fc86a992c28e6651e81" name="a187641ce10109fc86a992c28e6651e81"></a>
+void&#160;</td><td class="memItemRight"><b>remove</b> (const <a class="el" href="#a22ba68c264d7e1f20ae31c7bb6ab0485">handle_type</a> &amp;handle)</td></tr>
 <tr class="memdesc:a187641ce10109fc86a992c28e6651e81"><td class="mdescLeft">&#160;</td><td class="mdescRight">ハンドルが指すインスタンスを遅延削除キューへ追加する。 <br /></td></tr>
-<tr class="separator:a187641ce10109fc86a992c28e6651e81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0030c1e237862f3af9002b94d17ca07"><td class="memItemLeft" align="right" valign="top"><a id="ab0030c1e237862f3af9002b94d17ca07" name="ab0030c1e237862f3af9002b94d17ca07"></a>
-T *&#160;</td><td class="memItemRight" valign="bottom"><b>at</b> (const <a class="el" href="../../d7/d21/class_amuse_1_1_core_1_1_sync_handle_manager.html#a22ba68c264d7e1f20ae31c7bb6ab0485">handle_type</a> &amp;handle) const</td></tr>
+<tr class="memitem:ab0030c1e237862f3af9002b94d17ca07" id="r_ab0030c1e237862f3af9002b94d17ca07"><td class="memItemLeft"><a id="ab0030c1e237862f3af9002b94d17ca07" name="ab0030c1e237862f3af9002b94d17ca07"></a>
+T *&#160;</td><td class="memItemRight"><b>at</b> (const <a class="el" href="#a22ba68c264d7e1f20ae31c7bb6ab0485">handle_type</a> &amp;handle) const</td></tr>
 <tr class="memdesc:ab0030c1e237862f3af9002b94d17ca07"><td class="mdescLeft">&#160;</td><td class="mdescRight">ハンドルが有効なら管理対象インスタンスを返す。 <br /></td></tr>
-<tr class="separator:ab0030c1e237862f3af9002b94d17ca07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afaffb269e2d06c3ed7ebf476a7e14fb8"><td class="memItemLeft" align="right" valign="top"><a id="afaffb269e2d06c3ed7ebf476a7e14fb8" name="afaffb269e2d06c3ed7ebf476a7e14fb8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>visit</b> (Func&lt; void(T &amp;)&gt;visitor)</td></tr>
+<tr class="memitem:afaffb269e2d06c3ed7ebf476a7e14fb8" id="r_afaffb269e2d06c3ed7ebf476a7e14fb8"><td class="memItemLeft"><a id="afaffb269e2d06c3ed7ebf476a7e14fb8" name="afaffb269e2d06c3ed7ebf476a7e14fb8"></a>
+void&#160;</td><td class="memItemRight"><b>visit</b> (Func&lt; void(T &amp;)&gt;visitor)</td></tr>
 <tr class="memdesc:afaffb269e2d06c3ed7ebf476a7e14fb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">登録済み要素を走査する。 <br /></td></tr>
-<tr class="separator:afaffb269e2d06c3ed7ebf476a7e14fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8b7a888f9531c3e8a70d707d1de5022"><td class="memItemLeft" align="right" valign="top"><a id="af8b7a888f9531c3e8a70d707d1de5022" name="af8b7a888f9531c3e8a70d707d1de5022"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> ()</td></tr>
+<tr class="memitem:af8b7a888f9531c3e8a70d707d1de5022" id="r_af8b7a888f9531c3e8a70d707d1de5022"><td class="memItemLeft"><a id="af8b7a888f9531c3e8a70d707d1de5022" name="af8b7a888f9531c3e8a70d707d1de5022"></a>
+void&#160;</td><td class="memItemRight"><b>update</b> ()</td></tr>
 <tr class="memdesc:af8b7a888f9531c3e8a70d707d1de5022"><td class="mdescLeft">&#160;</td><td class="mdescRight">遅延削除キューに積まれたハンドルを実際に解放する。 <br /></td></tr>
-<tr class="separator:af8b7a888f9531c3e8a70d707d1de5022"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;class T, class Deleter = std::default_delete&lt;T&gt;&gt;<br />
 class Amuse::Core::SyncHandleManager&lt; T, Deleter &gt;</div><p>同期付きハンドルマネージャを表す。 </p>
 </div><hr/>このクラス詳解は次のファイルから抽出されました:<ul>
@@ -158,11 +176,12 @@ class Amuse::Core::SyncHandleManager&lt; T, Deleter &gt;</div><p>同期付きハ
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>Amuse</b></li><li class="navelem"><b>Core</b></li><li class="navelem"><a class="el" href="../../d7/d21/class_amuse_1_1_core_1_1_sync_handle_manager.html">SyncHandleManager</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><b>Core</b></li><li class="navelem"><a href="../../d7/d21/class_amuse_1_1_core_1_1_sync_handle_manager.html">SyncHandleManager</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

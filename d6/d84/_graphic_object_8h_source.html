@@ -3,19 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AmuseEngine: Runtime/RHI/Public/Amuse/RHI/GraphicObject.h ソースファイル</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../jquery.js"></script>
-<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
 <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
 <script type="text/javascript" src="../../navtreedata.js"></script>
 <script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="../../style.css" rel="stylesheet" type="text/css"/>
@@ -36,23 +42,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.6 -->
+<!-- 構築: Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('../../',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
 });
-/* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -65,10 +93,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('d6/d84/_graphic_object_8h_source.html','../../'); initResizable(); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d6/d84/_graphic_object_8h_source.html','../../',''); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -96,52 +123,54 @@ $(document).ready(function(){initNavTree('d6/d84/_graphic_object_8h_source.html'
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//***********************************************************</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"></span><span class="comment">//***********************************************************</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//***********************************************************</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;Amuse/Core/Core.h&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;Amuse/Core/Utility/Ref.h&gt;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span>Amuse::RHI {</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keyword">using namespace </span>Amuse::Core;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="../../d2/d2f/class_amuse_1_1_r_h_i_1_1_graphic_object.html">   21</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d2/d2f/class_amuse_1_1_r_h_i_1_1_graphic_object.html">GraphicObject</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d1/d85/class_amuse_1_1_core_1_1_ref_object.html">RefObject</a> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span></div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="../../d2/d2f/class_amuse_1_1_r_h_i_1_1_graphic_object.html">   21</a></span>    <span class="keyword">class </span><a class="code hl_function" href="../../d2/d2f/class_amuse_1_1_r_h_i_1_1_graphic_object.html#aeb1734e2a8972a85ee117d55b0ed0671">GraphicObject</a> : <span class="keyword">public</span> <a class="code hl_function" href="../../d1/d85/class_amuse_1_1_core_1_1_ref_object.html#a13ef87ec51bbe18df5c40a2898f7a87e">RefObject</a> {</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../d2/d2f/class_amuse_1_1_r_h_i_1_1_graphic_object.html#acb75de7b13aa9e8ffa59067166c2e3fc">   25</a></span>        <a class="code hl_function" href="../../d2/d2f/class_amuse_1_1_r_h_i_1_1_graphic_object.html#acb75de7b13aa9e8ffa59067166c2e3fc">~GraphicObject</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../d2/d2f/class_amuse_1_1_r_h_i_1_1_graphic_object.html#aba71c221476d7e9a534deeb412d3599a">   28</a></span>        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a>&amp; <a class="code hl_function" href="../../d2/d2f/class_amuse_1_1_r_h_i_1_1_graphic_object.html#aba71c221476d7e9a534deeb412d3599a">getName</a>()<span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../d2/d2f/class_amuse_1_1_r_h_i_1_1_graphic_object.html#aba71c221476d7e9a534deeb412d3599a">   28</a></span>        <span class="keyword">virtual</span> <span class="keyword">const</span> String&amp; <a class="code hl_function" href="../../d2/d2f/class_amuse_1_1_r_h_i_1_1_graphic_object.html#aba71c221476d7e9a534deeb412d3599a">getName</a>()<span class="keyword">const</span> = 0;</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span></div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../d2/d2f/class_amuse_1_1_r_h_i_1_1_graphic_object.html#aeb1734e2a8972a85ee117d55b0ed0671">   33</a></span>        <a class="code hl_function" href="../../d2/d2f/class_amuse_1_1_r_h_i_1_1_graphic_object.html#aeb1734e2a8972a85ee117d55b0ed0671">GraphicObject</a>();</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../d2/d2f/class_amuse_1_1_r_h_i_1_1_graphic_object.html#af9658112f32b326d814af8344eac6984">   36</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d2f/class_amuse_1_1_r_h_i_1_1_graphic_object.html#af9658112f32b326d814af8344eac6984">manage</a>();</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordtype">void</span> finalize()<span class="keyword">override</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/d85/class_amuse_1_1_core_1_1_ref_object.html#ab99aea99381a0c123df9dc33d731c3c3">finalize</a>()<span class="keyword">override</span>;</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordtype">bool</span> m_managed = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    };</div>
+</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>}</div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_ref_object_html"><div class="ttname"><a href="../../d1/d85/class_amuse_1_1_core_1_1_ref_object.html">Amuse::Core::RefObject</a></div><div class="ttdoc">参照カウントオブジェクト</div><div class="ttdef"><b>Definition:</b> Ref.h:34</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_string_base_html"><div class="ttname"><a href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">Amuse::Core::StringBase&lt; Char &gt;</a></div></div>
-<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_graphic_object_html"><div class="ttname"><a href="../../d2/d2f/class_amuse_1_1_r_h_i_1_1_graphic_object.html">Amuse::RHI::GraphicObject</a></div><div class="ttdoc">グラフィック・オブジェクト</div><div class="ttdef"><b>Definition:</b> GraphicObject.h:21</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_ref_object_html_a13ef87ec51bbe18df5c40a2898f7a87e"><div class="ttname"><a href="../../d1/d85/class_amuse_1_1_core_1_1_ref_object.html#a13ef87ec51bbe18df5c40a2898f7a87e">Amuse::Core::RefObject::RefObject</a></div><div class="ttdeci">RefObject()</div><div class="ttdoc">コンストラクタ</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_ref_object_html_ab99aea99381a0c123df9dc33d731c3c3"><div class="ttname"><a href="../../d1/d85/class_amuse_1_1_core_1_1_ref_object.html#ab99aea99381a0c123df9dc33d731c3c3">Amuse::Core::RefObject::finalize</a></div><div class="ttdeci">virtual void finalize()</div><div class="ttdoc">参照カウントが0になったときの処理</div></div>
 <div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_graphic_object_html_aba71c221476d7e9a534deeb412d3599a"><div class="ttname"><a href="../../d2/d2f/class_amuse_1_1_r_h_i_1_1_graphic_object.html#aba71c221476d7e9a534deeb412d3599a">Amuse::RHI::GraphicObject::getName</a></div><div class="ttdeci">virtual const String &amp; getName() const =0</div><div class="ttdoc">名前を取得</div></div>
 <div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_graphic_object_html_acb75de7b13aa9e8ffa59067166c2e3fc"><div class="ttname"><a href="../../d2/d2f/class_amuse_1_1_r_h_i_1_1_graphic_object.html#acb75de7b13aa9e8ffa59067166c2e3fc">Amuse::RHI::GraphicObject::~GraphicObject</a></div><div class="ttdeci">~GraphicObject() override</div><div class="ttdoc">デストラクタ</div></div>
 <div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_graphic_object_html_aeb1734e2a8972a85ee117d55b0ed0671"><div class="ttname"><a href="../../d2/d2f/class_amuse_1_1_r_h_i_1_1_graphic_object.html#aeb1734e2a8972a85ee117d55b0ed0671">Amuse::RHI::GraphicObject::GraphicObject</a></div><div class="ttdeci">GraphicObject()</div><div class="ttdoc">コンストラクタ</div></div>
 <div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_graphic_object_html_af9658112f32b326d814af8344eac6984"><div class="ttname"><a href="../../d2/d2f/class_amuse_1_1_r_h_i_1_1_graphic_object.html#af9658112f32b326d814af8344eac6984">Amuse::RHI::GraphicObject::manage</a></div><div class="ttdeci">void manage()</div><div class="ttdoc">グラフィックオブジェクトを管理対象にする</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_4f6666a8f2ab10bc970eb7559668f031.html">Runtime</a></li><li class="navelem"><a class="el" href="../../dir_ed0dd943941685375ac149ef30703e8f.html">RHI</a></li><li class="navelem"><a class="el" href="../../dir_80d0fa31a6e3bc7da61af1a1dfa2506f.html">Public</a></li><li class="navelem"><a class="el" href="../../dir_6330f9b43f61349a45429b5fd54fec05.html">Amuse</a></li><li class="navelem"><a class="el" href="../../dir_0830f243940360ab60fcd1783d0d86f9.html">RHI</a></li><li class="navelem"><b>GraphicObject.h</b></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="navelem"><b>Runtime</b></li><li class="navelem"><b>RHI</b></li><li class="navelem"><b>Public</b></li><li class="navelem"><b>Amuse</b></li><li class="navelem"><b>RHI</b></li><li class="navelem"><b>GraphicObject.h</b></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

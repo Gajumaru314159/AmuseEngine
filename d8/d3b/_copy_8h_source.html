@@ -3,19 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AmuseEngine: Runtime/RHI/Public/Amuse/RHI/Types/Copy.h ソースファイル</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../jquery.js"></script>
-<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
 <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
 <script type="text/javascript" src="../../navtreedata.js"></script>
 <script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="../../style.css" rel="stylesheet" type="text/css"/>
@@ -36,23 +42,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.6 -->
+<!-- 構築: Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('../../',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
 });
-/* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -65,10 +93,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('d8/d3b/_copy_8h_source.html','../../'); initResizable(); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d8/d3b/_copy_8h_source.html','../../',''); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -96,7 +123,7 @@ $(document).ready(function(){initNavTree('d8/d3b/_copy_8h_source.html','../../')
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//***********************************************************</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"></span><span class="comment">//***********************************************************</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//***********************************************************</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;Amuse/Core/Core.h&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;Amuse/Core/Misc/BlobView.h&gt;</span></div>
@@ -105,7 +132,8 @@ $(document).ready(function(){initNavTree('d8/d3b/_copy_8h_source.html','../../')
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span>Amuse::RHI {</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">using namespace </span>Amuse::Core;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span></div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../d0/d8e/struct_amuse_1_1_r_h_i_1_1_buffer_copy_region.html">   15</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../d0/d8e/struct_amuse_1_1_r_h_i_1_1_buffer_copy_region.html">BufferCopyRegion</a> {</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="../../d0/d8e/struct_amuse_1_1_r_h_i_1_1_buffer_copy_region.html#a7e52b66e42f3bda2f262b9c148e3563c">   16</a></span>        <a class="code hl_class" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref&lt;Buffer&gt;</a> <a class="code hl_variable" href="../../d0/d8e/struct_amuse_1_1_r_h_i_1_1_buffer_copy_region.html#a7e52b66e42f3bda2f262b9c148e3563c">source</a>;     </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../d0/d8e/struct_amuse_1_1_r_h_i_1_1_buffer_copy_region.html#aeb4f381e292872561dff55f2d358f89e">   17</a></span>        <a class="code hl_class" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref&lt;Buffer&gt;</a> <a class="code hl_variable" href="../../d0/d8e/struct_amuse_1_1_r_h_i_1_1_buffer_copy_region.html#aeb4f381e292872561dff55f2d358f89e">target</a>;     </div>
@@ -113,7 +141,9 @@ $(document).ready(function(){initNavTree('d8/d3b/_copy_8h_source.html','../../')
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="../../d0/d8e/struct_amuse_1_1_r_h_i_1_1_buffer_copy_region.html#a8ea91e409bf3cfb4bb19be1f57b7e77a">   19</a></span>        u64 <a class="code hl_variable" href="../../d0/d8e/struct_amuse_1_1_r_h_i_1_1_buffer_copy_region.html#a8ea91e409bf3cfb4bb19be1f57b7e77a">targetOffset</a> = 0;   </div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="../../d0/d8e/struct_amuse_1_1_r_h_i_1_1_buffer_copy_region.html#a61f045618cdd61ae9ab4ba51c1463bd8">   20</a></span>        u64 <a class="code hl_variable" href="../../d0/d8e/struct_amuse_1_1_r_h_i_1_1_buffer_copy_region.html#a61f045618cdd61ae9ab4ba51c1463bd8">size</a> = 0;           </div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    };</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span></div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="../../db/dce/struct_amuse_1_1_r_h_i_1_1_texture_copy_region.html">   24</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../db/dce/struct_amuse_1_1_r_h_i_1_1_texture_copy_region.html">TextureCopyRegion</a> {</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../db/dce/struct_amuse_1_1_r_h_i_1_1_texture_copy_region.html#a9199f2b239ecca4646b5a589db0dfd6b">   25</a></span>        <a class="code hl_class" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref&lt;Texture&gt;</a> <a class="code hl_variable" href="../../db/dce/struct_amuse_1_1_r_h_i_1_1_texture_copy_region.html#a9199f2b239ecca4646b5a589db0dfd6b">source</a>;                        </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="../../db/dce/struct_amuse_1_1_r_h_i_1_1_texture_copy_region.html#ade4d9afcb74256b2ac375dba5bd9f604">   26</a></span>        <a class="code hl_class" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref&lt;Texture&gt;</a> <a class="code hl_variable" href="../../db/dce/struct_amuse_1_1_r_h_i_1_1_texture_copy_region.html#ade4d9afcb74256b2ac375dba5bd9f604">target</a>;                        </div>
@@ -123,7 +153,9 @@ $(document).ready(function(){initNavTree('d8/d3b/_copy_8h_source.html','../../')
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="../../db/dce/struct_amuse_1_1_r_h_i_1_1_texture_copy_region.html#a33aa4844c4c41d146fede91c422b3ce6">   30</a></span>        <a class="code hl_struct" href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html">Point</a> <a class="code hl_variable" href="../../db/dce/struct_amuse_1_1_r_h_i_1_1_texture_copy_region.html#a33aa4844c4c41d146fede91c422b3ce6">targetOrigin</a>;                         </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="../../db/dce/struct_amuse_1_1_r_h_i_1_1_texture_copy_region.html#abf853676f2451f1607786fda768d2690">   31</a></span>        <a class="code hl_struct" href="../../de/d30/struct_amuse_1_1_core_1_1_size.html">Size</a> <a class="code hl_variable" href="../../db/dce/struct_amuse_1_1_r_h_i_1_1_texture_copy_region.html#abf853676f2451f1607786fda768d2690">size</a>;                                  </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    };</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span></div>
+<div class="foldopen" id="foldopen00035" data-start="{" data-end="};">
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="../../dd/d41/struct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region.html">   35</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../dd/d41/struct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region.html">BufferTextureCopyRegion</a> {</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../dd/d41/struct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region.html#ac29bde8463413b6861a384d8b809b28a">   36</a></span>        <a class="code hl_class" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref&lt;Buffer&gt;</a> <a class="code hl_variable" href="../../dd/d41/struct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region.html#ac29bde8463413b6861a384d8b809b28a">buffer</a>;                         </div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../dd/d41/struct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region.html#aef488202401f824b502eae2f16a92ea2">   37</a></span>        <a class="code hl_class" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref&lt;Texture&gt;</a> <a class="code hl_variable" href="../../dd/d41/struct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region.html#aef488202401f824b502eae2f16a92ea2">texture</a>;                       </div>
@@ -134,42 +166,44 @@ $(document).ready(function(){initNavTree('d8/d3b/_copy_8h_source.html','../../')
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="../../dd/d41/struct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region.html#aa22273af148b7f36e91f013887cb7fa3">   42</a></span>        <a class="code hl_struct" href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html">Point</a> <a class="code hl_variable" href="../../dd/d41/struct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region.html#aa22273af148b7f36e91f013887cb7fa3">textureOrigin</a>;                        </div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="../../dd/d41/struct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region.html#a6f6c3779ea5a2737458873c3ba3a144d">   43</a></span>        <a class="code hl_struct" href="../../de/d30/struct_amuse_1_1_core_1_1_size.html">Size</a> <a class="code hl_variable" href="../../dd/d41/struct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region.html#a6f6c3779ea5a2737458873c3ba3a144d">size</a>;                                  </div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    };</div>
+</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>}</div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_ref_html"><div class="ttname"><a href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Amuse::Core::Ref</a></div><div class="ttdoc">RefObject 用スマートポインタ</div><div class="ttdef"><b>Definition:</b> Ref.h:64</div></div>
-<div class="ttc" id="astruct_amuse_1_1_core_1_1_point_html"><div class="ttname"><a href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html">Amuse::Core::Point</a></div><div class="ttdoc">ポイント</div><div class="ttdef"><b>Definition:</b> Point.h:11</div></div>
-<div class="ttc" id="astruct_amuse_1_1_core_1_1_size_html"><div class="ttname"><a href="../../de/d30/struct_amuse_1_1_core_1_1_size.html">Amuse::Core::Size</a></div><div class="ttdoc">サイズ</div><div class="ttdef"><b>Definition:</b> Size.h:11</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_buffer_copy_region_html"><div class="ttname"><a href="../../d0/d8e/struct_amuse_1_1_r_h_i_1_1_buffer_copy_region.html">Amuse::RHI::BufferCopyRegion</a></div><div class="ttdoc">バッファコピー範囲</div><div class="ttdef"><b>Definition:</b> Copy.h:15</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_buffer_copy_region_html_a61f045618cdd61ae9ab4ba51c1463bd8"><div class="ttname"><a href="../../d0/d8e/struct_amuse_1_1_r_h_i_1_1_buffer_copy_region.html#a61f045618cdd61ae9ab4ba51c1463bd8">Amuse::RHI::BufferCopyRegion::size</a></div><div class="ttdeci">u64 size</div><div class="ttdoc">コピーサイズ。0の場合はコピー可能な残り全体</div><div class="ttdef"><b>Definition:</b> Copy.h:20</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_buffer_copy_region_html_a7e52b66e42f3bda2f262b9c148e3563c"><div class="ttname"><a href="../../d0/d8e/struct_amuse_1_1_r_h_i_1_1_buffer_copy_region.html#a7e52b66e42f3bda2f262b9c148e3563c">Amuse::RHI::BufferCopyRegion::source</a></div><div class="ttdeci">Ref&lt; Buffer &gt; source</div><div class="ttdoc">コピー元</div><div class="ttdef"><b>Definition:</b> Copy.h:16</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_buffer_copy_region_html_a8ea91e409bf3cfb4bb19be1f57b7e77a"><div class="ttname"><a href="../../d0/d8e/struct_amuse_1_1_r_h_i_1_1_buffer_copy_region.html#a8ea91e409bf3cfb4bb19be1f57b7e77a">Amuse::RHI::BufferCopyRegion::targetOffset</a></div><div class="ttdeci">u64 targetOffset</div><div class="ttdoc">コピー先オフセット</div><div class="ttdef"><b>Definition:</b> Copy.h:19</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_buffer_copy_region_html_aca33e82c0be64f95b5ebdbe54b1cf7e6"><div class="ttname"><a href="../../d0/d8e/struct_amuse_1_1_r_h_i_1_1_buffer_copy_region.html#aca33e82c0be64f95b5ebdbe54b1cf7e6">Amuse::RHI::BufferCopyRegion::sourceOffset</a></div><div class="ttdeci">u64 sourceOffset</div><div class="ttdoc">コピー元オフセット</div><div class="ttdef"><b>Definition:</b> Copy.h:18</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_buffer_copy_region_html_aeb4f381e292872561dff55f2d358f89e"><div class="ttname"><a href="../../d0/d8e/struct_amuse_1_1_r_h_i_1_1_buffer_copy_region.html#aeb4f381e292872561dff55f2d358f89e">Amuse::RHI::BufferCopyRegion::target</a></div><div class="ttdeci">Ref&lt; Buffer &gt; target</div><div class="ttdoc">コピー先</div><div class="ttdef"><b>Definition:</b> Copy.h:17</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region_html"><div class="ttname"><a href="../../dd/d41/struct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region.html">Amuse::RHI::BufferTextureCopyRegion</a></div><div class="ttdoc">バッファ/テクスチャコピー範囲</div><div class="ttdef"><b>Definition:</b> Copy.h:35</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region_html_a163ec27a3eb1f9b767db962fd68cd19e"><div class="ttname"><a href="../../dd/d41/struct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region.html#a163ec27a3eb1f9b767db962fd68cd19e">Amuse::RHI::BufferTextureCopyRegion::textureSubresource</a></div><div class="ttdeci">TextureSubresource textureSubresource</div><div class="ttdoc">テクスチャサブリソース</div><div class="ttdef"><b>Definition:</b> Copy.h:41</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region_html_a2f835d3c04aaaf9420cae53bf2a3ccfa"><div class="ttname"><a href="../../dd/d41/struct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region.html#a2f835d3c04aaaf9420cae53bf2a3ccfa">Amuse::RHI::BufferTextureCopyRegion::bufferOffset</a></div><div class="ttdeci">u64 bufferOffset</div><div class="ttdoc">バッファオフセット</div><div class="ttdef"><b>Definition:</b> Copy.h:38</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region_html_a5ba05846b2529caabdccafeb491d69e7"><div class="ttname"><a href="../../dd/d41/struct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region.html#a5ba05846b2529caabdccafeb491d69e7">Amuse::RHI::BufferTextureCopyRegion::rowPitch</a></div><div class="ttdeci">u32 rowPitch</div><div class="ttdoc">1行のバイト数</div><div class="ttdef"><b>Definition:</b> Copy.h:39</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region_html_a63dd0c816e3d3131389a5283553e3be8"><div class="ttname"><a href="../../dd/d41/struct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region.html#a63dd0c816e3d3131389a5283553e3be8">Amuse::RHI::BufferTextureCopyRegion::depthPitch</a></div><div class="ttdeci">u32 depthPitch</div><div class="ttdoc">1スライスのバイト数</div><div class="ttdef"><b>Definition:</b> Copy.h:40</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region_html_a6f6c3779ea5a2737458873c3ba3a144d"><div class="ttname"><a href="../../dd/d41/struct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region.html#a6f6c3779ea5a2737458873c3ba3a144d">Amuse::RHI::BufferTextureCopyRegion::size</a></div><div class="ttdeci">Size size</div><div class="ttdoc">コピーサイズ</div><div class="ttdef"><b>Definition:</b> Copy.h:43</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region_html_aa22273af148b7f36e91f013887cb7fa3"><div class="ttname"><a href="../../dd/d41/struct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region.html#aa22273af148b7f36e91f013887cb7fa3">Amuse::RHI::BufferTextureCopyRegion::textureOrigin</a></div><div class="ttdeci">Point textureOrigin</div><div class="ttdoc">テクスチャ原点</div><div class="ttdef"><b>Definition:</b> Copy.h:42</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region_html_ac29bde8463413b6861a384d8b809b28a"><div class="ttname"><a href="../../dd/d41/struct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region.html#ac29bde8463413b6861a384d8b809b28a">Amuse::RHI::BufferTextureCopyRegion::buffer</a></div><div class="ttdeci">Ref&lt; Buffer &gt; buffer</div><div class="ttdoc">バッファ</div><div class="ttdef"><b>Definition:</b> Copy.h:36</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region_html_aef488202401f824b502eae2f16a92ea2"><div class="ttname"><a href="../../dd/d41/struct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region.html#aef488202401f824b502eae2f16a92ea2">Amuse::RHI::BufferTextureCopyRegion::texture</a></div><div class="ttdeci">Ref&lt; Texture &gt; texture</div><div class="ttdoc">テクスチャ</div><div class="ttdef"><b>Definition:</b> Copy.h:37</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_texture_copy_region_html"><div class="ttname"><a href="../../db/dce/struct_amuse_1_1_r_h_i_1_1_texture_copy_region.html">Amuse::RHI::TextureCopyRegion</a></div><div class="ttdoc">テクスチャコピー範囲</div><div class="ttdef"><b>Definition:</b> Copy.h:24</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_texture_copy_region_html_a33aa4844c4c41d146fede91c422b3ce6"><div class="ttname"><a href="../../db/dce/struct_amuse_1_1_r_h_i_1_1_texture_copy_region.html#a33aa4844c4c41d146fede91c422b3ce6">Amuse::RHI::TextureCopyRegion::targetOrigin</a></div><div class="ttdeci">Point targetOrigin</div><div class="ttdoc">コピー先原点</div><div class="ttdef"><b>Definition:</b> Copy.h:30</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_texture_copy_region_html_a62530e99bcebfea9a50e1178579bf0f7"><div class="ttname"><a href="../../db/dce/struct_amuse_1_1_r_h_i_1_1_texture_copy_region.html#a62530e99bcebfea9a50e1178579bf0f7">Amuse::RHI::TextureCopyRegion::targetSubresource</a></div><div class="ttdeci">TextureSubresource targetSubresource</div><div class="ttdoc">コピー先サブリソース</div><div class="ttdef"><b>Definition:</b> Copy.h:28</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_texture_copy_region_html_a9199f2b239ecca4646b5a589db0dfd6b"><div class="ttname"><a href="../../db/dce/struct_amuse_1_1_r_h_i_1_1_texture_copy_region.html#a9199f2b239ecca4646b5a589db0dfd6b">Amuse::RHI::TextureCopyRegion::source</a></div><div class="ttdeci">Ref&lt; Texture &gt; source</div><div class="ttdoc">コピー元</div><div class="ttdef"><b>Definition:</b> Copy.h:25</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_texture_copy_region_html_a95ce35c2b13e30bbfd7190c4dae1f8f6"><div class="ttname"><a href="../../db/dce/struct_amuse_1_1_r_h_i_1_1_texture_copy_region.html#a95ce35c2b13e30bbfd7190c4dae1f8f6">Amuse::RHI::TextureCopyRegion::sourceSubresource</a></div><div class="ttdeci">TextureSubresource sourceSubresource</div><div class="ttdoc">コピー元サブリソース</div><div class="ttdef"><b>Definition:</b> Copy.h:27</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_texture_copy_region_html_abd68fa6e7fa0fc455f4f627c73c7d2ad"><div class="ttname"><a href="../../db/dce/struct_amuse_1_1_r_h_i_1_1_texture_copy_region.html#abd68fa6e7fa0fc455f4f627c73c7d2ad">Amuse::RHI::TextureCopyRegion::sourceOrigin</a></div><div class="ttdeci">Point sourceOrigin</div><div class="ttdoc">コピー元原点</div><div class="ttdef"><b>Definition:</b> Copy.h:29</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_texture_copy_region_html_abf853676f2451f1607786fda768d2690"><div class="ttname"><a href="../../db/dce/struct_amuse_1_1_r_h_i_1_1_texture_copy_region.html#abf853676f2451f1607786fda768d2690">Amuse::RHI::TextureCopyRegion::size</a></div><div class="ttdeci">Size size</div><div class="ttdoc">コピーサイズ</div><div class="ttdef"><b>Definition:</b> Copy.h:31</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_texture_copy_region_html_ade4d9afcb74256b2ac375dba5bd9f604"><div class="ttname"><a href="../../db/dce/struct_amuse_1_1_r_h_i_1_1_texture_copy_region.html#ade4d9afcb74256b2ac375dba5bd9f604">Amuse::RHI::TextureCopyRegion::target</a></div><div class="ttdeci">Ref&lt; Texture &gt; target</div><div class="ttdoc">コピー先</div><div class="ttdef"><b>Definition:</b> Copy.h:26</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_texture_subresource_html"><div class="ttname"><a href="../../d2/db4/struct_amuse_1_1_r_h_i_1_1_texture_subresource.html">Amuse::RHI::TextureSubresource</a></div><div class="ttdoc">テクスチャ内のコピー対象範囲</div><div class="ttdef"><b>Definition:</b> CommandParam.h:62</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_ref_html"><div class="ttname"><a href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Amuse::Core::Ref</a></div><div class="ttdoc">RefObject 用スマートポインタ</div><div class="ttdef"><b>Definition</b> Ref.h:64</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_point_html"><div class="ttname"><a href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html">Amuse::Core::Point</a></div><div class="ttdoc">ポイント</div><div class="ttdef"><b>Definition</b> Point.h:11</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_size_html"><div class="ttname"><a href="../../de/d30/struct_amuse_1_1_core_1_1_size.html">Amuse::Core::Size</a></div><div class="ttdoc">サイズ</div><div class="ttdef"><b>Definition</b> Size.h:11</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_buffer_copy_region_html"><div class="ttname"><a href="../../d0/d8e/struct_amuse_1_1_r_h_i_1_1_buffer_copy_region.html">Amuse::RHI::BufferCopyRegion</a></div><div class="ttdoc">バッファコピー範囲</div><div class="ttdef"><b>Definition</b> Copy.h:15</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_buffer_copy_region_html_a61f045618cdd61ae9ab4ba51c1463bd8"><div class="ttname"><a href="../../d0/d8e/struct_amuse_1_1_r_h_i_1_1_buffer_copy_region.html#a61f045618cdd61ae9ab4ba51c1463bd8">Amuse::RHI::BufferCopyRegion::size</a></div><div class="ttdeci">u64 size</div><div class="ttdoc">コピーサイズ。0の場合はコピー可能な残り全体</div><div class="ttdef"><b>Definition</b> Copy.h:20</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_buffer_copy_region_html_a7e52b66e42f3bda2f262b9c148e3563c"><div class="ttname"><a href="../../d0/d8e/struct_amuse_1_1_r_h_i_1_1_buffer_copy_region.html#a7e52b66e42f3bda2f262b9c148e3563c">Amuse::RHI::BufferCopyRegion::source</a></div><div class="ttdeci">Ref&lt; Buffer &gt; source</div><div class="ttdoc">コピー元</div><div class="ttdef"><b>Definition</b> Copy.h:16</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_buffer_copy_region_html_a8ea91e409bf3cfb4bb19be1f57b7e77a"><div class="ttname"><a href="../../d0/d8e/struct_amuse_1_1_r_h_i_1_1_buffer_copy_region.html#a8ea91e409bf3cfb4bb19be1f57b7e77a">Amuse::RHI::BufferCopyRegion::targetOffset</a></div><div class="ttdeci">u64 targetOffset</div><div class="ttdoc">コピー先オフセット</div><div class="ttdef"><b>Definition</b> Copy.h:19</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_buffer_copy_region_html_aca33e82c0be64f95b5ebdbe54b1cf7e6"><div class="ttname"><a href="../../d0/d8e/struct_amuse_1_1_r_h_i_1_1_buffer_copy_region.html#aca33e82c0be64f95b5ebdbe54b1cf7e6">Amuse::RHI::BufferCopyRegion::sourceOffset</a></div><div class="ttdeci">u64 sourceOffset</div><div class="ttdoc">コピー元オフセット</div><div class="ttdef"><b>Definition</b> Copy.h:18</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_buffer_copy_region_html_aeb4f381e292872561dff55f2d358f89e"><div class="ttname"><a href="../../d0/d8e/struct_amuse_1_1_r_h_i_1_1_buffer_copy_region.html#aeb4f381e292872561dff55f2d358f89e">Amuse::RHI::BufferCopyRegion::target</a></div><div class="ttdeci">Ref&lt; Buffer &gt; target</div><div class="ttdoc">コピー先</div><div class="ttdef"><b>Definition</b> Copy.h:17</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region_html"><div class="ttname"><a href="../../dd/d41/struct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region.html">Amuse::RHI::BufferTextureCopyRegion</a></div><div class="ttdoc">バッファ/テクスチャコピー範囲</div><div class="ttdef"><b>Definition</b> Copy.h:35</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region_html_a163ec27a3eb1f9b767db962fd68cd19e"><div class="ttname"><a href="../../dd/d41/struct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region.html#a163ec27a3eb1f9b767db962fd68cd19e">Amuse::RHI::BufferTextureCopyRegion::textureSubresource</a></div><div class="ttdeci">TextureSubresource textureSubresource</div><div class="ttdoc">テクスチャサブリソース</div><div class="ttdef"><b>Definition</b> Copy.h:41</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region_html_a2f835d3c04aaaf9420cae53bf2a3ccfa"><div class="ttname"><a href="../../dd/d41/struct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region.html#a2f835d3c04aaaf9420cae53bf2a3ccfa">Amuse::RHI::BufferTextureCopyRegion::bufferOffset</a></div><div class="ttdeci">u64 bufferOffset</div><div class="ttdoc">バッファオフセット</div><div class="ttdef"><b>Definition</b> Copy.h:38</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region_html_a5ba05846b2529caabdccafeb491d69e7"><div class="ttname"><a href="../../dd/d41/struct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region.html#a5ba05846b2529caabdccafeb491d69e7">Amuse::RHI::BufferTextureCopyRegion::rowPitch</a></div><div class="ttdeci">u32 rowPitch</div><div class="ttdoc">1行のバイト数</div><div class="ttdef"><b>Definition</b> Copy.h:39</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region_html_a63dd0c816e3d3131389a5283553e3be8"><div class="ttname"><a href="../../dd/d41/struct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region.html#a63dd0c816e3d3131389a5283553e3be8">Amuse::RHI::BufferTextureCopyRegion::depthPitch</a></div><div class="ttdeci">u32 depthPitch</div><div class="ttdoc">1スライスのバイト数</div><div class="ttdef"><b>Definition</b> Copy.h:40</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region_html_a6f6c3779ea5a2737458873c3ba3a144d"><div class="ttname"><a href="../../dd/d41/struct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region.html#a6f6c3779ea5a2737458873c3ba3a144d">Amuse::RHI::BufferTextureCopyRegion::size</a></div><div class="ttdeci">Size size</div><div class="ttdoc">コピーサイズ</div><div class="ttdef"><b>Definition</b> Copy.h:43</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region_html_aa22273af148b7f36e91f013887cb7fa3"><div class="ttname"><a href="../../dd/d41/struct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region.html#aa22273af148b7f36e91f013887cb7fa3">Amuse::RHI::BufferTextureCopyRegion::textureOrigin</a></div><div class="ttdeci">Point textureOrigin</div><div class="ttdoc">テクスチャ原点</div><div class="ttdef"><b>Definition</b> Copy.h:42</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region_html_ac29bde8463413b6861a384d8b809b28a"><div class="ttname"><a href="../../dd/d41/struct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region.html#ac29bde8463413b6861a384d8b809b28a">Amuse::RHI::BufferTextureCopyRegion::buffer</a></div><div class="ttdeci">Ref&lt; Buffer &gt; buffer</div><div class="ttdoc">バッファ</div><div class="ttdef"><b>Definition</b> Copy.h:36</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region_html_aef488202401f824b502eae2f16a92ea2"><div class="ttname"><a href="../../dd/d41/struct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region.html#aef488202401f824b502eae2f16a92ea2">Amuse::RHI::BufferTextureCopyRegion::texture</a></div><div class="ttdeci">Ref&lt; Texture &gt; texture</div><div class="ttdoc">テクスチャ</div><div class="ttdef"><b>Definition</b> Copy.h:37</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_texture_copy_region_html"><div class="ttname"><a href="../../db/dce/struct_amuse_1_1_r_h_i_1_1_texture_copy_region.html">Amuse::RHI::TextureCopyRegion</a></div><div class="ttdoc">テクスチャコピー範囲</div><div class="ttdef"><b>Definition</b> Copy.h:24</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_texture_copy_region_html_a33aa4844c4c41d146fede91c422b3ce6"><div class="ttname"><a href="../../db/dce/struct_amuse_1_1_r_h_i_1_1_texture_copy_region.html#a33aa4844c4c41d146fede91c422b3ce6">Amuse::RHI::TextureCopyRegion::targetOrigin</a></div><div class="ttdeci">Point targetOrigin</div><div class="ttdoc">コピー先原点</div><div class="ttdef"><b>Definition</b> Copy.h:30</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_texture_copy_region_html_a62530e99bcebfea9a50e1178579bf0f7"><div class="ttname"><a href="../../db/dce/struct_amuse_1_1_r_h_i_1_1_texture_copy_region.html#a62530e99bcebfea9a50e1178579bf0f7">Amuse::RHI::TextureCopyRegion::targetSubresource</a></div><div class="ttdeci">TextureSubresource targetSubresource</div><div class="ttdoc">コピー先サブリソース</div><div class="ttdef"><b>Definition</b> Copy.h:28</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_texture_copy_region_html_a9199f2b239ecca4646b5a589db0dfd6b"><div class="ttname"><a href="../../db/dce/struct_amuse_1_1_r_h_i_1_1_texture_copy_region.html#a9199f2b239ecca4646b5a589db0dfd6b">Amuse::RHI::TextureCopyRegion::source</a></div><div class="ttdeci">Ref&lt; Texture &gt; source</div><div class="ttdoc">コピー元</div><div class="ttdef"><b>Definition</b> Copy.h:25</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_texture_copy_region_html_a95ce35c2b13e30bbfd7190c4dae1f8f6"><div class="ttname"><a href="../../db/dce/struct_amuse_1_1_r_h_i_1_1_texture_copy_region.html#a95ce35c2b13e30bbfd7190c4dae1f8f6">Amuse::RHI::TextureCopyRegion::sourceSubresource</a></div><div class="ttdeci">TextureSubresource sourceSubresource</div><div class="ttdoc">コピー元サブリソース</div><div class="ttdef"><b>Definition</b> Copy.h:27</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_texture_copy_region_html_abd68fa6e7fa0fc455f4f627c73c7d2ad"><div class="ttname"><a href="../../db/dce/struct_amuse_1_1_r_h_i_1_1_texture_copy_region.html#abd68fa6e7fa0fc455f4f627c73c7d2ad">Amuse::RHI::TextureCopyRegion::sourceOrigin</a></div><div class="ttdeci">Point sourceOrigin</div><div class="ttdoc">コピー元原点</div><div class="ttdef"><b>Definition</b> Copy.h:29</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_texture_copy_region_html_abf853676f2451f1607786fda768d2690"><div class="ttname"><a href="../../db/dce/struct_amuse_1_1_r_h_i_1_1_texture_copy_region.html#abf853676f2451f1607786fda768d2690">Amuse::RHI::TextureCopyRegion::size</a></div><div class="ttdeci">Size size</div><div class="ttdoc">コピーサイズ</div><div class="ttdef"><b>Definition</b> Copy.h:31</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_texture_copy_region_html_ade4d9afcb74256b2ac375dba5bd9f604"><div class="ttname"><a href="../../db/dce/struct_amuse_1_1_r_h_i_1_1_texture_copy_region.html#ade4d9afcb74256b2ac375dba5bd9f604">Amuse::RHI::TextureCopyRegion::target</a></div><div class="ttdeci">Ref&lt; Texture &gt; target</div><div class="ttdoc">コピー先</div><div class="ttdef"><b>Definition</b> Copy.h:26</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_texture_subresource_html"><div class="ttname"><a href="../../d2/db4/struct_amuse_1_1_r_h_i_1_1_texture_subresource.html">Amuse::RHI::TextureSubresource</a></div><div class="ttdoc">テクスチャ内のコピー対象範囲</div><div class="ttdef"><b>Definition</b> CommandParam.h:62</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_4f6666a8f2ab10bc970eb7559668f031.html">Runtime</a></li><li class="navelem"><a class="el" href="../../dir_ed0dd943941685375ac149ef30703e8f.html">RHI</a></li><li class="navelem"><a class="el" href="../../dir_80d0fa31a6e3bc7da61af1a1dfa2506f.html">Public</a></li><li class="navelem"><a class="el" href="../../dir_6330f9b43f61349a45429b5fd54fec05.html">Amuse</a></li><li class="navelem"><a class="el" href="../../dir_0830f243940360ab60fcd1783d0d86f9.html">RHI</a></li><li class="navelem"><a class="el" href="../../dir_5761839cb0a5a5a0945e24e2502418de.html">Types</a></li><li class="navelem"><b>Copy.h</b></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="navelem"><b>Runtime</b></li><li class="navelem"><b>RHI</b></li><li class="navelem"><b>Public</b></li><li class="navelem"><b>Amuse</b></li><li class="navelem"><b>RHI</b></li><li class="navelem"><b>Types</b></li><li class="navelem"><b>Copy.h</b></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

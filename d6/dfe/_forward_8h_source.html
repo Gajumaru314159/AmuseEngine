@@ -3,19 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AmuseEngine: Runtime/RHI/Public/Amuse/RHI/Forward.h ソースファイル</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../jquery.js"></script>
-<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
 <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
 <script type="text/javascript" src="../../navtreedata.js"></script>
 <script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="../../style.css" rel="stylesheet" type="text/css"/>
@@ -36,23 +42,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.6 -->
+<!-- 構築: Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('../../',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
 });
-/* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -65,10 +93,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('d6/dfe/_forward_8h_source.html','../../'); initResizable(); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d6/dfe/_forward_8h_source.html','../../',''); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -96,7 +123,7 @@ $(document).ready(function(){initNavTree('d6/dfe/_forward_8h_source.html','../..
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//***********************************************************</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"></span><span class="comment">//***********************************************************</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//***********************************************************</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;Amuse/Core/Core.h&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;Amuse/Core/Utility/Ref.h&gt;</span></div>
@@ -108,55 +135,89 @@ $(document).ready(function(){initNavTree('d6/dfe/_forward_8h_source.html','../..
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">enum class</span> PresetTexture;</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="comment">// 構造体</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">struct </span>SetDescriptorTableParam;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">struct </span>DrawParam;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">struct </span>DrawIndexedParam;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">struct </span>DispatchParam;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">struct </span>IndirectCommandParam;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">struct </span>TextureBarrier;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">struct </span>BufferBarrier;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">struct </span>GraphicFileQueueDesc;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">struct </span>ShaderCompileDesc;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">struct </span>RootSignatureDesc;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">struct </span>PipelineStateDesc;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">struct </span>ComputePipelineStateDesc;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../db/dbb/struct_amuse_1_1_r_h_i_1_1_set_descriptor_table_param.html">SetDescriptorTableParam</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../d7/d99/struct_amuse_1_1_r_h_i_1_1_draw_param.html">DrawParam</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../d4/dc3/struct_amuse_1_1_r_h_i_1_1_draw_indexed_param.html">DrawIndexedParam</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../d4/d76/struct_amuse_1_1_r_h_i_1_1_dispatch_param.html">DispatchParam</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../d9/d89/struct_amuse_1_1_r_h_i_1_1_indirect_command_param.html">IndirectCommandParam</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../dc/d9f/struct_amuse_1_1_r_h_i_1_1_texture_barrier.html">TextureBarrier</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../d0/d0b/struct_amuse_1_1_r_h_i_1_1_buffer_barrier.html">BufferBarrier</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../d2/dbf/struct_amuse_1_1_r_h_i_1_1_graphic_file_queue_desc.html">GraphicFileQueueDesc</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../d9/d3f/struct_amuse_1_1_r_h_i_1_1_shader_compile_desc.html">ShaderCompileDesc</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../dd/d50/struct_amuse_1_1_r_h_i_1_1_root_signature_desc.html">RootSignatureDesc</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../de/d3f/struct_amuse_1_1_r_h_i_1_1_pipeline_state_desc.html">PipelineStateDesc</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../d2/dbc/struct_amuse_1_1_r_h_i_1_1_compute_pipeline_state_desc.html">ComputePipelineStateDesc</a>;</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">struct </span>BindingSlot;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">struct </span>VertexLayoutDesc;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../dc/dd6/struct_amuse_1_1_r_h_i_1_1_vertex_layout_desc.html">VertexLayoutDesc</a>;</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="comment">// クラス</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">class </span>Device;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">class </span>Buffer;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">class </span>CommandList;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">class </span>EventQuery;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">class </span>TimerQuery;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">class </span>Fence;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">class </span>DescriptorTable;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">class </span>DescriptorLayout;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">class </span>SwapChain;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">class </span>PipelineState;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">class </span>ComputePipelineState;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">class </span>RenderTexture;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">class </span>RootSignature;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">class </span>Shader;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">class </span>Texture;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">class </span>Sampler;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keyword">class </span>VertexLayout;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">class </span><a class="code hl_class" href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html">Device</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">class </span><a class="code hl_class" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html">Buffer</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">class </span><a class="code hl_class" href="../../d7/dc8/class_amuse_1_1_r_h_i_1_1_command_list.html">CommandList</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">class </span><a class="code hl_class" href="../../d4/d3a/class_amuse_1_1_r_h_i_1_1_event_query.html">EventQuery</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">class </span><a class="code hl_class" href="../../d4/d23/class_amuse_1_1_r_h_i_1_1_timer_query.html">TimerQuery</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">class </span><a class="code hl_class" href="../../d9/d03/class_amuse_1_1_r_h_i_1_1_fence.html">Fence</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">class </span><a class="code hl_class" href="../../d2/d8f/class_amuse_1_1_r_h_i_1_1_descriptor_table.html">DescriptorTable</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">class </span><a class="code hl_class" href="../../dc/db6/class_amuse_1_1_r_h_i_1_1_descriptor_layout.html">DescriptorLayout</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">class </span><a class="code hl_class" href="../../d5/df6/class_amuse_1_1_r_h_i_1_1_swap_chain.html">SwapChain</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">class </span><a class="code hl_class" href="../../d6/d59/class_amuse_1_1_r_h_i_1_1_pipeline_state.html">PipelineState</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">class </span><a class="code hl_class" href="../../d9/dab/class_amuse_1_1_r_h_i_1_1_compute_pipeline_state.html">ComputePipelineState</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">class </span><a class="code hl_class" href="../../da/d86/class_amuse_1_1_r_h_i_1_1_render_texture.html">RenderTexture</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">class </span><a class="code hl_class" href="../../de/d11/class_amuse_1_1_r_h_i_1_1_root_signature.html">RootSignature</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">class </span><a class="code hl_class" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html">Shader</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">class </span><a class="code hl_class" href="../../de/d60/class_amuse_1_1_r_h_i_1_1_texture.html">Texture</a>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">class </span><a class="code hl_class" href="../../da/d9b/class_amuse_1_1_r_h_i_1_1_sampler.html">Sampler</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keyword">class </span><a class="code hl_class" href="../../dc/df3/class_amuse_1_1_r_h_i_1_1_vertex_layout.html">VertexLayout</a>;</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">class </span>GraphicFileHandle;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">class </span>GraphicFileEvent;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">class </span>GraphicFileQueue;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">class </span><a class="code hl_class" href="../../da/db5/class_amuse_1_1_r_h_i_1_1_graphic_file_handle.html">GraphicFileHandle</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">class </span><a class="code hl_class" href="../../dc/de0/class_amuse_1_1_r_h_i_1_1_graphic_file_event.html">GraphicFileEvent</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">class </span><a class="code hl_class" href="../../d8/d50/class_amuse_1_1_r_h_i_1_1_graphic_file_queue.html">GraphicFileQueue</a>;</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="comment">// 内部クラス</span></div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">class </span>GraphicObjectManager;</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>}</div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_buffer_html"><div class="ttname"><a href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html">Amuse::RHI::Buffer</a></div><div class="ttdoc">バッファ</div><div class="ttdef"><b>Definition</b> Buffer.h:19</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_command_list_html"><div class="ttname"><a href="../../d7/dc8/class_amuse_1_1_r_h_i_1_1_command_list.html">Amuse::RHI::CommandList</a></div><div class="ttdoc">コマンドリスト</div><div class="ttdef"><b>Definition</b> CommandList.h:21</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_compute_pipeline_state_html"><div class="ttname"><a href="../../d9/dab/class_amuse_1_1_r_h_i_1_1_compute_pipeline_state.html">Amuse::RHI::ComputePipelineState</a></div><div class="ttdoc">コンピュートパイプラインステート</div><div class="ttdef"><b>Definition</b> ComputePipelineState.h:14</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_descriptor_layout_html"><div class="ttname"><a href="../../dc/db6/class_amuse_1_1_r_h_i_1_1_descriptor_layout.html">Amuse::RHI::DescriptorLayout</a></div><div class="ttdoc">デスクリプタレイアウト</div><div class="ttdef"><b>Definition</b> DescriptorLayout.h:14</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_descriptor_table_html"><div class="ttname"><a href="../../d2/d8f/class_amuse_1_1_r_h_i_1_1_descriptor_table.html">Amuse::RHI::DescriptorTable</a></div><div class="ttdoc">デスクリプタテーブル</div><div class="ttdef"><b>Definition</b> DescriptorTable.h:15</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_device_html"><div class="ttname"><a href="../../d1/d22/class_amuse_1_1_r_h_i_1_1_device.html">Amuse::RHI::Device</a></div><div class="ttdoc">Rendering Hardware Interface (RHI)</div><div class="ttdef"><b>Definition</b> RHI.h:37</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_event_query_html"><div class="ttname"><a href="../../d4/d3a/class_amuse_1_1_r_h_i_1_1_event_query.html">Amuse::RHI::EventQuery</a></div><div class="ttdoc">GPUイベントクエリ</div><div class="ttdef"><b>Definition</b> Query.h:13</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_fence_html"><div class="ttname"><a href="../../d9/d03/class_amuse_1_1_r_h_i_1_1_fence.html">Amuse::RHI::Fence</a></div><div class="ttdoc">GPU同期フェンス</div><div class="ttdef"><b>Definition</b> Fence.h:26</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_graphic_file_event_html"><div class="ttname"><a href="../../dc/de0/class_amuse_1_1_r_h_i_1_1_graphic_file_event.html">Amuse::RHI::GraphicFileEvent</a></div><div class="ttdoc">非同期ファイル読み込みイベント</div><div class="ttdef"><b>Definition</b> GraphicFile.h:65</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_graphic_file_handle_html"><div class="ttname"><a href="../../da/db5/class_amuse_1_1_r_h_i_1_1_graphic_file_handle.html">Amuse::RHI::GraphicFileHandle</a></div><div class="ttdoc">非同期ファイルハンドル</div><div class="ttdef"><b>Definition</b> GraphicFile.h:51</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_graphic_file_queue_html"><div class="ttname"><a href="../../d8/d50/class_amuse_1_1_r_h_i_1_1_graphic_file_queue.html">Amuse::RHI::GraphicFileQueue</a></div><div class="ttdoc">非同期ファイル読み込みキュー</div><div class="ttdef"><b>Definition</b> GraphicFile.h:78</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_pipeline_state_html"><div class="ttname"><a href="../../d6/d59/class_amuse_1_1_r_h_i_1_1_pipeline_state.html">Amuse::RHI::PipelineState</a></div><div class="ttdoc">パイプラインステート</div><div class="ttdef"><b>Definition</b> PipelineState.h:14</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_render_texture_html"><div class="ttname"><a href="../../da/d86/class_amuse_1_1_r_h_i_1_1_render_texture.html">Amuse::RHI::RenderTexture</a></div><div class="ttdoc">描画テクスチャ</div><div class="ttdef"><b>Definition</b> RenderTexture.h:15</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_root_signature_html"><div class="ttname"><a href="../../de/d11/class_amuse_1_1_r_h_i_1_1_root_signature.html">Amuse::RHI::RootSignature</a></div><div class="ttdoc">ルートシグネチャ</div><div class="ttdef"><b>Definition</b> RootSignature.h:14</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_sampler_html"><div class="ttname"><a href="../../da/d9b/class_amuse_1_1_r_h_i_1_1_sampler.html">Amuse::RHI::Sampler</a></div><div class="ttdoc">サンプラー</div><div class="ttdef"><b>Definition</b> Sampler.h:15</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_shader_html"><div class="ttname"><a href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html">Amuse::RHI::Shader</a></div><div class="ttdoc">シェーダ</div><div class="ttdef"><b>Definition</b> Shader.h:24</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_swap_chain_html"><div class="ttname"><a href="../../d5/df6/class_amuse_1_1_r_h_i_1_1_swap_chain.html">Amuse::RHI::SwapChain</a></div><div class="ttdoc">スワップチェーン</div><div class="ttdef"><b>Definition</b> SwapChain.h:21</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_texture_html"><div class="ttname"><a href="../../de/d60/class_amuse_1_1_r_h_i_1_1_texture.html">Amuse::RHI::Texture</a></div><div class="ttdoc">テクスチャ</div><div class="ttdef"><b>Definition</b> Texture.h:16</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_timer_query_html"><div class="ttname"><a href="../../d4/d23/class_amuse_1_1_r_h_i_1_1_timer_query.html">Amuse::RHI::TimerQuery</a></div><div class="ttdoc">GPUタイマークエリ</div><div class="ttdef"><b>Definition</b> Query.h:20</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_vertex_layout_html"><div class="ttname"><a href="../../dc/df3/class_amuse_1_1_r_h_i_1_1_vertex_layout.html">Amuse::RHI::VertexLayout</a></div><div class="ttdoc">頂点レイアウト</div><div class="ttdef"><b>Definition</b> VertexLayout.h:15</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_buffer_barrier_html"><div class="ttname"><a href="../../d0/d0b/struct_amuse_1_1_r_h_i_1_1_buffer_barrier.html">Amuse::RHI::BufferBarrier</a></div><div class="ttdoc">バッファ遷移バリア</div><div class="ttdef"><b>Definition</b> Barrier.h:33</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_compute_pipeline_state_desc_html"><div class="ttname"><a href="../../d2/dbc/struct_amuse_1_1_r_h_i_1_1_compute_pipeline_state_desc.html">Amuse::RHI::ComputePipelineStateDesc</a></div><div class="ttdoc">コンピュートパイプラインステート定義</div><div class="ttdef"><b>Definition</b> ComputePipelineStateDesc.h:13</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_dispatch_param_html"><div class="ttname"><a href="../../d4/d76/struct_amuse_1_1_r_h_i_1_1_dispatch_param.html">Amuse::RHI::DispatchParam</a></div><div class="ttdoc">CommandList::dispatch() で指定するパラメータ</div><div class="ttdef"><b>Definition</b> CommandParam.h:47</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_draw_indexed_param_html"><div class="ttname"><a href="../../d4/dc3/struct_amuse_1_1_r_h_i_1_1_draw_indexed_param.html">Amuse::RHI::DrawIndexedParam</a></div><div class="ttdoc">CommandList::drawIndexed() で指定するパラメータ</div><div class="ttdef"><b>Definition</b> CommandParam.h:38</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_draw_param_html"><div class="ttname"><a href="../../d7/d99/struct_amuse_1_1_r_h_i_1_1_draw_param.html">Amuse::RHI::DrawParam</a></div><div class="ttdoc">CommandList::draw() で指定するパラメータ</div><div class="ttdef"><b>Definition</b> CommandParam.h:29</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_graphic_file_queue_desc_html"><div class="ttname"><a href="../../d2/dbf/struct_amuse_1_1_r_h_i_1_1_graphic_file_queue_desc.html">Amuse::RHI::GraphicFileQueueDesc</a></div><div class="ttdoc">グラフィックファイル読み込みキュー設定</div><div class="ttdef"><b>Definition</b> GraphicFile.h:15</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_indirect_command_param_html"><div class="ttname"><a href="../../d9/d89/struct_amuse_1_1_r_h_i_1_1_indirect_command_param.html">Amuse::RHI::IndirectCommandParam</a></div><div class="ttdoc">Indirectコマンドで指定するパラメータ</div><div class="ttdef"><b>Definition</b> CommandParam.h:55</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_pipeline_state_desc_html"><div class="ttname"><a href="../../de/d3f/struct_amuse_1_1_r_h_i_1_1_pipeline_state_desc.html">Amuse::RHI::PipelineStateDesc</a></div><div class="ttdoc">パイプラインステート定義</div><div class="ttdef"><b>Definition</b> PipelineStateDesc.h:30</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_root_signature_desc_html"><div class="ttname"><a href="../../dd/d50/struct_amuse_1_1_r_h_i_1_1_root_signature_desc.html">Amuse::RHI::RootSignatureDesc</a></div><div class="ttdoc">ルートシグネチャ定義</div><div class="ttdef"><b>Definition</b> RootSignatureDesc.h:84</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_set_descriptor_table_param_html"><div class="ttname"><a href="../../db/dbb/struct_amuse_1_1_r_h_i_1_1_set_descriptor_table_param.html">Amuse::RHI::SetDescriptorTableParam</a></div><div class="ttdoc">デスクリプタ・テーブル・コマンドパラメータ</div><div class="ttdef"><b>Definition</b> CommandParam.h:15</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_shader_compile_desc_html"><div class="ttname"><a href="../../d9/d3f/struct_amuse_1_1_r_h_i_1_1_shader_compile_desc.html">Amuse::RHI::ShaderCompileDesc</a></div><div class="ttdoc">シェーダコンパイル設定</div><div class="ttdef"><b>Definition</b> Shader.h:15</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_texture_barrier_html"><div class="ttname"><a href="../../dc/d9f/struct_amuse_1_1_r_h_i_1_1_texture_barrier.html">Amuse::RHI::TextureBarrier</a></div><div class="ttdoc">テクスチャ遷移バリア</div><div class="ttdef"><b>Definition</b> Barrier.h:25</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_vertex_layout_desc_html"><div class="ttname"><a href="../../dc/dd6/struct_amuse_1_1_r_h_i_1_1_vertex_layout_desc.html">Amuse::RHI::VertexLayoutDesc</a></div><div class="ttdoc">頂点レイアウト</div><div class="ttdef"><b>Definition</b> VertexLayout.h:94</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_4f6666a8f2ab10bc970eb7559668f031.html">Runtime</a></li><li class="navelem"><a class="el" href="../../dir_ed0dd943941685375ac149ef30703e8f.html">RHI</a></li><li class="navelem"><a class="el" href="../../dir_80d0fa31a6e3bc7da61af1a1dfa2506f.html">Public</a></li><li class="navelem"><a class="el" href="../../dir_6330f9b43f61349a45429b5fd54fec05.html">Amuse</a></li><li class="navelem"><a class="el" href="../../dir_0830f243940360ab60fcd1783d0d86f9.html">RHI</a></li><li class="navelem"><b>Forward.h</b></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="navelem"><b>Runtime</b></li><li class="navelem"><b>RHI</b></li><li class="navelem"><b>Public</b></li><li class="navelem"><b>Amuse</b></li><li class="navelem"><b>RHI</b></li><li class="navelem"><b>Forward.h</b></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

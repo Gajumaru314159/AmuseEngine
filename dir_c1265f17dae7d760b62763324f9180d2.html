@@ -3,19 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AmuseEngine: Runtime/Core/Public/Amuse/Core/Geometry ディレクトリリファレンス</title>
+<link rel="icon" href="logo.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="style.css" rel="stylesheet" type="text/css"/>
@@ -36,23 +42,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.6 -->
+<!-- 構築: Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
 });
-/* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -65,10 +93,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('dir_c1265f17dae7d760b62763324f9180d2.html',''); initResizable(); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('dir_c1265f17dae7d760b62763324f9180d2.html','',''); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -96,56 +123,37 @@ $(document).ready(function(){initNavTree('dir_c1265f17dae7d760b62763324f9180d2.h
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="files" name="files"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-files" class="groupheader"><a id="files" name="files"></a>
 ファイル</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">ファイル &#160;</td><td class="memItemRight" valign="bottom"><b>Bounding.h</b> <a href="db/db1/_bounding_8h_source.html">[コード]</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">ファイル &#160;</td><td class="memItemRight" valign="bottom"><b>Box.h</b> <a href="d0/d5c/_box_8h_source.html">[コード]</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">ファイル &#160;</td><td class="memItemRight" valign="bottom"><b>Capsule.h</b> <a href="dc/db2/_capsule_8h_source.html">[コード]</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">ファイル &#160;</td><td class="memItemRight" valign="bottom"><b>Circle.h</b> <a href="db/d50/_circle_8h_source.html">[コード]</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">ファイル &#160;</td><td class="memItemRight" valign="bottom"><b>Cylinder.h</b> <a href="d1/d99/_cylinder_8h_source.html">[コード]</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">ファイル &#160;</td><td class="memItemRight" valign="bottom"><b>Frustum.h</b> <a href="d5/d69/_frustum_8h_source.html">[コード]</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">ファイル &#160;</td><td class="memItemRight" valign="bottom"><b>HalfLine.h</b> <a href="de/d13/_half_line_8h_source.html">[コード]</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">ファイル &#160;</td><td class="memItemRight" valign="bottom"><b>IntRect.h</b> <a href="d2/d31/_int_rect_8h_source.html">[コード]</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">ファイル &#160;</td><td class="memItemRight" valign="bottom"><b>Line.h</b> <a href="d0/dee/_line_8h_source.html">[コード]</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">ファイル &#160;</td><td class="memItemRight" valign="bottom"><b>Margin.h</b> <a href="d4/d44/_margin_8h_source.html">[コード]</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">ファイル &#160;</td><td class="memItemRight" valign="bottom"><b>Plane.h</b> <a href="d6/dbf/_plane_8h_source.html">[コード]</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">ファイル &#160;</td><td class="memItemRight" valign="bottom"><b>Point.h</b> <a href="d1/d18/_point_8h_source.html">[コード]</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">ファイル &#160;</td><td class="memItemRight" valign="bottom"><b>Rect.h</b> <a href="d3/d27/_rect_8h_source.html">[コード]</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">ファイル &#160;</td><td class="memItemRight" valign="bottom"><b>Segment.h</b> <a href="d8/db0/_segment_8h_source.html">[コード]</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">ファイル &#160;</td><td class="memItemRight" valign="bottom"><b>Size.h</b> <a href="da/dce/_size_8h_source.html">[コード]</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">ファイル &#160;</td><td class="memItemRight" valign="bottom"><b>Sphere.h</b> <a href="d2/d8b/_sphere_8h_source.html">[コード]</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">ファイル &#160;</td><td class="memItemRight" valign="bottom"><b>Spline.h</b> <a href="d4/d25/_spline_8h_source.html">[コード]</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">ファイル &#160;</td><td class="memItemRight" valign="bottom"><b>Spline2D.h</b> <a href="dd/d51/_spline2_d_8h_source.html">[コード]</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">ファイル &#160;</td><td class="memItemRight" valign="bottom"><b>Triangle.h</b> <a href="db/de5/_triangle_8h_source.html">[コード]</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">ファイル &#160;</td><td class="memItemRight" valign="bottom"><b>Viewport.h</b> <a href="d7/d19/_viewport_8h_source.html">[コード]</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:Bounding_2Eh" id="r_Bounding_2Eh"><td class="memItemLeft"><a href="db/db1/_bounding_8h_source.html"><span class="icondoc"><div class="doc-icon"></div></span></a>&#160;</td><td class="memItemRight"><b>Bounding.h</b></td></tr>
+<tr class="memitem:Box_2Eh" id="r_Box_2Eh"><td class="memItemLeft"><a href="d0/d5c/_box_8h_source.html"><span class="icondoc"><div class="doc-icon"></div></span></a>&#160;</td><td class="memItemRight"><b>Box.h</b></td></tr>
+<tr class="memitem:Capsule_2Eh" id="r_Capsule_2Eh"><td class="memItemLeft"><a href="dc/db2/_capsule_8h_source.html"><span class="icondoc"><div class="doc-icon"></div></span></a>&#160;</td><td class="memItemRight"><b>Capsule.h</b></td></tr>
+<tr class="memitem:Circle_2Eh" id="r_Circle_2Eh"><td class="memItemLeft"><a href="db/d50/_circle_8h_source.html"><span class="icondoc"><div class="doc-icon"></div></span></a>&#160;</td><td class="memItemRight"><b>Circle.h</b></td></tr>
+<tr class="memitem:Cylinder_2Eh" id="r_Cylinder_2Eh"><td class="memItemLeft"><a href="d1/d99/_cylinder_8h_source.html"><span class="icondoc"><div class="doc-icon"></div></span></a>&#160;</td><td class="memItemRight"><b>Cylinder.h</b></td></tr>
+<tr class="memitem:Frustum_2Eh" id="r_Frustum_2Eh"><td class="memItemLeft"><a href="d5/d69/_frustum_8h_source.html"><span class="icondoc"><div class="doc-icon"></div></span></a>&#160;</td><td class="memItemRight"><b>Frustum.h</b></td></tr>
+<tr class="memitem:HalfLine_2Eh" id="r_HalfLine_2Eh"><td class="memItemLeft"><a href="de/d13/_half_line_8h_source.html"><span class="icondoc"><div class="doc-icon"></div></span></a>&#160;</td><td class="memItemRight"><b>HalfLine.h</b></td></tr>
+<tr class="memitem:IntRect_2Eh" id="r_IntRect_2Eh"><td class="memItemLeft"><a href="d2/d31/_int_rect_8h_source.html"><span class="icondoc"><div class="doc-icon"></div></span></a>&#160;</td><td class="memItemRight"><b>IntRect.h</b></td></tr>
+<tr class="memitem:Line_2Eh" id="r_Line_2Eh"><td class="memItemLeft"><a href="d0/dee/_line_8h_source.html"><span class="icondoc"><div class="doc-icon"></div></span></a>&#160;</td><td class="memItemRight"><b>Line.h</b></td></tr>
+<tr class="memitem:Margin_2Eh" id="r_Margin_2Eh"><td class="memItemLeft"><a href="d4/d44/_margin_8h_source.html"><span class="icondoc"><div class="doc-icon"></div></span></a>&#160;</td><td class="memItemRight"><b>Margin.h</b></td></tr>
+<tr class="memitem:Plane_2Eh" id="r_Plane_2Eh"><td class="memItemLeft"><a href="d6/dbf/_plane_8h_source.html"><span class="icondoc"><div class="doc-icon"></div></span></a>&#160;</td><td class="memItemRight"><b>Plane.h</b></td></tr>
+<tr class="memitem:Point_2Eh" id="r_Point_2Eh"><td class="memItemLeft"><a href="d1/d18/_point_8h_source.html"><span class="icondoc"><div class="doc-icon"></div></span></a>&#160;</td><td class="memItemRight"><b>Point.h</b></td></tr>
+<tr class="memitem:Rect_2Eh" id="r_Rect_2Eh"><td class="memItemLeft"><a href="d3/d27/_rect_8h_source.html"><span class="icondoc"><div class="doc-icon"></div></span></a>&#160;</td><td class="memItemRight"><b>Rect.h</b></td></tr>
+<tr class="memitem:Segment_2Eh" id="r_Segment_2Eh"><td class="memItemLeft"><a href="d8/db0/_segment_8h_source.html"><span class="icondoc"><div class="doc-icon"></div></span></a>&#160;</td><td class="memItemRight"><b>Segment.h</b></td></tr>
+<tr class="memitem:Size_2Eh" id="r_Size_2Eh"><td class="memItemLeft"><a href="da/dce/_size_8h_source.html"><span class="icondoc"><div class="doc-icon"></div></span></a>&#160;</td><td class="memItemRight"><b>Size.h</b></td></tr>
+<tr class="memitem:Sphere_2Eh" id="r_Sphere_2Eh"><td class="memItemLeft"><a href="d2/d8b/_sphere_8h_source.html"><span class="icondoc"><div class="doc-icon"></div></span></a>&#160;</td><td class="memItemRight"><b>Sphere.h</b></td></tr>
+<tr class="memitem:Spline_2Eh" id="r_Spline_2Eh"><td class="memItemLeft"><a href="d4/d25/_spline_8h_source.html"><span class="icondoc"><div class="doc-icon"></div></span></a>&#160;</td><td class="memItemRight"><b>Spline.h</b></td></tr>
+<tr class="memitem:Spline2D_2Eh" id="r_Spline2D_2Eh"><td class="memItemLeft"><a href="dd/d51/_spline2_d_8h_source.html"><span class="icondoc"><div class="doc-icon"></div></span></a>&#160;</td><td class="memItemRight"><b>Spline2D.h</b></td></tr>
+<tr class="memitem:Triangle_2Eh" id="r_Triangle_2Eh"><td class="memItemLeft"><a href="db/de5/_triangle_8h_source.html"><span class="icondoc"><div class="doc-icon"></div></span></a>&#160;</td><td class="memItemRight"><b>Triangle.h</b></td></tr>
+<tr class="memitem:Viewport_2Eh" id="r_Viewport_2Eh"><td class="memItemLeft"><a href="d7/d19/_viewport_8h_source.html"><span class="icondoc"><div class="doc-icon"></div></span></a>&#160;</td><td class="memItemRight"><b>Viewport.h</b></td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_4f6666a8f2ab10bc970eb7559668f031.html">Runtime</a></li><li class="navelem"><a class="el" href="dir_b05c51a7dc61612d752a1d5ca497c54f.html">Core</a></li><li class="navelem"><a class="el" href="dir_2704b46b7ef0c98b3ce7738c20dc746e.html">Public</a></li><li class="navelem"><a class="el" href="dir_02338155ec8ce976dea76e6f650abf75.html">Amuse</a></li><li class="navelem"><a class="el" href="dir_a813c3653225bc50968bea57534cde90.html">Core</a></li><li class="navelem"><a class="el" href="dir_c1265f17dae7d760b62763324f9180d2.html">Geometry</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="navelem"><b>Runtime</b></li><li class="navelem"><b>Core</b></li><li class="navelem"><b>Public</b></li><li class="navelem"><b>Amuse</b></li><li class="navelem"><b>Core</b></li><li class="navelem"><b>Geometry</b></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

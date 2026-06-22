@@ -3,19 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AmuseEngine: Runtime/RHI/Public/Amuse/RHI/Types/SamplerDesc.h ソースファイル</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../jquery.js"></script>
-<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
 <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
 <script type="text/javascript" src="../../navtreedata.js"></script>
 <script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="../../style.css" rel="stylesheet" type="text/css"/>
@@ -36,23 +42,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.6 -->
+<!-- 構築: Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('../../',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
 });
-/* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -65,10 +93,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('df/d45/_sampler_desc_8h_source.html','../../'); initResizable(); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('df/d45/_sampler_desc_8h_source.html','../../',''); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -96,7 +123,7 @@ $(document).ready(function(){initNavTree('df/d45/_sampler_desc_8h_source.html','
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//***********************************************************</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"></span><span class="comment">//***********************************************************</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//***********************************************************</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;Amuse/Core/Core.h&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
@@ -104,19 +131,19 @@ $(document).ready(function(){initNavTree('df/d45/_sampler_desc_8h_source.html','
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keyword">using namespace </span>Amuse::Core;</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#pragma region Enum</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">enum class</span> TextureFilter :u32 {</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <a class="code hl_struct" href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html">Point</a>,  </div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        Linear, </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    };</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">enum class</span> MipFilter :u32 {</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <a class="code hl_struct" href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html">Point</a>,  </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        Linear, </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    };</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">enum class</span> Anisotropy : u32 {</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        None,</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        Level1,</div>
@@ -126,7 +153,7 @@ $(document).ready(function(){initNavTree('df/d45/_sampler_desc_8h_source.html','
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        Level16,</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    };</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span></div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">enum class</span> TextureAddress {</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        Repeat, </div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        Clamp,  </div>
@@ -134,10 +161,11 @@ $(document).ready(function(){initNavTree('df/d45/_sampler_desc_8h_source.html','
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    };</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#pragma endregion</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html">   50</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html">SamplerDesc</a> {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span></div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="};">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html">   50</a></span>    <span class="keyword">struct </span><a class="code hl_function" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a181effaa3d5bf8a3ac99e1ed6b80d661">SamplerDesc</a> {</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#aff6ecdb4ed2c4d6df686c8d61f7062c7">   52</a></span>        <a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a>          <a class="code hl_variable" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#aff6ecdb4ed2c4d6df686c8d61f7062c7">name</a>;               </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#aff6ecdb4ed2c4d6df686c8d61f7062c7">   52</a></span>        String          <a class="code hl_variable" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#aff6ecdb4ed2c4d6df686c8d61f7062c7">name</a>;               </div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a5bc1ebfb3a6b6beff64fe399a1c79619">   53</a></span>        TextureFilter  <a class="code hl_variable" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a5bc1ebfb3a6b6beff64fe399a1c79619">filter</a>;             </div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#ad68174131bde9831e0e379dac6712f87">   54</a></span>        MipFilter      <a class="code hl_variable" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#ad68174131bde9831e0e379dac6712f87">mipFilter</a>;          </div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a8c783d4a7443cb9d316d3bee53ff34c8">   55</a></span>        <span class="keywordtype">bool</span>            <a class="code hl_variable" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a8c783d4a7443cb9d316d3bee53ff34c8">zFilter</a>;            </div>
@@ -149,7 +177,8 @@ $(document).ready(function(){initNavTree('df/d45/_sampler_desc_8h_source.html','
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a020033a2309c5a950f5f649dab8908f1">   61</a></span>        <a class="code hl_struct" href="../../d5/d54/struct_amuse_1_1_core_1_1_range.html">Range</a>           <a class="code hl_variable" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a020033a2309c5a950f5f649dab8908f1">mipLodRange</a>;        </div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span></div>
+<div class="foldopen" id="foldopen00066" data-start="{" data-end="}">
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a181effaa3d5bf8a3ac99e1ed6b80d661">   66</a></span>        <a class="code hl_function" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a181effaa3d5bf8a3ac99e1ed6b80d661">SamplerDesc</a>(</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            TextureFilter <a class="code hl_variable" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a5bc1ebfb3a6b6beff64fe399a1c79619">filter</a> = TextureFilter::Linear,</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            TextureAddress <a class="code hl_variable" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a0de0c0d0c5cc6cd59251527d66e2b590">addressU</a> = TextureAddress::Repeat,</div>
@@ -168,46 +197,62 @@ $(document).ready(function(){initNavTree('df/d45/_sampler_desc_8h_source.html','
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            <a class="code hl_function" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#abe36b46b9ed14f6faf7a724097e58457">setAddress</a>(<a class="code hl_variable" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a0de0c0d0c5cc6cd59251527d66e2b590">addressU</a>, <a class="code hl_variable" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#aa43189ee8a487806f70111823eab9ea3">addressV</a>, <a class="code hl_variable" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a2b2772e3a571ffdd4e0db4abfb5fddae">addressW</a>);</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <a class="code hl_function" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#abd79428ab5052f3d6410f0ee2c76e20d">setMipLod</a>(<a class="code hl_variable" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a59ba3a86051d2a19049bbd0f4bc8836f">mipLodBias</a>, minLod, maxLod);</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        }</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a8fbb6ab2a0db6316b13a32c8ea666b75">   86</a></span>        <a class="code hl_struct" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html">SamplerDesc</a>&amp; <a class="code hl_function" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a8fbb6ab2a0db6316b13a32c8ea666b75">setFilter</a>(TextureFilter <a class="code hl_variable" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a5bc1ebfb3a6b6beff64fe399a1c79619">filter</a>, MipFilter <a class="code hl_variable" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#ad68174131bde9831e0e379dac6712f87">mipFilter</a> = MipFilter::Linear) {</div>
+</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span></div>
+<div class="foldopen" id="foldopen00086" data-start="{" data-end="}">
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a8fbb6ab2a0db6316b13a32c8ea666b75">   86</a></span>        <a class="code hl_function" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a181effaa3d5bf8a3ac99e1ed6b80d661">SamplerDesc</a>&amp; <a class="code hl_function" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a8fbb6ab2a0db6316b13a32c8ea666b75">setFilter</a>(TextureFilter <a class="code hl_variable" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a5bc1ebfb3a6b6beff64fe399a1c79619">filter</a>, MipFilter <a class="code hl_variable" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#ad68174131bde9831e0e379dac6712f87">mipFilter</a> = MipFilter::Linear) {</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            this-&gt;filter = <a class="code hl_variable" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a5bc1ebfb3a6b6beff64fe399a1c79619">filter</a>;</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            this-&gt;mipFilter = <a class="code hl_variable" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#ad68174131bde9831e0e379dac6712f87">mipFilter</a>;</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        }</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a8e98841305b50e518c4b913d9909187f">   93</a></span>        <a class="code hl_struct" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html">SamplerDesc</a>&amp; <a class="code hl_function" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a8e98841305b50e518c4b913d9909187f">setZFilter</a>(<span class="keywordtype">bool</span> <a class="code hl_variable" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a8c783d4a7443cb9d316d3bee53ff34c8">zFilter</a>) {</div>
+</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span></div>
+<div class="foldopen" id="foldopen00093" data-start="{" data-end="}">
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a8e98841305b50e518c4b913d9909187f">   93</a></span>        <a class="code hl_function" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a181effaa3d5bf8a3ac99e1ed6b80d661">SamplerDesc</a>&amp; <a class="code hl_function" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a8e98841305b50e518c4b913d9909187f">setZFilter</a>(<span class="keywordtype">bool</span> <a class="code hl_variable" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a8c783d4a7443cb9d316d3bee53ff34c8">zFilter</a>) {</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            this-&gt;zFilter = <a class="code hl_variable" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a8c783d4a7443cb9d316d3bee53ff34c8">zFilter</a>;</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        }</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#afa6dc959d65d72906fdb944835b0192f">   99</a></span>        <a class="code hl_struct" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html">SamplerDesc</a>&amp; <a class="code hl_function" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#afa6dc959d65d72906fdb944835b0192f">setAnisotropy</a>(Anisotropy <a class="code hl_variable" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a6dfa002039ac5dc84c57e88ae7f670b1">anisotropy</a>) {</div>
+</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span></div>
+<div class="foldopen" id="foldopen00099" data-start="{" data-end="}">
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#afa6dc959d65d72906fdb944835b0192f">   99</a></span>        <a class="code hl_function" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a181effaa3d5bf8a3ac99e1ed6b80d661">SamplerDesc</a>&amp; <a class="code hl_function" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#afa6dc959d65d72906fdb944835b0192f">setAnisotropy</a>(Anisotropy <a class="code hl_variable" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a6dfa002039ac5dc84c57e88ae7f670b1">anisotropy</a>) {</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            this-&gt;anisotropy = <a class="code hl_variable" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a6dfa002039ac5dc84c57e88ae7f670b1">anisotropy</a>;</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        }</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#abe36b46b9ed14f6faf7a724097e58457">  105</a></span>        <a class="code hl_struct" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html">SamplerDesc</a>&amp; <a class="code hl_function" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#abe36b46b9ed14f6faf7a724097e58457">setAddress</a>(TextureAddress u, TextureAddress v, TextureAddress w = TextureAddress::Repeat) {</div>
+</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span></div>
+<div class="foldopen" id="foldopen00105" data-start="{" data-end="}">
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#abe36b46b9ed14f6faf7a724097e58457">  105</a></span>        <a class="code hl_function" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a181effaa3d5bf8a3ac99e1ed6b80d661">SamplerDesc</a>&amp; <a class="code hl_function" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#abe36b46b9ed14f6faf7a724097e58457">setAddress</a>(TextureAddress u, TextureAddress v, TextureAddress w = TextureAddress::Repeat) {</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            this-&gt;addressU = u;</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            this-&gt;addressV = v;</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            this-&gt;addressW = w;</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        }</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a6af05cc634adfa8cc1d405a8cae8591a">  113</a></span>        <a class="code hl_struct" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html">SamplerDesc</a>&amp; <a class="code hl_function" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a6af05cc634adfa8cc1d405a8cae8591a">setAddress</a>(TextureAddress mode) {</div>
+</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span></div>
+<div class="foldopen" id="foldopen00113" data-start="{" data-end="}">
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a6af05cc634adfa8cc1d405a8cae8591a">  113</a></span>        <a class="code hl_function" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a181effaa3d5bf8a3ac99e1ed6b80d661">SamplerDesc</a>&amp; <a class="code hl_function" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a6af05cc634adfa8cc1d405a8cae8591a">setAddress</a>(TextureAddress mode) {</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#abe36b46b9ed14f6faf7a724097e58457">setAddress</a>(mode,mode,mode);</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        }</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#abd79428ab5052f3d6410f0ee2c76e20d">  118</a></span>        <a class="code hl_struct" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html">SamplerDesc</a>&amp; <a class="code hl_function" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#abd79428ab5052f3d6410f0ee2c76e20d">setMipLod</a>(f32 bias, f32 min, f32 max) {</div>
+</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span></div>
+<div class="foldopen" id="foldopen00118" data-start="{" data-end="}">
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#abd79428ab5052f3d6410f0ee2c76e20d">  118</a></span>        <a class="code hl_function" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a181effaa3d5bf8a3ac99e1ed6b80d661">SamplerDesc</a>&amp; <a class="code hl_function" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#abd79428ab5052f3d6410f0ee2c76e20d">setMipLod</a>(f32 bias, f32 min, f32 max) {</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            this-&gt;mipLodBias = bias;</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            this-&gt;mipLodRange.<a class="code hl_variable" href="../../d5/d54/struct_amuse_1_1_core_1_1_range.html#a486748c027803b52fb1f7c35ec647606">min</a> = min;</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            this-&gt;mipLodRange.<a class="code hl_variable" href="../../d5/d54/struct_amuse_1_1_core_1_1_range.html#a30e044c16beecdbd9100c05d38722f5b">max</a> = max;</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        }</div>
+</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    };</div>
+</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span></div>
+<div class="foldopen" id="foldopen00130" data-start="{" data-end="};">
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="../../da/dda/struct_amuse_1_1_r_h_i_1_1_sampler_desc_hasher.html">  130</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../da/dda/struct_amuse_1_1_r_h_i_1_1_sampler_desc_hasher.html">SamplerDescHasher</a> {</div>
+<div class="foldopen" id="foldopen00132" data-start="{" data-end="}">
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="../../da/dda/struct_amuse_1_1_r_h_i_1_1_sampler_desc_hasher.html#a4d642513495df367abbc5a580ff8594f">  132</a></span>        <span class="keywordtype">size_t</span> <a class="code hl_function" href="../../da/dda/struct_amuse_1_1_r_h_i_1_1_sampler_desc_hasher.html#a4d642513495df367abbc5a580ff8594f">operator()</a>(<span class="keyword">const</span> <a class="code hl_struct" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html">SamplerDesc</a>&amp; desc) <span class="keyword">const</span> <span class="keyword">noexcept</span></div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        {</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            <span class="keyword">using namespace </span>Amuse::Core;</div>
@@ -225,8 +270,13 @@ $(document).ready(function(){initNavTree('df/d45/_sampler_desc_8h_source.html','
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>            <a class="code hl_function" href="../../d5/d6f/class_amuse_1_1_core_1_1_hash.html#a4e3f756e8ee02dd701b6b9e4e5950e4d">Hash::Combine</a>(hash, desc.mipLodRange.max);</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>            <span class="keywordflow">return</span> hash;</div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        }</div>
+</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    };</div>
+</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span></div>
+<div class="foldopen" id="foldopen00151" data-start="{" data-end="};">
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="../../d9/d32/struct_amuse_1_1_r_h_i_1_1_sampler_desc_equal.html">  151</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../d9/d32/struct_amuse_1_1_r_h_i_1_1_sampler_desc_equal.html">SamplerDescEqual</a> {</div>
+<div class="foldopen" id="foldopen00153" data-start="{" data-end="}">
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno"><a class="line" href="../../d9/d32/struct_amuse_1_1_r_h_i_1_1_sampler_desc_equal.html#a39d055ee968549ebbb6ebc526d8ec351">  153</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d9/d32/struct_amuse_1_1_r_h_i_1_1_sampler_desc_equal.html#a39d055ee968549ebbb6ebc526d8ec351">operator()</a>(<span class="keyword">const</span> <a class="code hl_struct" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html">SamplerDesc</a>&amp; lhs, <span class="keyword">const</span> <a class="code hl_struct" href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html">SamplerDesc</a>&amp; rhs) <span class="keyword">const</span> <span class="keyword">noexcept</span></div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        {</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            <span class="keywordflow">return</span> lhs.name == rhs.name &amp;&amp;</div>
@@ -241,43 +291,45 @@ $(document).ready(function(){initNavTree('df/d45/_sampler_desc_8h_source.html','
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                   lhs.mipLodRange.min == rhs.mipLodRange.min &amp;&amp;</div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                   lhs.mipLodRange.max == rhs.mipLodRange.max;</div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        }</div>
+</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    };</div>
+</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>}</div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_hash_html_a4e3f756e8ee02dd701b6b9e4e5950e4d"><div class="ttname"><a href="../../d5/d6f/class_amuse_1_1_core_1_1_hash.html#a4e3f756e8ee02dd701b6b9e4e5950e4d">Amuse::Core::Hash::Combine</a></div><div class="ttdeci">static constexpr void Combine(size_t &amp;seed, const T &amp;v)</div><div class="ttdoc">既存のハッシュシードに値のハッシュを合成する。</div><div class="ttdef"><b>Definition:</b> Hash.h:17</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_string_base_html"><div class="ttname"><a href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">Amuse::Core::StringBase&lt; Char &gt;</a></div></div>
-<div class="ttc" id="astruct_amuse_1_1_core_1_1_point_html"><div class="ttname"><a href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html">Amuse::Core::Point</a></div><div class="ttdoc">ポイント</div><div class="ttdef"><b>Definition:</b> Point.h:11</div></div>
-<div class="ttc" id="astruct_amuse_1_1_core_1_1_range_html"><div class="ttname"><a href="../../d5/d54/struct_amuse_1_1_core_1_1_range.html">Amuse::Core::Range</a></div><div class="ttdoc">範囲</div><div class="ttdef"><b>Definition:</b> Range.h:11</div></div>
-<div class="ttc" id="astruct_amuse_1_1_core_1_1_range_html_a30e044c16beecdbd9100c05d38722f5b"><div class="ttname"><a href="../../d5/d54/struct_amuse_1_1_core_1_1_range.html#a30e044c16beecdbd9100c05d38722f5b">Amuse::Core::Range::max</a></div><div class="ttdeci">f32 max</div><div class="ttdoc">最大値</div><div class="ttdef"><b>Definition:</b> Range.h:96</div></div>
-<div class="ttc" id="astruct_amuse_1_1_core_1_1_range_html_a486748c027803b52fb1f7c35ec647606"><div class="ttname"><a href="../../d5/d54/struct_amuse_1_1_core_1_1_range.html#a486748c027803b52fb1f7c35ec647606">Amuse::Core::Range::min</a></div><div class="ttdeci">f32 min</div><div class="ttdoc">最小値</div><div class="ttdef"><b>Definition:</b> Range.h:95</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_equal_html"><div class="ttname"><a href="../../d9/d32/struct_amuse_1_1_r_h_i_1_1_sampler_desc_equal.html">Amuse::RHI::SamplerDescEqual</a></div><div class="ttdoc">サンプラ設定の等値比較</div><div class="ttdef"><b>Definition:</b> SamplerDesc.h:151</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_equal_html_a39d055ee968549ebbb6ebc526d8ec351"><div class="ttname"><a href="../../d9/d32/struct_amuse_1_1_r_h_i_1_1_sampler_desc_equal.html#a39d055ee968549ebbb6ebc526d8ec351">Amuse::RHI::SamplerDescEqual::operator()</a></div><div class="ttdeci">bool operator()(const SamplerDesc &amp;lhs, const SamplerDesc &amp;rhs) const noexcept</div><div class="ttdoc">演算子処理を行う</div><div class="ttdef"><b>Definition:</b> SamplerDesc.h:153</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_hasher_html"><div class="ttname"><a href="../../da/dda/struct_amuse_1_1_r_h_i_1_1_sampler_desc_hasher.html">Amuse::RHI::SamplerDescHasher</a></div><div class="ttdoc">サンプラ設定のハッシュ関数</div><div class="ttdef"><b>Definition:</b> SamplerDesc.h:130</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_hasher_html_a4d642513495df367abbc5a580ff8594f"><div class="ttname"><a href="../../da/dda/struct_amuse_1_1_r_h_i_1_1_sampler_desc_hasher.html#a4d642513495df367abbc5a580ff8594f">Amuse::RHI::SamplerDescHasher::operator()</a></div><div class="ttdeci">size_t operator()(const SamplerDesc &amp;desc) const noexcept</div><div class="ttdoc">演算子処理を行う</div><div class="ttdef"><b>Definition:</b> SamplerDesc.h:132</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_html"><div class="ttname"><a href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html">Amuse::RHI::SamplerDesc</a></div><div class="ttdoc">サンプラー定義</div><div class="ttdef"><b>Definition:</b> SamplerDesc.h:50</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_html_a020033a2309c5a950f5f649dab8908f1"><div class="ttname"><a href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a020033a2309c5a950f5f649dab8908f1">Amuse::RHI::SamplerDesc::mipLodRange</a></div><div class="ttdeci">Range mipLodRange</div><div class="ttdoc">ミップLOD範囲</div><div class="ttdef"><b>Definition:</b> SamplerDesc.h:61</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_html_a0de0c0d0c5cc6cd59251527d66e2b590"><div class="ttname"><a href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a0de0c0d0c5cc6cd59251527d66e2b590">Amuse::RHI::SamplerDesc::addressU</a></div><div class="ttdeci">TextureAddress addressU</div><div class="ttdoc">テクスチャ・アドレス・モード U</div><div class="ttdef"><b>Definition:</b> SamplerDesc.h:57</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_html_a181effaa3d5bf8a3ac99e1ed6b80d661"><div class="ttname"><a href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a181effaa3d5bf8a3ac99e1ed6b80d661">Amuse::RHI::SamplerDesc::SamplerDesc</a></div><div class="ttdeci">SamplerDesc(TextureFilter filter=TextureFilter::Linear, TextureAddress addressU=TextureAddress::Repeat, TextureAddress addressV=TextureAddress::Repeat, TextureAddress addressW=TextureAddress::Repeat, f32 mipLodBias=0, Anisotropy anisotropy=Anisotropy::None, f32 minLod=0, f32 maxLod=(std::numeric_limits&lt; f32 &gt;::max)(), MipFilter mipFilter=MipFilter::Linear, bool zFilter=false)</div><div class="ttdoc">コンストラクタ</div><div class="ttdef"><b>Definition:</b> SamplerDesc.h:66</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_html_a2b2772e3a571ffdd4e0db4abfb5fddae"><div class="ttname"><a href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a2b2772e3a571ffdd4e0db4abfb5fddae">Amuse::RHI::SamplerDesc::addressW</a></div><div class="ttdeci">TextureAddress addressW</div><div class="ttdoc">テクスチャ・アドレス・モード W</div><div class="ttdef"><b>Definition:</b> SamplerDesc.h:59</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_html_a59ba3a86051d2a19049bbd0f4bc8836f"><div class="ttname"><a href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a59ba3a86051d2a19049bbd0f4bc8836f">Amuse::RHI::SamplerDesc::mipLodBias</a></div><div class="ttdeci">f32 mipLodBias</div><div class="ttdoc">ミップLODバイアス</div><div class="ttdef"><b>Definition:</b> SamplerDesc.h:60</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_html_a5bc1ebfb3a6b6beff64fe399a1c79619"><div class="ttname"><a href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a5bc1ebfb3a6b6beff64fe399a1c79619">Amuse::RHI::SamplerDesc::filter</a></div><div class="ttdeci">TextureFilter filter</div><div class="ttdoc">拡縮時のフィルタ</div><div class="ttdef"><b>Definition:</b> SamplerDesc.h:53</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_html_a6af05cc634adfa8cc1d405a8cae8591a"><div class="ttname"><a href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a6af05cc634adfa8cc1d405a8cae8591a">Amuse::RHI::SamplerDesc::setAddress</a></div><div class="ttdeci">SamplerDesc &amp; setAddress(TextureAddress mode)</div><div class="ttdoc">テクスチャ・アドレス・モード設定</div><div class="ttdef"><b>Definition:</b> SamplerDesc.h:113</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_html_a6dfa002039ac5dc84c57e88ae7f670b1"><div class="ttname"><a href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a6dfa002039ac5dc84c57e88ae7f670b1">Amuse::RHI::SamplerDesc::anisotropy</a></div><div class="ttdeci">Anisotropy anisotropy</div><div class="ttdoc">異方性フィルタレベル</div><div class="ttdef"><b>Definition:</b> SamplerDesc.h:56</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_html_a8c783d4a7443cb9d316d3bee53ff34c8"><div class="ttname"><a href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a8c783d4a7443cb9d316d3bee53ff34c8">Amuse::RHI::SamplerDesc::zFilter</a></div><div class="ttdeci">bool zFilter</div><div class="ttdoc">3DテクスチャのZ軸フィルタを設定するか</div><div class="ttdef"><b>Definition:</b> SamplerDesc.h:55</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_html_a8e98841305b50e518c4b913d9909187f"><div class="ttname"><a href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a8e98841305b50e518c4b913d9909187f">Amuse::RHI::SamplerDesc::setZFilter</a></div><div class="ttdeci">SamplerDesc &amp; setZFilter(bool zFilter)</div><div class="ttdoc">Zフィルタ設定</div><div class="ttdef"><b>Definition:</b> SamplerDesc.h:93</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_html_a8fbb6ab2a0db6316b13a32c8ea666b75"><div class="ttname"><a href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a8fbb6ab2a0db6316b13a32c8ea666b75">Amuse::RHI::SamplerDesc::setFilter</a></div><div class="ttdeci">SamplerDesc &amp; setFilter(TextureFilter filter, MipFilter mipFilter=MipFilter::Linear)</div><div class="ttdoc">フィルタ設定</div><div class="ttdef"><b>Definition:</b> SamplerDesc.h:86</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_html_aa43189ee8a487806f70111823eab9ea3"><div class="ttname"><a href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#aa43189ee8a487806f70111823eab9ea3">Amuse::RHI::SamplerDesc::addressV</a></div><div class="ttdeci">TextureAddress addressV</div><div class="ttdoc">テクスチャ・アドレス・モード V</div><div class="ttdef"><b>Definition:</b> SamplerDesc.h:58</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_html_abd79428ab5052f3d6410f0ee2c76e20d"><div class="ttname"><a href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#abd79428ab5052f3d6410f0ee2c76e20d">Amuse::RHI::SamplerDesc::setMipLod</a></div><div class="ttdeci">SamplerDesc &amp; setMipLod(f32 bias, f32 min, f32 max)</div><div class="ttdoc">ミップLOD設定</div><div class="ttdef"><b>Definition:</b> SamplerDesc.h:118</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_html_abe36b46b9ed14f6faf7a724097e58457"><div class="ttname"><a href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#abe36b46b9ed14f6faf7a724097e58457">Amuse::RHI::SamplerDesc::setAddress</a></div><div class="ttdeci">SamplerDesc &amp; setAddress(TextureAddress u, TextureAddress v, TextureAddress w=TextureAddress::Repeat)</div><div class="ttdoc">テクスチャ・アドレス・モード設定</div><div class="ttdef"><b>Definition:</b> SamplerDesc.h:105</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_html_ad68174131bde9831e0e379dac6712f87"><div class="ttname"><a href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#ad68174131bde9831e0e379dac6712f87">Amuse::RHI::SamplerDesc::mipFilter</a></div><div class="ttdeci">MipFilter mipFilter</div><div class="ttdoc">ミップ時のフィルタ</div><div class="ttdef"><b>Definition:</b> SamplerDesc.h:54</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_html_afa6dc959d65d72906fdb944835b0192f"><div class="ttname"><a href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#afa6dc959d65d72906fdb944835b0192f">Amuse::RHI::SamplerDesc::setAnisotropy</a></div><div class="ttdeci">SamplerDesc &amp; setAnisotropy(Anisotropy anisotropy)</div><div class="ttdoc">異方性フィルタレベル設定</div><div class="ttdef"><b>Definition:</b> SamplerDesc.h:99</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_html_aff6ecdb4ed2c4d6df686c8d61f7062c7"><div class="ttname"><a href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#aff6ecdb4ed2c4d6df686c8d61f7062c7">Amuse::RHI::SamplerDesc::name</a></div><div class="ttdeci">String name</div><div class="ttdoc">名前</div><div class="ttdef"><b>Definition:</b> SamplerDesc.h:52</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_hash_html_a4e3f756e8ee02dd701b6b9e4e5950e4d"><div class="ttname"><a href="../../d5/d6f/class_amuse_1_1_core_1_1_hash.html#a4e3f756e8ee02dd701b6b9e4e5950e4d">Amuse::Core::Hash::Combine</a></div><div class="ttdeci">static constexpr void Combine(size_t &amp;seed, const T &amp;v)</div><div class="ttdoc">既存のハッシュシードに値のハッシュを合成する。</div><div class="ttdef"><b>Definition</b> Hash.h:17</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_point_html"><div class="ttname"><a href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html">Amuse::Core::Point</a></div><div class="ttdoc">ポイント</div><div class="ttdef"><b>Definition</b> Point.h:11</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_range_html"><div class="ttname"><a href="../../d5/d54/struct_amuse_1_1_core_1_1_range.html">Amuse::Core::Range</a></div><div class="ttdoc">範囲</div><div class="ttdef"><b>Definition</b> Range.h:11</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_range_html_a30e044c16beecdbd9100c05d38722f5b"><div class="ttname"><a href="../../d5/d54/struct_amuse_1_1_core_1_1_range.html#a30e044c16beecdbd9100c05d38722f5b">Amuse::Core::Range::max</a></div><div class="ttdeci">f32 max</div><div class="ttdoc">最大値</div><div class="ttdef"><b>Definition</b> Range.h:96</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_range_html_a486748c027803b52fb1f7c35ec647606"><div class="ttname"><a href="../../d5/d54/struct_amuse_1_1_core_1_1_range.html#a486748c027803b52fb1f7c35ec647606">Amuse::Core::Range::min</a></div><div class="ttdeci">f32 min</div><div class="ttdoc">最小値</div><div class="ttdef"><b>Definition</b> Range.h:95</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_equal_html"><div class="ttname"><a href="../../d9/d32/struct_amuse_1_1_r_h_i_1_1_sampler_desc_equal.html">Amuse::RHI::SamplerDescEqual</a></div><div class="ttdoc">サンプラ設定の等値比較</div><div class="ttdef"><b>Definition</b> SamplerDesc.h:151</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_equal_html_a39d055ee968549ebbb6ebc526d8ec351"><div class="ttname"><a href="../../d9/d32/struct_amuse_1_1_r_h_i_1_1_sampler_desc_equal.html#a39d055ee968549ebbb6ebc526d8ec351">Amuse::RHI::SamplerDescEqual::operator()</a></div><div class="ttdeci">bool operator()(const SamplerDesc &amp;lhs, const SamplerDesc &amp;rhs) const noexcept</div><div class="ttdoc">演算子処理を行う</div><div class="ttdef"><b>Definition</b> SamplerDesc.h:153</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_hasher_html"><div class="ttname"><a href="../../da/dda/struct_amuse_1_1_r_h_i_1_1_sampler_desc_hasher.html">Amuse::RHI::SamplerDescHasher</a></div><div class="ttdoc">サンプラ設定のハッシュ関数</div><div class="ttdef"><b>Definition</b> SamplerDesc.h:130</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_hasher_html_a4d642513495df367abbc5a580ff8594f"><div class="ttname"><a href="../../da/dda/struct_amuse_1_1_r_h_i_1_1_sampler_desc_hasher.html#a4d642513495df367abbc5a580ff8594f">Amuse::RHI::SamplerDescHasher::operator()</a></div><div class="ttdeci">size_t operator()(const SamplerDesc &amp;desc) const noexcept</div><div class="ttdoc">演算子処理を行う</div><div class="ttdef"><b>Definition</b> SamplerDesc.h:132</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_html"><div class="ttname"><a href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html">Amuse::RHI::SamplerDesc</a></div><div class="ttdoc">サンプラー定義</div><div class="ttdef"><b>Definition</b> SamplerDesc.h:50</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_html_a020033a2309c5a950f5f649dab8908f1"><div class="ttname"><a href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a020033a2309c5a950f5f649dab8908f1">Amuse::RHI::SamplerDesc::mipLodRange</a></div><div class="ttdeci">Range mipLodRange</div><div class="ttdoc">ミップLOD範囲</div><div class="ttdef"><b>Definition</b> SamplerDesc.h:61</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_html_a0de0c0d0c5cc6cd59251527d66e2b590"><div class="ttname"><a href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a0de0c0d0c5cc6cd59251527d66e2b590">Amuse::RHI::SamplerDesc::addressU</a></div><div class="ttdeci">TextureAddress addressU</div><div class="ttdoc">テクスチャ・アドレス・モード U</div><div class="ttdef"><b>Definition</b> SamplerDesc.h:57</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_html_a181effaa3d5bf8a3ac99e1ed6b80d661"><div class="ttname"><a href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a181effaa3d5bf8a3ac99e1ed6b80d661">Amuse::RHI::SamplerDesc::SamplerDesc</a></div><div class="ttdeci">SamplerDesc(TextureFilter filter=TextureFilter::Linear, TextureAddress addressU=TextureAddress::Repeat, TextureAddress addressV=TextureAddress::Repeat, TextureAddress addressW=TextureAddress::Repeat, f32 mipLodBias=0, Anisotropy anisotropy=Anisotropy::None, f32 minLod=0, f32 maxLod=(std::numeric_limits&lt; f32 &gt;::max)(), MipFilter mipFilter=MipFilter::Linear, bool zFilter=false)</div><div class="ttdoc">コンストラクタ</div><div class="ttdef"><b>Definition</b> SamplerDesc.h:66</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_html_a2b2772e3a571ffdd4e0db4abfb5fddae"><div class="ttname"><a href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a2b2772e3a571ffdd4e0db4abfb5fddae">Amuse::RHI::SamplerDesc::addressW</a></div><div class="ttdeci">TextureAddress addressW</div><div class="ttdoc">テクスチャ・アドレス・モード W</div><div class="ttdef"><b>Definition</b> SamplerDesc.h:59</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_html_a59ba3a86051d2a19049bbd0f4bc8836f"><div class="ttname"><a href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a59ba3a86051d2a19049bbd0f4bc8836f">Amuse::RHI::SamplerDesc::mipLodBias</a></div><div class="ttdeci">f32 mipLodBias</div><div class="ttdoc">ミップLODバイアス</div><div class="ttdef"><b>Definition</b> SamplerDesc.h:60</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_html_a5bc1ebfb3a6b6beff64fe399a1c79619"><div class="ttname"><a href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a5bc1ebfb3a6b6beff64fe399a1c79619">Amuse::RHI::SamplerDesc::filter</a></div><div class="ttdeci">TextureFilter filter</div><div class="ttdoc">拡縮時のフィルタ</div><div class="ttdef"><b>Definition</b> SamplerDesc.h:53</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_html_a6af05cc634adfa8cc1d405a8cae8591a"><div class="ttname"><a href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a6af05cc634adfa8cc1d405a8cae8591a">Amuse::RHI::SamplerDesc::setAddress</a></div><div class="ttdeci">SamplerDesc &amp; setAddress(TextureAddress mode)</div><div class="ttdoc">テクスチャ・アドレス・モード設定</div><div class="ttdef"><b>Definition</b> SamplerDesc.h:113</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_html_a6dfa002039ac5dc84c57e88ae7f670b1"><div class="ttname"><a href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a6dfa002039ac5dc84c57e88ae7f670b1">Amuse::RHI::SamplerDesc::anisotropy</a></div><div class="ttdeci">Anisotropy anisotropy</div><div class="ttdoc">異方性フィルタレベル</div><div class="ttdef"><b>Definition</b> SamplerDesc.h:56</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_html_a8c783d4a7443cb9d316d3bee53ff34c8"><div class="ttname"><a href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a8c783d4a7443cb9d316d3bee53ff34c8">Amuse::RHI::SamplerDesc::zFilter</a></div><div class="ttdeci">bool zFilter</div><div class="ttdoc">3DテクスチャのZ軸フィルタを設定するか</div><div class="ttdef"><b>Definition</b> SamplerDesc.h:55</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_html_a8e98841305b50e518c4b913d9909187f"><div class="ttname"><a href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a8e98841305b50e518c4b913d9909187f">Amuse::RHI::SamplerDesc::setZFilter</a></div><div class="ttdeci">SamplerDesc &amp; setZFilter(bool zFilter)</div><div class="ttdoc">Zフィルタ設定</div><div class="ttdef"><b>Definition</b> SamplerDesc.h:93</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_html_a8fbb6ab2a0db6316b13a32c8ea666b75"><div class="ttname"><a href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#a8fbb6ab2a0db6316b13a32c8ea666b75">Amuse::RHI::SamplerDesc::setFilter</a></div><div class="ttdeci">SamplerDesc &amp; setFilter(TextureFilter filter, MipFilter mipFilter=MipFilter::Linear)</div><div class="ttdoc">フィルタ設定</div><div class="ttdef"><b>Definition</b> SamplerDesc.h:86</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_html_aa43189ee8a487806f70111823eab9ea3"><div class="ttname"><a href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#aa43189ee8a487806f70111823eab9ea3">Amuse::RHI::SamplerDesc::addressV</a></div><div class="ttdeci">TextureAddress addressV</div><div class="ttdoc">テクスチャ・アドレス・モード V</div><div class="ttdef"><b>Definition</b> SamplerDesc.h:58</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_html_abd79428ab5052f3d6410f0ee2c76e20d"><div class="ttname"><a href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#abd79428ab5052f3d6410f0ee2c76e20d">Amuse::RHI::SamplerDesc::setMipLod</a></div><div class="ttdeci">SamplerDesc &amp; setMipLod(f32 bias, f32 min, f32 max)</div><div class="ttdoc">ミップLOD設定</div><div class="ttdef"><b>Definition</b> SamplerDesc.h:118</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_html_abe36b46b9ed14f6faf7a724097e58457"><div class="ttname"><a href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#abe36b46b9ed14f6faf7a724097e58457">Amuse::RHI::SamplerDesc::setAddress</a></div><div class="ttdeci">SamplerDesc &amp; setAddress(TextureAddress u, TextureAddress v, TextureAddress w=TextureAddress::Repeat)</div><div class="ttdoc">テクスチャ・アドレス・モード設定</div><div class="ttdef"><b>Definition</b> SamplerDesc.h:105</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_html_ad68174131bde9831e0e379dac6712f87"><div class="ttname"><a href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#ad68174131bde9831e0e379dac6712f87">Amuse::RHI::SamplerDesc::mipFilter</a></div><div class="ttdeci">MipFilter mipFilter</div><div class="ttdoc">ミップ時のフィルタ</div><div class="ttdef"><b>Definition</b> SamplerDesc.h:54</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_html_afa6dc959d65d72906fdb944835b0192f"><div class="ttname"><a href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#afa6dc959d65d72906fdb944835b0192f">Amuse::RHI::SamplerDesc::setAnisotropy</a></div><div class="ttdeci">SamplerDesc &amp; setAnisotropy(Anisotropy anisotropy)</div><div class="ttdoc">異方性フィルタレベル設定</div><div class="ttdef"><b>Definition</b> SamplerDesc.h:99</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_sampler_desc_html_aff6ecdb4ed2c4d6df686c8d61f7062c7"><div class="ttname"><a href="../../d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#aff6ecdb4ed2c4d6df686c8d61f7062c7">Amuse::RHI::SamplerDesc::name</a></div><div class="ttdeci">String name</div><div class="ttdoc">名前</div><div class="ttdef"><b>Definition</b> SamplerDesc.h:52</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_4f6666a8f2ab10bc970eb7559668f031.html">Runtime</a></li><li class="navelem"><a class="el" href="../../dir_ed0dd943941685375ac149ef30703e8f.html">RHI</a></li><li class="navelem"><a class="el" href="../../dir_80d0fa31a6e3bc7da61af1a1dfa2506f.html">Public</a></li><li class="navelem"><a class="el" href="../../dir_6330f9b43f61349a45429b5fd54fec05.html">Amuse</a></li><li class="navelem"><a class="el" href="../../dir_0830f243940360ab60fcd1783d0d86f9.html">RHI</a></li><li class="navelem"><a class="el" href="../../dir_5761839cb0a5a5a0945e24e2502418de.html">Types</a></li><li class="navelem"><b>SamplerDesc.h</b></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="navelem"><b>Runtime</b></li><li class="navelem"><b>RHI</b></li><li class="navelem"><b>Public</b></li><li class="navelem"><b>Amuse</b></li><li class="navelem"><b>RHI</b></li><li class="navelem"><b>Types</b></li><li class="navelem"><b>SamplerDesc.h</b></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

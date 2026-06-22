@@ -28,6 +28,6 @@ var searchData=
   ['is_5fsequence_3c_20set_3c_20t_2c_20allocator_20_3e_20_3e_25',['is_sequence&lt; Set&lt; T, ALLOCATOR &gt; &gt;',['../d1/dfc/struct_amuse_1_1_core_1_1is__sequence_3_01_set_3_01_t_00_01_a_l_l_o_c_a_t_o_r_01_4_01_4.html',1,'Amuse::Core']]],
   ['is_5fsequence_3c_20t_5bn_5d_3e_26',['is_sequence&lt; T[N]&gt;',['../d6/d8f/struct_amuse_1_1_core_1_1is__sequence_3_01_t_0f_n_0e_4.html',1,'Amuse::Core']]],
   ['is_5fsequence_3c_20vector_3c_20t_2c_20allocator_20_3e_20_3e_27',['is_sequence&lt; Vector&lt; T, ALLOCATOR &gt; &gt;',['../da/d1b/struct_amuse_1_1_core_1_1is__sequence_3_01_vector_3_01_t_00_01_a_l_l_o_c_a_t_o_r_01_4_01_4.html',1,'Amuse::Core']]],
-  ['iterator_28',['iterator',['../d0/dce/class_amuse_1_1_core_1_1_handle_forward_list_1_1iterator.html',1,'Amuse::Core::HandleForwardList&lt; T &gt;::iterator'],['../d4/d5c/class_amuse_1_1_core_1_1_handle_list_1_1iterator.html',1,'Amuse::Core::HandleList&lt; T &gt;::iterator']]],
-  ['iterator_29',['Iterator',['../d3/df8/class_amuse_1_1_core_1_1_string_split_view_1_1_iterator.html',1,'Amuse::Core::StringSplitView']]]
+  ['iterator_28',['Iterator',['../d3/df8/class_amuse_1_1_core_1_1_string_split_view_1_1_iterator.html',1,'Amuse::Core::StringSplitView']]],
+  ['iterator_29',['iterator',['../d0/dce/class_amuse_1_1_core_1_1_handle_forward_list_1_1iterator.html',1,'Amuse::Core::HandleForwardList&lt; T &gt;::iterator'],['../d4/d5c/class_amuse_1_1_core_1_1_handle_list_1_1iterator.html',1,'Amuse::Core::HandleList&lt; T &gt;::iterator']]]
 ];

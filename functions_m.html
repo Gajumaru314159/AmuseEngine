@@ -3,19 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AmuseEngine: クラスメンバ</title>
+<link rel="icon" href="logo.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="style.css" rel="stylesheet" type="text/css"/>
@@ -36,23 +42,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.6 -->
+<!-- 構築: Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
 });
-/* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -65,10 +93,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('functions_m.html',''); initResizable(); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('functions_m.html','',''); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -92,11 +119,12 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 </div>
 
 <div class="contents">
-<div class="textblock">詳解ありクラスメンバの一覧です。各クラスメンバ詳解へのリンクがあります。</div>
+<div class="textblock">詳解ありクラスメンバの一覧です。各クラスメンバ詳解へのリンクがあります。</div><br/>
+<div class="qindex"><a class="qindex" href="functions.html#index_a">A</a><div class="alphasepar"></div><a class="qindex" href="functions_b.html#index_b">B</a><div class="alphasepar"></div><a class="qindex" href="functions_c.html#index_c">C</a><div class="alphasepar"></div><a class="qindex" href="functions_d.html#index_d">D</a><div class="alphasepar"></div><a class="qindex" href="functions_e.html#index_e">E</a><div class="alphasepar"></div><a class="qindex" href="functions_f.html#index_f">F</a><div class="alphasepar"></div><a class="qindex" href="functions_g.html#index_g">G</a><div class="alphasepar"></div><a class="qindex" href="functions_h.html#index_h">H</a><div class="alphasepar"></div><a class="qindex" href="functions_i.html#index_i">I</a><div class="alphasepar"></div><a class="qindex" href="functions_j.html#index_j">J</a><div class="alphasepar"></div><a class="qindex" href="functions_k.html#index_k">K</a><div class="alphasepar"></div><a class="qindex" href="functions_l.html#index_l">L</a><div class="alphasepar"></div><a class="qindex" href="functions_m.html#index_m">M</a><div class="alphasepar"></div><a class="qindex" href="functions_n.html#index_n">N</a><div class="alphasepar"></div><a class="qindex" href="functions_o.html#index_o">O</a><div class="alphasepar"></div><a class="qindex" href="functions_p.html#index_p">P</a><div class="alphasepar"></div><a class="qindex" href="functions_q.html#index_q">Q</a><div class="alphasepar"></div><a class="qindex" href="functions_r.html#index_r">R</a><div class="alphasepar"></div><a class="qindex" href="functions_s.html#index_s">S</a><div class="alphasepar"></div><a class="qindex" href="functions_t.html#index_t">T</a><div class="alphasepar"></div><a class="qindex" href="functions_u.html#index_u">U</a><div class="alphasepar"></div><a class="qindex" href="functions_v.html#index_v">V</a><div class="alphasepar"></div><a class="qindex" href="functions_w.html#index_w">W</a><div class="alphasepar"></div><a class="qindex" href="functions_x.html#index_x">X</a><div class="alphasepar"></div><a class="qindex" href="functions_y.html#index_y">Y</a><div class="alphasepar"></div><a class="qindex" href="functions_z.html#index_z">Z</a><div class="alphasepar"></div><a class="qindex" href="functions__.html#index__">_</a><div class="alphasepar"></div><a class="qindex" href="functions_~.html#index_~">~</a></div>
 
-<h3><a id="index_m" name="index_m"></a>- m -</h3><ul>
+
+<h3 class="doxsection"><a id="index_m" name="index_m"></a>- m -</h3><ul>
 <li>m&#160;:&#160;<a class="el" href="dc/d67/struct_amuse_1_1_core_1_1_matrix.html#ab44cbb1581a72ca9ba0ef733f22e4f90">Amuse::Core::Matrix</a></li>
-<li>m_callable&#160;:&#160;<a class="el" href="d4/db1/class_amuse_1_1_core_1_1_fixed_func_3_01_r_07_args_8_8_8_08_00_01_buffer_size_01_4.html#aed7e50947e1e405773b9314a56ead126">Amuse::Core::FixedFunc&lt; R(Args...), BufferSize &gt;</a></li>
 <li>m_info&#160;:&#160;<a class="el" href="d0/d95/class_amuse_1_1_core_1_1_class_builder.html#a255aac1be25e450d6c05161d0849131f">Amuse::Core::ClassBuilder</a>, <a class="el" href="d8/ddd/class_amuse_1_1_core_1_1_enum_builder.html#afb3bbca32c75613ad8fe75211f3b06a0">Amuse::Core::EnumBuilder</a>, <a class="el" href="d7/d60/class_amuse_1_1_core_1_1_primitive_builder.html#a723fb0be96beeeb5fe50f6d1fec28868">Amuse::Core::PrimitiveBuilder</a></li>
 <li>macros&#160;:&#160;<a class="el" href="d9/d3f/struct_amuse_1_1_r_h_i_1_1_shader_compile_desc.html#a825aca9625db3227ca8edba4c3808ca9">Amuse::RHI::ShaderCompileDesc</a></li>
 <li>Magenta&#160;:&#160;<a class="el" href="d9/de4/struct_amuse_1_1_core_1_1_color.html#a48a7a428a1a97df6c8629a1898af2e81">Amuse::Core::Color</a>, <a class="el" href="d3/d4e/struct_amuse_1_1_core_1_1_h_s_v.html#aaec6f486879d2fd48afd2a1fcd8bc6fa">Amuse::Core::HSV</a>, <a class="el" href="dc/d7f/struct_amuse_1_1_core_1_1_int_color.html#a7fc338944416a49334fcbbf687dfe7a1">Amuse::Core::IntColor</a></li>
@@ -114,10 +142,8 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 <li>match()&#160;:&#160;<a class="el" href="d6/d8e/struct_amuse_1_1_core_1_1_constructor_info.html#a488a2257a591d9baf6454fa2751419e7">Amuse::Core::ConstructorInfo</a></li>
 <li>material()&#160;:&#160;<a class="el" href="d4/d75/class_amuse_1_1_core_1_1_o_b_j.html#adac17094f24e25106162a500307e94a4">Amuse::Core::OBJ</a></li>
 <li>Matrix()&#160;:&#160;<a class="el" href="dc/d67/struct_amuse_1_1_core_1_1_matrix.html#a199f35fdb38ebd939a5278dd928780cb">Amuse::Core::Matrix</a></li>
-<li>max&#160;:&#160;<a class="el" href="d0/d8d/struct_amuse_1_1_core_1_1_a_a_b_b.html#a15e93e4d4d800b90c1054671412e424b">Amuse::Core::AABB</a>, <a class="el" href="d4/d7d/struct_amuse_1_1_core_1_1_box.html#a7e82a0197f2c08aedb19b679c318bd34">Amuse::Core::Box</a></li>
-<li>Max()&#160;:&#160;<a class="el" href="d7/db0/struct_amuse_1_1_core_1_1_int_vec2.html#a8c3d0ca6f600597b707560a32fc6aa81">Amuse::Core::IntVec2</a>, <a class="el" href="df/db7/struct_amuse_1_1_core_1_1_int_vec3.html#ab5317ffae0b39b51bc492c2287f4cce7">Amuse::Core::IntVec3</a>, <a class="el" href="d8/dad/struct_amuse_1_1_core_1_1_int_vec4.html#a5ebbb3468d119a38a84c278ea4cbbb3e">Amuse::Core::IntVec4</a>, <a class="el" href="df/d2e/class_amuse_1_1_core_1_1_math.html#a6b31c69c65c4198c18c0f6287ea18df7">Amuse::Core::Math</a></li>
-<li>max&#160;:&#160;<a class="el" href="d5/d54/struct_amuse_1_1_core_1_1_range.html#a30e044c16beecdbd9100c05d38722f5b">Amuse::Core::Range</a></li>
-<li>Max()&#160;:&#160;<a class="el" href="db/df5/class_amuse_1_1_core_1_1_time_span.html#adbc13cf9cde4c8122f9411f193a2651c">Amuse::Core::TimeSpan</a>, <a class="el" href="df/d62/struct_amuse_1_1_core_1_1_vec2.html#acab38964f1a1bff768bd28555256879f">Amuse::Core::Vec2</a>, <a class="el" href="d7/d02/struct_amuse_1_1_core_1_1_vec3.html#a44c215cca2333ff150e1ab7503222201">Amuse::Core::Vec3</a>, <a class="el" href="da/da9/struct_amuse_1_1_core_1_1_vec4.html#a38da48d5c2fa88d5c34b820da2005dd4">Amuse::Core::Vec4</a></li>
+<li>Max()&#160;:&#160;<a class="el" href="d7/db0/struct_amuse_1_1_core_1_1_int_vec2.html#a8c3d0ca6f600597b707560a32fc6aa81">Amuse::Core::IntVec2</a>, <a class="el" href="df/db7/struct_amuse_1_1_core_1_1_int_vec3.html#ab5317ffae0b39b51bc492c2287f4cce7">Amuse::Core::IntVec3</a>, <a class="el" href="d8/dad/struct_amuse_1_1_core_1_1_int_vec4.html#a5ebbb3468d119a38a84c278ea4cbbb3e">Amuse::Core::IntVec4</a>, <a class="el" href="df/d2e/class_amuse_1_1_core_1_1_math.html#afd495e0084d1803719158d872e275d64">Amuse::Core::Math</a>, <a class="el" href="db/df5/class_amuse_1_1_core_1_1_time_span.html#adbc13cf9cde4c8122f9411f193a2651c">Amuse::Core::TimeSpan</a>, <a class="el" href="df/d62/struct_amuse_1_1_core_1_1_vec2.html#acab38964f1a1bff768bd28555256879f">Amuse::Core::Vec2</a>, <a class="el" href="d7/d02/struct_amuse_1_1_core_1_1_vec3.html#a44c215cca2333ff150e1ab7503222201">Amuse::Core::Vec3</a>, <a class="el" href="da/da9/struct_amuse_1_1_core_1_1_vec4.html#a38da48d5c2fa88d5c34b820da2005dd4">Amuse::Core::Vec4</a></li>
+<li>max&#160;:&#160;<a class="el" href="d0/d8d/struct_amuse_1_1_core_1_1_a_a_b_b.html#a15e93e4d4d800b90c1054671412e424b">Amuse::Core::AABB</a>, <a class="el" href="d4/d7d/struct_amuse_1_1_core_1_1_box.html#a7e82a0197f2c08aedb19b679c318bd34">Amuse::Core::Box</a>, <a class="el" href="d5/d54/struct_amuse_1_1_core_1_1_range.html#a30e044c16beecdbd9100c05d38722f5b">Amuse::Core::Range</a></li>
 <li>MAX_ENTRY_COUNT&#160;:&#160;<a class="el" href="da/d85/struct_amuse_1_1_core_1_1_stack_trace.html#a17f7a6e347ad64a8e01c1eb7721e83fe">Amuse::Core::StackTrace</a></li>
 <li>max_size()&#160;:&#160;<a class="el" href="d3/dc2/class_amuse_1_1_core_1_1_fixed_vector.html#a54b7630563976005c91c400aee263a5a">Amuse::Core::FixedVector&lt; T, N &gt;</a></li>
 <li>maxAbsComponent()&#160;:&#160;<a class="el" href="d7/db0/struct_amuse_1_1_core_1_1_int_vec2.html#aed5f871deff3067d087a859f37b776be">Amuse::Core::IntVec2</a>, <a class="el" href="df/db7/struct_amuse_1_1_core_1_1_int_vec3.html#a5e51e1aa33813d12f08a01a03aba596b">Amuse::Core::IntVec3</a>, <a class="el" href="d8/dad/struct_amuse_1_1_core_1_1_int_vec4.html#ae079c2f1b23bbf1fcd7e4d3af74ea22e">Amuse::Core::IntVec4</a>, <a class="el" href="df/d62/struct_amuse_1_1_core_1_1_vec2.html#adfe2517f1a7c4c63d96270829ca2066c">Amuse::Core::Vec2</a>, <a class="el" href="d7/d02/struct_amuse_1_1_core_1_1_vec3.html#a2fce38b9ce41e5845ac2b582f850d335">Amuse::Core::Vec3</a>, <a class="el" href="da/da9/struct_amuse_1_1_core_1_1_vec4.html#ae55c4d08e50388490ecf4ce8fa922222">Amuse::Core::Vec4</a></li>
@@ -143,10 +169,8 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 <li>MicroSeconds()&#160;:&#160;<a class="el" href="db/df5/class_amuse_1_1_core_1_1_time_span.html#a1095ab48f0d43bf4109617912d495328">Amuse::Core::TimeSpan</a></li>
 <li>milliSecond&#160;:&#160;<a class="el" href="df/def/struct_amuse_1_1_core_1_1_date_time.html#a1227b51cad43aede36061dfb589f8f89">Amuse::Core::DateTime</a></li>
 <li>MilliSeconds()&#160;:&#160;<a class="el" href="db/df5/class_amuse_1_1_core_1_1_time_span.html#afbaf55c1a236ab4542933a63b180cab0">Amuse::Core::TimeSpan</a></li>
-<li>min&#160;:&#160;<a class="el" href="d0/d8d/struct_amuse_1_1_core_1_1_a_a_b_b.html#afecaba0ff1c82a25c5ec321fb77cf657">Amuse::Core::AABB</a>, <a class="el" href="d4/d7d/struct_amuse_1_1_core_1_1_box.html#a6970d439d27325cb86c9972a923580d1">Amuse::Core::Box</a></li>
-<li>Min()&#160;:&#160;<a class="el" href="d7/db0/struct_amuse_1_1_core_1_1_int_vec2.html#a459b67852c48a12384013e4295ee771d">Amuse::Core::IntVec2</a>, <a class="el" href="df/db7/struct_amuse_1_1_core_1_1_int_vec3.html#a2fa4daa07cb9096c7f96e0ab054a9824">Amuse::Core::IntVec3</a>, <a class="el" href="d8/dad/struct_amuse_1_1_core_1_1_int_vec4.html#a329d3227e124d6e416aecc5482b59db4">Amuse::Core::IntVec4</a>, <a class="el" href="df/d2e/class_amuse_1_1_core_1_1_math.html#a37184974d8decc68ea14bb833c8d70be">Amuse::Core::Math</a></li>
-<li>min&#160;:&#160;<a class="el" href="d5/d54/struct_amuse_1_1_core_1_1_range.html#a486748c027803b52fb1f7c35ec647606">Amuse::Core::Range</a></li>
-<li>Min()&#160;:&#160;<a class="el" href="db/df5/class_amuse_1_1_core_1_1_time_span.html#a35a0f9da142a4c4cb5d3d08c9a0613d4">Amuse::Core::TimeSpan</a>, <a class="el" href="df/d62/struct_amuse_1_1_core_1_1_vec2.html#a1cec64152a9178f9b4bebb25ea22c1b9">Amuse::Core::Vec2</a>, <a class="el" href="d7/d02/struct_amuse_1_1_core_1_1_vec3.html#a5c607e69be5159220678bc0fed79c825">Amuse::Core::Vec3</a>, <a class="el" href="da/da9/struct_amuse_1_1_core_1_1_vec4.html#a68606af82bfacf56bfda72e1a9d8264f">Amuse::Core::Vec4</a></li>
+<li>Min()&#160;:&#160;<a class="el" href="d7/db0/struct_amuse_1_1_core_1_1_int_vec2.html#a459b67852c48a12384013e4295ee771d">Amuse::Core::IntVec2</a>, <a class="el" href="df/db7/struct_amuse_1_1_core_1_1_int_vec3.html#a2fa4daa07cb9096c7f96e0ab054a9824">Amuse::Core::IntVec3</a>, <a class="el" href="d8/dad/struct_amuse_1_1_core_1_1_int_vec4.html#a329d3227e124d6e416aecc5482b59db4">Amuse::Core::IntVec4</a>, <a class="el" href="df/d2e/class_amuse_1_1_core_1_1_math.html#a37184974d8decc68ea14bb833c8d70be">Amuse::Core::Math</a>, <a class="el" href="db/df5/class_amuse_1_1_core_1_1_time_span.html#a35a0f9da142a4c4cb5d3d08c9a0613d4">Amuse::Core::TimeSpan</a>, <a class="el" href="df/d62/struct_amuse_1_1_core_1_1_vec2.html#a1cec64152a9178f9b4bebb25ea22c1b9">Amuse::Core::Vec2</a>, <a class="el" href="d7/d02/struct_amuse_1_1_core_1_1_vec3.html#a5c607e69be5159220678bc0fed79c825">Amuse::Core::Vec3</a>, <a class="el" href="da/da9/struct_amuse_1_1_core_1_1_vec4.html#a68606af82bfacf56bfda72e1a9d8264f">Amuse::Core::Vec4</a></li>
+<li>min&#160;:&#160;<a class="el" href="d0/d8d/struct_amuse_1_1_core_1_1_a_a_b_b.html#afecaba0ff1c82a25c5ec321fb77cf657">Amuse::Core::AABB</a>, <a class="el" href="d4/d7d/struct_amuse_1_1_core_1_1_box.html#a6970d439d27325cb86c9972a923580d1">Amuse::Core::Box</a>, <a class="el" href="d5/d54/struct_amuse_1_1_core_1_1_range.html#a486748c027803b52fb1f7c35ec647606">Amuse::Core::Range</a></li>
 <li>minAbsComponent()&#160;:&#160;<a class="el" href="df/d62/struct_amuse_1_1_core_1_1_vec2.html#aad7cdbde760cbcc8e56662dd9c41f293">Amuse::Core::Vec2</a>, <a class="el" href="d7/d02/struct_amuse_1_1_core_1_1_vec3.html#a6793e384442d5be56123b78733df01f8">Amuse::Core::Vec3</a>, <a class="el" href="da/da9/struct_amuse_1_1_core_1_1_vec4.html#a448e90a38ba53b628bf705c75bb7a828">Amuse::Core::Vec4</a></li>
 <li>minComponent()&#160;:&#160;<a class="el" href="d9/de4/struct_amuse_1_1_core_1_1_color.html#a0756edb61f01fb204e1a031e6d355bd7">Amuse::Core::Color</a>, <a class="el" href="dc/d7f/struct_amuse_1_1_core_1_1_int_color.html#abf3bc8c8942586a6a72fca565c8ba278">Amuse::Core::IntColor</a>, <a class="el" href="d7/db0/struct_amuse_1_1_core_1_1_int_vec2.html#ae21b6711954f8c369d38c7e0e2bafd24">Amuse::Core::IntVec2</a>, <a class="el" href="df/db7/struct_amuse_1_1_core_1_1_int_vec3.html#a0f13492ae24b93b9d30b7cddef37fa03">Amuse::Core::IntVec3</a>, <a class="el" href="d8/dad/struct_amuse_1_1_core_1_1_int_vec4.html#a68d4c63fbfa321f2407ffc792fcfa902">Amuse::Core::IntVec4</a>, <a class="el" href="df/d62/struct_amuse_1_1_core_1_1_vec2.html#ab297e87b047b1a5b7bba22b2676d32f7">Amuse::Core::Vec2</a>, <a class="el" href="d7/d02/struct_amuse_1_1_core_1_1_vec3.html#ac75126567f0465cd4c0e9a3ece1c4fd1">Amuse::Core::Vec3</a>, <a class="el" href="da/da9/struct_amuse_1_1_core_1_1_vec4.html#a96b953025168d1edcc4e6b91cc3e2271">Amuse::Core::Vec4</a></li>
 <li>MinCompressionLevel&#160;:&#160;<a class="el" href="d4/dbe/class_amuse_1_1_core_1_1_g_deflate.html#add3881b53c3b3501cfc79a30b02ab7d6">Amuse::Core::GDeflate</a></li>
@@ -155,8 +179,8 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 <li>minimize()&#160;:&#160;<a class="el" href="dc/d63/class_amuse_1_1_platform_1_1_window.html#a65eade5006ad528bdba8123370313c64">Amuse::Platform::Window</a></li>
 <li>Minimum&#160;:&#160;<a class="el" href="d7/db0/struct_amuse_1_1_core_1_1_int_vec2.html#a03b2cfb0b4e722bed45aaa7336c1f7dd">Amuse::Core::IntVec2</a>, <a class="el" href="df/db7/struct_amuse_1_1_core_1_1_int_vec3.html#a1c594322278ebaf2221e437f00546849">Amuse::Core::IntVec3</a>, <a class="el" href="d8/dad/struct_amuse_1_1_core_1_1_int_vec4.html#a2d81e47b50fea9f90c5addef6a27279c">Amuse::Core::IntVec4</a>, <a class="el" href="df/d62/struct_amuse_1_1_core_1_1_vec2.html#a1365890177cb0ec6b898d4e2145d03e6">Amuse::Core::Vec2</a>, <a class="el" href="d7/d02/struct_amuse_1_1_core_1_1_vec3.html#ac9daf59dbb4140beecda3fdcf23355d0">Amuse::Core::Vec3</a>, <a class="el" href="da/da9/struct_amuse_1_1_core_1_1_vec4.html#afb403d337455b3c200ce9c7850e3fc6e">Amuse::Core::Vec4</a></li>
 <li>minute&#160;:&#160;<a class="el" href="df/def/struct_amuse_1_1_core_1_1_date_time.html#a50622859bc53e976b1bbffd0b9ac5af6">Amuse::Core::DateTime</a></li>
-<li>minutes()&#160;:&#160;<a class="el" href="db/df5/class_amuse_1_1_core_1_1_time_span.html#ab0f09cca3739b4bd97001d7e35ad8d59">Amuse::Core::TimeSpan</a></li>
 <li>Minutes()&#160;:&#160;<a class="el" href="db/df5/class_amuse_1_1_core_1_1_time_span.html#a488261a218466fd01698c1b8ff20115d">Amuse::Core::TimeSpan</a></li>
+<li>minutes()&#160;:&#160;<a class="el" href="db/df5/class_amuse_1_1_core_1_1_time_span.html#ab0f09cca3739b4bd97001d7e35ad8d59">Amuse::Core::TimeSpan</a></li>
 <li>minutesF()&#160;:&#160;<a class="el" href="db/df5/class_amuse_1_1_core_1_1_time_span.html#a349627d3be39c5732ac97119aade177a">Amuse::Core::TimeSpan</a></li>
 <li>mipFilter&#160;:&#160;<a class="el" href="d9/d3d/struct_amuse_1_1_r_h_i_1_1_sampler_desc.html#ad68174131bde9831e0e379dac6712f87">Amuse::RHI::SamplerDesc</a></li>
 <li>mipLevel&#160;:&#160;<a class="el" href="d2/db4/struct_amuse_1_1_r_h_i_1_1_texture_subresource.html#a27f815290234f632a12167caea2ae969">Amuse::RHI::TextureSubresource</a></li>
@@ -176,10 +200,11 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

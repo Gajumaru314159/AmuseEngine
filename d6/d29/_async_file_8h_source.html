@@ -3,19 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AmuseEngine: Runtime/Core/Public/Amuse/Core/File/AsyncFile.h ソースファイル</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../jquery.js"></script>
-<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
 <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
 <script type="text/javascript" src="../../navtreedata.js"></script>
 <script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="../../style.css" rel="stylesheet" type="text/css"/>
@@ -36,23 +42,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.6 -->
+<!-- 構築: Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('../../',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
 });
-/* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -65,10 +93,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('d6/d29/_async_file_8h_source.html','../../'); initResizable(); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d6/d29/_async_file_8h_source.html','../../',''); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -96,7 +123,7 @@ $(document).ready(function(){initNavTree('d6/d29/_async_file_8h_source.html','..
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//***********************************************************</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"></span><span class="comment">//***********************************************************</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//***********************************************************</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;Amuse/Core/CorePrivate.h&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;Amuse/Core/String/StringView.h&gt;</span></div>
@@ -105,29 +132,34 @@ $(document).ready(function(){initNavTree('d6/d29/_async_file_8h_source.html','..
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;Amuse/Core/Utility/Singleton.h&gt;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span>Amuse::Core {</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../d6/d37/class_amuse_1_1_core_1_1_async_file_system.html">   15</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d6/d37/class_amuse_1_1_core_1_1_async_file_system.html">AsyncFileSystem</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d4/d2f/class_amuse_1_1_core_1_1_singleton.html">Singleton</a>&lt;AsyncFileSystem&gt; {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span></div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../d6/d37/class_amuse_1_1_core_1_1_async_file_system.html">   15</a></span>    <span class="keyword">class </span>AsyncFileSystem : <span class="keyword">public</span> <a class="code hl_function" href="../../d4/d2f/class_amuse_1_1_core_1_1_singleton.html#a6de97f4f38b23a9b808eb69aa1e4b70a">Singleton</a>&lt;AsyncFileSystem&gt; {</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <a class="code hl_class" href="../../d6/d37/class_amuse_1_1_core_1_1_async_file_system.html">AsyncFileSystem</a>();</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <a class="code hl_class" href="../../d6/d37/class_amuse_1_1_core_1_1_async_file_system.html">~AsyncFileSystem</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        AsyncFileSystem();</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        ~AsyncFileSystem() <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="../../d6/d37/class_amuse_1_1_core_1_1_async_file_system.html#a4d919cf428424f2b0eb70b32f396f7a8">   21</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d6/d37/class_amuse_1_1_core_1_1_async_file_system.html#a4d919cf428424f2b0eb70b32f396f7a8">CanUseAsyncFile</a>();</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    };</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../d3/d43/class_amuse_1_1_core_1_1_async_file_handle.html">   25</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d3/d43/class_amuse_1_1_core_1_1_async_file_handle.html">AsyncFileHandle</a> {</div>
+</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span></div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../d3/d43/class_amuse_1_1_core_1_1_async_file_handle.html">   25</a></span>    <span class="keyword">class </span>AsyncFileHandle {</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <a class="code hl_class" href="../../d3/d43/class_amuse_1_1_core_1_1_async_file_handle.html">AsyncFileHandle</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="../../d3/d43/class_amuse_1_1_core_1_1_async_file_handle.html#a516cb186e29a88725c3842e95486fc09">   29</a></span>        <span class="keyword">explicit</span> <a class="code hl_function" href="../../d3/d43/class_amuse_1_1_core_1_1_async_file_handle.html#a516cb186e29a88725c3842e95486fc09">AsyncFileHandle</a>(<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> <a class="code hl_function" href="../../d3/d43/class_amuse_1_1_core_1_1_async_file_handle.html#a643de26a67474c6ada6d9ae1149b3f4c">path</a>);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <a class="code hl_class" href="../../d3/d43/class_amuse_1_1_core_1_1_async_file_handle.html">~AsyncFileHandle</a>();</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="../../d3/d43/class_amuse_1_1_core_1_1_async_file_handle.html#a643de26a67474c6ada6d9ae1149b3f4c">   32</a></span>        <span class="keyword">const</span> <a class="code hl_class" href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">String</a>&amp; <a class="code hl_function" href="../../d3/d43/class_amuse_1_1_core_1_1_async_file_handle.html#a643de26a67474c6ada6d9ae1149b3f4c">path</a>()<span class="keyword">const</span>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        AsyncFileHandle() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="../../d3/d43/class_amuse_1_1_core_1_1_async_file_handle.html#a516cb186e29a88725c3842e95486fc09">   29</a></span>        <span class="keyword">explicit</span> <a class="code hl_function" href="../../d3/d43/class_amuse_1_1_core_1_1_async_file_handle.html#a516cb186e29a88725c3842e95486fc09">AsyncFileHandle</a>(StringView <a class="code hl_function" href="../../d3/d43/class_amuse_1_1_core_1_1_async_file_handle.html#a643de26a67474c6ada6d9ae1149b3f4c">path</a>);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        ~AsyncFileHandle();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="../../d3/d43/class_amuse_1_1_core_1_1_async_file_handle.html#a643de26a67474c6ada6d9ae1149b3f4c">   32</a></span>        <span class="keyword">const</span> String&amp; <a class="code hl_function" href="../../d3/d43/class_amuse_1_1_core_1_1_async_file_handle.html#a643de26a67474c6ada6d9ae1149b3f4c">path</a>()<span class="keyword">const</span>;</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="../../d3/d43/class_amuse_1_1_core_1_1_async_file_handle.html#a73da755bfcb6239c1c8df70351e7b5a2">   34</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d3/d43/class_amuse_1_1_core_1_1_async_file_handle.html#a73da755bfcb6239c1c8df70351e7b5a2">empty</a>()<span class="keyword">const</span>;</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../d3/d43/class_amuse_1_1_core_1_1_async_file_handle.html#a96408a5f1f6e361fddf13ee5a3086b09">   36</a></span>        <span class="keywordtype">size_t</span> <a class="code hl_function" href="../../d3/d43/class_amuse_1_1_core_1_1_async_file_handle.html#a96408a5f1f6e361fddf13ee5a3086b09">size</a>()<span class="keyword">const</span>;</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="../../d8/da8/class_amuse_1_1_core_1_1_async_file_queue.html">AsyncFileQueue</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keyword">friend</span> <span class="keyword">class </span>AsyncFileQueue;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keyword">struct </span>Impl;</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        SPtr&lt;Impl&gt; m_impl;</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    };</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span></div>
+<div class="foldopen" id="foldopen00047" data-start="{" data-end="};">
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="../../dd/dae/struct_amuse_1_1_core_1_1_async_file_request.html">   47</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../dd/dae/struct_amuse_1_1_core_1_1_async_file_request.html">AsyncFileRequest</a> {</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="../../dd/dae/struct_amuse_1_1_core_1_1_async_file_request.html#a0c495c0a3c0b668ec1e217261cb54665">   49</a></span>        <a class="code hl_class" href="../../d3/d43/class_amuse_1_1_core_1_1_async_file_handle.html">AsyncFileHandle</a> <a class="code hl_variable" href="../../dd/dae/struct_amuse_1_1_core_1_1_async_file_request.html#a0c495c0a3c0b668ec1e217261cb54665">handle</a>;                 </div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="../../dd/dae/struct_amuse_1_1_core_1_1_async_file_request.html#a0ff1f2f5e5544a1b7de19073f0f885dd">   50</a></span>        <span class="keywordtype">size_t</span>          <a class="code hl_variable" href="../../dd/dae/struct_amuse_1_1_core_1_1_async_file_request.html#a0ff1f2f5e5544a1b7de19073f0f885dd">offset</a> = 0;             </div>
@@ -135,23 +167,27 @@ $(document).ready(function(){initNavTree('d6/d29/_async_file_8h_source.html','..
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="../../dd/dae/struct_amuse_1_1_core_1_1_async_file_request.html#a6c6d817eac9ee7ae2d37c65614f6bd90">   52</a></span>        <span class="keywordtype">size_t</span>          <a class="code hl_variable" href="../../dd/dae/struct_amuse_1_1_core_1_1_async_file_request.html#a6c6d817eac9ee7ae2d37c65614f6bd90">uncompressedSize</a> = 0;   </div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="../../dd/dae/struct_amuse_1_1_core_1_1_async_file_request.html#a570ba108a32b7dd22352d0d42e47d2f8">   53</a></span>        <span class="keywordtype">void</span>*           <a class="code hl_variable" href="../../dd/dae/struct_amuse_1_1_core_1_1_async_file_request.html#a570ba108a32b7dd22352d0d42e47d2f8">dest</a> = <span class="keyword">nullptr</span>;         </div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    };</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="../../d3/d41/class_amuse_1_1_core_1_1_async_file_event.html">   57</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d3/d41/class_amuse_1_1_core_1_1_async_file_event.html">AsyncFileEvent</a> {</div>
+</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span></div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="};">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="../../d3/d41/class_amuse_1_1_core_1_1_async_file_event.html">   57</a></span>    <span class="keyword">class </span>AsyncFileEvent {</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <a class="code hl_class" href="../../d3/d41/class_amuse_1_1_core_1_1_async_file_event.html">AsyncFileEvent</a>();</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <a class="code hl_class" href="../../d3/d41/class_amuse_1_1_core_1_1_async_file_event.html">~AsyncFileEvent</a>();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        AsyncFileEvent();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        ~AsyncFileEvent();</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="../../d3/d41/class_amuse_1_1_core_1_1_async_file_event.html#a1933a26a927799a21577db973699a80e">   62</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d3/d41/class_amuse_1_1_core_1_1_async_file_event.html#a1933a26a927799a21577db973699a80e">poll</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="../../d3/d41/class_amuse_1_1_core_1_1_async_file_event.html#a17f9a34235e0e03e0033e5a9e6da7270">   64</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/d41/class_amuse_1_1_core_1_1_async_file_event.html#a17f9a34235e0e03e0033e5a9e6da7270">wait</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="../../d8/da8/class_amuse_1_1_core_1_1_async_file_queue.html">AsyncFileQueue</a>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keyword">friend</span> <span class="keyword">class </span>AsyncFileQueue;</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keyword">struct </span>Impl;</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <a class="code hl_class" href="../../d5/d6f/class_amuse_1_1_core_1_1_memory_storage_base.html">MemoryStorageBase&lt;Impl, 32, 8&gt;</a> m_impl;</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    };</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="../../d8/da8/class_amuse_1_1_core_1_1_async_file_queue.html">   73</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d8/da8/class_amuse_1_1_core_1_1_async_file_queue.html">AsyncFileQueue</a> {</div>
+</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span></div>
+<div class="foldopen" id="foldopen00073" data-start="{" data-end="};">
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="../../d8/da8/class_amuse_1_1_core_1_1_async_file_queue.html">   73</a></span>    <span class="keyword">class </span>AsyncFileQueue {</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <a class="code hl_class" href="../../d8/da8/class_amuse_1_1_core_1_1_async_file_queue.html">AsyncFileQueue</a>();</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <a class="code hl_class" href="../../d8/da8/class_amuse_1_1_core_1_1_async_file_queue.html">~AsyncFileQueue</a>();</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        AsyncFileQueue();</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        ~AsyncFileQueue();</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="../../d8/da8/class_amuse_1_1_core_1_1_async_file_queue.html#a7eeb6ff501f5432b503b8761577b01e0">   78</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d8/da8/class_amuse_1_1_core_1_1_async_file_queue.html#a7eeb6ff501f5432b503b8761577b01e0">add</a>(<span class="keyword">const</span> <a class="code hl_struct" href="../../dd/dae/struct_amuse_1_1_core_1_1_async_file_request.html">AsyncFileRequest</a>&amp; desc);</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="../../d8/da8/class_amuse_1_1_core_1_1_async_file_queue.html#a644726faae93c77d4910ddc4191aca98">   80</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d8/da8/class_amuse_1_1_core_1_1_async_file_queue.html#a644726faae93c77d4910ddc4191aca98">add</a>(<a class="code hl_class" href="../../d3/d41/class_amuse_1_1_core_1_1_async_file_event.html">AsyncFileEvent</a>&amp;);</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="../../d8/da8/class_amuse_1_1_core_1_1_async_file_queue.html#ad6a6e3f9b0b33351eade30f6c39b215d">   82</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d8/da8/class_amuse_1_1_core_1_1_async_file_queue.html#ad6a6e3f9b0b33351eade30f6c39b215d">wait</a>();</div>
@@ -160,66 +196,66 @@ $(document).ready(function(){initNavTree('d6/d29/_async_file_8h_source.html','..
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keyword">struct </span>Impl;</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <a class="code hl_class" href="../../d5/d6f/class_amuse_1_1_core_1_1_memory_storage_base.html">MemoryStorageBase&lt;Impl, 128, 8&gt;</a> m_impl;</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    };</div>
+</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="../../d3/dd2/class_amuse_1_1_core_1_1_async_file.html">   93</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d3/dd2/class_amuse_1_1_core_1_1_async_file.html">AsyncFile</a> {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span></div>
+<div class="foldopen" id="foldopen00093" data-start="{" data-end="};">
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="../../d3/dd2/class_amuse_1_1_core_1_1_async_file.html">   93</a></span>    <span class="keyword">class </span><a class="code hl_function" href="../../d3/dd2/class_amuse_1_1_core_1_1_async_file.html#a2e34cf142af1e5c66cd44b9688163fe2">AsyncFile</a> {</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="../../d3/dd2/class_amuse_1_1_core_1_1_async_file.html#a2e34cf142af1e5c66cd44b9688163fe2">   96</a></span>        <a class="code hl_function" href="../../d3/dd2/class_amuse_1_1_core_1_1_async_file.html#a2e34cf142af1e5c66cd44b9688163fe2">AsyncFile</a>(<a class="code hl_class" href="../../d8/da8/class_amuse_1_1_core_1_1_async_file_queue.html">AsyncFileQueue</a>&amp; queue,<a class="code hl_class" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> path);</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="../../d3/dd2/class_amuse_1_1_core_1_1_async_file.html#a2e34cf142af1e5c66cd44b9688163fe2">   96</a></span>        <a class="code hl_function" href="../../d3/dd2/class_amuse_1_1_core_1_1_async_file.html#a2e34cf142af1e5c66cd44b9688163fe2">AsyncFile</a>(<a class="code hl_class" href="../../d8/da8/class_amuse_1_1_core_1_1_async_file_queue.html">AsyncFileQueue</a>&amp; queue,StringView path);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span></div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="../../d3/dd2/class_amuse_1_1_core_1_1_async_file.html#a9c22b36593567d2d9b6254dc233b401e">   99</a></span>        <a class="code hl_function" href="../../d3/dd2/class_amuse_1_1_core_1_1_async_file.html#a9c22b36593567d2d9b6254dc233b401e">~AsyncFile</a>();</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span></div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="../../d3/dd2/class_amuse_1_1_core_1_1_async_file.html#a27047683d83b96a1ceee7b5364d10cc5">  102</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d3/dd2/class_amuse_1_1_core_1_1_async_file.html#a27047683d83b96a1ceee7b5364d10cc5">poll</a>()<span class="keyword">const</span>;</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span></div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="../../d3/dd2/class_amuse_1_1_core_1_1_async_file.html#a7906b67f893b9cea7bd072fb36a04c65">  105</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/dd2/class_amuse_1_1_core_1_1_async_file.html#a7906b67f893b9cea7bd072fb36a04c65">wait</a>()<span class="keyword">const</span>;</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span></div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="../../d3/dd2/class_amuse_1_1_core_1_1_async_file.html#a9671a8b4615634b3b4cb40250a58e31b">  109</a></span>        <span class="keyword">const</span> <span class="keywordtype">void</span>* <a class="code hl_function" href="../../d3/dd2/class_amuse_1_1_core_1_1_async_file.html#a9671a8b4615634b3b4cb40250a58e31b">data</a>()<span class="keyword">const</span>;</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span></div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="../../d3/dd2/class_amuse_1_1_core_1_1_async_file.html#a73c1a775f0ad1fb8eee451d88dbd43c0">  113</a></span>        <span class="keywordtype">size_t</span> <a class="code hl_function" href="../../d3/dd2/class_amuse_1_1_core_1_1_async_file.html#a73c1a775f0ad1fb8eee451d88dbd43c0">size</a>()<span class="keyword">const</span>;</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="keyword">struct </span>Impl;</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <a class="code hl_class" href="../../d5/d6f/class_amuse_1_1_core_1_1_memory_storage_base.html">MemoryStorageBase&lt;Impl, 128,8&gt;</a> m_impl;</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    };</div>
+</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>}</div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_async_file_event_html"><div class="ttname"><a href="../../d3/d41/class_amuse_1_1_core_1_1_async_file_event.html">Amuse::Core::AsyncFileEvent</a></div><div class="ttdoc">非同期ファイル読み込みイベント</div><div class="ttdef"><b>Definition:</b> AsyncFile.h:57</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_async_file_event_html"><div class="ttname"><a href="../../d3/d41/class_amuse_1_1_core_1_1_async_file_event.html">Amuse::Core::AsyncFileEvent</a></div><div class="ttdoc">非同期ファイル読み込みイベント</div><div class="ttdef"><b>Definition</b> AsyncFile.h:57</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_async_file_event_html_a17f9a34235e0e03e0033e5a9e6da7270"><div class="ttname"><a href="../../d3/d41/class_amuse_1_1_core_1_1_async_file_event.html#a17f9a34235e0e03e0033e5a9e6da7270">Amuse::Core::AsyncFileEvent::wait</a></div><div class="ttdeci">void wait() const</div><div class="ttdoc">完了を待機する。</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_async_file_event_html_a1933a26a927799a21577db973699a80e"><div class="ttname"><a href="../../d3/d41/class_amuse_1_1_core_1_1_async_file_event.html#a1933a26a927799a21577db973699a80e">Amuse::Core::AsyncFileEvent::poll</a></div><div class="ttdeci">bool poll() const</div><div class="ttdoc">非同期読み込みが完了しているか確認する。</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_async_file_handle_html"><div class="ttname"><a href="../../d3/d43/class_amuse_1_1_core_1_1_async_file_handle.html">Amuse::Core::AsyncFileHandle</a></div><div class="ttdoc">非同期ファイル操作のハンドルを表す。</div><div class="ttdef"><b>Definition:</b> AsyncFile.h:25</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_async_file_handle_html"><div class="ttname"><a href="../../d3/d43/class_amuse_1_1_core_1_1_async_file_handle.html">Amuse::Core::AsyncFileHandle</a></div><div class="ttdoc">非同期ファイル操作のハンドルを表す。</div><div class="ttdef"><b>Definition</b> AsyncFile.h:25</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_async_file_handle_html_a516cb186e29a88725c3842e95486fc09"><div class="ttname"><a href="../../d3/d43/class_amuse_1_1_core_1_1_async_file_handle.html#a516cb186e29a88725c3842e95486fc09">Amuse::Core::AsyncFileHandle::AsyncFileHandle</a></div><div class="ttdeci">AsyncFileHandle(StringView path)</div><div class="ttdoc">AsyncFileHandle を初期化する。</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_async_file_handle_html_a643de26a67474c6ada6d9ae1149b3f4c"><div class="ttname"><a href="../../d3/d43/class_amuse_1_1_core_1_1_async_file_handle.html#a643de26a67474c6ada6d9ae1149b3f4c">Amuse::Core::AsyncFileHandle::path</a></div><div class="ttdeci">const String &amp; path() const</div><div class="ttdoc">対象ファイルのパスを取得する。</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_async_file_handle_html_a73da755bfcb6239c1c8df70351e7b5a2"><div class="ttname"><a href="../../d3/d43/class_amuse_1_1_core_1_1_async_file_handle.html#a73da755bfcb6239c1c8df70351e7b5a2">Amuse::Core::AsyncFileHandle::empty</a></div><div class="ttdeci">bool empty() const</div><div class="ttdoc">空かどうかを判定する。</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_async_file_handle_html_a96408a5f1f6e361fddf13ee5a3086b09"><div class="ttname"><a href="../../d3/d43/class_amuse_1_1_core_1_1_async_file_handle.html#a96408a5f1f6e361fddf13ee5a3086b09">Amuse::Core::AsyncFileHandle::size</a></div><div class="ttdeci">size_t size() const</div><div class="ttdoc">対象ファイルのバイトサイズを取得する。</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_async_file_html"><div class="ttname"><a href="../../d3/dd2/class_amuse_1_1_core_1_1_async_file.html">Amuse::Core::AsyncFile</a></div><div class="ttdoc">非同期ファイル</div><div class="ttdef"><b>Definition:</b> AsyncFile.h:93</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_async_file_html_a27047683d83b96a1ceee7b5364d10cc5"><div class="ttname"><a href="../../d3/dd2/class_amuse_1_1_core_1_1_async_file.html#a27047683d83b96a1ceee7b5364d10cc5">Amuse::Core::AsyncFile::poll</a></div><div class="ttdeci">bool poll() const</div><div class="ttdoc">非同期読み込みが完了しているか</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_async_file_html_a2e34cf142af1e5c66cd44b9688163fe2"><div class="ttname"><a href="../../d3/dd2/class_amuse_1_1_core_1_1_async_file.html#a2e34cf142af1e5c66cd44b9688163fe2">Amuse::Core::AsyncFile::AsyncFile</a></div><div class="ttdeci">AsyncFile(AsyncFileQueue &amp;queue, StringView path)</div><div class="ttdoc">コンストラクタ</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_async_file_html_a73c1a775f0ad1fb8eee451d88dbd43c0"><div class="ttname"><a href="../../d3/dd2/class_amuse_1_1_core_1_1_async_file.html#a73c1a775f0ad1fb8eee451d88dbd43c0">Amuse::Core::AsyncFile::size</a></div><div class="ttdeci">size_t size() const</div><div class="ttdoc">読み込み済みデータのサイズを取得する</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_async_file_html_a7906b67f893b9cea7bd072fb36a04c65"><div class="ttname"><a href="../../d3/dd2/class_amuse_1_1_core_1_1_async_file.html#a7906b67f893b9cea7bd072fb36a04c65">Amuse::Core::AsyncFile::wait</a></div><div class="ttdeci">void wait() const</div><div class="ttdoc">非同期読み込みの完了を待つ</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_async_file_html_a9671a8b4615634b3b4cb40250a58e31b"><div class="ttname"><a href="../../d3/dd2/class_amuse_1_1_core_1_1_async_file.html#a9671a8b4615634b3b4cb40250a58e31b">Amuse::Core::AsyncFile::data</a></div><div class="ttdeci">const void * data() const</div><div class="ttdoc">読み込み済みデータにアクセスする</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_async_file_html_a9c22b36593567d2d9b6254dc233b401e"><div class="ttname"><a href="../../d3/dd2/class_amuse_1_1_core_1_1_async_file.html#a9c22b36593567d2d9b6254dc233b401e">Amuse::Core::AsyncFile::~AsyncFile</a></div><div class="ttdeci">~AsyncFile()</div><div class="ttdoc">デストラクタ</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_async_file_queue_html"><div class="ttname"><a href="../../d8/da8/class_amuse_1_1_core_1_1_async_file_queue.html">Amuse::Core::AsyncFileQueue</a></div><div class="ttdoc">非同期ファイル読み込みキュー</div><div class="ttdef"><b>Definition:</b> AsyncFile.h:73</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_async_file_queue_html"><div class="ttname"><a href="../../d8/da8/class_amuse_1_1_core_1_1_async_file_queue.html">Amuse::Core::AsyncFileQueue</a></div><div class="ttdoc">非同期ファイル読み込みキュー</div><div class="ttdef"><b>Definition</b> AsyncFile.h:73</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_async_file_queue_html_a1e2acde6136a24ef14032626eb515694"><div class="ttname"><a href="../../d8/da8/class_amuse_1_1_core_1_1_async_file_queue.html#a1e2acde6136a24ef14032626eb515694">Amuse::Core::AsyncFileQueue::submit</a></div><div class="ttdeci">void submit()</div><div class="ttdoc">キューに積まれた処理を投入する。</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_async_file_queue_html_a644726faae93c77d4910ddc4191aca98"><div class="ttname"><a href="../../d8/da8/class_amuse_1_1_core_1_1_async_file_queue.html#a644726faae93c77d4910ddc4191aca98">Amuse::Core::AsyncFileQueue::add</a></div><div class="ttdeci">void add(AsyncFileEvent &amp;)</div><div class="ttdoc">完了待機用イベントをキューへ追加する。</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_async_file_queue_html_a7eeb6ff501f5432b503b8761577b01e0"><div class="ttname"><a href="../../d8/da8/class_amuse_1_1_core_1_1_async_file_queue.html#a7eeb6ff501f5432b503b8761577b01e0">Amuse::Core::AsyncFileQueue::add</a></div><div class="ttdeci">void add(const AsyncFileRequest &amp;desc)</div><div class="ttdoc">ファイル読み込みリクエストをキューへ追加する。</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_async_file_queue_html_ad6a6e3f9b0b33351eade30f6c39b215d"><div class="ttname"><a href="../../d8/da8/class_amuse_1_1_core_1_1_async_file_queue.html#ad6a6e3f9b0b33351eade30f6c39b215d">Amuse::Core::AsyncFileQueue::wait</a></div><div class="ttdeci">void wait()</div><div class="ttdoc">完了を待機する。</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_async_file_system_html"><div class="ttname"><a href="../../d6/d37/class_amuse_1_1_core_1_1_async_file_system.html">Amuse::Core::AsyncFileSystem</a></div><div class="ttdoc">非同期ファイルシステムを表す。</div><div class="ttdef"><b>Definition:</b> AsyncFile.h:15</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_async_file_system_html_a4d919cf428424f2b0eb70b32f396f7a8"><div class="ttname"><a href="../../d6/d37/class_amuse_1_1_core_1_1_async_file_system.html#a4d919cf428424f2b0eb70b32f396f7a8">Amuse::Core::AsyncFileSystem::CanUseAsyncFile</a></div><div class="ttdeci">static bool CanUseAsyncFile()</div><div class="ttdoc">現在の環境で非同期ファイル読み込みを利用できるか判定する。</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_memory_storage_base_html"><div class="ttname"><a href="../../d5/d6f/class_amuse_1_1_core_1_1_memory_storage_base.html">Amuse::Core::MemoryStorageBase</a></div><div class="ttdoc">メモリストレージ</div><div class="ttdef"><b>Definition:</b> MemoryStorage.h:20</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_singleton_html"><div class="ttname"><a href="../../d4/d2f/class_amuse_1_1_core_1_1_singleton.html">Amuse::Core::Singleton</a></div><div class="ttdoc">シングルトン・パターン</div><div class="ttdef"><b>Definition:</b> Singleton.h:14</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_string_base_html"><div class="ttname"><a href="../../da/d7a/class_amuse_1_1_core_1_1_string_base.html">Amuse::Core::StringBase&lt; Char &gt;</a></div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_string_view_base_html"><div class="ttname"><a href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">Amuse::Core::StringViewBase&lt; Char &gt;</a></div></div>
-<div class="ttc" id="astruct_amuse_1_1_core_1_1_async_file_request_html"><div class="ttname"><a href="../../dd/dae/struct_amuse_1_1_core_1_1_async_file_request.html">Amuse::Core::AsyncFileRequest</a></div><div class="ttdoc">非同期ファイル定義</div><div class="ttdef"><b>Definition:</b> AsyncFile.h:47</div></div>
-<div class="ttc" id="astruct_amuse_1_1_core_1_1_async_file_request_html_a0c495c0a3c0b668ec1e217261cb54665"><div class="ttname"><a href="../../dd/dae/struct_amuse_1_1_core_1_1_async_file_request.html#a0c495c0a3c0b668ec1e217261cb54665">Amuse::Core::AsyncFileRequest::handle</a></div><div class="ttdeci">AsyncFileHandle handle</div><div class="ttdoc">読み込み対象のファイルハンドル。</div><div class="ttdef"><b>Definition:</b> AsyncFile.h:49</div></div>
-<div class="ttc" id="astruct_amuse_1_1_core_1_1_async_file_request_html_a0ff1f2f5e5544a1b7de19073f0f885dd"><div class="ttname"><a href="../../dd/dae/struct_amuse_1_1_core_1_1_async_file_request.html#a0ff1f2f5e5544a1b7de19073f0f885dd">Amuse::Core::AsyncFileRequest::offset</a></div><div class="ttdeci">size_t offset</div><div class="ttdoc">ファイルハンドル</div><div class="ttdef"><b>Definition:</b> AsyncFile.h:50</div></div>
-<div class="ttc" id="astruct_amuse_1_1_core_1_1_async_file_request_html_a145913b89a38252e3417d6f8876cc9b0"><div class="ttname"><a href="../../dd/dae/struct_amuse_1_1_core_1_1_async_file_request.html#a145913b89a38252e3417d6f8876cc9b0">Amuse::Core::AsyncFileRequest::size</a></div><div class="ttdeci">size_t size</div><div class="ttdoc">読み込み開始位置</div><div class="ttdef"><b>Definition:</b> AsyncFile.h:51</div></div>
-<div class="ttc" id="astruct_amuse_1_1_core_1_1_async_file_request_html_a570ba108a32b7dd22352d0d42e47d2f8"><div class="ttname"><a href="../../dd/dae/struct_amuse_1_1_core_1_1_async_file_request.html#a570ba108a32b7dd22352d0d42e47d2f8">Amuse::Core::AsyncFileRequest::dest</a></div><div class="ttdeci">void * dest</div><div class="ttdoc">解凍後のサイズ</div><div class="ttdef"><b>Definition:</b> AsyncFile.h:53</div></div>
-<div class="ttc" id="astruct_amuse_1_1_core_1_1_async_file_request_html_a6c6d817eac9ee7ae2d37c65614f6bd90"><div class="ttname"><a href="../../dd/dae/struct_amuse_1_1_core_1_1_async_file_request.html#a6c6d817eac9ee7ae2d37c65614f6bd90">Amuse::Core::AsyncFileRequest::uncompressedSize</a></div><div class="ttdeci">size_t uncompressedSize</div><div class="ttdoc">読み込みサイズ</div><div class="ttdef"><b>Definition:</b> AsyncFile.h:52</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_memory_storage_base_html"><div class="ttname"><a href="../../d5/d6f/class_amuse_1_1_core_1_1_memory_storage_base.html">Amuse::Core::MemoryStorageBase</a></div><div class="ttdoc">メモリストレージ</div><div class="ttdef"><b>Definition</b> MemoryStorage.h:20</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_singleton_html_a6de97f4f38b23a9b808eb69aa1e4b70a"><div class="ttname"><a href="../../d4/d2f/class_amuse_1_1_core_1_1_singleton.html#a6de97f4f38b23a9b808eb69aa1e4b70a">Amuse::Core::Singleton&lt; AsyncFileSystem &gt;::Singleton</a></div><div class="ttdeci">Singleton()</div><div class="ttdef"><b>Definition</b> Singleton.h:38</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_async_file_request_html"><div class="ttname"><a href="../../dd/dae/struct_amuse_1_1_core_1_1_async_file_request.html">Amuse::Core::AsyncFileRequest</a></div><div class="ttdoc">非同期ファイル定義</div><div class="ttdef"><b>Definition</b> AsyncFile.h:47</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_async_file_request_html_a0c495c0a3c0b668ec1e217261cb54665"><div class="ttname"><a href="../../dd/dae/struct_amuse_1_1_core_1_1_async_file_request.html#a0c495c0a3c0b668ec1e217261cb54665">Amuse::Core::AsyncFileRequest::handle</a></div><div class="ttdeci">AsyncFileHandle handle</div><div class="ttdoc">読み込み対象のファイルハンドル。</div><div class="ttdef"><b>Definition</b> AsyncFile.h:49</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_async_file_request_html_a0ff1f2f5e5544a1b7de19073f0f885dd"><div class="ttname"><a href="../../dd/dae/struct_amuse_1_1_core_1_1_async_file_request.html#a0ff1f2f5e5544a1b7de19073f0f885dd">Amuse::Core::AsyncFileRequest::offset</a></div><div class="ttdeci">size_t offset</div><div class="ttdoc">ファイルハンドル</div><div class="ttdef"><b>Definition</b> AsyncFile.h:50</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_async_file_request_html_a145913b89a38252e3417d6f8876cc9b0"><div class="ttname"><a href="../../dd/dae/struct_amuse_1_1_core_1_1_async_file_request.html#a145913b89a38252e3417d6f8876cc9b0">Amuse::Core::AsyncFileRequest::size</a></div><div class="ttdeci">size_t size</div><div class="ttdoc">読み込み開始位置</div><div class="ttdef"><b>Definition</b> AsyncFile.h:51</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_async_file_request_html_a570ba108a32b7dd22352d0d42e47d2f8"><div class="ttname"><a href="../../dd/dae/struct_amuse_1_1_core_1_1_async_file_request.html#a570ba108a32b7dd22352d0d42e47d2f8">Amuse::Core::AsyncFileRequest::dest</a></div><div class="ttdeci">void * dest</div><div class="ttdoc">解凍後のサイズ</div><div class="ttdef"><b>Definition</b> AsyncFile.h:53</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_async_file_request_html_a6c6d817eac9ee7ae2d37c65614f6bd90"><div class="ttname"><a href="../../dd/dae/struct_amuse_1_1_core_1_1_async_file_request.html#a6c6d817eac9ee7ae2d37c65614f6bd90">Amuse::Core::AsyncFileRequest::uncompressedSize</a></div><div class="ttdeci">size_t uncompressedSize</div><div class="ttdoc">読み込みサイズ</div><div class="ttdef"><b>Definition</b> AsyncFile.h:52</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_4f6666a8f2ab10bc970eb7559668f031.html">Runtime</a></li><li class="navelem"><a class="el" href="../../dir_b05c51a7dc61612d752a1d5ca497c54f.html">Core</a></li><li class="navelem"><a class="el" href="../../dir_2704b46b7ef0c98b3ce7738c20dc746e.html">Public</a></li><li class="navelem"><a class="el" href="../../dir_02338155ec8ce976dea76e6f650abf75.html">Amuse</a></li><li class="navelem"><a class="el" href="../../dir_a813c3653225bc50968bea57534cde90.html">Core</a></li><li class="navelem"><a class="el" href="../../dir_2268414a1efdfe5478272d5f64b967b4.html">File</a></li><li class="navelem"><b>AsyncFile.h</b></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="navelem"><b>Runtime</b></li><li class="navelem"><b>Core</b></li><li class="navelem"><b>Public</b></li><li class="navelem"><b>Amuse</b></li><li class="navelem"><b>Core</b></li><li class="navelem"><b>File</b></li><li class="navelem"><b>AsyncFile.h</b></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

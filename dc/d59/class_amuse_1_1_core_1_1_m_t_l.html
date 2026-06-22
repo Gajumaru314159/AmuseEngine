@@ -3,19 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AmuseEngine: Amuse::Core::MTL クラス</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../jquery.js"></script>
-<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
 <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
 <script type="text/javascript" src="../../navtreedata.js"></script>
 <script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="../../style.css" rel="stylesheet" type="text/css"/>
@@ -36,23 +42,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.6 -->
+<!-- 構築: Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('../../',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
 });
-/* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -65,10 +93,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('dc/d59/class_amuse_1_1_core_1_1_m_t_l.html','../../'); initResizable(); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('dc/d59/class_amuse_1_1_core_1_1_m_t_l.html','../../','da/d8a/class_amuse_1_1_core_1_1_m_t_l-members'); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -100,77 +127,65 @@ $(document).ready(function(){initNavTree('dc/d59/class_amuse_1_1_core_1_1_m_t_l.
 <div class="contents">
 
 <p>Material Template Library Writer  
- <a href="../../dc/d59/class_amuse_1_1_core_1_1_m_t_l.html#details">[詳解]</a></p>
+ <a href="#details">[詳解]</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../dc/dd6/_o_b_j_8h_source.html">OBJ.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:a09ae575c7802c6b4deb67ee3d5147888"><td class="memItemLeft" align="right" valign="top"><a id="a09ae575c7802c6b4deb67ee3d5147888" name="a09ae575c7802c6b4deb67ee3d5147888"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>save</b> (<a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a>) const</td></tr>
+<tr class="memitem:a09ae575c7802c6b4deb67ee3d5147888" id="r_a09ae575c7802c6b4deb67ee3d5147888"><td class="memItemLeft"><a id="a09ae575c7802c6b4deb67ee3d5147888" name="a09ae575c7802c6b4deb67ee3d5147888"></a>
+bool&#160;</td><td class="memItemRight"><b>save</b> (StringView) const</td></tr>
 <tr class="memdesc:a09ae575c7802c6b4deb67ee3d5147888"><td class="mdescLeft">&#160;</td><td class="mdescRight">データを保存する。 <br /></td></tr>
-<tr class="separator:a09ae575c7802c6b4deb67ee3d5147888"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a700a21d19aa3022389512b520fd7db15"><td class="memItemLeft" align="right" valign="top"><a id="a700a21d19aa3022389512b520fd7db15" name="a700a21d19aa3022389512b520fd7db15"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>newmtl</b> (<a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> name)</td></tr>
+<tr class="memitem:a700a21d19aa3022389512b520fd7db15" id="r_a700a21d19aa3022389512b520fd7db15"><td class="memItemLeft"><a id="a700a21d19aa3022389512b520fd7db15" name="a700a21d19aa3022389512b520fd7db15"></a>
+void&#160;</td><td class="memItemRight"><b>newmtl</b> (StringView name)</td></tr>
 <tr class="memdesc:a700a21d19aa3022389512b520fd7db15"><td class="mdescLeft">&#160;</td><td class="mdescRight">新しいマテリアル定義を開始する。 <br /></td></tr>
-<tr class="separator:a700a21d19aa3022389512b520fd7db15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac524ad0bb799062f1aef72c36ea896d6"><td class="memItemLeft" align="right" valign="top"><a id="ac524ad0bb799062f1aef72c36ea896d6" name="ac524ad0bb799062f1aef72c36ea896d6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ambient</b> (<a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> color={0.2f, 0.2f, 0.2f}, <a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> tex=&quot;&quot;)</td></tr>
+<tr class="memitem:ac524ad0bb799062f1aef72c36ea896d6" id="r_ac524ad0bb799062f1aef72c36ea896d6"><td class="memItemLeft"><a id="ac524ad0bb799062f1aef72c36ea896d6" name="ac524ad0bb799062f1aef72c36ea896d6"></a>
+void&#160;</td><td class="memItemRight"><b>ambient</b> (<a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> color={0.2f, 0.2f, 0.2f}, StringView tex=&quot;&quot;)</td></tr>
 <tr class="memdesc:ac524ad0bb799062f1aef72c36ea896d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">環境光色と必要に応じてテクスチャを設定する。 <br /></td></tr>
-<tr class="separator:ac524ad0bb799062f1aef72c36ea896d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d792040bd19ad9078704d2cc7c33843"><td class="memItemLeft" align="right" valign="top"><a id="a4d792040bd19ad9078704d2cc7c33843" name="a4d792040bd19ad9078704d2cc7c33843"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>diffuse</b> (<a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> color={0.8f, 0.8f, 0.8f}, <a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> tex=&quot;&quot;)</td></tr>
+<tr class="memitem:a4d792040bd19ad9078704d2cc7c33843" id="r_a4d792040bd19ad9078704d2cc7c33843"><td class="memItemLeft"><a id="a4d792040bd19ad9078704d2cc7c33843" name="a4d792040bd19ad9078704d2cc7c33843"></a>
+void&#160;</td><td class="memItemRight"><b>diffuse</b> (<a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> color={0.8f, 0.8f, 0.8f}, StringView tex=&quot;&quot;)</td></tr>
 <tr class="memdesc:a4d792040bd19ad9078704d2cc7c33843"><td class="mdescLeft">&#160;</td><td class="mdescRight">拡散反射色と必要に応じてテクスチャを設定する。 <br /></td></tr>
-<tr class="separator:a4d792040bd19ad9078704d2cc7c33843"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c98a5832ba29142c958ba7a1aeaecf4"><td class="memItemLeft" align="right" valign="top"><a id="a3c98a5832ba29142c958ba7a1aeaecf4" name="a3c98a5832ba29142c958ba7a1aeaecf4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>specular</b> (<a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> color={1.0f, 1.0f, 1.0f}, <a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> tex=&quot;&quot;)</td></tr>
+<tr class="memitem:a3c98a5832ba29142c958ba7a1aeaecf4" id="r_a3c98a5832ba29142c958ba7a1aeaecf4"><td class="memItemLeft"><a id="a3c98a5832ba29142c958ba7a1aeaecf4" name="a3c98a5832ba29142c958ba7a1aeaecf4"></a>
+void&#160;</td><td class="memItemRight"><b>specular</b> (<a class="el" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> color={1.0f, 1.0f, 1.0f}, StringView tex=&quot;&quot;)</td></tr>
 <tr class="memdesc:a3c98a5832ba29142c958ba7a1aeaecf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">鏡面反射色と必要に応じてテクスチャを設定する。 <br /></td></tr>
-<tr class="separator:a3c98a5832ba29142c958ba7a1aeaecf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea12af69deae1fb4381ce6156387585f"><td class="memItemLeft" align="right" valign="top"><a id="aea12af69deae1fb4381ce6156387585f" name="aea12af69deae1fb4381ce6156387585f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>shininess</b> (f32 ns=0.0f, <a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> tex=&quot;&quot;)</td></tr>
+<tr class="memitem:aea12af69deae1fb4381ce6156387585f" id="r_aea12af69deae1fb4381ce6156387585f"><td class="memItemLeft"><a id="aea12af69deae1fb4381ce6156387585f" name="aea12af69deae1fb4381ce6156387585f"></a>
+void&#160;</td><td class="memItemRight"><b>shininess</b> (f32 ns=0.0f, StringView tex=&quot;&quot;)</td></tr>
 <tr class="memdesc:aea12af69deae1fb4381ce6156387585f"><td class="mdescLeft">&#160;</td><td class="mdescRight">鏡面反射の強さと必要に応じてテクスチャを設定する。 <br /></td></tr>
-<tr class="separator:aea12af69deae1fb4381ce6156387585f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e73005d7d6c9f39bdf90aa5509354ac"><td class="memItemLeft" align="right" valign="top"><a id="a3e73005d7d6c9f39bdf90aa5509354ac" name="a3e73005d7d6c9f39bdf90aa5509354ac"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>alpha</b> (f32 alpha, <a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> tex=&quot;&quot;)</td></tr>
+<tr class="memitem:a3e73005d7d6c9f39bdf90aa5509354ac" id="r_a3e73005d7d6c9f39bdf90aa5509354ac"><td class="memItemLeft"><a id="a3e73005d7d6c9f39bdf90aa5509354ac" name="a3e73005d7d6c9f39bdf90aa5509354ac"></a>
+void&#160;</td><td class="memItemRight"><b>alpha</b> (f32 alpha, StringView tex=&quot;&quot;)</td></tr>
 <tr class="memdesc:a3e73005d7d6c9f39bdf90aa5509354ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">透明度と必要に応じてテクスチャを設定する。 <br /></td></tr>
-<tr class="separator:a3e73005d7d6c9f39bdf90aa5509354ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac903bb2c653c93f34d55a8a5754260b8"><td class="memItemLeft" align="right" valign="top"><a id="ac903bb2c653c93f34d55a8a5754260b8" name="ac903bb2c653c93f34d55a8a5754260b8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>illumination</b> (s32)</td></tr>
+<tr class="memitem:ac903bb2c653c93f34d55a8a5754260b8" id="r_ac903bb2c653c93f34d55a8a5754260b8"><td class="memItemLeft"><a id="ac903bb2c653c93f34d55a8a5754260b8" name="ac903bb2c653c93f34d55a8a5754260b8"></a>
+void&#160;</td><td class="memItemRight"><b>illumination</b> (s32)</td></tr>
 <tr class="memdesc:ac903bb2c653c93f34d55a8a5754260b8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../dc/d59/class_amuse_1_1_core_1_1_m_t_l.html" title="Material Template Library Writer">MTL</a> の照明モデル番号を設定する。 <br /></td></tr>
-<tr class="separator:ac903bb2c653c93f34d55a8a5754260b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5815835ac821ff055dcea8bf8be57495"><td class="memItemLeft" align="right" valign="top"><a id="a5815835ac821ff055dcea8bf8be57495" name="a5815835ac821ff055dcea8bf8be57495"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ior</b> (f32)</td></tr>
+<tr class="memitem:a5815835ac821ff055dcea8bf8be57495" id="r_a5815835ac821ff055dcea8bf8be57495"><td class="memItemLeft"><a id="a5815835ac821ff055dcea8bf8be57495" name="a5815835ac821ff055dcea8bf8be57495"></a>
+void&#160;</td><td class="memItemRight"><b>ior</b> (f32)</td></tr>
 <tr class="memdesc:a5815835ac821ff055dcea8bf8be57495"><td class="mdescLeft">&#160;</td><td class="mdescRight">屈折率を設定する。 <br /></td></tr>
-<tr class="separator:a5815835ac821ff055dcea8bf8be57495"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9acb79d4cc1ecaea9d80b17cc3d8bf0"><td class="memItemLeft" align="right" valign="top"><a id="af9acb79d4cc1ecaea9d80b17cc3d8bf0" name="af9acb79d4cc1ecaea9d80b17cc3d8bf0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>normal</b> (<a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> tex)</td></tr>
+<tr class="memitem:af9acb79d4cc1ecaea9d80b17cc3d8bf0" id="r_af9acb79d4cc1ecaea9d80b17cc3d8bf0"><td class="memItemLeft"><a id="af9acb79d4cc1ecaea9d80b17cc3d8bf0" name="af9acb79d4cc1ecaea9d80b17cc3d8bf0"></a>
+void&#160;</td><td class="memItemRight"><b>normal</b> (StringView tex)</td></tr>
 <tr class="memdesc:af9acb79d4cc1ecaea9d80b17cc3d8bf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">法線マップのテクスチャを設定する。 <br /></td></tr>
-<tr class="separator:af9acb79d4cc1ecaea9d80b17cc3d8bf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9535a3d48031bcbdf43af927fdea9c98"><td class="memItemLeft" align="right" valign="top"><a id="a9535a3d48031bcbdf43af927fdea9c98" name="a9535a3d48031bcbdf43af927fdea9c98"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>bump</b> (<a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> tex)</td></tr>
+<tr class="memitem:a9535a3d48031bcbdf43af927fdea9c98" id="r_a9535a3d48031bcbdf43af927fdea9c98"><td class="memItemLeft"><a id="a9535a3d48031bcbdf43af927fdea9c98" name="a9535a3d48031bcbdf43af927fdea9c98"></a>
+void&#160;</td><td class="memItemRight"><b>bump</b> (StringView tex)</td></tr>
 <tr class="memdesc:a9535a3d48031bcbdf43af927fdea9c98"><td class="mdescLeft">&#160;</td><td class="mdescRight">バンプマップのテクスチャを設定する。 <br /></td></tr>
-<tr class="separator:a9535a3d48031bcbdf43af927fdea9c98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f22ef502c949ad3c6d57641bd9e06b4"><td class="memItemLeft" align="right" valign="top"><a id="a4f22ef502c949ad3c6d57641bd9e06b4" name="a4f22ef502c949ad3c6d57641bd9e06b4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>displacement</b> (<a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> tex)</td></tr>
+<tr class="memitem:a4f22ef502c949ad3c6d57641bd9e06b4" id="r_a4f22ef502c949ad3c6d57641bd9e06b4"><td class="memItemLeft"><a id="a4f22ef502c949ad3c6d57641bd9e06b4" name="a4f22ef502c949ad3c6d57641bd9e06b4"></a>
+void&#160;</td><td class="memItemRight"><b>displacement</b> (StringView tex)</td></tr>
 <tr class="memdesc:a4f22ef502c949ad3c6d57641bd9e06b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">ディスプレイスメントマップのテクスチャを設定する。 <br /></td></tr>
-<tr class="separator:a4f22ef502c949ad3c6d57641bd9e06b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2def7c120b5019654909b610d6d6b24d"><td class="memItemLeft" align="right" valign="top"><a id="a2def7c120b5019654909b610d6d6b24d" name="a2def7c120b5019654909b610d6d6b24d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>decal</b> (<a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> tex)</td></tr>
+<tr class="memitem:a2def7c120b5019654909b610d6d6b24d" id="r_a2def7c120b5019654909b610d6d6b24d"><td class="memItemLeft"><a id="a2def7c120b5019654909b610d6d6b24d" name="a2def7c120b5019654909b610d6d6b24d"></a>
+void&#160;</td><td class="memItemRight"><b>decal</b> (StringView tex)</td></tr>
 <tr class="memdesc:a2def7c120b5019654909b610d6d6b24d"><td class="mdescLeft">&#160;</td><td class="mdescRight">デカールマップのテクスチャを設定する。 <br /></td></tr>
-<tr class="separator:a2def7c120b5019654909b610d6d6b24d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
 <div class="textblock"><p>Material Template Library Writer </p>
 </div><hr/>このクラス詳解は次のファイルから抽出されました:<ul>
 <li>Runtime/Core/Public/Amuse/Core/File/<a class="el" href="../../dc/dd6/_o_b_j_8h_source.html">OBJ.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>Amuse</b></li><li class="navelem"><b>Core</b></li><li class="navelem"><a class="el" href="../../dc/d59/class_amuse_1_1_core_1_1_m_t_l.html">MTL</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><b>Core</b></li><li class="navelem"><a href="../../dc/d59/class_amuse_1_1_core_1_1_m_t_l.html">MTL</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

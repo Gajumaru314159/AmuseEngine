@@ -1,18 +1,18 @@
 var searchData=
 [
   ['c_0',['c',['../d0/da8/struct_amuse_1_1_core_1_1_i_p_address.html#afe33dd1d121c59dbf9f87f660e449c42',1,'Amuse::Core::IPAddress']]],
-  ['capacity_1',['capacity',['../d4/d6a/struct_amuse_1_1_core_1_1_t_l_s_f_block.html#aefa51a85aeb1c408f21bef702cfdc06a',1,'Amuse::Core::TLSFBlock::capacity()'],['../d2/dbf/struct_amuse_1_1_r_h_i_1_1_graphic_file_queue_desc.html#ae021c915ef53a5495dee4695c7b7ce60',1,'Amuse::RHI::GraphicFileQueueDesc::capacity()']]],
+  ['capacity_1',['capacity',['../d4/d6a/struct_amuse_1_1_core_1_1_t_l_s_f_block.html#aefa51a85aeb1c408f21bef702cfdc06a',1,'Amuse::Core::TLSFBlock::capacity'],['../d2/dbf/struct_amuse_1_1_r_h_i_1_1_graphic_file_queue_desc.html#ae021c915ef53a5495dee4695c7b7ce60',1,'Amuse::RHI::GraphicFileQueueDesc::capacity']]],
   ['category_2',['category',['../d3/dfd/struct_amuse_1_1_core_1_1_log.html#a00b22ec27659a9ab2576baf47bcbc051',1,'Amuse::Core::Log']]],
-  ['center_3',['center',['../d4/d7d/struct_amuse_1_1_core_1_1_box.html#a4b95d6342c1132241b164e8c64102048',1,'Amuse::Core::Box::center()'],['../db/d9f/struct_amuse_1_1_core_1_1_circle.html#a467d1a87e1899beef08cfb2a998210e4',1,'Amuse::Core::Circle::center()'],['../d0/de1/struct_amuse_1_1_core_1_1_sphere.html#a0144d6f1fa7f80895cd9f37e0c4e5c24',1,'Amuse::Core::Sphere::center()']]],
+  ['center_3',['center',['../d4/d7d/struct_amuse_1_1_core_1_1_box.html#a4b95d6342c1132241b164e8c64102048',1,'Amuse::Core::Box::center'],['../db/d9f/struct_amuse_1_1_core_1_1_circle.html#a467d1a87e1899beef08cfb2a998210e4',1,'Amuse::Core::Circle::center'],['../d0/de1/struct_amuse_1_1_core_1_1_sphere.html#a0144d6f1fa7f80895cd9f37e0c4e5c24',1,'Amuse::Core::Sphere::center']]],
   ['children_4',['children',['../d9/d2d/class_amuse_1_1_core_1_1_xml_node.html#a50f5bbee2fc4a16447dad7ee44c195a8',1,'Amuse::Core::XmlNode']]],
-  ['clear_5',['Clear',['../d9/de4/struct_amuse_1_1_core_1_1_color.html#aad7177a8a065fc6d4a1b1d120ea4f87a',1,'Amuse::Core::Color::Clear()'],['../d3/d4e/struct_amuse_1_1_core_1_1_h_s_v.html#acbf6063b0d63d751fe41952873552155',1,'Amuse::Core::HSV::Clear()'],['../dc/d7f/struct_amuse_1_1_core_1_1_int_color.html#a2ab0d6f0bbfd8d1c3fe9341ac8c73de3',1,'Amuse::Core::IntColor::Clear()']]],
+  ['clear_5',['Clear',['../d9/de4/struct_amuse_1_1_core_1_1_color.html#aad7177a8a065fc6d4a1b1d120ea4f87a',1,'Amuse::Core::Color::Clear'],['../d3/d4e/struct_amuse_1_1_core_1_1_h_s_v.html#acbf6063b0d63d751fe41952873552155',1,'Amuse::Core::HSV::Clear'],['../dc/d7f/struct_amuse_1_1_core_1_1_int_color.html#a2ab0d6f0bbfd8d1c3fe9341ac8c73de3',1,'Amuse::Core::IntColor::Clear']]],
   ['clear_6',['clear',['../d4/dc2/struct_amuse_1_1_r_h_i_1_1_render_texture_desc.html#a30820a89bf4d6b621106dc193c5d7bac',1,'Amuse::RHI::RenderTextureDesc']]],
   ['clientsize_7',['clientSize',['../d9/d54/struct_amuse_1_1_platform_1_1_window_desc.html#a4f7d7616077949aea31156e7ef6c4241',1,'Amuse::Platform::WindowDesc']]],
   ['closed_8',['closed',['../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a6e117b5341b4acee90bdbf07dfd8bca5',1,'Amuse::Core::Spline2D']]],
   ['code_9',['code',['../d9/d3f/struct_amuse_1_1_r_h_i_1_1_shader_compile_desc.html#a847bc9334e339a7c5aee1e0f9cf7aa8c',1,'Amuse::RHI::ShaderCompileDesc']]],
   ['color_10',['color',['../dc/d68/struct_amuse_1_1_r_h_i_1_1_clear_color.html#a6b6d7a942b5d2048028be6e5268c62ac',1,'Amuse::RHI::ClearColor']]],
   ['colorop_11',['colorOp',['../d2/df6/struct_amuse_1_1_r_h_i_1_1_blend_desc.html#ab2c85848d5fbec0c4ed51f373bed4f86',1,'Amuse::RHI::BlendDesc']]],
-  ['colors_12',['colors',['../de/d3f/struct_amuse_1_1_r_h_i_1_1_pipeline_state_desc.html#ad803885c02327778e73567e0daf96c3a',1,'Amuse::RHI::PipelineStateDesc::colors()'],['../d5/d8d/struct_amuse_1_1_r_h_i_1_1_begin_pass_param.html#aa7144f8dc30495f015c713030d9e3900',1,'Amuse::RHI::BeginPassParam::colors()']]],
+  ['colors_12',['colors',['../de/d3f/struct_amuse_1_1_r_h_i_1_1_pipeline_state_desc.html#ad803885c02327778e73567e0daf96c3a',1,'Amuse::RHI::PipelineStateDesc::colors'],['../d5/d8d/struct_amuse_1_1_r_h_i_1_1_begin_pass_param.html#aa7144f8dc30495f015c713030d9e3900',1,'Amuse::RHI::BeginPassParam::colors']]],
   ['commandcount_13',['commandCount',['../d9/d89/struct_amuse_1_1_r_h_i_1_1_indirect_command_param.html#ac64b0f00562a88b1b1d239c856827ae1',1,'Amuse::RHI::IndirectCommandParam']]],
   ['computequeue_14',['computeQueue',['../d7/dd6/struct_amuse_1_1_r_h_i_1_1_r_h_i_features.html#a76676faaf2ee55a24d4e4aa7befa1c26',1,'Amuse::RHI::RHIFeatures']]],
   ['conservativerasterization_15',['conservativeRasterization',['../d7/dd6/struct_amuse_1_1_r_h_i_1_1_r_h_i_features.html#a204a282be91afd83b1f4e768b1a59b9d',1,'Amuse::RHI::RHIFeatures']]],
@@ -24,5 +24,5 @@ var searchData=
   ['cs_21',['cs',['../d2/dbc/struct_amuse_1_1_r_h_i_1_1_compute_pipeline_state_desc.html#a4124ad8f3a4e50e86b7406298e81f89e',1,'Amuse::RHI::ComputePipelineStateDesc']]],
   ['cullmode_22',['cullMode',['../d7/dac/struct_amuse_1_1_r_h_i_1_1_rasterizer_desc.html#a7d568f17a9ae7cdb9b5f36fc9a7df4f2',1,'Amuse::RHI::RasterizerDesc']]],
   ['currentmode_23',['currentMode',['../df/db9/struct_amuse_1_1_r_h_i_1_1_video_output.html#ac0de82a4e976bbf4e998c277ab9418c8',1,'Amuse::RHI::VideoOutput']]],
-  ['cyan_24',['Cyan',['../d9/de4/struct_amuse_1_1_core_1_1_color.html#a51188a81242ba2364e868f4120f1445f',1,'Amuse::Core::Color::Cyan()'],['../d3/d4e/struct_amuse_1_1_core_1_1_h_s_v.html#a31d03c796b72366049f31b429512449b',1,'Amuse::Core::HSV::Cyan()'],['../dc/d7f/struct_amuse_1_1_core_1_1_int_color.html#a1d7571df942ade4462a677837e5e3a67',1,'Amuse::Core::IntColor::Cyan()']]]
+  ['cyan_24',['Cyan',['../d9/de4/struct_amuse_1_1_core_1_1_color.html#a51188a81242ba2364e868f4120f1445f',1,'Amuse::Core::Color::Cyan'],['../d3/d4e/struct_amuse_1_1_core_1_1_h_s_v.html#a31d03c796b72366049f31b429512449b',1,'Amuse::Core::HSV::Cyan'],['../dc/d7f/struct_amuse_1_1_core_1_1_int_color.html#a1d7571df942ade4462a677837e5e3a67',1,'Amuse::Core::IntColor::Cyan']]]
 ];

@@ -3,19 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AmuseEngine: Runtime/RHI/Public/Amuse/RHI/Types/RenderPassDesc.h ソースファイル</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../jquery.js"></script>
-<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
 <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
 <script type="text/javascript" src="../../navtreedata.js"></script>
 <script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="../../style.css" rel="stylesheet" type="text/css"/>
@@ -36,23 +42,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.6 -->
+<!-- 構築: Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('../../',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
 });
-/* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -65,10 +93,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('d4/db7/_render_pass_desc_8h_source.html','../../'); initResizable(); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d4/db7/_render_pass_desc_8h_source.html','../../',''); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -96,7 +123,7 @@ $(document).ready(function(){initNavTree('d4/db7/_render_pass_desc_8h_source.htm
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//***********************************************************</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"></span><span class="comment">//***********************************************************</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//***********************************************************</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;Amuse/Core/Core.h&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;Amuse/RHI/Forward.h&gt;</span></div>
@@ -136,51 +163,58 @@ $(document).ready(function(){initNavTree('d4/db7/_render_pass_desc_8h_source.htm
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        Preserve,               <span class="comment">// 以降のコンテンツが依存している</span></div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        NoAccess,               <span class="comment">// 読み取りも書き込みもしない。 TODO Vulkanとの対応関係を確認</span></div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    };</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
+<div class="foldopen" id="foldopen00046" data-start="{" data-end="};">
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="../../d7/dd4/struct_amuse_1_1_r_h_i_1_1_render_pass_color_target_desc.html">   46</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../d7/dd4/struct_amuse_1_1_r_h_i_1_1_render_pass_color_target_desc.html">RenderPassColorTargetDesc</a> {</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="../../d7/dd4/struct_amuse_1_1_r_h_i_1_1_render_pass_color_target_desc.html#aa52ad5dae2b10cc38b7df0f151a97f05">   47</a></span>        <a class="code hl_class" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref&lt;RenderTexture&gt;</a> <a class="code hl_variable" href="../../d7/dd4/struct_amuse_1_1_r_h_i_1_1_render_pass_color_target_desc.html#aa52ad5dae2b10cc38b7df0f151a97f05">texture</a>; </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="../../d7/dd4/struct_amuse_1_1_r_h_i_1_1_render_pass_color_target_desc.html#a5be2797896c6adc943c7f249cb0c9dfb">   48</a></span>        RenderPassBeforeAccessType <a class="code hl_variable" href="../../d7/dd4/struct_amuse_1_1_r_h_i_1_1_render_pass_color_target_desc.html#a5be2797896c6adc943c7f249cb0c9dfb">beforeAccess</a>; </div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="../../d7/dd4/struct_amuse_1_1_r_h_i_1_1_render_pass_color_target_desc.html#abcfea7aaecbf07d99925043f3a9d53fd">   49</a></span>        RenderPassAfterAccessType <a class="code hl_variable" href="../../d7/dd4/struct_amuse_1_1_r_h_i_1_1_render_pass_color_target_desc.html#abcfea7aaecbf07d99925043f3a9d53fd">afterAccess</a>; </div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    };</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span></div>
+<div class="foldopen" id="foldopen00053" data-start="{" data-end="};">
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="../../d7/d4d/struct_amuse_1_1_r_h_i_1_1_render_pass_target_desc.html">   53</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../d7/d4d/struct_amuse_1_1_r_h_i_1_1_render_pass_target_desc.html">RenderPassTargetDesc</a> {</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="../../d7/d4d/struct_amuse_1_1_r_h_i_1_1_render_pass_target_desc.html#a06ca2bfe7cc08816fc5aaa3791809fca">   54</a></span>        <a class="code hl_class" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref&lt;RenderTexture&gt;</a> <a class="code hl_variable" href="../../d7/d4d/struct_amuse_1_1_r_h_i_1_1_render_pass_target_desc.html#a06ca2bfe7cc08816fc5aaa3791809fca">texture</a>; </div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="../../d7/d4d/struct_amuse_1_1_r_h_i_1_1_render_pass_target_desc.html#ae3ea3734400ad4a5656d528e78e37bd3">   55</a></span>        RenderPassBeforeAccessType <a class="code hl_variable" href="../../d7/d4d/struct_amuse_1_1_r_h_i_1_1_render_pass_target_desc.html#ae3ea3734400ad4a5656d528e78e37bd3">beforeAccess</a>; </div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="../../d7/d4d/struct_amuse_1_1_r_h_i_1_1_render_pass_target_desc.html#a867839e0b907baff0ddeaa2d9bddeb74">   56</a></span>        RenderPassAfterAccessType <a class="code hl_variable" href="../../d7/d4d/struct_amuse_1_1_r_h_i_1_1_render_pass_target_desc.html#a867839e0b907baff0ddeaa2d9bddeb74">afterAccess</a>; </div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    };</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">using </span><a class="code hl_class" href="../../d3/dc2/class_amuse_1_1_core_1_1_fixed_vector.html">RenderPassTargetDescArray</a> = <a class="code hl_class" href="../../d3/dc2/class_amuse_1_1_core_1_1_fixed_vector.html">FixedVector&lt;RenderPassTargetDesc, RENDER_TARGET_MAX&gt;</a>;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">using </span>RenderPassTargetDescArray = <a class="code hl_class" href="../../d3/dc2/class_amuse_1_1_core_1_1_fixed_vector.html">FixedVector&lt;RenderPassTargetDesc, RENDER_TARGET_MAX&gt;</a>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span></div>
+<div class="foldopen" id="foldopen00061" data-start="{" data-end="};">
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="../../d5/d8d/struct_amuse_1_1_r_h_i_1_1_begin_pass_param.html">   61</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../d5/d8d/struct_amuse_1_1_r_h_i_1_1_begin_pass_param.html">BeginPassParam</a> {</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="../../d5/d8d/struct_amuse_1_1_r_h_i_1_1_begin_pass_param.html#aa7144f8dc30495f015c713030d9e3900">   62</a></span>        <a class="code hl_class" href="../../d3/dc2/class_amuse_1_1_core_1_1_fixed_vector.html">RenderPassTargetDescArray</a> <a class="code hl_variable" href="../../d5/d8d/struct_amuse_1_1_r_h_i_1_1_begin_pass_param.html#aa7144f8dc30495f015c713030d9e3900">colors</a>; </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="../../d5/d8d/struct_amuse_1_1_r_h_i_1_1_begin_pass_param.html#aa7144f8dc30495f015c713030d9e3900">   62</a></span>        RenderPassTargetDescArray <a class="code hl_variable" href="../../d5/d8d/struct_amuse_1_1_r_h_i_1_1_begin_pass_param.html#aa7144f8dc30495f015c713030d9e3900">colors</a>; </div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="../../d5/d8d/struct_amuse_1_1_r_h_i_1_1_begin_pass_param.html#a59172272ba1dbe049461bddb4ff27b17">   63</a></span>        <a class="code hl_struct" href="../../d7/d4d/struct_amuse_1_1_r_h_i_1_1_render_pass_target_desc.html">RenderPassTargetDesc</a> <a class="code hl_variable" href="../../d5/d8d/struct_amuse_1_1_r_h_i_1_1_begin_pass_param.html#a59172272ba1dbe049461bddb4ff27b17">depth</a>; </div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="../../d5/d8d/struct_amuse_1_1_r_h_i_1_1_begin_pass_param.html#a1a1394e74d9980cc0cd085dcbb45965d">   64</a></span>        <a class="code hl_struct" href="../../d7/d4d/struct_amuse_1_1_r_h_i_1_1_render_pass_target_desc.html">RenderPassTargetDesc</a> <a class="code hl_variable" href="../../d5/d8d/struct_amuse_1_1_r_h_i_1_1_begin_pass_param.html#a1a1394e74d9980cc0cd085dcbb45965d">stencil</a>; </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="../../d5/d8d/struct_amuse_1_1_r_h_i_1_1_begin_pass_param.html#a8cd2e11df0eab3e00f0dbeff8473ef04">   65</a></span>        <a class="code hl_class" href="../../d8/d40/class_amuse_1_1_core_1_1_bit_flags.html">RenderPassFlags</a> <a class="code hl_variable" href="../../d5/d8d/struct_amuse_1_1_r_h_i_1_1_begin_pass_param.html#a8cd2e11df0eab3e00f0dbeff8473ef04">flags</a>; </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="../../d5/d8d/struct_amuse_1_1_r_h_i_1_1_begin_pass_param.html#a8cd2e11df0eab3e00f0dbeff8473ef04">   65</a></span>        RenderPassFlags <a class="code hl_variable" href="../../d5/d8d/struct_amuse_1_1_r_h_i_1_1_begin_pass_param.html#a8cd2e11df0eab3e00f0dbeff8473ef04">flags</a>; </div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    };</div>
+</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>}</div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_bit_flags_html"><div class="ttname"><a href="../../d8/d40/class_amuse_1_1_core_1_1_bit_flags.html">Amuse::Core::BitFlags</a></div><div class="ttdoc">enum値をビットフラグとして扱うためのラップクラス</div><div class="ttdef"><b>Definition:</b> BitFlags.h:16</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_fixed_vector_html"><div class="ttname"><a href="../../d3/dc2/class_amuse_1_1_core_1_1_fixed_vector.html">Amuse::Core::FixedVector&lt; RenderPassTargetDesc, RENDER_TARGET_MAX &gt;</a></div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_ref_html"><div class="ttname"><a href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Amuse::Core::Ref</a></div><div class="ttdoc">RefObject 用スマートポインタ</div><div class="ttdef"><b>Definition:</b> Ref.h:64</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_begin_pass_param_html"><div class="ttname"><a href="../../d5/d8d/struct_amuse_1_1_r_h_i_1_1_begin_pass_param.html">Amuse::RHI::BeginPassParam</a></div><div class="ttdoc">レンダーパス定義</div><div class="ttdef"><b>Definition:</b> RenderPassDesc.h:61</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_begin_pass_param_html_a1a1394e74d9980cc0cd085dcbb45965d"><div class="ttname"><a href="../../d5/d8d/struct_amuse_1_1_r_h_i_1_1_begin_pass_param.html#a1a1394e74d9980cc0cd085dcbb45965d">Amuse::RHI::BeginPassParam::stencil</a></div><div class="ttdeci">RenderPassTargetDesc stencil</div><div class="ttdoc">ステンシル値</div><div class="ttdef"><b>Definition:</b> RenderPassDesc.h:64</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_begin_pass_param_html_a59172272ba1dbe049461bddb4ff27b17"><div class="ttname"><a href="../../d5/d8d/struct_amuse_1_1_r_h_i_1_1_begin_pass_param.html#a59172272ba1dbe049461bddb4ff27b17">Amuse::RHI::BeginPassParam::depth</a></div><div class="ttdeci">RenderPassTargetDesc depth</div><div class="ttdoc">深度値</div><div class="ttdef"><b>Definition:</b> RenderPassDesc.h:63</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_begin_pass_param_html_a8cd2e11df0eab3e00f0dbeff8473ef04"><div class="ttname"><a href="../../d5/d8d/struct_amuse_1_1_r_h_i_1_1_begin_pass_param.html#a8cd2e11df0eab3e00f0dbeff8473ef04">Amuse::RHI::BeginPassParam::flags</a></div><div class="ttdeci">RenderPassFlags flags</div><div class="ttdoc">フラグ</div><div class="ttdef"><b>Definition:</b> RenderPassDesc.h:65</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_begin_pass_param_html_aa7144f8dc30495f015c713030d9e3900"><div class="ttname"><a href="../../d5/d8d/struct_amuse_1_1_r_h_i_1_1_begin_pass_param.html#aa7144f8dc30495f015c713030d9e3900">Amuse::RHI::BeginPassParam::colors</a></div><div class="ttdeci">RenderPassTargetDescArray colors</div><div class="ttdoc">カラーターゲット一覧</div><div class="ttdef"><b>Definition:</b> RenderPassDesc.h:62</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_render_pass_color_target_desc_html"><div class="ttname"><a href="../../d7/dd4/struct_amuse_1_1_r_h_i_1_1_render_pass_color_target_desc.html">Amuse::RHI::RenderPassColorTargetDesc</a></div><div class="ttdoc">レンダーパスのカラーターゲット設定</div><div class="ttdef"><b>Definition:</b> RenderPassDesc.h:46</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_render_pass_color_target_desc_html_a5be2797896c6adc943c7f249cb0c9dfb"><div class="ttname"><a href="../../d7/dd4/struct_amuse_1_1_r_h_i_1_1_render_pass_color_target_desc.html#a5be2797896c6adc943c7f249cb0c9dfb">Amuse::RHI::RenderPassColorTargetDesc::beforeAccess</a></div><div class="ttdeci">RenderPassBeforeAccessType beforeAccess</div><div class="ttdoc">遷移前アクセス状態</div><div class="ttdef"><b>Definition:</b> RenderPassDesc.h:48</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_render_pass_color_target_desc_html_aa52ad5dae2b10cc38b7df0f151a97f05"><div class="ttname"><a href="../../d7/dd4/struct_amuse_1_1_r_h_i_1_1_render_pass_color_target_desc.html#aa52ad5dae2b10cc38b7df0f151a97f05">Amuse::RHI::RenderPassColorTargetDesc::texture</a></div><div class="ttdeci">Ref&lt; RenderTexture &gt; texture</div><div class="ttdoc">テクスチャ</div><div class="ttdef"><b>Definition:</b> RenderPassDesc.h:47</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_render_pass_color_target_desc_html_abcfea7aaecbf07d99925043f3a9d53fd"><div class="ttname"><a href="../../d7/dd4/struct_amuse_1_1_r_h_i_1_1_render_pass_color_target_desc.html#abcfea7aaecbf07d99925043f3a9d53fd">Amuse::RHI::RenderPassColorTargetDesc::afterAccess</a></div><div class="ttdeci">RenderPassAfterAccessType afterAccess</div><div class="ttdoc">遷移後アクセス状態</div><div class="ttdef"><b>Definition:</b> RenderPassDesc.h:49</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_render_pass_target_desc_html"><div class="ttname"><a href="../../d7/d4d/struct_amuse_1_1_r_h_i_1_1_render_pass_target_desc.html">Amuse::RHI::RenderPassTargetDesc</a></div><div class="ttdoc">レンダーパスのターゲット設定</div><div class="ttdef"><b>Definition:</b> RenderPassDesc.h:53</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_render_pass_target_desc_html_a06ca2bfe7cc08816fc5aaa3791809fca"><div class="ttname"><a href="../../d7/d4d/struct_amuse_1_1_r_h_i_1_1_render_pass_target_desc.html#a06ca2bfe7cc08816fc5aaa3791809fca">Amuse::RHI::RenderPassTargetDesc::texture</a></div><div class="ttdeci">Ref&lt; RenderTexture &gt; texture</div><div class="ttdoc">テクスチャ</div><div class="ttdef"><b>Definition:</b> RenderPassDesc.h:54</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_render_pass_target_desc_html_a867839e0b907baff0ddeaa2d9bddeb74"><div class="ttname"><a href="../../d7/d4d/struct_amuse_1_1_r_h_i_1_1_render_pass_target_desc.html#a867839e0b907baff0ddeaa2d9bddeb74">Amuse::RHI::RenderPassTargetDesc::afterAccess</a></div><div class="ttdeci">RenderPassAfterAccessType afterAccess</div><div class="ttdoc">遷移後アクセス状態</div><div class="ttdef"><b>Definition:</b> RenderPassDesc.h:56</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_render_pass_target_desc_html_ae3ea3734400ad4a5656d528e78e37bd3"><div class="ttname"><a href="../../d7/d4d/struct_amuse_1_1_r_h_i_1_1_render_pass_target_desc.html#ae3ea3734400ad4a5656d528e78e37bd3">Amuse::RHI::RenderPassTargetDesc::beforeAccess</a></div><div class="ttdeci">RenderPassBeforeAccessType beforeAccess</div><div class="ttdoc">遷移前アクセス状態</div><div class="ttdef"><b>Definition:</b> RenderPassDesc.h:55</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_bit_flags_html"><div class="ttname"><a href="../../d8/d40/class_amuse_1_1_core_1_1_bit_flags.html">Amuse::Core::BitFlags</a></div><div class="ttdoc">enum値をビットフラグとして扱うためのラップクラス</div><div class="ttdef"><b>Definition</b> BitFlags.h:16</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_fixed_vector_html"><div class="ttname"><a href="../../d3/dc2/class_amuse_1_1_core_1_1_fixed_vector.html">Amuse::Core::FixedVector</a></div><div class="ttdoc">Fixed配列</div><div class="ttdef"><b>Definition</b> FixedVector.h:14</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_ref_html"><div class="ttname"><a href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Amuse::Core::Ref</a></div><div class="ttdoc">RefObject 用スマートポインタ</div><div class="ttdef"><b>Definition</b> Ref.h:64</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_begin_pass_param_html"><div class="ttname"><a href="../../d5/d8d/struct_amuse_1_1_r_h_i_1_1_begin_pass_param.html">Amuse::RHI::BeginPassParam</a></div><div class="ttdoc">レンダーパス定義</div><div class="ttdef"><b>Definition</b> RenderPassDesc.h:61</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_begin_pass_param_html_a1a1394e74d9980cc0cd085dcbb45965d"><div class="ttname"><a href="../../d5/d8d/struct_amuse_1_1_r_h_i_1_1_begin_pass_param.html#a1a1394e74d9980cc0cd085dcbb45965d">Amuse::RHI::BeginPassParam::stencil</a></div><div class="ttdeci">RenderPassTargetDesc stencil</div><div class="ttdoc">ステンシル値</div><div class="ttdef"><b>Definition</b> RenderPassDesc.h:64</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_begin_pass_param_html_a59172272ba1dbe049461bddb4ff27b17"><div class="ttname"><a href="../../d5/d8d/struct_amuse_1_1_r_h_i_1_1_begin_pass_param.html#a59172272ba1dbe049461bddb4ff27b17">Amuse::RHI::BeginPassParam::depth</a></div><div class="ttdeci">RenderPassTargetDesc depth</div><div class="ttdoc">深度値</div><div class="ttdef"><b>Definition</b> RenderPassDesc.h:63</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_begin_pass_param_html_a8cd2e11df0eab3e00f0dbeff8473ef04"><div class="ttname"><a href="../../d5/d8d/struct_amuse_1_1_r_h_i_1_1_begin_pass_param.html#a8cd2e11df0eab3e00f0dbeff8473ef04">Amuse::RHI::BeginPassParam::flags</a></div><div class="ttdeci">RenderPassFlags flags</div><div class="ttdoc">フラグ</div><div class="ttdef"><b>Definition</b> RenderPassDesc.h:65</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_begin_pass_param_html_aa7144f8dc30495f015c713030d9e3900"><div class="ttname"><a href="../../d5/d8d/struct_amuse_1_1_r_h_i_1_1_begin_pass_param.html#aa7144f8dc30495f015c713030d9e3900">Amuse::RHI::BeginPassParam::colors</a></div><div class="ttdeci">RenderPassTargetDescArray colors</div><div class="ttdoc">カラーターゲット一覧</div><div class="ttdef"><b>Definition</b> RenderPassDesc.h:62</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_render_pass_color_target_desc_html"><div class="ttname"><a href="../../d7/dd4/struct_amuse_1_1_r_h_i_1_1_render_pass_color_target_desc.html">Amuse::RHI::RenderPassColorTargetDesc</a></div><div class="ttdoc">レンダーパスのカラーターゲット設定</div><div class="ttdef"><b>Definition</b> RenderPassDesc.h:46</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_render_pass_color_target_desc_html_a5be2797896c6adc943c7f249cb0c9dfb"><div class="ttname"><a href="../../d7/dd4/struct_amuse_1_1_r_h_i_1_1_render_pass_color_target_desc.html#a5be2797896c6adc943c7f249cb0c9dfb">Amuse::RHI::RenderPassColorTargetDesc::beforeAccess</a></div><div class="ttdeci">RenderPassBeforeAccessType beforeAccess</div><div class="ttdoc">遷移前アクセス状態</div><div class="ttdef"><b>Definition</b> RenderPassDesc.h:48</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_render_pass_color_target_desc_html_aa52ad5dae2b10cc38b7df0f151a97f05"><div class="ttname"><a href="../../d7/dd4/struct_amuse_1_1_r_h_i_1_1_render_pass_color_target_desc.html#aa52ad5dae2b10cc38b7df0f151a97f05">Amuse::RHI::RenderPassColorTargetDesc::texture</a></div><div class="ttdeci">Ref&lt; RenderTexture &gt; texture</div><div class="ttdoc">テクスチャ</div><div class="ttdef"><b>Definition</b> RenderPassDesc.h:47</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_render_pass_color_target_desc_html_abcfea7aaecbf07d99925043f3a9d53fd"><div class="ttname"><a href="../../d7/dd4/struct_amuse_1_1_r_h_i_1_1_render_pass_color_target_desc.html#abcfea7aaecbf07d99925043f3a9d53fd">Amuse::RHI::RenderPassColorTargetDesc::afterAccess</a></div><div class="ttdeci">RenderPassAfterAccessType afterAccess</div><div class="ttdoc">遷移後アクセス状態</div><div class="ttdef"><b>Definition</b> RenderPassDesc.h:49</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_render_pass_target_desc_html"><div class="ttname"><a href="../../d7/d4d/struct_amuse_1_1_r_h_i_1_1_render_pass_target_desc.html">Amuse::RHI::RenderPassTargetDesc</a></div><div class="ttdoc">レンダーパスのターゲット設定</div><div class="ttdef"><b>Definition</b> RenderPassDesc.h:53</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_render_pass_target_desc_html_a06ca2bfe7cc08816fc5aaa3791809fca"><div class="ttname"><a href="../../d7/d4d/struct_amuse_1_1_r_h_i_1_1_render_pass_target_desc.html#a06ca2bfe7cc08816fc5aaa3791809fca">Amuse::RHI::RenderPassTargetDesc::texture</a></div><div class="ttdeci">Ref&lt; RenderTexture &gt; texture</div><div class="ttdoc">テクスチャ</div><div class="ttdef"><b>Definition</b> RenderPassDesc.h:54</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_render_pass_target_desc_html_a867839e0b907baff0ddeaa2d9bddeb74"><div class="ttname"><a href="../../d7/d4d/struct_amuse_1_1_r_h_i_1_1_render_pass_target_desc.html#a867839e0b907baff0ddeaa2d9bddeb74">Amuse::RHI::RenderPassTargetDesc::afterAccess</a></div><div class="ttdeci">RenderPassAfterAccessType afterAccess</div><div class="ttdoc">遷移後アクセス状態</div><div class="ttdef"><b>Definition</b> RenderPassDesc.h:56</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_render_pass_target_desc_html_ae3ea3734400ad4a5656d528e78e37bd3"><div class="ttname"><a href="../../d7/d4d/struct_amuse_1_1_r_h_i_1_1_render_pass_target_desc.html#ae3ea3734400ad4a5656d528e78e37bd3">Amuse::RHI::RenderPassTargetDesc::beforeAccess</a></div><div class="ttdeci">RenderPassBeforeAccessType beforeAccess</div><div class="ttdoc">遷移前アクセス状態</div><div class="ttdef"><b>Definition</b> RenderPassDesc.h:55</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_4f6666a8f2ab10bc970eb7559668f031.html">Runtime</a></li><li class="navelem"><a class="el" href="../../dir_ed0dd943941685375ac149ef30703e8f.html">RHI</a></li><li class="navelem"><a class="el" href="../../dir_80d0fa31a6e3bc7da61af1a1dfa2506f.html">Public</a></li><li class="navelem"><a class="el" href="../../dir_6330f9b43f61349a45429b5fd54fec05.html">Amuse</a></li><li class="navelem"><a class="el" href="../../dir_0830f243940360ab60fcd1783d0d86f9.html">RHI</a></li><li class="navelem"><a class="el" href="../../dir_5761839cb0a5a5a0945e24e2502418de.html">Types</a></li><li class="navelem"><b>RenderPassDesc.h</b></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="navelem"><b>Runtime</b></li><li class="navelem"><b>RHI</b></li><li class="navelem"><b>Public</b></li><li class="navelem"><b>Amuse</b></li><li class="navelem"><b>RHI</b></li><li class="navelem"><b>Types</b></li><li class="navelem"><b>RenderPassDesc.h</b></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

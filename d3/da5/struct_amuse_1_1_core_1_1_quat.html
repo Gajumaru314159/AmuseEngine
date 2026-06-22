@@ -3,19 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AmuseEngine: Amuse::Core::Quat 構造体</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../jquery.js"></script>
-<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
 <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
 <script type="text/javascript" src="../../navtreedata.js"></script>
 <script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="../../style.css" rel="stylesheet" type="text/css"/>
@@ -36,23 +42,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.6 -->
+<!-- 構築: Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('../../',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
 });
-/* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -65,10 +93,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('d3/da5/struct_amuse_1_1_core_1_1_quat.html','../../'); initResizable(); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d3/da5/struct_amuse_1_1_core_1_1_quat.html','../../','d3/d1b/struct_amuse_1_1_core_1_1_quat-members'); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -103,222 +130,171 @@ $(document).ready(function(){initNavTree('d3/da5/struct_amuse_1_1_core_1_1_quat.
 <div class="contents">
 
 <p>クォータニオン(四元数)  
- <a href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html#details">[詳解]</a></p>
+ <a href="#details">[詳解]</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../df/d7d/_quaternion_8h_source.html">Quaternion.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:a7912b88060b342c8130921eccba7eb2e"><td class="memItemLeft" align="right" valign="top"><a id="a7912b88060b342c8130921eccba7eb2e" name="a7912b88060b342c8130921eccba7eb2e"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Quat</b> () noexcept</td></tr>
+<tr class="memitem:a7912b88060b342c8130921eccba7eb2e" id="r_a7912b88060b342c8130921eccba7eb2e"><td class="memItemLeft"><a id="a7912b88060b342c8130921eccba7eb2e" name="a7912b88060b342c8130921eccba7eb2e"></a>
+&#160;</td><td class="memItemRight"><b>Quat</b> () noexcept</td></tr>
 <tr class="memdesc:a7912b88060b342c8130921eccba7eb2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトコンストラクタ(初期化なし) <br /></td></tr>
-<tr class="separator:a7912b88060b342c8130921eccba7eb2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f4dea25a212f637253782f85e465aee"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html#a4f4dea25a212f637253782f85e465aee">Quat</a> (f32 <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html#ad72120a49450ec7f9fd01a267301564b">x</a>, f32 <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html#a35491cc74c56c5bf83cbf64f3bc4530b">y</a>, f32 <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html#aa6407015e1704eac7c8d959ea87ac931">z</a>, f32 <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html#a59dda808557fe3782c2926930838f147">w</a>) noexcept</td></tr>
+<tr class="memitem:a4f4dea25a212f637253782f85e465aee" id="r_a4f4dea25a212f637253782f85e465aee"><td class="memItemLeft">constexpr&#160;</td><td class="memItemRight"><a class="el" href="#a4f4dea25a212f637253782f85e465aee">Quat</a> (f32 x, f32 y, f32 z, f32 w) noexcept</td></tr>
 <tr class="memdesc:a4f4dea25a212f637253782f85e465aee"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ(内部値指定)  <br /></td></tr>
-<tr class="separator:a4f4dea25a212f637253782f85e465aee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba3397e61048d18f0683a3c92bcdc511"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html#aba3397e61048d18f0683a3c92bcdc511">Quat</a> (f32 <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html#ad72120a49450ec7f9fd01a267301564b">x</a>, f32 <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html#a35491cc74c56c5bf83cbf64f3bc4530b">y</a>, f32 <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html#aa6407015e1704eac7c8d959ea87ac931">z</a>)</td></tr>
+<tr class="memitem:aba3397e61048d18f0683a3c92bcdc511" id="r_aba3397e61048d18f0683a3c92bcdc511"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aba3397e61048d18f0683a3c92bcdc511">Quat</a> (f32 x, f32 y, f32 z)</td></tr>
 <tr class="memdesc:aba3397e61048d18f0683a3c92bcdc511"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ(オイラー角)  <br /></td></tr>
-<tr class="separator:aba3397e61048d18f0683a3c92bcdc511"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a958132d6b224aa31e0a7c2668cf9102d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html#a958132d6b224aa31e0a7c2668cf9102d">Quat</a> (const <a class="el" href="../../da/d68/struct_amuse_1_1_core_1_1_rot.html">Rot</a> &amp;rotation)</td></tr>
+<tr class="memitem:a958132d6b224aa31e0a7c2668cf9102d" id="r_a958132d6b224aa31e0a7c2668cf9102d"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a958132d6b224aa31e0a7c2668cf9102d">Quat</a> (const <a class="el" href="../../da/d68/struct_amuse_1_1_core_1_1_rot.html">Rot</a> &amp;rotation)</td></tr>
 <tr class="memdesc:a958132d6b224aa31e0a7c2668cf9102d"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ(オイラー角)  <br /></td></tr>
-<tr class="separator:a958132d6b224aa31e0a7c2668cf9102d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a020f8a0acbc9f79367bdbfe5ab48c26f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html#a020f8a0acbc9f79367bdbfe5ab48c26f">Quat</a> (<a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a> <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html#ab2f0905bace10c1e9568f4bf05203671">axis</a>, f32 <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html#a886b8df4760e42d4a42144f7cd33b099">angle</a>)</td></tr>
+<tr class="memitem:a020f8a0acbc9f79367bdbfe5ab48c26f" id="r_a020f8a0acbc9f79367bdbfe5ab48c26f"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a020f8a0acbc9f79367bdbfe5ab48c26f">Quat</a> (<a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a> axis, f32 angle)</td></tr>
 <tr class="memdesc:a020f8a0acbc9f79367bdbfe5ab48c26f"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ(軸回転)  <br /></td></tr>
-<tr class="separator:a020f8a0acbc9f79367bdbfe5ab48c26f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3dfc54e8d1c69848bc3bf0941c0e154"><td class="memItemLeft" align="right" valign="top"><a id="aa3dfc54e8d1c69848bc3bf0941c0e154" name="aa3dfc54e8d1c69848bc3bf0941c0e154"></a>
-constexpr <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> (const <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a> &amp;quat) const noexcept</td></tr>
+<tr class="memitem:aa3dfc54e8d1c69848bc3bf0941c0e154" id="r_aa3dfc54e8d1c69848bc3bf0941c0e154"><td class="memItemLeft"><a id="aa3dfc54e8d1c69848bc3bf0941c0e154" name="aa3dfc54e8d1c69848bc3bf0941c0e154"></a>
+constexpr <a class="el" href="#a7912b88060b342c8130921eccba7eb2e">Quat</a>&#160;</td><td class="memItemRight"><b>operator*</b> (const <a class="el" href="#a7912b88060b342c8130921eccba7eb2e">Quat</a> &amp;quat) const noexcept</td></tr>
 <tr class="memdesc:aa3dfc54e8d1c69848bc3bf0941c0e154"><td class="mdescLeft">&#160;</td><td class="mdescRight">乗算演算子 <br /></td></tr>
-<tr class="separator:aa3dfc54e8d1c69848bc3bf0941c0e154"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48cf3d0c3e08693498f47b492f81f5d1"><td class="memItemLeft" align="right" valign="top"><a id="a48cf3d0c3e08693498f47b492f81f5d1" name="a48cf3d0c3e08693498f47b492f81f5d1"></a>
-constexpr <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator*=</b> (const <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a> &amp;quat) noexcept</td></tr>
+<tr class="memitem:a48cf3d0c3e08693498f47b492f81f5d1" id="r_a48cf3d0c3e08693498f47b492f81f5d1"><td class="memItemLeft"><a id="a48cf3d0c3e08693498f47b492f81f5d1" name="a48cf3d0c3e08693498f47b492f81f5d1"></a>
+constexpr <a class="el" href="#a7912b88060b342c8130921eccba7eb2e">Quat</a> &amp;&#160;</td><td class="memItemRight"><b>operator*=</b> (const <a class="el" href="#a7912b88060b342c8130921eccba7eb2e">Quat</a> &amp;quat) noexcept</td></tr>
 <tr class="memdesc:a48cf3d0c3e08693498f47b492f81f5d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">乗算代入演算子 <br /></td></tr>
-<tr class="separator:a48cf3d0c3e08693498f47b492f81f5d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c1eba28417b119294a5936a88fd7168"><td class="memItemLeft" align="right" valign="top"><a id="a0c1eba28417b119294a5936a88fd7168" name="a0c1eba28417b119294a5936a88fd7168"></a>
-<a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> (f32 scalar) const</td></tr>
+<tr class="memitem:a0c1eba28417b119294a5936a88fd7168" id="r_a0c1eba28417b119294a5936a88fd7168"><td class="memItemLeft"><a id="a0c1eba28417b119294a5936a88fd7168" name="a0c1eba28417b119294a5936a88fd7168"></a>
+<a class="el" href="#a7912b88060b342c8130921eccba7eb2e">Quat</a>&#160;</td><td class="memItemRight"><b>operator*</b> (f32 scalar) const</td></tr>
 <tr class="memdesc:a0c1eba28417b119294a5936a88fd7168"><td class="mdescLeft">&#160;</td><td class="mdescRight">乗算演算子 <br /></td></tr>
-<tr class="separator:a0c1eba28417b119294a5936a88fd7168"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d5cef7cdb8e4869489ccac03021e30c"><td class="memItemLeft" align="right" valign="top"><a id="a3d5cef7cdb8e4869489ccac03021e30c" name="a3d5cef7cdb8e4869489ccac03021e30c"></a>
-<a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator*=</b> (f32 scalar)</td></tr>
+<tr class="memitem:a3d5cef7cdb8e4869489ccac03021e30c" id="r_a3d5cef7cdb8e4869489ccac03021e30c"><td class="memItemLeft"><a id="a3d5cef7cdb8e4869489ccac03021e30c" name="a3d5cef7cdb8e4869489ccac03021e30c"></a>
+<a class="el" href="#a7912b88060b342c8130921eccba7eb2e">Quat</a> &amp;&#160;</td><td class="memItemRight"><b>operator*=</b> (f32 scalar)</td></tr>
 <tr class="memdesc:a3d5cef7cdb8e4869489ccac03021e30c"><td class="mdescLeft">&#160;</td><td class="mdescRight">乗算代入演算子 <br /></td></tr>
-<tr class="separator:a3d5cef7cdb8e4869489ccac03021e30c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e7bcc573200843df8145a9af22e07dd"><td class="memItemLeft" align="right" valign="top"><a id="a3e7bcc573200843df8145a9af22e07dd" name="a3e7bcc573200843df8145a9af22e07dd"></a>
-constexpr <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator/</b> (const <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a> &amp;quat) const noexcept</td></tr>
+<tr class="memitem:a3e7bcc573200843df8145a9af22e07dd" id="r_a3e7bcc573200843df8145a9af22e07dd"><td class="memItemLeft"><a id="a3e7bcc573200843df8145a9af22e07dd" name="a3e7bcc573200843df8145a9af22e07dd"></a>
+constexpr <a class="el" href="#a7912b88060b342c8130921eccba7eb2e">Quat</a>&#160;</td><td class="memItemRight"><b>operator/</b> (const <a class="el" href="#a7912b88060b342c8130921eccba7eb2e">Quat</a> &amp;quat) const noexcept</td></tr>
 <tr class="memdesc:a3e7bcc573200843df8145a9af22e07dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">除算演算子 <br /></td></tr>
-<tr class="separator:a3e7bcc573200843df8145a9af22e07dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a445522b8a143765cf74181e7592af8de"><td class="memItemLeft" align="right" valign="top"><a id="a445522b8a143765cf74181e7592af8de" name="a445522b8a143765cf74181e7592af8de"></a>
-constexpr <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator/=</b> (const <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a> &amp;quat) noexcept</td></tr>
+<tr class="memitem:a445522b8a143765cf74181e7592af8de" id="r_a445522b8a143765cf74181e7592af8de"><td class="memItemLeft"><a id="a445522b8a143765cf74181e7592af8de" name="a445522b8a143765cf74181e7592af8de"></a>
+constexpr <a class="el" href="#a7912b88060b342c8130921eccba7eb2e">Quat</a> &amp;&#160;</td><td class="memItemRight"><b>operator/=</b> (const <a class="el" href="#a7912b88060b342c8130921eccba7eb2e">Quat</a> &amp;quat) noexcept</td></tr>
 <tr class="memdesc:a445522b8a143765cf74181e7592af8de"><td class="mdescLeft">&#160;</td><td class="mdescRight">除算代入演算子 <br /></td></tr>
-<tr class="separator:a445522b8a143765cf74181e7592af8de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea6b83a2c9c5b35e3e64a637d367a292"><td class="memItemLeft" align="right" valign="top"><a id="aea6b83a2c9c5b35e3e64a637d367a292" name="aea6b83a2c9c5b35e3e64a637d367a292"></a>
-constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a> &amp;rhs) const noexcept</td></tr>
+<tr class="memitem:aea6b83a2c9c5b35e3e64a637d367a292" id="r_aea6b83a2c9c5b35e3e64a637d367a292"><td class="memItemLeft"><a id="aea6b83a2c9c5b35e3e64a637d367a292" name="aea6b83a2c9c5b35e3e64a637d367a292"></a>
+constexpr bool&#160;</td><td class="memItemRight"><b>operator==</b> (const <a class="el" href="#a7912b88060b342c8130921eccba7eb2e">Quat</a> &amp;rhs) const noexcept</td></tr>
 <tr class="memdesc:aea6b83a2c9c5b35e3e64a637d367a292"><td class="mdescLeft">&#160;</td><td class="mdescRight">等価演算子 <br /></td></tr>
-<tr class="separator:aea6b83a2c9c5b35e3e64a637d367a292"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81d24c4f83195bfbfa6d2dd2b31cbbfb"><td class="memItemLeft" align="right" valign="top"><a id="a81d24c4f83195bfbfa6d2dd2b31cbbfb" name="a81d24c4f83195bfbfa6d2dd2b31cbbfb"></a>
-constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a> &amp;rhs) const noexcept</td></tr>
+<tr class="memitem:a81d24c4f83195bfbfa6d2dd2b31cbbfb" id="r_a81d24c4f83195bfbfa6d2dd2b31cbbfb"><td class="memItemLeft"><a id="a81d24c4f83195bfbfa6d2dd2b31cbbfb" name="a81d24c4f83195bfbfa6d2dd2b31cbbfb"></a>
+constexpr bool&#160;</td><td class="memItemRight"><b>operator!=</b> (const <a class="el" href="#a7912b88060b342c8130921eccba7eb2e">Quat</a> &amp;rhs) const noexcept</td></tr>
 <tr class="memdesc:a81d24c4f83195bfbfa6d2dd2b31cbbfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">等価演算子 <br /></td></tr>
-<tr class="separator:a81d24c4f83195bfbfa6d2dd2b31cbbfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab232692b31542f0d7ee727fa1c8cac5e"><td class="memItemLeft" align="right" valign="top"><a id="ab232692b31542f0d7ee727fa1c8cac5e" name="ab232692b31542f0d7ee727fa1c8cac5e"></a>
-<a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> (const <a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a> &amp;v) const noexcept</td></tr>
+<tr class="memitem:ab232692b31542f0d7ee727fa1c8cac5e" id="r_ab232692b31542f0d7ee727fa1c8cac5e"><td class="memItemLeft"><a id="ab232692b31542f0d7ee727fa1c8cac5e" name="ab232692b31542f0d7ee727fa1c8cac5e"></a>
+<a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a>&#160;</td><td class="memItemRight"><b>operator*</b> (const <a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a> &amp;v) const noexcept</td></tr>
 <tr class="memdesc:ab232692b31542f0d7ee727fa1c8cac5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ベクトル乗算演算子(回転) <br /></td></tr>
-<tr class="separator:ab232692b31542f0d7ee727fa1c8cac5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7dd7b463fe4822fa77be2ca3deff1d48"><td class="memItemLeft" align="right" valign="top"><a id="a7dd7b463fe4822fa77be2ca3deff1d48" name="a7dd7b463fe4822fa77be2ca3deff1d48"></a>
-<a class="el" href="../../dc/d67/struct_amuse_1_1_core_1_1_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><b>toMatrix</b> () const noexcept</td></tr>
+<tr class="memitem:a7dd7b463fe4822fa77be2ca3deff1d48" id="r_a7dd7b463fe4822fa77be2ca3deff1d48"><td class="memItemLeft"><a id="a7dd7b463fe4822fa77be2ca3deff1d48" name="a7dd7b463fe4822fa77be2ca3deff1d48"></a>
+<a class="el" href="../../dc/d67/struct_amuse_1_1_core_1_1_matrix.html">Matrix</a>&#160;</td><td class="memItemRight"><b>toMatrix</b> () const noexcept</td></tr>
 <tr class="memdesc:a7dd7b463fe4822fa77be2ca3deff1d48"><td class="mdescLeft">&#160;</td><td class="mdescRight">行列表現を取得 <br /></td></tr>
-<tr class="separator:a7dd7b463fe4822fa77be2ca3deff1d48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae81187cffd819a74c6aec57d93d0a47f"><td class="memItemLeft" align="right" valign="top"><a id="ae81187cffd819a74c6aec57d93d0a47f" name="ae81187cffd819a74c6aec57d93d0a47f"></a>
-<a class="el" href="../../da/d68/struct_amuse_1_1_core_1_1_rot.html">Rot</a>&#160;</td><td class="memItemRight" valign="bottom"><b>toRot</b> () const</td></tr>
+<tr class="memitem:ae81187cffd819a74c6aec57d93d0a47f" id="r_ae81187cffd819a74c6aec57d93d0a47f"><td class="memItemLeft"><a id="ae81187cffd819a74c6aec57d93d0a47f" name="ae81187cffd819a74c6aec57d93d0a47f"></a>
+<a class="el" href="../../da/d68/struct_amuse_1_1_core_1_1_rot.html">Rot</a>&#160;</td><td class="memItemRight"><b>toRot</b> () const</td></tr>
 <tr class="memdesc:ae81187cffd819a74c6aec57d93d0a47f"><td class="mdescLeft">&#160;</td><td class="mdescRight">オイラー角での表現を取得 <br /></td></tr>
-<tr class="separator:ae81187cffd819a74c6aec57d93d0a47f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8016c0cc3d937e71f077053283423ff"><td class="memItemLeft" align="right" valign="top"><a id="aa8016c0cc3d937e71f077053283423ff" name="aa8016c0cc3d937e71f077053283423ff"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>toAxisAndAngle</b> () const -&gt; std::tuple&lt; <a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a>, f32 &gt;</td></tr>
+<tr class="memitem:aa8016c0cc3d937e71f077053283423ff" id="r_aa8016c0cc3d937e71f077053283423ff"><td class="memItemLeft"><a id="aa8016c0cc3d937e71f077053283423ff" name="aa8016c0cc3d937e71f077053283423ff"></a>
+auto&#160;</td><td class="memItemRight"><b>toAxisAndAngle</b> () const -&gt; std::tuple&lt; <a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a>, f32 &gt;</td></tr>
 <tr class="memdesc:aa8016c0cc3d937e71f077053283423ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">回転軸と回転量を取得 <br /></td></tr>
-<tr class="separator:aa8016c0cc3d937e71f077053283423ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf811f902ea87d7d7f186f27c6162990"><td class="memItemLeft" align="right" valign="top"><a id="abf811f902ea87d7d7f186f27c6162990" name="abf811f902ea87d7d7f186f27c6162990"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>toSwingTwist</b> (const <a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a> &amp;twistAxis) const -&gt; std::tuple&lt; <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a>, <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a> &gt;</td></tr>
+<tr class="memitem:abf811f902ea87d7d7f186f27c6162990" id="r_abf811f902ea87d7d7f186f27c6162990"><td class="memItemLeft"><a id="abf811f902ea87d7d7f186f27c6162990" name="abf811f902ea87d7d7f186f27c6162990"></a>
+auto&#160;</td><td class="memItemRight"><b>toSwingTwist</b> (const <a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a> &amp;twistAxis) const -&gt; std::tuple&lt; <a class="el" href="#a7912b88060b342c8130921eccba7eb2e">Quat</a>, <a class="el" href="#a7912b88060b342c8130921eccba7eb2e">Quat</a> &gt;</td></tr>
 <tr class="memdesc:abf811f902ea87d7d7f186f27c6162990"><td class="mdescLeft">&#160;</td><td class="mdescRight">回転軸と回転量を取得 <br /></td></tr>
-<tr class="separator:abf811f902ea87d7d7f186f27c6162990"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0260f32156fcda32bff06ee66cda1f9"><td class="memItemLeft" align="right" valign="top"><a id="aa0260f32156fcda32bff06ee66cda1f9" name="aa0260f32156fcda32bff06ee66cda1f9"></a>
-<a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>front</b> () const noexcept</td></tr>
+<tr class="memitem:aa0260f32156fcda32bff06ee66cda1f9" id="r_aa0260f32156fcda32bff06ee66cda1f9"><td class="memItemLeft"><a id="aa0260f32156fcda32bff06ee66cda1f9" name="aa0260f32156fcda32bff06ee66cda1f9"></a>
+<a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a>&#160;</td><td class="memItemRight"><b>front</b> () const noexcept</td></tr>
 <tr class="memdesc:aa0260f32156fcda32bff06ee66cda1f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">回転後の前ベクトル取得 <br /></td></tr>
-<tr class="separator:aa0260f32156fcda32bff06ee66cda1f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef49d90810efd3242ff11e56240d698b"><td class="memItemLeft" align="right" valign="top"><a id="aef49d90810efd3242ff11e56240d698b" name="aef49d90810efd3242ff11e56240d698b"></a>
-<a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>back</b> () const noexcept</td></tr>
+<tr class="memitem:aef49d90810efd3242ff11e56240d698b" id="r_aef49d90810efd3242ff11e56240d698b"><td class="memItemLeft"><a id="aef49d90810efd3242ff11e56240d698b" name="aef49d90810efd3242ff11e56240d698b"></a>
+<a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a>&#160;</td><td class="memItemRight"><b>back</b> () const noexcept</td></tr>
 <tr class="memdesc:aef49d90810efd3242ff11e56240d698b"><td class="mdescLeft">&#160;</td><td class="mdescRight">回転後の後ベクトル取得 <br /></td></tr>
-<tr class="separator:aef49d90810efd3242ff11e56240d698b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a132a4893277d9fc5185c215bf64217cd"><td class="memItemLeft" align="right" valign="top"><a id="a132a4893277d9fc5185c215bf64217cd" name="a132a4893277d9fc5185c215bf64217cd"></a>
-<a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>up</b> () const noexcept</td></tr>
+<tr class="memitem:a132a4893277d9fc5185c215bf64217cd" id="r_a132a4893277d9fc5185c215bf64217cd"><td class="memItemLeft"><a id="a132a4893277d9fc5185c215bf64217cd" name="a132a4893277d9fc5185c215bf64217cd"></a>
+<a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a>&#160;</td><td class="memItemRight"><b>up</b> () const noexcept</td></tr>
 <tr class="memdesc:a132a4893277d9fc5185c215bf64217cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">回転後の上ベクトル取得 <br /></td></tr>
-<tr class="separator:a132a4893277d9fc5185c215bf64217cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ad951e1bfe5ff333d2d68a61e24d2ec"><td class="memItemLeft" align="right" valign="top"><a id="a1ad951e1bfe5ff333d2d68a61e24d2ec" name="a1ad951e1bfe5ff333d2d68a61e24d2ec"></a>
-<a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>down</b> () const noexcept</td></tr>
+<tr class="memitem:a1ad951e1bfe5ff333d2d68a61e24d2ec" id="r_a1ad951e1bfe5ff333d2d68a61e24d2ec"><td class="memItemLeft"><a id="a1ad951e1bfe5ff333d2d68a61e24d2ec" name="a1ad951e1bfe5ff333d2d68a61e24d2ec"></a>
+<a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a>&#160;</td><td class="memItemRight"><b>down</b> () const noexcept</td></tr>
 <tr class="memdesc:a1ad951e1bfe5ff333d2d68a61e24d2ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">回転後の下ベクトル取得 <br /></td></tr>
-<tr class="separator:a1ad951e1bfe5ff333d2d68a61e24d2ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad152d03a77fbc013124c2b0a589cdbb4"><td class="memItemLeft" align="right" valign="top"><a id="ad152d03a77fbc013124c2b0a589cdbb4" name="ad152d03a77fbc013124c2b0a589cdbb4"></a>
-<a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>left</b> () const noexcept</td></tr>
+<tr class="memitem:ad152d03a77fbc013124c2b0a589cdbb4" id="r_ad152d03a77fbc013124c2b0a589cdbb4"><td class="memItemLeft"><a id="ad152d03a77fbc013124c2b0a589cdbb4" name="ad152d03a77fbc013124c2b0a589cdbb4"></a>
+<a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a>&#160;</td><td class="memItemRight"><b>left</b> () const noexcept</td></tr>
 <tr class="memdesc:ad152d03a77fbc013124c2b0a589cdbb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">回転後の左ベクトル取得 <br /></td></tr>
-<tr class="separator:ad152d03a77fbc013124c2b0a589cdbb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcf53cb4071c18418f4b696cf7c1c885"><td class="memItemLeft" align="right" valign="top"><a id="afcf53cb4071c18418f4b696cf7c1c885" name="afcf53cb4071c18418f4b696cf7c1c885"></a>
-<a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>right</b> () const noexcept</td></tr>
+<tr class="memitem:afcf53cb4071c18418f4b696cf7c1c885" id="r_afcf53cb4071c18418f4b696cf7c1c885"><td class="memItemLeft"><a id="afcf53cb4071c18418f4b696cf7c1c885" name="afcf53cb4071c18418f4b696cf7c1c885"></a>
+<a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a>&#160;</td><td class="memItemRight"><b>right</b> () const noexcept</td></tr>
 <tr class="memdesc:afcf53cb4071c18418f4b696cf7c1c885"><td class="mdescLeft">&#160;</td><td class="mdescRight">回転後の右ベクトル取得 <br /></td></tr>
-<tr class="separator:afcf53cb4071c18418f4b696cf7c1c885"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c035e78f0fda4411076d0f0195dc26e"><td class="memItemLeft" align="right" valign="top">f32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html#a1c035e78f0fda4411076d0f0195dc26e">length</a> () const</td></tr>
+<tr class="memitem:a1c035e78f0fda4411076d0f0195dc26e" id="r_a1c035e78f0fda4411076d0f0195dc26e"><td class="memItemLeft">f32&#160;</td><td class="memItemRight"><a class="el" href="#a1c035e78f0fda4411076d0f0195dc26e">length</a> () const</td></tr>
 <tr class="memdesc:a1c035e78f0fda4411076d0f0195dc26e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ベクトルの長さを取得  <br /></td></tr>
-<tr class="separator:a1c035e78f0fda4411076d0f0195dc26e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ca4a9e43373d0909a79acf0e8b67bb2"><td class="memItemLeft" align="right" valign="top"><a id="a6ca4a9e43373d0909a79acf0e8b67bb2" name="a6ca4a9e43373d0909a79acf0e8b67bb2"></a>
-f32&#160;</td><td class="memItemRight" valign="bottom"><b>sqrLength</b> () const noexcept</td></tr>
+<tr class="memitem:a6ca4a9e43373d0909a79acf0e8b67bb2" id="r_a6ca4a9e43373d0909a79acf0e8b67bb2"><td class="memItemLeft"><a id="a6ca4a9e43373d0909a79acf0e8b67bb2" name="a6ca4a9e43373d0909a79acf0e8b67bb2"></a>
+f32&#160;</td><td class="memItemRight"><b>sqrLength</b> () const noexcept</td></tr>
 <tr class="memdesc:a6ca4a9e43373d0909a79acf0e8b67bb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">ベクトルの長さの二乗を取得 <br /></td></tr>
-<tr class="separator:a6ca4a9e43373d0909a79acf0e8b67bb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2f0905bace10c1e9568f4bf05203671"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html#ab2f0905bace10c1e9568f4bf05203671">axis</a> () const</td></tr>
+<tr class="memitem:ab2f0905bace10c1e9568f4bf05203671" id="r_ab2f0905bace10c1e9568f4bf05203671"><td class="memItemLeft"><a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab2f0905bace10c1e9568f4bf05203671">axis</a> () const</td></tr>
 <tr class="memdesc:ab2f0905bace10c1e9568f4bf05203671"><td class="mdescLeft">&#160;</td><td class="mdescRight">回転軸を取得  <br /></td></tr>
-<tr class="separator:ab2f0905bace10c1e9568f4bf05203671"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a886b8df4760e42d4a42144f7cd33b099"><td class="memItemLeft" align="right" valign="top"><a id="a886b8df4760e42d4a42144f7cd33b099" name="a886b8df4760e42d4a42144f7cd33b099"></a>
-f32&#160;</td><td class="memItemRight" valign="bottom"><b>angle</b> () const</td></tr>
+<tr class="memitem:a886b8df4760e42d4a42144f7cd33b099" id="r_a886b8df4760e42d4a42144f7cd33b099"><td class="memItemLeft"><a id="a886b8df4760e42d4a42144f7cd33b099" name="a886b8df4760e42d4a42144f7cd33b099"></a>
+f32&#160;</td><td class="memItemRight"><b>angle</b> () const</td></tr>
 <tr class="memdesc:a886b8df4760e42d4a42144f7cd33b099"><td class="mdescLeft">&#160;</td><td class="mdescRight">回転量を取得 <br /></td></tr>
-<tr class="separator:a886b8df4760e42d4a42144f7cd33b099"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4cf9277aa3f8d0784a92d5f6891f77b9"><td class="memItemLeft" align="right" valign="top"><a id="a4cf9277aa3f8d0784a92d5f6891f77b9" name="a4cf9277aa3f8d0784a92d5f6891f77b9"></a>
-constexpr <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a>&#160;</td><td class="memItemRight" valign="bottom"><b>inverse</b> () const noexcept</td></tr>
+<tr class="memitem:a4cf9277aa3f8d0784a92d5f6891f77b9" id="r_a4cf9277aa3f8d0784a92d5f6891f77b9"><td class="memItemLeft"><a id="a4cf9277aa3f8d0784a92d5f6891f77b9" name="a4cf9277aa3f8d0784a92d5f6891f77b9"></a>
+constexpr <a class="el" href="#a7912b88060b342c8130921eccba7eb2e">Quat</a>&#160;</td><td class="memItemRight"><b>inverse</b> () const noexcept</td></tr>
 <tr class="memdesc:a4cf9277aa3f8d0784a92d5f6891f77b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆回転を表すQuaternionを取得 <br /></td></tr>
-<tr class="separator:a4cf9277aa3f8d0784a92d5f6891f77b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55216b4097a003fe82aef207f3eadf16"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html#a55216b4097a003fe82aef207f3eadf16">normalize</a> ()</td></tr>
+<tr class="memitem:a55216b4097a003fe82aef207f3eadf16" id="r_a55216b4097a003fe82aef207f3eadf16"><td class="memItemLeft"><a class="el" href="#a7912b88060b342c8130921eccba7eb2e">Quat</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a55216b4097a003fe82aef207f3eadf16">normalize</a> ()</td></tr>
 <tr class="memdesc:a55216b4097a003fe82aef207f3eadf16"><td class="mdescLeft">&#160;</td><td class="mdescRight">正規化  <br /></td></tr>
-<tr class="separator:a55216b4097a003fe82aef207f3eadf16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14af709333674bf5687d0b77ce7758e4"><td class="memItemLeft" align="right" valign="top"><a id="a14af709333674bf5687d0b77ce7758e4" name="a14af709333674bf5687d0b77ce7758e4"></a>
-<a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>rotate</b> (<a class="el" href="../../da/d68/struct_amuse_1_1_core_1_1_rot.html">Rot</a> rotation)</td></tr>
+<tr class="memitem:a14af709333674bf5687d0b77ce7758e4" id="r_a14af709333674bf5687d0b77ce7758e4"><td class="memItemLeft"><a id="a14af709333674bf5687d0b77ce7758e4" name="a14af709333674bf5687d0b77ce7758e4"></a>
+<a class="el" href="#a7912b88060b342c8130921eccba7eb2e">Quat</a> &amp;&#160;</td><td class="memItemRight"><b>rotate</b> (<a class="el" href="../../da/d68/struct_amuse_1_1_core_1_1_rot.html">Rot</a> rotation)</td></tr>
 <tr class="memdesc:a14af709333674bf5687d0b77ce7758e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">グローバル回転 <br /></td></tr>
-<tr class="separator:a14af709333674bf5687d0b77ce7758e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70632cd9cec54c64867a5918163fe61f"><td class="memItemLeft" align="right" valign="top"><a id="a70632cd9cec54c64867a5918163fe61f" name="a70632cd9cec54c64867a5918163fe61f"></a>
-<a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>rotate</b> (f32 <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html#ad72120a49450ec7f9fd01a267301564b">x</a>, f32 <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html#a35491cc74c56c5bf83cbf64f3bc4530b">y</a>, f32 <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html#aa6407015e1704eac7c8d959ea87ac931">z</a>)</td></tr>
+<tr class="memitem:a70632cd9cec54c64867a5918163fe61f" id="r_a70632cd9cec54c64867a5918163fe61f"><td class="memItemLeft"><a id="a70632cd9cec54c64867a5918163fe61f" name="a70632cd9cec54c64867a5918163fe61f"></a>
+<a class="el" href="#a7912b88060b342c8130921eccba7eb2e">Quat</a> &amp;&#160;</td><td class="memItemRight"><b>rotate</b> (f32 x, f32 y, f32 z)</td></tr>
 <tr class="memdesc:a70632cd9cec54c64867a5918163fe61f"><td class="mdescLeft">&#160;</td><td class="mdescRight">グローバル回転 <br /></td></tr>
-<tr class="separator:a70632cd9cec54c64867a5918163fe61f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90b2821a28e7fa896b1633b7a310a70e"><td class="memItemLeft" align="right" valign="top"><a id="a90b2821a28e7fa896b1633b7a310a70e" name="a90b2821a28e7fa896b1633b7a310a70e"></a>
-<a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>rotateLocal</b> (<a class="el" href="../../da/d68/struct_amuse_1_1_core_1_1_rot.html">Rot</a> rotation)</td></tr>
+<tr class="memitem:a90b2821a28e7fa896b1633b7a310a70e" id="r_a90b2821a28e7fa896b1633b7a310a70e"><td class="memItemLeft"><a id="a90b2821a28e7fa896b1633b7a310a70e" name="a90b2821a28e7fa896b1633b7a310a70e"></a>
+<a class="el" href="#a7912b88060b342c8130921eccba7eb2e">Quat</a> &amp;&#160;</td><td class="memItemRight"><b>rotateLocal</b> (<a class="el" href="../../da/d68/struct_amuse_1_1_core_1_1_rot.html">Rot</a> rotation)</td></tr>
 <tr class="memdesc:a90b2821a28e7fa896b1633b7a310a70e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ローカル回転 <br /></td></tr>
-<tr class="separator:a90b2821a28e7fa896b1633b7a310a70e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8bd329efc906a0037355b160768b3dc7"><td class="memItemLeft" align="right" valign="top"><a id="a8bd329efc906a0037355b160768b3dc7" name="a8bd329efc906a0037355b160768b3dc7"></a>
-<a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>rotateLocal</b> (f32 <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html#ad72120a49450ec7f9fd01a267301564b">x</a>, f32 <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html#a35491cc74c56c5bf83cbf64f3bc4530b">y</a>, f32 <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html#aa6407015e1704eac7c8d959ea87ac931">z</a>)</td></tr>
+<tr class="memitem:a8bd329efc906a0037355b160768b3dc7" id="r_a8bd329efc906a0037355b160768b3dc7"><td class="memItemLeft"><a id="a8bd329efc906a0037355b160768b3dc7" name="a8bd329efc906a0037355b160768b3dc7"></a>
+<a class="el" href="#a7912b88060b342c8130921eccba7eb2e">Quat</a> &amp;&#160;</td><td class="memItemRight"><b>rotateLocal</b> (f32 x, f32 y, f32 z)</td></tr>
 <tr class="memdesc:a8bd329efc906a0037355b160768b3dc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">ローカル回転 <br /></td></tr>
-<tr class="separator:a8bd329efc906a0037355b160768b3dc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f378434dfda30b9f7e9084ff42b485e"><td class="memItemLeft" align="right" valign="top"><a id="a9f378434dfda30b9f7e9084ff42b485e" name="a9f378434dfda30b9f7e9084ff42b485e"></a>
-<a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>rotateX</b> (f32 degrees)</td></tr>
+<tr class="memitem:a9f378434dfda30b9f7e9084ff42b485e" id="r_a9f378434dfda30b9f7e9084ff42b485e"><td class="memItemLeft"><a id="a9f378434dfda30b9f7e9084ff42b485e" name="a9f378434dfda30b9f7e9084ff42b485e"></a>
+<a class="el" href="#a7912b88060b342c8130921eccba7eb2e">Quat</a> &amp;&#160;</td><td class="memItemRight"><b>rotateX</b> (f32 degrees)</td></tr>
 <tr class="memdesc:a9f378434dfda30b9f7e9084ff42b485e"><td class="mdescLeft">&#160;</td><td class="mdescRight">グローバルX軸回転 <br /></td></tr>
-<tr class="separator:a9f378434dfda30b9f7e9084ff42b485e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6fea14eaed897fcedb2124117148c76c"><td class="memItemLeft" align="right" valign="top"><a id="a6fea14eaed897fcedb2124117148c76c" name="a6fea14eaed897fcedb2124117148c76c"></a>
-<a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>rotateY</b> (f32 degrees)</td></tr>
+<tr class="memitem:a6fea14eaed897fcedb2124117148c76c" id="r_a6fea14eaed897fcedb2124117148c76c"><td class="memItemLeft"><a id="a6fea14eaed897fcedb2124117148c76c" name="a6fea14eaed897fcedb2124117148c76c"></a>
+<a class="el" href="#a7912b88060b342c8130921eccba7eb2e">Quat</a> &amp;&#160;</td><td class="memItemRight"><b>rotateY</b> (f32 degrees)</td></tr>
 <tr class="memdesc:a6fea14eaed897fcedb2124117148c76c"><td class="mdescLeft">&#160;</td><td class="mdescRight">グローバルY軸回転 <br /></td></tr>
-<tr class="separator:a6fea14eaed897fcedb2124117148c76c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c83893f69ce0a22801dcbbd6845a023"><td class="memItemLeft" align="right" valign="top"><a id="a6c83893f69ce0a22801dcbbd6845a023" name="a6c83893f69ce0a22801dcbbd6845a023"></a>
-<a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>rotateZ</b> (f32 degrees)</td></tr>
+<tr class="memitem:a6c83893f69ce0a22801dcbbd6845a023" id="r_a6c83893f69ce0a22801dcbbd6845a023"><td class="memItemLeft"><a id="a6c83893f69ce0a22801dcbbd6845a023" name="a6c83893f69ce0a22801dcbbd6845a023"></a>
+<a class="el" href="#a7912b88060b342c8130921eccba7eb2e">Quat</a> &amp;&#160;</td><td class="memItemRight"><b>rotateZ</b> (f32 degrees)</td></tr>
 <tr class="memdesc:a6c83893f69ce0a22801dcbbd6845a023"><td class="mdescLeft">&#160;</td><td class="mdescRight">グローバルZ軸回転 <br /></td></tr>
-<tr class="separator:a6c83893f69ce0a22801dcbbd6845a023"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab295e2c0266997f7e1382568fb9f1523"><td class="memItemLeft" align="right" valign="top"><a id="ab295e2c0266997f7e1382568fb9f1523" name="ab295e2c0266997f7e1382568fb9f1523"></a>
-<a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>rotateLocalX</b> (f32 degrees)</td></tr>
+<tr class="memitem:ab295e2c0266997f7e1382568fb9f1523" id="r_ab295e2c0266997f7e1382568fb9f1523"><td class="memItemLeft"><a id="ab295e2c0266997f7e1382568fb9f1523" name="ab295e2c0266997f7e1382568fb9f1523"></a>
+<a class="el" href="#a7912b88060b342c8130921eccba7eb2e">Quat</a> &amp;&#160;</td><td class="memItemRight"><b>rotateLocalX</b> (f32 degrees)</td></tr>
 <tr class="memdesc:ab295e2c0266997f7e1382568fb9f1523"><td class="mdescLeft">&#160;</td><td class="mdescRight">ローカルX軸回転 <br /></td></tr>
-<tr class="separator:ab295e2c0266997f7e1382568fb9f1523"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a595d71832e55038e7eaac70acbc0081a"><td class="memItemLeft" align="right" valign="top"><a id="a595d71832e55038e7eaac70acbc0081a" name="a595d71832e55038e7eaac70acbc0081a"></a>
-<a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>rotateLocalY</b> (f32 degrees)</td></tr>
+<tr class="memitem:a595d71832e55038e7eaac70acbc0081a" id="r_a595d71832e55038e7eaac70acbc0081a"><td class="memItemLeft"><a id="a595d71832e55038e7eaac70acbc0081a" name="a595d71832e55038e7eaac70acbc0081a"></a>
+<a class="el" href="#a7912b88060b342c8130921eccba7eb2e">Quat</a> &amp;&#160;</td><td class="memItemRight"><b>rotateLocalY</b> (f32 degrees)</td></tr>
 <tr class="memdesc:a595d71832e55038e7eaac70acbc0081a"><td class="mdescLeft">&#160;</td><td class="mdescRight">ローカルY軸回転 <br /></td></tr>
-<tr class="separator:a595d71832e55038e7eaac70acbc0081a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36b9b16428d3d9f3a5b8bcf346f6fe6e"><td class="memItemLeft" align="right" valign="top"><a id="a36b9b16428d3d9f3a5b8bcf346f6fe6e" name="a36b9b16428d3d9f3a5b8bcf346f6fe6e"></a>
-<a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>rotateLocalZ</b> (f32 degrees)</td></tr>
+<tr class="memitem:a36b9b16428d3d9f3a5b8bcf346f6fe6e" id="r_a36b9b16428d3d9f3a5b8bcf346f6fe6e"><td class="memItemLeft"><a id="a36b9b16428d3d9f3a5b8bcf346f6fe6e" name="a36b9b16428d3d9f3a5b8bcf346f6fe6e"></a>
+<a class="el" href="#a7912b88060b342c8130921eccba7eb2e">Quat</a> &amp;&#160;</td><td class="memItemRight"><b>rotateLocalZ</b> (f32 degrees)</td></tr>
 <tr class="memdesc:a36b9b16428d3d9f3a5b8bcf346f6fe6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ローカルZ軸回転 <br /></td></tr>
-<tr class="separator:a36b9b16428d3d9f3a5b8bcf346f6fe6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59e4b70d0f1922afc787e6ae7c98fcd8"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html#a59e4b70d0f1922afc787e6ae7c98fcd8">equals</a> (<a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a> v, f32 tolerance=<a class="el" href="../../df/d2e/class_amuse_1_1_core_1_1_math.html#a89b96a0fa0e71dd91f088e9570a71fee">Math::TOLERANCE</a>) const noexcept</td></tr>
+<tr class="memitem:a59e4b70d0f1922afc787e6ae7c98fcd8" id="r_a59e4b70d0f1922afc787e6ae7c98fcd8"><td class="memItemLeft">constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="#a59e4b70d0f1922afc787e6ae7c98fcd8">equals</a> (<a class="el" href="#a7912b88060b342c8130921eccba7eb2e">Quat</a> v, f32 tolerance=<a class="el" href="../../df/d2e/class_amuse_1_1_core_1_1_math.html#a89b96a0fa0e71dd91f088e9570a71fee">Math::TOLERANCE</a>) const noexcept</td></tr>
 <tr class="memdesc:a59e4b70d0f1922afc787e6ae7c98fcd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">等価判定(許容誤差指定)  <br /></td></tr>
-<tr class="separator:a59e4b70d0f1922afc787e6ae7c98fcd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静的公開メンバ関数</h2></td></tr>
-<tr class="memitem:acbed8c1d041582ff100473be9ec2db7f"><td class="memItemLeft" align="right" valign="top"><a id="acbed8c1d041582ff100473be9ec2db7f" name="acbed8c1d041582ff100473be9ec2db7f"></a>
-static <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a>&#160;</td><td class="memItemRight" valign="bottom"><b>FromTo</b> (const <a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a> &amp;fromDir, const <a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a> &amp;toDir)</td></tr>
+<tr class="memitem:acbed8c1d041582ff100473be9ec2db7f" id="r_acbed8c1d041582ff100473be9ec2db7f"><td class="memItemLeft"><a id="acbed8c1d041582ff100473be9ec2db7f" name="acbed8c1d041582ff100473be9ec2db7f"></a>
+static <a class="el" href="#a7912b88060b342c8130921eccba7eb2e">Quat</a>&#160;</td><td class="memItemRight"><b>FromTo</b> (const <a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a> &amp;fromDir, const <a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a> &amp;toDir)</td></tr>
 <tr class="memdesc:acbed8c1d041582ff100473be9ec2db7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">方向ベクトルをfromDirからtoDirに回転するQuaternionの計算 <br /></td></tr>
-<tr class="separator:acbed8c1d041582ff100473be9ec2db7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4c773e493882cc42fdf94964cd2d39e"><td class="memItemLeft" align="right" valign="top"><a id="ad4c773e493882cc42fdf94964cd2d39e" name="ad4c773e493882cc42fdf94964cd2d39e"></a>
-static <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a>&#160;</td><td class="memItemRight" valign="bottom"><b>LookAt</b> (const <a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a> &amp;target, const <a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a> &amp;<a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html#a132a4893277d9fc5185c215bf64217cd">up</a>)</td></tr>
+<tr class="memitem:ad4c773e493882cc42fdf94964cd2d39e" id="r_ad4c773e493882cc42fdf94964cd2d39e"><td class="memItemLeft"><a id="ad4c773e493882cc42fdf94964cd2d39e" name="ad4c773e493882cc42fdf94964cd2d39e"></a>
+static <a class="el" href="#a7912b88060b342c8130921eccba7eb2e">Quat</a>&#160;</td><td class="memItemRight"><b>LookAt</b> (const <a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a> &amp;target, const <a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a> &amp;up)</td></tr>
 <tr class="memdesc:ad4c773e493882cc42fdf94964cd2d39e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ターゲット方向に向けるQuaternionを計算 <br /></td></tr>
-<tr class="separator:ad4c773e493882cc42fdf94964cd2d39e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adccd1cca0587d91654be0ad79b8c73a4"><td class="memItemLeft" align="right" valign="top"><a id="adccd1cca0587d91654be0ad79b8c73a4" name="adccd1cca0587d91654be0ad79b8c73a4"></a>
-static <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Lerp</b> (const <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a> &amp;a, const <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a> &amp;b, f32 t)</td></tr>
+<tr class="memitem:adccd1cca0587d91654be0ad79b8c73a4" id="r_adccd1cca0587d91654be0ad79b8c73a4"><td class="memItemLeft"><a id="adccd1cca0587d91654be0ad79b8c73a4" name="adccd1cca0587d91654be0ad79b8c73a4"></a>
+static <a class="el" href="#a7912b88060b342c8130921eccba7eb2e">Quat</a>&#160;</td><td class="memItemRight"><b>Lerp</b> (const <a class="el" href="#a7912b88060b342c8130921eccba7eb2e">Quat</a> &amp;a, const <a class="el" href="#a7912b88060b342c8130921eccba7eb2e">Quat</a> &amp;b, f32 t)</td></tr>
 <tr class="memdesc:adccd1cca0587d91654be0ad79b8c73a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Quaternionの線形補完 <br /></td></tr>
-<tr class="separator:adccd1cca0587d91654be0ad79b8c73a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c3e9e1d4a7a384473003000b270ca3c"><td class="memItemLeft" align="right" valign="top"><a id="a6c3e9e1d4a7a384473003000b270ca3c" name="a6c3e9e1d4a7a384473003000b270ca3c"></a>
-static <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Slerp</b> (const <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a> &amp;a, const <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a> &amp;b, f32 t)</td></tr>
+<tr class="memitem:a6c3e9e1d4a7a384473003000b270ca3c" id="r_a6c3e9e1d4a7a384473003000b270ca3c"><td class="memItemLeft"><a id="a6c3e9e1d4a7a384473003000b270ca3c" name="a6c3e9e1d4a7a384473003000b270ca3c"></a>
+static <a class="el" href="#a7912b88060b342c8130921eccba7eb2e">Quat</a>&#160;</td><td class="memItemRight"><b>Slerp</b> (const <a class="el" href="#a7912b88060b342c8130921eccba7eb2e">Quat</a> &amp;a, const <a class="el" href="#a7912b88060b342c8130921eccba7eb2e">Quat</a> &amp;b, f32 t)</td></tr>
 <tr class="memdesc:a6c3e9e1d4a7a384473003000b270ca3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Quaternionの球面補完 <br /></td></tr>
-<tr class="separator:a6c3e9e1d4a7a384473003000b270ca3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b6088160b65cf544f75b8ba7102466b"><td class="memItemLeft" align="right" valign="top"><a id="a7b6088160b65cf544f75b8ba7102466b" name="a7b6088160b65cf544f75b8ba7102466b"></a>
-static constexpr f32&#160;</td><td class="memItemRight" valign="bottom"><b>Dot</b> (const <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a> &amp;a, const <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a> &amp;b) noexcept</td></tr>
+<tr class="memitem:a7b6088160b65cf544f75b8ba7102466b" id="r_a7b6088160b65cf544f75b8ba7102466b"><td class="memItemLeft"><a id="a7b6088160b65cf544f75b8ba7102466b" name="a7b6088160b65cf544f75b8ba7102466b"></a>
+static constexpr f32&#160;</td><td class="memItemRight"><b>Dot</b> (const <a class="el" href="#a7912b88060b342c8130921eccba7eb2e">Quat</a> &amp;a, const <a class="el" href="#a7912b88060b342c8130921eccba7eb2e">Quat</a> &amp;b) noexcept</td></tr>
 <tr class="memdesc:a7b6088160b65cf544f75b8ba7102466b"><td class="mdescLeft">&#160;</td><td class="mdescRight">内積 <br /></td></tr>
-<tr class="separator:a7b6088160b65cf544f75b8ba7102466b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 公開変数類</h2></td></tr>
-<tr class="memitem:ad72120a49450ec7f9fd01a267301564b"><td class="memItemLeft" align="right" valign="top"><a id="ad72120a49450ec7f9fd01a267301564b" name="ad72120a49450ec7f9fd01a267301564b"></a>
-f32&#160;</td><td class="memItemRight" valign="bottom"><b>x</b></td></tr>
+<tr class="memitem:ad72120a49450ec7f9fd01a267301564b" id="r_ad72120a49450ec7f9fd01a267301564b"><td class="memItemLeft"><a id="ad72120a49450ec7f9fd01a267301564b" name="ad72120a49450ec7f9fd01a267301564b"></a>
+f32&#160;</td><td class="memItemRight"><b>x</b></td></tr>
 <tr class="memdesc:ad72120a49450ec7f9fd01a267301564b"><td class="mdescLeft">&#160;</td><td class="mdescRight">X成分 <br /></td></tr>
-<tr class="separator:ad72120a49450ec7f9fd01a267301564b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35491cc74c56c5bf83cbf64f3bc4530b"><td class="memItemLeft" align="right" valign="top"><a id="a35491cc74c56c5bf83cbf64f3bc4530b" name="a35491cc74c56c5bf83cbf64f3bc4530b"></a>
-f32&#160;</td><td class="memItemRight" valign="bottom"><b>y</b></td></tr>
+<tr class="memitem:a35491cc74c56c5bf83cbf64f3bc4530b" id="r_a35491cc74c56c5bf83cbf64f3bc4530b"><td class="memItemLeft"><a id="a35491cc74c56c5bf83cbf64f3bc4530b" name="a35491cc74c56c5bf83cbf64f3bc4530b"></a>
+f32&#160;</td><td class="memItemRight"><b>y</b></td></tr>
 <tr class="memdesc:a35491cc74c56c5bf83cbf64f3bc4530b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Y成分 <br /></td></tr>
-<tr class="separator:a35491cc74c56c5bf83cbf64f3bc4530b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6407015e1704eac7c8d959ea87ac931"><td class="memItemLeft" align="right" valign="top"><a id="aa6407015e1704eac7c8d959ea87ac931" name="aa6407015e1704eac7c8d959ea87ac931"></a>
-f32&#160;</td><td class="memItemRight" valign="bottom"><b>z</b></td></tr>
+<tr class="memitem:aa6407015e1704eac7c8d959ea87ac931" id="r_aa6407015e1704eac7c8d959ea87ac931"><td class="memItemLeft"><a id="aa6407015e1704eac7c8d959ea87ac931" name="aa6407015e1704eac7c8d959ea87ac931"></a>
+f32&#160;</td><td class="memItemRight"><b>z</b></td></tr>
 <tr class="memdesc:aa6407015e1704eac7c8d959ea87ac931"><td class="mdescLeft">&#160;</td><td class="mdescRight">Z成分 <br /></td></tr>
-<tr class="separator:aa6407015e1704eac7c8d959ea87ac931"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59dda808557fe3782c2926930838f147"><td class="memItemLeft" align="right" valign="top"><a id="a59dda808557fe3782c2926930838f147" name="a59dda808557fe3782c2926930838f147"></a>
-f32&#160;</td><td class="memItemRight" valign="bottom"><b>w</b></td></tr>
+<tr class="memitem:a59dda808557fe3782c2926930838f147" id="r_a59dda808557fe3782c2926930838f147"><td class="memItemLeft"><a id="a59dda808557fe3782c2926930838f147" name="a59dda808557fe3782c2926930838f147"></a>
+f32&#160;</td><td class="memItemRight"><b>w</b></td></tr>
 <tr class="memdesc:a59dda808557fe3782c2926930838f147"><td class="mdescLeft">&#160;</td><td class="mdescRight">W成分 <br /></td></tr>
-<tr class="separator:a59dda808557fe3782c2926930838f147"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 静的公開変数類</h2></td></tr>
-<tr class="memitem:af7486eb8352759d4ba6c958c22b65af8"><td class="memItemLeft" align="right" valign="top"><a id="af7486eb8352759d4ba6c958c22b65af8" name="af7486eb8352759d4ba6c958c22b65af8"></a>
-static const <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Identity</b></td></tr>
+<tr class="memitem:af7486eb8352759d4ba6c958c22b65af8" id="r_af7486eb8352759d4ba6c958c22b65af8"><td class="memItemLeft"><a id="af7486eb8352759d4ba6c958c22b65af8" name="af7486eb8352759d4ba6c958c22b65af8"></a>
+static const <a class="el" href="#a7912b88060b342c8130921eccba7eb2e">Quat</a>&#160;</td><td class="memItemRight"><b>Identity</b></td></tr>
 <tr class="memdesc:af7486eb8352759d4ba6c958c22b65af8"><td class="mdescLeft">&#160;</td><td class="mdescRight">単位元 <br /></td></tr>
-<tr class="separator:af7486eb8352759d4ba6c958c22b65af8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
 <div class="textblock"><p>クォータニオン(四元数) </p>
 <p>Quaternionは回転を表すのに使用される。 オイラー角と違いジンバルロックがなく、簡単に補完可能である。 Quaternionは複素数に基づいており直感的に理解することは難しい。そのため各成分(x,y,z,w)にアクセスすることは推奨しない。 </p><dl class="section note"><dt>覚え書き</dt><dd>回転へのアクセスや構築はオイラー角表現を通して行うことが推奨される。 </dd></dl>
-</div><h2 class="groupheader">構築子と解体子</h2>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">構築子と解体子</h2>
 <a id="a4f4dea25a212f637253782f85e465aee" name="a4f4dea25a212f637253782f85e465aee"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4f4dea25a212f637253782f85e465aee">&#9670;&#160;</a></span>Quat() <span class="overload">[1/4]</span></h2>
 
@@ -329,44 +305,35 @@ static const <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.htm
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr Amuse::Core::Quat::Quat </td>
+          <td class="memname">Amuse::Core::Quat::Quat </td>
           <td>(</td>
-          <td class="paramtype">f32&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">f32&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">f32&#160;</td>
-          <td class="paramname"><em>z</em>, </td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>z</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">f32&#160;</td>
-          <td class="paramname"><em>w</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>w</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>コンストラクタ(内部値指定) </p>
-<p>与えられた x、y、z、w 成分で新規のクォータニオンを作成します。  </p>
+<p>与えられた x、y、z、w 成分で新規のクォータニオンを作成します。</p>
 
 </div>
 </div>
@@ -379,25 +346,17 @@ static const <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.htm
         <tr>
           <td class="memname">Amuse::Core::Quat::Quat </td>
           <td>(</td>
-          <td class="paramtype">f32&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">f32&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">f32&#160;</td>
-          <td class="paramname"><em>z</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>z</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -426,14 +385,13 @@ static const <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.htm
         <tr>
           <td class="memname">Amuse::Core::Quat::Quat </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../da/d68/struct_amuse_1_1_core_1_1_rot.html">Rot</a> &amp;&#160;</td>
-          <td class="paramname"><em>rotation</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="../../da/d68/struct_amuse_1_1_core_1_1_rot.html">Rot</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>rotation</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -457,19 +415,12 @@ static const <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.htm
         <tr>
           <td class="memname">Amuse::Core::Quat::Quat </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a>&#160;</td>
-          <td class="paramname"><em>axis</em>, </td>
+          <td class="paramtype"><a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a></td>          <td class="paramname"><span class="paramname"><em>axis</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">f32&#160;</td>
-          <td class="paramname"><em>angle</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>angle</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -485,7 +436,7 @@ static const <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.htm
 
 </div>
 </div>
-<h2 class="groupheader">関数詳解</h2>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
 <a id="ab2f0905bace10c1e9568f4bf05203671" name="ab2f0905bace10c1e9568f4bf05203671"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab2f0905bace10c1e9568f4bf05203671">&#9670;&#160;</a></span>axis()</h2>
 
@@ -495,7 +446,7 @@ static const <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.htm
         <tr>
           <td class="memname"><a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a> Amuse::Core::Quat::axis </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -516,26 +467,19 @@ static const <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.htm
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr bool Amuse::Core::Quat::equals </td>
+          <td class="memname">bool Amuse::Core::Quat::equals </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a>&#160;</td>
-          <td class="paramname"><em>v</em>, </td>
+          <td class="paramtype"><a class="el" href="#a7912b88060b342c8130921eccba7eb2e">Quat</a></td>          <td class="paramname"><span class="paramname"><em>v</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">f32&#160;</td>
-          <td class="paramname"><em>tolerance</em> = <code><a class="el" href="../../df/d2e/class_amuse_1_1_core_1_1_math.html#a89b96a0fa0e71dd91f088e9570a71fee">Math::TOLERANCE</a></code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>tolerance</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="../../df/d2e/class_amuse_1_1_core_1_1_math.html#a89b96a0fa0e71dd91f088e9570a71fee">Math::TOLERANCE</a></span>&#160;) const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -560,7 +504,7 @@ static const <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.htm
         <tr>
           <td class="memname">f32 Amuse::Core::Quat::length </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -578,9 +522,9 @@ static const <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.htm
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a> &amp; Amuse::Core::Quat::normalize </td>
+          <td class="memname"><a class="el" href="#a7912b88060b342c8130921eccba7eb2e">Quat</a> &amp; Amuse::Core::Quat::normalize </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -596,11 +540,12 @@ static const <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.htm
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>Amuse</b></li><li class="navelem"><b>Core</b></li><li class="navelem"><a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><b>Core</b></li><li class="navelem"><a href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

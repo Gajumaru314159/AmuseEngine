@@ -3,19 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AmuseEngine: クラスメンバ</title>
+<link rel="icon" href="logo.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="style.css" rel="stylesheet" type="text/css"/>
@@ -36,23 +42,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.6 -->
+<!-- 構築: Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
 });
-/* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -65,10 +93,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('functions_b.html',''); initResizable(); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('functions_b.html','',''); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -92,14 +119,14 @@ $(document).ready(function(){initNavTree('functions_b.html',''); initResizable()
 </div>
 
 <div class="contents">
-<div class="textblock">詳解ありクラスメンバの一覧です。各クラスメンバ詳解へのリンクがあります。</div>
+<div class="textblock">詳解ありクラスメンバの一覧です。各クラスメンバ詳解へのリンクがあります。</div><br/>
+<div class="qindex"><a class="qindex" href="functions.html#index_a">A</a><div class="alphasepar"></div><a class="qindex" href="functions_b.html#index_b">B</a><div class="alphasepar"></div><a class="qindex" href="functions_c.html#index_c">C</a><div class="alphasepar"></div><a class="qindex" href="functions_d.html#index_d">D</a><div class="alphasepar"></div><a class="qindex" href="functions_e.html#index_e">E</a><div class="alphasepar"></div><a class="qindex" href="functions_f.html#index_f">F</a><div class="alphasepar"></div><a class="qindex" href="functions_g.html#index_g">G</a><div class="alphasepar"></div><a class="qindex" href="functions_h.html#index_h">H</a><div class="alphasepar"></div><a class="qindex" href="functions_i.html#index_i">I</a><div class="alphasepar"></div><a class="qindex" href="functions_j.html#index_j">J</a><div class="alphasepar"></div><a class="qindex" href="functions_k.html#index_k">K</a><div class="alphasepar"></div><a class="qindex" href="functions_l.html#index_l">L</a><div class="alphasepar"></div><a class="qindex" href="functions_m.html#index_m">M</a><div class="alphasepar"></div><a class="qindex" href="functions_n.html#index_n">N</a><div class="alphasepar"></div><a class="qindex" href="functions_o.html#index_o">O</a><div class="alphasepar"></div><a class="qindex" href="functions_p.html#index_p">P</a><div class="alphasepar"></div><a class="qindex" href="functions_q.html#index_q">Q</a><div class="alphasepar"></div><a class="qindex" href="functions_r.html#index_r">R</a><div class="alphasepar"></div><a class="qindex" href="functions_s.html#index_s">S</a><div class="alphasepar"></div><a class="qindex" href="functions_t.html#index_t">T</a><div class="alphasepar"></div><a class="qindex" href="functions_u.html#index_u">U</a><div class="alphasepar"></div><a class="qindex" href="functions_v.html#index_v">V</a><div class="alphasepar"></div><a class="qindex" href="functions_w.html#index_w">W</a><div class="alphasepar"></div><a class="qindex" href="functions_x.html#index_x">X</a><div class="alphasepar"></div><a class="qindex" href="functions_y.html#index_y">Y</a><div class="alphasepar"></div><a class="qindex" href="functions_z.html#index_z">Z</a><div class="alphasepar"></div><a class="qindex" href="functions__.html#index__">_</a><div class="alphasepar"></div><a class="qindex" href="functions_~.html#index_~">~</a></div>
 
-<h3><a id="index_b" name="index_b"></a>- b -</h3><ul>
+
+<h3 class="doxsection"><a id="index_b" name="index_b"></a>- b -</h3><ul>
 <li>b&#160;:&#160;<a class="el" href="d9/de4/struct_amuse_1_1_core_1_1_color.html#ade3ce42c41c107425022591c2b7e4a69">Amuse::Core::Color</a>, <a class="el" href="dc/d7f/struct_amuse_1_1_core_1_1_int_color.html#ae4676114c2f1061d787a5db3c4f077e1">Amuse::Core::IntColor</a>, <a class="el" href="d0/da8/struct_amuse_1_1_core_1_1_i_p_address.html#ab96bc515b83e3cace599cedcd9a451c8">Amuse::Core::IPAddress</a></li>
-<li>back()&#160;:&#160;<a class="el" href="d3/dc2/class_amuse_1_1_core_1_1_fixed_vector.html#aca43a9a9483c829be94ea702b00f4192">Amuse::Core::FixedVector&lt; T, N &gt;</a>, <a class="el" href="da/da9/class_amuse_1_1_core_1_1_handle_list.html#a86aabf51ca6f5457a8652b1ad7f6a912">Amuse::Core::HandleList&lt; T &gt;</a>, <a class="el" href="d7/ddc/class_amuse_1_1_core_1_1_index_map.html#a64a4b5f61a92a649844c72fcc3c41281">Amuse::Core::IndexMap&lt; TKey, TValue, THasher, TKeyEqual, TAllocator &gt;</a></li>
-<li>Back&#160;:&#160;<a class="el" href="df/db7/struct_amuse_1_1_core_1_1_int_vec3.html#a92fa4fa37f64be83c04719da1d7da8f8">Amuse::Core::IntVec3</a></li>
-<li>back()&#160;:&#160;<a class="el" href="d3/da5/struct_amuse_1_1_core_1_1_quat.html#aef49d90810efd3242ff11e56240d698b">Amuse::Core::Quat</a>, <a class="el" href="da/d68/struct_amuse_1_1_core_1_1_rot.html#a4e490b78195e6893188e58e687355734">Amuse::Core::Rot</a></li>
-<li>Back&#160;:&#160;<a class="el" href="d7/d02/struct_amuse_1_1_core_1_1_vec3.html#afd5e3eff1534ed363e0c45e0c6469859">Amuse::Core::Vec3</a></li>
+<li>Back&#160;:&#160;<a class="el" href="df/db7/struct_amuse_1_1_core_1_1_int_vec3.html#a92fa4fa37f64be83c04719da1d7da8f8">Amuse::Core::IntVec3</a>, <a class="el" href="d7/d02/struct_amuse_1_1_core_1_1_vec3.html#afd5e3eff1534ed363e0c45e0c6469859">Amuse::Core::Vec3</a></li>
+<li>back()&#160;:&#160;<a class="el" href="d3/dc2/class_amuse_1_1_core_1_1_fixed_vector.html#aca43a9a9483c829be94ea702b00f4192">Amuse::Core::FixedVector&lt; T, N &gt;</a>, <a class="el" href="da/da9/class_amuse_1_1_core_1_1_handle_list.html#a86aabf51ca6f5457a8652b1ad7f6a912">Amuse::Core::HandleList&lt; T &gt;</a>, <a class="el" href="d7/ddc/class_amuse_1_1_core_1_1_index_map.html#a64a4b5f61a92a649844c72fcc3c41281">Amuse::Core::IndexMap&lt; TKey, TValue, THasher, TKeyEqual, TAllocator &gt;</a>, <a class="el" href="d3/da5/struct_amuse_1_1_core_1_1_quat.html#aef49d90810efd3242ff11e56240d698b">Amuse::Core::Quat</a>, <a class="el" href="da/d68/struct_amuse_1_1_core_1_1_rot.html#a4e490b78195e6893188e58e687355734">Amuse::Core::Rot</a></li>
 <li>base&#160;:&#160;<a class="el" href="d7/d1b/struct_amuse_1_1_r_h_i_1_1_buffer_view_desc.html#a8217dbc4eb7baddd93a302276b4badf8">Amuse::RHI::BufferViewDesc</a>, <a class="el" href="d5/d16/struct_amuse_1_1_r_h_i_1_1_texture_view_desc.html#addfbffbc2e0f2ec7edc445d9822a268f">Amuse::RHI::TextureViewDesc</a></li>
 <li>base_type&#160;:&#160;<a class="el" href="d6/d91/class_amuse_1_1_core_1_1_bitmap.html#a55b7eb5834342b590ddfd93683f7aca8">Amuse::Core::Bitmap</a>, <a class="el" href="df/d96/class_amuse_1_1_core_1_1_blob.html#a480918dfa0d64364cad6a6ac431ca427">Amuse::Core::Blob</a></li>
 <li>baseArrayLayer&#160;:&#160;<a class="el" href="d3/df1/struct_amuse_1_1_r_h_i_1_1_texture_subresource_range.html#ac994f292435361a89778a46362e36f6c">Amuse::RHI::TextureSubresourceRange</a></li>
@@ -125,20 +152,20 @@ $(document).ready(function(){initNavTree('functions_b.html',''); initResizable()
 <li>bindReleased()&#160;:&#160;<a class="el" href="db/dab/class_amuse_1_1_input_1_1_button.html#a84fdb922ac0ba589acf2723dc245bfb8">Amuse::Input::Button</a></li>
 <li>bindUp()&#160;:&#160;<a class="el" href="db/dab/class_amuse_1_1_input_1_1_button.html#a58c1b55f31d709d0f701f58561d37289">Amuse::Input::Button</a></li>
 <li>BitFlags()&#160;:&#160;<a class="el" href="d8/d40/class_amuse_1_1_core_1_1_bit_flags.html#af1a63d68988a6723fb0963a604807d91">Amuse::Core::BitFlags&lt; TEnum, TBitsType &gt;</a></li>
-<li>Bitmap()&#160;:&#160;<a class="el" href="d6/d91/class_amuse_1_1_core_1_1_bitmap.html#a2de13b4b7c8ac82f62957428869ad035">Amuse::Core::Bitmap</a></li>
+<li>Bitmap()&#160;:&#160;<a class="el" href="d6/d91/class_amuse_1_1_core_1_1_bitmap.html#abe05ae559e11f6a0d98a4907f2c45582">Amuse::Core::Bitmap</a></li>
 <li>bl()&#160;:&#160;<a class="el" href="d9/dbf/struct_amuse_1_1_core_1_1_int_rect.html#ab6399998e358a4de2a1abf727e5bd8b3">Amuse::Core::IntRect</a>, <a class="el" href="d4/d7f/struct_amuse_1_1_core_1_1_margin.html#a895a30dfa78e307bbf9beea75535cf95">Amuse::Core::Margin</a>, <a class="el" href="d8/d17/struct_amuse_1_1_core_1_1_rect.html#ace8c319be19fa40e3c0da519814c78c4">Amuse::Core::Rect</a></li>
 <li>Black&#160;:&#160;<a class="el" href="d9/de4/struct_amuse_1_1_core_1_1_color.html#a278aff2b97d91ed6717bc92f514a907f">Amuse::Core::Color</a>, <a class="el" href="d3/d4e/struct_amuse_1_1_core_1_1_h_s_v.html#ac6444980e3e9d6c1a693eb17ff7e6d03">Amuse::Core::HSV</a>, <a class="el" href="dc/d7f/struct_amuse_1_1_core_1_1_int_color.html#af7e2180dcae9e505011084b427ae44cd">Amuse::Core::IntColor</a>, <a class="el" href="de/d60/class_amuse_1_1_r_h_i_1_1_texture.html#aeaab00323a3268da399db11388e985b0">Amuse::RHI::Texture</a></li>
 <li>blend&#160;:&#160;<a class="el" href="de/d3f/struct_amuse_1_1_r_h_i_1_1_pipeline_state_desc.html#ad30e8865c953b96066edba8a434d48ec">Amuse::RHI::PipelineStateDesc</a></li>
 <li>BlendDesc()&#160;:&#160;<a class="el" href="d2/df6/struct_amuse_1_1_r_h_i_1_1_blend_desc.html#aa475097c75b84cfc5dfdb387700dbecd">Amuse::RHI::BlendDesc</a></li>
 <li>blendEnable&#160;:&#160;<a class="el" href="d2/df6/struct_amuse_1_1_r_h_i_1_1_blend_desc.html#af81776a60b73569c71569654baf9faf9">Amuse::RHI::BlendDesc</a></li>
-<li>Blob()&#160;:&#160;<a class="el" href="df/d96/class_amuse_1_1_core_1_1_blob.html#a0aacb858dac60b4ff9f266169af756d5">Amuse::Core::Blob</a></li>
+<li>Blob()&#160;:&#160;<a class="el" href="df/d96/class_amuse_1_1_core_1_1_blob.html#a6e12721dde67362d8a16aa6f7f38d6ea">Amuse::Core::Blob</a></li>
 <li>blob&#160;:&#160;<a class="el" href="d7/d56/struct_amuse_1_1_r_h_i_1_1_set_root_constants_param.html#a1662f3bdd2dec0fe125048910e9b9d80">Amuse::RHI::SetRootConstantsParam</a></li>
 <li>BlobView()&#160;:&#160;<a class="el" href="d6/d80/class_amuse_1_1_core_1_1_blob_view.html#a55fcc5c54bb72d7a3d8b45f2843c445a">Amuse::Core::BlobView</a></li>
 <li>Blue&#160;:&#160;<a class="el" href="d9/de4/struct_amuse_1_1_core_1_1_color.html#a8327a3c37cfd712c81a0570c77648e1c">Amuse::Core::Color</a>, <a class="el" href="d3/d4e/struct_amuse_1_1_core_1_1_h_s_v.html#a46e6c6f415ce3a42af84cbfc8a4e72bc">Amuse::Core::HSV</a>, <a class="el" href="dc/d7f/struct_amuse_1_1_core_1_1_int_color.html#aa7904dc691eec9fd50efc2ee7ffb51f0">Amuse::Core::IntColor</a></li>
 <li>bottom&#160;:&#160;<a class="el" href="db/d2e/struct_amuse_1_1_core_1_1_frustum.html#a3e476c78926a5cf6e47c8f28a77a0d3f">Amuse::Core::Frustum</a>, <a class="el" href="d9/dbf/struct_amuse_1_1_core_1_1_int_rect.html#aa9f3d6043cc57e30d1776e8812a795aa">Amuse::Core::IntRect</a>, <a class="el" href="d4/d7f/struct_amuse_1_1_core_1_1_margin.html#a324099e38028c63d9d54c6e963f8122a">Amuse::Core::Margin</a>, <a class="el" href="d8/d17/struct_amuse_1_1_core_1_1_rect.html#acf8f69e780121e4d755834d28c99812e">Amuse::Core::Rect</a>, <a class="el" href="d0/d65/struct_amuse_1_1_core_1_1_viewport.html#addddb89155dba9e7f60e26ca20547e69">Amuse::Core::Viewport</a></li>
 <li>bottomCenter()&#160;:&#160;<a class="el" href="d9/dbf/struct_amuse_1_1_core_1_1_int_rect.html#a4de2110de761cc2d01ff814b06dfab75">Amuse::Core::IntRect</a>, <a class="el" href="d8/d17/struct_amuse_1_1_core_1_1_rect.html#a09eba51f2dfa0eb96974a4157ae86135">Amuse::Core::Rect</a></li>
-<li>box&#160;:&#160;<a class="el" href="d3/d82/struct_amuse_1_1_core_1_1_bounds.html#a8e2910174cc09edb1eedb6c6d430aa5c">Amuse::Core::Bounds</a></li>
 <li>Box()&#160;:&#160;<a class="el" href="d4/d7d/struct_amuse_1_1_core_1_1_box.html#a993c4a37848aec67cb01d3c7ddfbfb2d">Amuse::Core::Box</a></li>
+<li>box&#160;:&#160;<a class="el" href="d3/d82/struct_amuse_1_1_core_1_1_bounds.html#a8e2910174cc09edb1eedb6c6d430aa5c">Amuse::Core::Bounds</a></li>
 <li>br()&#160;:&#160;<a class="el" href="d9/dbf/struct_amuse_1_1_core_1_1_int_rect.html#a98cf62e21c33caa69142c76ad6e18075">Amuse::Core::IntRect</a>, <a class="el" href="d4/d7f/struct_amuse_1_1_core_1_1_margin.html#ab66ff9c5f93684164c14208b151a171d">Amuse::Core::Margin</a>, <a class="el" href="d8/d17/struct_amuse_1_1_core_1_1_rect.html#ac53428447776efd20602f82514ffe74e">Amuse::Core::Rect</a></li>
 <li>breakWithWarning&#160;:&#160;<a class="el" href="da/dbf/struct_amuse_1_1_r_h_i_1_1_direct_x12_r_h_i_config.html#a8ee3ec422c4eeb3a98a22f4a843718ef">Amuse::RHI::DirectX12RHIConfig</a></li>
 <li>buffer&#160;:&#160;<a class="el" href="d0/d0b/struct_amuse_1_1_r_h_i_1_1_buffer_barrier.html#abee5ff3003585662d2ddb23b26daa535">Amuse::RHI::BufferBarrier</a>, <a class="el" href="dd/d41/struct_amuse_1_1_r_h_i_1_1_buffer_texture_copy_region.html#ac29bde8463413b6861a384d8b809b28a">Amuse::RHI::BufferTextureCopyRegion</a>, <a class="el" href="de/d62/struct_amuse_1_1_r_h_i_1_1_graphic_file_request_1_1_buffer_desc.html#a897ead1559e7066ca8e02d46e531bdfb">Amuse::RHI::GraphicFileRequest::BufferDesc</a></li>
@@ -152,10 +179,11 @@ $(document).ready(function(){initNavTree('functions_b.html',''); initResizable()
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

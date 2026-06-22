@@ -3,19 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AmuseEngine: Amuse::Core::Rot 構造体</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../jquery.js"></script>
-<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
 <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
 <script type="text/javascript" src="../../navtreedata.js"></script>
 <script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="../../style.css" rel="stylesheet" type="text/css"/>
@@ -36,23 +42,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.6 -->
+<!-- 構築: Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('../../',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
 });
-/* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -65,10 +93,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('da/d68/struct_amuse_1_1_core_1_1_rot.html','../../'); initResizable(); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('da/d68/struct_amuse_1_1_core_1_1_rot.html','../../','d5/d08/struct_amuse_1_1_core_1_1_rot-members'); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -102,102 +129,82 @@ $(document).ready(function(){initNavTree('da/d68/struct_amuse_1_1_core_1_1_rot.h
 <div class="contents">
 
 <p>オイラー回転を表す構造体  
- <a href="../../da/d68/struct_amuse_1_1_core_1_1_rot.html#details">[詳解]</a></p>
+ <a href="#details">[詳解]</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d9/dd4/_rotation_8h_source.html">Rotation.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:a2747bcf8c5af2b8634a418c1885cf69f"><td class="memItemLeft" align="right" valign="top"><a id="a2747bcf8c5af2b8634a418c1885cf69f" name="a2747bcf8c5af2b8634a418c1885cf69f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Rot</b> () noexcept</td></tr>
+<tr class="memitem:a2747bcf8c5af2b8634a418c1885cf69f" id="r_a2747bcf8c5af2b8634a418c1885cf69f"><td class="memItemLeft"><a id="a2747bcf8c5af2b8634a418c1885cf69f" name="a2747bcf8c5af2b8634a418c1885cf69f"></a>
+&#160;</td><td class="memItemRight"><b>Rot</b> () noexcept</td></tr>
 <tr class="memdesc:a2747bcf8c5af2b8634a418c1885cf69f"><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトコンストラクタ(初期化なし) <br /></td></tr>
-<tr class="separator:a2747bcf8c5af2b8634a418c1885cf69f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2cda5e851168613f5215b70ca0856cd7"><td class="memItemLeft" align="right" valign="top"><a id="a2cda5e851168613f5215b70ca0856cd7" name="a2cda5e851168613f5215b70ca0856cd7"></a>
-constexpr&#160;</td><td class="memItemRight" valign="bottom"><b>Rot</b> (f32 <a class="el" href="../../da/d68/struct_amuse_1_1_core_1_1_rot.html#aeefeb206190e4b2acbc0ce6163db7f2a">x</a>, f32 <a class="el" href="../../da/d68/struct_amuse_1_1_core_1_1_rot.html#a3992437e7aea9ce32d767f5dba0b9234">y</a>, f32 <a class="el" href="../../da/d68/struct_amuse_1_1_core_1_1_rot.html#a0f00192fd9efdebf1c41c25dbb8dfdfa">z</a>) noexcept</td></tr>
+<tr class="memitem:a2cda5e851168613f5215b70ca0856cd7" id="r_a2cda5e851168613f5215b70ca0856cd7"><td class="memItemLeft"><a id="a2cda5e851168613f5215b70ca0856cd7" name="a2cda5e851168613f5215b70ca0856cd7"></a>
+constexpr&#160;</td><td class="memItemRight"><b>Rot</b> (f32 x, f32 y, f32 z) noexcept</td></tr>
 <tr class="memdesc:a2cda5e851168613f5215b70ca0856cd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ(x/y/z指定) <br /></td></tr>
-<tr class="separator:a2cda5e851168613f5215b70ca0856cd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd89e8046d6ecae9687be03782b08a28"><td class="memItemLeft" align="right" valign="top"><a id="acd89e8046d6ecae9687be03782b08a28" name="acd89e8046d6ecae9687be03782b08a28"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Rot</b> (const <a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a> &amp;vec) noexcept</td></tr>
+<tr class="memitem:acd89e8046d6ecae9687be03782b08a28" id="r_acd89e8046d6ecae9687be03782b08a28"><td class="memItemLeft"><a id="acd89e8046d6ecae9687be03782b08a28" name="acd89e8046d6ecae9687be03782b08a28"></a>
+&#160;</td><td class="memItemRight"><b>Rot</b> (const <a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a> &amp;vec) noexcept</td></tr>
 <tr class="memdesc:acd89e8046d6ecae9687be03782b08a28"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ(Vec3指定) <br /></td></tr>
-<tr class="separator:acd89e8046d6ecae9687be03782b08a28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92129be3e55be821b2a41968a995bef8"><td class="memItemLeft" align="right" valign="top"><a id="a92129be3e55be821b2a41968a995bef8" name="a92129be3e55be821b2a41968a995bef8"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Rot</b> (const <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a> &amp;quat)</td></tr>
+<tr class="memitem:a92129be3e55be821b2a41968a995bef8" id="r_a92129be3e55be821b2a41968a995bef8"><td class="memItemLeft"><a id="a92129be3e55be821b2a41968a995bef8" name="a92129be3e55be821b2a41968a995bef8"></a>
+&#160;</td><td class="memItemRight"><b>Rot</b> (const <a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a> &amp;quat)</td></tr>
 <tr class="memdesc:a92129be3e55be821b2a41968a995bef8"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ(Quat指定) <br /></td></tr>
-<tr class="separator:a92129be3e55be821b2a41968a995bef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa34c0639451907832788acab441278ae"><td class="memItemLeft" align="right" valign="top"><a id="aa34c0639451907832788acab441278ae" name="aa34c0639451907832788acab441278ae"></a>
-constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="../../da/d68/struct_amuse_1_1_core_1_1_rot.html">Rot</a> &amp;rhs) const noexcept</td></tr>
+<tr class="memitem:aa34c0639451907832788acab441278ae" id="r_aa34c0639451907832788acab441278ae"><td class="memItemLeft"><a id="aa34c0639451907832788acab441278ae" name="aa34c0639451907832788acab441278ae"></a>
+constexpr bool&#160;</td><td class="memItemRight"><b>operator==</b> (const <a class="el" href="#a2747bcf8c5af2b8634a418c1885cf69f">Rot</a> &amp;rhs) const noexcept</td></tr>
 <tr class="memdesc:aa34c0639451907832788acab441278ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">等価演算子 <br /></td></tr>
-<tr class="separator:aa34c0639451907832788acab441278ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b2e0d638e9295b9129696ce6a3c447d"><td class="memItemLeft" align="right" valign="top"><a id="a6b2e0d638e9295b9129696ce6a3c447d" name="a6b2e0d638e9295b9129696ce6a3c447d"></a>
-constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="../../da/d68/struct_amuse_1_1_core_1_1_rot.html">Rot</a> &amp;rhs) const noexcept</td></tr>
+<tr class="memitem:a6b2e0d638e9295b9129696ce6a3c447d" id="r_a6b2e0d638e9295b9129696ce6a3c447d"><td class="memItemLeft"><a id="a6b2e0d638e9295b9129696ce6a3c447d" name="a6b2e0d638e9295b9129696ce6a3c447d"></a>
+constexpr bool&#160;</td><td class="memItemRight"><b>operator!=</b> (const <a class="el" href="#a2747bcf8c5af2b8634a418c1885cf69f">Rot</a> &amp;rhs) const noexcept</td></tr>
 <tr class="memdesc:a6b2e0d638e9295b9129696ce6a3c447d"><td class="mdescLeft">&#160;</td><td class="mdescRight">等価演算子 <br /></td></tr>
-<tr class="separator:a6b2e0d638e9295b9129696ce6a3c447d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3529656637d9aa32164ac3f31728d7e6"><td class="memItemLeft" align="right" valign="top"><a id="a3529656637d9aa32164ac3f31728d7e6" name="a3529656637d9aa32164ac3f31728d7e6"></a>
-<a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a>&#160;</td><td class="memItemRight" valign="bottom"><b>toQuat</b> () const</td></tr>
+<tr class="memitem:a3529656637d9aa32164ac3f31728d7e6" id="r_a3529656637d9aa32164ac3f31728d7e6"><td class="memItemLeft"><a id="a3529656637d9aa32164ac3f31728d7e6" name="a3529656637d9aa32164ac3f31728d7e6"></a>
+<a class="el" href="../../d3/da5/struct_amuse_1_1_core_1_1_quat.html">Quat</a>&#160;</td><td class="memItemRight"><b>toQuat</b> () const</td></tr>
 <tr class="memdesc:a3529656637d9aa32164ac3f31728d7e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Quatに変換 <br /></td></tr>
-<tr class="separator:a3529656637d9aa32164ac3f31728d7e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0cae94b5cc0f0e0c89c3505861c709d"><td class="memItemLeft" align="right" valign="top"><a id="ad0cae94b5cc0f0e0c89c3505861c709d" name="ad0cae94b5cc0f0e0c89c3505861c709d"></a>
-<a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>toVec3</b> () const</td></tr>
+<tr class="memitem:ad0cae94b5cc0f0e0c89c3505861c709d" id="r_ad0cae94b5cc0f0e0c89c3505861c709d"><td class="memItemLeft"><a id="ad0cae94b5cc0f0e0c89c3505861c709d" name="ad0cae94b5cc0f0e0c89c3505861c709d"></a>
+<a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a>&#160;</td><td class="memItemRight"><b>toVec3</b> () const</td></tr>
 <tr class="memdesc:ad0cae94b5cc0f0e0c89c3505861c709d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Quatに変換 <br /></td></tr>
-<tr class="separator:ad0cae94b5cc0f0e0c89c3505861c709d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f7a994e4f0ec9e95bb95a5d84a59417"><td class="memItemLeft" align="right" valign="top"><a id="a4f7a994e4f0ec9e95bb95a5d84a59417" name="a4f7a994e4f0ec9e95bb95a5d84a59417"></a>
-<a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>front</b> () const</td></tr>
+<tr class="memitem:a4f7a994e4f0ec9e95bb95a5d84a59417" id="r_a4f7a994e4f0ec9e95bb95a5d84a59417"><td class="memItemLeft"><a id="a4f7a994e4f0ec9e95bb95a5d84a59417" name="a4f7a994e4f0ec9e95bb95a5d84a59417"></a>
+<a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a>&#160;</td><td class="memItemRight"><b>front</b> () const</td></tr>
 <tr class="memdesc:a4f7a994e4f0ec9e95bb95a5d84a59417"><td class="mdescLeft">&#160;</td><td class="mdescRight">正面ベクトルを取得 <br /></td></tr>
-<tr class="separator:a4f7a994e4f0ec9e95bb95a5d84a59417"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e490b78195e6893188e58e687355734"><td class="memItemLeft" align="right" valign="top"><a id="a4e490b78195e6893188e58e687355734" name="a4e490b78195e6893188e58e687355734"></a>
-<a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>back</b> () const</td></tr>
+<tr class="memitem:a4e490b78195e6893188e58e687355734" id="r_a4e490b78195e6893188e58e687355734"><td class="memItemLeft"><a id="a4e490b78195e6893188e58e687355734" name="a4e490b78195e6893188e58e687355734"></a>
+<a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a>&#160;</td><td class="memItemRight"><b>back</b> () const</td></tr>
 <tr class="memdesc:a4e490b78195e6893188e58e687355734"><td class="mdescLeft">&#160;</td><td class="mdescRight">背面ベクトルを取得 <br /></td></tr>
-<tr class="separator:a4e490b78195e6893188e58e687355734"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a187125773de66cfa62e74d9b2fd6a0f5"><td class="memItemLeft" align="right" valign="top"><a id="a187125773de66cfa62e74d9b2fd6a0f5" name="a187125773de66cfa62e74d9b2fd6a0f5"></a>
-<a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>up</b> () const</td></tr>
+<tr class="memitem:a187125773de66cfa62e74d9b2fd6a0f5" id="r_a187125773de66cfa62e74d9b2fd6a0f5"><td class="memItemLeft"><a id="a187125773de66cfa62e74d9b2fd6a0f5" name="a187125773de66cfa62e74d9b2fd6a0f5"></a>
+<a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a>&#160;</td><td class="memItemRight"><b>up</b> () const</td></tr>
 <tr class="memdesc:a187125773de66cfa62e74d9b2fd6a0f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">上ベクトルを取得 <br /></td></tr>
-<tr class="separator:a187125773de66cfa62e74d9b2fd6a0f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a240eac0031c9a4d471e637d2bc7b491f"><td class="memItemLeft" align="right" valign="top"><a id="a240eac0031c9a4d471e637d2bc7b491f" name="a240eac0031c9a4d471e637d2bc7b491f"></a>
-<a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>down</b> () const</td></tr>
+<tr class="memitem:a240eac0031c9a4d471e637d2bc7b491f" id="r_a240eac0031c9a4d471e637d2bc7b491f"><td class="memItemLeft"><a id="a240eac0031c9a4d471e637d2bc7b491f" name="a240eac0031c9a4d471e637d2bc7b491f"></a>
+<a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a>&#160;</td><td class="memItemRight"><b>down</b> () const</td></tr>
 <tr class="memdesc:a240eac0031c9a4d471e637d2bc7b491f"><td class="mdescLeft">&#160;</td><td class="mdescRight">下ベクトルを取得 <br /></td></tr>
-<tr class="separator:a240eac0031c9a4d471e637d2bc7b491f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c3c33f511700ad0c52da403f4f4c32b"><td class="memItemLeft" align="right" valign="top"><a id="a7c3c33f511700ad0c52da403f4f4c32b" name="a7c3c33f511700ad0c52da403f4f4c32b"></a>
-<a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>left</b> () const</td></tr>
+<tr class="memitem:a7c3c33f511700ad0c52da403f4f4c32b" id="r_a7c3c33f511700ad0c52da403f4f4c32b"><td class="memItemLeft"><a id="a7c3c33f511700ad0c52da403f4f4c32b" name="a7c3c33f511700ad0c52da403f4f4c32b"></a>
+<a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a>&#160;</td><td class="memItemRight"><b>left</b> () const</td></tr>
 <tr class="memdesc:a7c3c33f511700ad0c52da403f4f4c32b"><td class="mdescLeft">&#160;</td><td class="mdescRight">左ベクトルを取得 <br /></td></tr>
-<tr class="separator:a7c3c33f511700ad0c52da403f4f4c32b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63f08fa4435e68aaf1384182e98384a2"><td class="memItemLeft" align="right" valign="top"><a id="a63f08fa4435e68aaf1384182e98384a2" name="a63f08fa4435e68aaf1384182e98384a2"></a>
-<a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>right</b> () const</td></tr>
+<tr class="memitem:a63f08fa4435e68aaf1384182e98384a2" id="r_a63f08fa4435e68aaf1384182e98384a2"><td class="memItemLeft"><a id="a63f08fa4435e68aaf1384182e98384a2" name="a63f08fa4435e68aaf1384182e98384a2"></a>
+<a class="el" href="../../d7/d02/struct_amuse_1_1_core_1_1_vec3.html">Vec3</a>&#160;</td><td class="memItemRight"><b>right</b> () const</td></tr>
 <tr class="memdesc:a63f08fa4435e68aaf1384182e98384a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">右ベクトルを取得 <br /></td></tr>
-<tr class="separator:a63f08fa4435e68aaf1384182e98384a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae72a135f7aa032b6171244557f5b79dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d68/struct_amuse_1_1_core_1_1_rot.html">Rot</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d68/struct_amuse_1_1_core_1_1_rot.html#ae72a135f7aa032b6171244557f5b79dd">normalize</a> ()</td></tr>
+<tr class="memitem:ae72a135f7aa032b6171244557f5b79dd" id="r_ae72a135f7aa032b6171244557f5b79dd"><td class="memItemLeft"><a class="el" href="#a2747bcf8c5af2b8634a418c1885cf69f">Rot</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ae72a135f7aa032b6171244557f5b79dd">normalize</a> ()</td></tr>
 <tr class="memdesc:ae72a135f7aa032b6171244557f5b79dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">正規化  <br /></td></tr>
-<tr class="separator:ae72a135f7aa032b6171244557f5b79dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e2cbaa31a21d0b6b15502f3f70afa1d"><td class="memItemLeft" align="right" valign="top"><a id="a2e2cbaa31a21d0b6b15502f3f70afa1d" name="a2e2cbaa31a21d0b6b15502f3f70afa1d"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isNaN</b> () const</td></tr>
+<tr class="memitem:a2e2cbaa31a21d0b6b15502f3f70afa1d" id="r_a2e2cbaa31a21d0b6b15502f3f70afa1d"><td class="memItemLeft"><a id="a2e2cbaa31a21d0b6b15502f3f70afa1d" name="a2e2cbaa31a21d0b6b15502f3f70afa1d"></a>
+bool&#160;</td><td class="memItemRight"><b>isNaN</b> () const</td></tr>
 <tr class="memdesc:a2e2cbaa31a21d0b6b15502f3f70afa1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">NaNを含むか <br /></td></tr>
-<tr class="separator:a2e2cbaa31a21d0b6b15502f3f70afa1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 公開変数類</h2></td></tr>
-<tr class="memitem:aeefeb206190e4b2acbc0ce6163db7f2a"><td class="memItemLeft" align="right" valign="top"><a id="aeefeb206190e4b2acbc0ce6163db7f2a" name="aeefeb206190e4b2acbc0ce6163db7f2a"></a>
-f32&#160;</td><td class="memItemRight" valign="bottom"><b>x</b></td></tr>
+<tr class="memitem:aeefeb206190e4b2acbc0ce6163db7f2a" id="r_aeefeb206190e4b2acbc0ce6163db7f2a"><td class="memItemLeft"><a id="aeefeb206190e4b2acbc0ce6163db7f2a" name="aeefeb206190e4b2acbc0ce6163db7f2a"></a>
+f32&#160;</td><td class="memItemRight"><b>x</b></td></tr>
 <tr class="memdesc:aeefeb206190e4b2acbc0ce6163db7f2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">X軸回転量(Deg) <br /></td></tr>
-<tr class="separator:aeefeb206190e4b2acbc0ce6163db7f2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3992437e7aea9ce32d767f5dba0b9234"><td class="memItemLeft" align="right" valign="top"><a id="a3992437e7aea9ce32d767f5dba0b9234" name="a3992437e7aea9ce32d767f5dba0b9234"></a>
-f32&#160;</td><td class="memItemRight" valign="bottom"><b>y</b></td></tr>
+<tr class="memitem:a3992437e7aea9ce32d767f5dba0b9234" id="r_a3992437e7aea9ce32d767f5dba0b9234"><td class="memItemLeft"><a id="a3992437e7aea9ce32d767f5dba0b9234" name="a3992437e7aea9ce32d767f5dba0b9234"></a>
+f32&#160;</td><td class="memItemRight"><b>y</b></td></tr>
 <tr class="memdesc:a3992437e7aea9ce32d767f5dba0b9234"><td class="mdescLeft">&#160;</td><td class="mdescRight">Y軸回転量(Deg) <br /></td></tr>
-<tr class="separator:a3992437e7aea9ce32d767f5dba0b9234"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f00192fd9efdebf1c41c25dbb8dfdfa"><td class="memItemLeft" align="right" valign="top"><a id="a0f00192fd9efdebf1c41c25dbb8dfdfa" name="a0f00192fd9efdebf1c41c25dbb8dfdfa"></a>
-f32&#160;</td><td class="memItemRight" valign="bottom"><b>z</b></td></tr>
+<tr class="memitem:a0f00192fd9efdebf1c41c25dbb8dfdfa" id="r_a0f00192fd9efdebf1c41c25dbb8dfdfa"><td class="memItemLeft"><a id="a0f00192fd9efdebf1c41c25dbb8dfdfa" name="a0f00192fd9efdebf1c41c25dbb8dfdfa"></a>
+f32&#160;</td><td class="memItemRight"><b>z</b></td></tr>
 <tr class="memdesc:a0f00192fd9efdebf1c41c25dbb8dfdfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Z軸回転量(Deg) <br /></td></tr>
-<tr class="separator:a0f00192fd9efdebf1c41c25dbb8dfdfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 静的公開変数類</h2></td></tr>
-<tr class="memitem:a26a50e651814e9b718ef2a06974377b2"><td class="memItemLeft" align="right" valign="top"><a id="a26a50e651814e9b718ef2a06974377b2" name="a26a50e651814e9b718ef2a06974377b2"></a>
-static const <a class="el" href="../../da/d68/struct_amuse_1_1_core_1_1_rot.html">Rot</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Identity</b></td></tr>
+<tr class="memitem:a26a50e651814e9b718ef2a06974377b2" id="r_a26a50e651814e9b718ef2a06974377b2"><td class="memItemLeft"><a id="a26a50e651814e9b718ef2a06974377b2" name="a26a50e651814e9b718ef2a06974377b2"></a>
+static const <a class="el" href="#a2747bcf8c5af2b8634a418c1885cf69f">Rot</a>&#160;</td><td class="memItemRight"><b>Identity</b></td></tr>
 <tr class="memdesc:a26a50e651814e9b718ef2a06974377b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">無回転 <br /></td></tr>
-<tr class="separator:a26a50e651814e9b718ef2a06974377b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
 <div class="textblock"><p>オイラー回転を表す構造体 </p>
 <p>回転はZXYの順に行われる。内部の値は度数法で表される。 </p>
-</div><h2 class="groupheader">関数詳解</h2>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
 <a id="ae72a135f7aa032b6171244557f5b79dd" name="ae72a135f7aa032b6171244557f5b79dd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae72a135f7aa032b6171244557f5b79dd">&#9670;&#160;</a></span>normalize()</h2>
 
@@ -205,9 +212,9 @@ static const <a class="el" href="../../da/d68/struct_amuse_1_1_core_1_1_rot.html
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../da/d68/struct_amuse_1_1_core_1_1_rot.html">Rot</a> &amp; Amuse::Core::Rot::normalize </td>
+          <td class="memname"><a class="el" href="#a2747bcf8c5af2b8634a418c1885cf69f">Rot</a> &amp; Amuse::Core::Rot::normalize </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -223,11 +230,12 @@ static const <a class="el" href="../../da/d68/struct_amuse_1_1_core_1_1_rot.html
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>Amuse</b></li><li class="navelem"><b>Core</b></li><li class="navelem"><a class="el" href="../../da/d68/struct_amuse_1_1_core_1_1_rot.html">Rot</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><b>Core</b></li><li class="navelem"><a href="../../da/d68/struct_amuse_1_1_core_1_1_rot.html">Rot</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

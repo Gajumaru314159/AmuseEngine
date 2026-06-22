@@ -3,19 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AmuseEngine: Amuse::Core::Task クラス</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../jquery.js"></script>
-<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
 <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
 <script type="text/javascript" src="../../navtreedata.js"></script>
 <script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="../../style.css" rel="stylesheet" type="text/css"/>
@@ -36,23 +42,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.6 -->
+<!-- 構築: Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('../../',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
 });
-/* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -65,10 +93,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('db/d92/class_amuse_1_1_core_1_1_task.html','../../'); initResizable(); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('db/d92/class_amuse_1_1_core_1_1_task.html','../../','d8/d8f/class_amuse_1_1_core_1_1_task-members'); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -102,100 +129,82 @@ $(document).ready(function(){initNavTree('db/d92/class_amuse_1_1_core_1_1_task.h
 <div class="contents">
 
 <p>非同期タスクを表す。  
- <a href="../../db/d92/class_amuse_1_1_core_1_1_task.html#details">[詳解]</a></p>
+ <a href="#details">[詳解]</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d4/dfa/_scheduler_8h_source.html">Scheduler.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:add0baed5851908abba87c32eed48e1f7"><td class="memItemLeft" align="right" valign="top"><a id="add0baed5851908abba87c32eed48e1f7" name="add0baed5851908abba87c32eed48e1f7"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Task</b> ()=default</td></tr>
+<tr class="memitem:add0baed5851908abba87c32eed48e1f7" id="r_add0baed5851908abba87c32eed48e1f7"><td class="memItemLeft"><a id="add0baed5851908abba87c32eed48e1f7" name="add0baed5851908abba87c32eed48e1f7"></a>
+&#160;</td><td class="memItemRight"><b>Task</b> ()=default</td></tr>
 <tr class="memdesc:add0baed5851908abba87c32eed48e1f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">空のタスクハンドルを作成 <br /></td></tr>
-<tr class="separator:add0baed5851908abba87c32eed48e1f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa765132a520382f4efce916b46a65e8d"><td class="memItemLeft" align="right" valign="top"><a id="aa765132a520382f4efce916b46a65e8d" name="aa765132a520382f4efce916b46a65e8d"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> (<a class="el" href="../../d1/dcf/class_amuse_1_1_core_1_1_string_view_base.html">StringView</a> name) -&gt; <a class="el" href="../../db/d92/class_amuse_1_1_core_1_1_task.html">Task</a> &amp;</td></tr>
+<tr class="memitem:aa765132a520382f4efce916b46a65e8d" id="r_aa765132a520382f4efce916b46a65e8d"><td class="memItemLeft"><a id="aa765132a520382f4efce916b46a65e8d" name="aa765132a520382f4efce916b46a65e8d"></a>
+auto&#160;</td><td class="memItemRight"><b>name</b> (StringView name) -&gt; <a class="el" href="#add0baed5851908abba87c32eed48e1f7">Task</a> &amp;</td></tr>
 <tr class="memdesc:aa765132a520382f4efce916b46a65e8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">表示名を設定 <br /></td></tr>
-<tr class="separator:aa765132a520382f4efce916b46a65e8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaac271042e6013fdf2d70d8d7129c1e0"><td class="memTemplParams" colspan="2">template&lt;class Label &gt; </td></tr>
-<tr class="memitem:aaac271042e6013fdf2d70d8d7129c1e0"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../db/d92/class_amuse_1_1_core_1_1_task.html#aaac271042e6013fdf2d70d8d7129c1e0">label</a> (Label &amp;&amp;label) -&gt; <a class="el" href="../../db/d92/class_amuse_1_1_core_1_1_task.html">Task</a> &amp;</td></tr>
+<tr class="memitem:aaac271042e6013fdf2d70d8d7129c1e0" id="r_aaac271042e6013fdf2d70d8d7129c1e0"><td class="memTemplParams" colspan="2">template&lt;class Label&gt; </td></tr>
+<tr class="memitem:aaac271042e6013fdf2d70d8d7129c1e0 template"><td class="memItemLeft">auto&#160;</td><td class="memItemRight"><a class="el" href="#aaac271042e6013fdf2d70d8d7129c1e0">label</a> (Label &amp;&amp;label) -&gt; <a class="el" href="#add0baed5851908abba87c32eed48e1f7">Task</a> &amp;</td></tr>
 <tr class="memdesc:aaac271042e6013fdf2d70d8d7129c1e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">ラベルを追加  <br /></td></tr>
-<tr class="separator:aaac271042e6013fdf2d70d8d7129c1e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c150dc42952a63ba86d5ce685da39b3"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d92/class_amuse_1_1_core_1_1_task.html#a4c150dc42952a63ba86d5ce685da39b3">inSet</a> (const <a class="el" href="../../dd/dff/class_amuse_1_1_core_1_1_schedule_set.html">ScheduleSet</a> &amp;set) -&gt; <a class="el" href="../../db/d92/class_amuse_1_1_core_1_1_task.html">Task</a> &amp;</td></tr>
+<tr class="memitem:a4c150dc42952a63ba86d5ce685da39b3" id="r_a4c150dc42952a63ba86d5ce685da39b3"><td class="memItemLeft">auto&#160;</td><td class="memItemRight"><a class="el" href="#a4c150dc42952a63ba86d5ce685da39b3">inSet</a> (const ScheduleSet &amp;set) -&gt; <a class="el" href="#add0baed5851908abba87c32eed48e1f7">Task</a> &amp;</td></tr>
 <tr class="memdesc:a4c150dc42952a63ba86d5ce685da39b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">セットへ所属させる  <br /></td></tr>
-<tr class="separator:a4c150dc42952a63ba86d5ce685da39b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d16ad09abf7bfba1b9d8f1f81b17268"><td class="memTemplParams" colspan="2"><a id="a0d16ad09abf7bfba1b9d8f1f81b17268" name="a0d16ad09abf7bfba1b9d8f1f81b17268"></a>
+<tr class="memitem:a0d16ad09abf7bfba1b9d8f1f81b17268" id="r_a0d16ad09abf7bfba1b9d8f1f81b17268"><td class="memTemplParams" colspan="2"><a id="a0d16ad09abf7bfba1b9d8f1f81b17268" name="a0d16ad09abf7bfba1b9d8f1f81b17268"></a>
 template&lt;class... Nodes&gt; </td></tr>
-<tr class="memitem:a0d16ad09abf7bfba1b9d8f1f81b17268"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>precede</b> (const Nodes &amp;... nodes) -&gt; <a class="el" href="../../db/d92/class_amuse_1_1_core_1_1_task.html">Task</a> &amp;</td></tr>
+<tr class="memitem:a0d16ad09abf7bfba1b9d8f1f81b17268 template"><td class="memItemLeft">auto&#160;</td><td class="memItemRight"><b>precede</b> (const Nodes &amp;... nodes) -&gt; <a class="el" href="#add0baed5851908abba87c32eed48e1f7">Task</a> &amp;</td></tr>
 <tr class="memdesc:a0d16ad09abf7bfba1b9d8f1f81b17268"><td class="mdescLeft">&#160;</td><td class="mdescRight">このタスクを指定タスクまたはセットより前に実行 <br /></td></tr>
-<tr class="separator:a0d16ad09abf7bfba1b9d8f1f81b17268"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4e8dd6c142fdf0cce078f186f673ca4"><td class="memTemplParams" colspan="2"><a id="ab4e8dd6c142fdf0cce078f186f673ca4" name="ab4e8dd6c142fdf0cce078f186f673ca4"></a>
+<tr class="memitem:ab4e8dd6c142fdf0cce078f186f673ca4" id="r_ab4e8dd6c142fdf0cce078f186f673ca4"><td class="memTemplParams" colspan="2"><a id="ab4e8dd6c142fdf0cce078f186f673ca4" name="ab4e8dd6c142fdf0cce078f186f673ca4"></a>
 template&lt;class... Nodes&gt; </td></tr>
-<tr class="memitem:ab4e8dd6c142fdf0cce078f186f673ca4"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>succeed</b> (const Nodes &amp;... nodes) -&gt; <a class="el" href="../../db/d92/class_amuse_1_1_core_1_1_task.html">Task</a> &amp;</td></tr>
+<tr class="memitem:ab4e8dd6c142fdf0cce078f186f673ca4 template"><td class="memItemLeft">auto&#160;</td><td class="memItemRight"><b>succeed</b> (const Nodes &amp;... nodes) -&gt; <a class="el" href="#add0baed5851908abba87c32eed48e1f7">Task</a> &amp;</td></tr>
 <tr class="memdesc:ab4e8dd6c142fdf0cce078f186f673ca4"><td class="mdescLeft">&#160;</td><td class="mdescRight">このタスクを指定タスクまたはセットより後に実行 <br /></td></tr>
-<tr class="separator:ab4e8dd6c142fdf0cce078f186f673ca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b976257bd6fba1bdc2c83b4043d3bf7"><td class="memTemplParams" colspan="2">template&lt;class Label &gt; </td></tr>
-<tr class="memitem:a5b976257bd6fba1bdc2c83b4043d3bf7"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../db/d92/class_amuse_1_1_core_1_1_task.html#a5b976257bd6fba1bdc2c83b4043d3bf7">conflict</a> (Label &amp;&amp;<a class="el" href="../../db/d92/class_amuse_1_1_core_1_1_task.html#aaac271042e6013fdf2d70d8d7129c1e0">label</a>) -&gt; <a class="el" href="../../db/d92/class_amuse_1_1_core_1_1_task.html">Task</a> &amp;</td></tr>
+<tr class="memitem:a5b976257bd6fba1bdc2c83b4043d3bf7" id="r_a5b976257bd6fba1bdc2c83b4043d3bf7"><td class="memTemplParams" colspan="2">template&lt;class Label&gt; </td></tr>
+<tr class="memitem:a5b976257bd6fba1bdc2c83b4043d3bf7 template"><td class="memItemLeft">auto&#160;</td><td class="memItemRight"><a class="el" href="#a5b976257bd6fba1bdc2c83b4043d3bf7">conflict</a> (Label &amp;&amp;label) -&gt; <a class="el" href="#add0baed5851908abba87c32eed48e1f7">Task</a> &amp;</td></tr>
 <tr class="memdesc:a5b976257bd6fba1bdc2c83b4043d3bf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">排他タグを追加  <br /></td></tr>
-<tr class="separator:a5b976257bd6fba1bdc2c83b4043d3bf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7abc6e890288621622e46232159ce2eb"><td class="memItemLeft" align="right" valign="top"><a id="a7abc6e890288621622e46232159ce2eb" name="a7abc6e890288621622e46232159ce2eb"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>mainThread</b> () -&gt; <a class="el" href="../../db/d92/class_amuse_1_1_core_1_1_task.html">Task</a> &amp;</td></tr>
+<tr class="memitem:a7abc6e890288621622e46232159ce2eb" id="r_a7abc6e890288621622e46232159ce2eb"><td class="memItemLeft"><a id="a7abc6e890288621622e46232159ce2eb" name="a7abc6e890288621622e46232159ce2eb"></a>
+auto&#160;</td><td class="memItemRight"><b>mainThread</b> () -&gt; <a class="el" href="#add0baed5851908abba87c32eed48e1f7">Task</a> &amp;</td></tr>
 <tr class="memdesc:a7abc6e890288621622e46232159ce2eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">メインスレッド実行を指定 <br /></td></tr>
-<tr class="separator:a7abc6e890288621622e46232159ce2eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe5c8471259064aa36adb5f940b8018f"><td class="memItemLeft" align="right" valign="top"><a id="abe5c8471259064aa36adb5f940b8018f" name="abe5c8471259064aa36adb5f940b8018f"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>exclusive</b> () -&gt; <a class="el" href="../../db/d92/class_amuse_1_1_core_1_1_task.html">Task</a> &amp;</td></tr>
+<tr class="memitem:abe5c8471259064aa36adb5f940b8018f" id="r_abe5c8471259064aa36adb5f940b8018f"><td class="memItemLeft"><a id="abe5c8471259064aa36adb5f940b8018f" name="abe5c8471259064aa36adb5f940b8018f"></a>
+auto&#160;</td><td class="memItemRight"><b>exclusive</b> () -&gt; <a class="el" href="#add0baed5851908abba87c32eed48e1f7">Task</a> &amp;</td></tr>
 <tr class="memdesc:abe5c8471259064aa36adb5f940b8018f"><td class="mdescLeft">&#160;</td><td class="mdescRight">並列実行を禁止 <br /></td></tr>
-<tr class="separator:abe5c8471259064aa36adb5f940b8018f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90432e3c86bb45e07116da5c20fa7ae6"><td class="memItemLeft" align="right" valign="top"><a id="a90432e3c86bb45e07116da5c20fa7ae6" name="a90432e3c86bb45e07116da5c20fa7ae6"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isCompleted</b> () const</td></tr>
+<tr class="memitem:a90432e3c86bb45e07116da5c20fa7ae6" id="r_a90432e3c86bb45e07116da5c20fa7ae6"><td class="memItemLeft"><a id="a90432e3c86bb45e07116da5c20fa7ae6" name="a90432e3c86bb45e07116da5c20fa7ae6"></a>
+bool&#160;</td><td class="memItemRight"><b>isCompleted</b> () const</td></tr>
 <tr class="memdesc:a90432e3c86bb45e07116da5c20fa7ae6"><td class="mdescLeft">&#160;</td><td class="mdescRight">完了済みか判定する。 <br /></td></tr>
-<tr class="separator:a90432e3c86bb45e07116da5c20fa7ae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8116f58e243dd032b2603dbfd717f2e6"><td class="memItemLeft" align="right" valign="top"><a id="a8116f58e243dd032b2603dbfd717f2e6" name="a8116f58e243dd032b2603dbfd717f2e6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>wait</b> ()</td></tr>
+<tr class="memitem:a8116f58e243dd032b2603dbfd717f2e6" id="r_a8116f58e243dd032b2603dbfd717f2e6"><td class="memItemLeft"><a id="a8116f58e243dd032b2603dbfd717f2e6" name="a8116f58e243dd032b2603dbfd717f2e6"></a>
+void&#160;</td><td class="memItemRight"><b>wait</b> ()</td></tr>
 <tr class="memdesc:a8116f58e243dd032b2603dbfd717f2e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">完了を待機する。 <br /></td></tr>
-<tr class="separator:a8116f58e243dd032b2603dbfd717f2e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静的公開メンバ関数</h2></td></tr>
-<tr class="memitem:a408a9fe25d5ad012059d3b9564f2cbbc"><td class="memItemLeft" align="right" valign="top"><a id="a408a9fe25d5ad012059d3b9564f2cbbc" name="a408a9fe25d5ad012059d3b9564f2cbbc"></a>
-static <a class="el" href="../../db/d92/class_amuse_1_1_core_1_1_task.html">Task</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Create</b> (Action action)</td></tr>
+<tr class="memitem:a408a9fe25d5ad012059d3b9564f2cbbc" id="r_a408a9fe25d5ad012059d3b9564f2cbbc"><td class="memItemLeft"><a id="a408a9fe25d5ad012059d3b9564f2cbbc" name="a408a9fe25d5ad012059d3b9564f2cbbc"></a>
+static <a class="el" href="#add0baed5851908abba87c32eed48e1f7">Task</a>&#160;</td><td class="memItemRight"><b>Create</b> (Action action)</td></tr>
 <tr class="memdesc:a408a9fe25d5ad012059d3b9564f2cbbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンスを生成する。 <br /></td></tr>
-<tr class="separator:a408a9fe25d5ad012059d3b9564f2cbbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed79b94bcbde7b4cfb4ff3e346773249"><td class="memItemLeft" align="right" valign="top"><a id="aed79b94bcbde7b4cfb4ff3e346773249" name="aed79b94bcbde7b4cfb4ff3e346773249"></a>
-static <a class="el" href="../../db/d92/class_amuse_1_1_core_1_1_task.html">Task</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Run</b> (Action action)</td></tr>
+<tr class="memitem:aed79b94bcbde7b4cfb4ff3e346773249" id="r_aed79b94bcbde7b4cfb4ff3e346773249"><td class="memItemLeft"><a id="aed79b94bcbde7b4cfb4ff3e346773249" name="aed79b94bcbde7b4cfb4ff3e346773249"></a>
+static <a class="el" href="#add0baed5851908abba87c32eed48e1f7">Task</a>&#160;</td><td class="memItemRight"><b>Run</b> (Action action)</td></tr>
 <tr class="memdesc:aed79b94bcbde7b4cfb4ff3e346773249"><td class="mdescLeft">&#160;</td><td class="mdescRight">アクションをタスクとして開始する。 <br /></td></tr>
-<tr class="separator:aed79b94bcbde7b4cfb4ff3e346773249"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a957f185fa10ccdbf995f9386abbb0f9a"><td class="memItemLeft" align="right" valign="top"><a id="a957f185fa10ccdbf995f9386abbb0f9a" name="a957f185fa10ccdbf995f9386abbb0f9a"></a>
-static <a class="el" href="../../db/d92/class_amuse_1_1_core_1_1_task.html">Task</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Parallel</b> (Func&lt; void(s32)&gt; action)</td></tr>
+<tr class="memitem:a957f185fa10ccdbf995f9386abbb0f9a" id="r_a957f185fa10ccdbf995f9386abbb0f9a"><td class="memItemLeft"><a id="a957f185fa10ccdbf995f9386abbb0f9a" name="a957f185fa10ccdbf995f9386abbb0f9a"></a>
+static <a class="el" href="#add0baed5851908abba87c32eed48e1f7">Task</a>&#160;</td><td class="memItemRight"><b>Parallel</b> (Func&lt; void(s32)&gt; action)</td></tr>
 <tr class="memdesc:a957f185fa10ccdbf995f9386abbb0f9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">インデックス付きアクションを並列タスクとして開始する。 <br /></td></tr>
-<tr class="separator:a957f185fa10ccdbf995f9386abbb0f9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d3c07486c85e4daafa98a06c3de16b6"><td class="memItemLeft" align="right" valign="top"><a id="a8d3c07486c85e4daafa98a06c3de16b6" name="a8d3c07486c85e4daafa98a06c3de16b6"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>WaitAll</b> (<a class="el" href="../../db/d92/class_amuse_1_1_core_1_1_task.html">Task</a> &amp;task1, <a class="el" href="../../db/d92/class_amuse_1_1_core_1_1_task.html">Task</a> &amp;task2)</td></tr>
+<tr class="memitem:a8d3c07486c85e4daafa98a06c3de16b6" id="r_a8d3c07486c85e4daafa98a06c3de16b6"><td class="memItemLeft"><a id="a8d3c07486c85e4daafa98a06c3de16b6" name="a8d3c07486c85e4daafa98a06c3de16b6"></a>
+static void&#160;</td><td class="memItemRight"><b>WaitAll</b> (<a class="el" href="#add0baed5851908abba87c32eed48e1f7">Task</a> &amp;task1, <a class="el" href="#add0baed5851908abba87c32eed48e1f7">Task</a> &amp;task2)</td></tr>
 <tr class="memdesc:a8d3c07486c85e4daafa98a06c3de16b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">複数タスクの完了を待機する。 <br /></td></tr>
-<tr class="separator:a8d3c07486c85e4daafa98a06c3de16b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
 フレンド</h2></td></tr>
-<tr class="memitem:a7f7974bf2cc31313229d9bc494e548aa"><td class="memTemplParams" colspan="2"><a id="a7f7974bf2cc31313229d9bc494e548aa" name="a7f7974bf2cc31313229d9bc494e548aa"></a>
+<tr class="memitem:a7f7974bf2cc31313229d9bc494e548aa" id="r_a7f7974bf2cc31313229d9bc494e548aa"><td class="memTemplParams" colspan="2"><a id="a7f7974bf2cc31313229d9bc494e548aa" name="a7f7974bf2cc31313229d9bc494e548aa"></a>
 template&lt;class... Args&gt; </td></tr>
-<tr class="memitem:a7f7974bf2cc31313229d9bc494e548aa"><td class="memTemplItemLeft" align="right" valign="top">class&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Schedule</b></td></tr>
-<tr class="separator:a7f7974bf2cc31313229d9bc494e548aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9f7aa9a3e6f96c48075fcda32eb0d06"><td class="memItemLeft" align="right" valign="top"><a id="ad9f7aa9a3e6f96c48075fcda32eb0d06" name="ad9f7aa9a3e6f96c48075fcda32eb0d06"></a>
-class&#160;</td><td class="memItemRight" valign="bottom"><b>ScheduleSet</b></td></tr>
-<tr class="separator:ad9f7aa9a3e6f96c48075fcda32eb0d06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39e62aed9b5707246fa08d6b717953c4"><td class="memItemLeft" align="right" valign="top"><a id="a39e62aed9b5707246fa08d6b717953c4" name="a39e62aed9b5707246fa08d6b717953c4"></a>
-class&#160;</td><td class="memItemRight" valign="bottom"><b>TaskGroup</b></td></tr>
-<tr class="separator:a39e62aed9b5707246fa08d6b717953c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f7974bf2cc31313229d9bc494e548aa template"><td class="memItemLeft">class&#160;</td><td class="memItemRight"><b>Schedule</b></td></tr>
+<tr class="memitem:ad9f7aa9a3e6f96c48075fcda32eb0d06" id="r_ad9f7aa9a3e6f96c48075fcda32eb0d06"><td class="memItemLeft"><a id="ad9f7aa9a3e6f96c48075fcda32eb0d06" name="ad9f7aa9a3e6f96c48075fcda32eb0d06"></a>
+class&#160;</td><td class="memItemRight"><b>ScheduleSet</b></td></tr>
+<tr class="memitem:a39e62aed9b5707246fa08d6b717953c4" id="r_a39e62aed9b5707246fa08d6b717953c4"><td class="memItemLeft"><a id="a39e62aed9b5707246fa08d6b717953c4" name="a39e62aed9b5707246fa08d6b717953c4"></a>
+class&#160;</td><td class="memItemRight"><b>TaskGroup</b></td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
 <div class="textblock"><p>非同期タスクを表す。 </p>
-</div><h2 class="groupheader">関数詳解</h2>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
 <a id="a5b976257bd6fba1bdc2c83b4043d3bf7" name="a5b976257bd6fba1bdc2c83b4043d3bf7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5b976257bd6fba1bdc2c83b4043d3bf7">&#9670;&#160;</a></span>conflict()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Label &gt; </div>
+template&lt;class Label&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -203,14 +212,13 @@ template&lt;class Label &gt; </div>
         <tr>
           <td class="memname">auto Amuse::Core::Task::conflict </td>
           <td>(</td>
-          <td class="paramtype">Label &amp;&amp;&#160;</td>
-          <td class="paramname"><em>label</em></td><td>)</td>
-          <td> -&gt; <a class="el" href="../../db/d92/class_amuse_1_1_core_1_1_task.html">Task</a>&amp; </td>
+          <td class="paramtype">Label &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>label</em></span></td><td>)</td>
+          <td> -&gt; <a class="el" href="#add0baed5851908abba87c32eed48e1f7">Task</a> &amp;</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -232,14 +240,13 @@ template&lt;class Label &gt; </div>
         <tr>
           <td class="memname">auto Amuse::Core::Task::inSet </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../dd/dff/class_amuse_1_1_core_1_1_schedule_set.html">ScheduleSet</a> &amp;&#160;</td>
-          <td class="paramname"><em>set</em></td><td>)</td>
-          <td> -&gt; <a class="el" href="../../db/d92/class_amuse_1_1_core_1_1_task.html">Task</a>&amp;</td>
+          <td class="paramtype">const ScheduleSet &amp;</td>          <td class="paramname"><span class="paramname"><em>set</em></span></td><td>)</td>
+          <td> -&gt; <a class="el" href="#add0baed5851908abba87c32eed48e1f7">Task</a> &amp;</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -260,7 +267,7 @@ template&lt;class Label &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Label &gt; </div>
+template&lt;class Label&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -268,14 +275,13 @@ template&lt;class Label &gt; </div>
         <tr>
           <td class="memname">auto Amuse::Core::Task::label </td>
           <td>(</td>
-          <td class="paramtype">Label &amp;&amp;&#160;</td>
-          <td class="paramname"><em>label</em></td><td>)</td>
-          <td> -&gt; <a class="el" href="../../db/d92/class_amuse_1_1_core_1_1_task.html">Task</a>&amp; </td>
+          <td class="paramtype">Label &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>label</em></span></td><td>)</td>
+          <td> -&gt; <a class="el" href="#add0baed5851908abba87c32eed48e1f7">Task</a> &amp;</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -291,11 +297,12 @@ template&lt;class Label &gt; </div>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>Amuse</b></li><li class="navelem"><b>Core</b></li><li class="navelem"><a class="el" href="../../db/d92/class_amuse_1_1_core_1_1_task.html">Task</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><b>Core</b></li><li class="navelem"><a href="../../db/d92/class_amuse_1_1_core_1_1_task.html">Task</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

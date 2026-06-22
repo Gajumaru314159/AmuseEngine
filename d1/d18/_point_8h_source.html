@@ -3,19 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AmuseEngine: Runtime/Core/Public/Amuse/Core/Geometry/Point.h ソースファイル</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../jquery.js"></script>
-<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
 <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
 <script type="text/javascript" src="../../navtreedata.js"></script>
 <script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="../../style.css" rel="stylesheet" type="text/css"/>
@@ -36,23 +42,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.6 -->
+<!-- 構築: Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('../../',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
 });
-/* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -65,10 +93,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('d1/d18/_point_8h_source.html','../../'); initResizable(); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d1/d18/_point_8h_source.html','../../',''); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -96,37 +123,44 @@ $(document).ready(function(){initNavTree('d1/d18/_point_8h_source.html','../../'
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//***********************************************************</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"></span><span class="comment">//***********************************************************</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//***********************************************************</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;Amuse/Core/CoreTypes.h&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span>Amuse::Core {</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html">   11</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html">Point</a> {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span></div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html">   11</a></span>    <span class="keyword">struct </span><a class="code hl_function" href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html#a4509fa05e2d2bd3bf39d1b2e313e7976">Point</a> {</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html#a4509fa05e2d2bd3bf39d1b2e313e7976">   15</a></span>        <a class="code hl_function" href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html#a4509fa05e2d2bd3bf39d1b2e313e7976">Point</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span></div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="}">
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html#a4e4b2606226a7bdffa0537fa6a1f1355">   19</a></span>        <span class="keyword">constexpr</span> <a class="code hl_function" href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html#a4e4b2606226a7bdffa0537fa6a1f1355">Point</a>(s32 <a class="code hl_variable" href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html#ad0c609a1548ecf315583e42e025580f2">x</a>, s32 <a class="code hl_variable" href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html#ad7d177e6d534588b34f4fddd59546c4d">y</a>, s32 <a class="code hl_variable" href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html#abf8f1687ff8ca0f4c032aad502613c88">z</a> = 0) noexcept</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            : <a class="code hl_variable" href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html#ad0c609a1548ecf315583e42e025580f2">x</a>(<a class="code hl_variable" href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html#ad0c609a1548ecf315583e42e025580f2">x</a>), <a class="code hl_variable" href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html#ad7d177e6d534588b34f4fddd59546c4d">y</a>(<a class="code hl_variable" href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html#ad7d177e6d534588b34f4fddd59546c4d">y</a>), <a class="code hl_variable" href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html#abf8f1687ff8ca0f4c032aad502613c88">z</a>(<a class="code hl_variable" href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html#abf8f1687ff8ca0f4c032aad502613c88">z</a>) {}</div>
+</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="comment">//===============================================================</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="comment">//  オペレータ</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="comment">//===============================================================</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html#a61da38cab6f44fb86eac24e525bae5b3">   28</a></span>        <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html#a61da38cab6f44fb86eac24e525bae5b3">operator==</a>(<span class="keyword">const</span> <a class="code hl_struct" href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html">Point</a>&amp; other)<span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html#a61da38cab6f44fb86eac24e525bae5b3">   28</a></span>        <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html#a61da38cab6f44fb86eac24e525bae5b3">operator==</a>(<span class="keyword">const</span> <a class="code hl_function" href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html#a4509fa05e2d2bd3bf39d1b2e313e7976">Point</a>&amp; other)<span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            <span class="keywordflow">return</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                <a class="code hl_variable" href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html#ad0c609a1548ecf315583e42e025580f2">x</a> == other.x &amp;&amp;</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                <a class="code hl_variable" href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html#ad7d177e6d534588b34f4fddd59546c4d">y</a> == other.y &amp;&amp;</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                <a class="code hl_variable" href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html#abf8f1687ff8ca0f4c032aad502613c88">z</a> == other.z;</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        }</div>
+</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html#abc2ceefb48635da53b10bcedbfef5d8c">   37</a></span>        <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html#abc2ceefb48635da53b10bcedbfef5d8c">operator!=</a>(<span class="keyword">const</span> <a class="code hl_struct" href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html">Point</a>&amp; other)<span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span></div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html#abc2ceefb48635da53b10bcedbfef5d8c">   37</a></span>        <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html#abc2ceefb48635da53b10bcedbfef5d8c">operator!=</a>(<span class="keyword">const</span> <a class="code hl_function" href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html#a4509fa05e2d2bd3bf39d1b2e313e7976">Point</a>&amp; other)<span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <span class="keywordflow">return</span> !(*<span class="keyword">this</span> == other);</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        }</div>
+</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">public</span>:</div>
@@ -136,23 +170,24 @@ $(document).ready(function(){initNavTree('d1/d18/_point_8h_source.html','../../'
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html#abf8f1687ff8ca0f4c032aad502613c88">   46</a></span>        s32 <a class="code hl_variable" href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html#abf8f1687ff8ca0f4c032aad502613c88">z</a>;  </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    };</div>
+</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>}</div>
-<div class="ttc" id="astruct_amuse_1_1_core_1_1_point_html"><div class="ttname"><a href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html">Amuse::Core::Point</a></div><div class="ttdoc">ポイント</div><div class="ttdef"><b>Definition:</b> Point.h:11</div></div>
 <div class="ttc" id="astruct_amuse_1_1_core_1_1_point_html_a4509fa05e2d2bd3bf39d1b2e313e7976"><div class="ttname"><a href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html#a4509fa05e2d2bd3bf39d1b2e313e7976">Amuse::Core::Point::Point</a></div><div class="ttdeci">Point()=default</div><div class="ttdoc">デフォルトコンストラクタ(初期化なし)</div></div>
-<div class="ttc" id="astruct_amuse_1_1_core_1_1_point_html_a4e4b2606226a7bdffa0537fa6a1f1355"><div class="ttname"><a href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html#a4e4b2606226a7bdffa0537fa6a1f1355">Amuse::Core::Point::Point</a></div><div class="ttdeci">constexpr Point(s32 x, s32 y, s32 z=0) noexcept</div><div class="ttdoc">コンストラクタ(値で初期化)</div><div class="ttdef"><b>Definition:</b> Point.h:19</div></div>
-<div class="ttc" id="astruct_amuse_1_1_core_1_1_point_html_a61da38cab6f44fb86eac24e525bae5b3"><div class="ttname"><a href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html#a61da38cab6f44fb86eac24e525bae5b3">Amuse::Core::Point::operator==</a></div><div class="ttdeci">constexpr bool operator==(const Point &amp;other) const noexcept</div><div class="ttdoc">等価演算子</div><div class="ttdef"><b>Definition:</b> Point.h:28</div></div>
-<div class="ttc" id="astruct_amuse_1_1_core_1_1_point_html_abc2ceefb48635da53b10bcedbfef5d8c"><div class="ttname"><a href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html#abc2ceefb48635da53b10bcedbfef5d8c">Amuse::Core::Point::operator!=</a></div><div class="ttdeci">constexpr bool operator!=(const Point &amp;other) const noexcept</div><div class="ttdoc">否等価演算子</div><div class="ttdef"><b>Definition:</b> Point.h:37</div></div>
-<div class="ttc" id="astruct_amuse_1_1_core_1_1_point_html_abf8f1687ff8ca0f4c032aad502613c88"><div class="ttname"><a href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html#abf8f1687ff8ca0f4c032aad502613c88">Amuse::Core::Point::z</a></div><div class="ttdeci">s32 z</div><div class="ttdoc">Z座標</div><div class="ttdef"><b>Definition:</b> Point.h:46</div></div>
-<div class="ttc" id="astruct_amuse_1_1_core_1_1_point_html_ad0c609a1548ecf315583e42e025580f2"><div class="ttname"><a href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html#ad0c609a1548ecf315583e42e025580f2">Amuse::Core::Point::x</a></div><div class="ttdeci">s32 x</div><div class="ttdoc">X座標</div><div class="ttdef"><b>Definition:</b> Point.h:44</div></div>
-<div class="ttc" id="astruct_amuse_1_1_core_1_1_point_html_ad7d177e6d534588b34f4fddd59546c4d"><div class="ttname"><a href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html#ad7d177e6d534588b34f4fddd59546c4d">Amuse::Core::Point::y</a></div><div class="ttdeci">s32 y</div><div class="ttdoc">Y座標</div><div class="ttdef"><b>Definition:</b> Point.h:45</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_point_html_a4e4b2606226a7bdffa0537fa6a1f1355"><div class="ttname"><a href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html#a4e4b2606226a7bdffa0537fa6a1f1355">Amuse::Core::Point::Point</a></div><div class="ttdeci">constexpr Point(s32 x, s32 y, s32 z=0) noexcept</div><div class="ttdoc">コンストラクタ(値で初期化)</div><div class="ttdef"><b>Definition</b> Point.h:19</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_point_html_a61da38cab6f44fb86eac24e525bae5b3"><div class="ttname"><a href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html#a61da38cab6f44fb86eac24e525bae5b3">Amuse::Core::Point::operator==</a></div><div class="ttdeci">constexpr bool operator==(const Point &amp;other) const noexcept</div><div class="ttdoc">等価演算子</div><div class="ttdef"><b>Definition</b> Point.h:28</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_point_html_abc2ceefb48635da53b10bcedbfef5d8c"><div class="ttname"><a href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html#abc2ceefb48635da53b10bcedbfef5d8c">Amuse::Core::Point::operator!=</a></div><div class="ttdeci">constexpr bool operator!=(const Point &amp;other) const noexcept</div><div class="ttdoc">否等価演算子</div><div class="ttdef"><b>Definition</b> Point.h:37</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_point_html_abf8f1687ff8ca0f4c032aad502613c88"><div class="ttname"><a href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html#abf8f1687ff8ca0f4c032aad502613c88">Amuse::Core::Point::z</a></div><div class="ttdeci">s32 z</div><div class="ttdoc">Z座標</div><div class="ttdef"><b>Definition</b> Point.h:46</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_point_html_ad0c609a1548ecf315583e42e025580f2"><div class="ttname"><a href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html#ad0c609a1548ecf315583e42e025580f2">Amuse::Core::Point::x</a></div><div class="ttdeci">s32 x</div><div class="ttdoc">X座標</div><div class="ttdef"><b>Definition</b> Point.h:44</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_point_html_ad7d177e6d534588b34f4fddd59546c4d"><div class="ttname"><a href="../../d9/d4b/struct_amuse_1_1_core_1_1_point.html#ad7d177e6d534588b34f4fddd59546c4d">Amuse::Core::Point::y</a></div><div class="ttdeci">s32 y</div><div class="ttdoc">Y座標</div><div class="ttdef"><b>Definition</b> Point.h:45</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_4f6666a8f2ab10bc970eb7559668f031.html">Runtime</a></li><li class="navelem"><a class="el" href="../../dir_b05c51a7dc61612d752a1d5ca497c54f.html">Core</a></li><li class="navelem"><a class="el" href="../../dir_2704b46b7ef0c98b3ce7738c20dc746e.html">Public</a></li><li class="navelem"><a class="el" href="../../dir_02338155ec8ce976dea76e6f650abf75.html">Amuse</a></li><li class="navelem"><a class="el" href="../../dir_a813c3653225bc50968bea57534cde90.html">Core</a></li><li class="navelem"><a class="el" href="../../dir_c1265f17dae7d760b62763324f9180d2.html">Geometry</a></li><li class="navelem"><b>Point.h</b></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="navelem"><b>Runtime</b></li><li class="navelem"><b>Core</b></li><li class="navelem"><b>Public</b></li><li class="navelem"><b>Amuse</b></li><li class="navelem"><b>Core</b></li><li class="navelem"><b>Geometry</b></li><li class="navelem"><b>Point.h</b></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

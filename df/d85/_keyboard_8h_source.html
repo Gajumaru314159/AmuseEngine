@@ -3,19 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AmuseEngine: Runtime/Input/Public/Amuse/Input/Keyboard.h ソースファイル</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../jquery.js"></script>
-<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
 <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
 <script type="text/javascript" src="../../navtreedata.js"></script>
 <script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="../../style.css" rel="stylesheet" type="text/css"/>
@@ -36,23 +42,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.6 -->
+<!-- 構築: Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('../../',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
 });
-/* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -65,10 +93,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('df/d85/_keyboard_8h_source.html','../../'); initResizable(); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('df/d85/_keyboard_8h_source.html','../../',''); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -96,7 +123,7 @@ $(document).ready(function(){initNavTree('df/d85/_keyboard_8h_source.html','../.
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//***********************************************************</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"></span><span class="comment">//***********************************************************</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//***********************************************************</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;Amuse/Core/Core.h&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;Amuse/Input/Button.h&gt;</span></div>
@@ -104,11 +131,12 @@ $(document).ready(function(){initNavTree('df/d85/_keyboard_8h_source.html','../.
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span>Amuse::Input {</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keyword">using namespace </span>Amuse::Core;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span></div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="../../df/d41/class_amuse_1_1_input_1_1_keyboard.html">   14</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../df/d41/class_amuse_1_1_input_1_1_keyboard.html">Keyboard</a> {</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../df/d41/class_amuse_1_1_input_1_1_keyboard.html#adc42c6ddc5bbdbcb8089e78ff3b580fd">   17</a></span>        <a class="code hl_function" href="../../df/d41/class_amuse_1_1_input_1_1_keyboard.html#adc42c6ddc5bbdbcb8089e78ff3b580fd">AMUSE_DECL_INPUT_DEVICE_ID</a>(<span class="stringliteral">&quot;Keyboard&quot;</span>);</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="../../df/d41/class_amuse_1_1_input_1_1_keyboard.html#ad6f649dc11a13665370a529190f37241">   20</a></span>        <span class="keyword">static</span> <span class="keyword">constexpr</span> <a class="code hl_class" href="../../db/dab/class_amuse_1_1_input_1_1_button.html">Button</a> <a class="code hl_function" href="../../df/d41/class_amuse_1_1_input_1_1_keyboard.html#ad6f649dc11a13665370a529190f37241">GetButton</a>(Key key) { <span class="keywordflow">return</span> {ID,key}; }</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">public</span>:</div>
@@ -260,11 +288,12 @@ $(document).ready(function(){initNavTree('df/d85/_keyboard_8h_source.html','../.
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno"><a class="line" href="../../df/d41/class_amuse_1_1_input_1_1_keyboard.html#a55ac8a29a42fede10c26fc8f60651ad0">  168</a></span>        <a class="code hl_function" href="../../df/d41/class_amuse_1_1_input_1_1_keyboard.html#a55ac8a29a42fede10c26fc8f60651ad0">AMUSE_DECL_BUTTON</a>(Key, LeftWindows);        </div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno"><a class="line" href="../../df/d41/class_amuse_1_1_input_1_1_keyboard.html#ae3c664020aef978a6caf688969e86cfb">  169</a></span>        <a class="code hl_function" href="../../df/d41/class_amuse_1_1_input_1_1_keyboard.html#ae3c664020aef978a6caf688969e86cfb">AMUSE_DECL_BUTTON</a>(Key, RightWindows);       </div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    };</div>
+</div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>}</div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_hash_html"><div class="ttname"><a href="../../d5/d6f/class_amuse_1_1_core_1_1_hash.html">Amuse::Core::Hash</a></div><div class="ttdoc">ハッシュ</div><div class="ttdef"><b>Definition:</b> Hash.h:12</div></div>
-<div class="ttc" id="aclass_amuse_1_1_input_1_1_button_html"><div class="ttname"><a href="../../db/dab/class_amuse_1_1_input_1_1_button.html">Amuse::Input::Button</a></div><div class="ttdoc">ボタン</div><div class="ttdef"><b>Definition:</b> Button.h:19</div></div>
-<div class="ttc" id="aclass_amuse_1_1_input_1_1_keyboard_html"><div class="ttname"><a href="../../df/d41/class_amuse_1_1_input_1_1_keyboard.html">Amuse::Input::Keyboard</a></div><div class="ttdoc">キーボード入力デバイス</div><div class="ttdef"><b>Definition:</b> Keyboard.h:14</div></div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_hash_html"><div class="ttname"><a href="../../d5/d6f/class_amuse_1_1_core_1_1_hash.html">Amuse::Core::Hash</a></div><div class="ttdoc">ハッシュ</div><div class="ttdef"><b>Definition</b> Hash.h:12</div></div>
+<div class="ttc" id="aclass_amuse_1_1_input_1_1_button_html"><div class="ttname"><a href="../../db/dab/class_amuse_1_1_input_1_1_button.html">Amuse::Input::Button</a></div><div class="ttdoc">ボタン</div><div class="ttdef"><b>Definition</b> Button.h:19</div></div>
+<div class="ttc" id="aclass_amuse_1_1_input_1_1_keyboard_html"><div class="ttname"><a href="../../df/d41/class_amuse_1_1_input_1_1_keyboard.html">Amuse::Input::Keyboard</a></div><div class="ttdoc">キーボード入力デバイス</div><div class="ttdef"><b>Definition</b> Keyboard.h:14</div></div>
 <div class="ttc" id="aclass_amuse_1_1_input_1_1_keyboard_html_a025ad65376f76243238497083662e59c"><div class="ttname"><a href="../../df/d41/class_amuse_1_1_input_1_1_keyboard.html#a025ad65376f76243238497083662e59c">Amuse::Input::Keyboard::AMUSE_DECL_BUTTON</a></div><div class="ttdeci">AMUSE_DECL_BUTTON(Key, Keypad1)</div><div class="ttdoc">テンキー1</div></div>
 <div class="ttc" id="aclass_amuse_1_1_input_1_1_keyboard_html_a029c02e22034d18b6ab42c62db59099c"><div class="ttname"><a href="../../df/d41/class_amuse_1_1_input_1_1_keyboard.html#a029c02e22034d18b6ab42c62db59099c">Amuse::Input::Keyboard::AMUSE_DECL_BUTTON</a></div><div class="ttdeci">AMUSE_DECL_BUTTON(Key, Keypad6)</div><div class="ttdoc">テンキー6</div></div>
 <div class="ttc" id="aclass_amuse_1_1_input_1_1_keyboard_html_a02d79879d8290aace0ecefccc9d7506c"><div class="ttname"><a href="../../df/d41/class_amuse_1_1_input_1_1_keyboard.html#a02d79879d8290aace0ecefccc9d7506c">Amuse::Input::Keyboard::AMUSE_DECL_BUTTON</a></div><div class="ttdeci">AMUSE_DECL_BUTTON(Key, F7)</div><div class="ttdoc">F7</div></div>
@@ -377,7 +406,7 @@ $(document).ready(function(){initNavTree('df/d85/_keyboard_8h_source.html','../.
 <div class="ttc" id="aclass_amuse_1_1_input_1_1_keyboard_html_ad39b03d0b46521ab042e38a53dea3a8b"><div class="ttname"><a href="../../df/d41/class_amuse_1_1_input_1_1_keyboard.html#ad39b03d0b46521ab042e38a53dea3a8b">Amuse::Input::Keyboard::AMUSE_DECL_BUTTON</a></div><div class="ttdeci">AMUSE_DECL_BUTTON(Key, Keypad2)</div><div class="ttdoc">テンキー2</div></div>
 <div class="ttc" id="aclass_amuse_1_1_input_1_1_keyboard_html_ad5cda337115d6c5c6cc7035c28c26d75"><div class="ttname"><a href="../../df/d41/class_amuse_1_1_input_1_1_keyboard.html#ad5cda337115d6c5c6cc7035c28c26d75">Amuse::Input::Keyboard::AMUSE_DECL_BUTTON</a></div><div class="ttdeci">AMUSE_DECL_BUTTON(Key, BackQuote)</div><div class="ttdoc">バッククォート</div></div>
 <div class="ttc" id="aclass_amuse_1_1_input_1_1_keyboard_html_ad66d74a0fad2973900856fc03f40a4bc"><div class="ttname"><a href="../../df/d41/class_amuse_1_1_input_1_1_keyboard.html#ad66d74a0fad2973900856fc03f40a4bc">Amuse::Input::Keyboard::AMUSE_DECL_BUTTON</a></div><div class="ttdeci">AMUSE_DECL_BUTTON(Key, At)</div><div class="ttdoc">アットマーク</div></div>
-<div class="ttc" id="aclass_amuse_1_1_input_1_1_keyboard_html_ad6f649dc11a13665370a529190f37241"><div class="ttname"><a href="../../df/d41/class_amuse_1_1_input_1_1_keyboard.html#ad6f649dc11a13665370a529190f37241">Amuse::Input::Keyboard::GetButton</a></div><div class="ttdeci">static constexpr Button GetButton(Key key)</div><div class="ttdoc">ボタン取得</div><div class="ttdef"><b>Definition:</b> Keyboard.h:20</div></div>
+<div class="ttc" id="aclass_amuse_1_1_input_1_1_keyboard_html_ad6f649dc11a13665370a529190f37241"><div class="ttname"><a href="../../df/d41/class_amuse_1_1_input_1_1_keyboard.html#ad6f649dc11a13665370a529190f37241">Amuse::Input::Keyboard::GetButton</a></div><div class="ttdeci">static constexpr Button GetButton(Key key)</div><div class="ttdoc">ボタン取得</div><div class="ttdef"><b>Definition</b> Keyboard.h:20</div></div>
 <div class="ttc" id="aclass_amuse_1_1_input_1_1_keyboard_html_ad898755877737339f0cddf54ec598dfa"><div class="ttname"><a href="../../df/d41/class_amuse_1_1_input_1_1_keyboard.html#ad898755877737339f0cddf54ec598dfa">Amuse::Input::Keyboard::AMUSE_DECL_BUTTON</a></div><div class="ttdeci">AMUSE_DECL_BUTTON(Key, RightBracket)</div><div class="ttdoc">右角括弧</div></div>
 <div class="ttc" id="aclass_amuse_1_1_input_1_1_keyboard_html_ada93df3bc12ea4a8821be1c4c0493d03"><div class="ttname"><a href="../../df/d41/class_amuse_1_1_input_1_1_keyboard.html#ada93df3bc12ea4a8821be1c4c0493d03">Amuse::Input::Keyboard::AMUSE_DECL_BUTTON</a></div><div class="ttdeci">AMUSE_DECL_BUTTON(Key, F4)</div><div class="ttdoc">F4</div></div>
 <div class="ttc" id="aclass_amuse_1_1_input_1_1_keyboard_html_adc42c6ddc5bbdbcb8089e78ff3b580fd"><div class="ttname"><a href="../../df/d41/class_amuse_1_1_input_1_1_keyboard.html#adc42c6ddc5bbdbcb8089e78ff3b580fd">Amuse::Input::Keyboard::AMUSE_DECL_INPUT_DEVICE_ID</a></div><div class="ttdeci">AMUSE_DECL_INPUT_DEVICE_ID(&quot;Keyboard&quot;)</div><div class="ttdoc">入力デバイスIDを宣言する</div></div>
@@ -403,11 +432,12 @@ $(document).ready(function(){initNavTree('df/d85/_keyboard_8h_source.html','../.
 <div class="ttc" id="aclass_amuse_1_1_input_1_1_keyboard_html_aff6e6aae7bad7f5a886a60b1233e17b1"><div class="ttname"><a href="../../df/d41/class_amuse_1_1_input_1_1_keyboard.html#aff6e6aae7bad7f5a886a60b1233e17b1">Amuse::Input::Keyboard::AMUSE_DECL_BUTTON</a></div><div class="ttdeci">AMUSE_DECL_BUTTON(Key, KeypadAdd)</div><div class="ttdoc">テンキー+</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_4f6666a8f2ab10bc970eb7559668f031.html">Runtime</a></li><li class="navelem"><a class="el" href="../../dir_528fe26cfaf94873f7f3dd65a110e7c0.html">Input</a></li><li class="navelem"><a class="el" href="../../dir_4318f7c0b1051ff8f443716c1272954a.html">Public</a></li><li class="navelem"><a class="el" href="../../dir_e7f831ab32b3a93e4511490d2aaa4315.html">Amuse</a></li><li class="navelem"><a class="el" href="../../dir_052c934cb7f300422e2c4cd2291cb0a6.html">Input</a></li><li class="navelem"><b>Keyboard.h</b></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="navelem"><b>Runtime</b></li><li class="navelem"><b>Input</b></li><li class="navelem"><b>Public</b></li><li class="navelem"><b>Amuse</b></li><li class="navelem"><b>Input</b></li><li class="navelem"><b>Keyboard.h</b></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

@@ -3,19 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AmuseEngine: Amuse::Core::MemoryStorageBase&lt; T, SIZE, ALIGN &gt; クラステンプレート</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../jquery.js"></script>
-<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
 <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
 <script type="text/javascript" src="../../navtreedata.js"></script>
 <script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="../../style.css" rel="stylesheet" type="text/css"/>
@@ -36,23 +42,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.6 -->
+<!-- 構築: Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('../../',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
 });
-/* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -65,10 +93,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('d5/d6f/class_amuse_1_1_core_1_1_memory_storage_base.html','../../'); initResizable(); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d5/d6f/class_amuse_1_1_core_1_1_memory_storage_base.html','../../','d8/daa/class_amuse_1_1_core_1_1_memory_storage_base-members'); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -100,55 +127,45 @@ $(document).ready(function(){initNavTree('d5/d6f/class_amuse_1_1_core_1_1_memory
 <div class="contents">
 
 <p>メモリストレージ  
- <a href="../../d5/d6f/class_amuse_1_1_core_1_1_memory_storage_base.html#details">[詳解]</a></p>
+ <a href="#details">[詳解]</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../de/d92/_memory_storage_8h_source.html">MemoryStorage.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:ab4f468197b5790525095a7649102fe55"><td class="memItemLeft" align="right" valign="top"><a id="ab4f468197b5790525095a7649102fe55" name="ab4f468197b5790525095a7649102fe55"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>MemoryStorageBase</b> ()</td></tr>
+<tr class="memitem:ab4f468197b5790525095a7649102fe55" id="r_ab4f468197b5790525095a7649102fe55"><td class="memItemLeft"><a id="ab4f468197b5790525095a7649102fe55" name="ab4f468197b5790525095a7649102fe55"></a>
+&#160;</td><td class="memItemRight"><b>MemoryStorageBase</b> ()</td></tr>
 <tr class="memdesc:ab4f468197b5790525095a7649102fe55"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ <br /></td></tr>
-<tr class="separator:ab4f468197b5790525095a7649102fe55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a638b5b2e08713f126281f3b7875f608b"><td class="memItemLeft" align="right" valign="top"><a id="a638b5b2e08713f126281f3b7875f608b" name="a638b5b2e08713f126281f3b7875f608b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>~MemoryStorageBase</b> ()</td></tr>
+<tr class="memitem:a638b5b2e08713f126281f3b7875f608b" id="r_a638b5b2e08713f126281f3b7875f608b"><td class="memItemLeft"><a id="a638b5b2e08713f126281f3b7875f608b" name="a638b5b2e08713f126281f3b7875f608b"></a>
+&#160;</td><td class="memItemRight"><b>~MemoryStorageBase</b> ()</td></tr>
 <tr class="memdesc:a638b5b2e08713f126281f3b7875f608b"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ <br /></td></tr>
-<tr class="separator:a638b5b2e08713f126281f3b7875f608b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab54d26cccb8894224861eca3a0c64adc"><td class="memItemLeft" align="right" valign="top"><a id="ab54d26cccb8894224861eca3a0c64adc" name="ab54d26cccb8894224861eca3a0c64adc"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> () const noexcept</td></tr>
+<tr class="memitem:ab54d26cccb8894224861eca3a0c64adc" id="r_ab54d26cccb8894224861eca3a0c64adc"><td class="memItemLeft"><a id="ab54d26cccb8894224861eca3a0c64adc" name="ab54d26cccb8894224861eca3a0c64adc"></a>
+&#160;</td><td class="memItemRight"><b>operator bool</b> () const noexcept</td></tr>
 <tr class="memdesc:ab54d26cccb8894224861eca3a0c64adc"><td class="mdescLeft">&#160;</td><td class="mdescRight">構築済みか <br /></td></tr>
-<tr class="separator:ab54d26cccb8894224861eca3a0c64adc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa04318ec5e39f7ee026e73626990ff6"><td class="memItemLeft" align="right" valign="top"><a id="aaa04318ec5e39f7ee026e73626990ff6" name="aaa04318ec5e39f7ee026e73626990ff6"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>empty</b> () const noexcept</td></tr>
+<tr class="memitem:aaa04318ec5e39f7ee026e73626990ff6" id="r_aaa04318ec5e39f7ee026e73626990ff6"><td class="memItemLeft"><a id="aaa04318ec5e39f7ee026e73626990ff6" name="aaa04318ec5e39f7ee026e73626990ff6"></a>
+bool&#160;</td><td class="memItemRight"><b>empty</b> () const noexcept</td></tr>
 <tr class="memdesc:aaa04318ec5e39f7ee026e73626990ff6"><td class="mdescLeft">&#160;</td><td class="mdescRight">空か <br /></td></tr>
-<tr class="separator:aaa04318ec5e39f7ee026e73626990ff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22a25e36f48c860eebc417f55063dad0"><td class="memTemplParams" colspan="2"><a id="a22a25e36f48c860eebc417f55063dad0" name="a22a25e36f48c860eebc417f55063dad0"></a>
+<tr class="memitem:a22a25e36f48c860eebc417f55063dad0" id="r_a22a25e36f48c860eebc417f55063dad0"><td class="memTemplParams" colspan="2"><a id="a22a25e36f48c860eebc417f55063dad0" name="a22a25e36f48c860eebc417f55063dad0"></a>
 template&lt;typename ... Args&gt; </td></tr>
-<tr class="memitem:a22a25e36f48c860eebc417f55063dad0"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>construct</b> (Args &amp;&amp;... args) -&gt; std::enable_if_t&lt; std::is_constructible_v&lt; T, Args... &gt;, void &gt;</td></tr>
+<tr class="memitem:a22a25e36f48c860eebc417f55063dad0 template"><td class="memItemLeft">auto&#160;</td><td class="memItemRight"><b>construct</b> (Args &amp;&amp;... args) -&gt; std::enable_if_t&lt; std::is_constructible_v&lt; T, Args... &gt;, void &gt;</td></tr>
 <tr class="memdesc:a22a25e36f48c860eebc417f55063dad0"><td class="mdescLeft">&#160;</td><td class="mdescRight">構築 <br /></td></tr>
-<tr class="separator:a22a25e36f48c860eebc417f55063dad0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98f193ac5424101583d1880434acc1eb"><td class="memItemLeft" align="right" valign="top"><a id="a98f193ac5424101583d1880434acc1eb" name="a98f193ac5424101583d1880434acc1eb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>destruct</b> ()</td></tr>
+<tr class="memitem:a98f193ac5424101583d1880434acc1eb" id="r_a98f193ac5424101583d1880434acc1eb"><td class="memItemLeft"><a id="a98f193ac5424101583d1880434acc1eb" name="a98f193ac5424101583d1880434acc1eb"></a>
+void&#160;</td><td class="memItemRight"><b>destruct</b> ()</td></tr>
 <tr class="memdesc:a98f193ac5424101583d1880434acc1eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">破壊 <br /></td></tr>
-<tr class="separator:a98f193ac5424101583d1880434acc1eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac89bde864663dcf1c2364e118732bcbd"><td class="memItemLeft" align="right" valign="top"><a id="ac89bde864663dcf1c2364e118732bcbd" name="ac89bde864663dcf1c2364e118732bcbd"></a>
-T *&#160;</td><td class="memItemRight" valign="bottom"><b>operator-&gt;</b> ()</td></tr>
+<tr class="memitem:ac89bde864663dcf1c2364e118732bcbd" id="r_ac89bde864663dcf1c2364e118732bcbd"><td class="memItemLeft"><a id="ac89bde864663dcf1c2364e118732bcbd" name="ac89bde864663dcf1c2364e118732bcbd"></a>
+T *&#160;</td><td class="memItemRight"><b>operator-&gt;</b> ()</td></tr>
 <tr class="memdesc:ac89bde864663dcf1c2364e118732bcbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">ポインタアクセス <br /></td></tr>
-<tr class="separator:ac89bde864663dcf1c2364e118732bcbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0df7d490d82e94908189d305ccbcbbd"><td class="memItemLeft" align="right" valign="top"><a id="ae0df7d490d82e94908189d305ccbcbbd" name="ae0df7d490d82e94908189d305ccbcbbd"></a>
-const T *&#160;</td><td class="memItemRight" valign="bottom"><b>operator-&gt;</b> () const</td></tr>
+<tr class="memitem:ae0df7d490d82e94908189d305ccbcbbd" id="r_ae0df7d490d82e94908189d305ccbcbbd"><td class="memItemLeft"><a id="ae0df7d490d82e94908189d305ccbcbbd" name="ae0df7d490d82e94908189d305ccbcbbd"></a>
+const T *&#160;</td><td class="memItemRight"><b>operator-&gt;</b> () const</td></tr>
 <tr class="memdesc:ae0df7d490d82e94908189d305ccbcbbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">ポインタアクセス(const) <br /></td></tr>
-<tr class="separator:ae0df7d490d82e94908189d305ccbcbbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9df1c0bbc50016ed61a2cd310b8858a"><td class="memItemLeft" align="right" valign="top"><a id="af9df1c0bbc50016ed61a2cd310b8858a" name="af9df1c0bbc50016ed61a2cd310b8858a"></a>
-T &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> ()</td></tr>
+<tr class="memitem:af9df1c0bbc50016ed61a2cd310b8858a" id="r_af9df1c0bbc50016ed61a2cd310b8858a"><td class="memItemLeft"><a id="af9df1c0bbc50016ed61a2cd310b8858a" name="af9df1c0bbc50016ed61a2cd310b8858a"></a>
+T &amp;&#160;</td><td class="memItemRight"><b>operator*</b> ()</td></tr>
 <tr class="memdesc:af9df1c0bbc50016ed61a2cd310b8858a"><td class="mdescLeft">&#160;</td><td class="mdescRight">参照アクセス <br /></td></tr>
-<tr class="separator:af9df1c0bbc50016ed61a2cd310b8858a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ca2aa22a6b312a7147e9a14713a2b5b"><td class="memItemLeft" align="right" valign="top"><a id="a3ca2aa22a6b312a7147e9a14713a2b5b" name="a3ca2aa22a6b312a7147e9a14713a2b5b"></a>
-const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> () const noexcept</td></tr>
+<tr class="memitem:a3ca2aa22a6b312a7147e9a14713a2b5b" id="r_a3ca2aa22a6b312a7147e9a14713a2b5b"><td class="memItemLeft"><a id="a3ca2aa22a6b312a7147e9a14713a2b5b" name="a3ca2aa22a6b312a7147e9a14713a2b5b"></a>
+const T &amp;&#160;</td><td class="memItemRight"><b>operator*</b> () const noexcept</td></tr>
 <tr class="memdesc:a3ca2aa22a6b312a7147e9a14713a2b5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">参照アクセス(const) <br /></td></tr>
-<tr class="separator:a3ca2aa22a6b312a7147e9a14713a2b5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;class T, size_t SIZE, size_t ALIGN&gt;<br />
 class Amuse::Core::MemoryStorageBase&lt; T, SIZE, ALIGN &gt;</div><p>メモリストレージ </p>
 <p>遅延初期化をする場合に使用します。 通常はRAIIに則り生成時に初期化することが望ましいですが、 初期化を遅らせる必要がある場合に使用します。 unique_ptrと違いメンバ変数として使用する場合はクラスのインクルードが必要です。 </p>
@@ -157,11 +174,12 @@ class Amuse::Core::MemoryStorageBase&lt; T, SIZE, ALIGN &gt;</div><p>メモリ�
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>Amuse</b></li><li class="navelem"><b>Core</b></li><li class="navelem"><a class="el" href="../../d5/d6f/class_amuse_1_1_core_1_1_memory_storage_base.html">MemoryStorageBase</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><b>Core</b></li><li class="navelem"><a href="../../d5/d6f/class_amuse_1_1_core_1_1_memory_storage_base.html">MemoryStorageBase</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

@@ -3,19 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AmuseEngine: Runtime/RHI/Public/Amuse/RHI/Types/DepthStencilDesc.h ソースファイル</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../jquery.js"></script>
-<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
 <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
 <script type="text/javascript" src="../../navtreedata.js"></script>
 <script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="../../style.css" rel="stylesheet" type="text/css"/>
@@ -36,23 +42,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.6 -->
+<!-- 構築: Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('../../',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
 });
-/* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -65,10 +93,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('dd/d2d/_depth_stencil_desc_8h_source.html','../../'); initResizable(); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('dd/d2d/_depth_stencil_desc_8h_source.html','../../',''); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -96,7 +123,7 @@ $(document).ready(function(){initNavTree('dd/d2d/_depth_stencil_desc_8h_source.h
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//***********************************************************</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"></span><span class="comment">//***********************************************************</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//***********************************************************</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;Amuse/Core/Core.h&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
@@ -104,7 +131,7 @@ $(document).ready(function(){initNavTree('dd/d2d/_depth_stencil_desc_8h_source.h
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keyword">using namespace </span>Amuse::Core;</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#pragma region Enum</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">enum class</span> StencilOp :u32 {</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        Keep,               </div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        Replace,            </div>
@@ -116,7 +143,7 @@ $(document).ready(function(){initNavTree('dd/d2d/_depth_stencil_desc_8h_source.h
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        DecrementAndWrap,   </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    };</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">enum class</span> ComparisonFunc :u32 {</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        Never,          </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        Always,         </div>
@@ -129,13 +156,14 @@ $(document).ready(function(){initNavTree('dd/d2d/_depth_stencil_desc_8h_source.h
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    };</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#pragma endregion</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="};">
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="../../db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html">   41</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html">DepthStencilDesc</a> {</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keyword">struct </span>{</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="../../db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html#a07c7272b6c99685b0b573242cb60c03f">   43</a></span>            <span class="keywordtype">bool</span>            <a class="code hl_variable" href="../../db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html#a07c7272b6c99685b0b573242cb60c03f">enable</a>{ <span class="keyword">false</span> };                    </div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="../../db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html#a2165391c9e49be19c0c47e9c3169de6d">   44</a></span>            <span class="keywordtype">bool</span>            <a class="code hl_variable" href="../../db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html#a2165391c9e49be19c0c47e9c3169de6d">write</a>{ <span class="keyword">true</span> };                      </div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="../../db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html#a3e50c02199aebe6037eb73f4cdd49b3e">   45</a></span>            ComparisonFunc  <a class="code hl_variable" href="../../db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html#a3e50c02199aebe6037eb73f4cdd49b3e">func</a>{ ComparisonFunc::Greater };    </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="../../db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html#a0b1cc112ea06ab5c80d52b136e6badc2">   46</a></span>        } <a class="code hl_variable" href="../../db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html#a0b1cc112ea06ab5c80d52b136e6badc2">depth</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="../../db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html#aa13b0aa1ec0e3b9b3da98a6abb1b732d">   46</a></span>        } <a class="code hl_variable" href="../../db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html#aa13b0aa1ec0e3b9b3da98a6abb1b732d">depth</a>;</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keyword">struct </span>{</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <span class="keywordtype">bool</span>            <a class="code hl_variable" href="../../db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html#a07c7272b6c99685b0b573242cb60c03f">enable</a>{ <span class="keyword">false</span> };                    </div>
@@ -146,25 +174,27 @@ $(document).ready(function(){initNavTree('dd/d2d/_depth_stencil_desc_8h_source.h
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            StencilOp       passOp{ StencilOp::Keep };          </div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            ComparisonFunc  <a class="code hl_variable" href="../../db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html#a3e50c02199aebe6037eb73f4cdd49b3e">func</a>{ ComparisonFunc::Always };     </div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            u8              reference{ 0x00 };                  </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="../../db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html#a46149e39544fc1f8234e945ef5055614">   57</a></span>        } <a class="code hl_variable" href="../../db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html#a46149e39544fc1f8234e945ef5055614">stencil</a>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="../../db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html#a3b7c37d56a2e93aca341aa438a01d0fa">   57</a></span>        } <a class="code hl_variable" href="../../db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html#a3b7c37d56a2e93aca341aa438a01d0fa">stencil</a>;</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    };</div>
+</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>}</div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_depth_stencil_desc_html"><div class="ttname"><a href="../../db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html">Amuse::RHI::DepthStencilDesc</a></div><div class="ttdoc">デプス・ステンシル定義</div><div class="ttdef"><b>Definition:</b> DepthStencilDesc.h:41</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_depth_stencil_desc_html_a07c7272b6c99685b0b573242cb60c03f"><div class="ttname"><a href="../../db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html#a07c7272b6c99685b0b573242cb60c03f">Amuse::RHI::DepthStencilDesc::enable</a></div><div class="ttdeci">bool enable</div><div class="ttdoc">デプステストを有効にする</div><div class="ttdef"><b>Definition:</b> DepthStencilDesc.h:43</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_depth_stencil_desc_html_a0b1cc112ea06ab5c80d52b136e6badc2"><div class="ttname"><a href="../../db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html#a0b1cc112ea06ab5c80d52b136e6badc2">Amuse::RHI::DepthStencilDesc::depth</a></div><div class="ttdeci">struct Amuse::RHI::DepthStencilDesc::@9 depth</div><div class="ttdoc">デプス設定</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_depth_stencil_desc_html_a144b2f9ee9adb0b31cea1d488c494b43"><div class="ttname"><a href="../../db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html#a144b2f9ee9adb0b31cea1d488c494b43">Amuse::RHI::DepthStencilDesc::write_mask</a></div><div class="ttdeci">u8 write_mask</div><div class="ttdoc">書き込みビットマスク</div><div class="ttdef"><b>Definition:</b> DepthStencilDesc.h:51</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_depth_stencil_desc_html_a161595c4e38f732a3205744ad7dfbb10"><div class="ttname"><a href="../../db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html#a161595c4e38f732a3205744ad7dfbb10">Amuse::RHI::DepthStencilDesc::read_mask</a></div><div class="ttdeci">u8 read_mask</div><div class="ttdoc">読み込みビットマスク</div><div class="ttdef"><b>Definition:</b> DepthStencilDesc.h:50</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_depth_stencil_desc_html_a2165391c9e49be19c0c47e9c3169de6d"><div class="ttname"><a href="../../db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html#a2165391c9e49be19c0c47e9c3169de6d">Amuse::RHI::DepthStencilDesc::write</a></div><div class="ttdeci">bool write</div><div class="ttdoc">デプスを書き込む</div><div class="ttdef"><b>Definition:</b> DepthStencilDesc.h:44</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_depth_stencil_desc_html_a3e50c02199aebe6037eb73f4cdd49b3e"><div class="ttname"><a href="../../db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html#a3e50c02199aebe6037eb73f4cdd49b3e">Amuse::RHI::DepthStencilDesc::func</a></div><div class="ttdeci">ComparisonFunc func</div><div class="ttdoc">デプステストの比較関数</div><div class="ttdef"><b>Definition:</b> DepthStencilDesc.h:45</div></div>
-<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_depth_stencil_desc_html_a46149e39544fc1f8234e945ef5055614"><div class="ttname"><a href="../../db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html#a46149e39544fc1f8234e945ef5055614">Amuse::RHI::DepthStencilDesc::stencil</a></div><div class="ttdeci">struct Amuse::RHI::DepthStencilDesc::@10 stencil</div><div class="ttdoc">ステンシル設定</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_depth_stencil_desc_html"><div class="ttname"><a href="../../db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html">Amuse::RHI::DepthStencilDesc</a></div><div class="ttdoc">デプス・ステンシル定義</div><div class="ttdef"><b>Definition</b> DepthStencilDesc.h:41</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_depth_stencil_desc_html_a07c7272b6c99685b0b573242cb60c03f"><div class="ttname"><a href="../../db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html#a07c7272b6c99685b0b573242cb60c03f">Amuse::RHI::DepthStencilDesc::enable</a></div><div class="ttdeci">bool enable</div><div class="ttdoc">デプステストを有効にする</div><div class="ttdef"><b>Definition</b> DepthStencilDesc.h:43</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_depth_stencil_desc_html_a144b2f9ee9adb0b31cea1d488c494b43"><div class="ttname"><a href="../../db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html#a144b2f9ee9adb0b31cea1d488c494b43">Amuse::RHI::DepthStencilDesc::write_mask</a></div><div class="ttdeci">u8 write_mask</div><div class="ttdoc">書き込みビットマスク</div><div class="ttdef"><b>Definition</b> DepthStencilDesc.h:51</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_depth_stencil_desc_html_a161595c4e38f732a3205744ad7dfbb10"><div class="ttname"><a href="../../db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html#a161595c4e38f732a3205744ad7dfbb10">Amuse::RHI::DepthStencilDesc::read_mask</a></div><div class="ttdeci">u8 read_mask</div><div class="ttdoc">読み込みビットマスク</div><div class="ttdef"><b>Definition</b> DepthStencilDesc.h:50</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_depth_stencil_desc_html_a2165391c9e49be19c0c47e9c3169de6d"><div class="ttname"><a href="../../db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html#a2165391c9e49be19c0c47e9c3169de6d">Amuse::RHI::DepthStencilDesc::write</a></div><div class="ttdeci">bool write</div><div class="ttdoc">デプスを書き込む</div><div class="ttdef"><b>Definition</b> DepthStencilDesc.h:44</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_depth_stencil_desc_html_a3b7c37d56a2e93aca341aa438a01d0fa"><div class="ttname"><a href="../../db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html#a3b7c37d56a2e93aca341aa438a01d0fa">Amuse::RHI::DepthStencilDesc::stencil</a></div><div class="ttdeci">struct Amuse::RHI::DepthStencilDesc::@362101315153210006325320242141175046112263062302 stencil</div><div class="ttdoc">ステンシル設定</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_depth_stencil_desc_html_a3e50c02199aebe6037eb73f4cdd49b3e"><div class="ttname"><a href="../../db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html#a3e50c02199aebe6037eb73f4cdd49b3e">Amuse::RHI::DepthStencilDesc::func</a></div><div class="ttdeci">ComparisonFunc func</div><div class="ttdoc">デプステストの比較関数</div><div class="ttdef"><b>Definition</b> DepthStencilDesc.h:45</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_h_i_1_1_depth_stencil_desc_html_aa13b0aa1ec0e3b9b3da98a6abb1b732d"><div class="ttname"><a href="../../db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html#aa13b0aa1ec0e3b9b3da98a6abb1b732d">Amuse::RHI::DepthStencilDesc::depth</a></div><div class="ttdeci">struct Amuse::RHI::DepthStencilDesc::@002321356267317357010317310321315065130136056131 depth</div><div class="ttdoc">デプス設定</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_4f6666a8f2ab10bc970eb7559668f031.html">Runtime</a></li><li class="navelem"><a class="el" href="../../dir_ed0dd943941685375ac149ef30703e8f.html">RHI</a></li><li class="navelem"><a class="el" href="../../dir_80d0fa31a6e3bc7da61af1a1dfa2506f.html">Public</a></li><li class="navelem"><a class="el" href="../../dir_6330f9b43f61349a45429b5fd54fec05.html">Amuse</a></li><li class="navelem"><a class="el" href="../../dir_0830f243940360ab60fcd1783d0d86f9.html">RHI</a></li><li class="navelem"><a class="el" href="../../dir_5761839cb0a5a5a0945e24e2502418de.html">Types</a></li><li class="navelem"><b>DepthStencilDesc.h</b></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="navelem"><b>Runtime</b></li><li class="navelem"><b>RHI</b></li><li class="navelem"><b>Public</b></li><li class="navelem"><b>Amuse</b></li><li class="navelem"><b>RHI</b></li><li class="navelem"><b>Types</b></li><li class="navelem"><b>DepthStencilDesc.h</b></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>
