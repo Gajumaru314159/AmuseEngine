@@ -86,15 +86,27 @@ function(_amuse_module_setup)
 	target_compile_definitions(${PROJECT_NAME} PUBLIC ${public_definitions} PRIVATE ${private_definitions})
 	
 	# プリコンパイルヘッダを設定
-	if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/Private/pch.h)
-		if(MSVC)
-			# プリコンパイル済みヘッダの使用(/Yu)を全体に設定
-			add_definitions(/FIpch.h)
-			set_target_properties(${PROJECT_NAME} PROPERTIES COMPILE_FLAGS "/Yupch.h")
-			set_target_properties(${PROJECT_NAME} PROPERTIES COMPILE_FLAGS "/Fp")
+	if(NOT pch_header AND EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/Private/pch.h)
+		set(pch_header "pch.h")
+	endif()
+	if(pch_header)
+		if(IS_ABSOLUTE "${pch_header}")
+			set(pch_header_path "${pch_header}")
+		elseif(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/${pch_header}")
+			set(pch_header_path "${CMAKE_CURRENT_SOURCE_DIR}/${pch_header}")
+		elseif(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/Public/${pch_header}")
+			set(pch_header_path "${CMAKE_CURRENT_SOURCE_DIR}/Public/${pch_header}")
+		elseif(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/Private/${pch_header}")
+			set(pch_header_path "${CMAKE_CURRENT_SOURCE_DIR}/Private/${pch_header}")
 		else()
-			# GCC or Clang
-			add_definitions(-include pch.h)
+			message(FATAL_ERROR "[${PROJECT_NAME}] pch_header not found: ${pch_header}")
+		endif()
+
+		target_precompile_headers(${PROJECT_NAME} PRIVATE "$<$<COMPILE_LANGUAGE:CXX>:${pch_header_path}>")
+		if(MSVC)
+			target_compile_options(${PROJECT_NAME} PRIVATE "/FI${pch_header}")
+		else()
+			target_compile_options(${PROJECT_NAME} PRIVATE "-include" "${pch_header}")
 		endif()
 	endif()
     
@@ -111,7 +123,7 @@ function(_amuse_module_setup)
 			add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
 				COMMAND ${CMAKE_COMMAND} -E copy_if_different
 					"${file}"
-					"${AMUSE_ENGINE_BINARIES_PATH}"
+					"${AMUSE_ENGINE_BINARIES_PATH}/$<CONFIG>"
 			)
 		endforeach()
 	endif()

@@ -20,8 +20,9 @@ if(MSVC)
     add_compile_options("/utf-8")   # UTF-8を強制する
     add_definitions(-D_UNICODE)     # 文字リテラルをユニコードとする
     add_definitions(-DUNICODE)      # 文字リテラルをユニコードとする
-
-    # __cplusplus有効化
+    
+    # その他
+    add_compile_options(/FS)        # 並列コンパイル時のPDB書き込みを同期する
     add_definitions(/Zc:__cplusplus)# __cplusplusを使えるようにする
 
 endif()
