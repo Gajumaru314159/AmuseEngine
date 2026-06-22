@@ -1,0 +1,4 @@
+interface:
+  display_name: "CMake Build"
+  short_description: "Use CMakePresets.json for builds and tests."
+  default_prompt: "Use $cmake-build to configure, build, and test this repository with CMakePresets.json."
