@@ -1,0 +1,31 @@
+//***********************************************************
+//! @file
+//! @author		Gajumaru
+//***********************************************************
+#include <Amuse/Input/Axis.h>
+#include <Amuse/Input/InputManager.h>
+
+namespace Amuse::Input {
+    using namespace Amuse::Core;
+
+	//! @brief	値
+	f32 Axis::value()const {
+		if (auto m = InputModule::Get()) {
+			if (auto device = m->findDevice(m_deviceId, m_user)) {
+				return device->getAxisValue(m_code);
+			}
+		}
+		return false;
+	}
+
+	//! @brief	バインド
+	bool Axis::bind(AxisHandle& handle, const AxisDelegate& func)const {
+		if (auto m = InputModule::Get()) {
+			if (auto device = m->findDevice(m_deviceId, m_user)) {
+				return device->bindAxis(m_code, handle, func);
+			}
+		}
+		return false;
+	}
+
+}

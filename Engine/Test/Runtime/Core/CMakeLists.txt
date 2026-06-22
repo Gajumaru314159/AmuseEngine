@@ -1,5 +1,7 @@
 ﻿project (Core-test)
 
+set(pch_header "pch.h")
+
 # 依存ライブラリ設定
 set(public_libs Core)
 set(private_libs "")

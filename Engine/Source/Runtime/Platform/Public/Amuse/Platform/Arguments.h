@@ -1,0 +1,45 @@
+//***********************************************************
+//! @file
+//! @author		Gajumaru
+//***********************************************************
+#pragma once
+#include <Amuse/Core/Core.h>
+
+namespace Amuse::Platform {
+    using namespace Amuse::Core;
+
+    //! @brief コマンドライン引数
+    class Arguments {
+    public:
+        using container_type = Vector<String>;                       //!< 引数コンテナ
+        using iterator = container_type::iterator;                  //!< イテレータ
+        using const_iterator = container_type::const_iterator;      //!< constイテレータ
+    public:
+
+        //! @brief          コンストラクタ
+        Arguments();
+
+        //! @brief          引数を取得
+        //! 
+        //! @param index    インデックス
+        const String& at(s32 index)const;
+
+        //! @brief          先頭の要素を指す読み取り専用イテレータを取得する
+        const_iterator begin()const noexcept;
+
+        //! @brief          末尾の次を指す読み取り専用イテレータを取得する
+        const_iterator end()const noexcept;
+
+        //! @brief          引数の数を取得する
+        s32 size()const noexcept;
+
+        //! @brief          空か
+        bool empty()const noexcept;
+
+    private:
+
+        Vector<String> m_args;
+
+    };
+
+}

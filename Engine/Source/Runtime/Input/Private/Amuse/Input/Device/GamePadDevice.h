@@ -1,0 +1,69 @@
+//***********************************************************
+//! @file
+//! @author		Gajumaru
+//***********************************************************
+#pragma once
+#include <Amuse/Core/Core.h>
+#include <Amuse/Input/Interface/IInputDevice.h>
+#include <Amuse/Input/DirectInput.h>
+#include <Amuse/Core/HAL/Platform.h>
+
+#ifdef OS_WINDOWS
+#include <Amuse/Core/Platform/WindowsHeaders.h>
+#define DIRECTINPUT_VERSION 0x0800
+#include <dinput.h>
+#endif
+
+namespace Amuse::Input {
+    using namespace Amuse::Core;
+
+    //! @brief  ゲームパッド・デバイス
+    class GamePadDevice : public IInputDevice {
+    public:
+        GamePadDevice();
+        ~GamePadDevice() override;
+
+        //! @brief  デバイスID
+        DeviceID getDeviceId() const override { return DirectInput::ID; }
+
+        //! @brief  更新
+        void update() override;
+
+        //! @brief  ボタンの入力状態を取得
+        ButtonStates getButtonStates(u32 code) const override;
+
+        //! @brief  軸の入力状態を取得
+        f32 getAxisValue(u32 code) const override;
+
+        //! @brief  ボタン入力イベントをバインド
+        bool bindButton(u32 code, ButtonState state, ButtonHandle& handle, const ButtonDelegate& func) override;
+
+        //! @brief  ボタン入力イベントをバインド
+        bool bindAxis(u32 code, AxisHandle& handle, const AxisDelegate& func) override;
+
+    private:
+        struct KeyState {
+            HashMap<ButtonState, ButtonNotifier> notifiers;
+            ButtonStates prev;
+            ButtonStates next;
+        };
+        struct AxisState {
+            AxisNotifier notifier;
+            f32 prev{ 0.0f };
+            f32 next{ 0.0f };
+        };
+
+#ifdef OS_WINDOWS
+        DIJOYSTATE m_state{};
+        LPDIRECTINPUT8 m_interface{ nullptr };
+        LPDIRECTINPUTDEVICE8 m_device{ nullptr };
+#endif
+
+        HashMap<MouseButton, KeyState> m_states;
+        HashMap<MouseAxis, AxisState> m_axisStates;
+
+        Vec2 m_position;
+        Vec2 m_deltaPos;
+    };
+
+}

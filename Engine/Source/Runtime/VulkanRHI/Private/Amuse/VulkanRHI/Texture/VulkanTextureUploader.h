@@ -1,0 +1,89 @@
+//***********************************************************
+//! @file
+//! @author		Gajumaru
+//***********************************************************
+#pragma once
+#include <Amuse/VulkanRHI/pch.h>
+#include <Amuse/Core/Core.h>
+#include <Amuse/RHI/Buffer.h>
+#include <Amuse/Core/Utility/Swapper.h>
+#include <Amuse/RHI/Forward.h>
+#include <Amuse/RHI/Texture.h>
+
+namespace Amuse::RHI {
+    using namespace Amuse::Core;
+
+    class VulkanDevice;
+
+    //! @brief  テクスチャ・アップローダー
+    //! 
+    //! テクスチャのデータを効率的にアップロードするための機能を提供します。
+    //! CPUからデータを書き込めるGPUリソースは読み取り速度に制限がかかるため、
+    //! 書き込み用のステージングバッファに書き込んだものをまとめてハイパフォーマンスなバッファにコピーします。
+    //! コピー処理はフレームの先頭に行われます。必ず毎フレーム描画処理より前に実行してください。         
+    class VulkanTextureUploader {
+    public:
+        struct Subresource {
+            BlobView data;
+            UINT rowPitch;
+            UINT slicePitch;
+        };
+    public:
+
+        VulkanTextureUploader(VulkanDevice& device);
+
+        void add(const vk::raii::Image& dest, const vk::ImageCreateInfo& info, TextureFormat format, Span<Subresource> subresources);
+
+        void update(const Ref<CommandList>& commandList);
+
+    private:
+
+        // コピーリクエスト
+        struct Request {
+            vk::Image dest;
+
+            vk::raii::Buffer source = nullptr;
+            vk::raii::DeviceMemory memory = nullptr;
+
+            TextureFormat format;
+            u32 mipLevels;
+			u32 layerCount;
+            vk::Extent3D extent;
+
+            // UINT sourceSubresource = 0;
+            // UINT destSubresource = 0;
+            // 
+            // IntVec3 destOffset;
+            // 
+            // D3D12_TEXTURE_COPY_LOCATION destLocation;
+            // D3D12_TEXTURE_COPY_LOCATION sourceLocation;
+            // UINT DstX;
+            // UINT DstY;
+            // UINT DstZ;
+            // D3D12_BOX sourceBox;
+        };
+
+        struct FrameData {
+            Vector<Request>     requests;
+
+            void clear() {
+                requests.clear();
+            }
+		};
+
+    private:
+
+        VulkanDevice& m_device;
+        bool m_isUMA = false;
+
+		size_t m_blockSize;
+
+		SpinLock m_lock;
+		Swapper<FrameData> m_frames;
+
+        Vector<vk::ImageMemoryBarrier> m_barriers;
+        Vector<vk::MemoryBarrier> m_barriers2;
+
+    };
+
+}

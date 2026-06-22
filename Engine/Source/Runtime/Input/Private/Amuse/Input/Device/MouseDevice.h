@@ -1,0 +1,95 @@
+//***********************************************************
+//! @file
+//! @author		Gajumaru
+//***********************************************************
+#pragma once
+#include <Amuse/Core/Core.h>
+#include <Amuse/Input/Interface/IInputDevice.h>
+#include <Amuse/Input/Mouse.h>
+#include <Amuse/Platform/Window.h>
+#include <Amuse/Core/HAL/Platform.h>
+
+#ifdef OS_WINDOWS
+#include <Amuse/Core/Platform/WindowsHeaders.h>
+#define DIRECTINPUT_VERSION 0x0800
+#include <dinput.h>
+#elif defined(OS_LINUX)
+#include <X11/Xlib.h>
+#endif
+
+namespace Amuse::Input {
+    using namespace Amuse::Core;
+
+    //! @brief  マウス・デバイス
+    class MouseDevice:public IInputDevice {
+    public:
+
+        //! @brief  コンストラクタ
+        MouseDevice(Platform::Window&);
+
+        //! @brief  デストラクタ
+        ~MouseDevice();
+
+        //! @brief  デバイスID
+        DeviceID getDeviceId()const override { return Mouse::ID; }
+
+        //! @brief  更新
+        void update()override;
+
+        //! @brief  ボタンの入力状態を取得
+        ButtonStates getButtonStates(u32 code)const override;
+
+        //! @brief  軸の入力状態を取得
+        f32 getAxisValue(u32 code)const override;
+
+        //! @brief  ボタン入力イベントをバインド
+        bool bindButton(u32 code, ButtonState state, ButtonHandle& handle, const ButtonDelegate& func) override;
+
+        //! @brief  ボタン入力イベントをバインド
+        bool bindAxis(u32 code, AxisHandle& handle, const AxisDelegate& func) override;
+
+    private:
+
+        struct KeyState {
+            HashMap<ButtonState, ButtonNotifier> notifiers;
+            ButtonStates prev;
+            ButtonStates next;
+        };
+        struct AxisState {
+            AxisNotifier notifier;
+            f32 prev{0.0f};
+            f32 next{0.0f};
+        };
+
+    #ifdef OS_WINDOWS
+        DIMOUSESTATE2 m_mouseState;
+        LPDIRECTINPUT8 m_interface;
+        LPDIRECTINPUTDEVICE8 m_mouse;
+    #elif defined(OS_LINUX)
+        ::Display* m_display = nullptr;
+        ::Window m_window = 0;
+        bool m_ownDisplay = false;
+    #endif
+
+        HashMap<MouseButton, KeyState> m_states;
+        HashMap<MouseAxis,AxisState> m_axisStates;
+
+        Vec2 m_position;
+        Vec2 m_deltaPos;
+
+    };
+
+
+
+
+
+
+    //===============================================================
+    // インライン関数
+    //===============================================================
+    //! @cond
+
+
+
+    //! @endcond
+}

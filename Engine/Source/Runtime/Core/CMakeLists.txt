@@ -1,5 +1,7 @@
 ﻿project(Core)
 
+set(pch_header "Amuse/Core/pch.h")
+
 # 依存ライブラリ
 set(public_libs
     GSL

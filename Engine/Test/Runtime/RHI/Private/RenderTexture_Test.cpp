@@ -1,0 +1,78 @@
+//***********************************************************
+//! @file
+//! @author		Gajumaru
+//***********************************************************
+#include <RHITestBase.h>
+#include <magic_enum.hpp>
+
+using namespace Amuse::Core;
+using namespace Amuse::RHI;
+
+TYPED_TEST(RHITest, RenderTexture_Create) {
+
+    for (auto format : magic_enum::enum_values<TextureFormat>()) {
+
+        Size sizes[] = {
+            { 100, 100},
+            { 200, 400},
+        };
+
+        for (auto size : sizes) {
+            //if (format == TextureFormat::D24S8)CallBreakPoint();
+
+            RenderTextureDesc desc;
+            desc.name = Format("{} {}x{}",magic_enum::enum_name(format),size.width,size.height);
+			desc.format = format;
+			desc.size = size;
+
+			auto renderTexture = RenderTexture::Create(desc);
+
+            if (!desc.isValid()) {
+                ASSERT_EQ(renderTexture, nullptr);
+                continue;
+            }
+
+            if (!renderTexture)
+            {
+                CallBreakPoint();
+                renderTexture = RenderTexture::Create(desc);
+            }
+			ASSERT_NE(renderTexture, nullptr);
+            ASSERT_EQ(renderTexture->descOfRenderTexture().format, format);
+            ASSERT_EQ(renderTexture->descOfRenderTexture().size, size);
+
+
+        }
+
+    }
+
+
+    // 不正サイズ
+    {
+        RenderTextureDesc desc;
+        desc.size = { -100, -100 };
+
+        auto texture = RenderTexture::Create(desc);
+
+        ASSERT_EQ(texture, nullptr);
+    }
+
+}
+
+TYPED_TEST(RHITest, RenderTexture_DepthStencilValidation) {
+
+	TextureFormat formats[] = {
+		TextureFormat::D24S8,
+		TextureFormat::D32S8,
+	};
+
+	for (auto format : formats) {
+		RenderTextureDesc desc;
+		desc.name = Format("DepthStencilRenderTexture {}", magic_enum::enum_name(format));
+		desc.format = format;
+		desc.size = { 64, 64 };
+
+		EXPECT_EQ(desc.isValid(), RenderTexture::Supports(format));
+	}
+
+}

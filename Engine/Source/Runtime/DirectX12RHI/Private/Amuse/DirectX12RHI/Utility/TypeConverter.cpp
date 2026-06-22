@@ -1,0 +1,558 @@
+//***********************************************************
+//! @file
+//! @author		Gajumaru
+//***********************************************************
+#include "TypeConverter.h"
+
+namespace Amuse::RHI
+{
+    //! @brief  RootSignatureFlags を D3D12_ROOT_SIGNATURE_FLAGS に変換
+    D3D12_ROOT_SIGNATURE_FLAGS TypeConverter::Convert(RootSignatureFlags value) {
+        D3D12_ROOT_SIGNATURE_FLAGS result = D3D12_ROOT_SIGNATURE_FLAG_NONE;
+        if (value[RootSignatureFlag::AllowInputAssemblerInputLayout])   result |= D3D12_ROOT_SIGNATURE_FLAG_ALLOW_INPUT_ASSEMBLER_INPUT_LAYOUT;
+        if (value[RootSignatureFlag::DenyVertexShaderAccess])   result |= D3D12_ROOT_SIGNATURE_FLAG_DENY_VERTEX_SHADER_ROOT_ACCESS;
+        if (value[RootSignatureFlag::DenyHullShaderAccess])     result |= D3D12_ROOT_SIGNATURE_FLAG_DENY_HULL_SHADER_ROOT_ACCESS;
+        if (value[RootSignatureFlag::DenyDomainShaderAccess])   result |= D3D12_ROOT_SIGNATURE_FLAG_DENY_DOMAIN_SHADER_ROOT_ACCESS;
+        if (value[RootSignatureFlag::DenyGeometryShaderAccess]) result |= D3D12_ROOT_SIGNATURE_FLAG_DENY_GEOMETRY_SHADER_ROOT_ACCESS;
+        if (value[RootSignatureFlag::DenyPixelShaderAccess])    result |= D3D12_ROOT_SIGNATURE_FLAG_DENY_PIXEL_SHADER_ROOT_ACCESS;
+        if (value[RootSignatureFlag::AllowStreamOutput])        result |= D3D12_ROOT_SIGNATURE_FLAG_ALLOW_STREAM_OUTPUT;
+        if (value[RootSignatureFlag::DenyAmplificationShaderAccess])result |= D3D12_ROOT_SIGNATURE_FLAG_DENY_AMPLIFICATION_SHADER_ROOT_ACCESS;
+        if (value[RootSignatureFlag::DenyMeshShaderAccess])     result |= D3D12_ROOT_SIGNATURE_FLAG_DENY_MESH_SHADER_ROOT_ACCESS;
+        return result;
+    }
+
+    //! @brief  ShaderStages を D3D12_SHADER_VISIBILITY に変換
+    D3D12_SHADER_VISIBILITY TypeConverter::Convert(ShaderStage value) {
+        switch (value) {
+        case ShaderStage::Vertex:           return D3D12_SHADER_VISIBILITY_VERTEX;
+        case ShaderStage::Hull:             return D3D12_SHADER_VISIBILITY_HULL;
+        case ShaderStage::Domain:           return D3D12_SHADER_VISIBILITY_DOMAIN;
+        case ShaderStage::Geometry:         return D3D12_SHADER_VISIBILITY_GEOMETRY;
+        case ShaderStage::Pixel:            return D3D12_SHADER_VISIBILITY_PIXEL;
+        case ShaderStage::Amplification:    return D3D12_SHADER_VISIBILITY_AMPLIFICATION;
+        case ShaderStage::Mesh:             return D3D12_SHADER_VISIBILITY_MESH;
+        case ShaderStage::All:              return D3D12_SHADER_VISIBILITY_ALL;
+        }
+
+        LOG_WARNING_EX("Graphic", "不正なShaderStage[value={}]", enum_cast(value));
+        return D3D12_SHADER_VISIBILITY_ALL;
+    }
+
+
+    //! @brief  TextureFilter を D3D12_FILTER_TYPE に変換
+    D3D12_FILTER_TYPE TypeConverter::Convert(TextureFilter value){
+        switch (value) {
+        case TextureFilter::Point:         return D3D12_FILTER_TYPE_POINT;
+        case TextureFilter::Linear:        return D3D12_FILTER_TYPE_LINEAR;
+        }
+
+        LOG_WARNING_EX("Graphic", "不正なTextureFilter[value={}]", enum_cast(value));
+        return D3D12_FILTER_TYPE_LINEAR;
+    }
+
+
+    //! @brief  MipFilter を D3D12_DESCRIPTOR_RANGE_TYPE に変換
+    D3D12_FILTER_TYPE TypeConverter::Convert(MipFilter value){
+        switch (value) {
+        case MipFilter::Point:             return D3D12_FILTER_TYPE_POINT;
+        case MipFilter::Linear:            return D3D12_FILTER_TYPE_LINEAR;
+        }
+        LOG_WARNING_EX("Graphic", "不正なMipFilter[value={}]", enum_cast(value));
+        return D3D12_FILTER_TYPE_LINEAR;
+    }
+
+
+    //! @brief  D3D12_FILTER に変換
+    D3D12_FILTER TypeConverter::Convert(TextureFilter up, TextureFilter down, MipFilter mip, bool anisotropic) {
+        if (anisotropic && up != TextureFilter::Point && down != TextureFilter::Point)return D3D12_FILTER_ANISOTROPIC;
+        return D3D12_ENCODE_BASIC_FILTER(
+            Convert(down),  //!< 縮小時
+            Convert(up),    //!< 拡大時
+            Convert(mip),   //!< ミップ
+            D3D12_FILTER_REDUCTION_TYPE_STANDARD    // 1次元カラーのみ変更可能
+        );
+    }
+
+
+    //! @brief  Anisotropy を UINT に変換
+    UINT TypeConverter::Convert(Anisotropy value){
+        switch (value)
+        {
+        case Anisotropy::None:      return 0;
+        case Anisotropy::Level1:    return 1;
+        case Anisotropy::Level2:    return 2;
+        case Anisotropy::Level4:    return 4;
+        case Anisotropy::Level8:    return 8;
+        case Anisotropy::Level16:   return 16;
+        }
+        LOG_WARNING_EX("Graphic", "不正なAnisotropy[value={}]", enum_cast(value));
+        return 0;
+    }
+
+
+    //! @brief  TextureAddress を D3D12_TEXTURE_ADDRESS_MODE に変換
+    D3D12_TEXTURE_ADDRESS_MODE TypeConverter::Convert(TextureAddress value){
+        switch (value)
+        {
+        case TextureAddress::Repeat:   return D3D12_TEXTURE_ADDRESS_MODE_WRAP;
+        case TextureAddress::Clamp:    return D3D12_TEXTURE_ADDRESS_MODE_CLAMP;
+        case TextureAddress::Mirror:   return D3D12_TEXTURE_ADDRESS_MODE_MIRROR;
+        }
+        LOG_WARNING_EX("Graphic", "不正なAnisotropy[value={}]", enum_cast(value));
+        return D3D12_TEXTURE_ADDRESS_MODE_WRAP;
+    }
+
+
+    //! @brief  FillMode を D3D12_FILL_MODE に変換
+    D3D12_FILL_MODE TypeConverter::Convert(FillMode value) {
+        switch (value)
+        {
+        case FillMode::Wireframe:       return D3D12_FILL_MODE_WIREFRAME;
+        case FillMode::Solid:           return D3D12_FILL_MODE_SOLID;
+        case FillMode::Point:
+            LOG_WARNING_EX("Graphic", "FillMode::Pointは非対応です。");
+            break;
+        }
+        LOG_WARNING_EX("Graphic", "不正なFillMode[value={}]", enum_cast(value));
+        return D3D12_FILL_MODE_SOLID;
+    }
+
+
+    //! @brief  CullMode を D3D12_CULL_MODE に変換
+    D3D12_CULL_MODE TypeConverter::Convert(CullMode value) {
+        switch (value)
+        {
+        case CullMode::None:            return D3D12_CULL_MODE_NONE;
+        case CullMode::Front:           return D3D12_CULL_MODE_FRONT;
+        case CullMode::Back:            return D3D12_CULL_MODE_BACK;
+        }
+        LOG_WARNING_EX("Graphic", "不正なCullMode[value={}]", enum_cast(value));
+        return D3D12_CULL_MODE_NONE;
+    }
+
+
+    //! @brief  TextureFormat を DXGI_FORMAT に変換
+    DXGI_FORMAT TypeConverter::Convert(TextureFormat value,bool useTypeless ) {
+        switch (value) {
+        case TextureFormat::SDR:            return DXGI_FORMAT_R8G8B8A8_UNORM;
+        case TextureFormat::HDR:            return DXGI_FORMAT_R10G10B10A2_UNORM;
+
+        case TextureFormat::RGBA32:         return DXGI_FORMAT_R32G32B32A32_FLOAT;
+        case TextureFormat::RGBA16:         return DXGI_FORMAT_R16G16B16A16_UNORM;
+        case TextureFormat::RGBA8:          return DXGI_FORMAT_R8G8B8A8_UNORM;
+
+        case TextureFormat::RGB32:          return DXGI_FORMAT_R32G32B32_FLOAT;
+        case TextureFormat::RGB8:           return DXGI_FORMAT_B8G8R8X8_UNORM;
+
+        case TextureFormat::RG32:           return DXGI_FORMAT_R32G32_FLOAT;
+        case TextureFormat::RG16:           return DXGI_FORMAT_R16G16_FLOAT;
+        case TextureFormat::RG8:            return DXGI_FORMAT_R8G8_UNORM;
+
+        case TextureFormat::R32:            return DXGI_FORMAT_R32_FLOAT;
+        case TextureFormat::R16:            return DXGI_FORMAT_R16_FLOAT;
+        case TextureFormat::R8:             return DXGI_FORMAT_R8_UNORM;
+
+        // Depthはシェーダーリソースとしても使えるようにTYPELESSにする
+        case TextureFormat::D32S8:          return useTypeless?DXGI_FORMAT_R32G8X24_TYPELESS: DXGI_FORMAT_D32_FLOAT_S8X24_UINT;
+        case TextureFormat::D32:            return useTypeless?DXGI_FORMAT_R32_TYPELESS: DXGI_FORMAT_D32_FLOAT;
+        case TextureFormat::D24S8:          return useTypeless?DXGI_FORMAT_R24G8_TYPELESS: DXGI_FORMAT_D24_UNORM_S8_UINT;
+        case TextureFormat::D16:            return useTypeless?DXGI_FORMAT_R16_TYPELESS: DXGI_FORMAT_D16_UNORM;
+
+        case TextureFormat::BC1:            return DXGI_FORMAT_BC1_UNORM;
+        case TextureFormat::BC2:            return DXGI_FORMAT_BC2_UNORM;
+        case TextureFormat::BC3:            return DXGI_FORMAT_BC3_UNORM;
+        case TextureFormat::BC4:            return DXGI_FORMAT_BC4_UNORM;
+        case TextureFormat::BC5:            return DXGI_FORMAT_BC5_UNORM;
+        case TextureFormat::BC6H:           return DXGI_FORMAT_BC6H_UF16;
+        case TextureFormat::BC7:            return DXGI_FORMAT_BC7_UNORM;
+
+        case TextureFormat::RGBA8_SRGB:     return DXGI_FORMAT_R8G8B8A8_UNORM_SRGB;
+        case TextureFormat::BC1_SRGB:       return DXGI_FORMAT_BC1_UNORM_SRGB;
+        case TextureFormat::BC2_SRGB:       return DXGI_FORMAT_BC2_UNORM_SRGB;
+        case TextureFormat::BC3_SRGB:       return DXGI_FORMAT_BC3_UNORM_SRGB;
+        case TextureFormat::BC7_SRGB:       return DXGI_FORMAT_BC7_UNORM_SRGB;
+        }
+
+        LOG_WARNING_EX("Graphic", "不正なTextureFormat[value={}]", enum_cast(value));
+        return DXGI_FORMAT_UNKNOWN;
+    }
+
+    //! @brief  TextureFormat を DXGI_FORMAT に変換
+    DXGI_FORMAT TypeConverter::ConvertDepthAsColor(TextureFormat value) {
+        // Depthはシェーダーリソースとしても使えるようにTYPELESSにする
+        switch (value) {
+        case TextureFormat::D32S8:          return DXGI_FORMAT_R32_FLOAT_X8X24_TYPELESS;
+        case TextureFormat::D32:            return DXGI_FORMAT_R32_FLOAT;
+        case TextureFormat::D24S8:          return DXGI_FORMAT_R24_UNORM_X8_TYPELESS;
+        case TextureFormat::D16:            return DXGI_FORMAT_R16_UNORM;
+        }
+
+        LOG_WARNING_EX("Graphic", "不正なTextureFormat[value={}]", enum_cast(value));
+        return DXGI_FORMAT_UNKNOWN;
+    }
+
+
+    //! @brief  BlendFactor を D3D12_BLEND に変換
+    D3D12_BLEND TypeConverter::Convert(BlendFactor value) {
+        switch (value)
+        {
+        case BlendFactor::Zero:                     return D3D12_BLEND_ZERO;
+        case BlendFactor::One:                      return D3D12_BLEND_ONE;
+        case BlendFactor::SrcColor:                 return D3D12_BLEND_SRC_COLOR;
+        case BlendFactor::OneMinusSrcColor:         return D3D12_BLEND_INV_SRC_COLOR;
+        case BlendFactor::DstColor:                 return D3D12_BLEND_DEST_COLOR;
+        case BlendFactor::OneMinusDstColor:         return D3D12_BLEND_INV_DEST_COLOR;
+        case BlendFactor::SrcAlpha:                 return D3D12_BLEND_SRC_ALPHA;
+        case BlendFactor::OneMinusSrcAlpha:         return D3D12_BLEND_INV_SRC_ALPHA;
+        case BlendFactor::DstAlpha:                 return D3D12_BLEND_DEST_ALPHA;
+        case BlendFactor::OneMinusDstAlpha:         return D3D12_BLEND_INV_DEST_ALPHA;
+        }
+        LOG_WARNING_EX("Graphic", "不正なBlendFactor[value={}]", enum_cast(value));
+        return D3D12_BLEND_ZERO;
+    }
+
+
+    //! @brief  BlendOp を D3D12_BLEND_OP に変換
+    D3D12_BLEND_OP TypeConverter::Convert(BlendOp value) {
+        switch (value)
+        {
+        case BlendOp::Add:     return D3D12_BLEND_OP_ADD;
+        case BlendOp::Sub:     return D3D12_BLEND_OP_SUBTRACT;
+        case BlendOp::RevSub:  return D3D12_BLEND_OP_REV_SUBTRACT;
+        case BlendOp::Min:     return D3D12_BLEND_OP_MIN;
+        case BlendOp::Max:     return D3D12_BLEND_OP_MAX;
+        }
+        LOG_WARNING_EX("Graphic", "不正なBlendOp[value={}]", enum_cast(value));
+        return D3D12_BLEND_OP_ADD;
+    }
+
+
+    //! @brief  BlendFactor を UINT8 に変換
+    UINT8 TypeConverter::Convert(ColorMask value) {
+        UINT8 result = 0;
+        if (value[ColorComponent::R])result |= D3D12_COLOR_WRITE_ENABLE_RED;
+        if (value[ColorComponent::G])result |= D3D12_COLOR_WRITE_ENABLE_GREEN;
+        if (value[ColorComponent::B])result |= D3D12_COLOR_WRITE_ENABLE_BLUE;
+        if (value[ColorComponent::A])result |= D3D12_COLOR_WRITE_ENABLE_ALPHA;
+        return result;
+    }
+
+
+    //! @brief  LogicOp を D3D12_LOGIC_OP に変換
+    D3D12_LOGIC_OP TypeConverter::Convert(LogicOp value) {
+        switch (value)
+        {
+        case LogicOp::Clear:           return D3D12_LOGIC_OP_CLEAR;
+        case LogicOp::Set:             return D3D12_LOGIC_OP_SET;
+        case LogicOp::Copy:            return D3D12_LOGIC_OP_COPY;
+        case LogicOp::CopyInverted:    return D3D12_LOGIC_OP_COPY_INVERTED;
+        case LogicOp::Noop:            return D3D12_LOGIC_OP_NOOP;
+        case LogicOp::Invert:          return D3D12_LOGIC_OP_INVERT;
+        case LogicOp::And:             return D3D12_LOGIC_OP_AND;
+        case LogicOp::Nand:            return D3D12_LOGIC_OP_NAND;
+        case LogicOp::Or:              return D3D12_LOGIC_OP_OR;
+        case LogicOp::Nor:             return D3D12_LOGIC_OP_NOR;
+        case LogicOp::Xor:             return D3D12_LOGIC_OP_XOR;
+        case LogicOp::Equivalent:      return D3D12_LOGIC_OP_EQUIV;
+        case LogicOp::AndReverse:      return D3D12_LOGIC_OP_AND_REVERSE;
+        case LogicOp::AndInverted:     return D3D12_LOGIC_OP_AND_INVERTED;
+        case LogicOp::OrReverse:       return D3D12_LOGIC_OP_OR_REVERSE;
+        case LogicOp::OrInverted:      return D3D12_LOGIC_OP_OR_INVERTED;
+        }
+        LOG_WARNING_EX("Graphic", "不正なLogicOp[value={}]", enum_cast(value));
+        return D3D12_LOGIC_OP_CLEAR;
+    }
+
+
+    //! @brief  Topology を D3D12_PRIMITIVE_TOPOLOGY に変換
+    D3D12_PRIMITIVE_TOPOLOGY TypeConverter::Convert(Topology value) {
+        switch (value)
+        {
+        case Topology::PointList:      return D3D_PRIMITIVE_TOPOLOGY_POINTLIST;
+        case Topology::LineList:       return D3D_PRIMITIVE_TOPOLOGY_LINELIST;
+        case Topology::TriangleList:   return D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST;
+        }
+        LOG_WARNING_EX("Graphic", "不正なTopology[value={}]", enum_cast(value));
+        return D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST;
+    }
+
+
+    //! @brief  Type を DXGI_FORMAT に変換
+    DXGI_FORMAT TypeConverter::Convert(ElementType value, s32 dimension) {
+        switch (value)
+        {
+        case ElementType::Int8:
+            switch (dimension) {
+            case 1: return DXGI_FORMAT_R8_SINT;
+            case 2: return DXGI_FORMAT_R8G8_SINT;
+            case 3: return DXGI_FORMAT_UNKNOWN; // D3D doesn't have native R8G8B8_SINT
+            case 4: return DXGI_FORMAT_R8G8B8A8_SINT;
+            }
+            break;
+        case ElementType::Int16:
+            switch (dimension) {
+            case 1: return DXGI_FORMAT_R16_SINT;
+            case 2: return DXGI_FORMAT_R16G16_SINT;
+            case 3: return DXGI_FORMAT_UNKNOWN; // D3D doesn't have native R16G16B16_SINT
+            case 4: return DXGI_FORMAT_R16G16B16A16_SINT;
+            }
+            break;
+        case ElementType::Int32:
+            switch (dimension) {
+            case 1: return DXGI_FORMAT_R32_SINT;
+            case 2: return DXGI_FORMAT_R32G32_SINT;
+            case 3: return DXGI_FORMAT_R32G32B32_SINT;
+            case 4: return DXGI_FORMAT_R32G32B32A32_SINT;
+            }
+            break;
+        case ElementType::UInt8:
+            switch (dimension) {
+            case 1: return DXGI_FORMAT_R8_UINT;
+            case 2: return DXGI_FORMAT_R8G8_UINT;
+            case 3: return DXGI_FORMAT_UNKNOWN; // D3D doesn't have native R8G8B8_UINT
+            case 4: return DXGI_FORMAT_R8G8B8A8_UINT;
+            }
+            break;
+        case ElementType::UInt16:
+            switch (dimension) {
+            case 1: return DXGI_FORMAT_R16_UINT;
+            case 2: return DXGI_FORMAT_R16G16_UINT;
+            case 3: return DXGI_FORMAT_UNKNOWN; // D3D doesn't have native R16G16B16_UINT
+            case 4: return DXGI_FORMAT_R16G16B16A16_UINT;
+            }
+            break;
+        case ElementType::UInt32:
+            switch (dimension) {
+            case 1: return DXGI_FORMAT_R32_UINT;
+            case 2: return DXGI_FORMAT_R32G32_UINT;
+            case 3: return DXGI_FORMAT_R32G32B32_UINT;
+            case 4: return DXGI_FORMAT_R32G32B32A32_UINT;
+            }
+            break;
+        case ElementType::Float:
+            switch (dimension) {
+            case 1: return DXGI_FORMAT_R32_FLOAT;
+            case 2: return DXGI_FORMAT_R32G32_FLOAT;
+            case 3: return DXGI_FORMAT_R32G32B32_FLOAT;
+            case 4: return DXGI_FORMAT_R32G32B32A32_FLOAT;
+            }
+            break;
+        case ElementType::Int8Norm:
+            switch (dimension) {
+            case 1: return DXGI_FORMAT_R8_SNORM;
+            case 2: return DXGI_FORMAT_R8G8_SNORM;
+            case 3: return DXGI_FORMAT_UNKNOWN; // D3D doesn't have native R8G8B8_SNORM
+            case 4: return DXGI_FORMAT_R8G8B8A8_SNORM;
+            }
+            break;
+        case ElementType::UInt8Norm:
+            switch (dimension) {
+            case 1: return DXGI_FORMAT_R8_UNORM;
+            case 2: return DXGI_FORMAT_R8G8_UNORM;
+            case 3: return DXGI_FORMAT_UNKNOWN; // D3D doesn't have native R8G8B8_UNORM
+            case 4: return DXGI_FORMAT_R8G8B8A8_UNORM;
+            }
+            break;
+        }
+        LOG_WARNING_EX("Graphic", "不正なSemantic[value={0},index={1}]", enum_cast(value),dimension);
+        return DXGI_FORMAT_UNKNOWN;
+    }
+
+
+    //! @brief  Semantic を LPCSTR に変換
+    LPCSTR TypeConverter::Convert(Semantic value) {
+        switch (value)
+        {
+        case Semantic::Position:       return "POSITION";
+        case Semantic::Normal:         return "NORMAL";
+        case Semantic::Binormal:       return "BINOMAL";
+        case Semantic::Tangent:        return "TANGENT";
+        case Semantic::Color:          return "COLOR";
+        case Semantic::TexCoord:       return "TEXCOORD";
+        case Semantic::BlendIndices:   return "BLENDINDICES";
+        case Semantic::BlendWeights:   return "BLENDWEIGHT";
+        case Semantic::PointSize:      return "PSIZE";
+        }
+        LOG_WARNING_EX("Graphic", "不正なSemantic[value={}]", enum_cast(value));
+        return "";
+    }
+
+
+    //! @brief  StencilOp を D3D12_STENCIL_OP に変換
+    D3D12_STENCIL_OP TypeConverter::Convert(StencilOp value) {
+        switch (value)
+        {
+        case StencilOp::Keep:              return D3D12_STENCIL_OP_KEEP;
+        case StencilOp::Zero:              return D3D12_STENCIL_OP_ZERO;
+        case StencilOp::Replace:           return D3D12_STENCIL_OP_REPLACE;
+        case StencilOp::IncrementAndClamp: return D3D12_STENCIL_OP_INCR_SAT;
+        case StencilOp::DecrementAndClamp: return D3D12_STENCIL_OP_DECR_SAT;
+        case StencilOp::Invert:            return D3D12_STENCIL_OP_INVERT;
+        case StencilOp::IncrementAndWrap:  return D3D12_STENCIL_OP_INCR;
+        case StencilOp::DecrementAndWrap:  return D3D12_STENCIL_OP_DECR;
+        }
+        LOG_WARNING_EX("Graphic", "不正なStencilOp[value={}]", enum_cast(value));
+        return D3D12_STENCIL_OP_KEEP;
+    }
+
+
+    //! @brief  ComparisonFunc を D3D12_COMPARISON_FUNC に変換
+    D3D12_COMPARISON_FUNC TypeConverter::Convert(ComparisonFunc value) {
+        switch (value)
+        {
+        case ComparisonFunc::Never:        return D3D12_COMPARISON_FUNC_NEVER;
+        case ComparisonFunc::Always:       return D3D12_COMPARISON_FUNC_ALWAYS;
+        case ComparisonFunc::Equal:        return D3D12_COMPARISON_FUNC_EQUAL;
+        case ComparisonFunc::NotEqual:     return D3D12_COMPARISON_FUNC_NOT_EQUAL;
+        case ComparisonFunc::Less:         return D3D12_COMPARISON_FUNC_LESS;
+        case ComparisonFunc::Greater:      return D3D12_COMPARISON_FUNC_GREATER;
+        case ComparisonFunc::LessEqual:    return D3D12_COMPARISON_FUNC_LESS_EQUAL;
+        case ComparisonFunc::GreaterEqual: return D3D12_COMPARISON_FUNC_GREATER_EQUAL;
+        }
+        LOG_WARNING_EX("Graphic", "不正なComparisonFunc[value={}]", enum_cast(value));
+        return D3D12_COMPARISON_FUNC_NEVER;
+    }
+
+
+    //! @brief  CommandListType を D3D12_COMMAND_LIST_TYPE に変換
+    D3D12_COMMAND_LIST_TYPE TypeConverter::Convert(CommandListType value) {
+        switch (value)
+        {
+        case CommandListType::Graphic: return D3D12_COMMAND_LIST_TYPE_DIRECT;
+        case CommandListType::Compute: return D3D12_COMMAND_LIST_TYPE_COMPUTE;
+        case CommandListType::Copy:    return D3D12_COMMAND_LIST_TYPE_COPY;
+        }
+
+        LOG_WARNING_EX("Graphic", "不正なCommandListType[value={}]", enum_cast(value));
+        return D3D12_COMMAND_LIST_TYPE_DIRECT;
+    }
+
+    //! @brief  BufferState を D3D12_RESOURCE_STATES に変換
+    D3D12_RESOURCE_STATES TypeConverter::Convert(BufferState value) {
+        switch (value)
+        {
+        case BufferState::Unknown:
+        case BufferState::Common:         return D3D12_RESOURCE_STATE_COMMON;
+        case BufferState::Vertex:           return D3D12_RESOURCE_STATE_VERTEX_AND_CONSTANT_BUFFER;
+        case BufferState::Index:            return D3D12_RESOURCE_STATE_INDEX_BUFFER;
+        case BufferState::Constant:         return D3D12_RESOURCE_STATE_VERTEX_AND_CONSTANT_BUFFER;
+        case BufferState::ShaderResource:   return D3D12_RESOURCE_STATE_ALL_SHADER_RESOURCE;
+        case BufferState::UnorderedAccess:  return D3D12_RESOURCE_STATE_UNORDERED_ACCESS;
+        case BufferState::IndirectArgument: return D3D12_RESOURCE_STATE_INDIRECT_ARGUMENT;
+        case BufferState::CopySource:       return D3D12_RESOURCE_STATE_COPY_SOURCE;
+        case BufferState::CopyDest:         return D3D12_RESOURCE_STATE_COPY_DEST;
+        }
+
+        LOG_WARNING_EX("Graphic", "不正なBufferState[value={}]", enum_cast(value));
+        return D3D12_RESOURCE_STATE_COMMON;
+    }
+
+    //! @brief  TextureState を D3D12_RESOURCE_STATES に変換
+    D3D12_RESOURCE_STATES TypeConverter::Convert(TextureState value) {
+        switch (value)
+        {
+		case TextureState::Unknown:
+		case TextureState::Common:          return D3D12_RESOURCE_STATE_COMMON;
+		case TextureState::ShaderResource:  return D3D12_RESOURCE_STATE_ALL_SHADER_RESOURCE;
+		case TextureState::UnorderedAccess: return D3D12_RESOURCE_STATE_UNORDERED_ACCESS;
+		case TextureState::RenderTarget:    return D3D12_RESOURCE_STATE_RENDER_TARGET;
+		case TextureState::DepthRead:       return D3D12_RESOURCE_STATE_DEPTH_READ;
+		case TextureState::DepthWrite:      return D3D12_RESOURCE_STATE_DEPTH_WRITE;
+		case TextureState::CopySource:      return D3D12_RESOURCE_STATE_COPY_SOURCE;
+		case TextureState::CopyDest:        return D3D12_RESOURCE_STATE_COPY_DEST;
+		case TextureState::ResolveSource:   return D3D12_RESOURCE_STATE_RESOLVE_SOURCE;
+		case TextureState::ResolveDest:     return D3D12_RESOURCE_STATE_RESOLVE_DEST;
+		case TextureState::Present:         return D3D12_RESOURCE_STATE_PRESENT;
+        }
+
+        LOG_WARNING_EX("Graphic", "不正なTextureState[value={}]", enum_cast(value));
+        return D3D12_RESOURCE_STATE_COMMON;
+    }
+
+    D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE TypeConverter::Convert(RenderPassBeforeAccessType value) {
+        switch (value) {
+        case RenderPassBeforeAccessType::Discard:    return D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE_DISCARD;
+        case RenderPassBeforeAccessType::Preserve:   return D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE_PRESERVE;
+        case RenderPassBeforeAccessType::Clear:      return D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE_CLEAR;
+        case RenderPassBeforeAccessType::NoAccess:   return D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE_NO_ACCESS;
+        }
+        LOG_WARNING_EX("Graphic", "不正なRenderPassBeforeAccessType[value={}]", enum_cast(value));
+        return D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE_NO_ACCESS;
+    }
+
+    D3D12_RENDER_PASS_ENDING_ACCESS_TYPE TypeConverter::Convert(RenderPassAfterAccessType value) {
+		switch (value) {
+		case RenderPassAfterAccessType::Discard:    return D3D12_RENDER_PASS_ENDING_ACCESS_TYPE_DISCARD;
+		case RenderPassAfterAccessType::Preserve:   return D3D12_RENDER_PASS_ENDING_ACCESS_TYPE_PRESERVE;
+		case RenderPassAfterAccessType::NoAccess:   return D3D12_RENDER_PASS_ENDING_ACCESS_TYPE_NO_ACCESS;
+		}
+		LOG_WARNING_EX("Graphic", "不正なRenderPassAfterAccessType[value={}]", enum_cast(value));
+		return D3D12_RENDER_PASS_ENDING_ACCESS_TYPE_NO_ACCESS;
+    }
+
+    D3D12_DESCRIPTOR_RANGE_TYPE TypeConverter::Convert(BindingType value) {
+        switch (value)
+        {
+        case BindingType::Texture:
+        case BindingType::Buffer:
+        case BindingType::StructuredBuffer:
+        case BindingType::ByteAddressBuffer:
+            return D3D12_DESCRIPTOR_RANGE_TYPE_SRV;
+
+        case BindingType::RWTexture:
+        case BindingType::RWBuffer:
+        case BindingType::RWStructuredBuffer:
+        case BindingType::RWByteAddressBuffer:
+            return D3D12_DESCRIPTOR_RANGE_TYPE_UAV;
+
+        case BindingType::ConstantBuffer:
+            return D3D12_DESCRIPTOR_RANGE_TYPE_CBV;
+
+        case BindingType::Sampler:
+            return D3D12_DESCRIPTOR_RANGE_TYPE_SAMPLER;
+        }
+        AMUSE_ABORT("不正なRootParameterTypeです。");
+        return {};
+    }
+
+
+    //! @brief  DXGI_FORMAT を TextureFormat に変換
+    TextureFormat TypeConverter::Convert(DXGI_FORMAT value) {
+        switch (static_cast<DXGI_FORMAT>(value)) {
+        case DXGI_FORMAT_R10G10B10A2_UNORM:		return TextureFormat::HDR;
+        case DXGI_FORMAT_R32G32B32A32_FLOAT:	return TextureFormat::RGBA32;
+        case DXGI_FORMAT_R16G16B16A16_UNORM:	return TextureFormat::RGBA16;
+        case DXGI_FORMAT_R8G8B8A8_UNORM:		return TextureFormat::RGBA8;
+        case DXGI_FORMAT_R8G8B8A8_UNORM_SRGB:	return TextureFormat::RGBA8;
+        case DXGI_FORMAT_R32G32B32_FLOAT:		return TextureFormat::RGB32;
+        case DXGI_FORMAT_R32G32_FLOAT:			return TextureFormat::RG32;
+        case DXGI_FORMAT_R16G16_FLOAT:			return TextureFormat::RG16;
+        case DXGI_FORMAT_R8G8_UNORM:			return TextureFormat::RG8;
+        case DXGI_FORMAT_R32_FLOAT:				return TextureFormat::R32;
+        case DXGI_FORMAT_R16_FLOAT:				return TextureFormat::R16;
+        case DXGI_FORMAT_R8_UNORM:				return TextureFormat::R8;
+        case DXGI_FORMAT_D32_FLOAT_S8X24_UINT:	return TextureFormat::D32S8;
+        case DXGI_FORMAT_D32_FLOAT:				return TextureFormat::D32;
+        case DXGI_FORMAT_D24_UNORM_S8_UINT:		return TextureFormat::D24S8;
+        case DXGI_FORMAT_D16_UNORM:				return TextureFormat::D16;
+        case DXGI_FORMAT_BC1_UNORM:				return TextureFormat::BC1;
+        case DXGI_FORMAT_BC2_UNORM:				return TextureFormat::BC2;
+        case DXGI_FORMAT_BC3_UNORM:				return TextureFormat::BC3;
+        case DXGI_FORMAT_BC4_UNORM:				return TextureFormat::BC4;
+        case DXGI_FORMAT_BC5_UNORM:				return TextureFormat::BC5;
+        case DXGI_FORMAT_BC6H_UF16:				return TextureFormat::BC6H;
+        case DXGI_FORMAT_BC7_UNORM:				return TextureFormat::BC7;
+        case DXGI_FORMAT_BC1_UNORM_SRGB:		return TextureFormat::BC1_SRGB;
+        case DXGI_FORMAT_BC2_UNORM_SRGB:		return TextureFormat::BC2_SRGB;
+        case DXGI_FORMAT_BC3_UNORM_SRGB:		return TextureFormat::BC3_SRGB;
+        case DXGI_FORMAT_BC7_UNORM_SRGB:		return TextureFormat::BC7_SRGB;
+
+        case DXGI_FORMAT_B8G8R8A8_UNORM:		return TextureFormat::RGBA8;
+        case DXGI_FORMAT_B8G8R8A8_UNORM_SRGB:	return TextureFormat::RGBA8_SRGB;
+
+        }
+        LOG_WARNING_EX("Graphic", "不正なDXGI_FORMAT[value={}]", enum_cast(value));
+        return TextureFormat::Unknown;
+    }
+
+}
