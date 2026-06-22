@@ -176,6 +176,7 @@ namespace Amuse::Core {
 		friend constexpr bool operator >(StringViewBase lhs, StringViewBase rhs) noexcept { return (lhs.compare(rhs) > 0); }
 		friend constexpr bool operator >=(StringViewBase lhs, StringViewBase rhs) noexcept { return (lhs.compare(rhs) >= 0); }
 
+		//! @endcond
 	private:
 		string_view_type m_view;
 	};

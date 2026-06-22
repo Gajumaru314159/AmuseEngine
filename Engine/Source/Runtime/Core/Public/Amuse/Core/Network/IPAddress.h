@@ -9,11 +9,12 @@
 namespace Amuse::Core {
 
 	//! @brief IPv4 アドレスを 4 オクテットで保持する。
-	//! @details ```cpp
+	//! @details
+	//! @code{.cpp}
 	//! IPAddress ip(192, 168, 0, 1);
 	//! IPAddress ip(0xc0a80001);
 	//! IPAddress ip("192.168.0.1");
-	//! ```
+	//! @endcode
 	struct IPAddress {
 		IPAddress() :a(0), b(0), c(0), d(0) {}
 		//! @brief IPAddress を初期化する。

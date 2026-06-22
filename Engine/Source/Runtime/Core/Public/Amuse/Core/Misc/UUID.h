@@ -44,7 +44,7 @@ namespace Amuse::Core {
 
         //! @brief 文字列表現で取得
         //! 
-        //! @return XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXXの形で表される文字列表現
+        //! @param dest XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXXの形で表される文字列表現の格納先
         void  toString(Char(&dest)[37])const;
 
 

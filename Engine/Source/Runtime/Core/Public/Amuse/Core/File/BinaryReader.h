@@ -56,7 +56,6 @@ namespace Amuse::Core {
 		//! 
 		//! @param offset 　 基準からの移動量
 		//! @param origin	 基準位置
-		//! @return 0 のとき成功
 		void seek(offset_t offset, SeekOrigin origin);
 
 		//! @brief  ストリームの終わりか
