@@ -39,4 +39,9 @@ if(UNIX)
     list(APPEND public_includes "${AMUSE_THIRD_PARTY_PATH}/dxc/Linux/include/dxc")
 endif()
 
+set(copy_files
+    "${AMUSE_THIRD_PARTY_PATH}/dxc/Windows/bin/x64/dxcompiler.dll"
+    "${AMUSE_THIRD_PARTY_PATH}/dxc/Windows/bin/x64/dxil.dll"
+)
+
 amuse_add_library()

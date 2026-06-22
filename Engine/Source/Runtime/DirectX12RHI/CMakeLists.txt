@@ -17,7 +17,7 @@ set(private_libs
     "${AMUSE_THIRD_PARTY_PATH}/dxc/Windows/lib/x64/dxil.lib"
     "${AMUSE_THIRD_PARTY_PATH}/DirectStorage/native/lib/x64/dstorage.lib"
 )
-list(APPEND copy_files
+set(copy_files
     "${AMUSE_THIRD_PARTY_PATH}/PIX/bin/WinPixEventRuntime.dll"
     "${AMUSE_THIRD_PARTY_PATH}/dxc/Windows/bin/x64/dxcompiler.dll"
     "${AMUSE_THIRD_PARTY_PATH}/dxc/Windows/bin/x64/dxil.dll"
