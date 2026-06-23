@@ -3,6 +3,8 @@ add_subdirectory("Entry")
 add_subdirectory("Platform")
 add_subdirectory("Input")
 add_subdirectory("RHI")
+add_subdirectory("ImGui")
+add_subdirectory("RPI")
 
 if(AMUSE_DIRECTX AND WIN32)
     add_subdirectory("DirectX12RHI")

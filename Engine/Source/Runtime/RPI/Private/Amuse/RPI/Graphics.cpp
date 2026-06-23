@@ -1,0 +1,148 @@
+﻿//***********************************************************
+//! @file
+//! @author		Gajumaru
+//***********************************************************
+#include <Amuse/Core/Utility/DI.h>
+#include <Amuse/RPI/FrameGraph/FG.h>
+#include <Amuse/RPI/Graphics.h>
+#include <Amuse/RPI/Material/MaterialManager.h>
+#include <Amuse/RPI/Render/RenderScene.h>
+#include <Amuse/RHI/CommandList.h>
+#include <Amuse/RHI/RHI.h>
+#include <Amuse/RHI/System.h>
+#include <Amuse/RPI/FrameGraph/FGResourcePool.h>
+
+namespace Amuse::RPI {
+
+	//! @brief      システムをServiceInjectorに登録
+	void RegisterGraphicsService(ServiceInjector& injector) {
+		injector.bind<MaterialManager>();
+		injector.bind<Graphics>();
+		RHI::RegisterRHIService(injector);
+		Name::Register(injector);
+	}
+
+	//! @brief      コンストラクタ
+	Graphics::Graphics(RHI::Device& rhi,MaterialManager&)
+		: m_rhi(rhi)
+		, m_fgResourcePool(rhi)
+	{
+
+		for (s32 i = 0; i < 3; ++i) {
+			RHI::CommandListDesc desc;
+			desc.name = Format("SystemCommanList_{}", i);
+			desc.type = RHI::CommandListType::Graphic;
+			m_commandLists.emplace_back(RHI::CommandList::Create(desc));
+		}
+
+	}
+
+	//! @brief      デストラクタ
+	Graphics::~Graphics() {
+		AMUSE_ASSERT(m_scenes.empty(), "削除されていないRenderSceneが存在します");
+	}
+
+	//! @brief      ゲームループごとの更新を実行する
+	void Graphics::update() {
+
+		beginForParallel(1);
+		updateForParallel(0);
+	}
+
+	//! @brief      更新準備
+	void Graphics::beginForParallel(s32 threadNum) {
+
+		wait();
+
+		// TODO RHI実行スレッド待機
+
+		// TODO RHI実行スレッド起動
+
+		// TODO 実行準備
+
+		// NOTE ENQUEUE_RENDER_COMMANDのようなカスタムコマンド実行を仕込む？そもそものFrameGraphもENQUEUE_RENDER_COMMANDで追加しても良いかも
+
+		m_fgResourcePool->update();
+
+		m_fg = std::make_unique<FG>();
+
+		//
+		for (auto& scene : m_scenes) {
+			scene->render(*m_fg);
+		}
+
+		m_fg->compile();
+
+
+	}
+
+	//! @brief      ゲームループごとの更新を実行する
+	void Graphics::updateForParallel(s32 threadIndex) {
+
+		if (threadIndex != 0)return;
+
+		auto commandList = m_commandLists.current();
+
+		commandList->begin();
+		m_fg->execute(commandList, *m_fgResourcePool);
+		commandList->end();
+		Ref<RHI::CommandList> commandLists[] = { commandList };
+		m_rhi.executeCommandLists(commandLists);
+
+	}
+
+
+	//! @brief      ネイティブの描画コマンドを発行して描画処理を開始する
+	void Graphics::execute() {
+		// TODO 前フレームの描画完了を待機
+		// TODO ICommandからCommandListを構築
+		// TODO CommandList構築を待機
+		// TODO RHIThreadで描画開始
+	}
+
+
+	//! @brief      描画コマンドの完了を待機する
+	void Graphics::wait() {
+		// TODO 前フレームの描画完了を待機
+		// TODO ICommandからCommandListを構築
+		// TODO CommandList構築を待機
+		// TODO RHIThreadで描画開始
+	}
+
+	//! @brief      シーンを追加
+	//! @note       追加したシーンはGraphicsの終了までに removeScene で削除される必要があります。
+	void Graphics::addScene(RenderScene* scene) {
+		if (scene == nullptr) {
+			LOG_WARNING("無効なRenderSceneは追加できません");
+			return;
+		}
+		if (contains_item(m_scenes, scene)) {
+			LOG_WARNING("RenderSceneの多重追加はできません");
+			return;
+		}
+		m_scenes.push_back(scene);
+	}
+
+	//! @brief      シーンを削除
+	void Graphics::removeScene(RenderScene* scene) {
+		if (scene == nullptr) {
+			LOG_WARNING("無効なRenderSceneは削除できません");
+			return;
+		}
+		m_scenes.erase(std::remove(m_scenes.begin(), m_scenes.end(), scene), m_scenes.end());
+		//if (!erase_all_item(m_scenes, scene)) {
+		//	LOG_WARNING("追加されていないRenderSceneを削除しようとしました");
+		//	return;
+		//}
+	}
+
+	FGData Graphics::getFGData()const {
+		FGData data;
+		if (m_fg) {
+			FGDataWriter writer(data);
+			m_fg->debugOutput(writer);
+		}
+		return data;
+	}
+
+}
