@@ -246,7 +246,7 @@ namespace Amuse::RPI {
 		for (auto& lod : lods)
 		{
 			// source情報がありレイアウトが未設定の場合更新対象とする
-			if (lod.source && lod.buffer.layout)
+			if (lod.source && !lod.buffer.layout)
 			{
 #define ADD_ATTRIBUTE(member,semantic,type,dimension,index) \
 				if(!lod.source->member.empty()) { \
