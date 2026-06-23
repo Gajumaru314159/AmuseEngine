@@ -31,7 +31,9 @@ namespace Amuse::RPI {
         //! @brief      ゲームループごとの更新を実行する
         void update();
 
+        //! @brief 並列更新の準備を開始する
         void beginForParallel(s32 threadNum);
+        //! @brief 指定スレッドの並列更新を実行する
         void updateForParallel(s32 threadIndex);
 
 
@@ -59,15 +61,15 @@ namespace Amuse::RPI {
 
     private:
 
-        RHI::Device& m_rhi;
+        RHI::Device& m_rhi; //!< RHI デバイス
 
-        UPtr<FG> m_fg{ nullptr };
+        UPtr<FG> m_fg{ nullptr }; //!< フレームグラフ
 
-        Swapper<Ref<RHI::CommandList>> m_commandLists;
+        Swapper<Ref<RHI::CommandList>> m_commandLists; //!< コマンドリスト
 
-        Pimpl<FGResourcePool> m_fgResourcePool;
+        Pimpl<FGResourcePool> m_fgResourcePool; //!< フレームグラフリソースプール
 
-        Vector<RenderScene*> m_scenes;
+        Vector<RenderScene*> m_scenes; //!< 描画シーン
     };
 
 }

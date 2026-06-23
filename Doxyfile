@@ -1148,7 +1148,8 @@ EXCLUDE_PATTERNS       = */pch.* \
                          */Private/* \
                          */Protectted/* \
                          */Test/* \
-                         */Draft/*
+                         */Draft/* \
+                         */ImGui/*
 
 # The EXCLUDE_SYMBOLS tag can be used to specify one or more symbol names
 # (namespaces, classes, functions, etc.) that should be excluded from the
@@ -1243,7 +1244,7 @@ FILTER_SOURCE_PATTERNS =
 # (index.html). This can be useful if you have a project on for instance GitHub
 # and want to reuse the introduction page also for the Doxygen output.
 
-USE_MDFILE_AS_MAINPAGE = README.md
+USE_MDFILE_AS_MAINPAGE = Engine/Source/Runtime/Runtime.md
 
 # If the IMPLICIT_DIR_DOCS tag is set to YES, any README.md file found in sub-
 # directories of the project's root, is used as the documentation for that sub-

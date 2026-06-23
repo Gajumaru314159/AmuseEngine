@@ -12,8 +12,9 @@
 
 namespace Amuse::RPI {
 
+	//! @brief マテリアルシステム初期化設定
 	struct MaterialSystemDesc {
-		MaterialPropertiesSetDesc properties;
+		MaterialPropertiesSetDesc properties; //!< プロパティ定義
 	};
 
 	//! @brief マテリアルシステム
@@ -23,27 +24,34 @@ namespace Amuse::RPI {
 	//! 自動的に MaterialBlock を生成します。
 	class MaterialSystem : public Singleton<MaterialSystem> {
 	public:
+		//! @brief グローバル・シーン・ビュー別のレイアウト
 		struct MaterialLayoutSet {
-			Ref<RHI::DescriptorLayout> global;
-			Ref<RHI::DescriptorLayout> scene;
-			Ref<RHI::DescriptorLayout> view;
+			Ref<RHI::DescriptorLayout> global; //!< グローバルレイアウト
+			Ref<RHI::DescriptorLayout> scene; //!< シーンレイアウト
+			Ref<RHI::DescriptorLayout> view; //!< ビューレイアウト
 		};
+		//! @brief グローバル・シーン・ビュー別のブロック定義
 		struct MateriaBlockDescSet {
-			MaterialBlockDesc global;
-			MaterialBlockDesc scene;
-			MaterialBlockDesc view;
+			MaterialBlockDesc global; //!< グローバルブロック定義
+			MaterialBlockDesc scene; //!< シーンブロック定義
+			MaterialBlockDesc view; //!< ビューブロック定義
 		};
-		using VertexLayout = Amuse::RHI::VertexLayout;
+		using VertexLayout = Amuse::RHI::VertexLayout; //!< 頂点レイアウト型
 	public:
 
+		//! @brief マテリアルシステムを初期化する
 		MaterialSystem(const MaterialSystemDesc& desc);
 
+		//! @brief 共通レイアウトを取得する
 		const MaterialLayoutSet& getLayouts() const { return m_layouts; }
 
+		//! @brief シーン用マテリアルブロックを生成する
 		MaterialBlock createSceneBlock(StringView name) const;
 
+		//! @brief ビュー用マテリアルブロックを生成する
 		MaterialBlock createViewBlock(StringView name) const;
 
+		//! @brief グローバルマテリアルブロックを取得する
 		MaterialBlock& getGlobalBlock() { return m_globalBlock; }
 	private:
 
@@ -55,13 +63,17 @@ namespace Amuse::RPI {
 		Vector<Ref<VertexLayout>>	m_vertexLayouts;
 	};
 
+	//! @brief 描画時に使用するマテリアルブロック一式
 	struct MaterialBlockSet {
-		MaterialBlock* global = nullptr;
-		MaterialBlock* scene = nullptr;
-		MaterialBlock* view = nullptr;
+		MaterialBlock* global = nullptr; //!< グローバルブロック
+		MaterialBlock* scene = nullptr; //!< シーンブロック
+		MaterialBlock* view = nullptr; //!< ビューブロック
 		
+		//! @brief 空のブロックセットを生成する
 		MaterialBlockSet();
+		//! @brief ビューからブロックセットを生成する
 		MaterialBlockSet(RenderView& scene);
+		//! @brief シーンからブロックセットを生成する
 		MaterialBlockSet(RenderScene& scene);
 	};
 

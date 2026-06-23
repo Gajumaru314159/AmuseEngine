@@ -9,8 +9,10 @@
 
 namespace Amuse::RPI {
 
+	//! @brief 頂点レイアウト識別子
 	enum class VertexLayoutId : s32 {};
 
+	//! @brief マテリアルプロパティ種別
 	enum class MaterialPropertyType {
 		Texture,
 		Buffer,
@@ -20,11 +22,12 @@ namespace Amuse::RPI {
 		Integer,
 	};
 
+	//! @brief マテリアル値プロパティの配置情報
 	struct MaterialValuePropertyDesc {
-		MaterialPropertyType type;
-		s32 offset = -1; // バッファ内のバイトオフセット
-		s32 index = -1; // 何番目のリソースか (Textureの何番目か/Samplerの何番目か/Bufferの何番目か)
-		s32 slot = -1; // DescriptorTableの何番目にバインドされているか
+		MaterialPropertyType type; //!< プロパティ種別
+		s32 offset = -1; //!< バッファ内バイトオフセット
+		s32 index = -1; //!< リソースインデックス
+		s32 slot = -1; //!< デスクリプタスロット
 	};
 
 	using MaterialPropertyMap = Map<String, MaterialValuePropertyDesc, std::less<>>;

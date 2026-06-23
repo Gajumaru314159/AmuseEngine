@@ -11,41 +11,49 @@
 #include <Amuse/RPI/Material/Material.h>
 namespace Amuse::RPI {
 
+	//! @brief 平行光源データ
 	struct DirectionalLightData {
-		Color color;
-		Vec3 direction;
-		f32  intensity;
+		Color color; //!< 色
+		Vec3 direction; //!< 方向
+		f32  intensity; //!< 強度
 	};
+	//! @brief 点光源データ
 	struct PointLightData {
-		Color color;
-		Vec3 position;
-		f32  intensity;
+		Color color; //!< 色
+		Vec3 position; //!< 位置
+		f32  intensity; //!< 強度
 	};
+	//! @brief スポットライトデータ
 	struct SpotLightData {
-		Color color;
-		Vec3 position;
-		f32  intensity;
-		Vec3 direction;
-		f32  anguler;
+		Color color; //!< 色
+		Vec3 position; //!< 位置
+		f32  intensity; //!< 強度
+		Vec3 direction; //!< 方向
+		f32  anguler; //!< 角度
 	};
 
+	//! @brief 要素数に応じて拡張する GPU バッファ
 	class ResizableBuffer {
 	public:
+		//! @brief バッファ生成設定
 		struct Desc {
-			s32 stride;
+			s32 stride; //!< 要素バイト幅
 		};
 	public:
+		//! @brief 要素バイト幅を指定して生成する
 		ResizableBuffer(const Desc& desc)
 			: m_desc(desc), m_size(0)
 		{
 			resize(16);
 		}
 
+		//! @brief バッファ容量を変更する
 		void resize(size_t size) {
 			m_size = size;
 			m_buffer = RHI::Buffer::Create(RHI::BufferDesc::ByteAddress(m_desc.stride * m_size));
 		}
 
+		//! @brief 要素データを GPU バッファへ転送する
 		void update(size_t count, const void* data) {
 			using namespace Amuse::RHI;
 			if (m_size <= count) {
@@ -54,6 +62,7 @@ namespace Amuse::RPI {
 			m_buffer->update(m_desc.stride * count, data);
 		}
 
+		//! @brief GPU バッファを取得する
 		Ref<RHI::Buffer> getBuffer() const {
 			return m_buffer;
 		}
@@ -67,6 +76,7 @@ namespace Amuse::RPI {
 	//! @brief      マテリアル描画機能
 	class PointLightRenderFeature : public RenderFeature {
 	public:
+		//! @brief 点光源描画で使用するマテリアルプロパティを取得する
 		static MaterialPropertiesSetDesc GetProperties() {
 			MaterialPropertiesSetDesc desc;
 			desc.scene.buffers = {
@@ -76,20 +86,25 @@ namespace Amuse::RPI {
 		}
 	public:
 
+		//! @brief RTTI 情報を宣言する
 		AMUSE_RTTI();
 
+		//! @brief 点光源描画機能を生成する
 		PointLightRenderFeature()
 			: m_buffer({ sizeof(PointLightData) })
 		{
 
 		}
 
+		//! @brief 点光源スロットを確保する
 		s32 acquire() {
 			return m_point.push();
 		}
+		//! @brief 点光源スロットを解放する
 		void release(s32 index) {
 			m_point.erase(index);
 		}
+		//! @brief 点光源データを設定する
 		void set(s32 index, const PointLightData& data) {
 			if (index < 0 || index >= m_point.size()) {
 				LOG_FATAL("PointLightRenderFeature::set: Invalid index {}", index);
@@ -98,6 +113,7 @@ namespace Amuse::RPI {
 			m_point.at(index) = data;
 		}
 
+		//! @brief 点光源バッファを更新してシーンブロックへ設定する
 		void render(FG& fg,RenderScene& scene) {
 			m_buffer.update(m_point.size(), m_point.data());
 

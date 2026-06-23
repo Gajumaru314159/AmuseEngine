@@ -11,6 +11,7 @@ namespace Amuse::RPI {
 	//! @brief      マテリアル描画機能
 	class CameraRenderFeature : public RenderFeature {
 	public:
+		//! @brief カメラ描画で使用するマテリアルプロパティを取得する
 		static MaterialPropertiesSetDesc GetProperties() {
 			MaterialPropertiesSetDesc desc;
 			desc.global.matrices = {
@@ -35,8 +36,10 @@ namespace Amuse::RPI {
 		}
 	public:
 
+		//! @brief RTTI 情報を宣言する
 		AMUSE_RTTI();
 
+		//! @brief シーン用カメラ描画機能を生成する
 		CameraRenderFeature(RenderScene& scene) {
 
 		}

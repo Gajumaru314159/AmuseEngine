@@ -15,18 +15,21 @@ namespace Amuse::RPI {
 	//! @brief  マテリアル
 	class Material : public RefObject {
 	public:
-		using Texture = Amuse::RHI::Texture;
-		using Sampler = Amuse::RHI::Sampler;
-		using Buffer = Amuse::RHI::Buffer;
+		using Texture = Amuse::RHI::Texture; //!< テクスチャ型
+		using Sampler = Amuse::RHI::Sampler; //!< サンプラ型
+		using Buffer = Amuse::RHI::Buffer; //!< バッファ型
 	public:
 
 		//! @brief  生成
 		static Ref<Material> Create(const Ref<MaterialShader>& shader);
+		//! @brief マテリアル定義から生成する
 		static Ref<Material> Create(const MaterialDesc& desc);
 
 	public:
 
+		//! @brief マテリアル定義を取得する
 		const MaterialDesc& getDesc()const;
+		//! @brief 共有シェーダを取得する
 		const Ref<MaterialShader>& getShader()const { return m_shader; }
 
 		//! @brief  マテリアルパラメータが存在するか
@@ -40,30 +43,43 @@ namespace Amuse::RPI {
 
 		//! @brief  マテリアルパラメータを設定
 		void setTexture(StringView name, const Ref<Texture>& value);
+		//! @brief バッファパラメータを設定する
 		void setBuffer(StringView name, const Ref<Buffer>& value);
+		//! @brief 行列パラメータを設定する
 		void setMatrix(StringView name, const Matrix& value);
+		//! @brief ベクトルパラメータを設定する
 		void setVector(StringView name, Color value);
+		//! @brief スカラーパラメータを設定する
 		void setScalar(StringView name, f32 value);
+		//! @brief 整数パラメータを設定する
 		void setInteger(StringView name, f32 value);
 
+		//! @brief 指定パスで使用する品質インデックスを計算する
 		s32 calcQualityIndex(StringView pass, s32 quality) const;
 
 		//! @brief  GPUリソースの事前生成
 		//! @details GPUリソースを事前生成しておくことで描画時のスパイクを回避することができます。
 		bool prepare(const Ref<Mesh>& mesh);
 
+		//! @brief 指定したメッシュサブセットの描画コマンドを記録する
 		void record(Ref<RHI::CommandList>& commandList, MaterialBlockSet& blocks, const Ref<Mesh>& mesh, s32 submesh, StringView pass, s32 quality = 0);
 
+		//! @brief マテリアル固有ブロックを取得する
 		auto& getBlock() { return m_block;}
 	public:
 
 		//! @brief  グローバルマテリアルパラメータを設定
 		//! @{
 		static void SetGlobalTexture(StringView name, const Ref<Texture>& value);
+		//! @copybrief SetGlobalTexture()
 		static void SetGlobalBuffer(StringView name, const Ref<Buffer>& value);
+		//! @copybrief SetGlobalTexture()
 		static void SetGlobalMatrix(StringView name, const Matrix& value);
+		//! @copybrief SetGlobalTexture()
 		static void SetGlobalVector(StringView name, Color value);
+		//! @copybrief SetGlobalTexture()
 		static void SetGlobalScalar(StringView name, f32 value);
+		//! @copybrief SetGlobalTexture()
 		static void SetGlobalInteger(StringView name, s32 value);
 		//! @}
 

@@ -31,40 +31,42 @@ namespace Amuse::RPI {
 
     };
 
+    //! @brief マテリアルパスの品質別シェーダ設定
     struct ShaderSet {
-		s32                             quality;
+		s32                             quality; //!< 品質値
 
         // PipelineState周りの必須情報
-        Ref<RHI::Shader> 		        vs;
-        Ref<RHI::Shader> 		        ps;
-        Vector<InputLayout>		        inputLayout;
-        RHI::RenderTargetFormatArray    colors;
-        Optional<RHI::TextureFormat>	depth;
-		RHI::SampleDesc		            sample;
-		RHI::BlendDescList		        blend;
-        RHI::BlendDescList		        blends;
-        RHI::RasterizerDesc		        rasterizer;
-        RHI::DepthStencilDesc	        depthStencil;
+        Ref<RHI::Shader> 		        vs; //!< 頂点シェーダ
+        Ref<RHI::Shader> 		        ps; //!< ピクセルシェーダ
+        Vector<InputLayout>		        inputLayout; //!< 入力レイアウト
+        RHI::RenderTargetFormatArray    colors; //!< カラー出力フォーマット
+        Optional<RHI::TextureFormat>	depth; //!< 深度フォーマット
+		RHI::SampleDesc		            sample; //!< サンプル設定
+		RHI::BlendDescList		        blend; //!< ブレンド設定
+        RHI::BlendDescList		        blends; //!< 複数ブレンド設定
+        RHI::RasterizerDesc		        rasterizer; //!< ラスタライザ設定
+        RHI::DepthStencilDesc	        depthStencil; //!< 深度ステンシル設定
     };
 
+    //! @brief マテリアルの描画パス設定
     struct MaterialPass {
-		Vector<ShaderSet>   qualities;
+		Vector<ShaderSet>   qualities; //!< 品質別シェーダ設定
     };
 
     using MaterialPassMap = Map<String, MaterialPass,std::less<>>;
 
     //! @brief  マテリアル定義
     struct MaterialDesc{
-        String          name;
+        String          name; //!< マテリアル名
         
-        Vector<String>  textures;
-        Vector<String>  buffers;
-        Vector<String>  matrices;
-        Vector<String>  vectors;
-        Vector<String>  scalars;
-        Vector<String>  integers;
+        Vector<String>  textures; //!< テクスチャ名
+        Vector<String>  buffers; //!< バッファ名
+        Vector<String>  matrices; //!< 行列プロパティ名
+        Vector<String>  vectors; //!< ベクトルプロパティ名
+        Vector<String>  scalars; //!< スカラー名
+        Vector<String>  integers; //!< 整数名
 
-        MaterialPassMap	passes;
+        MaterialPassMap	passes; //!< 描画パス設定
     };
 
 }

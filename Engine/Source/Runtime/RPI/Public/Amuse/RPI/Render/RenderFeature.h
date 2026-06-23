@@ -14,8 +14,10 @@ namespace Amuse::RPI {
 	class RenderFeature {
 	public:
 
+		//! @brief RTTI 情報を宣言する
 		AMUSE_RTTI();
 
+		//! @brief デストラクタ
 		virtual ~RenderFeature(){}
 
 		//! @brief      描画	

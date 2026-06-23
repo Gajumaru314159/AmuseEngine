@@ -6,13 +6,14 @@
 
 namespace Amuse::RPI {
 
+	//! @brief マテリアルプロパティ名の集合
 	struct MaterialPropertiesDesc {
-		Vector<String>  textures;
-		Vector<String>  buffers;
-		Vector<String>  matrices;
-		Vector<String>  vectors;
-		Vector<String>  scalars;
-		Vector<String>  integers;
+		Vector<String>  textures; //!< テクスチャ名
+		Vector<String>  buffers; //!< バッファ名
+		Vector<String>  matrices; //!< 行列プロパティ名
+		Vector<String>  vectors; //!< ベクトルプロパティ名
+		Vector<String>  scalars; //!< スカラー名
+		Vector<String>  integers; //!< 整数名
 
 		//! @brief 別の MaterialPropertiesDesc を各プロパティリストの後に追加する
 		//! @retval true 成功
@@ -20,10 +21,11 @@ namespace Amuse::RPI {
 		bool merge(const MaterialPropertiesDesc& other);
 	};
 
+	//! @brief グローバル・シーン・ビュー別のマテリアルプロパティ集合
 	struct MaterialPropertiesSetDesc {
-		MaterialPropertiesDesc global;
-		MaterialPropertiesDesc scene;
-		MaterialPropertiesDesc view;
+		MaterialPropertiesDesc global; //!< グローバルプロパティ
+		MaterialPropertiesDesc scene; //!< シーンプロパティ
+		MaterialPropertiesDesc view; //!< ビュープロパティ
 
 		//! @brief 別の MaterialPropertiesSetDesc を各プロパティリストの後に追加する
 		bool merge(const MaterialPropertiesSetDesc& other);

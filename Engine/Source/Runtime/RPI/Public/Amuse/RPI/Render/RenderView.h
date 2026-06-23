@@ -8,6 +8,7 @@
 
 namespace Amuse::RPI {
 
+	//! @brief RenderView の生成設定
 	struct RenderViewData {
 		String name; //!< ビュー名
 		s32 pipeline = 0; //!< パイプライン番号
@@ -31,6 +32,7 @@ namespace Amuse::RPI {
 
 		//! @brief      シーンを取得
 		auto getScene() -> RenderScene& { return m_scene; }
+		//! @brief      シーンを取得
 		auto getScene() const -> const RenderScene& { return m_scene; }
 
 		//! @brief 指定した型Tのインスタンスへの参照を取得します。
@@ -66,6 +68,7 @@ namespace Amuse::RPI {
 
 		//! @brief      RenderFeatureを見つける
 		template<class T> T* findFeature()const;
+		//! @brief 型情報から RenderFeature を見つける
 		RenderFeature* findFeature(Type type)const;
 
 	private:

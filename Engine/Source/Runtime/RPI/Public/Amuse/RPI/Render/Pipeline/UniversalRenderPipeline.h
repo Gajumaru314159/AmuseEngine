@@ -11,16 +11,21 @@
 
 namespace Amuse::RPI {
 
+	//! @brief 標準的な GBuffer/Deferred/ImGui/Output を行う描画パイプライン
 	class UniversalRenderPipeline : public RenderPipeline {
 	public:
+		//! @brief 標準描画パイプラインを生成する
 		static Ref<UniversalRenderPipeline> Create() {
 			return new UniversalRenderPipeline();
 		}
 	private:
 		UniversalRenderPipeline() {}
 	public:
+		//! @brief 標準描画に必要な RenderFeature を登録する
 		void setup(RenderScene& scene, RenderFeatureSet& features) const override;
+		//! @brief RenderScene 単位の描画を登録する
 		void render(FG& fg, RenderScene& scene) const override;
+		//! @brief RenderView 単位の描画を登録する
 		void render(FG& fg, RenderView& view) const override;
 	private:
 		// Global;

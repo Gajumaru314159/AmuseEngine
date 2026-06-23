@@ -12,14 +12,14 @@ namespace Amuse::RPI {
 	//! @details マテリアルのプロパティ゙定義するための構造体です。
 	//!          layout を指定しない場合はBindlessモードとして扱われます。
     struct MaterialBlockDesc {
-        String          name;
-        Vector<String>  textures;
-        Vector<String>  buffers;
-        Vector<String>  matrices;
-        Vector<String>  vectors;
-        Vector<String>  scalars;
-        Vector<String>  integers;
-		Ref<RHI::DescriptorLayout> layout;
+        String          name; //!< ブロック名
+        Vector<String>  textures; //!< テクスチャ名
+        Vector<String>  buffers; //!< バッファ名
+        Vector<String>  matrices; //!< 行列プロパティ名
+        Vector<String>  vectors; //!< ベクトルプロパティ名
+        Vector<String>  scalars; //!< スカラー名
+        Vector<String>  integers; //!< 整数名
+		Ref<RHI::DescriptorLayout> layout; //!< デスクリプタレイアウト
     };
 
 	//! @brief      マテリアルのパラメーターを管理するクラス
@@ -43,18 +43,20 @@ namespace Amuse::RPI {
     //! @ref MaterialBlock
     class MaterialBlock {
     public:
-        using CommandList = Amuse::RHI::CommandList;
-        using DescriptorLayout = Amuse::RHI::DescriptorLayout;
-        using DescriptorTable = Amuse::RHI::DescriptorTable;
-        using Sampler = Amuse::RHI::Sampler;
-        using Texture = Amuse::RHI::Texture;
-        using Buffer = Amuse::RHI::Buffer;
+        using CommandList = Amuse::RHI::CommandList; //!< コマンドリスト型
+        using DescriptorLayout = Amuse::RHI::DescriptorLayout; //!< デスクリプタレイアウト型
+        using DescriptorTable = Amuse::RHI::DescriptorTable; //!< デスクリプタテーブル型
+        using Sampler = Amuse::RHI::Sampler; //!< サンプラ型
+        using Texture = Amuse::RHI::Texture; //!< テクスチャ型
+        using Buffer = Amuse::RHI::Buffer; //!< バッファ型
     public:
         //! @brief MaterialBlockDescに対応するDescriptorLayoutを生成するユーティリティ関数
         static Ref<RHI::DescriptorLayout> CreateLayout(const MaterialBlockDesc& desc);
     public:
 
+        //! @brief 空のマテリアルブロックを生成する
         MaterialBlock() = default;
+        //! @brief マテリアルブロック定義から生成する
         MaterialBlock(const MaterialBlockDesc& desc);
 
         //! @brief  マテリアルパラメータが存在するか

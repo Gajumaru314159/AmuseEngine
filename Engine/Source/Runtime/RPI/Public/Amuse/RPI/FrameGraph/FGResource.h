@@ -16,9 +16,10 @@ namespace Amuse::RPI {
 
 	//! @brief フレームグラフリソースを表す構造体
 	struct FGResource {
-		FGResourceType type = FGResourceType::Invalid;
-		s32 value = -1;
+		FGResourceType type = FGResourceType::Invalid; //!< リソース種別
+		s32 value = -1; //!< リソースID
 
+		//! @brief 有効なリソースかを判定する
 		operator bool()const {
 			return type != FGResourceType::Invalid;
 		}

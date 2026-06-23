@@ -17,18 +17,24 @@ namespace Amuse::RPI {
 	class MaterialShader : public RefObject
 	{
 	public:
-		using PipelineState = Amuse::RHI::PipelineState;
-		using RootSignature = Amuse::RHI::RootSignature;
+		using PipelineState = Amuse::RHI::PipelineState; //!< パイプラインステート型
+		using RootSignature = Amuse::RHI::RootSignature; //!< ルートシグネチャ型
 	public:
 		//! @brief  生成
 		static Ref<MaterialShader> Create(const MaterialDesc& desc);
 
+		//! @brief マテリアル定義を取得する
 		const MaterialDesc& getDesc()const { return m_desc; }
+		//! @brief マテリアルブロック定義を取得する
 		const MaterialBlockDesc& getBlockDesc()const { return m_blockDesc; }
+		//! @brief ルートシグネチャを取得する
 		const Ref<RootSignature>& getRootSignature()const { return m_signature; }
 
+		//! @brief 指定パスで使用する品質インデックスを計算する
 		s32 calcQualityIndex(StringView pass, s32 quality) const;
+		//! @brief 頂点レイアウトに対応するパイプラインを事前生成する
 		bool prepare(const Ref<RHI::VertexLayout>& layout);
+		//! @brief 頂点レイアウトとパスに対応するパイプラインを取得する
 		Ref<PipelineState> getPipeline(const Ref<RHI::VertexLayout>& layout, StringView pass, s32 quality);
 
 	private:

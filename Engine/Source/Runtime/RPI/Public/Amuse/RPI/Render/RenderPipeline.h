@@ -7,10 +7,13 @@
 
 namespace Amuse::RPI {
 
+	//! @brief シーンとビューの描画手順を定義する基底クラス
 	class RenderPipeline : public RefObject {
 	public:
+		//! @brief RTTI 情報を宣言する
 		AMUSE_RTTI();
 
+		//! @brief デストラクタ
 		~RenderPipeline() override = default;
 
 		//! @brief		RenderSceneのセットアップを行う

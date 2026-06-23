@@ -49,32 +49,43 @@ namespace Amuse::RPI {
 	//!				実体の取得は FGResources を通して遅延実行されます。
 	class FGBuilder {
 	public:
+		//! @brief FrameGraph のネイティブビルダーをラップする
 		FGBuilder(FrameGraph::Builder& builder);
 
+		//! @brief フレーム内で使用する描画テクスチャを生成する
 		FGResource create(const RHI::RenderTextureDesc& desc);
 
+		//! @brief フレーム内で使用するバッファを生成する
 		FGResource create(const RHI::BufferDesc& desc);
 
+		//! @brief 実体を持たない依存関係用リソースを生成する
 		FGResource createDummy();
 
+		//! @brief パスで読み込むリソースを宣言する
 		FGResource read(FGResource resource, u32 flags = 0);
 
+		//! @brief パスで書き込むリソースを宣言する
 		FGResource write(FGResource resource, u32 flags = 0);
 
+		//! @brief 外部副作用を持つためカリングされないパスに設定する
 		FGBuilder& setSideEffect();
 
 	private:
 		FrameGraph::Builder& m_builder;
 	};
 
+	//! @brief パス間の名前付きリソース接続
 	class FGConnections {
 	public:
+		//! @brief 出力名から入力名への接続を追加する
 		void connect(StringView from, StringView to) {
 			m_connections.emplace(to, from);
 		}
+		//! @brief 接続名から出力済みリソースを取得する
 		FGResource get(StringView name) {
 			return m_outputs[m_connections[name.data()]];
 		}
+		//! @brief 名前付き出力リソースを登録する
 		void set(StringView name,FGResource resource) {
 			m_outputs.emplace(name, resource);
 		}
@@ -96,9 +107,11 @@ namespace Amuse::RPI {
 		template<typename TData, typename TSetup, typename TExecute>
 		using IsValid2 = std::enable_if_t<Setupable<TSetup, TData>::value && Executable<TExecute, TData>::value, const TData&>;
 	public:
+		//! @brief パス固有データを持たないことを表す型
 		struct NoData {};
 	public:
 
+		//! @brief 空の FrameGraph を生成する
 		FG() = default;
 
 		//! @brief      パスを追加
@@ -134,6 +147,7 @@ namespace Amuse::RPI {
 		//! @brief      dot形式でFrameGraphの依存関係を出力する
 		void save(StringView name);
 
+		//! @brief FrameGraph のデバッグ情報を Writer に出力する
 		template<class Writer>
 		void debugOutput(Writer&& writer) {
 			std::stringstream s;
