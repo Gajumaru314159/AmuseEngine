@@ -6,8 +6,9 @@ var indexSectionsWithContent =
   3: "_abcdefghijklmnopqrstuvwxy~",
   4: "abcdefghiklmnopqrstuvwxyz",
   5: "abcdefhikmnprstv",
-  6: "os",
-  7: "abcdiklmprstwコデ"
+  6: "m",
+  7: "os",
+  8: "abcdiklmprstwコデ"
 };
 
 var indexSectionNames =
@@ -18,8 +19,9 @@ var indexSectionNames =
   3: "functions",
   4: "variables",
   5: "typedefs",
-  6: "related",
-  7: "pages"
+  6: "enums",
+  7: "related",
+  8: "pages"
 };
 
 var indexSectionLabels =
@@ -30,7 +32,8 @@ var indexSectionLabels =
   3: "関数",
   4: "変数",
   5: "型定義",
-  6: "フレンド",
-  7: "ページ"
+  6: "列挙型",
+  7: "フレンド",
+  8: "ページ"
 };
 

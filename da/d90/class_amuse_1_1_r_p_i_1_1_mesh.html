@@ -128,34 +128,47 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('da/d90/class_a
   <div class="headertitle"><div class="title">Amuse::RPI::Mesh クラス</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>描画用メッシュリソース  
+ <a href="#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d2/da1/_mesh_8h_source.html">Mesh.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
 公開型</h2></td></tr>
 <tr class="memitem:ade32c88faef6264c0ecfc06c5760dabd" id="r_ade32c88faef6264c0ecfc06c5760dabd"><td class="memItemLeft"><a id="ade32c88faef6264c0ecfc06c5760dabd" name="ade32c88faef6264c0ecfc06c5760dabd"></a>
 using&#160;</td><td class="memItemRight"><b>VertexLayout</b> = <a class="el" href="../../dc/df3/class_amuse_1_1_r_h_i_1_1_vertex_layout.html">Amuse::RHI::VertexLayout</a></td></tr>
+<tr class="memdesc:ade32c88faef6264c0ecfc06c5760dabd"><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点レイアウト型 <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
 <tr class="memitem:a2502123422433692a07820ae0d667bbf" id="r_a2502123422433692a07820ae0d667bbf"><td class="memItemLeft"><a id="a2502123422433692a07820ae0d667bbf" name="a2502123422433692a07820ae0d667bbf"></a>
 void&#160;</td><td class="memItemRight"><b>apply</b> ()</td></tr>
+<tr class="memdesc:a2502123422433692a07820ae0d667bbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPU 側ソースから GPU バッファを生成する <br /></td></tr>
 <tr class="memitem:a58a2f941394ac66df277d4a861c46e55" id="r_a58a2f941394ac66df277d4a861c46e55"><td class="memItemLeft"><a id="a58a2f941394ac66df277d4a861c46e55" name="a58a2f941394ac66df277d4a861c46e55"></a>
 void&#160;</td><td class="memItemRight"><b>clearSources</b> ()</td></tr>
+<tr class="memdesc:a58a2f941394ac66df277d4a861c46e55"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPU 側ソースを破棄する <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静的公開メンバ関数</h2></td></tr>
 <tr class="memitem:a4364b9b1859022812e957133822e8597" id="r_a4364b9b1859022812e957133822e8597"><td class="memItemLeft"><a id="a4364b9b1859022812e957133822e8597" name="a4364b9b1859022812e957133822e8597"></a>
 static Ref&lt; Mesh &gt;&#160;</td><td class="memItemRight"><b>Create</b> ()</td></tr>
+<tr class="memdesc:a4364b9b1859022812e957133822e8597"><td class="mdescLeft">&#160;</td><td class="mdescRight">空のメッシュを生成する <br /></td></tr>
 <tr class="memitem:a716d9a8d8536ab70f98bd21904256312" id="r_a716d9a8d8536ab70f98bd21904256312"><td class="memItemLeft"><a id="a716d9a8d8536ab70f98bd21904256312" name="a716d9a8d8536ab70f98bd21904256312"></a>
 static Ref&lt; Mesh &gt;&#160;</td><td class="memItemRight"><b>Load</b> (StringView path)</td></tr>
+<tr class="memdesc:a716d9a8d8536ab70f98bd21904256312"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルからメッシュを読み込む <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 公開変数類</h2></td></tr>
 <tr class="memitem:ad5acdd91c87b89158a9eb036dc3a6b63" id="r_ad5acdd91c87b89158a9eb036dc3a6b63"><td class="memItemLeft"><a id="ad5acdd91c87b89158a9eb036dc3a6b63" name="ad5acdd91c87b89158a9eb036dc3a6b63"></a>
 <a class="el" href="../../d3/d82/struct_amuse_1_1_core_1_1_bounds.html">Bounds</a>&#160;</td><td class="memItemRight"><b>bounds</b></td></tr>
+<tr class="memdesc:ad5acdd91c87b89158a9eb036dc3a6b63"><td class="mdescLeft">&#160;</td><td class="mdescRight">境界ボックス <br /></td></tr>
 <tr class="memitem:aa14531a27615775ee69c703ab6791cd3" id="r_aa14531a27615775ee69c703ab6791cd3"><td class="memItemLeft"><a id="aa14531a27615775ee69c703ab6791cd3" name="aa14531a27615775ee69c703ab6791cd3"></a>
 Vector&lt; <a class="el" href="../../de/df5/struct_amuse_1_1_r_p_i_1_1_mesh_lod.html">MeshLod</a> &gt;&#160;</td><td class="memItemRight"><b>lods</b></td></tr>
+<tr class="memdesc:aa14531a27615775ee69c703ab6791cd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">LOD 一覧 <br /></td></tr>
 <tr class="memitem:a30173f3f38f1a3567681d5613f169202" id="r_a30173f3f38f1a3567681d5613f169202"><td class="memItemLeft"><a id="a30173f3f38f1a3567681d5613f169202" name="a30173f3f38f1a3567681d5613f169202"></a>
 Vector&lt; Ref&lt; <a class="el" href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html">Material</a> &gt; &gt;&#160;</td><td class="memItemRight"><b>materials</b></td></tr>
+<tr class="memdesc:a30173f3f38f1a3567681d5613f169202"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアル一覧 <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
 その他の継承メンバ</h2></td></tr>
@@ -168,7 +181,9 @@ virtual&#160;</td><td class="memItemRight"><b>~RefObject</b> ()</td></tr>
 <tr class="memitem:ab99aea99381a0c123df9dc33d731c3c3 pro_methods_class_amuse_1_1_core_1_1_ref_object" id="r_ab99aea99381a0c123df9dc33d731c3c3"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="../../d1/d85/class_amuse_1_1_core_1_1_ref_object.html#ab99aea99381a0c123df9dc33d731c3c3">finalize</a> ()</td></tr>
 <tr class="memdesc:ab99aea99381a0c123df9dc33d731c3c3 pro_methods_class_amuse_1_1_core_1_1_ref_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">参照カウントが0になったときの処理  <br /></td></tr>
 </table>
-<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
+<div class="textblock"><p>描画用メッシュリソース </p>
+</div><hr/>このクラス詳解は次のファイルから抽出されました:<ul>
 <li>Runtime/RPI/Public/Amuse/RPI/Mesh/<a class="el" href="../../d2/da1/_mesh_8h_source.html">Mesh.h</a></li>
 </ul>
 </div><!-- contents -->

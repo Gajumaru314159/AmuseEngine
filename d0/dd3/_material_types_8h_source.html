@@ -130,31 +130,35 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('d0/dd3/_materi
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;Amuse/RPI/Material/MaterialDesc.h&gt;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span>Amuse::RPI {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">enum class</span> VertexLayoutId : s32 {};</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">enum class</span> MaterialPropertyType {</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        Texture,</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        Buffer,</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        Matrix,</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        Vector,</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        Scalar,</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        Integer,</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    };</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="../../d4/d56/struct_amuse_1_1_r_p_i_1_1_material_value_property_desc.html">   23</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../d4/d56/struct_amuse_1_1_r_p_i_1_1_material_value_property_desc.html">MaterialValuePropertyDesc</a> {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        MaterialPropertyType type;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        s32 offset = -1; <span class="comment">// バッファ内のバイトオフセット</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        s32 index = -1; <span class="comment">// 何番目のリソースか (Textureの何番目か/Samplerの何番目か/Bufferの何番目か)</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        s32 slot = -1; <span class="comment">// DescriptorTableの何番目にバインドされているか</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    };</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">enum class</span> VertexLayoutId : s32 {};</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">enum class</span> MaterialPropertyType {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        Texture,</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        Buffer,</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        Matrix,</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        Vector,</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        Scalar,</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        Integer,</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    };</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="../../d4/d56/struct_amuse_1_1_r_p_i_1_1_material_value_property_desc.html">   26</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../d4/d56/struct_amuse_1_1_r_p_i_1_1_material_value_property_desc.html">MaterialValuePropertyDesc</a> {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="../../d4/d56/struct_amuse_1_1_r_p_i_1_1_material_value_property_desc.html#ad9c025e7e9fc95a1cc7c57fa64192cb6">   27</a></span>        MaterialPropertyType <a class="code hl_variable" href="../../d4/d56/struct_amuse_1_1_r_p_i_1_1_material_value_property_desc.html#ad9c025e7e9fc95a1cc7c57fa64192cb6">type</a>; </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../d4/d56/struct_amuse_1_1_r_p_i_1_1_material_value_property_desc.html#af06bf1f94311d3980c902eb9ca50b31c">   28</a></span>        s32 <a class="code hl_variable" href="../../d4/d56/struct_amuse_1_1_r_p_i_1_1_material_value_property_desc.html#af06bf1f94311d3980c902eb9ca50b31c">offset</a> = -1; </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="../../d4/d56/struct_amuse_1_1_r_p_i_1_1_material_value_property_desc.html#a36fd0447d5a4b4b5cff531f63ca75bba">   29</a></span>        s32 <a class="code hl_variable" href="../../d4/d56/struct_amuse_1_1_r_p_i_1_1_material_value_property_desc.html#a36fd0447d5a4b4b5cff531f63ca75bba">index</a> = -1; </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="../../d4/d56/struct_amuse_1_1_r_p_i_1_1_material_value_property_desc.html#ab8112210962dea65888f1a681458267d">   30</a></span>        s32 <a class="code hl_variable" href="../../d4/d56/struct_amuse_1_1_r_p_i_1_1_material_value_property_desc.html#ab8112210962dea65888f1a681458267d">slot</a> = -1; </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    };</div>
 </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">using </span>MaterialPropertyMap = Map&lt;String, MaterialValuePropertyDesc, std::less&lt;&gt;&gt;;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>}</div>
-<div class="ttc" id="astruct_amuse_1_1_r_p_i_1_1_material_value_property_desc_html"><div class="ttname"><a href="../../d4/d56/struct_amuse_1_1_r_p_i_1_1_material_value_property_desc.html">Amuse::RPI::MaterialValuePropertyDesc</a></div><div class="ttdef"><b>Definition</b> MaterialTypes.h:23</div></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">using </span>MaterialPropertyMap = Map&lt;String, MaterialValuePropertyDesc, std::less&lt;&gt;&gt;;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>}</div>
+<div class="ttc" id="astruct_amuse_1_1_r_p_i_1_1_material_value_property_desc_html"><div class="ttname"><a href="../../d4/d56/struct_amuse_1_1_r_p_i_1_1_material_value_property_desc.html">Amuse::RPI::MaterialValuePropertyDesc</a></div><div class="ttdoc">マテリアル値プロパティの配置情報</div><div class="ttdef"><b>Definition</b> MaterialTypes.h:26</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_p_i_1_1_material_value_property_desc_html_a36fd0447d5a4b4b5cff531f63ca75bba"><div class="ttname"><a href="../../d4/d56/struct_amuse_1_1_r_p_i_1_1_material_value_property_desc.html#a36fd0447d5a4b4b5cff531f63ca75bba">Amuse::RPI::MaterialValuePropertyDesc::index</a></div><div class="ttdeci">s32 index</div><div class="ttdoc">リソースインデックス</div><div class="ttdef"><b>Definition</b> MaterialTypes.h:29</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_p_i_1_1_material_value_property_desc_html_ab8112210962dea65888f1a681458267d"><div class="ttname"><a href="../../d4/d56/struct_amuse_1_1_r_p_i_1_1_material_value_property_desc.html#ab8112210962dea65888f1a681458267d">Amuse::RPI::MaterialValuePropertyDesc::slot</a></div><div class="ttdeci">s32 slot</div><div class="ttdoc">デスクリプタスロット</div><div class="ttdef"><b>Definition</b> MaterialTypes.h:30</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_p_i_1_1_material_value_property_desc_html_ad9c025e7e9fc95a1cc7c57fa64192cb6"><div class="ttname"><a href="../../d4/d56/struct_amuse_1_1_r_p_i_1_1_material_value_property_desc.html#ad9c025e7e9fc95a1cc7c57fa64192cb6">Amuse::RPI::MaterialValuePropertyDesc::type</a></div><div class="ttdeci">MaterialPropertyType type</div><div class="ttdoc">プロパティ種別</div><div class="ttdef"><b>Definition</b> MaterialTypes.h:27</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_p_i_1_1_material_value_property_desc_html_af06bf1f94311d3980c902eb9ca50b31c"><div class="ttname"><a href="../../d4/d56/struct_amuse_1_1_r_p_i_1_1_material_value_property_desc.html#af06bf1f94311d3980c902eb9ca50b31c">Amuse::RPI::MaterialValuePropertyDesc::offset</a></div><div class="ttdeci">s32 offset</div><div class="ttdoc">バッファ内バイトオフセット</div><div class="ttdef"><b>Definition</b> MaterialTypes.h:28</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

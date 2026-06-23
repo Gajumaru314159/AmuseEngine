@@ -126,21 +126,33 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('d4/dc4/class_a
   <div class="headertitle"><div class="title">Amuse::RPI::SparseUploadBuffer&lt; T &gt; クラステンプレート</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>CPU 側の疎配列領域を GPU バッファへアップロードするバッファ  
+ <a href="#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../db/d91/_mesh_render_feature_8h_source.html">MeshRenderFeature.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 クラス</h2></td></tr>
 <tr class="memitem:Handle" id="r_Handle"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d1/d93/class_amuse_1_1_r_p_i_1_1_sparse_upload_buffer_1_1_handle.html">Handle</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d4/dc4/class_amuse_1_1_r_p_i_1_1_sparse_upload_buffer.html" title="CPU 側の疎配列領域を GPU バッファへアップロードするバッファ">SparseUploadBuffer</a> の割り当て範囲  <a href="../../d1/d93/class_amuse_1_1_r_p_i_1_1_sparse_upload_buffer_1_1_handle.html#details">[詳解]</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
 <tr class="memitem:aa8d7beefa52e15f992ef492aab83bba9" id="r_aa8d7beefa52e15f992ef492aab83bba9"><td class="memItemLeft"><a id="aa8d7beefa52e15f992ef492aab83bba9" name="aa8d7beefa52e15f992ef492aab83bba9"></a>
 <a class="el" href="../../d1/d93/class_amuse_1_1_r_p_i_1_1_sparse_upload_buffer_1_1_handle.html">Handle</a>&#160;</td><td class="memItemRight"><b>alloc</b> (s32 size)</td></tr>
+<tr class="memdesc:aa8d7beefa52e15f992ef492aab83bba9"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定要素数の領域を確保する <br /></td></tr>
 <tr class="memitem:aab3881ee0462cf8615a03f15ddb68730" id="r_aab3881ee0462cf8615a03f15ddb68730"><td class="memItemLeft"><a id="aab3881ee0462cf8615a03f15ddb68730" name="aab3881ee0462cf8615a03f15ddb68730"></a>
 void&#160;</td><td class="memItemRight"><b>free</b> (<a class="el" href="../../d1/d93/class_amuse_1_1_r_p_i_1_1_sparse_upload_buffer_1_1_handle.html">Handle</a> &amp;handle)</td></tr>
+<tr class="memdesc:aab3881ee0462cf8615a03f15ddb68730"><td class="mdescLeft">&#160;</td><td class="mdescRight">確保済み領域を解放する <br /></td></tr>
 <tr class="memitem:a61de8d93ceaba12bb7782ba2063e9c43" id="r_a61de8d93ceaba12bb7782ba2063e9c43"><td class="memItemLeft"><a id="a61de8d93ceaba12bb7782ba2063e9c43" name="a61de8d93ceaba12bb7782ba2063e9c43"></a>
 void&#160;</td><td class="memItemRight"><b>reserve</b> ()</td></tr>
+<tr class="memdesc:a61de8d93ceaba12bb7782ba2063e9c43"><td class="mdescLeft">&#160;</td><td class="mdescRight">GPU バッファ容量を CPU 側容量に合わせる <br /></td></tr>
 </table>
-<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;class T&gt;<br />
+class Amuse::RPI::SparseUploadBuffer&lt; T &gt;</div><p>CPU 側の疎配列領域を GPU バッファへアップロードするバッファ </p>
+</div><hr/>このクラス詳解は次のファイルから抽出されました:<ul>
 <li>Runtime/RPI/Public/Amuse/RPI/Render/Feature/<a class="el" href="../../db/d91/_mesh_render_feature_8h_source.html">MeshRenderFeature.h</a></li>
 </ul>
 </div><!-- contents -->

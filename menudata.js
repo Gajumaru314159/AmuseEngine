@@ -130,4 +130,5 @@ var menudata={children:[
 {text:"s",url:"functions_type.html#index_s"},
 {text:"t",url:"functions_type.html#index_t"},
 {text:"v",url:"functions_type.html#index_v"}]},
+{text:"列挙型",url:"functions_enum.html"},
 {text:"関連関数",url:"functions_rela.html"}]}]}]}

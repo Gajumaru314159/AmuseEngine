@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('d9/d5c/class_a
 </div><!--header-->
 <div class="contents">
 
-<p>FG::debugOutput() を使用してFG(FrameGraph)の内部データを <a class="el" href="../../d0/dc2/struct_amuse_1_1_r_p_i_1_1_f_g_data.html" title="FG(FrameGraph)の内部構造データ">FGData</a> に書き込むクラス  
+<p><a class="el" href="../../d7/d93/class_amuse_1_1_r_p_i_1_1_f_g.html#adb831badd43dbb57a0913aa45a94f387" title="FrameGraph のデバッグ情報を Writer に出力する">FG::debugOutput()</a> を使用してFG(FrameGraph)の内部データを <a class="el" href="../../d0/dc2/struct_amuse_1_1_r_p_i_1_1_f_g_data.html" title="FG(FrameGraph)の内部構造データ">FGData</a> に書き込むクラス  
  <a href="#details">[詳解]</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d6/d7b/_f_g_data_writer_8h_source.html">FGDataWriter.h</a>&gt;</code></p>
@@ -135,15 +135,19 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('d9/d5c/class_a
 公開メンバ関数</h2></td></tr>
 <tr class="memitem:a9b784e062d0598ebb2ba22eda7b5db43" id="r_a9b784e062d0598ebb2ba22eda7b5db43"><td class="memItemLeft"><a id="a9b784e062d0598ebb2ba22eda7b5db43" name="a9b784e062d0598ebb2ba22eda7b5db43"></a>
 &#160;</td><td class="memItemRight"><b>FGDataWriter</b> (<a class="el" href="../../d0/dc2/struct_amuse_1_1_r_p_i_1_1_f_g_data.html">FGData</a> &amp;data)</td></tr>
+<tr class="memdesc:a9b784e062d0598ebb2ba22eda7b5db43"><td class="mdescLeft">&#160;</td><td class="mdescRight">書き込み先データを指定して生成する <br /></td></tr>
 <tr class="memitem:acdf4711cee65553e61422e96f9ac63f3" id="r_acdf4711cee65553e61422e96f9ac63f3"><td class="memItemLeft"><a id="acdf4711cee65553e61422e96f9ac63f3" name="acdf4711cee65553e61422e96f9ac63f3"></a>
 void&#160;</td><td class="memItemRight"><b>operator()</b> (const PassNode &amp;node, const std::vector&lt; ResourceNode &gt; &amp;resourceNodes)</td></tr>
+<tr class="memdesc:acdf4711cee65553e61422e96f9ac63f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">パスノードのデバッグ情報を書き込む <br /></td></tr>
 <tr class="memitem:ae9bd32681db22a29a1cc296efef2d24f" id="r_ae9bd32681db22a29a1cc296efef2d24f"><td class="memItemLeft"><a id="ae9bd32681db22a29a1cc296efef2d24f" name="ae9bd32681db22a29a1cc296efef2d24f"></a>
 void&#160;</td><td class="memItemRight"><b>operator()</b> (const ResourceNode &amp;node, const ResourceEntry &amp;entry, const std::vector&lt; PassNode &gt; &amp;passNodes)</td></tr>
+<tr class="memdesc:ae9bd32681db22a29a1cc296efef2d24f"><td class="mdescLeft">&#160;</td><td class="mdescRight">リソースノードのデバッグ情報を書き込む <br /></td></tr>
 <tr class="memitem:aea55f10efb00d2b5eb81656b8f5dcfd2" id="r_aea55f10efb00d2b5eb81656b8f5dcfd2"><td class="memItemLeft"><a id="aea55f10efb00d2b5eb81656b8f5dcfd2" name="aea55f10efb00d2b5eb81656b8f5dcfd2"></a>
 void&#160;</td><td class="memItemRight"><b>flush</b> (std::ostream &amp;os) const</td></tr>
+<tr class="memdesc:aea55f10efb00d2b5eb81656b8f5dcfd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">保持しているデバッグ情報をストリームへ出力する <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
-<div class="textblock"><p>FG::debugOutput() を使用してFG(FrameGraph)の内部データを <a class="el" href="../../d0/dc2/struct_amuse_1_1_r_p_i_1_1_f_g_data.html" title="FG(FrameGraph)の内部構造データ">FGData</a> に書き込むクラス </p>
+<div class="textblock"><p><a class="el" href="../../d7/d93/class_amuse_1_1_r_p_i_1_1_f_g.html#adb831badd43dbb57a0913aa45a94f387" title="FrameGraph のデバッグ情報を Writer に出力する">FG::debugOutput()</a> を使用してFG(FrameGraph)の内部データを <a class="el" href="../../d0/dc2/struct_amuse_1_1_r_p_i_1_1_f_g_data.html" title="FG(FrameGraph)の内部構造データ">FGData</a> に書き込むクラス </p>
 </div><hr/>このクラス詳解は次のファイルから抽出されました:<ul>
 <li>Runtime/RPI/Public/Amuse/RPI/FrameGraph/<a class="el" href="../../d6/d7b/_f_g_data_writer_8h_source.html">FGDataWriter.h</a></li>
 </ul>

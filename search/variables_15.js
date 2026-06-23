@@ -6,5 +6,7 @@ var searchData=
   ['window_3',['window',['../d6/d44/struct_amuse_1_1_r_h_i_1_1_swap_chain_desc.html#aae97c8a0b658a693011353fe7b3ec0c6',1,'Amuse::RHI::SwapChainDesc']]],
   ['workercount_4',['workerCount',['../de/d86/struct_amuse_1_1_core_1_1_schedule_executor_config.html#acfb8e321d979d530161daa81176aa84d',1,'Amuse::Core::ScheduleExecutorConfig']]],
   ['write_5',['write',['../db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html#a2165391c9e49be19c0c47e9c3169de6d',1,'Amuse::RHI::DepthStencilDesc']]],
-  ['write_5fmask_6',['write_mask',['../db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html#a144b2f9ee9adb0b31cea1d488c494b43',1,'Amuse::RHI::DepthStencilDesc']]]
+  ['write_5fmask_6',['write_mask',['../db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html#a144b2f9ee9adb0b31cea1d488c494b43',1,'Amuse::RHI::DepthStencilDesc']]],
+  ['writers_7',['writers',['../d9/da8/struct_amuse_1_1_r_p_i_1_1_f_g_data_1_1_resource.html#a816e33fcbc6b73e2cf2dc1f4dfd469fb',1,'Amuse::RPI::FGData::Resource']]],
+  ['writes_8',['writes',['../d0/dc2/struct_amuse_1_1_r_p_i_1_1_f_g_data.html#aaadc25cf11665b80da810d50b91b030c',1,'Amuse::RPI::FGData']]]
 ];

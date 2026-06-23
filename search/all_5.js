@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['earlyzpass_0',['EarlyZPass',['../da/db3/class_amuse_1_1_r_p_i_1_1_early_z_pass.html',1,'Amuse::RPI']]],
+  ['earlyzpass_0',['EarlyZPass',['../da/db3/class_amuse_1_1_r_p_i_1_1_early_z_pass.html',1,'Amuse::RPI::EarlyZPass'],['../da/db3/class_amuse_1_1_r_p_i_1_1_early_z_pass.html#a9b7b4aeaee4a6c7a63df368b670a92d0',1,'Amuse::RPI::EarlyZPass::EarlyZPass()']]],
   ['easing_1',['Easing',['../d0/da0/class_amuse_1_1_core_1_1_easing.html',1,'Amuse::Core']]],
   ['element_2',['element',['../d8/ddd/class_amuse_1_1_core_1_1_enum_builder.html#ad326857c85902f54405b8c4ff94ffe80',1,'Amuse::Core::EnumBuilder']]],
   ['elements_3',['elements',['../da/d85/struct_amuse_1_1_core_1_1_stack_trace.html#a8e7a9bb0dca6b26c55502a18b8a4e507',1,'Amuse::Core::StackTrace']]],

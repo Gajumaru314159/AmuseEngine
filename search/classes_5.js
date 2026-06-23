@@ -23,6 +23,5 @@ var searchData=
   ['fixedvector_3c_20vertexattribute_2c_20vertex_5fattribute_5fmax_20_3e_20',['FixedVector&lt; VertexAttribute, VERTEX_ATTRIBUTE_MAX &gt;',['../d3/dc2/class_amuse_1_1_core_1_1_fixed_vector.html',1,'Amuse::Core']]],
   ['floatcompression_21',['FloatCompression',['../da/d8a/class_amuse_1_1_core_1_1_float_compression.html',1,'Amuse::Core']]],
   ['formatexception_22',['FormatException',['../d2/de8/class_amuse_1_1_core_1_1_format_exception.html',1,'Amuse::Core']]],
-  ['formatter_5ftime_5fdata_23',['Formatter_Time_Data',['../db/dbe/struct_im_plot_1_1_formatter___time___data.html',1,'ImPlot']]],
-  ['frustum_24',['Frustum',['../db/d2e/struct_amuse_1_1_core_1_1_frustum.html',1,'Amuse::Core']]]
+  ['frustum_23',['Frustum',['../db/d2e/struct_amuse_1_1_core_1_1_frustum.html',1,'Amuse::Core']]]
 ];

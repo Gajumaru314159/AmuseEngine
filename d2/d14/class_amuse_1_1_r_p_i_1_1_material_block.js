@@ -1,5 +1,13 @@
 var class_amuse_1_1_r_p_i_1_1_material_block =
 [
+    [ "Buffer", "d2/d14/class_amuse_1_1_r_p_i_1_1_material_block.html#a97d72cb6ccd19468f7762f1b5f43aa6b", null ],
+    [ "CommandList", "d2/d14/class_amuse_1_1_r_p_i_1_1_material_block.html#affb64d1ab804bd4584f4ba565e9800c6", null ],
+    [ "DescriptorLayout", "d2/d14/class_amuse_1_1_r_p_i_1_1_material_block.html#a2de5855af3476e30274253a33e26cbea", null ],
+    [ "DescriptorTable", "d2/d14/class_amuse_1_1_r_p_i_1_1_material_block.html#a2f995a049b080f6d9f3038fc22bc62ef", null ],
+    [ "Sampler", "d2/d14/class_amuse_1_1_r_p_i_1_1_material_block.html#ac2eef32ed5124ff66cf304d98d573937", null ],
+    [ "Texture", "d2/d14/class_amuse_1_1_r_p_i_1_1_material_block.html#abe02d3ff76b39e9e4bdddfbb37c17418", null ],
+    [ "MaterialBlock", "d2/d14/class_amuse_1_1_r_p_i_1_1_material_block.html#af39e3a7c4f39d6ed8b46c7d70db8d27e", null ],
+    [ "MaterialBlock", "d2/d14/class_amuse_1_1_r_p_i_1_1_material_block.html#aa1033e224e938bce3bbe22231b973658", null ],
     [ "getLayout", "d2/d14/class_amuse_1_1_r_p_i_1_1_material_block.html#a729682201b196365425d6df91541afe1", null ],
     [ "hasBuffer", "d2/d14/class_amuse_1_1_r_p_i_1_1_material_block.html#a001be60e3b1e2b9f106b7ab4447fa983", null ],
     [ "hasInteger", "d2/d14/class_amuse_1_1_r_p_i_1_1_material_block.html#a093ed3af7f535e1e00d1afd030ab7b3f", null ],

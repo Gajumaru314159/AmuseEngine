@@ -126,23 +126,35 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('d7/da8/class_a
   <div class="headertitle"><div class="title">Amuse::RPI::ResizableBuffer クラス</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>要素数に応じて拡張する GPU バッファ  
+ <a href="#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../df/de8/_light_render_feature_8h_source.html">LightRenderFeature.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 クラス</h2></td></tr>
 <tr class="memitem:Desc" id="r_Desc"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d3/d09/struct_amuse_1_1_r_p_i_1_1_resizable_buffer_1_1_desc.html">Desc</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">バッファ生成設定  <a href="../../d3/d09/struct_amuse_1_1_r_p_i_1_1_resizable_buffer_1_1_desc.html#details">[詳解]</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
 <tr class="memitem:a01f333555e46748d56a2b25669ac6760" id="r_a01f333555e46748d56a2b25669ac6760"><td class="memItemLeft"><a id="a01f333555e46748d56a2b25669ac6760" name="a01f333555e46748d56a2b25669ac6760"></a>
 &#160;</td><td class="memItemRight"><b>ResizableBuffer</b> (const <a class="el" href="../../d3/d09/struct_amuse_1_1_r_p_i_1_1_resizable_buffer_1_1_desc.html">Desc</a> &amp;desc)</td></tr>
+<tr class="memdesc:a01f333555e46748d56a2b25669ac6760"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素バイト幅を指定して生成する <br /></td></tr>
 <tr class="memitem:a62d6c1fe9c924e651e91a25cef80ede3" id="r_a62d6c1fe9c924e651e91a25cef80ede3"><td class="memItemLeft"><a id="a62d6c1fe9c924e651e91a25cef80ede3" name="a62d6c1fe9c924e651e91a25cef80ede3"></a>
 void&#160;</td><td class="memItemRight"><b>resize</b> (size_t size)</td></tr>
+<tr class="memdesc:a62d6c1fe9c924e651e91a25cef80ede3"><td class="mdescLeft">&#160;</td><td class="mdescRight">バッファ容量を変更する <br /></td></tr>
 <tr class="memitem:a3adfb2c331e7048e71b2d1fbdda168c3" id="r_a3adfb2c331e7048e71b2d1fbdda168c3"><td class="memItemLeft"><a id="a3adfb2c331e7048e71b2d1fbdda168c3" name="a3adfb2c331e7048e71b2d1fbdda168c3"></a>
 void&#160;</td><td class="memItemRight"><b>update</b> (size_t count, const void *data)</td></tr>
+<tr class="memdesc:a3adfb2c331e7048e71b2d1fbdda168c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素データを GPU バッファへ転送する <br /></td></tr>
 <tr class="memitem:a57c3f14af4460d05e3bca7e6f68d2bd1" id="r_a57c3f14af4460d05e3bca7e6f68d2bd1"><td class="memItemLeft"><a id="a57c3f14af4460d05e3bca7e6f68d2bd1" name="a57c3f14af4460d05e3bca7e6f68d2bd1"></a>
 <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html">RHI::Buffer</a> &gt;&#160;</td><td class="memItemRight"><b>getBuffer</b> () const</td></tr>
+<tr class="memdesc:a57c3f14af4460d05e3bca7e6f68d2bd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">GPU バッファを取得する <br /></td></tr>
 </table>
-<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
+<div class="textblock"><p>要素数に応じて拡張する GPU バッファ </p>
+</div><hr/>このクラス詳解は次のファイルから抽出されました:<ul>
 <li>Runtime/RPI/Public/Amuse/RPI/Render/Feature/<a class="el" href="../../df/de8/_light_render_feature_8h_source.html">LightRenderFeature.h</a></li>
 </ul>
 </div><!-- contents -->

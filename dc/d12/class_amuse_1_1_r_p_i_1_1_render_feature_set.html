@@ -125,21 +125,32 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('dc/d12/class_a
   <div class="headertitle"><div class="title">Amuse::RPI::RenderFeatureSet クラス</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="../../dd/dc7/class_amuse_1_1_r_p_i_1_1_render_scene.html" title="描画シーン RenderScene">RenderScene</a> が保持する描画機能の集合  
+ <a href="#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d6/d67/_render_scene_8h_source.html">RenderScene.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
 <tr class="memitem:aa1937273f4dfa8207768e7976d97bc72" id="r_aa1937273f4dfa8207768e7976d97bc72"><td class="memItemLeft"><a id="aa1937273f4dfa8207768e7976d97bc72" name="aa1937273f4dfa8207768e7976d97bc72"></a>
 <a class="el" href="../../d6/d16/class_amuse_1_1_r_p_i_1_1_render_feature.html">RenderFeature</a> *&#160;</td><td class="memItemRight"><b>add</b> (<a class="el" href="../../dd/db0/class_amuse_1_1_core_1_1_type.html">Type</a> type, UPtr&lt; <a class="el" href="../../d6/d16/class_amuse_1_1_r_p_i_1_1_render_feature.html">RenderFeature</a> &gt; feature)</td></tr>
+<tr class="memdesc:aa1937273f4dfa8207768e7976d97bc72"><td class="mdescLeft">&#160;</td><td class="mdescRight">型情報を指定して描画機能を追加する <br /></td></tr>
 <tr class="memitem:a17fe3e733a59672cc67707978f8cb606" id="r_a17fe3e733a59672cc67707978f8cb606"><td class="memTemplParams" colspan="2"><a id="a17fe3e733a59672cc67707978f8cb606" name="a17fe3e733a59672cc67707978f8cb606"></a>
 template&lt;class T, class... TArgs&gt; </td></tr>
 <tr class="memitem:a17fe3e733a59672cc67707978f8cb606 template"><td class="memItemLeft">auto&#160;</td><td class="memItemRight"><b>add</b> (TArgs &amp;&amp;... args) -&gt; std::enable_if_t&lt; std::is_constructible_v&lt; T, TArgs... &gt;, T * &gt;</td></tr>
+<tr class="memdesc:a17fe3e733a59672cc67707978f8cb606"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定型の描画機能を生成して追加する <br /></td></tr>
 <tr class="memitem:a5db3348b2957a5917751c5d1fcffa05f" id="r_a5db3348b2957a5917751c5d1fcffa05f"><td class="memTemplParams" colspan="2"><a id="a5db3348b2957a5917751c5d1fcffa05f" name="a5db3348b2957a5917751c5d1fcffa05f"></a>
 template&lt;class T&gt; </td></tr>
 <tr class="memitem:a5db3348b2957a5917751c5d1fcffa05f template"><td class="memItemLeft">T *&#160;</td><td class="memItemRight"><b>find</b> () const</td></tr>
+<tr class="memdesc:a5db3348b2957a5917751c5d1fcffa05f"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定型の描画機能を検索する <br /></td></tr>
 <tr class="memitem:a55583f96377a07bc0c9282786e5b0260" id="r_a55583f96377a07bc0c9282786e5b0260"><td class="memItemLeft"><a id="a55583f96377a07bc0c9282786e5b0260" name="a55583f96377a07bc0c9282786e5b0260"></a>
 <a class="el" href="../../d6/d16/class_amuse_1_1_r_p_i_1_1_render_feature.html">RenderFeature</a> *&#160;</td><td class="memItemRight"><b>find</b> (<a class="el" href="../../dd/db0/class_amuse_1_1_core_1_1_type.html">Type</a> type) const</td></tr>
+<tr class="memdesc:a55583f96377a07bc0c9282786e5b0260"><td class="mdescLeft">&#160;</td><td class="mdescRight">型情報から描画機能を検索する <br /></td></tr>
 </table>
-<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
+<div class="textblock"><p><a class="el" href="../../dd/dc7/class_amuse_1_1_r_p_i_1_1_render_scene.html" title="描画シーン RenderScene">RenderScene</a> が保持する描画機能の集合 </p>
+</div><hr/>このクラス詳解は次のファイルから抽出されました:<ul>
 <li>Runtime/RPI/Public/Amuse/RPI/Render/<a class="el" href="../../d6/d67/_render_scene_8h_source.html">RenderScene.h</a></li>
 </ul>
 </div><!-- contents -->

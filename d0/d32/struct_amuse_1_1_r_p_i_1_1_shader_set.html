@@ -125,33 +125,51 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('d0/d32/struct_
   <div class="headertitle"><div class="title">Amuse::RPI::ShaderSet 構造体</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>マテリアルパスの品質別シェーダ設定  
+ <a href="#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d8/d87/_material_desc_8h_source.html">MaterialDesc.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 公開変数類</h2></td></tr>
 <tr class="memitem:a33458cddbaf99bda238ad2a3f3c401e7" id="r_a33458cddbaf99bda238ad2a3f3c401e7"><td class="memItemLeft"><a id="a33458cddbaf99bda238ad2a3f3c401e7" name="a33458cddbaf99bda238ad2a3f3c401e7"></a>
 s32&#160;</td><td class="memItemRight"><b>quality</b></td></tr>
+<tr class="memdesc:a33458cddbaf99bda238ad2a3f3c401e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">品質値 <br /></td></tr>
 <tr class="memitem:acaf2b10b8c58c9032c595c23bd56d72b" id="r_acaf2b10b8c58c9032c595c23bd56d72b"><td class="memItemLeft"><a id="acaf2b10b8c58c9032c595c23bd56d72b" name="acaf2b10b8c58c9032c595c23bd56d72b"></a>
 <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html">RHI::Shader</a> &gt;&#160;</td><td class="memItemRight"><b>vs</b></td></tr>
+<tr class="memdesc:acaf2b10b8c58c9032c595c23bd56d72b"><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点シェーダ <br /></td></tr>
 <tr class="memitem:a97a3e9f26327968b0246e9e2ea8dfe08" id="r_a97a3e9f26327968b0246e9e2ea8dfe08"><td class="memItemLeft"><a id="a97a3e9f26327968b0246e9e2ea8dfe08" name="a97a3e9f26327968b0246e9e2ea8dfe08"></a>
 <a class="el" href="../../d8/d51/class_amuse_1_1_core_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d7/d68/class_amuse_1_1_r_h_i_1_1_shader.html">RHI::Shader</a> &gt;&#160;</td><td class="memItemRight"><b>ps</b></td></tr>
+<tr class="memdesc:a97a3e9f26327968b0246e9e2ea8dfe08"><td class="mdescLeft">&#160;</td><td class="mdescRight">ピクセルシェーダ <br /></td></tr>
 <tr class="memitem:add8e2127b1639b184a632e1954582a3d" id="r_add8e2127b1639b184a632e1954582a3d"><td class="memItemLeft"><a id="add8e2127b1639b184a632e1954582a3d" name="add8e2127b1639b184a632e1954582a3d"></a>
 Vector&lt; <a class="el" href="../../de/d05/struct_amuse_1_1_r_p_i_1_1_input_layout.html">InputLayout</a> &gt;&#160;</td><td class="memItemRight"><b>inputLayout</b></td></tr>
+<tr class="memdesc:add8e2127b1639b184a632e1954582a3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">入力レイアウト <br /></td></tr>
 <tr class="memitem:a351a43640cd8b16b1639bab074a86a64" id="r_a351a43640cd8b16b1639bab074a86a64"><td class="memItemLeft"><a id="a351a43640cd8b16b1639bab074a86a64" name="a351a43640cd8b16b1639bab074a86a64"></a>
 RHI::RenderTargetFormatArray&#160;</td><td class="memItemRight"><b>colors</b></td></tr>
+<tr class="memdesc:a351a43640cd8b16b1639bab074a86a64"><td class="mdescLeft">&#160;</td><td class="mdescRight">カラー出力フォーマット <br /></td></tr>
 <tr class="memitem:a8f13494f9b69f877bb30d52f3f9b6ed8" id="r_a8f13494f9b69f877bb30d52f3f9b6ed8"><td class="memItemLeft"><a id="a8f13494f9b69f877bb30d52f3f9b6ed8" name="a8f13494f9b69f877bb30d52f3f9b6ed8"></a>
 Optional&lt; RHI::TextureFormat &gt;&#160;</td><td class="memItemRight"><b>depth</b></td></tr>
+<tr class="memdesc:a8f13494f9b69f877bb30d52f3f9b6ed8"><td class="mdescLeft">&#160;</td><td class="mdescRight">深度フォーマット <br /></td></tr>
 <tr class="memitem:a9e044b6146b6af8b6ddc02af69826b55" id="r_a9e044b6146b6af8b6ddc02af69826b55"><td class="memItemLeft"><a id="a9e044b6146b6af8b6ddc02af69826b55" name="a9e044b6146b6af8b6ddc02af69826b55"></a>
 <a class="el" href="../../dd/d46/struct_amuse_1_1_r_h_i_1_1_sample_desc.html">RHI::SampleDesc</a>&#160;</td><td class="memItemRight"><b>sample</b></td></tr>
+<tr class="memdesc:a9e044b6146b6af8b6ddc02af69826b55"><td class="mdescLeft">&#160;</td><td class="mdescRight">サンプル設定 <br /></td></tr>
 <tr class="memitem:a7928b23a0bb5c3a0fdd1c3fced2832d4" id="r_a7928b23a0bb5c3a0fdd1c3fced2832d4"><td class="memItemLeft"><a id="a7928b23a0bb5c3a0fdd1c3fced2832d4" name="a7928b23a0bb5c3a0fdd1c3fced2832d4"></a>
 RHI::BlendDescList&#160;</td><td class="memItemRight"><b>blend</b></td></tr>
+<tr class="memdesc:a7928b23a0bb5c3a0fdd1c3fced2832d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">ブレンド設定 <br /></td></tr>
 <tr class="memitem:a614f1b696165fbf8fccdd9ac2d4d4c33" id="r_a614f1b696165fbf8fccdd9ac2d4d4c33"><td class="memItemLeft"><a id="a614f1b696165fbf8fccdd9ac2d4d4c33" name="a614f1b696165fbf8fccdd9ac2d4d4c33"></a>
 RHI::BlendDescList&#160;</td><td class="memItemRight"><b>blends</b></td></tr>
+<tr class="memdesc:a614f1b696165fbf8fccdd9ac2d4d4c33"><td class="mdescLeft">&#160;</td><td class="mdescRight">複数ブレンド設定 <br /></td></tr>
 <tr class="memitem:a499af4c39c23481e67f22c062d42db29" id="r_a499af4c39c23481e67f22c062d42db29"><td class="memItemLeft"><a id="a499af4c39c23481e67f22c062d42db29" name="a499af4c39c23481e67f22c062d42db29"></a>
 <a class="el" href="../../d7/dac/struct_amuse_1_1_r_h_i_1_1_rasterizer_desc.html">RHI::RasterizerDesc</a>&#160;</td><td class="memItemRight"><b>rasterizer</b></td></tr>
+<tr class="memdesc:a499af4c39c23481e67f22c062d42db29"><td class="mdescLeft">&#160;</td><td class="mdescRight">ラスタライザ設定 <br /></td></tr>
 <tr class="memitem:a5b96a55810d60c205227af3a18a72526" id="r_a5b96a55810d60c205227af3a18a72526"><td class="memItemLeft"><a id="a5b96a55810d60c205227af3a18a72526" name="a5b96a55810d60c205227af3a18a72526"></a>
 <a class="el" href="../../db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html">RHI::DepthStencilDesc</a>&#160;</td><td class="memItemRight"><b>depthStencil</b></td></tr>
+<tr class="memdesc:a5b96a55810d60c205227af3a18a72526"><td class="mdescLeft">&#160;</td><td class="mdescRight">深度ステンシル設定 <br /></td></tr>
 </table>
-<hr/>この構造体詳解は次のファイルから抽出されました:<ul>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
+<div class="textblock"><p>マテリアルパスの品質別シェーダ設定 </p>
+</div><hr/>この構造体詳解は次のファイルから抽出されました:<ul>
 <li>Runtime/RPI/Public/Amuse/RPI/Material/<a class="el" href="../../d8/d87/_material_desc_8h_source.html">MaterialDesc.h</a></li>
 </ul>
 </div><!-- contents -->
