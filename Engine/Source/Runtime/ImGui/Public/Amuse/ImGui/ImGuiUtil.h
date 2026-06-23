@@ -3,8 +3,8 @@
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
-#include <Framework/Core/Core.h>
-#include "Library/imgui.h"
+#include <Amuse/Core/Core.h>
+#include <Amuse/ImGui/Library/imgui.h>
 
 namespace ImGui {
 	inline namespace Amuse {
