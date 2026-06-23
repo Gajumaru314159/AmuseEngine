@@ -293,8 +293,8 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('d7/d85/_bit_fl
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span></div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> TEnum&gt;</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    <span class="keyword">auto</span> operator|(TEnum left, TEnum right) -&gt; std::enable_if_t&lt;std::is_enum_v&lt;TEnum&gt;&amp;&amp;!std::is_convertible_v&lt;TEnum,int&gt;, BitFlags&lt;TEnum&gt;&gt; {</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        <span class="keywordflow">return</span> BitFlags&lt;TEnum&gt;(left) | right;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    <span class="keyword">auto</span> operator|(TEnum left, TEnum right) -&gt; std::enable_if_t&lt;std::is_enum_v&lt;TEnum&gt;&amp;&amp;!std::is_convertible_v&lt;TEnum,int&gt;, <a class="code hl_class" href="../../d8/d40/class_amuse_1_1_core_1_1_bit_flags.html">BitFlags&lt;TEnum&gt;</a>&gt; {</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="../../d8/d40/class_amuse_1_1_core_1_1_bit_flags.html">BitFlags&lt;TEnum&gt;</a>(left) | right;</div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    }</div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>}</div>
@@ -302,6 +302,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('d7/d85/_bit_fl
 </div>
 </div>
 </div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_bit_flags_html"><div class="ttname"><a href="../../d8/d40/class_amuse_1_1_core_1_1_bit_flags.html">Amuse::Core::BitFlags</a></div><div class="ttdoc">enum値をビットフラグとして扱うためのラップクラス</div><div class="ttdef"><b>Definition</b> BitFlags.h:16</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_bit_flags_html_a0010c87f159bfee363117c0d4a93bfd9"><div class="ttname"><a href="../../d8/d40/class_amuse_1_1_core_1_1_bit_flags.html#a0010c87f159bfee363117c0d4a93bfd9">Amuse::Core::BitFlags::off</a></div><div class="ttdeci">this_type &amp; off(TEnum value)</div><div class="ttdoc">指定されたフラグを0に設定する</div><div class="ttdef"><b>Definition</b> BitFlags.h:134</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_bit_flags_html_a27b8a9c2ee614badf19f2ab9ceb51d62"><div class="ttname"><a href="../../d8/d40/class_amuse_1_1_core_1_1_bit_flags.html#a27b8a9c2ee614badf19f2ab9ceb51d62">Amuse::Core::BitFlags::operator!=</a></div><div class="ttdeci">bool operator!=(const BitFlags&lt; TEnum &gt; &amp;rhs) const</div><div class="ttdoc">非等価比較</div><div class="ttdef"><b>Definition</b> BitFlags.h:43</div></div>
 <div class="ttc" id="aclass_amuse_1_1_core_1_1_bit_flags_html_a282cbbeb103bc58b272831fa6c33528c"><div class="ttname"><a href="../../d8/d40/class_amuse_1_1_core_1_1_bit_flags.html#a282cbbeb103bc58b272831fa6c33528c">Amuse::Core::BitFlags::operator!</a></div><div class="ttdeci">bool operator!() const</div><div class="ttdoc">フラグを保持していないことを確認する</div><div class="ttdef"><b>Definition</b> BitFlags.h:101</div></div>

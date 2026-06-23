@@ -8,7 +8,7 @@ var searchData=
   ['samplers_5',['samplers',['../dd/d50/struct_amuse_1_1_r_h_i_1_1_root_signature_desc.html#a0bef9d14c1c0207c446806dc540c6481',1,'Amuse::RHI::RootSignatureDesc']]],
   ['scale_6',['scale',['../d0/d24/class_amuse_1_1_core_1_1_transform.html#a2e4f376b7e5dcc35eacd0c7b9e4c5581',1,'Amuse::Core::Transform']]],
   ['second_7',['second',['../df/def/struct_amuse_1_1_core_1_1_date_time.html#aa7091f86aec1a8568db8c151708ba18a',1,'Amuse::Core::DateTime']]],
-  ['semantic_8',['semantic',['../db/df6/struct_amuse_1_1_r_h_i_1_1_vertex_attribute.html#abdb8707479634ce3ff96e35a1e7e1fa6',1,'Amuse::RHI::VertexAttribute']]],
+  ['semantic_8',['semantic',['../db/df6/struct_amuse_1_1_r_h_i_1_1_vertex_attribute.html#abdb8707479634ce3ff96e35a1e7e1fa6',1,'Amuse::RHI::VertexAttribute::semantic'],['../de/d05/struct_amuse_1_1_r_p_i_1_1_input_layout.html#af08b31826eb4c5750b6466b500896558',1,'Amuse::RPI::InputLayout::semantic']]],
   ['setter_9',['setter',['../d7/dd1/struct_amuse_1_1_core_1_1_property_info.html#a68f2099a58ad9a491d73bdf95acc3de7',1,'Amuse::Core::PropertyInfo']]],
   ['sharedsystemmemory_10',['sharedSystemMemory',['../d9/d41/struct_amuse_1_1_r_h_i_1_1_device_adapter_info.html#ae005f34f6db4cdc79a97e9a0254fe7e5',1,'Amuse::RHI::DeviceAdapterInfo']]],
   ['show_11',['show',['../d9/d54/struct_amuse_1_1_platform_1_1_window_desc.html#a1aa045214412860bbb1bc80f7a4b3786',1,'Amuse::Platform::WindowDesc']]],
@@ -33,5 +33,6 @@ var searchData=
   ['stencil_30',['stencil',['../db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html#a3b7c37d56a2e93aca341aa438a01d0fa',1,'Amuse::RHI::DepthStencilDesc::stencil'],['../d5/d8d/struct_amuse_1_1_r_h_i_1_1_begin_pass_param.html#a1a1394e74d9980cc0cd085dcbb45965d',1,'Amuse::RHI::BeginPassParam::stencil'],['../dc/d68/struct_amuse_1_1_r_h_i_1_1_clear_color.html#a16eba719f6807b736879ac3e081d015e',1,'Amuse::RHI::ClearColor::stencil']]],
   ['stride_31',['stride',['../d7/dab/struct_amuse_1_1_r_h_i_1_1_buffer_desc.html#a9dcae4698279c029b00d221c7308dc3f',1,'Amuse::RHI::BufferDesc']]],
   ['subresourceindex_32',['subresourceIndex',['../d3/d65/struct_amuse_1_1_r_h_i_1_1_graphic_file_request_1_1_texture_desc.html#ae2c8a445ce50eb17c94f1dd84197c35c',1,'Amuse::RHI::GraphicFileRequest::TextureDesc']]],
-  ['subtraction_33',['Subtraction',['../d2/df6/struct_amuse_1_1_r_h_i_1_1_blend_desc.html#a20a56623de1bef560eeee4f966905576',1,'Amuse::RHI::BlendDesc']]]
+  ['subtraction_33',['Subtraction',['../d2/df6/struct_amuse_1_1_r_h_i_1_1_blend_desc.html#a20a56623de1bef560eeee4f966905576',1,'Amuse::RHI::BlendDesc']]],
+  ['swapchain_34',['swapchain',['../d2/dd1/struct_amuse_1_1_r_p_i_1_1_output_view_data.html#a392affdd65d602f08513f4d4f35ae73d',1,'Amuse::RPI::OutputViewData']]]
 ];

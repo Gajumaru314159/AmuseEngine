@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: Runtime/RPI/Public/Amuse/RPI/Material/Material.h ソースファイル</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d3/d09/_material_8h_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Material.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//***********************************************************</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//***********************************************************</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;Amuse/RPI/Forward.h&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;Amuse/RPI/Material/MaterialDesc.h&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;Amuse/RPI/Material/MaterialBlock.h&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span>Amuse::RPI {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">class </span><a class="code hl_class" href="../../d6/db9/class_amuse_1_1_r_p_i_1_1_material_shader.html">MaterialShader</a>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../db/d34/struct_amuse_1_1_r_p_i_1_1_material_block_set.html">MaterialBlockSet</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span></div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html">   16</a></span>    <span class="keyword">class </span>Material : <span class="keyword">public</span> <a class="code hl_function" href="../../d1/d85/class_amuse_1_1_core_1_1_ref_object.html#a13ef87ec51bbe18df5c40a2898f7a87e">RefObject</a> {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keyword">using </span>Texture = <a class="code hl_class" href="../../de/d60/class_amuse_1_1_r_h_i_1_1_texture.html">Amuse::RHI::Texture</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keyword">using </span>Sampler = <a class="code hl_class" href="../../da/d9b/class_amuse_1_1_r_h_i_1_1_sampler.html">Amuse::RHI::Sampler</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keyword">using </span>Buffer = <a class="code hl_class" href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html">Amuse::RHI::Buffer</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#a0726907e50a3855574a0e7c12aef28ad">   24</a></span>        <span class="keyword">static</span> Ref&lt;Material&gt; <a class="code hl_function" href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#a0726907e50a3855574a0e7c12aef28ad">Create</a>(<span class="keyword">const</span> Ref&lt;MaterialShader&gt;&amp; shader);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keyword">static</span> Ref&lt;Material&gt; <a class="code hl_function" href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#a0726907e50a3855574a0e7c12aef28ad">Create</a>(<span class="keyword">const</span> <a class="code hl_struct" href="../../d2/d92/struct_amuse_1_1_r_p_i_1_1_material_desc.html">MaterialDesc</a>&amp; desc);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keyword">const</span> <a class="code hl_struct" href="../../d2/d92/struct_amuse_1_1_r_p_i_1_1_material_desc.html">MaterialDesc</a>&amp; getDesc()<span class="keyword">const</span>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keyword">const</span> Ref&lt;MaterialShader&gt;&amp; getShader()<span class="keyword">const </span>{ <span class="keywordflow">return</span> m_shader; }</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#a819c95ad204970e90d3dead398962830">   33</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#a819c95ad204970e90d3dead398962830">hasProperty</a>(StringView name, MaterialPropertyType type)<span class="keyword">const</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#a4efff879488528b4cf9ff53000f9537d">hasTexture</a>(StringView name)<span class="keyword">const</span>;  </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#ac9d1c3d60b38273dee39ced558657cde">hasBuffer</a>(StringView name)<span class="keyword">const</span>;   </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#ac507ca2afbe70bd02e6b7e525e74cf4b">hasMatrix</a>(StringView name)<span class="keyword">const</span>;   </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#a88dbdee965ddd42d273a6c73bd0cac68">hasVector</a>(StringView name)<span class="keyword">const</span>;   </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#a0c82a388f3c7149eb63ae4411b73db97">hasScalar</a>(StringView name)<span class="keyword">const</span>;   </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#a25a0dd50686b8000d0f8f1f8bbbb0f8c">hasInteger</a>(StringView name)<span class="keyword">const</span>;  </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#a436084ce662dc811738a3c0f0c0cc5ac">   42</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#a436084ce662dc811738a3c0f0c0cc5ac">setTexture</a>(StringView name, <span class="keyword">const</span> Ref&lt;Texture&gt;&amp; value);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordtype">void</span> setBuffer(StringView name, <span class="keyword">const</span> Ref&lt;Buffer&gt;&amp; value);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordtype">void</span> setMatrix(StringView name, <span class="keyword">const</span> <a class="code hl_struct" href="../../dc/d67/struct_amuse_1_1_core_1_1_matrix.html">Matrix</a>&amp; value);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordtype">void</span> setVector(StringView name, <a class="code hl_struct" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> value);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordtype">void</span> setScalar(StringView name, f32 value);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordtype">void</span> setInteger(StringView name, f32 value);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        s32 calcQualityIndex(StringView pass, s32 quality) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#aba3f211761b0c095f75fd484f9d7082f">   53</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#aba3f211761b0c095f75fd484f9d7082f">prepare</a>(<span class="keyword">const</span> Ref&lt;Mesh&gt;&amp; mesh);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordtype">void</span> record(Ref&lt;RHI::CommandList&gt;&amp; commandList, <a class="code hl_struct" href="../../db/d34/struct_amuse_1_1_r_p_i_1_1_material_block_set.html">MaterialBlockSet</a>&amp; blocks, <span class="keyword">const</span> Ref&lt;Mesh&gt;&amp; mesh, s32 submesh, StringView pass, s32 quality = 0);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keyword">auto</span>&amp; getBlock() { <span class="keywordflow">return</span> m_block;}</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#a3962a3443236aba9977bd7ba42b40515">   62</a></span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#a3962a3443236aba9977bd7ba42b40515">SetGlobalTexture</a>(StringView name, <span class="keyword">const</span> Ref&lt;Texture&gt;&amp; value);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> SetGlobalBuffer(StringView name, <span class="keyword">const</span> Ref&lt;Buffer&gt;&amp; value);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> SetGlobalMatrix(StringView name, <span class="keyword">const</span> <a class="code hl_struct" href="../../dc/d67/struct_amuse_1_1_core_1_1_matrix.html">Matrix</a>&amp; value);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> SetGlobalVector(StringView name, <a class="code hl_struct" href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Color</a> value);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> SetGlobalScalar(StringView name, f32 value);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> SetGlobalInteger(StringView name, s32 value);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        Material(<span class="keyword">const</span> Ref&lt;MaterialShader&gt;&amp; shader);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        Ref&lt;MaterialShader&gt; m_shader;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <a class="code hl_class" href="../../d2/d14/class_amuse_1_1_r_p_i_1_1_material_block.html">MaterialBlock</a>       m_block;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    };</div>
+</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#a4efff879488528b4cf9ff53000f9537d">   81</a></span>    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#a4efff879488528b4cf9ff53000f9537d">Material::hasTexture</a>(StringView name)<span class="keyword">const </span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#a819c95ad204970e90d3dead398962830">hasProperty</a>(name, MaterialPropertyType::Texture); }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#ac9d1c3d60b38273dee39ced558657cde">   82</a></span>    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#ac9d1c3d60b38273dee39ced558657cde">Material::hasBuffer</a>(StringView name)<span class="keyword">const </span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#a819c95ad204970e90d3dead398962830">hasProperty</a>(name, MaterialPropertyType::Buffer); }</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#ac507ca2afbe70bd02e6b7e525e74cf4b">   83</a></span>    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#ac507ca2afbe70bd02e6b7e525e74cf4b">Material::hasMatrix</a>(StringView name)<span class="keyword">const </span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#a819c95ad204970e90d3dead398962830">hasProperty</a>(name, MaterialPropertyType::Matrix); }</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#a88dbdee965ddd42d273a6c73bd0cac68">   84</a></span>    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#a88dbdee965ddd42d273a6c73bd0cac68">Material::hasVector</a>(StringView name)<span class="keyword">const </span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#a819c95ad204970e90d3dead398962830">hasProperty</a>(name, MaterialPropertyType::Vector); }</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#a0c82a388f3c7149eb63ae4411b73db97">   85</a></span>    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#a0c82a388f3c7149eb63ae4411b73db97">Material::hasScalar</a>(StringView name)<span class="keyword">const </span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#a819c95ad204970e90d3dead398962830">hasProperty</a>(name, MaterialPropertyType::Scalar); }</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#a25a0dd50686b8000d0f8f1f8bbbb0f8c">   86</a></span>    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#a25a0dd50686b8000d0f8f1f8bbbb0f8c">Material::hasInteger</a>(StringView name)<span class="keyword">const </span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#a819c95ad204970e90d3dead398962830">hasProperty</a>(name, MaterialPropertyType::Integer); }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>}</div>
+<div class="ttc" id="aclass_amuse_1_1_core_1_1_ref_object_html_a13ef87ec51bbe18df5c40a2898f7a87e"><div class="ttname"><a href="../../d1/d85/class_amuse_1_1_core_1_1_ref_object.html#a13ef87ec51bbe18df5c40a2898f7a87e">Amuse::Core::RefObject::RefObject</a></div><div class="ttdeci">RefObject()</div><div class="ttdoc">コンストラクタ</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_buffer_html"><div class="ttname"><a href="../../d7/d8d/class_amuse_1_1_r_h_i_1_1_buffer.html">Amuse::RHI::Buffer</a></div><div class="ttdoc">バッファ</div><div class="ttdef"><b>Definition</b> Buffer.h:19</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_sampler_html"><div class="ttname"><a href="../../da/d9b/class_amuse_1_1_r_h_i_1_1_sampler.html">Amuse::RHI::Sampler</a></div><div class="ttdoc">サンプラー</div><div class="ttdef"><b>Definition</b> Sampler.h:15</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_h_i_1_1_texture_html"><div class="ttname"><a href="../../de/d60/class_amuse_1_1_r_h_i_1_1_texture.html">Amuse::RHI::Texture</a></div><div class="ttdoc">テクスチャ</div><div class="ttdef"><b>Definition</b> Texture.h:16</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_p_i_1_1_material_block_html"><div class="ttname"><a href="../../d2/d14/class_amuse_1_1_r_p_i_1_1_material_block.html">Amuse::RPI::MaterialBlock</a></div><div class="ttdoc">マテリアルのパラメーターを管理するクラス</div><div class="ttdef"><b>Definition</b> MaterialBlock.h:44</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_p_i_1_1_material_html_a0726907e50a3855574a0e7c12aef28ad"><div class="ttname"><a href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#a0726907e50a3855574a0e7c12aef28ad">Amuse::RPI::Material::Create</a></div><div class="ttdeci">static Ref&lt; Material &gt; Create(const Ref&lt; MaterialShader &gt; &amp;shader)</div><div class="ttdoc">生成</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_p_i_1_1_material_html_a0c82a388f3c7149eb63ae4411b73db97"><div class="ttname"><a href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#a0c82a388f3c7149eb63ae4411b73db97">Amuse::RPI::Material::hasScalar</a></div><div class="ttdeci">bool hasScalar(StringView name) const</div><div class="ttdoc">マテリアルパラメータが存在するか</div><div class="ttdef"><b>Definition</b> Material.h:85</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_p_i_1_1_material_html_a25a0dd50686b8000d0f8f1f8bbbb0f8c"><div class="ttname"><a href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#a25a0dd50686b8000d0f8f1f8bbbb0f8c">Amuse::RPI::Material::hasInteger</a></div><div class="ttdeci">bool hasInteger(StringView name) const</div><div class="ttdoc">マテリアルパラメータが存在するか</div><div class="ttdef"><b>Definition</b> Material.h:86</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_p_i_1_1_material_html_a3962a3443236aba9977bd7ba42b40515"><div class="ttname"><a href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#a3962a3443236aba9977bd7ba42b40515">Amuse::RPI::Material::SetGlobalTexture</a></div><div class="ttdeci">static void SetGlobalTexture(StringView name, const Ref&lt; Texture &gt; &amp;value)</div><div class="ttdoc">グローバルマテリアルパラメータを設定</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_p_i_1_1_material_html_a436084ce662dc811738a3c0f0c0cc5ac"><div class="ttname"><a href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#a436084ce662dc811738a3c0f0c0cc5ac">Amuse::RPI::Material::setTexture</a></div><div class="ttdeci">void setTexture(StringView name, const Ref&lt; Texture &gt; &amp;value)</div><div class="ttdoc">マテリアルパラメータを設定</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_p_i_1_1_material_html_a4efff879488528b4cf9ff53000f9537d"><div class="ttname"><a href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#a4efff879488528b4cf9ff53000f9537d">Amuse::RPI::Material::hasTexture</a></div><div class="ttdeci">bool hasTexture(StringView name) const</div><div class="ttdoc">マテリアルパラメータが存在するか</div><div class="ttdef"><b>Definition</b> Material.h:81</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_p_i_1_1_material_html_a819c95ad204970e90d3dead398962830"><div class="ttname"><a href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#a819c95ad204970e90d3dead398962830">Amuse::RPI::Material::hasProperty</a></div><div class="ttdeci">bool hasProperty(StringView name, MaterialPropertyType type) const</div><div class="ttdoc">マテリアルパラメータが存在するか</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_p_i_1_1_material_html_a88dbdee965ddd42d273a6c73bd0cac68"><div class="ttname"><a href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#a88dbdee965ddd42d273a6c73bd0cac68">Amuse::RPI::Material::hasVector</a></div><div class="ttdeci">bool hasVector(StringView name) const</div><div class="ttdoc">マテリアルパラメータが存在するか</div><div class="ttdef"><b>Definition</b> Material.h:84</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_p_i_1_1_material_html_aba3f211761b0c095f75fd484f9d7082f"><div class="ttname"><a href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#aba3f211761b0c095f75fd484f9d7082f">Amuse::RPI::Material::prepare</a></div><div class="ttdeci">bool prepare(const Ref&lt; Mesh &gt; &amp;mesh)</div><div class="ttdoc">GPUリソースの事前生成</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_p_i_1_1_material_html_ac507ca2afbe70bd02e6b7e525e74cf4b"><div class="ttname"><a href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#ac507ca2afbe70bd02e6b7e525e74cf4b">Amuse::RPI::Material::hasMatrix</a></div><div class="ttdeci">bool hasMatrix(StringView name) const</div><div class="ttdoc">マテリアルパラメータが存在するか</div><div class="ttdef"><b>Definition</b> Material.h:83</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_p_i_1_1_material_html_ac9d1c3d60b38273dee39ced558657cde"><div class="ttname"><a href="../../db/dd4/class_amuse_1_1_r_p_i_1_1_material.html#ac9d1c3d60b38273dee39ced558657cde">Amuse::RPI::Material::hasBuffer</a></div><div class="ttdeci">bool hasBuffer(StringView name) const</div><div class="ttdoc">マテリアルパラメータが存在するか</div><div class="ttdef"><b>Definition</b> Material.h:82</div></div>
+<div class="ttc" id="aclass_amuse_1_1_r_p_i_1_1_material_shader_html"><div class="ttname"><a href="../../d6/db9/class_amuse_1_1_r_p_i_1_1_material_shader.html">Amuse::RPI::MaterialShader</a></div><div class="ttdoc">マテリアルシェーダー</div><div class="ttdef"><b>Definition</b> MaterialShader.h:18</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_color_html"><div class="ttname"><a href="../../d9/de4/struct_amuse_1_1_core_1_1_color.html">Amuse::Core::Color</a></div><div class="ttdoc">RGBAカラーを表現するクラス</div><div class="ttdef"><b>Definition</b> Color.h:17</div></div>
+<div class="ttc" id="astruct_amuse_1_1_core_1_1_matrix_html"><div class="ttname"><a href="../../dc/d67/struct_amuse_1_1_core_1_1_matrix.html">Amuse::Core::Matrix</a></div><div class="ttdoc">行列クラス</div><div class="ttdef"><b>Definition</b> Matrix.h:31</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_p_i_1_1_material_block_set_html"><div class="ttname"><a href="../../db/d34/struct_amuse_1_1_r_p_i_1_1_material_block_set.html">Amuse::RPI::MaterialBlockSet</a></div><div class="ttdef"><b>Definition</b> MaterialSystem.h:58</div></div>
+<div class="ttc" id="astruct_amuse_1_1_r_p_i_1_1_material_desc_html"><div class="ttname"><a href="../../d2/d92/struct_amuse_1_1_r_p_i_1_1_material_desc.html">Amuse::RPI::MaterialDesc</a></div><div class="ttdoc">マテリアル定義</div><div class="ttdef"><b>Definition</b> MaterialDesc.h:57</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Runtime</b></li><li class="navelem"><b>RPI</b></li><li class="navelem"><b>Public</b></li><li class="navelem"><b>Amuse</b></li><li class="navelem"><b>RPI</b></li><li class="navelem"><b>Material</b></li><li class="navelem"><b>Material.h</b></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

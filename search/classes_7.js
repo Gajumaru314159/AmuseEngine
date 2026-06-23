@@ -1,7 +1,7 @@
 var searchData=
 [
   ['halfline_0',['HalfLine',['../db/d03/class_amuse_1_1_core_1_1_half_line.html',1,'Amuse::Core']]],
-  ['handle_1',['Handle',['../d3/d60/class_amuse_1_1_core_1_1_handle.html',1,'Amuse::Core::Handle&lt; T, TNamespace &gt;'],['../dc/d57/class_amuse_1_1_core_1_1_handle_forward_list_1_1_handle.html',1,'Amuse::Core::HandleForwardList&lt; T &gt;::Handle'],['../dd/d26/class_amuse_1_1_core_1_1_handle_list_1_1_handle.html',1,'Amuse::Core::HandleList&lt; T &gt;::Handle'],['../db/dbd/class_amuse_1_1_core_1_1_handle_manager_1_1_handle.html',1,'Amuse::Core::HandleManager&lt; T, Deleter &gt;::Handle']]],
+  ['handle_1',['Handle',['../d3/d60/class_amuse_1_1_core_1_1_handle.html',1,'Amuse::Core::Handle&lt; T, TNamespace &gt;'],['../dc/d57/class_amuse_1_1_core_1_1_handle_forward_list_1_1_handle.html',1,'Amuse::Core::HandleForwardList&lt; T &gt;::Handle'],['../dd/d26/class_amuse_1_1_core_1_1_handle_list_1_1_handle.html',1,'Amuse::Core::HandleList&lt; T &gt;::Handle'],['../db/dbd/class_amuse_1_1_core_1_1_handle_manager_1_1_handle.html',1,'Amuse::Core::HandleManager&lt; T, Deleter &gt;::Handle'],['../d1/d93/class_amuse_1_1_r_p_i_1_1_sparse_upload_buffer_1_1_handle.html',1,'Amuse::RPI::SparseUploadBuffer&lt; T &gt;::Handle']]],
   ['handleforwardlist_2',['HandleForwardList',['../d3/ddf/class_amuse_1_1_core_1_1_handle_forward_list.html',1,'Amuse::Core']]],
   ['handlelist_3',['HandleList',['../da/da9/class_amuse_1_1_core_1_1_handle_list.html',1,'Amuse::Core']]],
   ['handlelist_3c_20delegate_5ftype_20_3e_4',['HandleList&lt; delegate_type &gt;',['../da/da9/class_amuse_1_1_core_1_1_handle_list.html',1,'Amuse::Core']]],
