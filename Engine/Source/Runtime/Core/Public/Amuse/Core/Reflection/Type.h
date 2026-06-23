@@ -54,7 +54,7 @@ namespace Amuse::Core {
 	}
 	//! @endcond
 
-#define AMUSE_RTTI()	virtual Type getType()const{return Type::Get<std::remove_cv_t<std::remove_reference_t<decltype(*this)>>>();}
+#define AMUSE_RTTI()	virtual Amuse::Core::Type getType()const{return Amuse::Core::Type::Get<std::remove_cv_t<std::remove_reference_t<decltype(*this)>>>();}
 
 	//! @brief 型名と固定ハッシュでリフレクション対象の型を識別する。
 	class Type {

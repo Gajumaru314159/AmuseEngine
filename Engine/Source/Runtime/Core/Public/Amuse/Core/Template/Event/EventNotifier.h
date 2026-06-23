@@ -10,7 +10,7 @@
 namespace Amuse::Core {
 
 #define AMUSE_EVENT_NOTIFIER(prefix,...) \
-    class prefix##Notifier : public EventNotifier<__VA_ARGS__> {};\
+    class prefix##Notifier : public Amuse::Core::EventNotifier<__VA_ARGS__> {};\
     using prefix##Handle = typename prefix##Notifier::Handle;\
     using prefix##Delegate = typename prefix##Notifier::delegate_type;
 
