@@ -7,6 +7,8 @@
 
 namespace Amuse::Core {
 
+    const Box Box::Empty { Vec3::Zero };
+
     //! @brief      コンストラクタ(点群指定)
     //! 
     //! @details    指定された点群をすべて含むボックスを構築する。
