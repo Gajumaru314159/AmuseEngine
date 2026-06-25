@@ -12,11 +12,33 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Build Doxygen
-        uses: DenverCoder1/doxygen-github-pages-action@v2.0.0
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          submodules: "true"
+
+      - name: Install dependencies
+        run: sudo apt-get update && sudo apt-get install -y wget graphviz
+
+      - name: Install Doxygen
+        run: |
+          wget https://github.com/doxygen/doxygen/releases/download/Release_1_17_0/doxygen-1.17.0.linux.bin.tar.gz
+          tar -xzf doxygen-1.17.0.linux.bin.tar.gz
+          sudo mv doxygen-1.17.0/bin/doxygen /usr/local/bin/doxygen
+
+      - name: Build Doxygen
+        run: doxygen Doxyfile
+
+      - name: Post-process Doxygen
+        shell: pwsh
+        run: Engine/Source/Documents/PostProcessDoxygen.ps1 -HtmlDirectory docs/html
+
+      - name: Create .nojekyll
+        run: touch docs/html/.nojekyll
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           branch: documents
           folder: docs/html
-          config_file: Doxyfile
-          doxygen_version: 1.17.0
