@@ -5,6 +5,11 @@ html {
     --odd-color:none;
     --index-odd-item-bg-color:none;
 }
+
+.title {
+    display: none;
+}
+
 .memberdecls {
     --code-background: none;
 }

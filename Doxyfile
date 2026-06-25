@@ -1244,7 +1244,7 @@ FILTER_SOURCE_PATTERNS =
 # (index.html). This can be useful if you have a project on for instance GitHub
 # and want to reuse the introduction page also for the Doxygen output.
 
-USE_MDFILE_AS_MAINPAGE = Engine/Source/Runtime/Runtime.md
+USE_MDFILE_AS_MAINPAGE = Engine/Source/Documents/AmuseEngine.md
 
 # If the IMPLICIT_DIR_DOCS tag is set to YES, any README.md file found in sub-
 # directories of the project's root, is used as the documentation for that sub-
@@ -1506,7 +1506,8 @@ HTML_EXTRA_STYLESHEET  = Engine/Source/Documents/style/doxygen-awesome-css-1.5.0
 
 HTML_EXTRA_FILES       = Engine/Source/Documents/style/doc.png \
                          Engine/Source/Documents/style/folderclosed.png \
-                         Engine/Source/Documents/style/folderopen.png
+                         Engine/Source/Documents/style/folderopen.png \
+                         Engine/Source/Documents/style/header-black.png
 
 # The HTML_COLORSTYLE tag can be used to specify if the generated HTML output
 # should be rendered with a dark or light theme.
