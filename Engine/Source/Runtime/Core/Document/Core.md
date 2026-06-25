@@ -7,6 +7,7 @@ Platform固有の実装は許可されていますが、特定のプラットフ
 
 # サブページ
 
+- \subpage Arguments
 - \subpage Container
 - \subpage DI
 - \subpage Log

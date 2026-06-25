@@ -2,40 +2,60 @@
 //! @file
 //! @author		Gajumaru
 //***********************************************************
-#include <Amuse/Platform/Arguments.h>
+#include <Amuse/Core/Misc/Arguments.h>
 #include <Amuse/Core/String/StringEncoder.h>
 
 #include <Amuse/Core/Core.h>
+
 #ifdef OS_WINDOWS
 
 #include <Windows.h>
-static void GetCommandLine(Amuse::Arguments::container_type& dest) {
-    dest.clear();
-    int numArgs;
-    LPWSTR* ppArgs = ::CommandLineToArgvW(GetCommandLineW(), &numArgs);
-    for (int i = 0; i < numArgs; ++i) {
-        Amuse::StringBase<wchar_t> warg = ppArgs[i];
-        Amuse::String arg;
-        Amuse::StringEncoder::Encode(warg, arg);
-        dest.push_back(arg);
-    }
-}
+#include <shellapi.h>
 
 #elif defined(OS_LINUX)
-#include <wordexp.h>
-static void GetCommandLine(Amuse::Arguments::container_type& dest) {
-    dest.clear();
-    LOG_ERROR("GetCommandLineは未実装です");
-}
+
+extern int s_args;
+extern char** s_argv;
 
 #endif
 
-
-
 namespace Amuse {
+
+#ifdef OS_WINDOWS
+
+    static void GetCommandLine(Arguments::container_type& dest) {
+        dest.clear();
+        int numArgs;
+        LPWSTR* ppArgs = ::CommandLineToArgvW(::GetCommandLineW(), &numArgs);
+        for (int i = 0; i < numArgs; ++i) {
+            StringBase<wchar_t> warg = ppArgs[i];
+            String arg;
+            StringEncoder::Encode(warg, arg);
+            dest.push_back(arg);
+        }
+        ::LocalFree(ppArgs);
+    }
+
+#elif defined(OS_LINUX)
+
+    static void GetCommandLine(Arguments::container_type& dest) {
+        dest.clear();
+        if (s_argv == nullptr) {
+            return;
+        }
+        for (int i = 0; i < s_args; ++i) {
+            if (s_argv[i] == nullptr) {
+                continue;
+            }
+            dest.push_back(s_argv[i]);
+        }
+    }
+
+#endif
+
     //! @brief  コンストラクタ
     Arguments::Arguments() {
-        ::GetCommandLine(m_args);
+        GetCommandLine(m_args);
     }
 
 
@@ -69,5 +89,3 @@ namespace Amuse {
     }
 
 }
-
-

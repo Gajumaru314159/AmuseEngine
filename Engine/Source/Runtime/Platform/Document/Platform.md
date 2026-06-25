@@ -10,7 +10,6 @@ Coreモジュールでは吸収しきれないネイティブAPIの呼び出し�
 
 # サブページ
 
-- \subpage Arguments
 - \subpage DLL
 - \subpage System
 - \subpage TextInput

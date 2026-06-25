@@ -3,11 +3,14 @@
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
-#include <Amuse/Core/Core.h>
+
+#include <Amuse/Core/CoreTypes.h>
+#include <Amuse/Core/String/String.h>
+#include <Amuse/Core/Template/Container/Vector.h>
 
 namespace Amuse {
     //! @brief コマンドライン引数
-    //! @ingroup AmusePlatform
+    //! @ingroup AmuseCore
     class Arguments {
     public:
         using container_type = Vector<String>;                       //!< 引数コンテナ

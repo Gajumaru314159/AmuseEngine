@@ -60,6 +60,7 @@
 #include <Amuse/Core/Misc/CAPI.h>
 #include <Amuse/Core/Misc/Compression.h>
 #include <Amuse/Core/Misc/CRCHash.h>
+#include <Amuse/Core/Misc/Arguments.h>
 #include <Amuse/Core/Misc/DateTime.h>
 #include <Amuse/Core/Misc/TimeSpan.h>
 #include <Amuse/Core/Misc/Noise.h>
