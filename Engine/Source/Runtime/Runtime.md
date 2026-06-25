@@ -6,25 +6,25 @@ Runtimeはゲームエンジンを構成する基本のモジュール群です�
 - ✏️ 実装中
 - ⏳ 未着手
 
-| モジュール名 | namespace        | 機能                           | 説明                                           | 実装状況 |
-| :----------- | ---------------- | ------------------------------ | ---------------------------------------------- | -------- |
-| Core         | Amuse::Core      | 数学/DI/パーサ/JobManager      | ユーティリティ群                               | ✔        |
-| Platform     | Amuse::Platform  | ウィンドウ/ファイルIO          | プラットフォーム機能の共通化                   | ✔        |
-| Input        | Amuse::Input     | マウス/キーボード/ゲームパッド | DirectInputやXInputの共通化                    | ✔        |
-| RHI          | Amuse::RHI       | Texture/Buffer                 | 描画APIの抽象化レイヤ                          | ✔        |
-| DirectX12RHI | Amuse::RHI       | DirectX12Texture               | DirectX12の描画API実装                         | ✔        |
-| VulkanRHI    | Amuse::RHI       | VulkanTexture                  | Vulkanの描画API実装                            | ✔        |
-| Graphics     | Amuse::Graphics  | Material/RenderJob             | RHIをベースとした描画システム                  | ✏️       |
-| Model        | Amuse::Model     | StaticMesh/SkeltalMesh         | 3Dモデル描画                                   | ✏️       |
-| Sequence     | Amuse::Squence   | タイムライン制御               | アニメーションやサウンドの再生                 | ⏳       |
-| Animation    | Amuse::Animation | パラメータアニメ―ション        | カーブに従った値変化                           | ⏳       |
-| Physics      | Amuse::Physics   | 物理演算/衝突                  | 剛体処理やクロスシミュレーション               | ⏳       |
-| GUI          | Amuse::GUI       | Widget/Layout                  | ユーザインターフェイス                         | ⏳       |
-| Sound        | Amuse::Sound     | Audio/Effector                 | 音関係                                         | ⏳       |
-| VFX          | Amuse::VFX       | パーティクル                   | ShurikenやNiagaraのようなエフェクトシステム    | ⏳       |
-| Asset        | Amuse::Asset     | Asset                          | アセット読み込み/アセット間依存                | ⏳       |
-| Engine       | Amuse::Engine    | Engine                         | 各種モジュール起動                             | ⏳       |
-| Editor       | Amuse::Editor    | OctbitEditorとの通信           | エディタ機能はこのモジュールに集約させています | ⏳       |
+| モジュール名 | 機能                           | 説明                                           | 実装状況 |
+| :----------- | ------------------------------ | ---------------------------------------------- | -------- |
+| Core         | 数学/DI/パーサ/JobManager      | ユーティリティ群                               | ✔        |
+| Platform     | ウィンドウ/ファイルIO          | プラットフォーム機能の共通化                   | ✔        |
+| Input        | マウス/キーボード/ゲームパッド | DirectInputやXInputの共通化                    | ✔        |
+| RHI          | Texture/Buffer                 | 描画APIの抽象化レイヤ                          | ✔        |
+| DirectX12RHI | DirectX12Texture               | DirectX12の描画API実装                         | ✔        |
+| VulkanRHI    | VulkanTexture                  | Vulkanの描画API実装                            | ✔        |
+| RPI          | Material/RenderJob             | RHIをベースとした描画システム                  | ✏️       |
+| Model        | StaticMesh/SkeltalMesh         | 3Dモデル描画                                   | ✏️       |
+| Sequence     | タイムライン制御               | アニメーションやサウンドの再生                 | ⏳       |
+| Animation    | パラメータアニメ―ション        | カーブに従った値変化                           | ⏳       |
+| Physics      | 物理演算/衝突                  | 剛体処理やクロスシミュレーション               | ⏳       |
+| GUI          | Widget/Layout                  | ユーザインターフェイス                         | ⏳       |
+| Sound        | Audio/Effector                 | 音関係                                         | ⏳       |
+| VFX          | パーティクル                   | ShurikenやNiagaraのようなエフェクトシステム    | ⏳       |
+| Asset        | Asset                          | アセット読み込み/アセット間依存                | ⏳       |
+| Engine       | Engine                         | 各種モジュール起動                             | ⏳       |
+| Editor       | OctbitEditorとの通信           | エディタ機能はこのモジュールに集約させています | ⏳       |
 
 ## Coreモジュール
 
