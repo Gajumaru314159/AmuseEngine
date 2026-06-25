@@ -155,10 +155,10 @@ using&#160;</td><td class="memItemRight"><b>EventDelegateType</b> = <a class="el
 <tr class="memitem:a0d77f27eb95c246d555904aaf08018eb" id="r_a0d77f27eb95c246d555904aaf08018eb"><td class="memItemLeft"><a id="a0d77f27eb95c246d555904aaf08018eb" name="a0d77f27eb95c246d555904aaf08018eb"></a>
 &#160;</td><td class="memItemRight"><b>~Logger</b> ()</td></tr>
 <tr class="memdesc:a0d77f27eb95c246d555904aaf08018eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ <br /></td></tr>
-<tr class="memitem:a9f30d1932db9c7350fa0532771e7230a" id="r_a9f30d1932db9c7350fa0532771e7230a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9f30d1932db9c7350fa0532771e7230a">addLog</a> (<a class="el" href="../../da/d78/group___amuse_core.html#gaca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a> level, const <a class="el" href="../../d3/d2d/struct_amuse_1_1_source_location.html">SourceLocation</a> &amp;sourceLocation, const Char *category, const Char *pMessage)</td></tr>
+<tr class="memitem:a9f30d1932db9c7350fa0532771e7230a" id="r_a9f30d1932db9c7350fa0532771e7230a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d3/d19/class_amuse_1_1_logger_a9f30d1932db9c7350fa0532771e7230a.html#a9f30d1932db9c7350fa0532771e7230a">addLog</a> (<a class="el" href="../../da/d78/group___amuse_core_gaca1fd1d8935433e6ba2e3918214e07f9.html#gaca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a> level, const <a class="el" href="../../d3/d2d/struct_amuse_1_1_source_location.html">SourceLocation</a> &amp;sourceLocation, const Char *category, const Char *pMessage)</td></tr>
 <tr class="memdesc:a9f30d1932db9c7350fa0532771e7230a"><td class="mdescLeft">&#160;</td><td class="mdescRight">ログの追加  <br /></td></tr>
 <tr class="memitem:abbad4656cda757309a7ce68dd046ea3f" id="r_abbad4656cda757309a7ce68dd046ea3f"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:abbad4656cda757309a7ce68dd046ea3f template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abbad4656cda757309a7ce68dd046ea3f">addLog</a> (<a class="el" href="../../da/d78/group___amuse_core.html#gaca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a> level, const <a class="el" href="../../d3/d2d/struct_amuse_1_1_source_location.html">SourceLocation</a> &amp;sourceLocation, const Char *category, const Char *pFormat, Args &amp;&amp;... args)</td></tr>
+<tr class="memitem:abbad4656cda757309a7ce68dd046ea3f template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d3/d19/class_amuse_1_1_logger_abbad4656cda757309a7ce68dd046ea3f.html#abbad4656cda757309a7ce68dd046ea3f">addLog</a> (<a class="el" href="../../da/d78/group___amuse_core_gaca1fd1d8935433e6ba2e3918214e07f9.html#gaca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a> level, const <a class="el" href="../../d3/d2d/struct_amuse_1_1_source_location.html">SourceLocation</a> &amp;sourceLocation, const Char *category, const Char *pFormat, Args &amp;&amp;... args)</td></tr>
 <tr class="memdesc:abbad4656cda757309a7ce68dd046ea3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">ログの追加  <br /></td></tr>
 <tr class="memitem:ad8449c9d2778dc38aa0bf08f26bf1136" id="r_ad8449c9d2778dc38aa0bf08f26bf1136"><td class="memItemLeft"><a id="ad8449c9d2778dc38aa0bf08f26bf1136" name="ad8449c9d2778dc38aa0bf08f26bf1136"></a>
 void&#160;</td><td class="memItemRight"><b>addEvent</b> (<a class="el" href="#a100f3ebf1ce2a2736fb78098b4c4a751">EventHandle</a> &amp;handle, const <a class="el" href="#ada49f10a95cce11c765a9e6f92670be8">EventDelegateType</a> &amp;func)</td></tr>
@@ -176,109 +176,6 @@ static <a class="el" href="#a4fac0c9f6ee2dce6abd726264b9195f7">Logger</a> *&#160
 static <a class="el" href="#a4fac0c9f6ee2dce6abd726264b9195f7">Logger</a> &amp;&#160;</td><td class="memItemRight"><b>Instance</b> () noexcept</td></tr>
 <tr class="memdesc:a6b58a03f82343f57fb5060e3ba04caf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンスを取得 <br /></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
-<a id="abbad4656cda757309a7ce68dd046ea3f" name="abbad4656cda757309a7ce68dd046ea3f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abbad4656cda757309a7ce68dd046ea3f">&#9670;&#160;</a></span>addLog() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename... Args&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void addLog </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../da/d78/group___amuse_core.html#gaca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a></td>          <td class="paramname"><span class="paramname"><em>level</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="../../d3/d2d/struct_amuse_1_1_source_location.html">SourceLocation</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>sourceLocation</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Char *</td>          <td class="paramname"><span class="paramname"><em>category</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Char *</td>          <td class="paramname"><span class="paramname"><em>pFormat</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>ログの追加 </p>
-<p>この関数の呼び出しは LOG_INFO_EX や LOG_WARNING_EX マクロから呼び出される。<br  />
- 直接呼び出しは非推奨です。 </p><dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">level</td><td>ログの種類 </td></tr>
-    <tr><td class="paramname">sourceLocation</td><td>ログ生成場所 </td></tr>
-    <tr><td class="paramname">category</td><td>カテゴリ名 </td></tr>
-    <tr><td class="paramname">pFormat</td><td>フォーマット文字列 </td></tr>
-    <tr><td class="paramname">args</td><td>フォーマット引数 </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a9f30d1932db9c7350fa0532771e7230a" name="a9f30d1932db9c7350fa0532771e7230a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f30d1932db9c7350fa0532771e7230a">&#9670;&#160;</a></span>addLog() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void addLog </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../da/d78/group___amuse_core.html#gaca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a></td>          <td class="paramname"><span class="paramname"><em>level</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="../../d3/d2d/struct_amuse_1_1_source_location.html">SourceLocation</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>sourceLocation</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Char *</td>          <td class="paramname"><span class="paramname"><em>category</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Char *</td>          <td class="paramname"><span class="paramname"><em>pMessage</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>ログの追加 </p>
-<p>この関数の呼び出しは LOG_INFO_EX や LOG_WARNING_EX マクロから呼び出される。<br  />
- 直接呼び出しは非推奨です。 </p><dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">level</td><td>ログの種類 </td></tr>
-    <tr><td class="paramname">sourceLocation</td><td>ログ生成場所 </td></tr>
-    <tr><td class="paramname">category</td><td>カテゴリ名 </td></tr>
-    <tr><td class="paramname">pMessage</td><td>メッセージ </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <hr/>このクラス詳解は次のファイルから抽出されました:<ul>
 <li>Runtime/Core/Public/Amuse/Core/Log/<a class="el" href="../../d6/dec/_logger_8h_source.html">Logger.h</a></li>
 </ul>

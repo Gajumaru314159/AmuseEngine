@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['コンテナ_0',['コンテナ',['../d0/def/_container.html',1,'Core']]],
-  ['コーディング規約_1',['コーディング規約',['../d0/dfc/_coding_rule.html',1,'index']]]
+  ['window_0',['Window',['../d8/d1a/_window.html',1,'Platform']]]
 ];

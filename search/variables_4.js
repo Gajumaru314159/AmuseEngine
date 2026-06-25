@@ -1,7 +1,7 @@
 var searchData=
 [
   ['empty_0',['Empty',['../d3/d41/struct_amuse_1_1_box.html#ad118306ce5213200146e45545996cc7a',1,'Amuse::Box']]],
-  ['enable_1',['enable',['../d2/d66/struct_amuse_1_1_depth_stencil_desc.html#ac842b6c1dcb3b1f11b611620199dc55c',1,'Amuse::DepthStencilDesc']]],
+  ['enable_1',['enable',['../d2/d66/struct_amuse_1_1_depth_stencil_desc_ac842b6c1dcb3b1f11b611620199dc55c.html#ac842b6c1dcb3b1f11b611620199dc55c',1,'Amuse::DepthStencilDesc']]],
   ['enablebindless_2',['enableBindless',['../d7/d36/struct_amuse_1_1_r_h_i_config.html#a5168b58aa60c84a6f133936e1166915b',1,'Amuse::RHIConfig']]],
   ['enabledebuglayer_3',['enableDebugLayer',['../d5/d8c/struct_amuse_1_1_direct_x12_r_h_i_config.html#a601a415f877fb65c30aec2b3be6adaf1',1,'Amuse::DirectX12RHIConfig::enableDebugLayer'],['../d3/d91/struct_amuse_1_1_vulkan_r_h_i_config.html#a601a415f877fb65c30aec2b3be6adaf1',1,'Amuse::VulkanRHIConfig::enableDebugLayer']]],
   ['enabledirectstorage_4',['enableDirectStorage',['../d5/d8c/struct_amuse_1_1_direct_x12_r_h_i_config.html#ab19424d06981b69915738a2c9ef0b448',1,'Amuse::DirectX12RHIConfig']]],

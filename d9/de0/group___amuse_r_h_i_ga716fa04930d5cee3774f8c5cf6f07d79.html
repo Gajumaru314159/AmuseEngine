@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: Amuse::LogicOp</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d9/de0/group___amuse_r_h_i_ga716fa04930d5cee3774f8c5cf6f07d79.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="contents">
+<a id="ga716fa04930d5cee3774f8c5cf6f07d79" name="ga716fa04930d5cee3774f8c5cf6f07d79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga716fa04930d5cee3774f8c5cf6f07d79">&#9670;&#160;</a></span>LogicOp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#ga716fa04930d5cee3774f8c5cf6f07d79">LogicOp</a> : u32</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>論理演算 </p>
+<p>現在使用されていません。 </p><dl class="section see"><dt>参照</dt><dd>BlendState </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="gga716fa04930d5cee3774f8c5cf6f07d79adc30bc0c7914db5918da4263fce93ad2" name="gga716fa04930d5cee3774f8c5cf6f07d79adc30bc0c7914db5918da4263fce93ad2"></a>Clear&#160;</td><td class="fielddoc"><p>0 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga716fa04930d5cee3774f8c5cf6f07d79a5d5b78699e57104f2fa03bbdf7b9197b" name="gga716fa04930d5cee3774f8c5cf6f07d79a5d5b78699e57104f2fa03bbdf7b9197b"></a>Set&#160;</td><td class="fielddoc"><p>1 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga716fa04930d5cee3774f8c5cf6f07d79a5fb63579fc981698f97d55bfecb213ea" name="gga716fa04930d5cee3774f8c5cf6f07d79a5fb63579fc981698f97d55bfecb213ea"></a>Copy&#160;</td><td class="fielddoc"><p>src </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga716fa04930d5cee3774f8c5cf6f07d79ae7a387d9808b05131e4906e7655a33a0" name="gga716fa04930d5cee3774f8c5cf6f07d79ae7a387d9808b05131e4906e7655a33a0"></a>CopyInverted&#160;</td><td class="fielddoc"><p>~src </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga716fa04930d5cee3774f8c5cf6f07d79a35721c181ec6a9cca6cdb99dd844d07b" name="gga716fa04930d5cee3774f8c5cf6f07d79a35721c181ec6a9cca6cdb99dd844d07b"></a>Noop&#160;</td><td class="fielddoc"><p>何もしない </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga716fa04930d5cee3774f8c5cf6f07d79a9b8958acb7be504bb5f55f17c0eea366" name="gga716fa04930d5cee3774f8c5cf6f07d79a9b8958acb7be504bb5f55f17c0eea366"></a>Invert&#160;</td><td class="fielddoc"><p>~dst </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga716fa04930d5cee3774f8c5cf6f07d79ac33315685a0cba3ce53be378b3c7874b" name="gga716fa04930d5cee3774f8c5cf6f07d79ac33315685a0cba3ce53be378b3c7874b"></a>And&#160;</td><td class="fielddoc"><p>dst &amp; src </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga716fa04930d5cee3774f8c5cf6f07d79ad39e2d62791eb0c18e0bb54315180049" name="gga716fa04930d5cee3774f8c5cf6f07d79ad39e2d62791eb0c18e0bb54315180049"></a>Nand&#160;</td><td class="fielddoc"><p>~(dst &amp; src) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga716fa04930d5cee3774f8c5cf6f07d79a3a2d5fe857d8f9541136a124c2edec6c" name="gga716fa04930d5cee3774f8c5cf6f07d79a3a2d5fe857d8f9541136a124c2edec6c"></a>Or&#160;</td><td class="fielddoc"><p>dst | src </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga716fa04930d5cee3774f8c5cf6f07d79a5f61fcb6e17f7a46a46a47c7977c90c1" name="gga716fa04930d5cee3774f8c5cf6f07d79a5f61fcb6e17f7a46a46a47c7977c90c1"></a>Nor&#160;</td><td class="fielddoc"><p>~(dst | src) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga716fa04930d5cee3774f8c5cf6f07d79a76feb79109026728a20736a8c6504548" name="gga716fa04930d5cee3774f8c5cf6f07d79a76feb79109026728a20736a8c6504548"></a>Xor&#160;</td><td class="fielddoc"><p>dst ^ src </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga716fa04930d5cee3774f8c5cf6f07d79aafd102579f64c98e96d92a7424130605" name="gga716fa04930d5cee3774f8c5cf6f07d79aafd102579f64c98e96d92a7424130605"></a>Equivalent&#160;</td><td class="fielddoc"><p>~(dst ^ src) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga716fa04930d5cee3774f8c5cf6f07d79a287b07d4ecc112d0a742eba7d4c845bc" name="gga716fa04930d5cee3774f8c5cf6f07d79a287b07d4ecc112d0a742eba7d4c845bc"></a>AndReverse&#160;</td><td class="fielddoc"><p>src &amp; ~dst </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga716fa04930d5cee3774f8c5cf6f07d79adf0344a044e102673403a03fe8e83d8d" name="gga716fa04930d5cee3774f8c5cf6f07d79adf0344a044e102673403a03fe8e83d8d"></a>AndInverted&#160;</td><td class="fielddoc"><p>~src &amp; dst </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga716fa04930d5cee3774f8c5cf6f07d79aabbaa132814b3deb687143a873ab3100" name="gga716fa04930d5cee3774f8c5cf6f07d79aabbaa132814b3deb687143a873ab3100"></a>OrReverse&#160;</td><td class="fielddoc"><p>dst | ~dst </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga716fa04930d5cee3774f8c5cf6f07d79abf95e9e38b3918a85a27125fff7e47ea" name="gga716fa04930d5cee3774f8c5cf6f07d79abf95e9e38b3918a85a27125fff7e47ea"></a>OrInverted&#160;</td><td class="fielddoc"><p>~src | dst </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../d9/de0/group___amuse_r_h_i.html">RHI</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

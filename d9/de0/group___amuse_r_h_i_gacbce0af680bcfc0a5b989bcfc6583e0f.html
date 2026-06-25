@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: Amuse::TextureFormat</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d9/de0/group___amuse_r_h_i_gacbce0af680bcfc0a5b989bcfc6583e0f.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="contents">
+<a id="gacbce0af680bcfc0a5b989bcfc6583e0f" name="gacbce0af680bcfc0a5b989bcfc6583e0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacbce0af680bcfc0a5b989bcfc6583e0f">&#9670;&#160;</a></span>TextureFormat</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#gacbce0af680bcfc0a5b989bcfc6583e0f">TextureFormat</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>テクスチャ・フォーマット </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="ggacbce0af680bcfc0a5b989bcfc6583e0fa88183b946cc5f0e8c96b2e66e1c74a7e" name="ggacbce0af680bcfc0a5b989bcfc6583e0fa88183b946cc5f0e8c96b2e66e1c74a7e"></a>Unknown&#160;</td><td class="fielddoc"><p>不明なフォーマット </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacbce0af680bcfc0a5b989bcfc6583e0fa724f24c7f863ff43cdb588d56c9d6492" name="ggacbce0af680bcfc0a5b989bcfc6583e0fa724f24c7f863ff43cdb588d56c9d6492"></a>/home/runner/work/AmuseEngine/AmuseEngine/Engine/Source/Runtime/RHI/Public/Amuse/RHI/Types/TextureFormat.h&#160;</td><td class="fielddoc"><dl class="section author"><dt>著者</dt><dd>Gajumaru </dd></dl>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacbce0af680bcfc0a5b989bcfc6583e0fa9c38ebb7384dada637be8899efa68e6f" name="ggacbce0af680bcfc0a5b989bcfc6583e0fa9c38ebb7384dada637be8899efa68e6f"></a>SDR&#160;</td><td class="fielddoc"><p>SDR (プラットフォームによって異なる R8G8B8A8など) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacbce0af680bcfc0a5b989bcfc6583e0fa6cad826248cd3f4e93da71e7b49928e3" name="ggacbce0af680bcfc0a5b989bcfc6583e0fa6cad826248cd3f4e93da71e7b49928e3"></a>HDR&#160;</td><td class="fielddoc"><p>HDR (プラットフォームによって異なる R16G16B16A16など) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacbce0af680bcfc0a5b989bcfc6583e0fad9e8e4a9228ed56eceb29f0a1223b02b" name="ggacbce0af680bcfc0a5b989bcfc6583e0fad9e8e4a9228ed56eceb29f0a1223b02b"></a>RGBA32&#160;</td><td class="fielddoc"><p>RGBA(32bit) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacbce0af680bcfc0a5b989bcfc6583e0fa50989efe15b375dce8ba3a5714fe2543" name="ggacbce0af680bcfc0a5b989bcfc6583e0fa50989efe15b375dce8ba3a5714fe2543"></a>RGBA16&#160;</td><td class="fielddoc"><p>RGBA(16bit) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacbce0af680bcfc0a5b989bcfc6583e0fab4b279046a02077466fa26cabb00c642" name="ggacbce0af680bcfc0a5b989bcfc6583e0fab4b279046a02077466fa26cabb00c642"></a>RGBA8&#160;</td><td class="fielddoc"><p>RGBA(8bit) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacbce0af680bcfc0a5b989bcfc6583e0face70a5db6685e6d210c3f905a8fa7d4c" name="ggacbce0af680bcfc0a5b989bcfc6583e0face70a5db6685e6d210c3f905a8fa7d4c"></a>RGB32&#160;</td><td class="fielddoc"><p>RGB(32bit) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacbce0af680bcfc0a5b989bcfc6583e0fa165c6379d01617e12de274a3952efa63" name="ggacbce0af680bcfc0a5b989bcfc6583e0fa165c6379d01617e12de274a3952efa63"></a>RGB8&#160;</td><td class="fielddoc"><p>RGB(8bit) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacbce0af680bcfc0a5b989bcfc6583e0faa8725115efc714421823b7397f9c130c" name="ggacbce0af680bcfc0a5b989bcfc6583e0faa8725115efc714421823b7397f9c130c"></a>RG32&#160;</td><td class="fielddoc"><p>RG(32bit) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacbce0af680bcfc0a5b989bcfc6583e0fa2b66caa416f0a28686ade3fc30ab223a" name="ggacbce0af680bcfc0a5b989bcfc6583e0fa2b66caa416f0a28686ade3fc30ab223a"></a>RG16&#160;</td><td class="fielddoc"><p>RG(16bit) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacbce0af680bcfc0a5b989bcfc6583e0fa0367a93b9e3e7aa2fbe9802d80298e46" name="ggacbce0af680bcfc0a5b989bcfc6583e0fa0367a93b9e3e7aa2fbe9802d80298e46"></a>RG8&#160;</td><td class="fielddoc"><p>RG(8bit) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacbce0af680bcfc0a5b989bcfc6583e0fa1b5c31a494189e0415d5623f8b92a419" name="ggacbce0af680bcfc0a5b989bcfc6583e0fa1b5c31a494189e0415d5623f8b92a419"></a>R32&#160;</td><td class="fielddoc"><p>R(32bit) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacbce0af680bcfc0a5b989bcfc6583e0fa9a486e1a3c543c7c58e1cc8086dc4239" name="ggacbce0af680bcfc0a5b989bcfc6583e0fa9a486e1a3c543c7c58e1cc8086dc4239"></a>R16&#160;</td><td class="fielddoc"><p>R(16bit) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacbce0af680bcfc0a5b989bcfc6583e0facfff813d86d447fa2a9c858650ebbb90" name="ggacbce0af680bcfc0a5b989bcfc6583e0facfff813d86d447fa2a9c858650ebbb90"></a>R8&#160;</td><td class="fielddoc"><p>R(8bit) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacbce0af680bcfc0a5b989bcfc6583e0fa88ec7b741e9c3ccac7b61b1301ba11e8" name="ggacbce0af680bcfc0a5b989bcfc6583e0fa88ec7b741e9c3ccac7b61b1301ba11e8"></a>BC1&#160;</td><td class="fielddoc"><p>2値アルファ(DXT1) <br  />
+ 圧縮率1/6 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacbce0af680bcfc0a5b989bcfc6583e0fa4d2bc7c468d854a7046ae1ca6b7cf64e" name="ggacbce0af680bcfc0a5b989bcfc6583e0fa4d2bc7c468d854a7046ae1ca6b7cf64e"></a>BC2&#160;</td><td class="fielddoc"><p>16階調アルファ(DXT2/DXT3) <br  />
+ 圧縮率1/4 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacbce0af680bcfc0a5b989bcfc6583e0faa9e959126c7c9b4230b56975a1ea015d" name="ggacbce0af680bcfc0a5b989bcfc6583e0faa9e959126c7c9b4230b56975a1ea015d"></a>BC3&#160;</td><td class="fielddoc"><p>多階調アルファ(DXT4/DXT5) <br  />
+ 圧縮率1/4 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacbce0af680bcfc0a5b989bcfc6583e0fae64cdc788598d5cea29e5c14ce1fc381" name="ggacbce0af680bcfc0a5b989bcfc6583e0fae64cdc788598d5cea29e5c14ce1fc381"></a>BC4&#160;</td><td class="fielddoc"><p>1成分(ATI1N) <br  />
+ 圧縮率1/2 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacbce0af680bcfc0a5b989bcfc6583e0face789f624a22f7c5e6baafe4f4fe9e4d" name="ggacbce0af680bcfc0a5b989bcfc6583e0face789f624a22f7c5e6baafe4f4fe9e4d"></a>BC5&#160;</td><td class="fielddoc"><p>2成分(ATI2N) <br  />
+ 圧縮率1/2 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacbce0af680bcfc0a5b989bcfc6583e0faaad676c687f275f58d8aad95bf9b1b94" name="ggacbce0af680bcfc0a5b989bcfc6583e0faaad676c687f275f58d8aad95bf9b1b94"></a>BC6H&#160;</td><td class="fielddoc"><p>HDR <br  />
+ 圧縮率1/6 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacbce0af680bcfc0a5b989bcfc6583e0faaa51ef981f910b0ec9ed8b82c65be593" name="ggacbce0af680bcfc0a5b989bcfc6583e0faaa51ef981f910b0ec9ed8b82c65be593"></a>BC7&#160;</td><td class="fielddoc"><p>BPTC <br  />
+ 圧縮率1/4 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacbce0af680bcfc0a5b989bcfc6583e0fae5a76309919d3c679c642c13125eb930" name="ggacbce0af680bcfc0a5b989bcfc6583e0fae5a76309919d3c679c642c13125eb930"></a>RGBA8_SRGB&#160;</td><td class="fielddoc"><p>RGBA(8bit) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacbce0af680bcfc0a5b989bcfc6583e0fa8728d460624388e7fcd0b5ea21b7e996" name="ggacbce0af680bcfc0a5b989bcfc6583e0fa8728d460624388e7fcd0b5ea21b7e996"></a>BC1_SRGB&#160;</td><td class="fielddoc"><p>2値アルファ(DXT1) <br  />
+ 圧縮率1/6 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacbce0af680bcfc0a5b989bcfc6583e0fad8823158bc0323e65b353b99dbec42c8" name="ggacbce0af680bcfc0a5b989bcfc6583e0fad8823158bc0323e65b353b99dbec42c8"></a>BC2_SRGB&#160;</td><td class="fielddoc"><p>16階調アルファ(DXT2/DXT3) <br  />
+ 圧縮率1/4 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacbce0af680bcfc0a5b989bcfc6583e0fa02bf65916f20a9561b709107c60cccf2" name="ggacbce0af680bcfc0a5b989bcfc6583e0fa02bf65916f20a9561b709107c60cccf2"></a>BC3_SRGB&#160;</td><td class="fielddoc"><p>多階調アルファ(DXT4/DXT5) <br  />
+ 圧縮率1/4 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacbce0af680bcfc0a5b989bcfc6583e0fa1f2d0087f03ce3d88e442258ccd7c898" name="ggacbce0af680bcfc0a5b989bcfc6583e0fa1f2d0087f03ce3d88e442258ccd7c898"></a>BC7_SRGB&#160;</td><td class="fielddoc"><p>BPTC <br  />
+ 圧縮率1/4 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacbce0af680bcfc0a5b989bcfc6583e0fa724f24c7f863ff43cdb588d56c9d6492" name="ggacbce0af680bcfc0a5b989bcfc6583e0fa724f24c7f863ff43cdb588d56c9d6492"></a>/home/runner/work/AmuseEngine/AmuseEngine/Engine/Source/Runtime/RHI/Public/Amuse/RHI/Types/TextureFormat.h&#160;</td><td class="fielddoc"><dl class="section author"><dt>著者</dt><dd>Gajumaru </dd></dl>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacbce0af680bcfc0a5b989bcfc6583e0faf64446518b4b850a4b2d6624ecff5791" name="ggacbce0af680bcfc0a5b989bcfc6583e0faf64446518b4b850a4b2d6624ecff5791"></a>D32S8&#160;</td><td class="fielddoc"><p>Depth(32bit) Stencil(8bit) Unused(24bit) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacbce0af680bcfc0a5b989bcfc6583e0faa6b2eecc4252564f599b9a979e4e0602" name="ggacbce0af680bcfc0a5b989bcfc6583e0faa6b2eecc4252564f599b9a979e4e0602"></a>D32&#160;</td><td class="fielddoc"><p>Depth(32bit) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacbce0af680bcfc0a5b989bcfc6583e0fa2468f278a5fb00d246360a43b4c39f31" name="ggacbce0af680bcfc0a5b989bcfc6583e0fa2468f278a5fb00d246360a43b4c39f31"></a>D24S8&#160;</td><td class="fielddoc"><p>Depth(24bit) Stencil(8bit) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacbce0af680bcfc0a5b989bcfc6583e0fa6fd9ec81643ee5a57f85a71951bfe13d" name="ggacbce0af680bcfc0a5b989bcfc6583e0fa6fd9ec81643ee5a57f85a71951bfe13d"></a>D16&#160;</td><td class="fielddoc"><p>Depth(16bit) </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../d9/de0/group___amuse_r_h_i.html">RHI</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['log_0',['Log',['../d9/d70/_log.html',1,'Core']]]
+  ['keyboard_0',['Keyboard',['../d7/d90/_keyboard.html',1,'Input']]]
 ];

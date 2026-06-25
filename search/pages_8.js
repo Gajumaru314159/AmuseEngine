@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['platform_0',['Platform',['../d5/d75/_platform.html',1,'index']]]
+  ['mouse_0',['Mouse',['../d6/d8e/_mouse.html',1,'Input']]]
 ];

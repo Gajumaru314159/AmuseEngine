@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mouse_0',['Mouse',['../d6/d8e/_mouse.html',1,'Input']]]
+  ['log_0',['Log',['../d9/d70/_log.html',1,'Core']]]
 ];

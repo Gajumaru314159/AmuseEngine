@@ -4,13 +4,13 @@ var group___amuse_r_h_i =
       [ "CopyFunc", "d9/dd4/class_amuse_1_1_buffer.html#a65e7075d90348cb184dab3ca2c1201bf", null ],
       [ "getDesc", "d9/dd4/class_amuse_1_1_buffer.html#aba3c0714d1fd91355a8baf7de22ac506", null ],
       [ "getHandle", "d9/dd4/class_amuse_1_1_buffer.html#a77a9f94b9be74a6f0b01628690f7a01b", null ],
-      [ "map", "d9/dd4/class_amuse_1_1_buffer.html#a88b1bc4cc87a8f4e39ddb0c360ca3a6a", null ],
+      [ "map", "d9/dd4/class_amuse_1_1_buffer_a88b1bc4cc87a8f4e39ddb0c360ca3a6a.html#a88b1bc4cc87a8f4e39ddb0c360ca3a6a", null ],
       [ "unmap", "d9/dd4/class_amuse_1_1_buffer.html#a21164b8d700d97aa462e75e314048f46", null ],
-      [ "update", "d9/dd4/class_amuse_1_1_buffer.html#a4c33d198f66f1bf0848eed0f6787ea96", null ],
-      [ "update", "d9/dd4/class_amuse_1_1_buffer.html#a8ea9bed6446f995029257c015d429ba2", null ],
-      [ "updateDirect", "d9/dd4/class_amuse_1_1_buffer.html#af370bbe7400250acf66202e948f604ce", null ],
+      [ "update", "d9/dd4/class_amuse_1_1_buffer_a4c33d198f66f1bf0848eed0f6787ea96.html#a4c33d198f66f1bf0848eed0f6787ea96", null ],
+      [ "update", "d9/dd4/class_amuse_1_1_buffer_a8ea9bed6446f995029257c015d429ba2.html#a8ea9bed6446f995029257c015d429ba2", null ],
+      [ "updateDirect", "d9/dd4/class_amuse_1_1_buffer_af370bbe7400250acf66202e948f604ce.html#af370bbe7400250acf66202e948f604ce", null ],
       [ "updateDirect", "d9/dd4/class_amuse_1_1_buffer.html#a03ff208e0472a73661c34126982d966d", null ],
-      [ "updateDirect", "d9/dd4/class_amuse_1_1_buffer.html#aaa2be52ef2fb310d3785fae7abd7f41c", null ],
+      [ "updateDirect", "d9/dd4/class_amuse_1_1_buffer_aaa2be52ef2fb310d3785fae7abd7f41c.html#aaa2be52ef2fb310d3785fae7abd7f41c", null ],
       [ "writeDispatchParam", "d9/dd4/class_amuse_1_1_buffer.html#a4aa45bd249995ffeb91ccc39e276c7c6", null ],
       [ "writeDispatchParams", "d9/dd4/class_amuse_1_1_buffer.html#af3a42e01c6c2467751a1706f64d2f4c3", null ],
       [ "writeDrawIndexedParam", "d9/dd4/class_amuse_1_1_buffer.html#a58eea54162e5d407786f7bd657c03c28", null ],
@@ -133,7 +133,7 @@ var group___amuse_r_h_i =
     [ "GraphicObject", "d8/d33/class_amuse_1_1_graphic_object.html", [
       [ "~GraphicObject", "d8/d33/class_amuse_1_1_graphic_object.html#ac185ad5a26ad834cadc0a2a256a43b59", null ],
       [ "GraphicObject", "d8/d33/class_amuse_1_1_graphic_object.html#a88d0c0fe599829a09853497dd7c746ae", null ],
-      [ "getName", "d8/d33/class_amuse_1_1_graphic_object.html#a58342f06ea505c0672c2fa276fd2817f", null ],
+      [ "getName", "d8/d33/class_amuse_1_1_graphic_object_a58342f06ea505c0672c2fa276fd2817f.html#a58342f06ea505c0672c2fa276fd2817f", null ],
       [ "manage", "d8/d33/class_amuse_1_1_graphic_object.html#a1995b7067b60bfccab10fa91c0973d26", null ]
     ] ],
     [ "PipelineState", "da/d67/class_amuse_1_1_pipeline_state.html", null ],
@@ -145,55 +145,55 @@ var group___amuse_r_h_i =
     [ "Device", "d6/d3b/class_amuse_1_1_device.html", [
       [ "Device", "d6/d3b/class_amuse_1_1_device.html#aa901dbac2124b1e7617cea82d76a212c", null ],
       [ "~Device", "d6/d3b/class_amuse_1_1_device.html#ab37d701037876ecd6fac76351961caa2", null ],
-      [ "compileShader", "d6/d3b/class_amuse_1_1_device.html#ae0cc5844fe244e8d896d65b7283791cf", null ],
-      [ "createBuffer", "d6/d3b/class_amuse_1_1_device.html#a7c6b039760b52e4b0be5ae8d892aa9b0", null ],
-      [ "createBuffer", "d6/d3b/class_amuse_1_1_device.html#aa9d30466ee8362dbe3517606f9cf4964", null ],
-      [ "createCommandList", "d6/d3b/class_amuse_1_1_device.html#a767635a79df1626a96cd9cb586ba8aa3", null ],
-      [ "createComputePipelineState", "d6/d3b/class_amuse_1_1_device.html#a04dc9118c879f51ca86a5259eb841a8d", null ],
-      [ "createDescriptorLayout", "d6/d3b/class_amuse_1_1_device.html#a6f16a148b0661c648de6c8f1cbe3bf2c", null ],
-      [ "createDescriptorTable", "d6/d3b/class_amuse_1_1_device.html#a2af118c1df7f65d720ab831d240ca8dd", null ],
-      [ "createEventQuery", "d6/d3b/class_amuse_1_1_device.html#ae13e138dc7e7916e753fb05dc408d0d5", null ],
-      [ "createFence", "d6/d3b/class_amuse_1_1_device.html#afa0c34ff3873d58e635f9e8be37aa40a", null ],
-      [ "createGraphicFileEvent", "d6/d3b/class_amuse_1_1_device.html#a6e9abd1a99833fdd999848f955d3784d", null ],
-      [ "createGraphicFileHandle", "d6/d3b/class_amuse_1_1_device.html#ad169da9835698cec3904f179657921e4", null ],
-      [ "createGraphicFileQueue", "d6/d3b/class_amuse_1_1_device.html#ac91405c803ae5373422a8de72e65547c", null ],
-      [ "createPipelineState", "d6/d3b/class_amuse_1_1_device.html#ac0a71b4d4672df6b6ae0dfda20360a50", null ],
-      [ "createRenderTexture", "d6/d3b/class_amuse_1_1_device.html#a688437ae37aec7a31bb381a4e19a63f2", null ],
-      [ "createRootSignature", "d6/d3b/class_amuse_1_1_device.html#a5f121e9eee7e190e970140fae80c0edd", null ],
-      [ "createSampler", "d6/d3b/class_amuse_1_1_device.html#a81db8adc99a5e2b91c9b6cc4fc6bbc48", null ],
-      [ "createSwapChain", "d6/d3b/class_amuse_1_1_device.html#a6e9507e49d60bda5b0548777b8f152eb", null ],
-      [ "createTexture", "d6/d3b/class_amuse_1_1_device.html#a19633a7fc2b4d31cd951b1a93ab3c5ae", null ],
-      [ "createTexture", "d6/d3b/class_amuse_1_1_device.html#a91713ab4ef2ea8a91094fd0d1f6b7f35", null ],
-      [ "createTexture", "d6/d3b/class_amuse_1_1_device.html#a293fd59be586bf77e7bed220c84ca74f", null ],
-      [ "createTexture", "d6/d3b/class_amuse_1_1_device.html#aecb80f5862179b67c42af6760fad88a6", null ],
-      [ "createTimerQuery", "d6/d3b/class_amuse_1_1_device.html#afabc131444f782c888f0f9aef6cc891e", null ],
-      [ "entryCommandList", "d6/d3b/class_amuse_1_1_device.html#aa38983c814c8fc57d574761c30b7cc76", null ],
-      [ "executeCommandLists", "d6/d3b/class_amuse_1_1_device.html#a06bd5f97672f70de986378ef33b3a5ac", null ],
-      [ "finalize", "d6/d3b/class_amuse_1_1_device.html#a32d626626eee0bc4ade146973f6abb1c", null ],
-      [ "generateGraphicFile", "d6/d3b/class_amuse_1_1_device.html#ab1c7ccbe422da4ae80c937bea44c8900", null ],
-      [ "getAPIName", "d6/d3b/class_amuse_1_1_device.html#a62416e57e3dd77b1303f2c6020512f1a", null ],
+      [ "compileShader", "d6/d3b/class_amuse_1_1_device_ae0cc5844fe244e8d896d65b7283791cf.html#ae0cc5844fe244e8d896d65b7283791cf", null ],
+      [ "createBuffer", "d6/d3b/class_amuse_1_1_device_a7c6b039760b52e4b0be5ae8d892aa9b0.html#a7c6b039760b52e4b0be5ae8d892aa9b0", null ],
+      [ "createBuffer", "d6/d3b/class_amuse_1_1_device_aa9d30466ee8362dbe3517606f9cf4964.html#aa9d30466ee8362dbe3517606f9cf4964", null ],
+      [ "createCommandList", "d6/d3b/class_amuse_1_1_device_a767635a79df1626a96cd9cb586ba8aa3.html#a767635a79df1626a96cd9cb586ba8aa3", null ],
+      [ "createComputePipelineState", "d6/d3b/class_amuse_1_1_device_a04dc9118c879f51ca86a5259eb841a8d.html#a04dc9118c879f51ca86a5259eb841a8d", null ],
+      [ "createDescriptorLayout", "d6/d3b/class_amuse_1_1_device_a6f16a148b0661c648de6c8f1cbe3bf2c.html#a6f16a148b0661c648de6c8f1cbe3bf2c", null ],
+      [ "createDescriptorTable", "d6/d3b/class_amuse_1_1_device_a2af118c1df7f65d720ab831d240ca8dd.html#a2af118c1df7f65d720ab831d240ca8dd", null ],
+      [ "createEventQuery", "d6/d3b/class_amuse_1_1_device_ae13e138dc7e7916e753fb05dc408d0d5.html#ae13e138dc7e7916e753fb05dc408d0d5", null ],
+      [ "createFence", "d6/d3b/class_amuse_1_1_device_afa0c34ff3873d58e635f9e8be37aa40a.html#afa0c34ff3873d58e635f9e8be37aa40a", null ],
+      [ "createGraphicFileEvent", "d6/d3b/class_amuse_1_1_device_a6e9abd1a99833fdd999848f955d3784d.html#a6e9abd1a99833fdd999848f955d3784d", null ],
+      [ "createGraphicFileHandle", "d6/d3b/class_amuse_1_1_device_ad169da9835698cec3904f179657921e4.html#ad169da9835698cec3904f179657921e4", null ],
+      [ "createGraphicFileQueue", "d6/d3b/class_amuse_1_1_device_ac91405c803ae5373422a8de72e65547c.html#ac91405c803ae5373422a8de72e65547c", null ],
+      [ "createPipelineState", "d6/d3b/class_amuse_1_1_device_ac0a71b4d4672df6b6ae0dfda20360a50.html#ac0a71b4d4672df6b6ae0dfda20360a50", null ],
+      [ "createRenderTexture", "d6/d3b/class_amuse_1_1_device_a688437ae37aec7a31bb381a4e19a63f2.html#a688437ae37aec7a31bb381a4e19a63f2", null ],
+      [ "createRootSignature", "d6/d3b/class_amuse_1_1_device_a5f121e9eee7e190e970140fae80c0edd.html#a5f121e9eee7e190e970140fae80c0edd", null ],
+      [ "createSampler", "d6/d3b/class_amuse_1_1_device_a81db8adc99a5e2b91c9b6cc4fc6bbc48.html#a81db8adc99a5e2b91c9b6cc4fc6bbc48", null ],
+      [ "createSwapChain", "d6/d3b/class_amuse_1_1_device_a6e9507e49d60bda5b0548777b8f152eb.html#a6e9507e49d60bda5b0548777b8f152eb", null ],
+      [ "createTexture", "d6/d3b/class_amuse_1_1_device_a19633a7fc2b4d31cd951b1a93ab3c5ae.html#a19633a7fc2b4d31cd951b1a93ab3c5ae", null ],
+      [ "createTexture", "d6/d3b/class_amuse_1_1_device_a91713ab4ef2ea8a91094fd0d1f6b7f35.html#a91713ab4ef2ea8a91094fd0d1f6b7f35", null ],
+      [ "createTexture", "d6/d3b/class_amuse_1_1_device_a293fd59be586bf77e7bed220c84ca74f.html#a293fd59be586bf77e7bed220c84ca74f", null ],
+      [ "createTexture", "d6/d3b/class_amuse_1_1_device_aecb80f5862179b67c42af6760fad88a6.html#aecb80f5862179b67c42af6760fad88a6", null ],
+      [ "createTimerQuery", "d6/d3b/class_amuse_1_1_device_afabc131444f782c888f0f9aef6cc891e.html#afabc131444f782c888f0f9aef6cc891e", null ],
+      [ "entryCommandList", "d6/d3b/class_amuse_1_1_device_aa38983c814c8fc57d574761c30b7cc76.html#aa38983c814c8fc57d574761c30b7cc76", null ],
+      [ "executeCommandLists", "d6/d3b/class_amuse_1_1_device_a06bd5f97672f70de986378ef33b3a5ac.html#a06bd5f97672f70de986378ef33b3a5ac", null ],
+      [ "finalize", "d6/d3b/class_amuse_1_1_device_a32d626626eee0bc4ade146973f6abb1c.html#a32d626626eee0bc4ade146973f6abb1c", null ],
+      [ "generateGraphicFile", "d6/d3b/class_amuse_1_1_device_ab1c7ccbe422da4ae80c937bea44c8900.html#ab1c7ccbe422da4ae80c937bea44c8900", null ],
+      [ "getAPIName", "d6/d3b/class_amuse_1_1_device_a62416e57e3dd77b1303f2c6020512f1a.html#a62416e57e3dd77b1303f2c6020512f1a", null ],
       [ "getConfig", "d6/d3b/class_amuse_1_1_device.html#ac41b17928e2ad60c140cf3959966e11a", null ],
       [ "getDispatchIndirectArgumentSize", "d6/d3b/class_amuse_1_1_device.html#a0840e89ab8923e97713444b9ea5236c8", null ],
       [ "getDrawIndexedIndirectArgumentSize", "d6/d3b/class_amuse_1_1_device.html#acbbdd4305b0f4ab5c7ec7d43640dd231", null ],
       [ "getDrawIndirectArgumentSize", "d6/d3b/class_amuse_1_1_device.html#ab3d4def3e6507970c43fdf1554bcb617", null ],
-      [ "getFeatures", "d6/d3b/class_amuse_1_1_device.html#a82493ceeee99e35978a0451d93ad772e", null ],
-      [ "getTimerQueryTime", "d6/d3b/class_amuse_1_1_device.html#a9cc77f816ddd089bb066888674a5c800", null ],
-      [ "getVideoCards", "d6/d3b/class_amuse_1_1_device.html#a797539824e7431ba554549c751f5867c", null ],
-      [ "isValid", "d6/d3b/class_amuse_1_1_device.html#a39663c885a33e68077c40e35140c205f", null ],
-      [ "loadShader", "d6/d3b/class_amuse_1_1_device.html#a8b2f2bc91a17c01be582cc1f06a7ca33", null ],
+      [ "getFeatures", "d6/d3b/class_amuse_1_1_device_a82493ceeee99e35978a0451d93ad772e.html#a82493ceeee99e35978a0451d93ad772e", null ],
+      [ "getTimerQueryTime", "d6/d3b/class_amuse_1_1_device_a9cc77f816ddd089bb066888674a5c800.html#a9cc77f816ddd089bb066888674a5c800", null ],
+      [ "getVideoCards", "d6/d3b/class_amuse_1_1_device_a797539824e7431ba554549c751f5867c.html#a797539824e7431ba554549c751f5867c", null ],
+      [ "isValid", "d6/d3b/class_amuse_1_1_device_a39663c885a33e68077c40e35140c205f.html#a39663c885a33e68077c40e35140c205f", null ],
+      [ "loadShader", "d6/d3b/class_amuse_1_1_device_a8b2f2bc91a17c01be582cc1f06a7ca33.html#a8b2f2bc91a17c01be582cc1f06a7ca33", null ],
       [ "mapBuffer", "d6/d3b/class_amuse_1_1_device.html#a11acb4fc1d0380bb3bb57f74fbeeedbc", null ],
-      [ "pollEventQuery", "d6/d3b/class_amuse_1_1_device.html#ad45925321754cfecb0c8bb489a1122ea", null ],
-      [ "pollTimerQuery", "d6/d3b/class_amuse_1_1_device.html#a62c74f868fa69de6f976c3a7c54a6ce8", null ],
-      [ "prepareGraphicFile", "d6/d3b/class_amuse_1_1_device.html#acb20e7b4b459994732d98572a3557bb2", null ],
-      [ "queueWait", "d6/d3b/class_amuse_1_1_device.html#a175931ac58ef8fae9b9655b6a9456df2", null ],
-      [ "supports", "d6/d3b/class_amuse_1_1_device.html#a043c6c472ae1b8e65643405d29798097", null ],
-      [ "supports", "d6/d3b/class_amuse_1_1_device.html#a64bceffe0e0e3473f6b28c57dcbfb8c1", null ],
-      [ "supports", "d6/d3b/class_amuse_1_1_device.html#a465545aff6c792112582da2f59236f88", null ],
-      [ "supportsForRenderTexture", "d6/d3b/class_amuse_1_1_device.html#a191c0489a66ec934735130226e7a576d", null ],
+      [ "pollEventQuery", "d6/d3b/class_amuse_1_1_device_ad45925321754cfecb0c8bb489a1122ea.html#ad45925321754cfecb0c8bb489a1122ea", null ],
+      [ "pollTimerQuery", "d6/d3b/class_amuse_1_1_device_a62c74f868fa69de6f976c3a7c54a6ce8.html#a62c74f868fa69de6f976c3a7c54a6ce8", null ],
+      [ "prepareGraphicFile", "d6/d3b/class_amuse_1_1_device_acb20e7b4b459994732d98572a3557bb2.html#acb20e7b4b459994732d98572a3557bb2", null ],
+      [ "queueWait", "d6/d3b/class_amuse_1_1_device_a175931ac58ef8fae9b9655b6a9456df2.html#a175931ac58ef8fae9b9655b6a9456df2", null ],
+      [ "supports", "d6/d3b/class_amuse_1_1_device_a043c6c472ae1b8e65643405d29798097.html#a043c6c472ae1b8e65643405d29798097", null ],
+      [ "supports", "d6/d3b/class_amuse_1_1_device_a64bceffe0e0e3473f6b28c57dcbfb8c1.html#a64bceffe0e0e3473f6b28c57dcbfb8c1", null ],
+      [ "supports", "d6/d3b/class_amuse_1_1_device_a465545aff6c792112582da2f59236f88.html#a465545aff6c792112582da2f59236f88", null ],
+      [ "supportsForRenderTexture", "d6/d3b/class_amuse_1_1_device_a191c0489a66ec934735130226e7a576d.html#a191c0489a66ec934735130226e7a576d", null ],
       [ "unmapBuffer", "d6/d3b/class_amuse_1_1_device.html#afceae5710e0f067a7099b58cf06c3439", null ],
-      [ "update", "d6/d3b/class_amuse_1_1_device.html#acd36d7881ea8503d5c5824e7a5ad6c7e", null ],
-      [ "waitEventQuery", "d6/d3b/class_amuse_1_1_device.html#a40f1ca7c48baaba1a406a449eb0ab8c9", null ],
-      [ "waitForIdle", "d6/d3b/class_amuse_1_1_device.html#ab80f498e9e24726dda2a3d07eee6730b", null ]
+      [ "update", "d6/d3b/class_amuse_1_1_device_acd36d7881ea8503d5c5824e7a5ad6c7e.html#acd36d7881ea8503d5c5824e7a5ad6c7e", null ],
+      [ "waitEventQuery", "d6/d3b/class_amuse_1_1_device_a40f1ca7c48baaba1a406a449eb0ab8c9.html#a40f1ca7c48baaba1a406a449eb0ab8c9", null ],
+      [ "waitForIdle", "d6/d3b/class_amuse_1_1_device_ab80f498e9e24726dda2a3d07eee6730b.html#ab80f498e9e24726dda2a3d07eee6730b", null ]
     ] ],
     [ "RootSignature", "d9/d6b/class_amuse_1_1_root_signature.html", [
       [ "getDesc", "d9/d6b/class_amuse_1_1_root_signature.html#a075f3ffe92ddf86850bb37d065a7ca81", null ]
@@ -372,7 +372,7 @@ var group___amuse_r_h_i =
     ] ],
     [ "DepthStencilDesc", "d2/d66/struct_amuse_1_1_depth_stencil_desc.html", [
       [ "depth", "d2/d66/struct_amuse_1_1_depth_stencil_desc.html#a541182fd8342f52be5524c17893e4f5f", null ],
-      [ "enable", "d2/d66/struct_amuse_1_1_depth_stencil_desc.html#ac842b6c1dcb3b1f11b611620199dc55c", null ],
+      [ "enable", "d2/d66/struct_amuse_1_1_depth_stencil_desc_ac842b6c1dcb3b1f11b611620199dc55c.html#ac842b6c1dcb3b1f11b611620199dc55c", null ],
       [ "func", "d2/d66/struct_amuse_1_1_depth_stencil_desc.html#a468a1aeed426d0c17f6f4ff357330333", null ],
       [ "read_mask", "d2/d66/struct_amuse_1_1_depth_stencil_desc.html#ae80f87925166447b5afdc7016e3db190", null ],
       [ "stencil", "d2/d66/struct_amuse_1_1_depth_stencil_desc.html#abbbdf99b94dd7fd301990207901b153c", null ],
@@ -588,253 +588,253 @@ var group___amuse_r_h_i =
     ] ],
     [ "VertexLayout", "dd/d6b/class_amuse_1_1_vertex_layout.html", [
       [ "getDesc", "dd/d6b/class_amuse_1_1_vertex_layout.html#ae39729bb7d3bf34eb6be5d9d1654adee", null ],
-      [ "getName", "dd/d6b/class_amuse_1_1_vertex_layout.html#a0c14089891c3b991e99b46f36cf1d6b0", null ]
+      [ "getName", "dd/d6b/class_amuse_1_1_vertex_layout_a0c14089891c3b991e99b46f36cf1d6b0.html#a0c14089891c3b991e99b46f36cf1d6b0", null ]
     ] ],
     [ "Anisotropy", "d9/de0/group___amuse_r_h_i.html#ga0a3454e4f16bbf4cff3ac7ee74b41c7a", null ],
-    [ "BindingType", "d9/de0/group___amuse_r_h_i.html#ga5d7ca7a4ec8722c653cf38a917636d65", null ],
-    [ "BlendFactor", "d9/de0/group___amuse_r_h_i.html#ga733437ea33e854c7a6d54a03033613b9", [
-      [ "BlendFactor::Zero", "d9/de0/group___amuse_r_h_i.html#gga733437ea33e854c7a6d54a03033613b9ad7ed4ee1df437474d005188535f74875", null ],
-      [ "BlendFactor::One", "d9/de0/group___amuse_r_h_i.html#gga733437ea33e854c7a6d54a03033613b9a06c2cea18679d64399783748fa367bdd", null ],
-      [ "BlendFactor::SrcColor", "d9/de0/group___amuse_r_h_i.html#gga733437ea33e854c7a6d54a03033613b9a2ad714e29d37896d79187312086bc6fe", null ],
-      [ "BlendFactor::OneMinusSrcColor", "d9/de0/group___amuse_r_h_i.html#gga733437ea33e854c7a6d54a03033613b9a09d3240b4e2481b1a729da24e9bfddf7", null ],
-      [ "BlendFactor::DstColor", "d9/de0/group___amuse_r_h_i.html#gga733437ea33e854c7a6d54a03033613b9afaedf511c99a5461048fd6a3b73da26c", null ],
-      [ "BlendFactor::OneMinusDstColor", "d9/de0/group___amuse_r_h_i.html#gga733437ea33e854c7a6d54a03033613b9a09f1a054ebd4d3850fd248bd2fa7b325", null ],
-      [ "BlendFactor::SrcAlpha", "d9/de0/group___amuse_r_h_i.html#gga733437ea33e854c7a6d54a03033613b9ad5c7b7f0102df3f7305c43f73fc3a498", null ],
-      [ "BlendFactor::OneMinusSrcAlpha", "d9/de0/group___amuse_r_h_i.html#gga733437ea33e854c7a6d54a03033613b9ac00a6016489cff63d50d489ce52254cc", null ],
-      [ "BlendFactor::DstAlpha", "d9/de0/group___amuse_r_h_i.html#gga733437ea33e854c7a6d54a03033613b9af72dbe2436b38a39e5927ed644e6818b", null ],
-      [ "BlendFactor::OneMinusDstAlpha", "d9/de0/group___amuse_r_h_i.html#gga733437ea33e854c7a6d54a03033613b9a4132e4b87a8d461be2c6ee8fc620cfb2", null ]
+    [ "BindingType", "d9/de0/group___amuse_r_h_i_ga5d7ca7a4ec8722c653cf38a917636d65.html#ga5d7ca7a4ec8722c653cf38a917636d65", null ],
+    [ "BlendFactor", "d9/de0/group___amuse_r_h_i_ga733437ea33e854c7a6d54a03033613b9.html#ga733437ea33e854c7a6d54a03033613b9", [
+      [ "BlendFactor::Zero", "d9/de0/group___amuse_r_h_i_ga733437ea33e854c7a6d54a03033613b9.html#gga733437ea33e854c7a6d54a03033613b9ad7ed4ee1df437474d005188535f74875", null ],
+      [ "BlendFactor::One", "d9/de0/group___amuse_r_h_i_ga733437ea33e854c7a6d54a03033613b9.html#gga733437ea33e854c7a6d54a03033613b9a06c2cea18679d64399783748fa367bdd", null ],
+      [ "BlendFactor::SrcColor", "d9/de0/group___amuse_r_h_i_ga733437ea33e854c7a6d54a03033613b9.html#gga733437ea33e854c7a6d54a03033613b9a2ad714e29d37896d79187312086bc6fe", null ],
+      [ "BlendFactor::OneMinusSrcColor", "d9/de0/group___amuse_r_h_i_ga733437ea33e854c7a6d54a03033613b9.html#gga733437ea33e854c7a6d54a03033613b9a09d3240b4e2481b1a729da24e9bfddf7", null ],
+      [ "BlendFactor::DstColor", "d9/de0/group___amuse_r_h_i_ga733437ea33e854c7a6d54a03033613b9.html#gga733437ea33e854c7a6d54a03033613b9afaedf511c99a5461048fd6a3b73da26c", null ],
+      [ "BlendFactor::OneMinusDstColor", "d9/de0/group___amuse_r_h_i_ga733437ea33e854c7a6d54a03033613b9.html#gga733437ea33e854c7a6d54a03033613b9a09f1a054ebd4d3850fd248bd2fa7b325", null ],
+      [ "BlendFactor::SrcAlpha", "d9/de0/group___amuse_r_h_i_ga733437ea33e854c7a6d54a03033613b9.html#gga733437ea33e854c7a6d54a03033613b9ad5c7b7f0102df3f7305c43f73fc3a498", null ],
+      [ "BlendFactor::OneMinusSrcAlpha", "d9/de0/group___amuse_r_h_i_ga733437ea33e854c7a6d54a03033613b9.html#gga733437ea33e854c7a6d54a03033613b9ac00a6016489cff63d50d489ce52254cc", null ],
+      [ "BlendFactor::DstAlpha", "d9/de0/group___amuse_r_h_i_ga733437ea33e854c7a6d54a03033613b9.html#gga733437ea33e854c7a6d54a03033613b9af72dbe2436b38a39e5927ed644e6818b", null ],
+      [ "BlendFactor::OneMinusDstAlpha", "d9/de0/group___amuse_r_h_i_ga733437ea33e854c7a6d54a03033613b9.html#gga733437ea33e854c7a6d54a03033613b9a4132e4b87a8d461be2c6ee8fc620cfb2", null ]
     ] ],
-    [ "BlendOp", "d9/de0/group___amuse_r_h_i.html#ga95612ff840f246db9fef8894450be8a6", [
-      [ "BlendOp::Add", "d9/de0/group___amuse_r_h_i.html#gga95612ff840f246db9fef8894450be8a6aec211f7c20af43e742bf2570c3cb84f9", null ],
-      [ "BlendOp::Sub", "d9/de0/group___amuse_r_h_i.html#gga95612ff840f246db9fef8894450be8a6ae80155eceb940c89e2de63ad05868db2", null ],
-      [ "BlendOp::RevSub", "d9/de0/group___amuse_r_h_i.html#gga95612ff840f246db9fef8894450be8a6a49607b5cf02ffc310cff44ac80000e72", null ],
-      [ "BlendOp::Min", "d9/de0/group___amuse_r_h_i.html#gga95612ff840f246db9fef8894450be8a6a78d811e98514cd165dda532286610fd2", null ],
-      [ "BlendOp::Max", "d9/de0/group___amuse_r_h_i.html#gga95612ff840f246db9fef8894450be8a6a6a061313d22e51e0f25b7cd4dc065233", null ]
+    [ "BlendOp", "d9/de0/group___amuse_r_h_i_ga95612ff840f246db9fef8894450be8a6.html#ga95612ff840f246db9fef8894450be8a6", [
+      [ "BlendOp::Add", "d9/de0/group___amuse_r_h_i_ga95612ff840f246db9fef8894450be8a6.html#gga95612ff840f246db9fef8894450be8a6aec211f7c20af43e742bf2570c3cb84f9", null ],
+      [ "BlendOp::Sub", "d9/de0/group___amuse_r_h_i_ga95612ff840f246db9fef8894450be8a6.html#gga95612ff840f246db9fef8894450be8a6ae80155eceb940c89e2de63ad05868db2", null ],
+      [ "BlendOp::RevSub", "d9/de0/group___amuse_r_h_i_ga95612ff840f246db9fef8894450be8a6.html#gga95612ff840f246db9fef8894450be8a6a49607b5cf02ffc310cff44ac80000e72", null ],
+      [ "BlendOp::Min", "d9/de0/group___amuse_r_h_i_ga95612ff840f246db9fef8894450be8a6.html#gga95612ff840f246db9fef8894450be8a6a78d811e98514cd165dda532286610fd2", null ],
+      [ "BlendOp::Max", "d9/de0/group___amuse_r_h_i_ga95612ff840f246db9fef8894450be8a6.html#gga95612ff840f246db9fef8894450be8a6a6a061313d22e51e0f25b7cd4dc065233", null ]
     ] ],
-    [ "BufferFlag", "d9/de0/group___amuse_r_h_i.html#ga387022dde7b78e245f4cf3e9894e57d2", [
-      [ "BufferFlag::Vertex", "d9/de0/group___amuse_r_h_i.html#gga387022dde7b78e245f4cf3e9894e57d2ab22b929ba52471a02d18bb3a4e4472e6", null ],
-      [ "BufferFlag::Index", "d9/de0/group___amuse_r_h_i.html#gga387022dde7b78e245f4cf3e9894e57d2a88fa71f0a6e0dfedbb46d91cc0b37a50", null ],
-      [ "BufferFlag::Constant", "d9/de0/group___amuse_r_h_i.html#gga387022dde7b78e245f4cf3e9894e57d2acb17869fe51048b5a5c4c6106551a255", null ],
-      [ "BufferFlag::ShaderResource", "d9/de0/group___amuse_r_h_i.html#gga387022dde7b78e245f4cf3e9894e57d2ada4ef1bdf2d2fce1cfc6fd62870a44ef", null ],
-      [ "BufferFlag::UnorderedAccess", "d9/de0/group___amuse_r_h_i.html#gga387022dde7b78e245f4cf3e9894e57d2a11c4aac157309541bd3fc4735e727683", null ],
-      [ "BufferFlag::CopySource", "d9/de0/group___amuse_r_h_i.html#gga387022dde7b78e245f4cf3e9894e57d2aecadd2bfc4f324796b72c8d1e4511a9d", null ],
-      [ "BufferFlag::CopyDest", "d9/de0/group___amuse_r_h_i.html#gga387022dde7b78e245f4cf3e9894e57d2ac46da1ab89fbccdb37dc1847070acf06", null ],
-      [ "BufferFlag::IndirectArgument", "d9/de0/group___amuse_r_h_i.html#gga387022dde7b78e245f4cf3e9894e57d2a524d085ce6a6a41af0773e42b73aa99d", null ]
+    [ "BufferFlag", "d9/de0/group___amuse_r_h_i_ga387022dde7b78e245f4cf3e9894e57d2.html#ga387022dde7b78e245f4cf3e9894e57d2", [
+      [ "BufferFlag::Vertex", "d9/de0/group___amuse_r_h_i_ga387022dde7b78e245f4cf3e9894e57d2.html#gga387022dde7b78e245f4cf3e9894e57d2ab22b929ba52471a02d18bb3a4e4472e6", null ],
+      [ "BufferFlag::Index", "d9/de0/group___amuse_r_h_i_ga387022dde7b78e245f4cf3e9894e57d2.html#gga387022dde7b78e245f4cf3e9894e57d2a88fa71f0a6e0dfedbb46d91cc0b37a50", null ],
+      [ "BufferFlag::Constant", "d9/de0/group___amuse_r_h_i_ga387022dde7b78e245f4cf3e9894e57d2.html#gga387022dde7b78e245f4cf3e9894e57d2acb17869fe51048b5a5c4c6106551a255", null ],
+      [ "BufferFlag::ShaderResource", "d9/de0/group___amuse_r_h_i_ga387022dde7b78e245f4cf3e9894e57d2.html#gga387022dde7b78e245f4cf3e9894e57d2ada4ef1bdf2d2fce1cfc6fd62870a44ef", null ],
+      [ "BufferFlag::UnorderedAccess", "d9/de0/group___amuse_r_h_i_ga387022dde7b78e245f4cf3e9894e57d2.html#gga387022dde7b78e245f4cf3e9894e57d2a11c4aac157309541bd3fc4735e727683", null ],
+      [ "BufferFlag::CopySource", "d9/de0/group___amuse_r_h_i_ga387022dde7b78e245f4cf3e9894e57d2.html#gga387022dde7b78e245f4cf3e9894e57d2aecadd2bfc4f324796b72c8d1e4511a9d", null ],
+      [ "BufferFlag::CopyDest", "d9/de0/group___amuse_r_h_i_ga387022dde7b78e245f4cf3e9894e57d2.html#gga387022dde7b78e245f4cf3e9894e57d2ac46da1ab89fbccdb37dc1847070acf06", null ],
+      [ "BufferFlag::IndirectArgument", "d9/de0/group___amuse_r_h_i_ga387022dde7b78e245f4cf3e9894e57d2.html#gga387022dde7b78e245f4cf3e9894e57d2a524d085ce6a6a41af0773e42b73aa99d", null ]
     ] ],
-    [ "BufferState", "d9/de0/group___amuse_r_h_i.html#ga83ecb2e2f53d94c9339969a2968fd174", [
-      [ "BufferState::Unknown", "d9/de0/group___amuse_r_h_i.html#gga83ecb2e2f53d94c9339969a2968fd174a88183b946cc5f0e8c96b2e66e1c74a7e", null ],
-      [ "BufferState::Vertex", "d9/de0/group___amuse_r_h_i.html#gga83ecb2e2f53d94c9339969a2968fd174ab22b929ba52471a02d18bb3a4e4472e6", null ],
-      [ "BufferState::Index", "d9/de0/group___amuse_r_h_i.html#gga83ecb2e2f53d94c9339969a2968fd174a88fa71f0a6e0dfedbb46d91cc0b37a50", null ],
-      [ "BufferState::Constant", "d9/de0/group___amuse_r_h_i.html#gga83ecb2e2f53d94c9339969a2968fd174acb17869fe51048b5a5c4c6106551a255", null ],
-      [ "BufferState::ShaderResource", "d9/de0/group___amuse_r_h_i.html#gga83ecb2e2f53d94c9339969a2968fd174ada4ef1bdf2d2fce1cfc6fd62870a44ef", null ],
-      [ "BufferState::UnorderedAccess", "d9/de0/group___amuse_r_h_i.html#gga83ecb2e2f53d94c9339969a2968fd174a11c4aac157309541bd3fc4735e727683", null ],
-      [ "BufferState::IndirectArgument", "d9/de0/group___amuse_r_h_i.html#gga83ecb2e2f53d94c9339969a2968fd174a524d085ce6a6a41af0773e42b73aa99d", null ],
-      [ "BufferState::CopySource", "d9/de0/group___amuse_r_h_i.html#gga83ecb2e2f53d94c9339969a2968fd174aecadd2bfc4f324796b72c8d1e4511a9d", null ],
-      [ "BufferState::CopyDest", "d9/de0/group___amuse_r_h_i.html#gga83ecb2e2f53d94c9339969a2968fd174ac46da1ab89fbccdb37dc1847070acf06", null ]
+    [ "BufferState", "d9/de0/group___amuse_r_h_i_ga83ecb2e2f53d94c9339969a2968fd174.html#ga83ecb2e2f53d94c9339969a2968fd174", [
+      [ "BufferState::Unknown", "d9/de0/group___amuse_r_h_i_ga83ecb2e2f53d94c9339969a2968fd174.html#gga83ecb2e2f53d94c9339969a2968fd174a88183b946cc5f0e8c96b2e66e1c74a7e", null ],
+      [ "BufferState::Vertex", "d9/de0/group___amuse_r_h_i_ga83ecb2e2f53d94c9339969a2968fd174.html#gga83ecb2e2f53d94c9339969a2968fd174ab22b929ba52471a02d18bb3a4e4472e6", null ],
+      [ "BufferState::Index", "d9/de0/group___amuse_r_h_i_ga83ecb2e2f53d94c9339969a2968fd174.html#gga83ecb2e2f53d94c9339969a2968fd174a88fa71f0a6e0dfedbb46d91cc0b37a50", null ],
+      [ "BufferState::Constant", "d9/de0/group___amuse_r_h_i_ga83ecb2e2f53d94c9339969a2968fd174.html#gga83ecb2e2f53d94c9339969a2968fd174acb17869fe51048b5a5c4c6106551a255", null ],
+      [ "BufferState::ShaderResource", "d9/de0/group___amuse_r_h_i_ga83ecb2e2f53d94c9339969a2968fd174.html#gga83ecb2e2f53d94c9339969a2968fd174ada4ef1bdf2d2fce1cfc6fd62870a44ef", null ],
+      [ "BufferState::UnorderedAccess", "d9/de0/group___amuse_r_h_i_ga83ecb2e2f53d94c9339969a2968fd174.html#gga83ecb2e2f53d94c9339969a2968fd174a11c4aac157309541bd3fc4735e727683", null ],
+      [ "BufferState::IndirectArgument", "d9/de0/group___amuse_r_h_i_ga83ecb2e2f53d94c9339969a2968fd174.html#gga83ecb2e2f53d94c9339969a2968fd174a524d085ce6a6a41af0773e42b73aa99d", null ],
+      [ "BufferState::CopySource", "d9/de0/group___amuse_r_h_i_ga83ecb2e2f53d94c9339969a2968fd174.html#gga83ecb2e2f53d94c9339969a2968fd174aecadd2bfc4f324796b72c8d1e4511a9d", null ],
+      [ "BufferState::CopyDest", "d9/de0/group___amuse_r_h_i_ga83ecb2e2f53d94c9339969a2968fd174.html#gga83ecb2e2f53d94c9339969a2968fd174ac46da1ab89fbccdb37dc1847070acf06", null ]
     ] ],
-    [ "BufferViewType", "d9/de0/group___amuse_r_h_i.html#ga0f21f0562f9fcbef3b0449418b79235f", null ],
-    [ "ColorComponent", "d9/de0/group___amuse_r_h_i.html#gaaf6ef2b09a382867897488c1dbed50fc", [
-      [ "ColorComponent::Red", "d9/de0/group___amuse_r_h_i.html#ggaaf6ef2b09a382867897488c1dbed50fcaee38e4d5dd68c4e440825018d549cb47", null ],
-      [ "ColorComponent::Green", "d9/de0/group___amuse_r_h_i.html#ggaaf6ef2b09a382867897488c1dbed50fcad382816a3cbeed082c9e216e7392eed1", null ],
-      [ "ColorComponent::Blue", "d9/de0/group___amuse_r_h_i.html#ggaaf6ef2b09a382867897488c1dbed50fca9594eec95be70e7b1710f730fdda33d9", null ],
-      [ "ColorComponent::Alpha", "d9/de0/group___amuse_r_h_i.html#ggaaf6ef2b09a382867897488c1dbed50fca6132295fcf5570fb8b0a944ef322a598", null ],
-      [ "ColorComponent::RGB", "d9/de0/group___amuse_r_h_i.html#ggaaf6ef2b09a382867897488c1dbed50fca889574aebacda6bfd3e534e2b49b8028", null ],
-      [ "ColorComponent::All", "d9/de0/group___amuse_r_h_i.html#ggaaf6ef2b09a382867897488c1dbed50fcab1c94ca2fbc3e78fc30069c8d0f01680", null ],
-      [ "ColorComponent::R", "d9/de0/group___amuse_r_h_i.html#ggaaf6ef2b09a382867897488c1dbed50fcae1e1d3d40573127e9ee0480caf1283d6", null ],
-      [ "ColorComponent::G", "d9/de0/group___amuse_r_h_i.html#ggaaf6ef2b09a382867897488c1dbed50fcadfcf28d0734569a6a693bc8194de62bf", null ],
-      [ "ColorComponent::B", "d9/de0/group___amuse_r_h_i.html#ggaaf6ef2b09a382867897488c1dbed50fca9d5ed678fe57bcca610140957afab571", null ],
-      [ "ColorComponent::A", "d9/de0/group___amuse_r_h_i.html#ggaaf6ef2b09a382867897488c1dbed50fca7fc56270e7a70fa81a5935b72eacbe29", null ]
+    [ "BufferViewType", "d9/de0/group___amuse_r_h_i_ga0f21f0562f9fcbef3b0449418b79235f.html#ga0f21f0562f9fcbef3b0449418b79235f", null ],
+    [ "ColorComponent", "d9/de0/group___amuse_r_h_i_gaaf6ef2b09a382867897488c1dbed50fc.html#gaaf6ef2b09a382867897488c1dbed50fc", [
+      [ "ColorComponent::Red", "d9/de0/group___amuse_r_h_i_gaaf6ef2b09a382867897488c1dbed50fc.html#ggaaf6ef2b09a382867897488c1dbed50fcaee38e4d5dd68c4e440825018d549cb47", null ],
+      [ "ColorComponent::Green", "d9/de0/group___amuse_r_h_i_gaaf6ef2b09a382867897488c1dbed50fc.html#ggaaf6ef2b09a382867897488c1dbed50fcad382816a3cbeed082c9e216e7392eed1", null ],
+      [ "ColorComponent::Blue", "d9/de0/group___amuse_r_h_i_gaaf6ef2b09a382867897488c1dbed50fc.html#ggaaf6ef2b09a382867897488c1dbed50fca9594eec95be70e7b1710f730fdda33d9", null ],
+      [ "ColorComponent::Alpha", "d9/de0/group___amuse_r_h_i_gaaf6ef2b09a382867897488c1dbed50fc.html#ggaaf6ef2b09a382867897488c1dbed50fca6132295fcf5570fb8b0a944ef322a598", null ],
+      [ "ColorComponent::RGB", "d9/de0/group___amuse_r_h_i_gaaf6ef2b09a382867897488c1dbed50fc.html#ggaaf6ef2b09a382867897488c1dbed50fca889574aebacda6bfd3e534e2b49b8028", null ],
+      [ "ColorComponent::All", "d9/de0/group___amuse_r_h_i_gaaf6ef2b09a382867897488c1dbed50fc.html#ggaaf6ef2b09a382867897488c1dbed50fcab1c94ca2fbc3e78fc30069c8d0f01680", null ],
+      [ "ColorComponent::R", "d9/de0/group___amuse_r_h_i_gaaf6ef2b09a382867897488c1dbed50fc.html#ggaaf6ef2b09a382867897488c1dbed50fcae1e1d3d40573127e9ee0480caf1283d6", null ],
+      [ "ColorComponent::G", "d9/de0/group___amuse_r_h_i_gaaf6ef2b09a382867897488c1dbed50fc.html#ggaaf6ef2b09a382867897488c1dbed50fcadfcf28d0734569a6a693bc8194de62bf", null ],
+      [ "ColorComponent::B", "d9/de0/group___amuse_r_h_i_gaaf6ef2b09a382867897488c1dbed50fc.html#ggaaf6ef2b09a382867897488c1dbed50fca9d5ed678fe57bcca610140957afab571", null ],
+      [ "ColorComponent::A", "d9/de0/group___amuse_r_h_i_gaaf6ef2b09a382867897488c1dbed50fc.html#ggaaf6ef2b09a382867897488c1dbed50fca7fc56270e7a70fa81a5935b72eacbe29", null ]
     ] ],
-    [ "ColorSpace", "d9/de0/group___amuse_r_h_i.html#ga20f8d042a293f7b8c87f2992d183ceb9", [
-      [ "ColorSpace::BT709_G22", "d9/de0/group___amuse_r_h_i.html#gga20f8d042a293f7b8c87f2992d183ceb9aed2a7cae2f004cc91e9a76b99b556727", null ],
-      [ "ColorSpace::BT709_G10", "d9/de0/group___amuse_r_h_i.html#gga20f8d042a293f7b8c87f2992d183ceb9a7d21d3e203d5fe79d11e7783a1dd6200", null ],
-      [ "ColorSpace::BT2020_G2084", "d9/de0/group___amuse_r_h_i.html#gga20f8d042a293f7b8c87f2992d183ceb9a8e7a4fac5a374d621e7271c7bc89e024", null ],
-      [ "ColorSpace::BT2020_G22", "d9/de0/group___amuse_r_h_i.html#gga20f8d042a293f7b8c87f2992d183ceb9a4f56f716d359b9c853bb2abf07df6cf0", null ],
-      [ "ColorSpace::HDR10", "d9/de0/group___amuse_r_h_i.html#gga20f8d042a293f7b8c87f2992d183ceb9adfb86d5941bc9075d6af23b09c2aeecd", null ]
+    [ "ColorSpace", "d9/de0/group___amuse_r_h_i_ga20f8d042a293f7b8c87f2992d183ceb9.html#ga20f8d042a293f7b8c87f2992d183ceb9", [
+      [ "ColorSpace::BT709_G22", "d9/de0/group___amuse_r_h_i_ga20f8d042a293f7b8c87f2992d183ceb9.html#gga20f8d042a293f7b8c87f2992d183ceb9aed2a7cae2f004cc91e9a76b99b556727", null ],
+      [ "ColorSpace::BT709_G10", "d9/de0/group___amuse_r_h_i_ga20f8d042a293f7b8c87f2992d183ceb9.html#gga20f8d042a293f7b8c87f2992d183ceb9a7d21d3e203d5fe79d11e7783a1dd6200", null ],
+      [ "ColorSpace::BT2020_G2084", "d9/de0/group___amuse_r_h_i_ga20f8d042a293f7b8c87f2992d183ceb9.html#gga20f8d042a293f7b8c87f2992d183ceb9a8e7a4fac5a374d621e7271c7bc89e024", null ],
+      [ "ColorSpace::BT2020_G22", "d9/de0/group___amuse_r_h_i_ga20f8d042a293f7b8c87f2992d183ceb9.html#gga20f8d042a293f7b8c87f2992d183ceb9a4f56f716d359b9c853bb2abf07df6cf0", null ],
+      [ "ColorSpace::HDR10", "d9/de0/group___amuse_r_h_i_ga20f8d042a293f7b8c87f2992d183ceb9.html#gga20f8d042a293f7b8c87f2992d183ceb9adfb86d5941bc9075d6af23b09c2aeecd", null ]
     ] ],
-    [ "ColorTextureFormat", "d9/de0/group___amuse_r_h_i.html#ga7bf22dde2db0d149902b889278035c97", [
-      [ "ColorTextureFormat::Unknown", "d9/de0/group___amuse_r_h_i.html#gga7bf22dde2db0d149902b889278035c97a88183b946cc5f0e8c96b2e66e1c74a7e", null ],
-      [ "Amuse::ColorTextureFormat::/home/runner/work/AmuseEngine/AmuseEngine/Engine/Source/Runtime/RHI/Public/Amuse/RHI/Types/TextureFormat.h", "d9/de0/group___amuse_r_h_i.html#gga7bf22dde2db0d149902b889278035c97a724f24c7f863ff43cdb588d56c9d6492", null ],
-      [ "ColorTextureFormat::SDR", "d9/de0/group___amuse_r_h_i.html#gga7bf22dde2db0d149902b889278035c97a9c38ebb7384dada637be8899efa68e6f", null ],
-      [ "ColorTextureFormat::HDR", "d9/de0/group___amuse_r_h_i.html#gga7bf22dde2db0d149902b889278035c97a6cad826248cd3f4e93da71e7b49928e3", null ],
-      [ "ColorTextureFormat::RGBA32", "d9/de0/group___amuse_r_h_i.html#gga7bf22dde2db0d149902b889278035c97ad9e8e4a9228ed56eceb29f0a1223b02b", null ],
-      [ "ColorTextureFormat::RGBA16", "d9/de0/group___amuse_r_h_i.html#gga7bf22dde2db0d149902b889278035c97a50989efe15b375dce8ba3a5714fe2543", null ],
-      [ "ColorTextureFormat::RGBA8", "d9/de0/group___amuse_r_h_i.html#gga7bf22dde2db0d149902b889278035c97ab4b279046a02077466fa26cabb00c642", null ],
-      [ "ColorTextureFormat::RGB32", "d9/de0/group___amuse_r_h_i.html#gga7bf22dde2db0d149902b889278035c97ace70a5db6685e6d210c3f905a8fa7d4c", null ],
-      [ "ColorTextureFormat::RGB8", "d9/de0/group___amuse_r_h_i.html#gga7bf22dde2db0d149902b889278035c97a165c6379d01617e12de274a3952efa63", null ],
-      [ "ColorTextureFormat::RG32", "d9/de0/group___amuse_r_h_i.html#gga7bf22dde2db0d149902b889278035c97aa8725115efc714421823b7397f9c130c", null ],
-      [ "ColorTextureFormat::RG16", "d9/de0/group___amuse_r_h_i.html#gga7bf22dde2db0d149902b889278035c97a2b66caa416f0a28686ade3fc30ab223a", null ],
-      [ "ColorTextureFormat::RG8", "d9/de0/group___amuse_r_h_i.html#gga7bf22dde2db0d149902b889278035c97a0367a93b9e3e7aa2fbe9802d80298e46", null ],
-      [ "ColorTextureFormat::R32", "d9/de0/group___amuse_r_h_i.html#gga7bf22dde2db0d149902b889278035c97a1b5c31a494189e0415d5623f8b92a419", null ],
-      [ "ColorTextureFormat::R16", "d9/de0/group___amuse_r_h_i.html#gga7bf22dde2db0d149902b889278035c97a9a486e1a3c543c7c58e1cc8086dc4239", null ],
-      [ "ColorTextureFormat::R8", "d9/de0/group___amuse_r_h_i.html#gga7bf22dde2db0d149902b889278035c97acfff813d86d447fa2a9c858650ebbb90", null ],
-      [ "ColorTextureFormat::BC1", "d9/de0/group___amuse_r_h_i.html#gga7bf22dde2db0d149902b889278035c97a88ec7b741e9c3ccac7b61b1301ba11e8", null ],
-      [ "ColorTextureFormat::BC2", "d9/de0/group___amuse_r_h_i.html#gga7bf22dde2db0d149902b889278035c97a4d2bc7c468d854a7046ae1ca6b7cf64e", null ],
-      [ "ColorTextureFormat::BC3", "d9/de0/group___amuse_r_h_i.html#gga7bf22dde2db0d149902b889278035c97aa9e959126c7c9b4230b56975a1ea015d", null ],
-      [ "ColorTextureFormat::BC4", "d9/de0/group___amuse_r_h_i.html#gga7bf22dde2db0d149902b889278035c97ae64cdc788598d5cea29e5c14ce1fc381", null ],
-      [ "ColorTextureFormat::BC5", "d9/de0/group___amuse_r_h_i.html#gga7bf22dde2db0d149902b889278035c97ace789f624a22f7c5e6baafe4f4fe9e4d", null ],
-      [ "ColorTextureFormat::BC6H", "d9/de0/group___amuse_r_h_i.html#gga7bf22dde2db0d149902b889278035c97aaad676c687f275f58d8aad95bf9b1b94", null ],
-      [ "ColorTextureFormat::BC7", "d9/de0/group___amuse_r_h_i.html#gga7bf22dde2db0d149902b889278035c97aaa51ef981f910b0ec9ed8b82c65be593", null ],
-      [ "ColorTextureFormat::RGBA8_SRGB", "d9/de0/group___amuse_r_h_i.html#gga7bf22dde2db0d149902b889278035c97ae5a76309919d3c679c642c13125eb930", null ],
-      [ "ColorTextureFormat::BC1_SRGB", "d9/de0/group___amuse_r_h_i.html#gga7bf22dde2db0d149902b889278035c97a8728d460624388e7fcd0b5ea21b7e996", null ],
-      [ "ColorTextureFormat::BC2_SRGB", "d9/de0/group___amuse_r_h_i.html#gga7bf22dde2db0d149902b889278035c97ad8823158bc0323e65b353b99dbec42c8", null ],
-      [ "ColorTextureFormat::BC3_SRGB", "d9/de0/group___amuse_r_h_i.html#gga7bf22dde2db0d149902b889278035c97a02bf65916f20a9561b709107c60cccf2", null ],
-      [ "ColorTextureFormat::BC7_SRGB", "d9/de0/group___amuse_r_h_i.html#gga7bf22dde2db0d149902b889278035c97a1f2d0087f03ce3d88e442258ccd7c898", null ]
+    [ "ColorTextureFormat", "d9/de0/group___amuse_r_h_i_ga7bf22dde2db0d149902b889278035c97.html#ga7bf22dde2db0d149902b889278035c97", [
+      [ "ColorTextureFormat::Unknown", "d9/de0/group___amuse_r_h_i_ga7bf22dde2db0d149902b889278035c97.html#gga7bf22dde2db0d149902b889278035c97a88183b946cc5f0e8c96b2e66e1c74a7e", null ],
+      [ "Amuse::ColorTextureFormat::/home/runner/work/AmuseEngine/AmuseEngine/Engine/Source/Runtime/RHI/Public/Amuse/RHI/Types/TextureFormat.h", "d9/de0/group___amuse_r_h_i_ga7bf22dde2db0d149902b889278035c97.html#gga7bf22dde2db0d149902b889278035c97a724f24c7f863ff43cdb588d56c9d6492", null ],
+      [ "ColorTextureFormat::SDR", "d9/de0/group___amuse_r_h_i_ga7bf22dde2db0d149902b889278035c97.html#gga7bf22dde2db0d149902b889278035c97a9c38ebb7384dada637be8899efa68e6f", null ],
+      [ "ColorTextureFormat::HDR", "d9/de0/group___amuse_r_h_i_ga7bf22dde2db0d149902b889278035c97.html#gga7bf22dde2db0d149902b889278035c97a6cad826248cd3f4e93da71e7b49928e3", null ],
+      [ "ColorTextureFormat::RGBA32", "d9/de0/group___amuse_r_h_i_ga7bf22dde2db0d149902b889278035c97.html#gga7bf22dde2db0d149902b889278035c97ad9e8e4a9228ed56eceb29f0a1223b02b", null ],
+      [ "ColorTextureFormat::RGBA16", "d9/de0/group___amuse_r_h_i_ga7bf22dde2db0d149902b889278035c97.html#gga7bf22dde2db0d149902b889278035c97a50989efe15b375dce8ba3a5714fe2543", null ],
+      [ "ColorTextureFormat::RGBA8", "d9/de0/group___amuse_r_h_i_ga7bf22dde2db0d149902b889278035c97.html#gga7bf22dde2db0d149902b889278035c97ab4b279046a02077466fa26cabb00c642", null ],
+      [ "ColorTextureFormat::RGB32", "d9/de0/group___amuse_r_h_i_ga7bf22dde2db0d149902b889278035c97.html#gga7bf22dde2db0d149902b889278035c97ace70a5db6685e6d210c3f905a8fa7d4c", null ],
+      [ "ColorTextureFormat::RGB8", "d9/de0/group___amuse_r_h_i_ga7bf22dde2db0d149902b889278035c97.html#gga7bf22dde2db0d149902b889278035c97a165c6379d01617e12de274a3952efa63", null ],
+      [ "ColorTextureFormat::RG32", "d9/de0/group___amuse_r_h_i_ga7bf22dde2db0d149902b889278035c97.html#gga7bf22dde2db0d149902b889278035c97aa8725115efc714421823b7397f9c130c", null ],
+      [ "ColorTextureFormat::RG16", "d9/de0/group___amuse_r_h_i_ga7bf22dde2db0d149902b889278035c97.html#gga7bf22dde2db0d149902b889278035c97a2b66caa416f0a28686ade3fc30ab223a", null ],
+      [ "ColorTextureFormat::RG8", "d9/de0/group___amuse_r_h_i_ga7bf22dde2db0d149902b889278035c97.html#gga7bf22dde2db0d149902b889278035c97a0367a93b9e3e7aa2fbe9802d80298e46", null ],
+      [ "ColorTextureFormat::R32", "d9/de0/group___amuse_r_h_i_ga7bf22dde2db0d149902b889278035c97.html#gga7bf22dde2db0d149902b889278035c97a1b5c31a494189e0415d5623f8b92a419", null ],
+      [ "ColorTextureFormat::R16", "d9/de0/group___amuse_r_h_i_ga7bf22dde2db0d149902b889278035c97.html#gga7bf22dde2db0d149902b889278035c97a9a486e1a3c543c7c58e1cc8086dc4239", null ],
+      [ "ColorTextureFormat::R8", "d9/de0/group___amuse_r_h_i_ga7bf22dde2db0d149902b889278035c97.html#gga7bf22dde2db0d149902b889278035c97acfff813d86d447fa2a9c858650ebbb90", null ],
+      [ "ColorTextureFormat::BC1", "d9/de0/group___amuse_r_h_i_ga7bf22dde2db0d149902b889278035c97.html#gga7bf22dde2db0d149902b889278035c97a88ec7b741e9c3ccac7b61b1301ba11e8", null ],
+      [ "ColorTextureFormat::BC2", "d9/de0/group___amuse_r_h_i_ga7bf22dde2db0d149902b889278035c97.html#gga7bf22dde2db0d149902b889278035c97a4d2bc7c468d854a7046ae1ca6b7cf64e", null ],
+      [ "ColorTextureFormat::BC3", "d9/de0/group___amuse_r_h_i_ga7bf22dde2db0d149902b889278035c97.html#gga7bf22dde2db0d149902b889278035c97aa9e959126c7c9b4230b56975a1ea015d", null ],
+      [ "ColorTextureFormat::BC4", "d9/de0/group___amuse_r_h_i_ga7bf22dde2db0d149902b889278035c97.html#gga7bf22dde2db0d149902b889278035c97ae64cdc788598d5cea29e5c14ce1fc381", null ],
+      [ "ColorTextureFormat::BC5", "d9/de0/group___amuse_r_h_i_ga7bf22dde2db0d149902b889278035c97.html#gga7bf22dde2db0d149902b889278035c97ace789f624a22f7c5e6baafe4f4fe9e4d", null ],
+      [ "ColorTextureFormat::BC6H", "d9/de0/group___amuse_r_h_i_ga7bf22dde2db0d149902b889278035c97.html#gga7bf22dde2db0d149902b889278035c97aaad676c687f275f58d8aad95bf9b1b94", null ],
+      [ "ColorTextureFormat::BC7", "d9/de0/group___amuse_r_h_i_ga7bf22dde2db0d149902b889278035c97.html#gga7bf22dde2db0d149902b889278035c97aaa51ef981f910b0ec9ed8b82c65be593", null ],
+      [ "ColorTextureFormat::RGBA8_SRGB", "d9/de0/group___amuse_r_h_i_ga7bf22dde2db0d149902b889278035c97.html#gga7bf22dde2db0d149902b889278035c97ae5a76309919d3c679c642c13125eb930", null ],
+      [ "ColorTextureFormat::BC1_SRGB", "d9/de0/group___amuse_r_h_i_ga7bf22dde2db0d149902b889278035c97.html#gga7bf22dde2db0d149902b889278035c97a8728d460624388e7fcd0b5ea21b7e996", null ],
+      [ "ColorTextureFormat::BC2_SRGB", "d9/de0/group___amuse_r_h_i_ga7bf22dde2db0d149902b889278035c97.html#gga7bf22dde2db0d149902b889278035c97ad8823158bc0323e65b353b99dbec42c8", null ],
+      [ "ColorTextureFormat::BC3_SRGB", "d9/de0/group___amuse_r_h_i_ga7bf22dde2db0d149902b889278035c97.html#gga7bf22dde2db0d149902b889278035c97a02bf65916f20a9561b709107c60cccf2", null ],
+      [ "ColorTextureFormat::BC7_SRGB", "d9/de0/group___amuse_r_h_i_ga7bf22dde2db0d149902b889278035c97.html#gga7bf22dde2db0d149902b889278035c97a1f2d0087f03ce3d88e442258ccd7c898", null ]
     ] ],
-    [ "CommandListType", "d9/de0/group___amuse_r_h_i.html#ga07d8d183e682dd52b5953ddc1afac40a", [
-      [ "CommandListType::Graphic", "d9/de0/group___amuse_r_h_i.html#gga07d8d183e682dd52b5953ddc1afac40aaaabf434277385d39ebb16ef7ad6b0e7a", null ],
-      [ "CommandListType::Compute", "d9/de0/group___amuse_r_h_i.html#gga07d8d183e682dd52b5953ddc1afac40aaa623a8d0366bf079411aa30be45b2d10", null ]
+    [ "CommandListType", "d9/de0/group___amuse_r_h_i_ga07d8d183e682dd52b5953ddc1afac40a.html#ga07d8d183e682dd52b5953ddc1afac40a", [
+      [ "CommandListType::Graphic", "d9/de0/group___amuse_r_h_i_ga07d8d183e682dd52b5953ddc1afac40a.html#gga07d8d183e682dd52b5953ddc1afac40aaaabf434277385d39ebb16ef7ad6b0e7a", null ],
+      [ "CommandListType::Compute", "d9/de0/group___amuse_r_h_i_ga07d8d183e682dd52b5953ddc1afac40a.html#gga07d8d183e682dd52b5953ddc1afac40aaa623a8d0366bf079411aa30be45b2d10", null ]
     ] ],
-    [ "CommandQueueType", "d9/de0/group___amuse_r_h_i.html#ga28338c76b9ba608e242820db68d653b8", [
-      [ "CommandQueueType::Graphics", "d9/de0/group___amuse_r_h_i.html#gga28338c76b9ba608e242820db68d653b8ad334dfcea59127bedfcdbe0a3ee7f494", null ],
-      [ "CommandQueueType::Compute", "d9/de0/group___amuse_r_h_i.html#gga28338c76b9ba608e242820db68d653b8aa623a8d0366bf079411aa30be45b2d10", null ],
-      [ "CommandQueueType::Copy", "d9/de0/group___amuse_r_h_i.html#gga28338c76b9ba608e242820db68d653b8a5fb63579fc981698f97d55bfecb213ea", null ]
+    [ "CommandQueueType", "d9/de0/group___amuse_r_h_i_ga28338c76b9ba608e242820db68d653b8.html#ga28338c76b9ba608e242820db68d653b8", [
+      [ "CommandQueueType::Graphics", "d9/de0/group___amuse_r_h_i_ga28338c76b9ba608e242820db68d653b8.html#gga28338c76b9ba608e242820db68d653b8ad334dfcea59127bedfcdbe0a3ee7f494", null ],
+      [ "CommandQueueType::Compute", "d9/de0/group___amuse_r_h_i_ga28338c76b9ba608e242820db68d653b8.html#gga28338c76b9ba608e242820db68d653b8aa623a8d0366bf079411aa30be45b2d10", null ],
+      [ "CommandQueueType::Copy", "d9/de0/group___amuse_r_h_i_ga28338c76b9ba608e242820db68d653b8.html#gga28338c76b9ba608e242820db68d653b8a5fb63579fc981698f97d55bfecb213ea", null ]
     ] ],
-    [ "ComparisonFunc", "d9/de0/group___amuse_r_h_i.html#ga1fff02f3aa5ebfc97f9f30d2da30797a", [
-      [ "ComparisonFunc::Never", "d9/de0/group___amuse_r_h_i.html#gga1fff02f3aa5ebfc97f9f30d2da30797aa6e7b34fa59e1bd229b207892956dc41c", null ],
-      [ "ComparisonFunc::Always", "d9/de0/group___amuse_r_h_i.html#gga1fff02f3aa5ebfc97f9f30d2da30797aa68eec46437c384d8dad18d5464ebc35c", null ],
-      [ "ComparisonFunc::Equal", "d9/de0/group___amuse_r_h_i.html#gga1fff02f3aa5ebfc97f9f30d2da30797aaf5f286e73bda105e538310b3190f75c5", null ],
-      [ "ComparisonFunc::NotEqual", "d9/de0/group___amuse_r_h_i.html#gga1fff02f3aa5ebfc97f9f30d2da30797aa19bb0af2c3c530538cb41aff7f235b96", null ],
-      [ "ComparisonFunc::Less", "d9/de0/group___amuse_r_h_i.html#gga1fff02f3aa5ebfc97f9f30d2da30797aa1cfdf0e8d0c87a228c1f40d9bee7888b", null ],
-      [ "ComparisonFunc::Greater", "d9/de0/group___amuse_r_h_i.html#gga1fff02f3aa5ebfc97f9f30d2da30797aa8768a6821cd735aea4f5b0df88c1fc6a", null ],
-      [ "ComparisonFunc::LessEqual", "d9/de0/group___amuse_r_h_i.html#gga1fff02f3aa5ebfc97f9f30d2da30797aad3e6fdac55bb7b0edd7834c968ba1f38", null ],
-      [ "ComparisonFunc::GreaterEqual", "d9/de0/group___amuse_r_h_i.html#gga1fff02f3aa5ebfc97f9f30d2da30797aa758b05d899def79c9eb864ad4f96be1f", null ]
+    [ "ComparisonFunc", "d9/de0/group___amuse_r_h_i_ga1fff02f3aa5ebfc97f9f30d2da30797a.html#ga1fff02f3aa5ebfc97f9f30d2da30797a", [
+      [ "ComparisonFunc::Never", "d9/de0/group___amuse_r_h_i_ga1fff02f3aa5ebfc97f9f30d2da30797a.html#gga1fff02f3aa5ebfc97f9f30d2da30797aa6e7b34fa59e1bd229b207892956dc41c", null ],
+      [ "ComparisonFunc::Always", "d9/de0/group___amuse_r_h_i_ga1fff02f3aa5ebfc97f9f30d2da30797a.html#gga1fff02f3aa5ebfc97f9f30d2da30797aa68eec46437c384d8dad18d5464ebc35c", null ],
+      [ "ComparisonFunc::Equal", "d9/de0/group___amuse_r_h_i_ga1fff02f3aa5ebfc97f9f30d2da30797a.html#gga1fff02f3aa5ebfc97f9f30d2da30797aaf5f286e73bda105e538310b3190f75c5", null ],
+      [ "ComparisonFunc::NotEqual", "d9/de0/group___amuse_r_h_i_ga1fff02f3aa5ebfc97f9f30d2da30797a.html#gga1fff02f3aa5ebfc97f9f30d2da30797aa19bb0af2c3c530538cb41aff7f235b96", null ],
+      [ "ComparisonFunc::Less", "d9/de0/group___amuse_r_h_i_ga1fff02f3aa5ebfc97f9f30d2da30797a.html#gga1fff02f3aa5ebfc97f9f30d2da30797aa1cfdf0e8d0c87a228c1f40d9bee7888b", null ],
+      [ "ComparisonFunc::Greater", "d9/de0/group___amuse_r_h_i_ga1fff02f3aa5ebfc97f9f30d2da30797a.html#gga1fff02f3aa5ebfc97f9f30d2da30797aa8768a6821cd735aea4f5b0df88c1fc6a", null ],
+      [ "ComparisonFunc::LessEqual", "d9/de0/group___amuse_r_h_i_ga1fff02f3aa5ebfc97f9f30d2da30797a.html#gga1fff02f3aa5ebfc97f9f30d2da30797aad3e6fdac55bb7b0edd7834c968ba1f38", null ],
+      [ "ComparisonFunc::GreaterEqual", "d9/de0/group___amuse_r_h_i_ga1fff02f3aa5ebfc97f9f30d2da30797a.html#gga1fff02f3aa5ebfc97f9f30d2da30797aa758b05d899def79c9eb864ad4f96be1f", null ]
     ] ],
-    [ "CpuAccess", "d9/de0/group___amuse_r_h_i.html#gacda4ce3c0bd93e3969df558139015fa4", [
-      [ "CpuAccess::Read", "d9/de0/group___amuse_r_h_i.html#ggacda4ce3c0bd93e3969df558139015fa4a7a1a5f3e79fdc91edf2f5ead9d66abb4", null ],
-      [ "CpuAccess::Write", "d9/de0/group___amuse_r_h_i.html#ggacda4ce3c0bd93e3969df558139015fa4a1129c0e4d43f2d121652a7302712cff6", null ],
-      [ "CpuAccess::ReadWrite", "d9/de0/group___amuse_r_h_i.html#ggacda4ce3c0bd93e3969df558139015fa4a70a2a84088d405a2e3f1e3accaa16723", null ]
+    [ "CpuAccess", "d9/de0/group___amuse_r_h_i_gacda4ce3c0bd93e3969df558139015fa4.html#gacda4ce3c0bd93e3969df558139015fa4", [
+      [ "CpuAccess::Read", "d9/de0/group___amuse_r_h_i_gacda4ce3c0bd93e3969df558139015fa4.html#ggacda4ce3c0bd93e3969df558139015fa4a7a1a5f3e79fdc91edf2f5ead9d66abb4", null ],
+      [ "CpuAccess::Write", "d9/de0/group___amuse_r_h_i_gacda4ce3c0bd93e3969df558139015fa4.html#ggacda4ce3c0bd93e3969df558139015fa4a1129c0e4d43f2d121652a7302712cff6", null ],
+      [ "CpuAccess::ReadWrite", "d9/de0/group___amuse_r_h_i_gacda4ce3c0bd93e3969df558139015fa4.html#ggacda4ce3c0bd93e3969df558139015fa4a70a2a84088d405a2e3f1e3accaa16723", null ]
     ] ],
-    [ "CullMode", "d9/de0/group___amuse_r_h_i.html#ga25bddf67604667f8bd82bea19cdf8e78", [
-      [ "CullMode::None", "d9/de0/group___amuse_r_h_i.html#gga25bddf67604667f8bd82bea19cdf8e78a6adf97f83acf6453d4a6a4b1070f3754", null ],
-      [ "CullMode::Front", "d9/de0/group___amuse_r_h_i.html#gga25bddf67604667f8bd82bea19cdf8e78a5835bab1ade0060909e31a06af2e2cde", null ],
-      [ "CullMode::Back", "d9/de0/group___amuse_r_h_i.html#gga25bddf67604667f8bd82bea19cdf8e78a0557fa923dcee4d0f86b1409f5c2167f", null ]
+    [ "CullMode", "d9/de0/group___amuse_r_h_i_ga25bddf67604667f8bd82bea19cdf8e78.html#ga25bddf67604667f8bd82bea19cdf8e78", [
+      [ "CullMode::None", "d9/de0/group___amuse_r_h_i_ga25bddf67604667f8bd82bea19cdf8e78.html#gga25bddf67604667f8bd82bea19cdf8e78a6adf97f83acf6453d4a6a4b1070f3754", null ],
+      [ "CullMode::Front", "d9/de0/group___amuse_r_h_i_ga25bddf67604667f8bd82bea19cdf8e78.html#gga25bddf67604667f8bd82bea19cdf8e78a5835bab1ade0060909e31a06af2e2cde", null ],
+      [ "CullMode::Back", "d9/de0/group___amuse_r_h_i_ga25bddf67604667f8bd82bea19cdf8e78.html#gga25bddf67604667f8bd82bea19cdf8e78a0557fa923dcee4d0f86b1409f5c2167f", null ]
     ] ],
-    [ "DepthTextureFormat", "d9/de0/group___amuse_r_h_i.html#ga584eae717547f868964b0292c7221488", [
-      [ "DepthTextureFormat::Unknown", "d9/de0/group___amuse_r_h_i.html#gga584eae717547f868964b0292c7221488a88183b946cc5f0e8c96b2e66e1c74a7e", null ],
-      [ "Amuse::DepthTextureFormat::/home/runner/work/AmuseEngine/AmuseEngine/Engine/Source/Runtime/RHI/Public/Amuse/RHI/Types/TextureFormat.h", "d9/de0/group___amuse_r_h_i.html#gga584eae717547f868964b0292c7221488a724f24c7f863ff43cdb588d56c9d6492", null ],
-      [ "DepthTextureFormat::D32S8", "d9/de0/group___amuse_r_h_i.html#gga584eae717547f868964b0292c7221488af64446518b4b850a4b2d6624ecff5791", null ],
-      [ "DepthTextureFormat::D32", "d9/de0/group___amuse_r_h_i.html#gga584eae717547f868964b0292c7221488aa6b2eecc4252564f599b9a979e4e0602", null ],
-      [ "DepthTextureFormat::D24S8", "d9/de0/group___amuse_r_h_i.html#gga584eae717547f868964b0292c7221488a2468f278a5fb00d246360a43b4c39f31", null ],
-      [ "DepthTextureFormat::D16", "d9/de0/group___amuse_r_h_i.html#gga584eae717547f868964b0292c7221488a6fd9ec81643ee5a57f85a71951bfe13d", null ]
+    [ "DepthTextureFormat", "d9/de0/group___amuse_r_h_i_ga584eae717547f868964b0292c7221488.html#ga584eae717547f868964b0292c7221488", [
+      [ "DepthTextureFormat::Unknown", "d9/de0/group___amuse_r_h_i_ga584eae717547f868964b0292c7221488.html#gga584eae717547f868964b0292c7221488a88183b946cc5f0e8c96b2e66e1c74a7e", null ],
+      [ "Amuse::DepthTextureFormat::/home/runner/work/AmuseEngine/AmuseEngine/Engine/Source/Runtime/RHI/Public/Amuse/RHI/Types/TextureFormat.h", "d9/de0/group___amuse_r_h_i_ga584eae717547f868964b0292c7221488.html#gga584eae717547f868964b0292c7221488a724f24c7f863ff43cdb588d56c9d6492", null ],
+      [ "DepthTextureFormat::D32S8", "d9/de0/group___amuse_r_h_i_ga584eae717547f868964b0292c7221488.html#gga584eae717547f868964b0292c7221488af64446518b4b850a4b2d6624ecff5791", null ],
+      [ "DepthTextureFormat::D32", "d9/de0/group___amuse_r_h_i_ga584eae717547f868964b0292c7221488.html#gga584eae717547f868964b0292c7221488aa6b2eecc4252564f599b9a979e4e0602", null ],
+      [ "DepthTextureFormat::D24S8", "d9/de0/group___amuse_r_h_i_ga584eae717547f868964b0292c7221488.html#gga584eae717547f868964b0292c7221488a2468f278a5fb00d246360a43b4c39f31", null ],
+      [ "DepthTextureFormat::D16", "d9/de0/group___amuse_r_h_i_ga584eae717547f868964b0292c7221488.html#gga584eae717547f868964b0292c7221488a6fd9ec81643ee5a57f85a71951bfe13d", null ]
     ] ],
-    [ "ElementType", "d9/de0/group___amuse_r_h_i.html#ga729e03fa83fa4f81f5f3a9587a629d1f", null ],
-    [ "FillMode", "d9/de0/group___amuse_r_h_i.html#gaad61be1b99aca0361111bd05baad78f4", null ],
-    [ "FormatSupport", "d9/de0/group___amuse_r_h_i.html#gae422f9a9f8b24c8d356694aa138bd22a", [
-      [ "FormatSupport::Texture", "d9/de0/group___amuse_r_h_i.html#ggae422f9a9f8b24c8d356694aa138bd22aaa3e8ae43188ae76d38f414b2bdb0077b", null ],
-      [ "FormatSupport::RenderTarget", "d9/de0/group___amuse_r_h_i.html#ggae422f9a9f8b24c8d356694aa138bd22aa9b0bffda4bcb312168c0d6537cb04b4d", null ],
-      [ "FormatSupport::DepthStencil", "d9/de0/group___amuse_r_h_i.html#ggae422f9a9f8b24c8d356694aa138bd22aa2fa8076285272883c91e14402975a441", null ],
-      [ "FormatSupport::ShaderResource", "d9/de0/group___amuse_r_h_i.html#ggae422f9a9f8b24c8d356694aa138bd22aada4ef1bdf2d2fce1cfc6fd62870a44ef", null ],
-      [ "FormatSupport::UnorderedAccess", "d9/de0/group___amuse_r_h_i.html#ggae422f9a9f8b24c8d356694aa138bd22aa11c4aac157309541bd3fc4735e727683", null ],
-      [ "FormatSupport::Copy", "d9/de0/group___amuse_r_h_i.html#ggae422f9a9f8b24c8d356694aa138bd22aa5fb63579fc981698f97d55bfecb213ea", null ],
-      [ "FormatSupport::Resolve", "d9/de0/group___amuse_r_h_i.html#ggae422f9a9f8b24c8d356694aa138bd22aa05d26e7d7c53744b903ae1f6f8a8c7ed", null ]
+    [ "ElementType", "d9/de0/group___amuse_r_h_i_ga729e03fa83fa4f81f5f3a9587a629d1f.html#ga729e03fa83fa4f81f5f3a9587a629d1f", null ],
+    [ "FillMode", "d9/de0/group___amuse_r_h_i_gaad61be1b99aca0361111bd05baad78f4.html#gaad61be1b99aca0361111bd05baad78f4", null ],
+    [ "FormatSupport", "d9/de0/group___amuse_r_h_i_gae422f9a9f8b24c8d356694aa138bd22a.html#gae422f9a9f8b24c8d356694aa138bd22a", [
+      [ "FormatSupport::Texture", "d9/de0/group___amuse_r_h_i_gae422f9a9f8b24c8d356694aa138bd22a.html#ggae422f9a9f8b24c8d356694aa138bd22aaa3e8ae43188ae76d38f414b2bdb0077b", null ],
+      [ "FormatSupport::RenderTarget", "d9/de0/group___amuse_r_h_i_gae422f9a9f8b24c8d356694aa138bd22a.html#ggae422f9a9f8b24c8d356694aa138bd22aa9b0bffda4bcb312168c0d6537cb04b4d", null ],
+      [ "FormatSupport::DepthStencil", "d9/de0/group___amuse_r_h_i_gae422f9a9f8b24c8d356694aa138bd22a.html#ggae422f9a9f8b24c8d356694aa138bd22aa2fa8076285272883c91e14402975a441", null ],
+      [ "FormatSupport::ShaderResource", "d9/de0/group___amuse_r_h_i_gae422f9a9f8b24c8d356694aa138bd22a.html#ggae422f9a9f8b24c8d356694aa138bd22aada4ef1bdf2d2fce1cfc6fd62870a44ef", null ],
+      [ "FormatSupport::UnorderedAccess", "d9/de0/group___amuse_r_h_i_gae422f9a9f8b24c8d356694aa138bd22a.html#ggae422f9a9f8b24c8d356694aa138bd22aa11c4aac157309541bd3fc4735e727683", null ],
+      [ "FormatSupport::Copy", "d9/de0/group___amuse_r_h_i_gae422f9a9f8b24c8d356694aa138bd22a.html#ggae422f9a9f8b24c8d356694aa138bd22aa5fb63579fc981698f97d55bfecb213ea", null ],
+      [ "FormatSupport::Resolve", "d9/de0/group___amuse_r_h_i_gae422f9a9f8b24c8d356694aa138bd22a.html#ggae422f9a9f8b24c8d356694aa138bd22aa05d26e7d7c53744b903ae1f6f8a8c7ed", null ]
     ] ],
-    [ "LogicOp", "d9/de0/group___amuse_r_h_i.html#ga716fa04930d5cee3774f8c5cf6f07d79", [
-      [ "LogicOp::Clear", "d9/de0/group___amuse_r_h_i.html#gga716fa04930d5cee3774f8c5cf6f07d79adc30bc0c7914db5918da4263fce93ad2", null ],
-      [ "LogicOp::Set", "d9/de0/group___amuse_r_h_i.html#gga716fa04930d5cee3774f8c5cf6f07d79a5d5b78699e57104f2fa03bbdf7b9197b", null ],
-      [ "LogicOp::Copy", "d9/de0/group___amuse_r_h_i.html#gga716fa04930d5cee3774f8c5cf6f07d79a5fb63579fc981698f97d55bfecb213ea", null ],
-      [ "LogicOp::CopyInverted", "d9/de0/group___amuse_r_h_i.html#gga716fa04930d5cee3774f8c5cf6f07d79ae7a387d9808b05131e4906e7655a33a0", null ],
-      [ "LogicOp::Noop", "d9/de0/group___amuse_r_h_i.html#gga716fa04930d5cee3774f8c5cf6f07d79a35721c181ec6a9cca6cdb99dd844d07b", null ],
-      [ "LogicOp::Invert", "d9/de0/group___amuse_r_h_i.html#gga716fa04930d5cee3774f8c5cf6f07d79a9b8958acb7be504bb5f55f17c0eea366", null ],
-      [ "LogicOp::And", "d9/de0/group___amuse_r_h_i.html#gga716fa04930d5cee3774f8c5cf6f07d79ac33315685a0cba3ce53be378b3c7874b", null ],
-      [ "LogicOp::Nand", "d9/de0/group___amuse_r_h_i.html#gga716fa04930d5cee3774f8c5cf6f07d79ad39e2d62791eb0c18e0bb54315180049", null ],
-      [ "LogicOp::Or", "d9/de0/group___amuse_r_h_i.html#gga716fa04930d5cee3774f8c5cf6f07d79a3a2d5fe857d8f9541136a124c2edec6c", null ],
-      [ "LogicOp::Nor", "d9/de0/group___amuse_r_h_i.html#gga716fa04930d5cee3774f8c5cf6f07d79a5f61fcb6e17f7a46a46a47c7977c90c1", null ],
-      [ "LogicOp::Xor", "d9/de0/group___amuse_r_h_i.html#gga716fa04930d5cee3774f8c5cf6f07d79a76feb79109026728a20736a8c6504548", null ],
-      [ "LogicOp::Equivalent", "d9/de0/group___amuse_r_h_i.html#gga716fa04930d5cee3774f8c5cf6f07d79aafd102579f64c98e96d92a7424130605", null ],
-      [ "LogicOp::AndReverse", "d9/de0/group___amuse_r_h_i.html#gga716fa04930d5cee3774f8c5cf6f07d79a287b07d4ecc112d0a742eba7d4c845bc", null ],
-      [ "LogicOp::AndInverted", "d9/de0/group___amuse_r_h_i.html#gga716fa04930d5cee3774f8c5cf6f07d79adf0344a044e102673403a03fe8e83d8d", null ],
-      [ "LogicOp::OrReverse", "d9/de0/group___amuse_r_h_i.html#gga716fa04930d5cee3774f8c5cf6f07d79aabbaa132814b3deb687143a873ab3100", null ],
-      [ "LogicOp::OrInverted", "d9/de0/group___amuse_r_h_i.html#gga716fa04930d5cee3774f8c5cf6f07d79abf95e9e38b3918a85a27125fff7e47ea", null ]
+    [ "LogicOp", "d9/de0/group___amuse_r_h_i_ga716fa04930d5cee3774f8c5cf6f07d79.html#ga716fa04930d5cee3774f8c5cf6f07d79", [
+      [ "LogicOp::Clear", "d9/de0/group___amuse_r_h_i_ga716fa04930d5cee3774f8c5cf6f07d79.html#gga716fa04930d5cee3774f8c5cf6f07d79adc30bc0c7914db5918da4263fce93ad2", null ],
+      [ "LogicOp::Set", "d9/de0/group___amuse_r_h_i_ga716fa04930d5cee3774f8c5cf6f07d79.html#gga716fa04930d5cee3774f8c5cf6f07d79a5d5b78699e57104f2fa03bbdf7b9197b", null ],
+      [ "LogicOp::Copy", "d9/de0/group___amuse_r_h_i_ga716fa04930d5cee3774f8c5cf6f07d79.html#gga716fa04930d5cee3774f8c5cf6f07d79a5fb63579fc981698f97d55bfecb213ea", null ],
+      [ "LogicOp::CopyInverted", "d9/de0/group___amuse_r_h_i_ga716fa04930d5cee3774f8c5cf6f07d79.html#gga716fa04930d5cee3774f8c5cf6f07d79ae7a387d9808b05131e4906e7655a33a0", null ],
+      [ "LogicOp::Noop", "d9/de0/group___amuse_r_h_i_ga716fa04930d5cee3774f8c5cf6f07d79.html#gga716fa04930d5cee3774f8c5cf6f07d79a35721c181ec6a9cca6cdb99dd844d07b", null ],
+      [ "LogicOp::Invert", "d9/de0/group___amuse_r_h_i_ga716fa04930d5cee3774f8c5cf6f07d79.html#gga716fa04930d5cee3774f8c5cf6f07d79a9b8958acb7be504bb5f55f17c0eea366", null ],
+      [ "LogicOp::And", "d9/de0/group___amuse_r_h_i_ga716fa04930d5cee3774f8c5cf6f07d79.html#gga716fa04930d5cee3774f8c5cf6f07d79ac33315685a0cba3ce53be378b3c7874b", null ],
+      [ "LogicOp::Nand", "d9/de0/group___amuse_r_h_i_ga716fa04930d5cee3774f8c5cf6f07d79.html#gga716fa04930d5cee3774f8c5cf6f07d79ad39e2d62791eb0c18e0bb54315180049", null ],
+      [ "LogicOp::Or", "d9/de0/group___amuse_r_h_i_ga716fa04930d5cee3774f8c5cf6f07d79.html#gga716fa04930d5cee3774f8c5cf6f07d79a3a2d5fe857d8f9541136a124c2edec6c", null ],
+      [ "LogicOp::Nor", "d9/de0/group___amuse_r_h_i_ga716fa04930d5cee3774f8c5cf6f07d79.html#gga716fa04930d5cee3774f8c5cf6f07d79a5f61fcb6e17f7a46a46a47c7977c90c1", null ],
+      [ "LogicOp::Xor", "d9/de0/group___amuse_r_h_i_ga716fa04930d5cee3774f8c5cf6f07d79.html#gga716fa04930d5cee3774f8c5cf6f07d79a76feb79109026728a20736a8c6504548", null ],
+      [ "LogicOp::Equivalent", "d9/de0/group___amuse_r_h_i_ga716fa04930d5cee3774f8c5cf6f07d79.html#gga716fa04930d5cee3774f8c5cf6f07d79aafd102579f64c98e96d92a7424130605", null ],
+      [ "LogicOp::AndReverse", "d9/de0/group___amuse_r_h_i_ga716fa04930d5cee3774f8c5cf6f07d79.html#gga716fa04930d5cee3774f8c5cf6f07d79a287b07d4ecc112d0a742eba7d4c845bc", null ],
+      [ "LogicOp::AndInverted", "d9/de0/group___amuse_r_h_i_ga716fa04930d5cee3774f8c5cf6f07d79.html#gga716fa04930d5cee3774f8c5cf6f07d79adf0344a044e102673403a03fe8e83d8d", null ],
+      [ "LogicOp::OrReverse", "d9/de0/group___amuse_r_h_i_ga716fa04930d5cee3774f8c5cf6f07d79.html#gga716fa04930d5cee3774f8c5cf6f07d79aabbaa132814b3deb687143a873ab3100", null ],
+      [ "LogicOp::OrInverted", "d9/de0/group___amuse_r_h_i_ga716fa04930d5cee3774f8c5cf6f07d79.html#gga716fa04930d5cee3774f8c5cf6f07d79abf95e9e38b3918a85a27125fff7e47ea", null ]
     ] ],
-    [ "MipFilter", "d9/de0/group___amuse_r_h_i.html#ga661c79b6bc008a523ce7e34ec711004c", [
-      [ "MipFilter::Point", "d9/de0/group___amuse_r_h_i.html#gga661c79b6bc008a523ce7e34ec711004ca2a3cd5946cfd317eb99c3d32e35e2d4c", null ],
-      [ "MipFilter::Linear", "d9/de0/group___amuse_r_h_i.html#gga661c79b6bc008a523ce7e34ec711004ca32a843da6ea40ab3b17a3421ccdf671b", null ]
+    [ "MipFilter", "d9/de0/group___amuse_r_h_i_ga661c79b6bc008a523ce7e34ec711004c.html#ga661c79b6bc008a523ce7e34ec711004c", [
+      [ "MipFilter::Point", "d9/de0/group___amuse_r_h_i_ga661c79b6bc008a523ce7e34ec711004c.html#gga661c79b6bc008a523ce7e34ec711004ca2a3cd5946cfd317eb99c3d32e35e2d4c", null ],
+      [ "MipFilter::Linear", "d9/de0/group___amuse_r_h_i_ga661c79b6bc008a523ce7e34ec711004c.html#gga661c79b6bc008a523ce7e34ec711004ca32a843da6ea40ab3b17a3421ccdf671b", null ]
     ] ],
-    [ "RenderPassFlag", "d9/de0/group___amuse_r_h_i.html#gad4093957aa2162f9991ed82b21be1751", [
-      [ "RenderPassFlag::AllowUAVWrite", "d9/de0/group___amuse_r_h_i.html#ggad4093957aa2162f9991ed82b21be1751a5cfa802f421cb081c8a571ce27a78a43", null ],
-      [ "RenderPassFlag::SuspendingPass", "d9/de0/group___amuse_r_h_i.html#ggad4093957aa2162f9991ed82b21be1751acc9a0b8c8bbd492c38991698c00b2ee0", null ],
-      [ "RenderPassFlag::ResumingPass", "d9/de0/group___amuse_r_h_i.html#ggad4093957aa2162f9991ed82b21be1751a517501fd1633c1dfb45f1f1189d0769f", null ]
+    [ "RenderPassFlag", "d9/de0/group___amuse_r_h_i_gad4093957aa2162f9991ed82b21be1751.html#gad4093957aa2162f9991ed82b21be1751", [
+      [ "RenderPassFlag::AllowUAVWrite", "d9/de0/group___amuse_r_h_i_gad4093957aa2162f9991ed82b21be1751.html#ggad4093957aa2162f9991ed82b21be1751a5cfa802f421cb081c8a571ce27a78a43", null ],
+      [ "RenderPassFlag::SuspendingPass", "d9/de0/group___amuse_r_h_i_gad4093957aa2162f9991ed82b21be1751.html#ggad4093957aa2162f9991ed82b21be1751acc9a0b8c8bbd492c38991698c00b2ee0", null ],
+      [ "RenderPassFlag::ResumingPass", "d9/de0/group___amuse_r_h_i_gad4093957aa2162f9991ed82b21be1751.html#ggad4093957aa2162f9991ed82b21be1751a517501fd1633c1dfb45f1f1189d0769f", null ]
     ] ],
-    [ "RootSignatureFlag", "d9/de0/group___amuse_r_h_i.html#ga64fd50d6d5d9c1b5bea4da324b7f0e7c", [
-      [ "RootSignatureFlag::AllowInputAssemblerInputLayout", "d9/de0/group___amuse_r_h_i.html#gga64fd50d6d5d9c1b5bea4da324b7f0e7cae8f4157425bacfb37b6a134473e0592a", null ]
+    [ "RootSignatureFlag", "d9/de0/group___amuse_r_h_i_ga64fd50d6d5d9c1b5bea4da324b7f0e7c.html#ga64fd50d6d5d9c1b5bea4da324b7f0e7c", [
+      [ "RootSignatureFlag::AllowInputAssemblerInputLayout", "d9/de0/group___amuse_r_h_i_ga64fd50d6d5d9c1b5bea4da324b7f0e7c.html#gga64fd50d6d5d9c1b5bea4da324b7f0e7cae8f4157425bacfb37b6a134473e0592a", null ]
     ] ],
-    [ "Semantic", "d9/de0/group___amuse_r_h_i.html#gafe24edce144e3a9d1465033e72dcf473", [
-      [ "Semantic::Position", "d9/de0/group___amuse_r_h_i.html#ggafe24edce144e3a9d1465033e72dcf473a52f5e0bc3859bc5f5e25130b6c7e8881", null ],
-      [ "Semantic::Normal", "d9/de0/group___amuse_r_h_i.html#ggafe24edce144e3a9d1465033e72dcf473a960b44c579bc2f6818d2daaf9e4c16f0", null ],
-      [ "Semantic::Binormal", "d9/de0/group___amuse_r_h_i.html#ggafe24edce144e3a9d1465033e72dcf473a283c29d0adbe0d46bc7229f181c6e7da", null ],
-      [ "Semantic::Tangent", "d9/de0/group___amuse_r_h_i.html#ggafe24edce144e3a9d1465033e72dcf473a541671cb1be09d76a84ba1a873ec3fc8", null ],
-      [ "Semantic::Color", "d9/de0/group___amuse_r_h_i.html#ggafe24edce144e3a9d1465033e72dcf473acb5feb1b7314637725a2e73bdc9f7295", null ],
-      [ "Semantic::TexCoord", "d9/de0/group___amuse_r_h_i.html#ggafe24edce144e3a9d1465033e72dcf473a0e2b5590baa26db752b704e59869828d", null ],
-      [ "Semantic::BlendIndices", "d9/de0/group___amuse_r_h_i.html#ggafe24edce144e3a9d1465033e72dcf473a0ce5f1db06d7f4853171d93bfe75760d", null ],
-      [ "Semantic::BlendWeights", "d9/de0/group___amuse_r_h_i.html#ggafe24edce144e3a9d1465033e72dcf473a0d2152118065f037833a21d6b21898d5", null ],
-      [ "Semantic::PointSize", "d9/de0/group___amuse_r_h_i.html#ggafe24edce144e3a9d1465033e72dcf473a1c93804fed70f0bf705d320ad4504ba0", null ]
+    [ "Semantic", "d9/de0/group___amuse_r_h_i_gafe24edce144e3a9d1465033e72dcf473.html#gafe24edce144e3a9d1465033e72dcf473", [
+      [ "Semantic::Position", "d9/de0/group___amuse_r_h_i_gafe24edce144e3a9d1465033e72dcf473.html#ggafe24edce144e3a9d1465033e72dcf473a52f5e0bc3859bc5f5e25130b6c7e8881", null ],
+      [ "Semantic::Normal", "d9/de0/group___amuse_r_h_i_gafe24edce144e3a9d1465033e72dcf473.html#ggafe24edce144e3a9d1465033e72dcf473a960b44c579bc2f6818d2daaf9e4c16f0", null ],
+      [ "Semantic::Binormal", "d9/de0/group___amuse_r_h_i_gafe24edce144e3a9d1465033e72dcf473.html#ggafe24edce144e3a9d1465033e72dcf473a283c29d0adbe0d46bc7229f181c6e7da", null ],
+      [ "Semantic::Tangent", "d9/de0/group___amuse_r_h_i_gafe24edce144e3a9d1465033e72dcf473.html#ggafe24edce144e3a9d1465033e72dcf473a541671cb1be09d76a84ba1a873ec3fc8", null ],
+      [ "Semantic::Color", "d9/de0/group___amuse_r_h_i_gafe24edce144e3a9d1465033e72dcf473.html#ggafe24edce144e3a9d1465033e72dcf473acb5feb1b7314637725a2e73bdc9f7295", null ],
+      [ "Semantic::TexCoord", "d9/de0/group___amuse_r_h_i_gafe24edce144e3a9d1465033e72dcf473.html#ggafe24edce144e3a9d1465033e72dcf473a0e2b5590baa26db752b704e59869828d", null ],
+      [ "Semantic::BlendIndices", "d9/de0/group___amuse_r_h_i_gafe24edce144e3a9d1465033e72dcf473.html#ggafe24edce144e3a9d1465033e72dcf473a0ce5f1db06d7f4853171d93bfe75760d", null ],
+      [ "Semantic::BlendWeights", "d9/de0/group___amuse_r_h_i_gafe24edce144e3a9d1465033e72dcf473.html#ggafe24edce144e3a9d1465033e72dcf473a0d2152118065f037833a21d6b21898d5", null ],
+      [ "Semantic::PointSize", "d9/de0/group___amuse_r_h_i_gafe24edce144e3a9d1465033e72dcf473.html#ggafe24edce144e3a9d1465033e72dcf473a1c93804fed70f0bf705d320ad4504ba0", null ]
     ] ],
     [ "ShaderStage", "d9/de0/group___amuse_r_h_i.html#gaf92621c7b7f502f3fcad37b75d151761", null ],
     [ "StencilOp", "d9/de0/group___amuse_r_h_i.html#ga625ed2b4e7f3a9362a5194b244fc931a", null ],
-    [ "TextureAddress", "d9/de0/group___amuse_r_h_i.html#gac06d679b414bf6ad84118e6e9712fd58", [
-      [ "TextureAddress::Repeat", "d9/de0/group___amuse_r_h_i.html#ggac06d679b414bf6ad84118e6e9712fd58a7020426cfb0a204051be4b3053d2acc8", null ],
-      [ "TextureAddress::Clamp", "d9/de0/group___amuse_r_h_i.html#ggac06d679b414bf6ad84118e6e9712fd58a08825280e3f8137556325061ba67ff8c", null ],
-      [ "TextureAddress::Mirror", "d9/de0/group___amuse_r_h_i.html#ggac06d679b414bf6ad84118e6e9712fd58a2403def5083f02105e7802b3b315681e", null ]
+    [ "TextureAddress", "d9/de0/group___amuse_r_h_i_gac06d679b414bf6ad84118e6e9712fd58.html#gac06d679b414bf6ad84118e6e9712fd58", [
+      [ "TextureAddress::Repeat", "d9/de0/group___amuse_r_h_i_gac06d679b414bf6ad84118e6e9712fd58.html#ggac06d679b414bf6ad84118e6e9712fd58a7020426cfb0a204051be4b3053d2acc8", null ],
+      [ "TextureAddress::Clamp", "d9/de0/group___amuse_r_h_i_gac06d679b414bf6ad84118e6e9712fd58.html#ggac06d679b414bf6ad84118e6e9712fd58a08825280e3f8137556325061ba67ff8c", null ],
+      [ "TextureAddress::Mirror", "d9/de0/group___amuse_r_h_i_gac06d679b414bf6ad84118e6e9712fd58.html#ggac06d679b414bf6ad84118e6e9712fd58a2403def5083f02105e7802b3b315681e", null ]
     ] ],
-    [ "TextureFilter", "d9/de0/group___amuse_r_h_i.html#ga31cb9388ce96eb6804a294bba227df5b", [
-      [ "TextureFilter::Point", "d9/de0/group___amuse_r_h_i.html#gga31cb9388ce96eb6804a294bba227df5ba2a3cd5946cfd317eb99c3d32e35e2d4c", null ],
-      [ "TextureFilter::Linear", "d9/de0/group___amuse_r_h_i.html#gga31cb9388ce96eb6804a294bba227df5ba32a843da6ea40ab3b17a3421ccdf671b", null ]
+    [ "TextureFilter", "d9/de0/group___amuse_r_h_i_ga31cb9388ce96eb6804a294bba227df5b.html#ga31cb9388ce96eb6804a294bba227df5b", [
+      [ "TextureFilter::Point", "d9/de0/group___amuse_r_h_i_ga31cb9388ce96eb6804a294bba227df5b.html#gga31cb9388ce96eb6804a294bba227df5ba2a3cd5946cfd317eb99c3d32e35e2d4c", null ],
+      [ "TextureFilter::Linear", "d9/de0/group___amuse_r_h_i_ga31cb9388ce96eb6804a294bba227df5b.html#gga31cb9388ce96eb6804a294bba227df5ba32a843da6ea40ab3b17a3421ccdf671b", null ]
     ] ],
-    [ "TextureFlag", "d9/de0/group___amuse_r_h_i.html#ga5f6adaef88dbb3bf0e2cc034cba82cda", [
-      [ "TextureFlag::ShaderResource", "d9/de0/group___amuse_r_h_i.html#gga5f6adaef88dbb3bf0e2cc034cba82cdaada4ef1bdf2d2fce1cfc6fd62870a44ef", null ],
-      [ "TextureFlag::UnorderedAccess", "d9/de0/group___amuse_r_h_i.html#gga5f6adaef88dbb3bf0e2cc034cba82cdaa11c4aac157309541bd3fc4735e727683", null ]
+    [ "TextureFlag", "d9/de0/group___amuse_r_h_i_ga5f6adaef88dbb3bf0e2cc034cba82cda.html#ga5f6adaef88dbb3bf0e2cc034cba82cda", [
+      [ "TextureFlag::ShaderResource", "d9/de0/group___amuse_r_h_i_ga5f6adaef88dbb3bf0e2cc034cba82cda.html#gga5f6adaef88dbb3bf0e2cc034cba82cdaada4ef1bdf2d2fce1cfc6fd62870a44ef", null ],
+      [ "TextureFlag::UnorderedAccess", "d9/de0/group___amuse_r_h_i_ga5f6adaef88dbb3bf0e2cc034cba82cda.html#gga5f6adaef88dbb3bf0e2cc034cba82cdaa11c4aac157309541bd3fc4735e727683", null ]
     ] ],
-    [ "TextureFormat", "d9/de0/group___amuse_r_h_i.html#gacbce0af680bcfc0a5b989bcfc6583e0f", [
-      [ "TextureFormat::Unknown", "d9/de0/group___amuse_r_h_i.html#ggacbce0af680bcfc0a5b989bcfc6583e0fa88183b946cc5f0e8c96b2e66e1c74a7e", null ],
-      [ "Amuse::TextureFormat::/home/runner/work/AmuseEngine/AmuseEngine/Engine/Source/Runtime/RHI/Public/Amuse/RHI/Types/TextureFormat.h", "d9/de0/group___amuse_r_h_i.html#ggacbce0af680bcfc0a5b989bcfc6583e0fa724f24c7f863ff43cdb588d56c9d6492", null ],
-      [ "TextureFormat::SDR", "d9/de0/group___amuse_r_h_i.html#ggacbce0af680bcfc0a5b989bcfc6583e0fa9c38ebb7384dada637be8899efa68e6f", null ],
-      [ "TextureFormat::HDR", "d9/de0/group___amuse_r_h_i.html#ggacbce0af680bcfc0a5b989bcfc6583e0fa6cad826248cd3f4e93da71e7b49928e3", null ],
-      [ "TextureFormat::RGBA32", "d9/de0/group___amuse_r_h_i.html#ggacbce0af680bcfc0a5b989bcfc6583e0fad9e8e4a9228ed56eceb29f0a1223b02b", null ],
-      [ "TextureFormat::RGBA16", "d9/de0/group___amuse_r_h_i.html#ggacbce0af680bcfc0a5b989bcfc6583e0fa50989efe15b375dce8ba3a5714fe2543", null ],
-      [ "TextureFormat::RGBA8", "d9/de0/group___amuse_r_h_i.html#ggacbce0af680bcfc0a5b989bcfc6583e0fab4b279046a02077466fa26cabb00c642", null ],
-      [ "TextureFormat::RGB32", "d9/de0/group___amuse_r_h_i.html#ggacbce0af680bcfc0a5b989bcfc6583e0face70a5db6685e6d210c3f905a8fa7d4c", null ],
-      [ "TextureFormat::RGB8", "d9/de0/group___amuse_r_h_i.html#ggacbce0af680bcfc0a5b989bcfc6583e0fa165c6379d01617e12de274a3952efa63", null ],
-      [ "TextureFormat::RG32", "d9/de0/group___amuse_r_h_i.html#ggacbce0af680bcfc0a5b989bcfc6583e0faa8725115efc714421823b7397f9c130c", null ],
-      [ "TextureFormat::RG16", "d9/de0/group___amuse_r_h_i.html#ggacbce0af680bcfc0a5b989bcfc6583e0fa2b66caa416f0a28686ade3fc30ab223a", null ],
-      [ "TextureFormat::RG8", "d9/de0/group___amuse_r_h_i.html#ggacbce0af680bcfc0a5b989bcfc6583e0fa0367a93b9e3e7aa2fbe9802d80298e46", null ],
-      [ "TextureFormat::R32", "d9/de0/group___amuse_r_h_i.html#ggacbce0af680bcfc0a5b989bcfc6583e0fa1b5c31a494189e0415d5623f8b92a419", null ],
-      [ "TextureFormat::R16", "d9/de0/group___amuse_r_h_i.html#ggacbce0af680bcfc0a5b989bcfc6583e0fa9a486e1a3c543c7c58e1cc8086dc4239", null ],
-      [ "TextureFormat::R8", "d9/de0/group___amuse_r_h_i.html#ggacbce0af680bcfc0a5b989bcfc6583e0facfff813d86d447fa2a9c858650ebbb90", null ],
-      [ "TextureFormat::BC1", "d9/de0/group___amuse_r_h_i.html#ggacbce0af680bcfc0a5b989bcfc6583e0fa88ec7b741e9c3ccac7b61b1301ba11e8", null ],
-      [ "TextureFormat::BC2", "d9/de0/group___amuse_r_h_i.html#ggacbce0af680bcfc0a5b989bcfc6583e0fa4d2bc7c468d854a7046ae1ca6b7cf64e", null ],
-      [ "TextureFormat::BC3", "d9/de0/group___amuse_r_h_i.html#ggacbce0af680bcfc0a5b989bcfc6583e0faa9e959126c7c9b4230b56975a1ea015d", null ],
-      [ "TextureFormat::BC4", "d9/de0/group___amuse_r_h_i.html#ggacbce0af680bcfc0a5b989bcfc6583e0fae64cdc788598d5cea29e5c14ce1fc381", null ],
-      [ "TextureFormat::BC5", "d9/de0/group___amuse_r_h_i.html#ggacbce0af680bcfc0a5b989bcfc6583e0face789f624a22f7c5e6baafe4f4fe9e4d", null ],
-      [ "TextureFormat::BC6H", "d9/de0/group___amuse_r_h_i.html#ggacbce0af680bcfc0a5b989bcfc6583e0faaad676c687f275f58d8aad95bf9b1b94", null ],
-      [ "TextureFormat::BC7", "d9/de0/group___amuse_r_h_i.html#ggacbce0af680bcfc0a5b989bcfc6583e0faaa51ef981f910b0ec9ed8b82c65be593", null ],
-      [ "TextureFormat::RGBA8_SRGB", "d9/de0/group___amuse_r_h_i.html#ggacbce0af680bcfc0a5b989bcfc6583e0fae5a76309919d3c679c642c13125eb930", null ],
-      [ "TextureFormat::BC1_SRGB", "d9/de0/group___amuse_r_h_i.html#ggacbce0af680bcfc0a5b989bcfc6583e0fa8728d460624388e7fcd0b5ea21b7e996", null ],
-      [ "TextureFormat::BC2_SRGB", "d9/de0/group___amuse_r_h_i.html#ggacbce0af680bcfc0a5b989bcfc6583e0fad8823158bc0323e65b353b99dbec42c8", null ],
-      [ "TextureFormat::BC3_SRGB", "d9/de0/group___amuse_r_h_i.html#ggacbce0af680bcfc0a5b989bcfc6583e0fa02bf65916f20a9561b709107c60cccf2", null ],
-      [ "TextureFormat::BC7_SRGB", "d9/de0/group___amuse_r_h_i.html#ggacbce0af680bcfc0a5b989bcfc6583e0fa1f2d0087f03ce3d88e442258ccd7c898", null ],
-      [ "Amuse::TextureFormat::/home/runner/work/AmuseEngine/AmuseEngine/Engine/Source/Runtime/RHI/Public/Amuse/RHI/Types/TextureFormat.h", "d9/de0/group___amuse_r_h_i.html#ggacbce0af680bcfc0a5b989bcfc6583e0fa724f24c7f863ff43cdb588d56c9d6492", null ],
-      [ "TextureFormat::D32S8", "d9/de0/group___amuse_r_h_i.html#ggacbce0af680bcfc0a5b989bcfc6583e0faf64446518b4b850a4b2d6624ecff5791", null ],
-      [ "TextureFormat::D32", "d9/de0/group___amuse_r_h_i.html#ggacbce0af680bcfc0a5b989bcfc6583e0faa6b2eecc4252564f599b9a979e4e0602", null ],
-      [ "TextureFormat::D24S8", "d9/de0/group___amuse_r_h_i.html#ggacbce0af680bcfc0a5b989bcfc6583e0fa2468f278a5fb00d246360a43b4c39f31", null ],
-      [ "TextureFormat::D16", "d9/de0/group___amuse_r_h_i.html#ggacbce0af680bcfc0a5b989bcfc6583e0fa6fd9ec81643ee5a57f85a71951bfe13d", null ]
+    [ "TextureFormat", "d9/de0/group___amuse_r_h_i_gacbce0af680bcfc0a5b989bcfc6583e0f.html#gacbce0af680bcfc0a5b989bcfc6583e0f", [
+      [ "TextureFormat::Unknown", "d9/de0/group___amuse_r_h_i_gacbce0af680bcfc0a5b989bcfc6583e0f.html#ggacbce0af680bcfc0a5b989bcfc6583e0fa88183b946cc5f0e8c96b2e66e1c74a7e", null ],
+      [ "Amuse::TextureFormat::/home/runner/work/AmuseEngine/AmuseEngine/Engine/Source/Runtime/RHI/Public/Amuse/RHI/Types/TextureFormat.h", "d9/de0/group___amuse_r_h_i_gacbce0af680bcfc0a5b989bcfc6583e0f.html#ggacbce0af680bcfc0a5b989bcfc6583e0fa724f24c7f863ff43cdb588d56c9d6492", null ],
+      [ "TextureFormat::SDR", "d9/de0/group___amuse_r_h_i_gacbce0af680bcfc0a5b989bcfc6583e0f.html#ggacbce0af680bcfc0a5b989bcfc6583e0fa9c38ebb7384dada637be8899efa68e6f", null ],
+      [ "TextureFormat::HDR", "d9/de0/group___amuse_r_h_i_gacbce0af680bcfc0a5b989bcfc6583e0f.html#ggacbce0af680bcfc0a5b989bcfc6583e0fa6cad826248cd3f4e93da71e7b49928e3", null ],
+      [ "TextureFormat::RGBA32", "d9/de0/group___amuse_r_h_i_gacbce0af680bcfc0a5b989bcfc6583e0f.html#ggacbce0af680bcfc0a5b989bcfc6583e0fad9e8e4a9228ed56eceb29f0a1223b02b", null ],
+      [ "TextureFormat::RGBA16", "d9/de0/group___amuse_r_h_i_gacbce0af680bcfc0a5b989bcfc6583e0f.html#ggacbce0af680bcfc0a5b989bcfc6583e0fa50989efe15b375dce8ba3a5714fe2543", null ],
+      [ "TextureFormat::RGBA8", "d9/de0/group___amuse_r_h_i_gacbce0af680bcfc0a5b989bcfc6583e0f.html#ggacbce0af680bcfc0a5b989bcfc6583e0fab4b279046a02077466fa26cabb00c642", null ],
+      [ "TextureFormat::RGB32", "d9/de0/group___amuse_r_h_i_gacbce0af680bcfc0a5b989bcfc6583e0f.html#ggacbce0af680bcfc0a5b989bcfc6583e0face70a5db6685e6d210c3f905a8fa7d4c", null ],
+      [ "TextureFormat::RGB8", "d9/de0/group___amuse_r_h_i_gacbce0af680bcfc0a5b989bcfc6583e0f.html#ggacbce0af680bcfc0a5b989bcfc6583e0fa165c6379d01617e12de274a3952efa63", null ],
+      [ "TextureFormat::RG32", "d9/de0/group___amuse_r_h_i_gacbce0af680bcfc0a5b989bcfc6583e0f.html#ggacbce0af680bcfc0a5b989bcfc6583e0faa8725115efc714421823b7397f9c130c", null ],
+      [ "TextureFormat::RG16", "d9/de0/group___amuse_r_h_i_gacbce0af680bcfc0a5b989bcfc6583e0f.html#ggacbce0af680bcfc0a5b989bcfc6583e0fa2b66caa416f0a28686ade3fc30ab223a", null ],
+      [ "TextureFormat::RG8", "d9/de0/group___amuse_r_h_i_gacbce0af680bcfc0a5b989bcfc6583e0f.html#ggacbce0af680bcfc0a5b989bcfc6583e0fa0367a93b9e3e7aa2fbe9802d80298e46", null ],
+      [ "TextureFormat::R32", "d9/de0/group___amuse_r_h_i_gacbce0af680bcfc0a5b989bcfc6583e0f.html#ggacbce0af680bcfc0a5b989bcfc6583e0fa1b5c31a494189e0415d5623f8b92a419", null ],
+      [ "TextureFormat::R16", "d9/de0/group___amuse_r_h_i_gacbce0af680bcfc0a5b989bcfc6583e0f.html#ggacbce0af680bcfc0a5b989bcfc6583e0fa9a486e1a3c543c7c58e1cc8086dc4239", null ],
+      [ "TextureFormat::R8", "d9/de0/group___amuse_r_h_i_gacbce0af680bcfc0a5b989bcfc6583e0f.html#ggacbce0af680bcfc0a5b989bcfc6583e0facfff813d86d447fa2a9c858650ebbb90", null ],
+      [ "TextureFormat::BC1", "d9/de0/group___amuse_r_h_i_gacbce0af680bcfc0a5b989bcfc6583e0f.html#ggacbce0af680bcfc0a5b989bcfc6583e0fa88ec7b741e9c3ccac7b61b1301ba11e8", null ],
+      [ "TextureFormat::BC2", "d9/de0/group___amuse_r_h_i_gacbce0af680bcfc0a5b989bcfc6583e0f.html#ggacbce0af680bcfc0a5b989bcfc6583e0fa4d2bc7c468d854a7046ae1ca6b7cf64e", null ],
+      [ "TextureFormat::BC3", "d9/de0/group___amuse_r_h_i_gacbce0af680bcfc0a5b989bcfc6583e0f.html#ggacbce0af680bcfc0a5b989bcfc6583e0faa9e959126c7c9b4230b56975a1ea015d", null ],
+      [ "TextureFormat::BC4", "d9/de0/group___amuse_r_h_i_gacbce0af680bcfc0a5b989bcfc6583e0f.html#ggacbce0af680bcfc0a5b989bcfc6583e0fae64cdc788598d5cea29e5c14ce1fc381", null ],
+      [ "TextureFormat::BC5", "d9/de0/group___amuse_r_h_i_gacbce0af680bcfc0a5b989bcfc6583e0f.html#ggacbce0af680bcfc0a5b989bcfc6583e0face789f624a22f7c5e6baafe4f4fe9e4d", null ],
+      [ "TextureFormat::BC6H", "d9/de0/group___amuse_r_h_i_gacbce0af680bcfc0a5b989bcfc6583e0f.html#ggacbce0af680bcfc0a5b989bcfc6583e0faaad676c687f275f58d8aad95bf9b1b94", null ],
+      [ "TextureFormat::BC7", "d9/de0/group___amuse_r_h_i_gacbce0af680bcfc0a5b989bcfc6583e0f.html#ggacbce0af680bcfc0a5b989bcfc6583e0faaa51ef981f910b0ec9ed8b82c65be593", null ],
+      [ "TextureFormat::RGBA8_SRGB", "d9/de0/group___amuse_r_h_i_gacbce0af680bcfc0a5b989bcfc6583e0f.html#ggacbce0af680bcfc0a5b989bcfc6583e0fae5a76309919d3c679c642c13125eb930", null ],
+      [ "TextureFormat::BC1_SRGB", "d9/de0/group___amuse_r_h_i_gacbce0af680bcfc0a5b989bcfc6583e0f.html#ggacbce0af680bcfc0a5b989bcfc6583e0fa8728d460624388e7fcd0b5ea21b7e996", null ],
+      [ "TextureFormat::BC2_SRGB", "d9/de0/group___amuse_r_h_i_gacbce0af680bcfc0a5b989bcfc6583e0f.html#ggacbce0af680bcfc0a5b989bcfc6583e0fad8823158bc0323e65b353b99dbec42c8", null ],
+      [ "TextureFormat::BC3_SRGB", "d9/de0/group___amuse_r_h_i_gacbce0af680bcfc0a5b989bcfc6583e0f.html#ggacbce0af680bcfc0a5b989bcfc6583e0fa02bf65916f20a9561b709107c60cccf2", null ],
+      [ "TextureFormat::BC7_SRGB", "d9/de0/group___amuse_r_h_i_gacbce0af680bcfc0a5b989bcfc6583e0f.html#ggacbce0af680bcfc0a5b989bcfc6583e0fa1f2d0087f03ce3d88e442258ccd7c898", null ],
+      [ "Amuse::TextureFormat::/home/runner/work/AmuseEngine/AmuseEngine/Engine/Source/Runtime/RHI/Public/Amuse/RHI/Types/TextureFormat.h", "d9/de0/group___amuse_r_h_i_gacbce0af680bcfc0a5b989bcfc6583e0f.html#ggacbce0af680bcfc0a5b989bcfc6583e0fa724f24c7f863ff43cdb588d56c9d6492", null ],
+      [ "TextureFormat::D32S8", "d9/de0/group___amuse_r_h_i_gacbce0af680bcfc0a5b989bcfc6583e0f.html#ggacbce0af680bcfc0a5b989bcfc6583e0faf64446518b4b850a4b2d6624ecff5791", null ],
+      [ "TextureFormat::D32", "d9/de0/group___amuse_r_h_i_gacbce0af680bcfc0a5b989bcfc6583e0f.html#ggacbce0af680bcfc0a5b989bcfc6583e0faa6b2eecc4252564f599b9a979e4e0602", null ],
+      [ "TextureFormat::D24S8", "d9/de0/group___amuse_r_h_i_gacbce0af680bcfc0a5b989bcfc6583e0f.html#ggacbce0af680bcfc0a5b989bcfc6583e0fa2468f278a5fb00d246360a43b4c39f31", null ],
+      [ "TextureFormat::D16", "d9/de0/group___amuse_r_h_i_gacbce0af680bcfc0a5b989bcfc6583e0f.html#ggacbce0af680bcfc0a5b989bcfc6583e0fa6fd9ec81643ee5a57f85a71951bfe13d", null ]
     ] ],
-    [ "TextureState", "d9/de0/group___amuse_r_h_i.html#gae94f6a1c61028cab9327a11db08935e4", [
-      [ "TextureState::Unknown", "d9/de0/group___amuse_r_h_i.html#ggae94f6a1c61028cab9327a11db08935e4a88183b946cc5f0e8c96b2e66e1c74a7e", null ]
+    [ "TextureState", "d9/de0/group___amuse_r_h_i_gae94f6a1c61028cab9327a11db08935e4.html#gae94f6a1c61028cab9327a11db08935e4", [
+      [ "TextureState::Unknown", "d9/de0/group___amuse_r_h_i_gae94f6a1c61028cab9327a11db08935e4.html#ggae94f6a1c61028cab9327a11db08935e4a88183b946cc5f0e8c96b2e66e1c74a7e", null ]
     ] ],
-    [ "TextureType", "d9/de0/group___amuse_r_h_i.html#ga65468556d79304b3a4bfc464cc12e549", [
-      [ "TextureType::Texture1D", "d9/de0/group___amuse_r_h_i.html#gga65468556d79304b3a4bfc464cc12e549adc7f989aa32631adaea4eb6a609b0de4", null ],
-      [ "TextureType::Texture2D", "d9/de0/group___amuse_r_h_i.html#gga65468556d79304b3a4bfc464cc12e549aa6e2bae752d3bf4e34cb392bca789995", null ],
-      [ "TextureType::Texture3D", "d9/de0/group___amuse_r_h_i.html#gga65468556d79304b3a4bfc464cc12e549a89c915587e16bcf8963be7cf41a0d9fd", null ],
-      [ "TextureType::Cube", "d9/de0/group___amuse_r_h_i.html#gga65468556d79304b3a4bfc464cc12e549aa296104f0c61a9cf39f4824d05315e12", null ]
+    [ "TextureType", "d9/de0/group___amuse_r_h_i_ga65468556d79304b3a4bfc464cc12e549.html#ga65468556d79304b3a4bfc464cc12e549", [
+      [ "TextureType::Texture1D", "d9/de0/group___amuse_r_h_i_ga65468556d79304b3a4bfc464cc12e549.html#gga65468556d79304b3a4bfc464cc12e549adc7f989aa32631adaea4eb6a609b0de4", null ],
+      [ "TextureType::Texture2D", "d9/de0/group___amuse_r_h_i_ga65468556d79304b3a4bfc464cc12e549.html#gga65468556d79304b3a4bfc464cc12e549aa6e2bae752d3bf4e34cb392bca789995", null ],
+      [ "TextureType::Texture3D", "d9/de0/group___amuse_r_h_i_ga65468556d79304b3a4bfc464cc12e549.html#gga65468556d79304b3a4bfc464cc12e549a89c915587e16bcf8963be7cf41a0d9fd", null ],
+      [ "TextureType::Cube", "d9/de0/group___amuse_r_h_i_ga65468556d79304b3a4bfc464cc12e549.html#gga65468556d79304b3a4bfc464cc12e549aa296104f0c61a9cf39f4824d05315e12", null ]
     ] ],
-    [ "Topology", "d9/de0/group___amuse_r_h_i.html#ga26e19d95ae40e67f3fd7119ffaec3dd1", [
-      [ "Topology::PointList", "d9/de0/group___amuse_r_h_i.html#gga26e19d95ae40e67f3fd7119ffaec3dd1a1a18ff71b3df3e362a2489eef4b30003", null ],
-      [ "Topology::LineList", "d9/de0/group___amuse_r_h_i.html#gga26e19d95ae40e67f3fd7119ffaec3dd1a596e1b7afe8925f3f578c716d5af8fef", null ],
-      [ "Topology::TriangleList", "d9/de0/group___amuse_r_h_i.html#gga26e19d95ae40e67f3fd7119ffaec3dd1af5beeab7a1f452e5b0e9b03b44f0de92", null ]
+    [ "Topology", "d9/de0/group___amuse_r_h_i_ga26e19d95ae40e67f3fd7119ffaec3dd1.html#ga26e19d95ae40e67f3fd7119ffaec3dd1", [
+      [ "Topology::PointList", "d9/de0/group___amuse_r_h_i_ga26e19d95ae40e67f3fd7119ffaec3dd1.html#gga26e19d95ae40e67f3fd7119ffaec3dd1a1a18ff71b3df3e362a2489eef4b30003", null ],
+      [ "Topology::LineList", "d9/de0/group___amuse_r_h_i_ga26e19d95ae40e67f3fd7119ffaec3dd1.html#gga26e19d95ae40e67f3fd7119ffaec3dd1a596e1b7afe8925f3f578c716d5af8fef", null ],
+      [ "Topology::TriangleList", "d9/de0/group___amuse_r_h_i_ga26e19d95ae40e67f3fd7119ffaec3dd1.html#gga26e19d95ae40e67f3fd7119ffaec3dd1af5beeab7a1f452e5b0e9b03b44f0de92", null ]
     ] ],
-    [ "VertexInputRate", "d9/de0/group___amuse_r_h_i.html#gab3114c81e7d20fed2071a469fd743dd3", [
-      [ "VertexInputRate::Vertex", "d9/de0/group___amuse_r_h_i.html#ggab3114c81e7d20fed2071a469fd743dd3ab22b929ba52471a02d18bb3a4e4472e6", null ],
-      [ "VertexInputRate::Instance", "d9/de0/group___amuse_r_h_i.html#ggab3114c81e7d20fed2071a469fd743dd3ad9a17c1c9e8ef6866e4dbeef41c741b2", null ]
+    [ "VertexInputRate", "d9/de0/group___amuse_r_h_i_gab3114c81e7d20fed2071a469fd743dd3.html#gab3114c81e7d20fed2071a469fd743dd3", [
+      [ "VertexInputRate::Vertex", "d9/de0/group___amuse_r_h_i_gab3114c81e7d20fed2071a469fd743dd3.html#ggab3114c81e7d20fed2071a469fd743dd3ab22b929ba52471a02d18bb3a4e4472e6", null ],
+      [ "VertexInputRate::Instance", "d9/de0/group___amuse_r_h_i_gab3114c81e7d20fed2071a469fd743dd3.html#ggab3114c81e7d20fed2071a469fd743dd3ad9a17c1c9e8ef6866e4dbeef41c741b2", null ]
     ] ]
 ];

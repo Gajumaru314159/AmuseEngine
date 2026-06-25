@@ -2,10 +2,10 @@ var group___amuse_r_p_i =
 [
     [ "FGResources", "d7/d17/class_amuse_1_1_f_g_resources.html", [
       [ "FGResources", "d7/d17/class_amuse_1_1_f_g_resources.html#a22d0b77cf522076c6ce54792ba36b758", null ],
-      [ "getBuffer", "d7/d17/class_amuse_1_1_f_g_resources.html#a215a0b899b7b977bfcc212c7edd0182d", null ],
-      [ "getBufferDesc", "d7/d17/class_amuse_1_1_f_g_resources.html#a8a10a2651e962393caaf7d6aaabe3529", null ],
-      [ "getTexture", "d7/d17/class_amuse_1_1_f_g_resources.html#a402238c136f9652e97a6f04fab96169a", null ],
-      [ "getTextureDesc", "d7/d17/class_amuse_1_1_f_g_resources.html#af6b8f59dc835f634d8bf203efe54afc0", null ]
+      [ "getBuffer", "d7/d17/class_amuse_1_1_f_g_resources_a215a0b899b7b977bfcc212c7edd0182d.html#a215a0b899b7b977bfcc212c7edd0182d", null ],
+      [ "getBufferDesc", "d7/d17/class_amuse_1_1_f_g_resources_a8a10a2651e962393caaf7d6aaabe3529.html#a8a10a2651e962393caaf7d6aaabe3529", null ],
+      [ "getTexture", "d7/d17/class_amuse_1_1_f_g_resources_a402238c136f9652e97a6f04fab96169a.html#a402238c136f9652e97a6f04fab96169a", null ],
+      [ "getTextureDesc", "d7/d17/class_amuse_1_1_f_g_resources_af6b8f59dc835f634d8bf203efe54afc0.html#af6b8f59dc835f634d8bf203efe54afc0", null ]
     ] ],
     [ "FGBuilder", "de/dd5/class_amuse_1_1_f_g_builder.html", [
       [ "FGBuilder", "de/dd5/class_amuse_1_1_f_g_builder.html#ab779732f5f14090bb731f2ceb8e8d30b", null ],
@@ -25,7 +25,7 @@ var group___amuse_r_p_i =
       [ "FG", "d9/d73/class_amuse_1_1_f_g.html#ab28d9bd9048393ed27f1085677a266bb", null ],
       [ "addPass", "d9/d73/class_amuse_1_1_f_g.html#ad67d84fda90cf9f26388dad98abb9dc5", null ],
       [ "addPass", "d9/d73/class_amuse_1_1_f_g.html#a018a5d5c8749d504fefb734670c73f53", null ],
-      [ "compile", "d9/d73/class_amuse_1_1_f_g.html#acafe5ede9412674127cd08795647f26a", null ],
+      [ "compile", "d9/d73/class_amuse_1_1_f_g_acafe5ede9412674127cd08795647f26a.html#acafe5ede9412674127cd08795647f26a", null ],
       [ "debugOutput", "d9/d73/class_amuse_1_1_f_g.html#ae629f6ff70e206a0e672848fcd0cf2bc", null ],
       [ "execute", "d9/d73/class_amuse_1_1_f_g.html#a5892204f060cd62351056c192225374b", null ],
       [ "getBufferDesc", "d9/d73/class_amuse_1_1_f_g.html#a8a10a2651e962393caaf7d6aaabe3529", null ],
@@ -70,7 +70,7 @@ var group___amuse_r_p_i =
     [ "Graphics", "d7/df8/class_amuse_1_1_graphics.html", [
       [ "Graphics", "d7/df8/class_amuse_1_1_graphics.html#a362fec10428cdbc5ab3eaf43ff4be62b", null ],
       [ "~Graphics", "d7/df8/class_amuse_1_1_graphics.html#a6822b013923c974b1dde915948dd1d34", null ],
-      [ "addScene", "d7/df8/class_amuse_1_1_graphics.html#a6d4a849f3f80b8907cb8a5a753672a4f", null ],
+      [ "addScene", "d7/df8/class_amuse_1_1_graphics_a6d4a849f3f80b8907cb8a5a753672a4f.html#a6d4a849f3f80b8907cb8a5a753672a4f", null ],
       [ "beginForParallel", "d7/df8/class_amuse_1_1_graphics.html#af2e3cc3fae42369302203e658ca58d1a", null ],
       [ "execute", "d7/df8/class_amuse_1_1_graphics.html#a61af3e60b94ae3e748f6fbac1e794af7", null ],
       [ "getFGData", "d7/df8/class_amuse_1_1_graphics.html#ab3ca5f1b4b47cfd330bb29a5d30a7dc9", null ],
@@ -95,7 +95,7 @@ var group___amuse_r_p_i =
       [ "hasScalar", "d0/dfb/class_amuse_1_1_material.html#a7d5b0aa7a83629ae2035bdfd88d139cd", null ],
       [ "hasTexture", "d0/dfb/class_amuse_1_1_material.html#a06ab549699ba39d16137d4150c54c9d6", null ],
       [ "hasVector", "d0/dfb/class_amuse_1_1_material.html#a0b03fa0758582f54fe02df2d6e378fae", null ],
-      [ "prepare", "d0/dfb/class_amuse_1_1_material.html#a91d9302f4aa7d1beab1d829f75d541f0", null ],
+      [ "prepare", "d0/dfb/class_amuse_1_1_material_a91d9302f4aa7d1beab1d829f75d541f0.html#a91d9302f4aa7d1beab1d829f75d541f0", null ],
       [ "record", "d0/dfb/class_amuse_1_1_material.html#af9266af7c36f1acccdbdd54c2c18ac56", null ],
       [ "setBuffer", "d0/dfb/class_amuse_1_1_material.html#abda89543d7139fb6275b5b559d0b5535", null ],
       [ "setInteger", "d0/dfb/class_amuse_1_1_material.html#a7276fe016e49e6453b4d78c26c3a6d66", null ],
@@ -131,7 +131,7 @@ var group___amuse_r_p_i =
       [ "hasScalar", "d4/d9d/class_amuse_1_1_material_block.html#a7d5b0aa7a83629ae2035bdfd88d139cd", null ],
       [ "hasTexture", "d4/d9d/class_amuse_1_1_material_block.html#a06ab549699ba39d16137d4150c54c9d6", null ],
       [ "hasVector", "d4/d9d/class_amuse_1_1_material_block.html#a0b03fa0758582f54fe02df2d6e378fae", null ],
-      [ "record", "d4/d9d/class_amuse_1_1_material_block.html#ad570d5c62a610a219b6cf64b84a9145c", null ],
+      [ "record", "d4/d9d/class_amuse_1_1_material_block_ad570d5c62a610a219b6cf64b84a9145c.html#ad570d5c62a610a219b6cf64b84a9145c", null ],
       [ "setBuffer", "d4/d9d/class_amuse_1_1_material_block.html#abda89543d7139fb6275b5b559d0b5535", null ],
       [ "setInteger", "d4/d9d/class_amuse_1_1_material_block.html#aff5d9b04922527cc2ddddf7599884928", null ],
       [ "setMatrix", "d4/d9d/class_amuse_1_1_material_block.html#a14d99867a309636edd781e560877c155", null ],
@@ -174,7 +174,7 @@ var group___amuse_r_p_i =
       [ "vectors", "da/ddc/struct_amuse_1_1_material_desc.html#a54a93a3fba523f801c036cbe39eab56e", null ]
     ] ],
     [ "MaterialPropertiesDesc", "d2/d24/struct_amuse_1_1_material_properties_desc.html", [
-      [ "merge", "d2/d24/struct_amuse_1_1_material_properties_desc.html#a13a2dd3cffe62f1103113f548e5ecccf", null ],
+      [ "merge", "d2/d24/struct_amuse_1_1_material_properties_desc_a13a2dd3cffe62f1103113f548e5ecccf.html#a13a2dd3cffe62f1103113f548e5ecccf", null ],
       [ "buffers", "d2/d24/struct_amuse_1_1_material_properties_desc.html#a151d63d8dd6849099d5d9219c6284fa8", null ],
       [ "integers", "d2/d24/struct_amuse_1_1_material_properties_desc.html#a5f256a1339a4ffa314190096257584da", null ],
       [ "matrices", "d2/d24/struct_amuse_1_1_material_properties_desc.html#a50f26c267afd7f85e5338e9d87518c0d", null ],
@@ -477,13 +477,13 @@ var group___amuse_r_p_i =
     ] ],
     [ "OutputPass::Output", "d3/d12/struct_amuse_1_1_output_pass_1_1_output.html", null ],
     [ "ImGuiRenderPipeline", "d4/ddd/class_amuse_1_1_im_gui_render_pipeline.html", [
-      [ "render", "d4/ddd/class_amuse_1_1_im_gui_render_pipeline.html#a1b7876b15fcdde4d54bcbbac237d0b08", null ],
-      [ "setup", "d4/ddd/class_amuse_1_1_im_gui_render_pipeline.html#a038a8bc82692f50ecc803c163792bc6a", null ]
+      [ "render", "d4/ddd/class_amuse_1_1_im_gui_render_pipeline_a1b7876b15fcdde4d54bcbbac237d0b08.html#a1b7876b15fcdde4d54bcbbac237d0b08", null ],
+      [ "setup", "d4/ddd/class_amuse_1_1_im_gui_render_pipeline_a038a8bc82692f50ecc803c163792bc6a.html#a038a8bc82692f50ecc803c163792bc6a", null ]
     ] ],
     [ "UniversalRenderPipeline", "d8/d38/class_amuse_1_1_universal_render_pipeline.html", [
-      [ "render", "d8/d38/class_amuse_1_1_universal_render_pipeline.html#aa2f4e22b5b23a9ec4973534b596dfadf", null ],
-      [ "render", "d8/d38/class_amuse_1_1_universal_render_pipeline.html#a1b7876b15fcdde4d54bcbbac237d0b08", null ],
-      [ "setup", "d8/d38/class_amuse_1_1_universal_render_pipeline.html#a038a8bc82692f50ecc803c163792bc6a", null ]
+      [ "render", "d8/d38/class_amuse_1_1_universal_render_pipeline_aa2f4e22b5b23a9ec4973534b596dfadf.html#aa2f4e22b5b23a9ec4973534b596dfadf", null ],
+      [ "render", "d8/d38/class_amuse_1_1_universal_render_pipeline_a1b7876b15fcdde4d54bcbbac237d0b08.html#a1b7876b15fcdde4d54bcbbac237d0b08", null ],
+      [ "setup", "d8/d38/class_amuse_1_1_universal_render_pipeline_a038a8bc82692f50ecc803c163792bc6a.html#a038a8bc82692f50ecc803c163792bc6a", null ]
     ] ],
     [ "RenderFeature", "df/de6/class_amuse_1_1_render_feature.html", [
       [ "~RenderFeature", "df/de6/class_amuse_1_1_render_feature.html#a699823410a5784fb013c1d2991eacb0c", null ],
@@ -496,9 +496,9 @@ var group___amuse_r_p_i =
     [ "RenderPipeline", "d0/dd5/class_amuse_1_1_render_pipeline.html", [
       [ "~RenderPipeline", "d0/dd5/class_amuse_1_1_render_pipeline.html#ac34b502802c41189a9624f6bd376f105", null ],
       [ "AMUSE_RTTI", "d0/dd5/class_amuse_1_1_render_pipeline.html#ae7f224536f490bb9b8c0a2439e6784e2", null ],
-      [ "render", "d0/dd5/class_amuse_1_1_render_pipeline.html#a038f3b855ebfa07ec1e6f9bde7efca2d", null ],
-      [ "render", "d0/dd5/class_amuse_1_1_render_pipeline.html#ae93d9140f8024c348aacccf7fd4b1f24", null ],
-      [ "setup", "d0/dd5/class_amuse_1_1_render_pipeline.html#a0177b33c6011a43b008f67f03e93e2f2", null ]
+      [ "render", "d0/dd5/class_amuse_1_1_render_pipeline_a038f3b855ebfa07ec1e6f9bde7efca2d.html#a038f3b855ebfa07ec1e6f9bde7efca2d", null ],
+      [ "render", "d0/dd5/class_amuse_1_1_render_pipeline_ae93d9140f8024c348aacccf7fd4b1f24.html#ae93d9140f8024c348aacccf7fd4b1f24", null ],
+      [ "setup", "d0/dd5/class_amuse_1_1_render_pipeline_a0177b33c6011a43b008f67f03e93e2f2.html#a0177b33c6011a43b008f67f03e93e2f2", null ]
     ] ],
     [ "RenderFeatureSet", "da/d14/class_amuse_1_1_render_feature_set.html", [
       [ "add", "da/d14/class_amuse_1_1_render_feature_set.html#a5c2d24c781c22ac6c1b1ae0ad9006ee6", null ],
@@ -525,12 +525,12 @@ var group___amuse_r_p_i =
       [ "RenderView", "d2/df2/class_amuse_1_1_render_view.html#aa2f9c22a1958a0c4865fa19993f1195c", null ],
       [ "RenderView", "d2/df2/class_amuse_1_1_render_view.html#a70cacd920a5802c76774b90f037babe7", null ],
       [ "~RenderView", "d2/df2/class_amuse_1_1_render_view.html#a1dad2781119812b389d19d8e63a804a0", null ],
-      [ "contains", "d2/df2/class_amuse_1_1_render_view.html#a04b5970d626f8af952fa4019e14bb373", null ],
-      [ "contains", "d2/df2/class_amuse_1_1_render_view.html#a9adb34758b21c225e7b4182eb4d8d93c", null ],
+      [ "contains", "d2/df2/class_amuse_1_1_render_view_a04b5970d626f8af952fa4019e14bb373.html#a04b5970d626f8af952fa4019e14bb373", null ],
+      [ "contains", "d2/df2/class_amuse_1_1_render_view_a9adb34758b21c225e7b4182eb4d8d93c.html#a9adb34758b21c225e7b4182eb4d8d93c", null ],
       [ "findFeature", "d2/df2/class_amuse_1_1_render_view.html#aef0c37eeaf39d52585af0193fae7c80e", null ],
       [ "findFeature", "d2/df2/class_amuse_1_1_render_view.html#a7d9fc6af9d9e0f544a8be266b67917e4", null ],
-      [ "get", "d2/df2/class_amuse_1_1_render_view.html#abc8c787f1fadaccd8fe671cd5c44d402", null ],
-      [ "get", "d2/df2/class_amuse_1_1_render_view.html#a43b17132ba88a5584cff779316493fed", null ],
+      [ "get", "d2/df2/class_amuse_1_1_render_view_abc8c787f1fadaccd8fe671cd5c44d402.html#abc8c787f1fadaccd8fe671cd5c44d402", null ],
+      [ "get", "d2/df2/class_amuse_1_1_render_view_a43b17132ba88a5584cff779316493fed.html#a43b17132ba88a5584cff779316493fed", null ],
       [ "getScene", "d2/df2/class_amuse_1_1_render_view.html#aae2690f1cfc36aa8512e76c9db2b1cf7", null ],
       [ "getScene", "d2/df2/class_amuse_1_1_render_view.html#a530adae463a9115889d1bf2f248a3c2f", null ]
     ] ],

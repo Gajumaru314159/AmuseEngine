@@ -213,7 +213,7 @@ void&#160;</td><td class="memItemRight"><b>setScalar</b> (StringView name, f32 v
 <tr class="memitem:aff5d9b04922527cc2ddddf7599884928" id="r_aff5d9b04922527cc2ddddf7599884928"><td class="memItemLeft"><a id="aff5d9b04922527cc2ddddf7599884928" name="aff5d9b04922527cc2ddddf7599884928"></a>
 void&#160;</td><td class="memItemRight"><b>setInteger</b> (StringView name, s32 value)</td></tr>
 <tr class="memdesc:aff5d9b04922527cc2ddddf7599884928"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアルパラメータを設定    <br /></td></tr>
-<tr class="memitem:ad570d5c62a610a219b6cf64b84a9145c" id="r_ad570d5c62a610a219b6cf64b84a9145c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad570d5c62a610a219b6cf64b84a9145c">record</a> (<a class="el" href="../../de/d8b/class_amuse_1_1_ref.html">Ref</a>&lt; <a class="el" href="#a13484cb65727b108a0dcc6075cf58964">CommandList</a> &gt; &amp;commandList, s32 slot)</td></tr>
+<tr class="memitem:ad570d5c62a610a219b6cf64b84a9145c" id="r_ad570d5c62a610a219b6cf64b84a9145c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d4/d9d/class_amuse_1_1_material_block_ad570d5c62a610a219b6cf64b84a9145c.html#ad570d5c62a610a219b6cf64b84a9145c">record</a> (<a class="el" href="../../de/d8b/class_amuse_1_1_ref.html">Ref</a>&lt; <a class="el" href="#a13484cb65727b108a0dcc6075cf58964">CommandList</a> &gt; &amp;commandList, s32 slot)</td></tr>
 <tr class="memdesc:ad570d5c62a610a219b6cf64b84a9145c"><td class="mdescLeft">&#160;</td><td class="mdescRight">MaterialBlockのハンドルを指定のスロットに記録する  <br /></td></tr>
 <tr class="memitem:aade18d594188aa1b830133aa26fffb45" id="r_aade18d594188aa1b830133aa26fffb45"><td class="memItemLeft"><a id="aade18d594188aa1b830133aa26fffb45" name="aade18d594188aa1b830133aa26fffb45"></a>
 const <a class="el" href="../../de/d8b/class_amuse_1_1_ref.html">Ref</a>&lt; <a class="el" href="#a420a4e5d2249d0f287d8b8cfca7070b3">DescriptorLayout</a> &gt; &amp;&#160;</td><td class="memItemRight"><b>getLayout</b> () const</td></tr>
@@ -225,33 +225,6 @@ const <a class="el" href="../../de/d8b/class_amuse_1_1_ref.html">Ref</a>&lt; <a 
 static <a class="el" href="../../de/d8b/class_amuse_1_1_ref.html">Ref</a>&lt; <a class="el" href="#a420a4e5d2249d0f287d8b8cfca7070b3">DescriptorLayout</a> &gt;&#160;</td><td class="memItemRight"><b>CreateLayout</b> (const <a class="el" href="../../df/d51/struct_amuse_1_1_material_block_desc.html">MaterialBlockDesc</a> &amp;desc)</td></tr>
 <tr class="memdesc:a3caa94a39623d9c5c31ac1d21372242e"><td class="mdescLeft">&#160;</td><td class="mdescRight">MaterialBlockDescに対応するDescriptorLayoutを生成するユーティリティ関数 <br /></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
-<a id="ad570d5c62a610a219b6cf64b84a9145c" name="ad570d5c62a610a219b6cf64b84a9145c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad570d5c62a610a219b6cf64b84a9145c">&#9670;&#160;</a></span>record()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void record </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../de/d8b/class_amuse_1_1_ref.html">Ref</a>&lt; <a class="el" href="#a13484cb65727b108a0dcc6075cf58964">CommandList</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>commandList</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">s32</td>          <td class="paramname"><span class="paramname"><em>slot</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>MaterialBlockのハンドルを指定のスロットに記録する </p>
-<p>Bindfullの場合はslotにRootSignatureのスロットを指定する <br  />
- Bindfullの場合はRootConstantsのoffsetにBindlessHandleを書き込む <br  />
- BindfullとBindlessの両方に対応しやすいようにモードによらずこの関数を使用します。 </p>
-
-</div>
-</div>
 <hr/>このクラス詳解は次のファイルから抽出されました:<ul>
 <li>Runtime/RPI/Public/Amuse/RPI/Material/<a class="el" href="../../d8/d0b/_material_block_8h_source.html">MaterialBlock.h</a></li>
 </ul>

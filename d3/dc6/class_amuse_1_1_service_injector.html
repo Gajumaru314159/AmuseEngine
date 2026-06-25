@@ -141,12 +141,12 @@ template&lt;class T&gt; </td></tr>
 <tr class="memitem:a7b2caa8fcf3bc1a0d8bf2899db394615 template"><td class="memItemLeft">ServiceBuilder&lt; T &gt; &amp;&#160;</td><td class="memItemRight"><b>bind</b> (T &amp;instance)</td></tr>
 <tr class="memdesc:a7b2caa8fcf3bc1a0d8bf2899db394615"><td class="mdescLeft">&#160;</td><td class="mdescRight">既存インスタンスをサービス型 T として登録する。 <br /></td></tr>
 <tr class="memitem:a405fa5c623cce552b8ede70c7783cc6e" id="r_a405fa5c623cce552b8ede70c7783cc6e"><td class="memTemplParams" colspan="2">template&lt;class T&gt; </td></tr>
-<tr class="memitem:a405fa5c623cce552b8ede70c7783cc6e template"><td class="memItemLeft">T *&#160;</td><td class="memItemRight"><a class="el" href="#a405fa5c623cce552b8ede70c7783cc6e">create</a> (<a class="el" href="../../db/dd7/class_amuse_1_1_service_container.html">ServiceContainer</a> &amp;container) const</td></tr>
+<tr class="memitem:a405fa5c623cce552b8ede70c7783cc6e template"><td class="memItemLeft">T *&#160;</td><td class="memItemRight"><a class="el" href="../../d3/dc6/class_amuse_1_1_service_injector_a405fa5c623cce552b8ede70c7783cc6e.html#a405fa5c623cce552b8ede70c7783cc6e">create</a> (<a class="el" href="../../db/dd7/class_amuse_1_1_service_container.html">ServiceContainer</a> &amp;container) const</td></tr>
 <tr class="memdesc:a405fa5c623cce552b8ede70c7783cc6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">サービス型 T のインスタンスを依存解決しながら生成する。  <br /></td></tr>
 <tr class="memitem:a0364ed6f0f086c8cffb0dc03e72f7d61" id="r_a0364ed6f0f086c8cffb0dc03e72f7d61"><td class="memTemplParams" colspan="2">template&lt;class... Ts&gt; </td></tr>
-<tr class="memitem:a0364ed6f0f086c8cffb0dc03e72f7d61 template"><td class="memItemLeft">Tuple&lt; Ts *... &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a0364ed6f0f086c8cffb0dc03e72f7d61">createAll</a> (<a class="el" href="../../db/dd7/class_amuse_1_1_service_container.html">ServiceContainer</a> &amp;container) const</td></tr>
+<tr class="memitem:a0364ed6f0f086c8cffb0dc03e72f7d61 template"><td class="memItemLeft">Tuple&lt; Ts *... &gt;&#160;</td><td class="memItemRight"><a class="el" href="../../d3/dc6/class_amuse_1_1_service_injector_a0364ed6f0f086c8cffb0dc03e72f7d61.html#a0364ed6f0f086c8cffb0dc03e72f7d61">createAll</a> (<a class="el" href="../../db/dd7/class_amuse_1_1_service_container.html">ServiceContainer</a> &amp;container) const</td></tr>
 <tr class="memdesc:a0364ed6f0f086c8cffb0dc03e72f7d61"><td class="mdescLeft">&#160;</td><td class="mdescRight">複数のルートサービスを依存解決しながら生成する。  <br /></td></tr>
-<tr class="memitem:adc43e8de385a6332fe186d56b9e657e0" id="r_adc43e8de385a6332fe186d56b9e657e0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adc43e8de385a6332fe186d56b9e657e0">createAll</a> (<a class="el" href="../../db/dd7/class_amuse_1_1_service_container.html">ServiceContainer</a> &amp;container) const</td></tr>
+<tr class="memitem:adc43e8de385a6332fe186d56b9e657e0" id="r_adc43e8de385a6332fe186d56b9e657e0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d3/dc6/class_amuse_1_1_service_injector_adc43e8de385a6332fe186d56b9e657e0.html#adc43e8de385a6332fe186d56b9e657e0">createAll</a> (<a class="el" href="../../db/dd7/class_amuse_1_1_service_container.html">ServiceContainer</a> &amp;container) const</td></tr>
 <tr class="memdesc:adc43e8de385a6332fe186d56b9e657e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">登録済みサービスを登録順にまとめて生成する。  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
@@ -155,94 +155,6 @@ template&lt;class T&gt; </td></tr>
 template&lt;class T&gt; </td></tr>
 <tr class="memitem:a9e9acd822fe7529324a65284741cd8df template"><td class="memItemLeft">class&#160;</td><td class="memItemRight"><b>ServiceBuilder</b></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
-<a id="a405fa5c623cce552b8ede70c7783cc6e" name="a405fa5c623cce552b8ede70c7783cc6e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a405fa5c623cce552b8ede70c7783cc6e">&#9670;&#160;</a></span>create()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">T * create </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../db/dd7/class_amuse_1_1_service_container.html">ServiceContainer</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>container</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>サービス型 T のインスタンスを依存解決しながら生成する。 </p>
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">container</td><td>生成されたサービスを管理させるコンテナの参照 </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="adc43e8de385a6332fe186d56b9e657e0" name="adc43e8de385a6332fe186d56b9e657e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc43e8de385a6332fe186d56b9e657e0">&#9670;&#160;</a></span>createAll() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void createAll </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../db/dd7/class_amuse_1_1_service_container.html">ServiceContainer</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>container</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>登録済みサービスを登録順にまとめて生成する。 </p>
-<p>抽象クラスに対して </p><dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">container</td><td>生成されたサービスを管理させるコンテナの参照 </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a0364ed6f0f086c8cffb0dc03e72f7d61" name="a0364ed6f0f086c8cffb0dc03e72f7d61"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0364ed6f0f086c8cffb0dc03e72f7d61">&#9670;&#160;</a></span>createAll() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class... Ts&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">Tuple&lt; Ts *... &gt; createAll </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../db/dd7/class_amuse_1_1_service_container.html">ServiceContainer</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>container</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>複数のルートサービスを依存解決しながら生成する。 </p>
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">container</td><td>生成されたサービスを管理させるコンテナの参照 </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <hr/>このクラス詳解は次のファイルから抽出されました:<ul>
 <li>Runtime/Core/Public/Amuse/Core/Utility/<a class="el" href="../../d0/d4d/_d_i_8h_source.html">DI.h</a></li>
 </ul>

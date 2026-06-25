@@ -156,7 +156,7 @@ graph LR
 <div class="line">    ServiceInjector injector;</div>
 <div class="line">    <span class="comment">// 中略</span></div>
 <div class="line">    injector.bind&lt;DX12RHI&gt;().as&lt;RHI&gt;();</div>
-<div class="line">    injector.bind&lt;<a class="code hl_enumvalue" href="../../d9/de0/group___amuse_r_h_i.html#gga28338c76b9ba608e242820db68d653b8ad334dfcea59127bedfcdbe0a3ee7f494">Graphics</a>&gt;();</div>
+<div class="line">    injector.bind&lt;Graphics&gt;();</div>
 <div class="line">    injector.bind&lt;Engine&gt;();</div>
 <div class="line">    </div>
 <div class="line">    ServiceContainer container;</div>
@@ -164,7 +164,6 @@ graph LR
 <div class="line">    </div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup___amuse_r_h_i_html_gga28338c76b9ba608e242820db68d653b8ad334dfcea59127bedfcdbe0a3ee7f494"><div class="ttname"><a href="../../d9/de0/group___amuse_r_h_i.html#gga28338c76b9ba608e242820db68d653b8ad334dfcea59127bedfcdbe0a3ee7f494">Amuse::CommandQueueType::Graphics</a></div><div class="ttdeci">@ Graphics</div><div class="ttdoc">グラフィックスキュー</div><div class="ttdef"><b>Definition</b> Fence.h:13</div></div>
 </div><!-- fragment --><h1>Serviceの登録方法</h1>
 <p>Serviceは<span class="tt">ServiceInjector::bind&lt;T&gt;()</span>を使用して登録します。 <br  />
  </p><div class="fragment"><div class="line">ServiceInjector injector;</div>
@@ -253,24 +252,24 @@ graph LR
 <div class="line">    B(){</div>
 <div class="line">    }</div>
 <div class="line">};</div>
-<div class="line"><span class="keyword">struct </span><a class="code hl_enumvalue" href="../../d1/da5/group___amuse_input.html#gga7f039edf8ca5f938e3d74c5e6eaf5f51a0d61f8370cad1d412f80b84d143e1257">C</a>{</div>
-<div class="line">    <a class="code hl_enumvalue" href="../../d1/da5/group___amuse_input.html#gga7f039edf8ca5f938e3d74c5e6eaf5f51a0d61f8370cad1d412f80b84d143e1257">C</a>(Base&amp; base) {</div>
+<div class="line"><span class="keyword">struct </span>C{</div>
+<div class="line">    C(Base&amp; base) {</div>
 <div class="line">        <span class="comment">// baseはBのインスタンス</span></div>
 <div class="line">    }</div>
 <div class="line">};</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">void</span> func(){</div>
 <div class="line">    ServiceInjector injector;</div>
-<div class="line">    injector.bind&lt;Base&gt;.as&lt;<a class="code hl_enumvalue" href="../../d1/da5/group___amuse_input.html#gga7f039edf8ca5f938e3d74c5e6eaf5f51a7fc56270e7a70fa81a5935b72eacbe29">A</a>&gt;();</div>
-<div class="line">    injector.bind&lt;Base&gt;.as&lt;<a class="code hl_enumvalue" href="../../d1/da5/group___amuse_input.html#gga7f039edf8ca5f938e3d74c5e6eaf5f51a9d5ed678fe57bcca610140957afab571">B</a>&gt;();</div>
-<div class="line">    injector.bind&lt;<a class="code hl_enumvalue" href="../../d1/da5/group___amuse_input.html#gga7f039edf8ca5f938e3d74c5e6eaf5f51a0d61f8370cad1d412f80b84d143e1257">C</a>&gt;();</div>
+<div class="line">    injector.bind&lt;Base&gt;.as&lt;<a class="code hl_enumvalue" href="../../d1/da5/group___amuse_input_ga7f039edf8ca5f938e3d74c5e6eaf5f51.html#gga7f039edf8ca5f938e3d74c5e6eaf5f51a7fc56270e7a70fa81a5935b72eacbe29">A</a>&gt;();</div>
+<div class="line">    injector.bind&lt;Base&gt;.as&lt;<a class="code hl_enumvalue" href="../../d1/da5/group___amuse_input_ga7f039edf8ca5f938e3d74c5e6eaf5f51.html#gga7f039edf8ca5f938e3d74c5e6eaf5f51a9d5ed678fe57bcca610140957afab571">B</a>&gt;();</div>
+<div class="line">    injector.bind&lt;<a class="code hl_enumvalue" href="../../d1/da5/group___amuse_input_ga7f039edf8ca5f938e3d74c5e6eaf5f51.html#gga7f039edf8ca5f938e3d74c5e6eaf5f51a0d61f8370cad1d412f80b84d143e1257">C</a>&gt;();</div>
 <div class="line"> </div>
 <div class="line">    ServiceContainer container;</div>
-<div class="line">    injector.create&lt;<a class="code hl_enumvalue" href="../../d1/da5/group___amuse_input.html#gga7f039edf8ca5f938e3d74c5e6eaf5f51a0d61f8370cad1d412f80b84d143e1257">C</a>&gt;(container);    </div>
+<div class="line">    injector.create&lt;<a class="code hl_enumvalue" href="../../d1/da5/group___amuse_input_ga7f039edf8ca5f938e3d74c5e6eaf5f51.html#gga7f039edf8ca5f938e3d74c5e6eaf5f51a0d61f8370cad1d412f80b84d143e1257">C</a>&gt;(container);    </div>
 <div class="line">}</div>
-<div class="ttc" id="agroup___amuse_input_html_gga7f039edf8ca5f938e3d74c5e6eaf5f51a0d61f8370cad1d412f80b84d143e1257"><div class="ttname"><a href="../../d1/da5/group___amuse_input.html#gga7f039edf8ca5f938e3d74c5e6eaf5f51a0d61f8370cad1d412f80b84d143e1257">Amuse::Key::C</a></div><div class="ttdeci">@ C</div><div class="ttdoc">C</div><div class="ttdef"><b>Definition</b> InputType.h:67</div></div>
-<div class="ttc" id="agroup___amuse_input_html_gga7f039edf8ca5f938e3d74c5e6eaf5f51a7fc56270e7a70fa81a5935b72eacbe29"><div class="ttname"><a href="../../d1/da5/group___amuse_input.html#gga7f039edf8ca5f938e3d74c5e6eaf5f51a7fc56270e7a70fa81a5935b72eacbe29">Amuse::Key::A</a></div><div class="ttdeci">@ A</div><div class="ttdoc">A</div><div class="ttdef"><b>Definition</b> InputType.h:65</div></div>
-<div class="ttc" id="agroup___amuse_input_html_gga7f039edf8ca5f938e3d74c5e6eaf5f51a9d5ed678fe57bcca610140957afab571"><div class="ttname"><a href="../../d1/da5/group___amuse_input.html#gga7f039edf8ca5f938e3d74c5e6eaf5f51a9d5ed678fe57bcca610140957afab571">Amuse::Key::B</a></div><div class="ttdeci">@ B</div><div class="ttdoc">B</div><div class="ttdef"><b>Definition</b> InputType.h:66</div></div>
+<div class="ttc" id="agroup___amuse_input_ga7f039edf8ca5f938e3d74c5e6eaf5f51_html_gga7f039edf8ca5f938e3d74c5e6eaf5f51a0d61f8370cad1d412f80b84d143e1257"><div class="ttname"><a href="../../d1/da5/group___amuse_input_ga7f039edf8ca5f938e3d74c5e6eaf5f51.html#gga7f039edf8ca5f938e3d74c5e6eaf5f51a0d61f8370cad1d412f80b84d143e1257">Amuse::Key::C</a></div><div class="ttdeci">@ C</div><div class="ttdoc">C</div><div class="ttdef"><b>Definition</b> InputType.h:67</div></div>
+<div class="ttc" id="agroup___amuse_input_ga7f039edf8ca5f938e3d74c5e6eaf5f51_html_gga7f039edf8ca5f938e3d74c5e6eaf5f51a7fc56270e7a70fa81a5935b72eacbe29"><div class="ttname"><a href="../../d1/da5/group___amuse_input_ga7f039edf8ca5f938e3d74c5e6eaf5f51.html#gga7f039edf8ca5f938e3d74c5e6eaf5f51a7fc56270e7a70fa81a5935b72eacbe29">Amuse::Key::A</a></div><div class="ttdeci">@ A</div><div class="ttdoc">A</div><div class="ttdef"><b>Definition</b> InputType.h:65</div></div>
+<div class="ttc" id="agroup___amuse_input_ga7f039edf8ca5f938e3d74c5e6eaf5f51_html_gga7f039edf8ca5f938e3d74c5e6eaf5f51a9d5ed678fe57bcca610140957afab571"><div class="ttname"><a href="../../d1/da5/group___amuse_input_ga7f039edf8ca5f938e3d74c5e6eaf5f51.html#gga7f039edf8ca5f938e3d74c5e6eaf5f51a9d5ed678fe57bcca610140957afab571">Amuse::Key::B</a></div><div class="ttdeci">@ B</div><div class="ttdoc">B</div><div class="ttdef"><b>Definition</b> InputType.h:66</div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
@@ -278,7 +277,7 @@ graph LR
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="../../index.html">Runtime</a></li><li class="navelem"><a href="../../d9/dd9/_core.html">Core</a></li>
+    <li class="navelem"><a href="../../index.html">AmuseEngine</a></li><li class="navelem"><a href="../../dc/d7c/_features.html">Features</a></li><li class="navelem"><a href="../../d2/de4/_runtime.html">Runtime</a></li><li class="navelem"><a href="../../d9/dd9/_core.html">Core</a></li>
     <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
