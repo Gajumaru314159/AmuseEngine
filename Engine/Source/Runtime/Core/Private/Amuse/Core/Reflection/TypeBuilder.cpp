@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -6,7 +6,7 @@
 #include <Amuse/Core/Reflection/TypeInfo.h>
 #include <Amuse/Core/Core.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	ReflectionFunction* g_reflectionFunction = nullptr;
 

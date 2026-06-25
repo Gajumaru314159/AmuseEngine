@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -7,9 +7,10 @@
 #include <Amuse/RPI/Render/RenderFeature.h>
 #include <Amuse/RPI/Render/RenderPipeline.h>
 
-namespace Amuse::RPI {
+namespace Amuse {
 
     //! @brief RenderScene が保持する描画機能の集合
+    //! @ingroup AmuseRPI
     class RenderFeatureSet {
     public:
         //! @brief 型情報を指定して描画機能を追加する
@@ -39,6 +40,7 @@ namespace Amuse::RPI {
 
 	//! @brief      描画シーン
 	//! @ref 		RenderScene
+	//! @ingroup AmuseRPI
 	class RenderScene{
 	public:
 

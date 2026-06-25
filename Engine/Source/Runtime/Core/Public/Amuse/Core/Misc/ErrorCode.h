@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -6,9 +6,10 @@
 #include <Amuse/Core/CoreTypes.h>
 #include <Amuse/Core/String/String.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief エラーコード
+    //! @ingroup AmuseCore
     class ErrorCode {
     public:
         ErrorCode() : m_value(0) {}
@@ -30,14 +31,14 @@ namespace Amuse::Core {
 // フォーマット
 //===============================================================
 //! @cond
-template <> struct std::formatter<Amuse::Core::ErrorCode, Amuse::Core::Char> {
+template <> struct std::formatter<Amuse::ErrorCode, Amuse::Char> {
     template<typename ParseContext>
     constexpr auto parse(ParseContext& ctx) -> decltype(ctx.begin()) {
         return ctx.end();
     }
 
     template<typename FormatContext>
-    auto format(Amuse::Core::ErrorCode value, FormatContext& ctx) const {
+    auto format(Amuse::ErrorCode value, FormatContext& ctx) const {
         return format_to(ctx.out(), "0x{:08X} {}", value.value(), value.message().c_str());
     }
 };

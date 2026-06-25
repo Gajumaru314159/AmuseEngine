@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -8,7 +8,7 @@
 #include <Amuse/Core/String/StringView.h>
 #include <Amuse/Core/String/Format.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief ロケール
 	//! @details IETF言語タグを表すクラス
@@ -21,6 +21,7 @@ namespace Amuse::Core {
 	//!			 で構成され、それぞれの要素はハイフンで区切られる。
 	//! 		 例: ja-JP-u-ca-japanese	
 	//! @see	 https://en.wikipedia.org/wiki/IETF_language_tag
+	//! @ingroup AmuseCore
 	class Locale {
 	public:
 
@@ -83,14 +84,14 @@ namespace Amuse::Core {
 // フォーマット
 //===============================================================
 //! @cond
-template <> struct std::formatter<Amuse::Core::Locale, Amuse::Core::Char> {
+template <> struct std::formatter<Amuse::Locale, Amuse::Char> {
 	template<typename ParseContext>
 	constexpr auto parse(ParseContext& ctx) -> decltype(ctx.begin()) {
 		return ctx.end();
 	}
 
 	template<typename FormatContext>
-	auto format(const Amuse::Core::Locale& value, FormatContext& ctx) const {
+	auto format(const Amuse::Locale& value, FormatContext& ctx) const {
 		return format_to(ctx.out(), "{}", value.tag());
 	}
 };
@@ -99,9 +100,9 @@ template <> struct std::formatter<Amuse::Core::Locale, Amuse::Core::Char> {
 // ハッシュ化
 //===============================================================
 template<>
-struct std::hash<Amuse::Core::Locale> {
-	size_t operator()(const Amuse::Core::Locale& value)const noexcept {
-		return std::hash<Amuse::Core::StringView>()(value.tag());
+struct std::hash<Amuse::Locale> {
+	size_t operator()(const Amuse::Locale& value)const noexcept {
+		return std::hash<Amuse::StringView>()(value.tag());
 	}
 };
 

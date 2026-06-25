@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -7,10 +7,7 @@
 #include <Amuse/RHI/SwapChain.h>
 #include <Amuse/RHI/RenderTexture.h>
 #include <Amuse/RPI/Render/Feature/MaterialRenderFeature.h>
-
-using namespace Amuse::RHI;
-
-namespace Amuse::RPI {
+namespace Amuse {
 
 	Optional<Size> OutputViewData::size() const {
 		if (swapchain) return swapchain->getDesc().size;
@@ -31,7 +28,7 @@ namespace Amuse::RPI {
 				output.color = builder.read(input.color);
 				builder.setSideEffect();
 			},
-			[&](const Output& output, FGResources& resources, Ref<RHI::CommandList>& cmdList) {
+			[&](const Output& output, FGResources& resources, Ref<CommandList>& cmdList) {
 				auto albedo = resources.getTexture(output.color);
 
 				if (data.swapchain) {

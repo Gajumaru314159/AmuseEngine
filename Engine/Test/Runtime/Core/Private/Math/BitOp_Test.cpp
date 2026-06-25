@@ -1,10 +1,10 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #include <Amuse/Core/Math/BitOp.h>
 
-using namespace Amuse::Core;
+using namespace Amuse;
 
 TEST(BitOp, GetBitCount) {
     EXPECT_EQ(BitOp::GetBitCount(static_cast<u8>(0b00000000)), 0);

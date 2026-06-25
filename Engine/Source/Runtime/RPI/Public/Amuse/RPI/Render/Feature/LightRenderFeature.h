@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -9,21 +9,24 @@
 #include <Amuse/RPI/Render/Feature/MaterialRenderFeature.h>
 #include <Amuse/RPI/Material/MaterialPropertiesDesc.h>
 #include <Amuse/RPI/Material/Material.h>
-namespace Amuse::RPI {
+namespace Amuse {
 
 	//! @brief 平行光源データ
+	//! @ingroup AmuseRPI
 	struct DirectionalLightData {
 		Color color; //!< 色
 		Vec3 direction; //!< 方向
 		f32  intensity; //!< 強度
 	};
 	//! @brief 点光源データ
+	//! @ingroup AmuseRPI
 	struct PointLightData {
 		Color color; //!< 色
 		Vec3 position; //!< 位置
 		f32  intensity; //!< 強度
 	};
 	//! @brief スポットライトデータ
+	//! @ingroup AmuseRPI
 	struct SpotLightData {
 		Color color; //!< 色
 		Vec3 position; //!< 位置
@@ -33,6 +36,7 @@ namespace Amuse::RPI {
 	};
 
 	//! @brief 要素数に応じて拡張する GPU バッファ
+	//! @ingroup AmuseRPI
 	class ResizableBuffer {
 	public:
 		//! @brief バッファ生成設定
@@ -50,12 +54,11 @@ namespace Amuse::RPI {
 		//! @brief バッファ容量を変更する
 		void resize(size_t size) {
 			m_size = size;
-			m_buffer = RHI::Buffer::Create(RHI::BufferDesc::ByteAddress(m_desc.stride * m_size));
+			m_buffer = Buffer::Create(BufferDesc::ByteAddress(m_desc.stride * m_size));
 		}
 
 		//! @brief 要素データを GPU バッファへ転送する
 		void update(size_t count, const void* data) {
-			using namespace Amuse::RHI;
 			if (m_size <= count) {
 				resize(count * 2);
 			}
@@ -63,17 +66,18 @@ namespace Amuse::RPI {
 		}
 
 		//! @brief GPU バッファを取得する
-		Ref<RHI::Buffer> getBuffer() const {
+		Ref<Buffer> getBuffer() const {
 			return m_buffer;
 		}
 	private:
 		Desc m_desc;
-		Ref<RHI::Buffer> m_buffer;
+		Ref<Buffer> m_buffer;
 		size_t m_size;
 	};
 
 
 	//! @brief      マテリアル描画機能
+	//! @ingroup AmuseRPI
 	class PointLightRenderFeature : public RenderFeature {
 	public:
 		//! @brief 点光源描画で使用するマテリアルプロパティを取得する

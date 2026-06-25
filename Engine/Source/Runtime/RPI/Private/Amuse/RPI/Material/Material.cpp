@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -9,7 +9,7 @@
 #include <Amuse/RHI/CommandList.h>
 #include <Amuse/RHI/Sampler.h>
 
-namespace Amuse::RPI {
+namespace Amuse {
 
 	//! @brief  生成
 	Ref<Material> Material::Create(const Ref<MaterialShader>& shader) {
@@ -35,7 +35,7 @@ namespace Amuse::RPI {
 	}
 
 	void Material::setTexture(StringView name, const Ref<Texture>& value) {
-		m_block.setTexture(name, value, RHI::Sampler::Default());
+		m_block.setTexture(name, value, Sampler::Default());
 	}
 
 	void Material::setBuffer(StringView name, const Ref<Buffer>& value) {
@@ -77,17 +77,17 @@ namespace Amuse::RPI {
 		return true;
 	}
 
-	void Material::record(Ref<RHI::CommandList>& commandList, MaterialBlockSet& blocks, const Ref<Mesh>& mesh, s32 submesh, StringView passName, s32 quality) {
+	void Material::record(Ref<CommandList>& commandList, MaterialBlockSet& blocks, const Ref<Mesh>& mesh, s32 submesh, StringView passName, s32 quality) {
 
 		if (!mesh) return;
-		Ref<RHI::VertexLayout> layout;
+		Ref<VertexLayout> layout;
 		if (!mesh->lods.empty()) {
 			layout = mesh->lods[0].buffer.layout;
 		} else {
 			return;
 		}
 
-		Ref<RHI::PipelineState> pipeline = m_shader->getPipeline(layout, passName, quality);
+		Ref<PipelineState> pipeline = m_shader->getPipeline(layout, passName, quality);
 		if (!pipeline) return;
 
 		commandList->setPipelineState(pipeline);
@@ -107,7 +107,7 @@ namespace Amuse::RPI {
 
 			auto section = mesh->lods[0].sections.at(submesh);
 
-			RHI::DrawIndexedParam param{};
+			DrawIndexedParam param{};
 			param.startVertex = section.baseVertex;
 			param.startIndex = section.indexStart;
 			param.indexCount = section.indexCount;
@@ -122,7 +122,7 @@ namespace Amuse::RPI {
 	//! @brief  グローバルマテリアルパラメータを設定
 	void Material::SetGlobalTexture(StringView name, const Ref<Texture>& value) {
 		if (auto system = MaterialSystem::Get()) {
-			system->getGlobalBlock().setTexture(name, value, RHI::Sampler::Default());
+			system->getGlobalBlock().setTexture(name, value, Sampler::Default());
 		}
 	}
 

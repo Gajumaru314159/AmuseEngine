@@ -12,11 +12,7 @@
 #include <Amuse/Core/Misc/Compression.h>
 #include <DirectXTex.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
-
-
+namespace Amuse {
 	//! @brief コンストラクタ
 	DirectX12GraphicFileHandle::DirectX12GraphicFileHandle(IDStorageFactory& factory,StringView path) {
 

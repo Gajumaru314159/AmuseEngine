@@ -7,9 +7,7 @@
 #include <Amuse/RHI/GraphicObject.h>
 #include <Amuse/RHI/Types/SwapChainDesc.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief  スワップチェーン・イベント
     AMUSE_EVENT_NOTIFIER(SwapChainEvent);
 
@@ -18,6 +16,7 @@ namespace Amuse::RHI {
     //! 
     //! @details    モニターに表示するバッファを複数のバッファから切り替えることで
     //!             表示のちらつきを解決する。
+    //! @ingroup AmuseRHI
     class SwapChain :public GraphicObject {
     public:
 

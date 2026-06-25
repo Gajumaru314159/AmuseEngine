@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -8,7 +8,7 @@
 #include <Amuse/RPI/Render/RenderScene.h>
 #include <Amuse/RPI/Render/RenderView.h>
 
-namespace Amuse::RPI {
+namespace Amuse {
 
 	static MaterialBlockDesc Convert(StringView name, const MaterialPropertiesDesc& desc) {
 		MaterialBlockDesc blockDesc;
@@ -27,7 +27,7 @@ namespace Amuse::RPI {
 		m_descs.global = Convert("MaterialGlobal", desc.properties.global);
 		m_descs.scene = Convert("MaterialScene", desc.properties.scene);
 		m_descs.view = Convert("MaterialView", desc.properties.view);
-		if (!RHI::Device::Instance().getConfig().enableBindless) {
+		if (!Device::Instance().getConfig().enableBindless) {
 			m_descs.global.layout = m_layouts.global = MaterialBlock::CreateLayout(m_descs.global);
 			m_descs.scene.layout = m_layouts.scene = MaterialBlock::CreateLayout(m_descs.scene);
 			m_descs.view.layout = m_layouts.view = MaterialBlock::CreateLayout(m_descs.view);

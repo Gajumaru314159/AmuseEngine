@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -8,12 +8,13 @@
 #include <Amuse/Core/Utility/Singleton.h>
 #include <Amuse/Core/Utility/Pimpl.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	class JobGroup;
 	class Job;
 
 	//! @brief ジョブグループとジョブの生成、実行、待機を管理する。
+	//! @ingroup AmuseCore
 	class JobSystem : public Singleton<JobSystem> {
 	public:
 

@@ -1,13 +1,14 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/RPI/FrameGraph/FG.h>
 
-namespace Amuse::RPI {
+namespace Amuse {
 
 	//! @brief FG(FrameGraph)の内部構造データ
+	//! @ingroup AmuseRPI
 	struct FGData {
 
 		//! @brief FrameGraph パスのデバッグ情報
@@ -17,6 +18,7 @@ namespace Amuse::RPI {
 			bool culled; //!< カリング状態
 		};
 		//! @brief FrameGraph リソースのデバッグ情報
+		//! @ingroup AmuseRPI
 		struct Resource {
 			u32 id; //!< リソースID
 			String name; //!< リソース名
@@ -34,6 +36,7 @@ namespace Amuse::RPI {
 	};
 
 	//! @brief FG::debugOutput() を使用してFG(FrameGraph)の内部データを FGData に書き込むクラス
+	//! @ingroup AmuseRPI
 	class FGDataWriter{
 	public:
 		//! @brief 書き込み先データを指定して生成する

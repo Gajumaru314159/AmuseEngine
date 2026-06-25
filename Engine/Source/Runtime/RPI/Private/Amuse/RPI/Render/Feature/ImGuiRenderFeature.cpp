@@ -1,11 +1,11 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #include <Amuse/RPI/Render/Feature/ImGuiRenderFeature.h>
 
 
-namespace Amuse::RPI {
+namespace Amuse {
 
 	//! @brief		コンストラクタ
 	ImGuiRenderFeature::ImGuiRenderFeature(RenderScene& scene)

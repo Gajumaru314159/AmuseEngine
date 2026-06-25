@@ -1,11 +1,11 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #include <Amuse/Core/Geometry/Spline2D.h>
 #include <Amuse/Core/Log/Assertion.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     // ヘルパー関数：制御点を取得（範囲外は端点を使用）
     Vec2 Spline2D::getControlPoint(s32 index) const {

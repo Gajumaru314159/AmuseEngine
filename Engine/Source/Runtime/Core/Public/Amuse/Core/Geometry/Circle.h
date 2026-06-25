@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -6,9 +6,10 @@
 #include <Amuse/Core/Math/Vector2.h>
 #include <Amuse/Core/Math/Math.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief  円
+    //! @ingroup AmuseCore
     struct Circle {
     public:
 

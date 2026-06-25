@@ -16,11 +16,11 @@ InputModuleはデバイスの生成、保持、更新、検索を担当し、But
 ## 基本設計
 
 ```cpp
-Input::InputConfig config;
+InputConfig config;
 config.useKeyboard = true;
 config.useMouse = true;
 
-Input::InputModule inputModule(&config, windowManager);
+InputModule inputModule(&config, windowManager);
 
 while (running) {
     inputModule.update();
@@ -57,7 +57,7 @@ virtual bool bindAxis(u32 code, AxisHandle& handle, const AxisDelegate& func);
 //! @brief 入力モジュールを初期化する
 //! @param config 入力設定
 //! @param windowManager ウィンドウ管理
-InputModule(InputConfig* config, Platform::WindowManager& windowManager);
+InputModule(InputConfig* config, WindowManager& windowManager);
 
 //! @brief 入力状態を更新する
 void update();

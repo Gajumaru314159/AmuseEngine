@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -8,10 +8,9 @@
 #include <Amuse/RHI/DescriptorTable.h>
 #include <Amuse/RHI/Types/TextureDesc.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief  デスクリプタ・テーブル・コマンドパラメータ
+	//! @ingroup AmuseRHI
 	struct SetDescriptorTableParam {
 		Ref<DescriptorTable> table; //!< デスクリプタテーブル
 		s32				slot; //!< ルートスロット
@@ -26,6 +25,7 @@ namespace Amuse::RHI {
 
 
 	//! @brief  CommandList::draw() で指定するパラメータ
+	//! @ingroup AmuseRHI
 	struct DrawParam {
 		u32 startVertex = 0;	//!< 頂点開始インデックス
 		u32 vertexCount = 0;	//!< 描画頂点数
@@ -35,6 +35,7 @@ namespace Amuse::RHI {
 
 
 	//! @brief  CommandList::drawIndexed() で指定するパラメータ
+	//! @ingroup AmuseRHI
 	struct DrawIndexedParam {
 		u32 startVertex = 0;	//!< 頂点開始インデックス
 		u32 startIndex = 0;		//!< インデックス開始インデックス
@@ -44,6 +45,7 @@ namespace Amuse::RHI {
 	};
 
 	//! @brief  CommandList::dispatch() で指定するパラメータ
+	//! @ingroup AmuseRHI
 	struct DispatchParam {
 		u32 groupX = 1;	//!< X方向のスレッドグループ数
 		u32 groupY = 1;	//!< Y方向のスレッドグループ数
@@ -52,6 +54,7 @@ namespace Amuse::RHI {
 
 
 	//! @brief  Indirectコマンドで指定するパラメータ
+	//! @ingroup AmuseRHI
 	struct IndirectCommandParam {
 		Ref<Buffer> argumentBuffer;	//!< 引数バッファ
 		u64 argumentOffset = 0;		//!< 引数バッファ内のオフセット
@@ -59,6 +62,7 @@ namespace Amuse::RHI {
 	};
 
 	//! @brief  テクスチャ内のコピー対象範囲
+	//! @ingroup AmuseRHI
 	struct TextureSubresource {
 		u32 arrayIndex = 0; //!< 配列インデックス
 		u32 faceIndex = 0; //!< キューブ面インデックス
@@ -73,6 +77,7 @@ namespace Amuse::RHI {
 
 
 	//! @brief  テクスチャ間コピーのパラメータ
+	//! @ingroup AmuseRHI
 	struct CopyTextureParam {
 		TextureSubresource src;		//!< コピー元
 		TextureSubresource dest;	//!< コピー先
@@ -80,6 +85,7 @@ namespace Amuse::RHI {
 
 
 	//! @brief  ルート定数設定のパラメータ
+	//! @ingroup AmuseRHI
 	struct SetRootConstantsParam {
 		s32			offset;	//!< 書き込むオフセット
 		BlobView	blob;	//!< 書き込むバイナリ

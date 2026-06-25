@@ -1,11 +1,11 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #include <Amuse/Core/Utility/Transition.h>
 #include <Amuse/Core/Template/include.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief  更新
     f32 Transition::get()const noexcept {

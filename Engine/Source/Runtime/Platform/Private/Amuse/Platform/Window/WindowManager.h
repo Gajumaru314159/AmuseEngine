@@ -9,10 +9,9 @@
 //============================================
 // クラス宣言
 //============================================
-namespace Amuse::Platform {
-    using namespace Amuse::Core;
-    
+namespace Amuse {
     //! @brief  ウィンドウマネージャ
+    //! @ingroup AmusePlatform
     class WindowManager {
     public:
         static WindowManager* Get();

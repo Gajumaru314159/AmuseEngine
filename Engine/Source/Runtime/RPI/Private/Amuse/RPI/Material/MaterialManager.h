@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -9,28 +9,29 @@
 #include <Amuse/RPI/Material/MaterialBlock.h>
 #include <Amuse/RHI/DescriptorLayout.h>
 
-namespace Amuse::RPI {
+namespace Amuse {
 
 	//! @brief  説明
+	//! @ingroup AmuseRPI
 	class MaterialManager : public Singleton<MaterialManager> {
 	public:
 
-		MaterialManager(RHI::Device&, NameDictionary&);
+		MaterialManager(Device&, NameDictionary&);
 		~MaterialManager();
 
 		//!	@brief			レイアウトID取得
-		VertexLayoutId getVertexLayoutId(const Ref<RHI::VertexLayout>& layout);
+		VertexLayoutId getVertexLayoutId(const Ref<VertexLayout>& layout);
 
 	public:
 
-		void recordGlobalShaderProperties(Ref<RHI::CommandList>&);
+		void recordGlobalShaderProperties(Ref<CommandList>&);
 
 	private:
 
 	private:
 
 		SpinLock m_lock;
-		Map<Ref<RHI::VertexLayout>, VertexLayoutId> m_vertexLayoutCache;
+		Map<Ref<VertexLayout>, VertexLayoutId> m_vertexLayoutCache;
 
 	};
 

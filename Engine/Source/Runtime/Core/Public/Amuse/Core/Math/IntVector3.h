@@ -1,15 +1,16 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/Core/Math/Math.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     struct Vec3;
 
     //! @brief 整数三次元ベクトル
+    //! @ingroup AmuseCore
     struct IntVec3 {
     public:
 
@@ -491,10 +492,10 @@ namespace Amuse::Core {
 // フォーマット
 //===============================================================
 //! @cond
-template <> struct std::formatter<Amuse::Core::IntVec3, Amuse::Core::Char> : std::formatter<Amuse::Core::s32, Amuse::Core::Char> {
-    using base = std::formatter<Amuse::Core::s32, Amuse::Core::Char>;
+template <> struct std::formatter<Amuse::IntVec3, Amuse::Char> : std::formatter<Amuse::s32, Amuse::Char> {
+    using base = std::formatter<Amuse::s32, Amuse::Char>;
     template<typename FormatContext>
-    auto format(const Amuse::Core::IntVec3& value, FormatContext& ctx) const {
+    auto format(const Amuse::IntVec3& value, FormatContext& ctx) const {
         ctx.advance_to(format_to(ctx.out(), "("));
         ctx.advance_to(base::format(value.x, ctx));
         ctx.advance_to(format_to(ctx.out(), ","));

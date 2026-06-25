@@ -1,17 +1,18 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/Core/CorePrivate.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief		バイト順オーダー
 	//! 
 	//! @details	メモリ上のエンディアンはCPUの種類によって既定される。
 	//!				0x1234ABCDという4バイトのデータがあるとき、バイト毎に上位側から「12 34 AB CD」のように並べる順序はビッグエンディアン、
 	//!				下位側から「CD AB 34 12」のように並べる順序はリトルエンディアンである。
+	//! @ingroup AmuseCore
 	enum class ByteOrder :u32 {
 		Auto,			//!< 自動判定
 		LittleEndian,	//!< リトルエンディアン
@@ -20,6 +21,7 @@ namespace Amuse::Core {
 
 
 	//! @brief		エンディアン・ユーティリティ
+	//! @ingroup AmuseCore
 	class Endian {
 	public:
 

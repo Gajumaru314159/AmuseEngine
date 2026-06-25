@@ -17,10 +17,9 @@
 #include <X11/keysym.h>
 #endif
 
-namespace Amuse::Input {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief  キーボード・デバイス
+	//! @ingroup AmuseInput
 	class KeyboardDevice:public IInputDevice {
 	public:
 
@@ -44,6 +43,7 @@ namespace Amuse::Input {
 		bool bindButton(u32 code, ButtonState state, ButtonHandle& handle, const ButtonDelegate& func) override;
 
 	private:
+		//! @ingroup AmuseInput
 		struct KeyState {
 			HashMap<ButtonState,ButtonNotifier> notifiers;
 			ButtonStates prev;

@@ -29,9 +29,7 @@
 //===============================================================
 
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	namespace {
 
 		//! @brief  サブリソース範囲が全体指定か
@@ -175,7 +173,7 @@ namespace Amuse::RHI {
 	//! @brief  コマンドをシステムキューに追加
 	//! // TODO Singletonに依存しているので廃止
 	//! // DirectX12CommandList::writeTexture() が一時アップロードバッファ生成に Buffer::Create() を使用し、
-	//! // Buffer::Create() が Amuse::RHI::Device::Get() (Device Singleton) 経由でリソースを生成している。
+	//! // Buffer::Create() が Amuse::Device::Get() (Device Singleton) 経由でリソースを生成している。
 	//! @brief 自動バリアを有効化
 	void DirectX12CommandList::setEnableAutomaticBarriers(bool enable) {
 		m_enableAutomaticBarriers = enable;

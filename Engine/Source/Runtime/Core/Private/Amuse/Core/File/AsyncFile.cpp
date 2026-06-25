@@ -1,10 +1,10 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #include <Amuse/Core/File/AsyncFile.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     struct AsyncFile::Impl {
         Blob blob;

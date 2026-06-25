@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 /// @file
 /// @brief  TCPクライアント
 /// @author Gajumaru
@@ -7,9 +7,10 @@
 #include <Amuse/Core/CorePrivate.h>
 #include <Amuse/Core/Network/TCPClient.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	/// TCPクライアント
+	//! @ingroup AmuseCore
 	class TCPServer {
 	public:
 

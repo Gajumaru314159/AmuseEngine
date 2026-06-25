@@ -1,13 +1,14 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/Core/CoreTypes.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief メモリサイズ値を表す。
+	//! @ingroup AmuseCore
 	struct MemorySize {
 
 		size_t size; //!< サイズ

@@ -1,11 +1,11 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #include <gtest/gtest.h>
 #include <Amuse/Core/Geometry/Plane.h>
 
-using namespace Amuse::Core;
+using namespace Amuse;
 
 TEST(Plane, Constructor) {
 	// デフォルトコンストラクタ

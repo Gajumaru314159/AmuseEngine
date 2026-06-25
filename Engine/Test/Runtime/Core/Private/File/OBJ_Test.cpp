@@ -1,11 +1,11 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #include <Amuse/Core/File/OBJ.h>
 #include <filesystem>
 
-using namespace Amuse::Core;
+using namespace Amuse;
 
 TEST(OBJ, Test)
 {

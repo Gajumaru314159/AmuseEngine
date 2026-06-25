@@ -12,16 +12,14 @@
 #include <Amuse/VulkanRHI/Command/VulkanCommandQueue.h>
 #include <Amuse/VulkanRHI/VulkanRHIConfig.h>
 
-namespace Amuse::Platform {
-    using namespace Amuse::Core;
+namespace Amuse {
 	class WindowManager;
 }
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	class VulkanDescriptorHeap;
 
+	//! @ingroup AmuseVulkanRHI
 	struct VulkanFeatureInfo {
 		bool debugMarkerEnabled = false;
 	};
@@ -37,7 +35,7 @@ namespace Amuse::RHI {
 		//@―---------------------------------------------------------------------------
 		//! @brief  コンストラクタ
 		//@―---------------------------------------------------------------------------
-		VulkanDevice(Amuse::Platform::WindowManager&, GraphicObjectManager&, const Amuse::RHI::RHIConfig*, const VulkanRHIConfig*);
+		VulkanDevice(Amuse::WindowManager&, GraphicObjectManager&, const Amuse::RHIConfig*, const VulkanRHIConfig*);
 		~VulkanDevice() override;
 
 		//! @brief  ゲーム更新イベント
@@ -315,7 +313,5 @@ namespace Amuse::RHI {
 //===============================================================
 // インライン
 //===============================================================
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 }

@@ -6,14 +6,13 @@
 #include <Amuse/VulkanRHI/pch.h>
 #include <Amuse/Core/Core.h>
 
-namespace Amuse::Core {
+namespace Amuse {
     struct TLSFBlock;
 }
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief  Bindless用にグローバルDescriptorHeapから割り当てられたDescriptorにアクセスするためのハンドル
+    //! @ingroup AmuseVulkanRHI
     class VulkanDescriptorHandle:private Noncopyable {
         friend class VulkanDescriptorHeap;
     public:

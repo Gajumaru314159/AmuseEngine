@@ -16,16 +16,16 @@
 #include <Amuse/VulkanRHI/System.h>
 #include <Amuse/VulkanRHI/VulkanRHIConfig.h>
 
-namespace Amuse::RHI {
+namespace Amuse {
 	class SystemResource;
 }
 
 TYPED_TEST(BindfullRPITest, MaterialBlock) {
 #pragma region
 	using namespace Amuse;
-	using namespace Amuse::RHI;
-	using namespace Amuse::RPI;
-	using namespace Amuse::Platform;
+	using namespace Amuse;
+	using namespace Amuse;
+	using namespace Amuse;
 
 	// ウィンドウ生成
 	WindowDesc windowDesc;
@@ -243,9 +243,9 @@ PsOut PS_Main(PsIn i){
 TYPED_TEST(BindlessRPITest, MaterialBlock) {
 #pragma region
 	using namespace Amuse;
-	using namespace Amuse::RHI;
-	using namespace Amuse::RPI;
-	using namespace Amuse::Platform;
+	using namespace Amuse;
+	using namespace Amuse;
+	using namespace Amuse;
 	// ウィンドウ生成
 	WindowDesc windowDesc;
 	windowDesc.title = "MaterialBlock Bindless";
@@ -491,14 +491,14 @@ PsOut PS_Main(PsIn i){
 TYPED_TEST(BindlessRPITest, MultiMaterialBlock) {
 #pragma region
 	using namespace Amuse;
-	using namespace Amuse::RHI;
-	using namespace Amuse::RPI;
-	using namespace Amuse::Platform;
+	using namespace Amuse;
+	using namespace Amuse;
+	using namespace Amuse;
 
 	// ウィンドウ生成
-	Platform::WindowDesc windowDesc;
+	WindowDesc windowDesc;
 	windowDesc.title = "MaterialBlock MultiBindless";
-	auto window = Platform::Window::Create(windowDesc);
+	auto window = Window::Create(windowDesc);
 	window->show();
 
 	Ref<SwapChain> swapChain = [&] {

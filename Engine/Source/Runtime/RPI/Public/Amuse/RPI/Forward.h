@@ -1,11 +1,11 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/RHI/Forward.h>
 
-namespace Amuse::RPI {
+namespace Amuse {
 
 	struct MaterialBlockDesc;
 

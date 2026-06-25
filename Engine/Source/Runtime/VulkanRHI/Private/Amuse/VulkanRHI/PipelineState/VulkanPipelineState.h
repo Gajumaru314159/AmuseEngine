@@ -7,10 +7,9 @@
 #include <Amuse/Core/Core.h>
 #include <Amuse/RHI/PipelineState.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief		グラフィック・パイプライン実装(DirectX12)
+    //! @ingroup AmuseVulkanRHI
     class VulkanPipelineState :public PipelineState {
     public:
 

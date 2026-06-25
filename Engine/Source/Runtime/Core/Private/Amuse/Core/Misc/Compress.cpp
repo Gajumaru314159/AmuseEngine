@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -6,7 +6,7 @@
 #ifdef OS_WINDOWS
 #include <GDeflate.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     bool GDeflate::Compress(u8* output, size_t* outputSize, const u8* in, size_t inSize, u32 level, u32 flags) {
 		return ::GDeflate::Compress(output, outputSize, in, inSize, level, flags);
@@ -18,7 +18,7 @@ namespace Amuse::Core {
 } 
 #else
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	bool GDeflate::Compress(u8* output, size_t* outputSize, const u8* in, size_t inSize, u32 level, u32 flags) {
 		return false;

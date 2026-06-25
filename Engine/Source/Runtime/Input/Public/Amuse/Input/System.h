@@ -5,9 +5,7 @@
 #pragma once
 #include <Amuse/Core/Core.h>
 
-namespace Amuse::Input {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief      システムをServiceInjectorに登録
     void RegisterInputService(ServiceInjector&);
 

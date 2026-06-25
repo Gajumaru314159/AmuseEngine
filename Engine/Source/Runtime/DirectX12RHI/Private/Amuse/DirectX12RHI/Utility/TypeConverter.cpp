@@ -4,7 +4,7 @@
 //***********************************************************
 #include "TypeConverter.h"
 
-namespace Amuse::RHI
+namespace Amuse
 {
     //! @brief  RootSignatureFlags を D3D12_ROOT_SIGNATURE_FLAGS に変換
     D3D12_ROOT_SIGNATURE_FLAGS TypeConverter::Convert(RootSignatureFlags value) {

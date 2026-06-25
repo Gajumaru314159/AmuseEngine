@@ -2,7 +2,7 @@
 //! @file
 //! @author		Gajumaru
 //***********************************************************
-using namespace Amuse::Core;
+using namespace Amuse;
 #include <string>
 #include <Amuse/Core/Template/Container/IndexMap.h>
 

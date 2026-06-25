@@ -7,9 +7,7 @@
 #include <Amuse/VulkanRHI/RootSignature/VulkanRootSignature.h>
 #include <Amuse/VulkanRHI/Shader/VulkanShader.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief		コンストラクタ
 	VulkanComputePipelineState::VulkanComputePipelineState(VulkanDevice& device, const ComputePipelineStateDesc& desc)
 		: m_desc(desc)

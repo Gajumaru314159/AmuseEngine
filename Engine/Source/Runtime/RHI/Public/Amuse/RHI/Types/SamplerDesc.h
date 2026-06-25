@@ -1,16 +1,15 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/Core/Core.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 #pragma region Enum
 
     //! @brief      テクスチャ・フィルター
+    //! @ingroup AmuseRHI
     enum class TextureFilter :u32 {
         Point,  //!< 最近ピクセルのテクセルを使用
         Linear, //!< 2*2の線形補完値を使用
@@ -18,6 +17,7 @@ namespace Amuse::RHI {
 
 
     //! @brief      ミップマップ・フィルター
+    //! @ingroup AmuseRHI
     enum class MipFilter :u32 {
         Point,  //!< 最近ピクセルのテクセルを使用
         Linear, //!< 2*2の線形補完値を使用
@@ -25,6 +25,7 @@ namespace Amuse::RHI {
 
 
     //! @brief      異方性レベル
+    //! @ingroup AmuseRHI
     enum class Anisotropy : u32 {
         None,
         Level1,
@@ -38,6 +39,7 @@ namespace Amuse::RHI {
     //! @brief      テクスチャ繰り返し設定
     //! 
     //! @details    テクスチャサンプル時、UV座標が0～1を超えた場合にどのようにサンプルするか。
+    //! @ingroup AmuseRHI
     enum class TextureAddress {
         Repeat, //!< 繰り返して表示
         Clamp,  //!< 端を伸ばして表示
@@ -47,6 +49,7 @@ namespace Amuse::RHI {
 #pragma endregion
 
     //! @brief      サンプラー定義
+    //! @ingroup AmuseRHI
     struct SamplerDesc {
 
         String			name;			    //!< 名前
@@ -127,11 +130,11 @@ namespace Amuse::RHI {
 
 
 	//! @brief サンプラ設定のハッシュ関数
+	//! @ingroup AmuseRHI
 	struct SamplerDescHasher {
 		//! @brief 演算子処理を行う
 		size_t operator()(const SamplerDesc& desc) const noexcept
 		{
-			using namespace Amuse::Core;
 			size_t hash = 0;
 			Hash::Combine(hash, desc.name);
 			Hash::Combine(hash, desc.filter);
@@ -148,6 +151,7 @@ namespace Amuse::RHI {
 		}
 	};
 	//! @brief サンプラ設定の等値比較
+	//! @ingroup AmuseRHI
 	struct SamplerDescEqual {
         //! @brief 演算子処理を行う
         bool operator()(const SamplerDesc& lhs, const SamplerDesc& rhs) const noexcept

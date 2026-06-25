@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -6,7 +6,7 @@
 #include <vector>
 #include <Amuse/Core/Template/Allocator/STLAllocator.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief 動的配列
 	template <class T, class TAlloc = STLAllocator<T>>

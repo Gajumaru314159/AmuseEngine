@@ -1,11 +1,11 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <type_traits>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief const volatile &を除去
 	template <class T>
@@ -15,6 +15,7 @@ namespace Amuse::Core {
 	using remove_cvr_t = typename remove_cvr<T>::type;
 
     //! @brief イテレータか
+	//! @ingroup AmuseCore
 	template < class, class = void >
 	struct is_iterator : std::false_type {};
 

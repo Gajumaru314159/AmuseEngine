@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -16,10 +16,10 @@
 //! @brief      基底のログ出力マクロ
 #define _internal_AMUSE_LOG_BASE(level,category,format,...)                                        \
     do {                                                                                        \
-        if(auto logger = Amuse::Core::Logger::Get()) {                                             \
+        if(auto logger = Amuse::Logger::Get()) {                                             \
             logger->addLog(level, CURRENT_SOURCE_LOCATION, category, format, ##__VA_ARGS__);    \
         }                                                                                       \
-        if (UNLIKELY(level == Amuse::Core::LogLevel::Fatal)) {                                     \
+        if (UNLIKELY(level == Amuse::LogLevel::Fatal)) {                                     \
             CallBreakPoint();                                                                   \
             assert(false);                                                                      \
         }                                                                                       \
@@ -33,7 +33,7 @@
 //! @param category カテゴリ名
 //! @param format   フォーマット文字列
 //! @param ...     フォーマット引数
-#define LOG_FATAL_EX(category,format,...)	    _internal_AMUSE_LOG_BASE(Amuse::Core::LogLevel::Fatal,category, format, ##__VA_ARGS__)
+#define LOG_FATAL_EX(category,format,...)	    _internal_AMUSE_LOG_BASE(Amuse::LogLevel::Fatal,category, format, ##__VA_ARGS__)
 //! @brief      アプリケーションの継続が難しい致命的なエラーを通知
 //!
 //! @details    アプリケーションは直ちに終了しなければならない。@n
@@ -49,7 +49,7 @@
 //! @param category カテゴリ名
 //! @param format   フォーマット文字列
 //! @param ...     フォーマット引数
-#define LOG_ERROR_EX(category,format,...)	    _internal_AMUSE_LOG_BASE(Amuse::Core::LogLevel::Error,category, format, ##__VA_ARGS__)
+#define LOG_ERROR_EX(category,format,...)	    _internal_AMUSE_LOG_BASE(Amuse::LogLevel::Error,category, format, ##__VA_ARGS__)
 
 
 //! @brief      アプリケーションが不正な状態になる可能性がある問題を通知
@@ -66,7 +66,7 @@
 //! @param category カテゴリ名
 //! @param format   フォーマット文字列
 //! @param ...     フォーマット引数
-#define LOG_WARNING_EX(category,format,...)	    _internal_AMUSE_LOG_BASE(Amuse::Core::LogLevel::Warning,category, format, ##__VA_ARGS__)
+#define LOG_WARNING_EX(category,format,...)	    _internal_AMUSE_LOG_BASE(Amuse::LogLevel::Warning,category, format, ##__VA_ARGS__)
 //! @brief      アプリケーション実行中に発生した軽微な問題を通知
 //!
 //! @details    アプリケーションの継続が可能である。
@@ -81,7 +81,7 @@
 //! @param category カテゴリ名
 //! @param format   フォーマット文字列
 //! @param ...     フォーマット引数
-#define LOG_INFO_EX(category,format,...)        _internal_AMUSE_LOG_BASE(Amuse::Core::LogLevel::Info,category, format, ##__VA_ARGS__)
+#define LOG_INFO_EX(category,format,...)        _internal_AMUSE_LOG_BASE(Amuse::LogLevel::Info,category, format, ##__VA_ARGS__)
 
 //! @brief      アプリケーション実行中に発生した軽微な問題を通知
 //!
@@ -96,7 +96,7 @@
 //! @param category カテゴリ名
 //! @param format   フォーマット文字列
 //! @param ...     フォーマット引数
-#define LOG_TRACE_EX(category,format,...)        _internal_AMUSE_LOG_BASE(Amuse::Core::LogLevel::Trace,category, format, ##__VA_ARGS__)
+#define LOG_TRACE_EX(category,format,...)        _internal_AMUSE_LOG_BASE(Amuse::LogLevel::Trace,category, format, ##__VA_ARGS__)
 
 //! @brief      デバッグ用に使用するトレースログを通知
 //!

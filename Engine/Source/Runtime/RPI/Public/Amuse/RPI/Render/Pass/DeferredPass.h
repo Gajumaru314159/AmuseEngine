@@ -1,13 +1,14 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/RPI/Render/RenderPass.h>
 
-namespace Amuse::RPI {
+namespace Amuse {
 
 	//! @brief DeferredPass のビュー別データ
+	//! @ingroup AmuseRPI
 	struct DeferredData {
 		Ref<Material> material; //!< 合成マテリアル
 	};
@@ -16,6 +17,7 @@ namespace Amuse::RPI {
 	class DeferredPass : public RenderPass {
 	public:
 		//! @brief DeferredPass の入力リソース
+		//! @ingroup AmuseRPI
 		struct Input {
 			FGResource albedo; //!< アルベド
 			FGResource normal; //!< 法線
@@ -23,6 +25,7 @@ namespace Amuse::RPI {
 			FGResource depth; //!< 深度
 		};
 		//! @brief DeferredPass の出力リソース
+		//! @ingroup AmuseRPI
 		struct Output : Input{
 			FGResource color; //!< カラー
 		};

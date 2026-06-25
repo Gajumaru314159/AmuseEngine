@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -15,18 +15,20 @@
 #include <Amuse/Core/Template/Utility/Pair.h>
 #include <Amuse/Core/Template/Utility/Optional.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief 安定した反復順序を持つ順序付きハッシュマップ
 	//! @details VectorストレージとHashMapインデックスにより挿入順序を維持しながら、平均O(1)の検索/更新を実現します。
 	//!          内部のキーとインデックスのマッピングが壊れないようにするため、キーは挿入後も不変である必要があります。
+		//! @ingroup AmuseCore
 	template<
 		class TKey,
 		class TValue,
 		class THasher = std::hash<TKey>,
 		class TKeyEqual = std::equal_to<TKey>,
-		class TAllocator = Amuse::Core::STLAllocator<Pair<TKey, TValue>>
+		class TAllocator = Amuse::STLAllocator<Pair<TKey, TValue>>
 	>
+	//! @ingroup AmuseCore
 	class IndexMap {
 	private:
 		using key_allocator_type = typename std::allocator_traits<TAllocator>::template rebind_alloc<TKey>;
@@ -56,6 +58,7 @@ namespace Amuse::Core {
 		using allocator_type = TAllocator;
 
 	private:
+		//! @ingroup AmuseCore
 		struct value_reference {
 			key_type& first;
 			mapped_type& second;
@@ -77,6 +80,7 @@ namespace Amuse::Core {
 			}
 		};
 
+		//! @ingroup AmuseCore
 		struct const_value_reference {
 			const key_type& first;
 			const mapped_type& second;
@@ -88,6 +92,7 @@ namespace Amuse::Core {
 			}
 		};
 
+		//! @ingroup AmuseCore
 		template<bool IsConst>
 		struct pointer_proxy {
 			using ref_type = std::conditional_t<IsConst, const_value_reference, value_reference>;
@@ -98,6 +103,7 @@ namespace Amuse::Core {
 			pointer_type operator->() const { return &value; }
 		};
 
+		//! @ingroup AmuseCore
 		template<bool IsConst>
 		class iterator_base {
 			using owner_type = std::conditional_t<IsConst, const IndexMap*, IndexMap*>;

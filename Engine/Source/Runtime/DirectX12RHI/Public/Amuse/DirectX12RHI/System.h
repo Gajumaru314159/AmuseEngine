@@ -3,9 +3,7 @@
 //! @author		Gajumaru
 //***********************************************************
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief      システムをServiceInjectorに登録
 	void RegisterDirectX12RHIService(ServiceInjector&);
 

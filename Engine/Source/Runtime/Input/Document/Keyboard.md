@@ -14,16 +14,16 @@ Keyboardは、キーボード入力をButtonとして提供する静的アクセ
 ## 基本設計
 
 ```cpp
-if (Input::Keyboard::Escape.down()) {
+if (Keyboard::Escape.down()) {
     requestExit();
 }
 
-Input::ButtonHandle handle;
-Input::Keyboard::Space.bindDown(handle, [] {
+ButtonHandle handle;
+Keyboard::Space.bindDown(handle, [] {
     LOG_INFO("Space down");
 });
 
-Input::Button enter = Input::Keyboard::GetButton(Input::Key::Enter);
+Button enter = Keyboard::GetButton(Key::Enter);
 ```
 
 ## API

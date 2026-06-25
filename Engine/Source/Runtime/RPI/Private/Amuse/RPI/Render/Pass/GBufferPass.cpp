@@ -1,14 +1,11 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #include <Amuse/RPI/Render/Pass/GBufferPass.h>
 #include <Amuse/RPI/FrameGraph/FG.h>
 #include <Amuse/RPI/Render/Feature/MaterialRenderFeature.h>
-
-using namespace Amuse::RHI;
-
-namespace Amuse::RPI {
+namespace Amuse {
 
 	EarlyZPass::EarlyZPass() {
 
@@ -21,7 +18,7 @@ namespace Amuse::RPI {
 			[&](FGBuilder& builder, Output& output) {
 				output.depth = builder.write(input.depth);
 			},
-			[&](const Output& output, FGResources& resources, Ref<RHI::CommandList>& cmdList) {
+			[&](const Output& output, FGResources& resources, Ref<CommandList>& cmdList) {
 				if (auto feature = view.findFeature<MaterialRenderFeature>()) {
 
 					MaterialBlockSet blocks(view);
@@ -60,7 +57,7 @@ namespace Amuse::RPI {
 				output.params = builder.write(input.params);
 				output.depth = builder.read(input.depth);
 			},
-			[&](const Output& output, FGResources& resources, Ref<RHI::CommandList>& cmdList) {
+			[&](const Output& output, FGResources& resources, Ref<CommandList>& cmdList) {
 				if (auto feature = view.findFeature<MaterialRenderFeature>()) {
 
 					cmdList->pushMarker("Opaque");
@@ -101,7 +98,7 @@ namespace Amuse::RPI {
 				output.params = builder.write(input.params);
 				output.depth = builder.read(input.depth);
 			},
-			[&](const Output& output, FGResources& resources, Ref<RHI::CommandList>& cmdList) {
+			[&](const Output& output, FGResources& resources, Ref<CommandList>& cmdList) {
 				if (auto feature = view.findFeature<MaterialRenderFeature>()) {
 
 					cmdList->pushMarker("Masked");

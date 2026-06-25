@@ -1,10 +1,10 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief  インデックス付きEnumerator
 	template <class Type, class TItr = decltype(std::begin(std::declval<Type>())), class = decltype(std::end(std::declval<Type>()))>
@@ -13,6 +13,7 @@ namespace Amuse::Core {
 		// Reference: http://reedbeta.com/blog/python-like-enumerate-in-cpp17/
 		// Reference: https://github.com/Siv3D/OpenSiv3D/blob/main/Siv3D/include/Siv3D/Indexed.hpp
 
+		//! @ingroup AmuseCore
 		struct Iterator
 		{
 			size_t index;
@@ -22,6 +23,7 @@ namespace Amuse::Core {
 			constexpr auto operator *() const { return std::tie(index, *itr); }
 		};
 
+		//! @ingroup AmuseCore
 		struct IterableWrapper
 		{
 			Type iterable;
@@ -50,6 +52,7 @@ namespace Amuse::Core {
 	template <class Type, class TItr = decltype(std::rbegin(std::declval<Type>())), class = decltype(std::rend(std::declval<Type>()))>
 	inline constexpr auto ReverseIndexedRef(Type&& iterable)
 	{
+		//! @ingroup AmuseCore
 		struct Iterator
 		{
 			size_t index;
@@ -59,6 +62,7 @@ namespace Amuse::Core {
 			constexpr auto operator *() const { return std::tie(index, *itr); }
 		};
 
+		//! @ingroup AmuseCore
 		struct IterableWrapper
 		{
 			Type iterable;

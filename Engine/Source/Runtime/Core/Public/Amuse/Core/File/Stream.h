@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -6,9 +6,10 @@
 #include <Amuse/Core/CorePrivate.h>
 #include <Amuse/Core/File/FileTypes.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief  シーク基準
+	//! @ingroup AmuseCore
 	enum class SeekOrigin {
 		Begin,
 		Current,
@@ -18,6 +19,7 @@ namespace Amuse::Core {
 	//! @brief  ストリーム基底型
 	//! @details ファイルやメモリなどのストリームを扱う基底クラスです。
 	//! @see	File
+	//! @ingroup AmuseCore
 	class Stream {
 	public:
 

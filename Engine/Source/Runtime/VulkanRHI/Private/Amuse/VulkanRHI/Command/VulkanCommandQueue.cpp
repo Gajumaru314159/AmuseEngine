@@ -6,9 +6,7 @@
 #include <Amuse/VulkanRHI/Command/VulkanCommandList.h>
 #include <Amuse/VulkanRHI/VulkanDevice.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief  コンストラクタ
 	VulkanCommandQueue::VulkanCommandQueue(VulkanDevice& device) 
 		: m_device(device)

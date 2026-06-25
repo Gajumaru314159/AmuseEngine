@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 /// @file
 /// @brief  コア
 /// @author Gajumaru
@@ -10,7 +10,7 @@
 #include <WinSock2.h>
 #pragma comment(lib, "ws2_32.lib")
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	/// 最後のWSAエラーメッセージを取得する
 	static String GetWSALastErrorMessage() {

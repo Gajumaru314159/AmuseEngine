@@ -6,9 +6,7 @@
 #include <Amuse/Core/Core.h>
 #include <Amuse/Platform/Type/Language.h>
 
-namespace Amuse::Platform {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief      システムをServiceInjectorに登録
     void RegisterPlatformService(ServiceInjector&);
 

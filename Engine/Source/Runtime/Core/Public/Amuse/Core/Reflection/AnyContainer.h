@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -7,9 +7,10 @@
 #include <Amuse/Core/Utility/Noncopyable.h>
 #include <Amuse/Core/Utility/Nonmovable.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief 型ごとにインスタンスを格納・取得できるコンテナクラスです。型Tごとのインスタンスの参照取得、存在判定などの機能を提供します。コピー・ムーブは不可です。
+	//! @ingroup AmuseCore
 	class AnyContainer : Nonmovable, Noncopyable {
 	private:
 		struct HolderBase { virtual ~HolderBase() = default; };

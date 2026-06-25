@@ -7,10 +7,7 @@
 #include <Amuse/DirectX12RHI/DirectX12Device.h>
 #include <Amuse/DirectX12RHI/Utility/Utility.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
-
+namespace Amuse {
 	//! @brief  コンストラクタ
 	CommandQueue::CommandQueue(DirectX12Device& device)
 		:m_fenceVal(0)

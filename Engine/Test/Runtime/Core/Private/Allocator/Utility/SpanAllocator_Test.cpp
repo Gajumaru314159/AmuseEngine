@@ -4,7 +4,7 @@
 //***********************************************************
 #include <Amuse/Core/Allocator/Utility/SpanAllocator.h>
 
-using namespace Amuse::Core;
+using namespace Amuse;
 
 TEST(SpanAllocator, AllocateExtendsLinearRange) {
 	SpanAllocator allocator;

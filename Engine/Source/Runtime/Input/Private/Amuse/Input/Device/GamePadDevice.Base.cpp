@@ -1,8 +1,6 @@
 #include <Amuse/Input/Device/GamePadDevice.h>
 
-namespace Amuse::Input {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief  ボタンの入力状態を取得
 	ButtonStates GamePadDevice::getButtonStates(u32 code) const {
 		auto key = static_cast<MouseButton>(code);

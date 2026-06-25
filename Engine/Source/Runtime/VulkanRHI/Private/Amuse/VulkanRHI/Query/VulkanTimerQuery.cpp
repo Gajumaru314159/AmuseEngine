@@ -5,9 +5,7 @@
 #include <Amuse/VulkanRHI/Query/VulkanTimerQuery.h>
 #include <Amuse/VulkanRHI/VulkanDevice.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief コンストラクタ
 	VulkanEventQuery::VulkanEventQuery(VulkanDevice& device)
 		: m_device(device)

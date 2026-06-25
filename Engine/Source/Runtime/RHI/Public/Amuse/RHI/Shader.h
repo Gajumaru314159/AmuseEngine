@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -8,10 +8,9 @@
 #include <Amuse/RHI/GraphicObject.h>
 #include <Amuse/RHI/Types/ShaderStage.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief シェーダコンパイル設定
+    //! @ingroup AmuseRHI
     struct ShaderCompileDesc {
         String         name;		    //!< シェーダ名
         String         code;		    //!< シェーダコード
@@ -21,6 +20,7 @@ namespace Amuse::RHI {
     };
 
     //! @brief      シェーダ
+    //! @ingroup AmuseRHI
     class Shader :public GraphicObject {
     public:
 

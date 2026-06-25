@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -6,9 +6,10 @@
 #include <Amuse/Core/Math/Vector3.h>
 #include <Amuse/Core/Math/Matrix.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief  トランスフォーム
+    //! @ingroup AmuseCore
     class Transform {
     public:
 

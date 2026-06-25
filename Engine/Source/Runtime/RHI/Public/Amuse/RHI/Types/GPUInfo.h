@@ -5,12 +5,11 @@
 #pragma once
 #include <Amuse/Core/Core.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief      デバイス・アダプタ情報
     //! 
     //! @details    GPU情報
+    //! @ingroup AmuseRHI
     struct DeviceAdapterInfo {
         char    deviceName[256];        //!< デバイス名
         u32     vendorId;               //!< ベンダーID

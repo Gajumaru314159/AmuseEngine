@@ -1,11 +1,11 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/Core/Reflection/Type.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	bool IsCastable(Type from, Type to);
 	

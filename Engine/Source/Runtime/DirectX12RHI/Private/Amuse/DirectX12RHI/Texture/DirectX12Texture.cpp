@@ -9,9 +9,7 @@
 #include <DirectXTex.h>
 
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	static s32 GetViewMipLevels(const TextureViewDesc& viewDesc) {
 		return viewDesc.mipLevels <= 0 ? -1 : viewDesc.mipLevels;
 	}

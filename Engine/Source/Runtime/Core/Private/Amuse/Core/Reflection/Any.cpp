@@ -1,8 +1,8 @@
-﻿#include <Amuse/Core/Reflection/Any.h>
+#include <Amuse/Core/Reflection/Any.h>
 #include <Amuse/Core/Reflection/TypeInfoManager.h>
 #include <Amuse/Core/Reflection/TypeInfo.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief 読み書き可能なプロパティを生成 
 	Property::Property(const TypeInfo& ownerInfo, void* owner, const PropertyInfo* info)

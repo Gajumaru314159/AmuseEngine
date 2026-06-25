@@ -33,16 +33,12 @@
 			return nullptr;\
 		}
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//@―---------------------------------------------------------------------------
 	//! @brief  デバッグレイヤのコールバック
 	//@―---------------------------------------------------------------------------
 #if defined(OS_WINDOWS)
 	static VkBool32 DebugUtilsMessengerCallback(vk::DebugUtilsMessageSeverityFlagBitsEXT messageSeverity,vk::DebugUtilsMessageTypeFlagsEXT messageTypes,const vk::DebugUtilsMessengerCallbackDataEXT* pCallbackData,void* pUserData) {
-		using namespace Amuse::Core;
-
 		if (messageSeverity & vk::DebugUtilsMessageSeverityFlagBitsEXT::eError) {
 			LOG_ERROR("[VulkanDevice] {}", pCallbackData->pMessage);
 			CallBreakPoint();
@@ -62,8 +58,6 @@ namespace Amuse::RHI {
 	}
 #else
 	static VkBool32 DebugUtilsMessengerCallback(VkDebugUtilsMessageSeverityFlagBitsEXT messageSeverity,VkDebugUtilsMessageTypeFlagsEXT messageTypes,const VkDebugUtilsMessengerCallbackDataEXT* pCallbackData,void* pUserData) {
-		using namespace Amuse::Core;
-
 		if (messageSeverity & VK_DEBUG_UTILS_MESSAGE_SEVERITY_ERROR_BIT_EXT) {
 			LOG_ERROR("[VulkanDevice] {}", pCallbackData->pMessage);
 			CallBreakPoint();
@@ -85,16 +79,14 @@ namespace Amuse::RHI {
 
 }
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//@―---------------------------------------------------------------------------
 	//! @brief  コンストラクタ
 	//@―---------------------------------------------------------------------------
-	VulkanDevice::VulkanDevice(Platform::WindowManager&, GraphicObjectManager& objectManager, const Amuse::RHI::RHIConfig* config, const VulkanRHIConfig* vconfig)
+	VulkanDevice::VulkanDevice(WindowManager&, GraphicObjectManager& objectManager, const Amuse::RHIConfig* config, const VulkanRHIConfig* vconfig)
 		: Device(objectManager, config)
-		, m_config(config ? *config : Amuse::RHI::RHIConfig{})
-		, m_vconfig(vconfig ? *vconfig : Amuse::RHI::VulkanRHIConfig{})
+		, m_config(config ? *config : Amuse::RHIConfig{})
+		, m_vconfig(vconfig ? *vconfig : Amuse::VulkanRHIConfig{})
 	{
 		createInstance();
 		createPhysicalDevice();

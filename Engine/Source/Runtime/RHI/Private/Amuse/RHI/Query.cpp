@@ -5,9 +5,7 @@
 #include <Amuse/RHI/Query.h>
 #include <Amuse/RHI/RHI.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief 生成
 	Ref<EventQuery> EventQuery::Create() {
 		if (auto device = Device::Get()) {

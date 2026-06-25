@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -7,9 +7,10 @@
 #include <Amuse/RPI/Render/Pass/ImGuiPass.h>
 #include <Amuse/RPI/Render/Pass/OutputPass.h>
 
-namespace Amuse::RPI {
+namespace Amuse {
 
 	//! @brief ImGui 表示用の描画パイプライン
+	//! @ingroup AmuseRPI
 	class ImGuiRenderPipeline : public RenderPipeline {
 	public:
 		//! @brief ImGui 描画パイプラインを生成する

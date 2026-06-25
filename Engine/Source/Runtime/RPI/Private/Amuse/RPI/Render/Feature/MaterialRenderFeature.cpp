@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -9,7 +9,7 @@
 #include <Amuse/RHI/PipelineState.h>
 #include "Amuse/RPI/Material/MaterialShader.h"
 
-namespace Amuse::RPI {
+namespace Amuse {
 
 
 	//! @brief      コンストラクタ
@@ -36,7 +36,7 @@ namespace Amuse::RPI {
 	}
 
 	//! @brief      描画
-	bool MaterialRenderFeature::render(RenderView* view,Ref<RHI::CommandList>& commandList,MaterialBlockSet& blocks, StringView passName) {
+	bool MaterialRenderFeature::render(RenderView* view,Ref<CommandList>& commandList,MaterialBlockSet& blocks, StringView passName) {
 
 		if (!view) return false;
 		if (!commandList) return false;
@@ -44,7 +44,7 @@ namespace Amuse::RPI {
 
 
 		for(auto& item : mvd.passes[String(passName)].items) {
-			Ref<RHI::PipelineState> pipeline = item.pipeline;
+			Ref<PipelineState> pipeline = item.pipeline;
 			commandList->setPipelineState(pipeline);
 			m_block.record(commandList,0); // scene
 			mvd.block.record(commandList,1); // view

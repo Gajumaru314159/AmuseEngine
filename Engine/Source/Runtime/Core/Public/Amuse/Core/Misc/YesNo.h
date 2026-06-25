@@ -1,10 +1,10 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief  Yes/No表現
     //! 
@@ -18,6 +18,7 @@ namespace Amuse::Core {
     //!     func(UseDepth::Yes,UseColor::No);
     //! }
     //! ```
+    //! @ingroup AmuseCore
     template <class Tag>
     class YesNo {
     public:

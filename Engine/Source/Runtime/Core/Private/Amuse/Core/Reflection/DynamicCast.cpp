@@ -1,7 +1,7 @@
-﻿#include <Amuse/Core/Reflection/DynamicCast.h>
+#include <Amuse/Core/Reflection/DynamicCast.h>
 #include <Amuse/Core/Reflection/TypeInfoManager.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	bool IsCastable(Type from, Type to) {
         if (from == to)return true;

@@ -7,12 +7,11 @@
 #include <Amuse/Core/Core.h>
 #include <Amuse/Core/Allocator/Utility/TLSFMapper.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief      デスクリプタのアロケータ
 	//! 
 	//! @details    Two-Level Segregate Fit を利用してデスクリプタを割り当てます。
+	//! @ingroup AmuseVulkanRHI
 	class VulkanDescriptorHeap :private Noncopyable {
 		friend class DescriptorHandle;
 	public:

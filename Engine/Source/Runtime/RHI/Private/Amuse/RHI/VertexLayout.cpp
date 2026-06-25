@@ -4,9 +4,7 @@
 //***********************************************************
 #include <Amuse/RHI/VertexLayout.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	namespace {
 
 		//! @brief      頂点レイアウト実装

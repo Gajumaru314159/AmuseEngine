@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -7,7 +7,7 @@
 #include <Amuse/RPI/Render/RenderScene.h>
 #include <Amuse/RPI/Render/RenderView.h>
 
-namespace Amuse::RPI {
+namespace Amuse {
 
 	//! @brief      コンストラクタ
 	RenderScene::RenderScene() {

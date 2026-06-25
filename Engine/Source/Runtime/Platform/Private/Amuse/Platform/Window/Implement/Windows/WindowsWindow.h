@@ -8,10 +8,9 @@
 #include <Windows.h>
 #include <Amuse/Platform/Window.h>
 
-namespace Amuse::Platform {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief  ウィンドウ
+    //! @ingroup AmusePlatform
     class WindowsWindow : public Window {
     public:
 

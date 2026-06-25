@@ -1,13 +1,14 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/Core/Memory/Memory.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @cond
+    //! @ingroup AmuseCore
     struct STLAllocatorBase {
     public:
         // 特殊関数
@@ -29,6 +30,7 @@ namespace Amuse::Core {
 
 
     //! @brief  STLアロケータ
+    //! @ingroup AmuseCore
     template <class T>
     struct STLAllocator :public STLAllocatorBase {
     public:

@@ -15,7 +15,7 @@ WindowsではDLL、Linuxでは共有オブジェクト、macOSではdylibを想�
 ## 基本設計
 
 ```cpp
-Platform::DLL dll("Plugins/SamplePlugin");
+DLL dll("Plugins/SamplePlugin");
 
 auto create = dll.getFunction("CreatePlugin");
 if (create) {

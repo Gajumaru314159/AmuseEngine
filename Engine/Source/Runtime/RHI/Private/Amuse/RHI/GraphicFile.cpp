@@ -5,9 +5,7 @@
 #include <Amuse/RHI/GraphicFile.h>
 #include <Amuse/RHI/RHI.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	Ref<GraphicFileHandle> GraphicFileHandle::Create(StringView path) {
 		if (auto device = Device::Get()) {
 			return device->createGraphicFileHandle(path);

@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -8,7 +8,7 @@
 #include <Amuse/Core/Job/Job.h>
 #include <Amuse/Core/Job/JobSystem.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief コンストラクタ
 	JobGroup::JobGroup(JobSystem& system, StringView name) 

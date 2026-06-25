@@ -1,13 +1,14 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/Core/CoreTypes.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief  ポイント
+	//! @ingroup AmuseCore
 	struct Point {
 	public:
 

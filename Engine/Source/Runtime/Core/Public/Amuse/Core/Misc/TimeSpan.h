@@ -1,17 +1,18 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/Core/Misc/DateTime.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief		時間間隔
 	//! 
 	//! @details	長期の期間を扱うのには適していません。
 	//!				内部表現に64bit整数を使用しているため±239年を超える場合は別な表現を検討してください。
 	//!				経過年数を取得する場合は閏年を考慮する必要があるため独自に実装する必要があります。
+	//! @ingroup AmuseCore
 	class TimeSpan {
 	public:
 
@@ -340,14 +341,14 @@ namespace Amuse::Core {
 // フォーマット
 //===============================================================
 //! @cond
-template <> struct std::formatter<Amuse::Core::TimeSpan, Amuse::Core::Char> {
+template <> struct std::formatter<Amuse::TimeSpan, Amuse::Char> {
 	template<typename ParseContext>
 	constexpr auto parse(ParseContext& ctx) -> decltype(ctx.begin()) {
 		return ctx.end();
 	}
 
 	template<typename FormatContext>
-	auto format(const Amuse::Core::TimeSpan& value, FormatContext& ctx) const {
+	auto format(const Amuse::TimeSpan& value, FormatContext& ctx) const {
 		if (value.days())return format_to(ctx.out(), "{}d{:0>2}h{:0>2}m", value.days(), value.hours(), value.minutes());
 		if (value.hours())return format_to(ctx.out(), "{:0>2}h{:0>2}m{:0>2}s", value.hours(), value.minutes(), value.seconds());
 		if (value.minutes())return format_to(ctx.out(), "{:0>2}m{:.5}s", value.minutes(), value.secondsF());

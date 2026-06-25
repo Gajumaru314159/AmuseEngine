@@ -5,9 +5,7 @@
 #pragma once
 #include <Amuse/Core/Core.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief  カラースペース
     //! 
     //! @details    | OctbitEngine  | DXGI_COLOR_SPACE_TYPE    | VkColorSpaceKHR    |
@@ -18,6 +16,7 @@ namespace Amuse::RHI {
     //!             | BT2100_G22    | RGB_FULL_G22_NONE_P2020  | HDR10_ST2084_EXT   |
     //!             ガンマカーブにはHLG(Hybrid Log-Gamma)とPG(Perceptual Quantizer)が存在します。
     //!             [参考](https://ja.wikipedia.org/wiki/ハイダイナミックレンジビデオ)
+    //! @ingroup AmuseRHI
     enum class ColorSpace {
         BT709_G22,              //!< SDR(8bit) Gamma=2.2
         BT709_G10,              //!< SDR(8bit) Gamma=1.0

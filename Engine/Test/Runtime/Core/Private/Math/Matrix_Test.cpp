@@ -1,10 +1,10 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #include <Amuse/Core/Math/Matrix.h>
 #include <Amuse/Core/Math/Vectors.h>
-using namespace Amuse::Core;
+using namespace Amuse;
 
 TEST(Matrix, OperatorSet) {
     Matrix mtxA(

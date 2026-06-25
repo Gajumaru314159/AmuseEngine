@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -7,10 +7,9 @@
 #include <Amuse/RHI/GraphicObject.h>
 #include <Amuse/RHI/Types/DescriptorLayoutDesc.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief      デスクリプタレイアウト
+	//! @ingroup AmuseRHI
 	class DescriptorLayout :public GraphicObject {
 	public:
 

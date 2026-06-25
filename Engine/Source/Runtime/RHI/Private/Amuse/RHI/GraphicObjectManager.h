@@ -8,12 +8,11 @@
 #include <Amuse/RHI/Config.h>
 #include <Amuse/Core/Utility/Swapper.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 #define GRAPHIC_OBJECT_LEAK_CHECK_ENABLED AMUSE_DEBUG
 
     //! @brief  グラフィック・オブジェクト・マネージャ
+    //! @ingroup AmuseRHI
     class GraphicObjectManager : public Singleton<GraphicObjectManager> {
     public:
 

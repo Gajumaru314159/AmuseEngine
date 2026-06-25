@@ -1,22 +1,23 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/Core/CoreTypes.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief このマクロの呼び出し位置の SourceLocation オブジェクトを作成する
 #ifdef AMUSE_DEBUG
-#define CURRENT_SOURCE_LOCATION Amuse::Core::SourceLocation{__FILE__, FUNC_NAME ,__LINE__}
+#define CURRENT_SOURCE_LOCATION Amuse::SourceLocation{__FILE__, FUNC_NAME ,__LINE__}
 #else
-#define CURRENT_SOURCE_LOCATION Amuse::Core::SourceLocation{"","",__LINE__}
+#define CURRENT_SOURCE_LOCATION Amuse::SourceLocation{"","",__LINE__}
 #endif
 
     //! @brief      ソースコード上の位置を表す構造体
     //! 
     //! @details    構築には CURRENT_SOURCE_LOCATION マクロを使用してください。
+    //! @ingroup AmuseCore
     struct SourceLocation {
         const Char* filePath = nullptr;             //!< ファイルパス
         const Char* functionName = nullptr;         //!< 関数名
@@ -25,6 +26,7 @@ namespace Amuse::Core {
 
 
     //! @brief ログのレベル
+    //! @ingroup AmuseCore
     enum class LogLevel {
         Fatal,      //!< 致命的エラー
         Error,		//!< エラー
@@ -35,6 +37,7 @@ namespace Amuse::Core {
 
 
     //! @brief ログ・オブジェクト
+    //! @ingroup AmuseCore
     struct Log {
         LogLevel        level = LogLevel::Trace;//!< タイプ
         const Char*     category = nullptr;     //!< カテゴリ

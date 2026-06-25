@@ -17,14 +17,14 @@ Windowは、ネイティブウィンドウの生成、状態取得、座標変�
 ## 基本設計
 
 ```cpp
-Platform::WindowDesc desc;
+WindowDesc desc;
 desc.title = "Amuse";
 desc.clientSize = { 1280, 720 };
 desc.show = true;
 
-Ref<Platform::Window> window = Platform::Window::Create(desc);
-window->addEventListener(handle, [](const Platform::WindowEventArgs& args) {
-    if (args.type == Platform::WindowEventType::Close) {
+Ref<Window> window = Window::Create(desc);
+window->addEventListener(handle, [](const WindowEventArgs& args) {
+    if (args.type == WindowEventType::Close) {
         LOG_INFO("Window closed");
     }
 });

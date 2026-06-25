@@ -1,10 +1,9 @@
 #include <Amuse/Input/Device/MouseDevice.h>
 
-namespace Amuse::Input {
-    using namespace Amuse::Core;
+namespace Amuse {
 #if defined(OS_WINDOWS)
 
-	MouseDevice::MouseDevice(Platform::Window& window)
+	MouseDevice::MouseDevice(Window& window)
 		: m_interface(nullptr)
 		, m_mouse(nullptr)
 		, m_position{}

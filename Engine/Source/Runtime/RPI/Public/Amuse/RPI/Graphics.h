@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -11,7 +11,7 @@
 #include <Amuse/RPI/FrameGraph/FGDataWriter.h>
 
 
-namespace Amuse::RPI {
+namespace Amuse {
 
     class MaterialManager;
 
@@ -19,11 +19,12 @@ namespace Amuse::RPI {
     void RegisterGraphicsService(ServiceInjector&);
 
     //! @brief      グラフィック
+    //! @ingroup AmuseRPI
     class Graphics :public Singleton<Graphics> {
     public:
 
         //! @brief      コンストラクタ
-        Graphics(RHI::Device& rhi, MaterialManager&);
+        Graphics(Device& rhi, MaterialManager&);
 
         //! @brief      デストラクタ
         ~Graphics();
@@ -61,11 +62,11 @@ namespace Amuse::RPI {
 
     private:
 
-        RHI::Device& m_rhi; //!< RHI デバイス
+        Device& m_rhi; //!< RHI デバイス
 
         UPtr<FG> m_fg{ nullptr }; //!< フレームグラフ
 
-        Swapper<Ref<RHI::CommandList>> m_commandLists; //!< コマンドリスト
+        Swapper<Ref<CommandList>> m_commandLists; //!< コマンドリスト
 
         Pimpl<FGResourcePool> m_fgResourcePool; //!< フレームグラフリソースプール
 

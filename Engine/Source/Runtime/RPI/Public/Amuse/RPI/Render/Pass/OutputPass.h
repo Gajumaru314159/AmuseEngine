@@ -1,16 +1,17 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/RPI/Render/RenderPass.h>
 
-namespace Amuse::RPI {
+namespace Amuse {
 
 	//! @brief OutputPass のビュー別出力先情報
+	//! @ingroup AmuseRPI
 	struct OutputViewData {
-		Ref<RHI::SwapChain>		swapchain;			//!< 描画先
-		Ref<RHI::RenderTexture> texture;			//!< 描画先
+		Ref<SwapChain>		swapchain;			//!< 描画先
+		Ref<RenderTexture> texture;			//!< 描画先
 		Rect                    rect{0,0,1,1};		//!< 描画範囲の矩形
 		Viewport				viewport{0,0,1,1};	//!< 描画範囲
 
@@ -19,6 +20,7 @@ namespace Amuse::RPI {
 	};
 
 	//! @brief 最終カラーをスワップチェーンまたはテクスチャへ出力するパス
+	//! @ingroup AmuseRPI
 	class OutputPass : public RenderPass {
 	public:
 		//! @brief OutputPass の入力リソース
@@ -26,6 +28,7 @@ namespace Amuse::RPI {
 			FGResource color; //!< カラー
 		};
 		//! @brief OutputPass の出力リソース
+		//! @ingroup AmuseRPI
 		struct Output : Input {
 		};
 	public:

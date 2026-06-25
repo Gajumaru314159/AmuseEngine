@@ -11,9 +11,8 @@
 #include <Amuse/Platform/Type/SystemEventType.h>
 #include <Amuse/VulkanRHI/Command/VulkanResourceStateCache.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
+	//! @ingroup AmuseVulkanRHI
 	class VulkanSwapChain :public SwapChain{
 	public:
 
@@ -47,7 +46,7 @@ namespace Amuse::RHI {
 
 		void clearBuffer();
 
-		void onWindowChanged(const Platform::WindowEventArgs& args);
+		void onWindowChanged(const WindowEventArgs& args);
 
 	private:
 
@@ -76,7 +75,7 @@ namespace Amuse::RHI {
 
 		SwapChainEventNotifier        m_notifier;
 
-		Platform::WindowEventHandle m_hEvent;
+		WindowEventHandle m_hEvent;
 
 		bool m_firstTimeTest = true;
 		bool m_closed = false;

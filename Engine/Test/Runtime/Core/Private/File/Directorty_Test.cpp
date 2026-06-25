@@ -1,8 +1,8 @@
-﻿#include <gtest/gtest.h>
+#include <gtest/gtest.h>
 #include <Amuse/Core/File/Directory.h>
 #include <Amuse/Core/File/File.h>
 
-using namespace Amuse::Core;
+using namespace Amuse;
 
 TEST(Directory, Exists)
 {

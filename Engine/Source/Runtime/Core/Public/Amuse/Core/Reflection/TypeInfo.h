@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -9,7 +9,7 @@
 #include <Amuse/Core/Template/Container/Map.h>
 #include <Amuse/Core/Template/Utility/Function.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	using ConstructorInvoker = Any(*)(Span<Any> args);
 	using DestructorInvoker = void(*)(void*);
@@ -24,6 +24,7 @@ namespace Amuse::Core {
 
 
 	//! @brief リフレクション要素へ付与する任意のタグ情報。
+	//! @ingroup AmuseCore
 	struct TagInfo {
 		HashMap<StringView, String> tags; //!< タグ一覧
 
@@ -36,6 +37,7 @@ namespace Amuse::Core {
 
 
 	//! @brief 列挙型に登録された 1 要素のメタ情報。
+	//! @ingroup AmuseCore
 	struct EnumElementInfo : TagInfo {
 		StringView				name; //!< 列挙要素名
 		s32						index; //!< 登録順に割り振られた 0 ベースのインデックス
@@ -43,12 +45,14 @@ namespace Amuse::Core {
 	};
 
 	//! @brief コンストラクタやメソッド引数のメタ情報。
+	//! @ingroup AmuseCore
 	struct ArgumentInfo {
 		Type					type; //!< 型
 		StringView				name; //!< 引数名
 	};
 
 	//! @brief 型を生成するコンストラクタのメタ情報。
+	//! @ingroup AmuseCore
 	struct ConstructorInfo : TagInfo {
 		Vector<ArgumentInfo>		arguments; //!< コンストラクタ引数の一覧
 		ConstructorInvoker			invoker; //!< コンストラクタ呼び出し関数
@@ -90,6 +94,7 @@ namespace Amuse::Core {
 	};
 
 	//! @brief フィールドや getter/setter で公開されるプロパティのメタ情報。
+	//! @ingroup AmuseCore
 	struct PropertyInfo : TagInfo {
 		Type					type; //!< 型
 		StringView				name; //!< プロパティ名
@@ -118,6 +123,7 @@ namespace Amuse::Core {
 	};
 
 	//! @brief リフレクション経由で呼び出せるメソッドのメタ情報。
+	//! @ingroup AmuseCore
 	struct MethodInfo : TagInfo {
 		StringView				name; //!< メソッド名
 		bool					isConst; //!< const メソッドとして登録されているかどうか
@@ -133,6 +139,7 @@ namespace Amuse::Core {
 	using MethodInfoMap = HashMap<StringView, MethodInfo>;
 
 	//! @brief 型の生成、破棄、プロパティ、メソッド、列挙要素を保持するメタ情報。
+	//! @ingroup AmuseCore
 	struct TypeInfo : TagInfo {
 		Type					type; //!< 型
 		HashSet<Type>			bases; //!< 基底型一覧

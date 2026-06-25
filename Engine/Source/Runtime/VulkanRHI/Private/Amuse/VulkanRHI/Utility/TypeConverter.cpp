@@ -1,8 +1,6 @@
 #include <Amuse/VulkanRHI/Utility/TypeConverter.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	vk::ImageType TypeConverter::Convert(TextureType value) {
 		switch (value) {
 		case TextureType::Texture1D:		return vk::ImageType::e1D;

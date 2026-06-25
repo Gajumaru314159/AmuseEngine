@@ -53,14 +53,14 @@ auto text = Format("{}",Color::Red);
 独自追加した型をFormatに対応する場合はstd::formatterを直接特殊化してください。以下はRange型のformatterの例です。
 
 ```cpp
-template <> struct std::formatter<Amuse::Core::Range, Amuse::Core::Char> {
+template <> struct std::formatter<Amuse::Range, Amuse::Char> {
 	template<typename ParseContext>
 	constexpr auto parse(ParseContext& ctx) -> decltype(ctx.begin()) {
 		return ctx.end();
 	}
 
 	template<typename FormatContext>
-	auto format(Amuse::Core::Range value, FormatContext& ctx) const {
+	auto format(Amuse::Range value, FormatContext& ctx) const {
 		return format_to(ctx.out(), "({},{})", value.min,value.max);
 	}
 };

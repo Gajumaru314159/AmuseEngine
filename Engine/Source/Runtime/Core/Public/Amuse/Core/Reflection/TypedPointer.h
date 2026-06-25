@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -7,10 +7,11 @@
 
 #define AMUSE_TYPED_POINTER_ENABLED 1
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief		デバッガー上で型情報を表示するための型情報付きポインタ
 	//! @details	デバッグビルド時のみ内部ストレージに型情報を保持します。リリースビルド時にはストレージは削除されます。
+	//! @ingroup AmuseCore
 	class alignas(8) TypedPointer {
 	public:
 		TypedPointer() = default;
@@ -95,12 +96,14 @@ namespace Amuse::Core {
 		}
 
 	private:
+		//! @ingroup AmuseCore
 		class Base {
 		public:
 			virtual ~Base() = default;
 			virtual void* get() = 0;
 			virtual const void* get()const = 0;
 		};
+		//! @ingroup AmuseCore
 		template<class T>
 		class Pointer : public Base {
 		public:
@@ -116,6 +119,7 @@ namespace Amuse::Core {
 		private:
 			T* m_pointer;
 		};
+		//! @ingroup AmuseCore
 		class VoidPointer : public Base {
 		public:
 			VoidPointer(void* pointer) {

@@ -7,10 +7,9 @@
 #include <Amuse/RHI/RHI.h>
 #include <Amuse/RHI/Texture.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief      プリセットテクスチャ
+	//! @ingroup AmuseRHI
 	enum class PresetTexture {
 		White,
 		Gray,
@@ -20,6 +19,7 @@ namespace Amuse::RHI {
 	};
 
 	//! @brief      プリセットサンプラー
+	//! @ingroup AmuseRHI
 	enum class PresetSampler {
 		Default
 	};

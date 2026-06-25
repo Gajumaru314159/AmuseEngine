@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -6,9 +6,10 @@
 #include <Amuse/Core/Math/Vector2.h>
 #include <Amuse/Core/Geometry/Rect.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief  マージン
+	//! @ingroup AmuseCore
 	struct Margin {
 	public:
 

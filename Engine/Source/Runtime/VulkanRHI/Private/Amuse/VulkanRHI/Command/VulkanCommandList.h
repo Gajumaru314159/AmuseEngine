@@ -11,14 +11,13 @@
 #include <Amuse/Core/Utility/Swapper.h>
 #include <Amuse/VulkanRHI/Command/VulkanResourceStateCache.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     class VulkanDevice;
 
     //@―---------------------------------------------------------------------------
     //! @brief  コマンドリスト実装(DirectX12)
     //@―---------------------------------------------------------------------------
+    //! @ingroup AmuseVulkanRHI
     class VulkanCommandList:public CommandList {
     public:
 
@@ -139,7 +138,7 @@ namespace Amuse::RHI {
 
 
         //! @brief      デスクリプタ・テーブルを設定
-        void setDescriptorTables(const Amuse::RHI::SetDescriptorTableParam*, s32 num) override;
+        void setDescriptorTables(const Amuse::SetDescriptorTableParam*, s32 num) override;
 
 
         //! @brief      ルート定数を設定
@@ -176,6 +175,7 @@ namespace Amuse::RHI {
 
         void clearRenderTargets();
 
+		//! @ingroup AmuseVulkanRHI
 		struct DepthStencilAttachmentState {
 			Ref<RenderTexture> texture;
 			vk::ImageLayout layout;

@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -9,9 +9,10 @@
 #include <Amuse/Core/Utility/MemoryStorage.h>
 #include <Amuse/Core/Utility/Singleton.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief 非同期ファイルシステムを表す。
+	//! @ingroup AmuseCore
 	class AsyncFileSystem : public Singleton<AsyncFileSystem> {
 	public:
 		AsyncFileSystem();
@@ -22,6 +23,7 @@ namespace Amuse::Core {
 	};
 
 	//! @brief 非同期ファイル操作のハンドルを表す。
+	//! @ingroup AmuseCore
 	class AsyncFileHandle {
 	public:
 		AsyncFileHandle() = default;
@@ -44,6 +46,7 @@ namespace Amuse::Core {
 	//! @details	* uncompressedSizeが0以外の場合はプラットフォームに応じた解凍処理が行われます。
 	//!				* destが指定されている場合は指定先にファイルの内容が展開されます。
 	//!				* destが指定されていない場合は内部的にバッファを確保し、そのバッファに展開されます。
+	//! @ingroup AmuseCore
 	struct AsyncFileRequest {
 		//! @brief 読み込み対象のファイルハンドル。
 		AsyncFileHandle handle;					//! ファイルハンドル
@@ -54,6 +57,7 @@ namespace Amuse::Core {
 	};
 
 	//! @brief 非同期ファイル読み込みイベント
+	//! @ingroup AmuseCore
 	class AsyncFileEvent {
 	public:
 		AsyncFileEvent();
@@ -70,6 +74,7 @@ namespace Amuse::Core {
 
 	//! @brief 非同期ファイル読み込みキュー
 	//! @internal このクラスは非同期ファイル読み込みを管理するキューです。
+	//! @ingroup AmuseCore
 	class AsyncFileQueue {
 	public:
 		AsyncFileQueue();
@@ -90,6 +95,7 @@ namespace Amuse::Core {
 
 	//! @brief  非同期ファイル
 	//! @details このクラスはAsyncFileQueue、AsyncFileHandle、AsyncFileRequestのラッパークラスです。
+	//! @ingroup AmuseCore
 	class AsyncFile {
 	public:
 		//! @brief コンストラクタ

@@ -5,9 +5,7 @@
 #include <Amuse/RHI/GraphicObject.h>
 #include <Amuse/RHI/GraphicObjectManager.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief  コンストラクタ
     GraphicObject::GraphicObject() {
     }

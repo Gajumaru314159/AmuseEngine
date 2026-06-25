@@ -6,9 +6,7 @@
 #include <Amuse/DirectX12RHI/DirectX12Device.h>
 #include <Amuse/DirectX12RHI/Utility/Utility.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief コンストラクタ
 	DirectX12EventQuery::DirectX12EventQuery(DirectX12Device& device)
 		: m_device(device)

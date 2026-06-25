@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -6,11 +6,12 @@
 #include <Amuse/RHI/Forward.h>
 #include <Amuse/RPI/Material/MaterialTypes.h>
 
-namespace Amuse::RPI {
+namespace Amuse {
 
     //! @brief  マテリアル定義
 	//! @details マテリアルのプロパティ゙定義するための構造体です。
 	//!          layout を指定しない場合はBindlessモードとして扱われます。
+    //! @ingroup AmuseRPI
     struct MaterialBlockDesc {
         String          name; //!< ブロック名
         Vector<String>  textures; //!< テクスチャ名
@@ -19,7 +20,7 @@ namespace Amuse::RPI {
         Vector<String>  vectors; //!< ベクトルプロパティ名
         Vector<String>  scalars; //!< スカラー名
         Vector<String>  integers; //!< 整数名
-		Ref<RHI::DescriptorLayout> layout; //!< デスクリプタレイアウト
+		Ref<DescriptorLayout> layout; //!< デスクリプタレイアウト
     };
 
 	//! @brief      マテリアルのパラメーターを管理するクラス
@@ -41,17 +42,18 @@ namespace Amuse::RPI {
     //! 上記のバッファのBindlessHandleを指定したオフセットのRootConstantsに書き込む。
     //! 
     //! @ref MaterialBlock
+    //! @ingroup AmuseRPI
     class MaterialBlock {
     public:
-        using CommandList = Amuse::RHI::CommandList; //!< コマンドリスト型
-        using DescriptorLayout = Amuse::RHI::DescriptorLayout; //!< デスクリプタレイアウト型
-        using DescriptorTable = Amuse::RHI::DescriptorTable; //!< デスクリプタテーブル型
-        using Sampler = Amuse::RHI::Sampler; //!< サンプラ型
-        using Texture = Amuse::RHI::Texture; //!< テクスチャ型
-        using Buffer = Amuse::RHI::Buffer; //!< バッファ型
+        using CommandList = Amuse::CommandList; //!< コマンドリスト型
+        using DescriptorLayout = Amuse::DescriptorLayout; //!< デスクリプタレイアウト型
+        using DescriptorTable = Amuse::DescriptorTable; //!< デスクリプタテーブル型
+        using Sampler = Amuse::Sampler; //!< サンプラ型
+        using Texture = Amuse::Texture; //!< テクスチャ型
+        using Buffer = Amuse::Buffer; //!< バッファ型
     public:
         //! @brief MaterialBlockDescに対応するDescriptorLayoutを生成するユーティリティ関数
-        static Ref<RHI::DescriptorLayout> CreateLayout(const MaterialBlockDesc& desc);
+        static Ref<DescriptorLayout> CreateLayout(const MaterialBlockDesc& desc);
     public:
 
         //! @brief 空のマテリアルブロックを生成する

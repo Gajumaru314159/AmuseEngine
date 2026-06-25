@@ -1,8 +1,8 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
-using namespace Amuse::Core;
+using namespace Amuse;
 #include <Amuse/Core/Template/Container/BitFlags.h>
 
 enum class Flags

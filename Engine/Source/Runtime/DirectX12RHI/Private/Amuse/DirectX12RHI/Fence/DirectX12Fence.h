@@ -7,12 +7,11 @@
 #include <Amuse/Core/Core.h>
 #include <Amuse/RHI/Fence.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	class DirectX12Device;
 
 	//! @brief  DirectX12 GPU同期フェンス
+	//! @ingroup AmuseDirectX12RHI
 	class DirectX12Fence : public Fence {
 	public:
 

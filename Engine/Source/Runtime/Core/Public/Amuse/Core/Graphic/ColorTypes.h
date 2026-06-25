@@ -1,13 +1,14 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/Core/CoreTypes.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief		色空間列挙型
+    //! @ingroup AmuseCore
     enum class GammaSpace :u8 {
         Liner,      //!< 線形
         sRGB        //!< ガンマ
@@ -15,6 +16,7 @@ namespace Amuse::Core {
 
 
     //! @brief		色空間列挙型
+    //! @ingroup AmuseCore
     enum class ColorCodeFormat :u8 {
         ARGB,
         ABGR,

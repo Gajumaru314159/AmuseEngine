@@ -6,10 +6,9 @@
 #include <Amuse/Core/Core.h>
 #include <Amuse/RHI/Types/TextureFormat.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief  RHI機能
+	//! @ingroup AmuseRHI
 	struct RHIFeatures {
 		bool computeQueue = false;					//!< Compute queue
 		bool copyQueue = false;						//!< Copy queue
@@ -24,6 +23,7 @@ namespace Amuse::RHI {
 	};
 
 	//! @brief  フォーマット利用用途
+	//! @ingroup AmuseRHI
 	enum class FormatSupport {
 		Texture,			//!< Textureとして利用可能
 		RenderTarget,	//!< RenderTargetとして利用可能

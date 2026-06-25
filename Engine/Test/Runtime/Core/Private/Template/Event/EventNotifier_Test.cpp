@@ -1,10 +1,10 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #include <Amuse/Core/Template/Event/EventNotifier.h>
 #include <vector>
-using namespace Amuse::Core;
+using namespace Amuse;
 
 static int s_num;
 static std::vector<int> s_primes{ 2,3,5,7,11,13,17,19 };

@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author Gajumaru
 //***********************************************************
@@ -6,7 +6,7 @@
 #include <Amuse/Core/CorePrivate.h>
 #include <Amuse/Core/Misc/CAPI.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief IPv4 アドレスを 4 オクテットで保持する。
 	//! @details
@@ -15,6 +15,7 @@ namespace Amuse::Core {
 	//! IPAddress ip(0xc0a80001);
 	//! IPAddress ip("192.168.0.1");
 	//! @endcode
+	//! @ingroup AmuseCore
 	struct IPAddress {
 		IPAddress() :a(0), b(0), c(0), d(0) {}
 		//! @brief IPAddress を初期化する。
@@ -28,7 +29,7 @@ namespace Amuse::Core {
 		}
 		//! @brief IPAddress を初期化する。
 		IPAddress(const char* ip) {
-			if (CAPI::SScanf(ip, "%hhu.%hhu.%hhu.%hhu", &a, &b, &c, &d)) {}
+			if (SScanf(ip, "%hhu.%hhu.%hhu.%hhu", &a, &b, &c, &d)) {}
 		}
 
 		//! @brief ループバックアドレス 127.0.0.1 を返す。
@@ -47,9 +48,9 @@ namespace Amuse::Core {
 // フォーマット
 //===============================================================
 //! @cond
-template <> struct std::formatter<Amuse::Core::IPAddress, Amuse::Core::Char> : std::formatter<Amuse::Core::f32, Amuse::Core::Char> {
+template <> struct std::formatter<Amuse::IPAddress, Amuse::Char> : std::formatter<Amuse::f32, Amuse::Char> {
 	template<typename FormatContext>
-	auto format(const Amuse::Core::IPAddress& value, FormatContext& ctx) const {
+	auto format(const Amuse::IPAddress& value, FormatContext& ctx) const {
 		ctx.advance_to(format_to(ctx.out(), "("));
 		ctx.advance_to(format(value.a, ctx));
 		ctx.advance_to(format_to(ctx.out(), ","));

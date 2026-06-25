@@ -9,9 +9,7 @@
 #include <Amuse/VulkanRHI/Sampler/VulkanSampler.h>
 #include <Amuse/VulkanRHI/Descriptor/VulkanDescriptorLayout.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	namespace {
 		//! @brief  DescriptorTypeがTexelBufferか
 		bool IsTexelBuffer(vk::DescriptorType type) {
@@ -258,7 +256,7 @@ namespace Amuse::RHI {
 
 
 	//! @brief  Bufferから適したDescriptorTypeを取得
-	bool VulkanDescriptorTable::tryGetRangeType(s32 index, const Ref<Amuse::RHI::Buffer>& buffer, vk::DescriptorType& type) const {
+	bool VulkanDescriptorTable::tryGetRangeType(s32 index, const Ref<Amuse::Buffer>& buffer, vk::DescriptorType& type) const {
 
 		auto& items = m_layout->getDesc().items;
 
@@ -306,7 +304,7 @@ namespace Amuse::RHI {
 
 
 	//! @brief  Textureから適したDescriptorTypeを取得
-	bool VulkanDescriptorTable::tryGetRangeType(s32 index, const Ref<Amuse::RHI::Texture>& texture, vk::DescriptorType& type) const {
+	bool VulkanDescriptorTable::tryGetRangeType(s32 index, const Ref<Amuse::Texture>& texture, vk::DescriptorType& type) const {
 
 		auto& items = m_layout->getDesc().items;
 
@@ -332,7 +330,7 @@ namespace Amuse::RHI {
 
 
 	//! @brief  Samplerから適したDescriptorTypeを取得
-	bool VulkanDescriptorTable::tryGetRangeType(s32 index, const Ref<Amuse::RHI::Sampler>& sampler, vk::DescriptorType& type) const {
+	bool VulkanDescriptorTable::tryGetRangeType(s32 index, const Ref<Amuse::Sampler>& sampler, vk::DescriptorType& type) const {
 
 		auto& items = m_layout->getDesc().items;
 

@@ -6,9 +6,7 @@
 #include <Amuse/VulkanRHI/VulkanDevice.h>
 #include <Amuse/VulkanRHI/Descriptor/VulkanDescriptorLayout.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief  コンストラクタ
 	VulkanRootSignature::VulkanRootSignature(VulkanDevice& device, const RootSignatureDesc& desc)
 		: m_desc(desc)

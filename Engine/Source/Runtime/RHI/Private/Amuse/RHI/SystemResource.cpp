@@ -7,9 +7,7 @@
 #include <Amuse/RHI/Sampler.h>
 #include <Amuse/RHI/RHI.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief  コンストラクタ
 	SystemResource::SystemResource(Device& rhi) {
 		{

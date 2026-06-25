@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -7,10 +7,9 @@
 #include <Amuse/RHI/Forward.h>
 #include <Amuse/RHI/Types/TextureFormat.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief CPUアクセス種別
+	//! @ingroup AmuseRHI
 	enum class CpuAccess {
 		Read,		//!< 読み取り
 		Write,		//!< 書き込み
@@ -31,6 +30,7 @@ namespace Amuse::RHI {
 	//!             | IndirectArgument                  | INDIRECT_ARGUMENT                 | INDIRECT_COMMAND_READ         |
 	//!             | CopyDest                          | COPY_DEST                         | TRANSFER_SRC_OPTIMAL          |
 	//!             | CopySource                        | COPY_SOURCE                       | TRANSFER_DST_OPTIMAL          |
+	//! @ingroup AmuseRHI
 	enum class BufferState {
 		Unknown,				//!< 現在状態をRHIが知らない
 		Common,					//!< 
@@ -45,6 +45,7 @@ namespace Amuse::RHI {
 	};
 
 	//! @brief  バインド・フラグ
+	//! @ingroup AmuseRHI
 	enum class BufferFlag {
 		Vertex				= get_bit(0),	//!< 頂点バッファ許可
 		Index				= get_bit(1),	//!< インデックスバッファ許可
@@ -60,6 +61,7 @@ namespace Amuse::RHI {
 
 	//! @brief	バッファリソースをどのリソースタイプとして参照するか
 	//! @see	BindingType
+	//! @ingroup AmuseRHI
 	enum class BufferViewType {
 		None,
 		Buffer,
@@ -72,6 +74,7 @@ namespace Amuse::RHI {
 	};
 
 	//! @brief 既存バッファのビュー生成情報
+	//! @ingroup AmuseRHI
 	struct BufferViewDesc {
 		Ref<Buffer>		base; //!< ベースバッファ
 		BufferViewType	type; //!< ビュータイプ
@@ -81,6 +84,7 @@ namespace Amuse::RHI {
 
 
 	//! @brief  バッファ定義
+	//! @ingroup AmuseRHI
 	struct BufferDesc {
 
 		String			name;			//!< 名前

@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -8,10 +8,11 @@
 #include <Amuse/Core/Template/Container/Vector.h>
 #include <limits>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	template<class T, class TIndex = uint16_t, class TDataVector = Vector<T>, class TIndexVector = Vector<TIndex>>
 	//! @brief インデックス付きベクターを表す。
+	//! @ingroup AmuseCore
 	class IndexedVector {
 	public:
 		static constexpr TIndex NoFreeSlot = std::numeric_limits<TIndex>::max(); //!< 空きスロットなしを表す値

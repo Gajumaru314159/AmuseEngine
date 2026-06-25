@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -10,15 +10,16 @@
 #include <Amuse/Core/Template/Container/Map.h>
 #include <functional>
 
-namespace Amuse::RPI {
+namespace Amuse {
 
 	//! @brief  マテリアルシェーダー
 	//! @details パス定義やルートシグネチャ、パイプラインキャッシュなどマテリアル間で共有できる情報を保持します。
+	//! @ingroup AmuseRPI
 	class MaterialShader : public RefObject
 	{
 	public:
-		using PipelineState = Amuse::RHI::PipelineState; //!< パイプラインステート型
-		using RootSignature = Amuse::RHI::RootSignature; //!< ルートシグネチャ型
+		using PipelineState = Amuse::PipelineState; //!< パイプラインステート型
+		using RootSignature = Amuse::RootSignature; //!< ルートシグネチャ型
 	public:
 		//! @brief  生成
 		static Ref<MaterialShader> Create(const MaterialDesc& desc);
@@ -33,21 +34,23 @@ namespace Amuse::RPI {
 		//! @brief 指定パスで使用する品質インデックスを計算する
 		s32 calcQualityIndex(StringView pass, s32 quality) const;
 		//! @brief 頂点レイアウトに対応するパイプラインを事前生成する
-		bool prepare(const Ref<RHI::VertexLayout>& layout);
+		bool prepare(const Ref<VertexLayout>& layout);
 		//! @brief 頂点レイアウトとパスに対応するパイプラインを取得する
-		Ref<PipelineState> getPipeline(const Ref<RHI::VertexLayout>& layout, StringView pass, s32 quality);
+		Ref<PipelineState> getPipeline(const Ref<VertexLayout>& layout, StringView pass, s32 quality);
 
 	private:
 		MaterialShader(const MaterialDesc& desc);
 
 	private:
+		//! @ingroup AmuseRPI
 		struct PipelineKey {
 			String pass;
 			s32 qualityIndex;
-			Ref<RHI::VertexLayout> layout;
+			Ref<VertexLayout> layout;
 			bool operator==(const PipelineKey& rhs)const { return pass == rhs.pass && qualityIndex == rhs.qualityIndex && layout == rhs.layout; }
 			bool operator!=(const PipelineKey& rhs)const { return !(*this == rhs); }
 		};
+		//! @ingroup AmuseRPI
 		struct PipelineKeyHasher {
 			size_t operator()(const PipelineKey& v)const
 			{
@@ -56,7 +59,7 @@ namespace Amuse::RPI {
 		};
 		using PipelineMap = HashMap<PipelineKey, Ref<PipelineState>, PipelineKeyHasher>;
 
-		Ref<PipelineState> createPipeline(const PipelineKey& key, const ShaderSet& shaders, const Ref<RHI::VertexLayout>& vertexLayout);
+		Ref<PipelineState> createPipeline(const PipelineKey& key, const ShaderSet& shaders, const Ref<VertexLayout>& vertexLayout);
 
 	private:
 		MaterialDesc		m_desc;

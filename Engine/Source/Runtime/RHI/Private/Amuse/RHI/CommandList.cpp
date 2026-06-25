@@ -6,9 +6,7 @@
 #include <Amuse/RHI/RHI.h>
 #include <Amuse/RHI/Types/CommandListDesc.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief  生成
 	Ref<CommandList> CommandList::Create(const CommandListDesc& desc) {
 		if (auto device = Device::Get()) {

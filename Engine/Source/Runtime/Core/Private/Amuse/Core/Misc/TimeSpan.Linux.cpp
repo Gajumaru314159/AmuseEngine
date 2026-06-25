@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -7,7 +7,7 @@
 #ifdef OS_LINUX
 #include <ctime>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief  システムを起動してからの時間
 	TimeSpan TimeSpan::FromSystemLaunch() {

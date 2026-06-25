@@ -6,10 +6,9 @@
 #include <Amuse/Core/Core.h>
 #include <Amuse/RHI/GraphicObject.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief GPUイベントクエリ
+	//! @ingroup AmuseRHI
 	class EventQuery : public GraphicObject {
 	public:
 		//! @brief 生成
@@ -17,6 +16,7 @@ namespace Amuse::RHI {
 	};
 
 	//! @brief GPUタイマークエリ
+	//! @ingroup AmuseRHI
 	class TimerQuery : public GraphicObject {
 	public:
 		//! @brief 生成

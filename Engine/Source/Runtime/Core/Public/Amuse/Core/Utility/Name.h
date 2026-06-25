@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -6,7 +6,7 @@
 #include <Amuse/Core/CorePrivate.h>
 #include <Amuse/Core/CoreForward.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     namespace internal {
         class NameData;
@@ -25,6 +25,7 @@ namespace Amuse::Core {
     //!             * 比較：高速
     //!             文字リテラルから生成する場合はstatic変数として宣言することで
     //!             2回目以降のアクセスが高速になります。
+    //! @ingroup AmuseCore
     class Name {
     public:
         //! @brief Hash 型のエイリアス。
@@ -120,9 +121,9 @@ namespace Amuse::Core {
 //===============================================================
 //! @cond
 template<>
-struct std::hash<Amuse::Core::Name> {
+struct std::hash<Amuse::Name> {
 public:
-    size_t operator()(const Amuse::Core::Name& name)const noexcept {
+    size_t operator()(const Amuse::Name& name)const noexcept {
         return name.m_hash;
     }
 };
@@ -133,14 +134,14 @@ public:
 // フォーマット
 //===============================================================
 //! @cond
-template <> struct std::formatter<Amuse::Core::Name, Amuse::Core::Char> {
+template <> struct std::formatter<Amuse::Name, Amuse::Char> {
     template<typename ParseContext>
     constexpr auto parse(ParseContext& ctx) -> decltype(ctx.begin()) {
         return ctx.end();
     }
 
     template<typename FormatContext>
-    auto format(const Amuse::Core::Name& value, FormatContext& ctx) const {
+    auto format(const Amuse::Name& value, FormatContext& ctx) const {
         return format_to(ctx.out(), "{}", value.toSV());
     }
 };

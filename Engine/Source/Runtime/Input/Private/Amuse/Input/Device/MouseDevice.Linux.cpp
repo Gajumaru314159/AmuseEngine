@@ -1,7 +1,6 @@
 #include <Amuse/Input/Device/MouseDevice.h>
 
-namespace Amuse::Input {
-    using namespace Amuse::Core;
+namespace Amuse {
 #if defined(OS_LINUX)
 
 	namespace {
@@ -11,7 +10,7 @@ namespace Amuse::Input {
 		};
 	}
 
-	MouseDevice::MouseDevice(Platform::Window& window)
+	MouseDevice::MouseDevice(Window& window)
 		: m_display(nullptr)
 		, m_window(0)
 	{

@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -9,14 +9,15 @@
 #include <Amuse/RHI/Types/PipelineStateDesc.h>
 #include <Amuse/RHI/Types/VertexLayout.h>
 
-namespace Amuse::RPI {
+namespace Amuse {
 
     //! @brief  頂点属性
     //! @see    VertexLayout
+    //! @ingroup AmuseRPI
     struct InputLayout {
 
-        RHI::Semantic	    semantic;	//!< セマンティクス
-        RHI::ElementType	type;		//!< コンポーネント型
+        Semantic	    semantic;	//!< セマンティクス
+        ElementType	type;		//!< コンポーネント型
         s32			        dimention;	//!< 次元数
         s32			        index;		//!< セマンティクス内インデックス
 
@@ -26,29 +27,31 @@ namespace Amuse::RPI {
         InputLayout() = default;
 
         //! @brief      コンストラクタ
-        InputLayout(RHI::Semantic semantic, RHI::ElementType type, s32 dimention = 1, s32 index = 0)
+        InputLayout(Semantic semantic, ElementType type, s32 dimention = 1, s32 index = 0)
             :semantic(semantic), type(type), dimention(dimention), index(index) {}
 
     };
 
     //! @brief マテリアルパスの品質別シェーダ設定
+    //! @ingroup AmuseRPI
     struct ShaderSet {
 		s32                             quality; //!< 品質値
 
         // PipelineState周りの必須情報
-        Ref<RHI::Shader> 		        vs; //!< 頂点シェーダ
-        Ref<RHI::Shader> 		        ps; //!< ピクセルシェーダ
+        Ref<Shader> 		        vs; //!< 頂点シェーダ
+        Ref<Shader> 		        ps; //!< ピクセルシェーダ
         Vector<InputLayout>		        inputLayout; //!< 入力レイアウト
-        RHI::RenderTargetFormatArray    colors; //!< カラー出力フォーマット
-        Optional<RHI::TextureFormat>	depth; //!< 深度フォーマット
-		RHI::SampleDesc		            sample; //!< サンプル設定
-		RHI::BlendDescList		        blend; //!< ブレンド設定
-        RHI::BlendDescList		        blends; //!< 複数ブレンド設定
-        RHI::RasterizerDesc		        rasterizer; //!< ラスタライザ設定
-        RHI::DepthStencilDesc	        depthStencil; //!< 深度ステンシル設定
+        RenderTargetFormatArray    colors; //!< カラー出力フォーマット
+        Optional<TextureFormat>	depth; //!< 深度フォーマット
+		SampleDesc		            sample; //!< サンプル設定
+		BlendDescList		        blend; //!< ブレンド設定
+        BlendDescList		        blends; //!< 複数ブレンド設定
+        RasterizerDesc		        rasterizer; //!< ラスタライザ設定
+        DepthStencilDesc	        depthStencil; //!< 深度ステンシル設定
     };
 
     //! @brief マテリアルの描画パス設定
+    //! @ingroup AmuseRPI
     struct MaterialPass {
 		Vector<ShaderSet>   qualities; //!< 品質別シェーダ設定
     };
@@ -56,6 +59,7 @@ namespace Amuse::RPI {
     using MaterialPassMap = Map<String, MaterialPass,std::less<>>;
 
     //! @brief  マテリアル定義
+    //! @ingroup AmuseRPI
     struct MaterialDesc{
         String          name; //!< マテリアル名
         

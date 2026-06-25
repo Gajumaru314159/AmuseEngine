@@ -1,13 +1,11 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/Core/Core.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief バインディングタイプ
 	//! 
 	//! @details バインディングタイプは各グラフィックAPIでは以下の表の対応関係にあります。
@@ -23,6 +21,7 @@ namespace Amuse::RHI {
 	//! | RWByteAddressBuffer	| (u) RWByteAddressBuffer	| UAV				| buffer			| eStorageBuffer		|
 	//! | ConstantBuffer		| (b) ConstantBuffer		| CBV				| uniform			| eUniformBuffer		|
 	//! | Sampler				| (s) SamplerState			| Sampler			| sampler			| eSampler				|
+	//! @ingroup AmuseRHI
 	enum class BindingType : u32 {
 		Unknown = 0xFFFFFFFF,
 		Texture = 0,
@@ -38,6 +37,7 @@ namespace Amuse::RHI {
 	};
 
 	//! @brief シェーダバインディング項目
+	//! @ingroup AmuseRHI
 	struct BindingItem {
 		BindingType type; //!< 種別
 		s32         index; //!< レジスタ番号
@@ -48,6 +48,7 @@ namespace Amuse::RHI {
 	};
 
 	//! @brief      BindingItem定義のユーティリティ
+	//! @ingroup AmuseRHI
 	struct Binding {
 
 		#define DECL_BINDING(TYPE) \
@@ -82,6 +83,7 @@ namespace Amuse::RHI {
 	};
 
 	//! @brief ディスクリプタレイアウト生成情報
+	//! @ingroup AmuseRHI
 	struct DescriptorLayoutDesc {
 		String				name;		//!< 名前
 		Vector<BindingItem> items;		//!< バインディングスロット

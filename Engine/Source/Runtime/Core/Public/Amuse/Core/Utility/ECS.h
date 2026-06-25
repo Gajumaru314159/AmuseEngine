@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -6,11 +6,12 @@
 #include <Amuse/Core/CorePrivate.h>
 #include <Amuse/Core/Template/include.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	enum class Entity : u64;
 
 	//! @brief      ComponentManager
+	//! @ingroup AmuseCore
 	template<class T>
 	class ComponentManager {
 	public:
@@ -131,6 +132,7 @@ namespace Amuse::Core {
 	};
 
 	//! @brief      EntityとManagerを保持するホルダー
+	//! @ingroup AmuseCore
 	template<class T>
 	class ComponentHolder {
 	public:

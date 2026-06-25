@@ -8,7 +8,7 @@
 #include <algorithm>
 #include <limits>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief			コンストラクタ
 	//! @param growOnly 最大サイズを縮小させないか

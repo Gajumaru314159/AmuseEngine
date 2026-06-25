@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author Gajumaru
 //***********************************************************
@@ -6,7 +6,7 @@
 #include <Amuse/Core/Platform/WindowsHeaders.h>
 #include <Amuse/Core/String/StringEncoder.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     String ErrorCode::message() const {
 #ifdef OS_WINDOWS

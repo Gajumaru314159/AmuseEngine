@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -7,11 +7,12 @@
 #include <Amuse/Core/Graphic/ColorTypes.h>
 #include <Amuse/Core/Template/include.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief		整数表現カラークラス
 	//! 
 	//! @details	各色要素は、0〜255の範囲の u8 型で表現されます。アルファ(a)は透過度を表し、0で完全な透明、255で完全な不透明を表します。
+	//! @ingroup AmuseCore
 	struct IntColor {
 	public:
 		//! @brief			カラーコードから生成
@@ -229,7 +230,7 @@ namespace Amuse::Core {
 // フォーマット
 //===============================================================
 //! @cond
-template <> struct std::formatter<Amuse::Core::IntColor, Amuse::Core::Char> {
+template <> struct std::formatter<Amuse::IntColor, Amuse::Char> {
 	bool isCode=false;
 	template<typename ParseContext>
 	constexpr auto parse(ParseContext& ctx) -> decltype(ctx.begin()) {
@@ -243,7 +244,7 @@ template <> struct std::formatter<Amuse::Core::IntColor, Amuse::Core::Char> {
 	}
 
 	template<typename FormatContext>
-	auto format(Amuse::Core::IntColor value, FormatContext& ctx) const {
+	auto format(Amuse::IntColor value, FormatContext& ctx) const {
 		if (isCode) {
 			return format_to(ctx.out(), "{:08X}", value.toCode());
 		} else {

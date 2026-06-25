@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -10,12 +10,11 @@
 //! @brief	ボタン定義マクロ
 #define AMUSE_DECL_BUTTON(type,name) static constexpr Button name{ ID,type::name };
 
-namespace Amuse::Input {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief		ボタン
 	//! 
 	//! @details	「キーボードのAボタン」や「マウスの左ボタン」など、トグル入力を扱います。
+	//! @ingroup AmuseInput
 	class Button {
 	public:
 

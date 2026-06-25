@@ -1,11 +1,11 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #include <Amuse/Core/String/String.h>
 #include <utf8/checked.h>
 
-using namespace Amuse::Core;
+using namespace Amuse;
 
 TEST(String, MemberTypes) {
 	// value_typeのテスト

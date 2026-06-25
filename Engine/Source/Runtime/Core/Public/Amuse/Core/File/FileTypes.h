@@ -1,13 +1,14 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/Core/CorePrivate.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief  ファイル属性
+	//! @ingroup AmuseCore
 	enum class FileAttribut :u32
 	{
 		None		= get_bit(0),	//!< なし
@@ -20,6 +21,7 @@ namespace Amuse::Core {
 	using FileAttributs = BitFlags<FileAttribut>;
 
 	//! @brief  ファイル・オープン・モード
+	//! @ingroup AmuseCore
 	enum class FileOpenMode :u32
 	{
 		Read = get_bit(0),		//!< 読み取り
@@ -31,6 +33,7 @@ namespace Amuse::Core {
 	using FileOpenModes = BitFlags<FileOpenMode>;
 
 	//! @brief  ファイルコピーのオプション
+	//! @ingroup AmuseCore
 	enum class FileCopyOption {
 		None				= get_bit(0),
 		SkipExisting		= get_bit(1),

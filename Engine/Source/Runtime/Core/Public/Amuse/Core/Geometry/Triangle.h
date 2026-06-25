@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -6,9 +6,10 @@
 #include <Amuse/Core/Math/Vector2.h>
 #include <Amuse/Core/Math/Vector3.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief  三角形
+    //! @ingroup AmuseCore
     class Triangle {
     public:
 

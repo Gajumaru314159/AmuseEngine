@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -6,9 +6,10 @@
 #include <Amuse/RPI/Render/RenderFeature.h>
 #include <Amuse/RPI/Material/MaterialPropertiesDesc.h>
 
-namespace Amuse::RPI {
+namespace Amuse {
 
 	//! @brief      マテリアル描画機能
+	//! @ingroup AmuseRPI
 	class CameraRenderFeature : public RenderFeature {
 	public:
 		//! @brief カメラ描画で使用するマテリアルプロパティを取得する

@@ -9,7 +9,7 @@
 #include <cstddef>
 #include <cassert>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief カスタムメモリ確保関数
     //! @param size 確保するサイズ
@@ -26,7 +26,7 @@ namespace Amuse::Core {
     size_t GetMemoryUsage();
 
 
-#define AMUSE_MEMORY_SCOPE(category) Amuse::Core::Internal::MemoryCategoryScope __memoryScope(category)
+#define AMUSE_MEMORY_SCOPE(category) Amuse::Internal::MemoryCategoryScope __memoryScope(category)
 
 
 
@@ -42,6 +42,7 @@ namespace Amuse::Core {
 
         //! @brief      メモリカテゴリのスコープを管理するクラス
 		//! @details    スレッドごとに現在のメモリカテゴリを保持し、スコープ内で変更を行います。
+        //! @ingroup AmuseCore
         class MemoryCategoryScope {
         private:
             const char* m_store;

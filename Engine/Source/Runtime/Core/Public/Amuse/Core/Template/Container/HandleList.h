@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -12,7 +12,7 @@
 #include <Amuse/Core/Utility/Noncopyable.h>
 #include <Amuse/Core/Utility/Nonmovable.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 
 	//! @brief          ハンドル管理式双方向連結リスト
@@ -24,8 +24,8 @@ namespace Amuse::Core {
 	//!                 <br> 
 	//!                 使用方法：<br> 
 	//! ```
-	//!                 Amuse::Core::HandleList<Amuse::Core::s32> ls;
-	//!                 using Handle =  Amuse::Core::HandleList<Amuse::Core::s32>::Handle;
+	//!                 Amuse::HandleList<Amuse::s32> ls;
+	//!                 using Handle =  Amuse::HandleList<Amuse::s32>::Handle;
 	//!                 {
 	//!                     Handle handle;
 	//!                     ls.emplace_back(handle,123);
@@ -33,6 +33,7 @@ namespace Amuse::Core {
 	//!                 }
 	//!                 std::cout<<ls.size()<<std::endl;    // 0
 	//! ```
+	//! @ingroup AmuseCore
 	template<typename T>
 	class HandleList : Noncopyable, Nonmovable {
 	public:
@@ -132,6 +133,7 @@ namespace Amuse::Core {
 #pragma region Iterator
 
 		//! @brief constイテレータ
+		//! @ingroup AmuseCore
 		class const_iterator {
 			friend class HandleList<T>;
 		public:
@@ -160,6 +162,7 @@ namespace Amuse::Core {
 
 
 		//! @brief イテレータ
+		//! @ingroup AmuseCore
 		class iterator :public const_iterator {
 			friend class HandleList<T>;
 		public:

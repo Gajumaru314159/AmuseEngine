@@ -1,13 +1,14 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/Core/String/StringView.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief 文字列分割ビューを表す。
+    //! @ingroup AmuseCore
     class StringSplitView {
     public:
         //! @brief Iteratorを表す。
@@ -63,6 +64,7 @@ namespace Amuse::Core {
     };
 
     //! @brief カンマ区切り分割ビューを表す。
+    //! @ingroup AmuseCore
     class CommaSplitView : public StringSplitView {
     public:
         //! @brief CommaSplitView を初期化する。
@@ -70,6 +72,7 @@ namespace Amuse::Core {
     };
 
     //! @brief タブ区切り分割ビューを表す。
+    //! @ingroup AmuseCore
     class TabSplitView : public StringSplitView {
     public:
         //! @brief TabSplitView を初期化する。
@@ -77,6 +80,7 @@ namespace Amuse::Core {
     };
 
     //! @brief 改行区切り分割ビューを表す。
+    //! @ingroup AmuseCore
     class LineBreakSplitView : public StringSplitView {
     public:
         //! @brief LineBreakSplitView を初期化する。

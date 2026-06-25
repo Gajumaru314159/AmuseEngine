@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //! @reference	https://zenn.dev/suuta/articles/c4c47e8626d5aa
@@ -8,7 +8,7 @@
 #include <Amuse/Core/Template/Utility/TypeTraits.h>
 #include <cstring>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @cond 
 	template <class Signature, size_t BufferSize>
@@ -17,6 +17,7 @@ namespace Amuse::Core {
 
 	//! @brief 固定長関数オブジェクト
 	//! @details std::functionと異なりヒープアロケーションを行わない関数オブジェクト
+	//! @ingroup AmuseCore
 	template <class R, class... Args, size_t BufferSize>
 	class FixedFunc<R(Args...), BufferSize> {
 	public:
@@ -29,6 +30,7 @@ namespace Amuse::Core {
 			virtual void clone(u8* buffer, ICallable** callablePtr) const = 0;
 		};
 
+		//! @ingroup AmuseCore
 		template <class T>
 		struct Callable : public ICallable {
 			T functor;

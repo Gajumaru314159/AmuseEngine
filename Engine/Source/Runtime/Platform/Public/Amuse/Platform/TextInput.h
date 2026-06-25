@@ -1,14 +1,12 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/Core/Core.h>
 
-namespace Amuse::Platform {
-    using namespace Amuse::Core;
-
-
+namespace Amuse {
+    //! @ingroup AmusePlatform
     enum class TextInputMode {
         DenyCtrl = get_bit(0),
         AllowEnter = get_bit(1),
@@ -20,6 +18,7 @@ namespace Amuse::Platform {
     };
 
     //! @brief  説明
+    //! @ingroup AmusePlatform
     class TextInput {
     public:
 

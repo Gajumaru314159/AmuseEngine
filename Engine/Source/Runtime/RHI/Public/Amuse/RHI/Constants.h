@@ -5,9 +5,7 @@
 #pragma once
 #include <Amuse/Core/Core.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	static constexpr s32 BACKBUFFER_MAX			= 3;		//!< バックバッファの最大数
 	static constexpr s32 CBV_REGISTER_MAX		= 16;		//!< シェーダで利用できるコンスタント・バッファ・レジストリの最大数
 	static constexpr s32 SRV_REGISTER_MAX		= 128;		//!< シェーダで利用できるシェーダ・リソース・レジストリの最大数

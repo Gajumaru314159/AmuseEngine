@@ -1,7 +1,6 @@
 #include <Amuse/Input/Device/GamePadDevice.h>
 
-namespace Amuse::Input {
-    using namespace Amuse::Core;
+namespace Amuse {
 #if defined(OS_LINUX)
 
 	GamePadDevice::GamePadDevice() = default;

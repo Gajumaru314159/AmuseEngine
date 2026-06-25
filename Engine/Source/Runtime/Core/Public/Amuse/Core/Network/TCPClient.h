@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 /// @file
 /// @brief  TCPクライアント
 /// @author Gajumaru
@@ -6,9 +6,10 @@
 #pragma once
 #include <Amuse/Core/Network/IPAddress.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	/// TCPクライアント
+	//! @ingroup AmuseCore
 	class TCPClient {
 	public:
 

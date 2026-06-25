@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -9,28 +9,28 @@
 #include <fg/FrameGraph.hpp>
 #include <fstream>
 
-namespace Amuse::RPI {
+namespace Amuse {
 
 	//! @brief      FGResourceのRenderTextureDescを取得する
-	const RHI::RenderTextureDesc& FG::getTextureDesc(FGResource texture) {
+	const RenderTextureDesc& FG::getTextureDesc(FGResource texture) {
 		AMUSE_ASSERT_EXPR(texture.type == FGResourceType::Texture);
 		return m_fg.getDescriptor<FGTexture>(static_cast<FrameGraphResource>(texture.value));
 	}
 
 	//! @brief      FGResourceのBufferDescを取得する
-	const RHI::BufferDesc& FG::getBufferDesc(FGResource buffer) {
+	const BufferDesc& FG::getBufferDesc(FGResource buffer) {
 		AMUSE_ASSERT_EXPR(buffer.type == FGResourceType::Buffer);
 		return m_fg.getDescriptor<FGBuffer>(static_cast<FrameGraphResource>(buffer.value));
 	}
 
 	//! @brief      RenderTextureをインポートする
-	FGResource FG::import(const Ref<RHI::RenderTexture>& texture) {
+	FGResource FG::import(const Ref<RenderTexture>& texture) {
 		if (!texture)return {};
 		return { FGResourceType::Texture, m_fg.import(texture->desc().name.str(), texture->descOfRenderTexture(), FGTexture{ texture }) };
 	}
 
 	//! @brief      Bufferをインポートする
-	FGResource FG::import(const Ref<RHI::Buffer>& buffer) {
+	FGResource FG::import(const Ref<Buffer>& buffer) {
 		if (!buffer)return {};
 		return { FGResourceType::Buffer, m_fg.import(buffer->getDesc().name.str(), buffer->getDesc(), FGBuffer{ buffer }) };
 	}
@@ -47,7 +47,7 @@ namespace Amuse::RPI {
 	}
 
 	//! @brief     コンパイルされたパスを実行する
-	void FG::execute(Ref<RHI::CommandList>& cmd, FGResourcePool& pool) {
+	void FG::execute(Ref<CommandList>& cmd, FGResourcePool& pool) {
 		m_fg.execute(&cmd, &pool);
 	}
 
@@ -65,25 +65,25 @@ namespace Amuse::RPI {
 	{}
 
 	//! @brief      FGResourceからRenderTextureのインスタンスを取得する
-	Ref<RHI::RenderTexture> FGResources::getTexture(FGResource texture) {
+	Ref<RenderTexture> FGResources::getTexture(FGResource texture) {
 		AMUSE_ASSERT_EXPR(texture.type == FGResourceType::Texture);
 		return m_resources.get<FGTexture>(texture.value).instance;
 	}
 
 	//! @brief      FGResourceからBufferのインスタンスを取得する
-	Ref<RHI::Buffer> FGResources::getBuffer(FGResource buffer) {
+	Ref<Buffer> FGResources::getBuffer(FGResource buffer) {
 		AMUSE_ASSERT_EXPR(buffer.type == FGResourceType::Buffer);
 		return m_resources.get<FGBuffer>(buffer.value).instance;
 	}
 
 	//! @brief      FGResourceのRenderTextureDescを取得する
-	const RHI::RenderTextureDesc& FGResources::getTextureDesc(FGResource texture) {
+	const RenderTextureDesc& FGResources::getTextureDesc(FGResource texture) {
 		AMUSE_ASSERT_EXPR(texture.type == FGResourceType::Texture);
 		return m_resources.getDescriptor<FGTexture>(texture.value);
 	}
 
 	//! @brief      FGResourceのBufferDescを取得する
-	const RHI::BufferDesc& FGResources::getBufferDesc(FGResource buffer) {
+	const BufferDesc& FGResources::getBufferDesc(FGResource buffer) {
 		AMUSE_ASSERT_EXPR(buffer.type == FGResourceType::Buffer);
 		return m_resources.getDescriptor<FGBuffer>(buffer.value);
 	}
@@ -95,11 +95,11 @@ namespace Amuse::RPI {
 		: m_builder(builder)
 	{}
 
-	FGResource FGBuilder::create(const RHI::RenderTextureDesc& desc) {
+	FGResource FGBuilder::create(const RenderTextureDesc& desc) {
 		return {FGResourceType::Texture,m_builder.create<FGTexture>(std::string_view(desc.name.data(), desc.name.size()), desc)};
 	}
 
-	FGResource FGBuilder::create(const RHI::BufferDesc& desc) {
+	FGResource FGBuilder::create(const BufferDesc& desc) {
 		return {FGResourceType::Buffer,m_builder.create<FGBuffer>(std::string_view(desc.name.data(), desc.name.size()), desc)};
 	}
 

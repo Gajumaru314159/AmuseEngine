@@ -7,9 +7,7 @@
 #include <Amuse/VulkanRHI/Utility/TypeConverter.h>
 #include <Amuse/RHI/Types/CommandParam.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief TypedBufferとして扱うか
 	static bool IsTypedBuffer(BufferViewType type) {
 		return type == BufferViewType::Buffer || type == BufferViewType::RWBuffer;

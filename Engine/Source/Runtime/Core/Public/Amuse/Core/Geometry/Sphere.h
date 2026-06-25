@@ -1,15 +1,16 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/Core/Math/Vector3.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief  スフィア
     //! 
     //! @note   radius が負の数の時は未定義動作です。
+    //! @ingroup AmuseCore
     struct Sphere {
     public:
 

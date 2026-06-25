@@ -8,9 +8,7 @@
 #include <Amuse/DirectX12RHI/Utility/Utility.h>
 #include <Amuse/DirectX12RHI/Descriptor/DescriptorHandle.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	static D3D12_DESCRIPTOR_HEAP_TYPE Convert(DescriptorHeapType value) {
 		switch (value)
 		{

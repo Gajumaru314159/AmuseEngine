@@ -11,9 +11,7 @@
 #include <Amuse/Core/File/Path.h>
 
 
-namespace Amuse::Platform {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief      コンストラクタ
     //! 
     //! @details    読み込むパスの拡張子はぷらっとふぉーむ

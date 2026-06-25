@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -7,9 +7,10 @@
 #include <Amuse/RPI/Forward.h>
 #include <Amuse/RPI/Material/MaterialDesc.h>
 
-namespace Amuse::RPI {
+namespace Amuse {
 
 	//! @brief 頂点レイアウト識別子
+	//! @ingroup AmuseRPI
 	enum class VertexLayoutId : s32 {};
 
 	//! @brief マテリアルプロパティ種別
@@ -23,6 +24,7 @@ namespace Amuse::RPI {
 	};
 
 	//! @brief マテリアル値プロパティの配置情報
+	//! @ingroup AmuseRPI
 	struct MaterialValuePropertyDesc {
 		MaterialPropertyType type; //!< プロパティ種別
 		s32 offset = -1; //!< バッファ内バイトオフセット

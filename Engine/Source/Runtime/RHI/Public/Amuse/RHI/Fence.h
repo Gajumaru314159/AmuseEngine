@@ -6,10 +6,9 @@
 #include <Amuse/Core/Core.h>
 #include <Amuse/RHI/GraphicObject.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief  コマンドキュー種別
+	//! @ingroup AmuseRHI
 	enum class CommandQueueType {
 		Graphics,	//!< グラフィックスキュー
 		Compute,	//!< コンピュートキュー
@@ -17,12 +16,14 @@ namespace Amuse::RHI {
 	};
 
 	//! @brief  フェンス定義
+	//! @ingroup AmuseRHI
 	struct FenceDesc {
 		String name;			//!< 名前
 		u64 initialValue = 0;	//!< 初期値
 	};
 
 	//! @brief  GPU同期フェンス
+	//! @ingroup AmuseRHI
 	class Fence : public GraphicObject {
 	public:
 

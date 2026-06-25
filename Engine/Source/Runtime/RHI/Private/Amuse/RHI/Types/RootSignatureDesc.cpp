@@ -5,9 +5,7 @@
 #include <Amuse/RHI/Types/RootSignatureDesc.h>
 #include <Amuse/RHI/DescriptorLayout.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	RootSignatureDesc::RootSignatureDesc(
 		std::initializer_list<Ref<DescriptorLayout>> layouts,
 		std::initializer_list<StaticSamplerDesc> samplers,

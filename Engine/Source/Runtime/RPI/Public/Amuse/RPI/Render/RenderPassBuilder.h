@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -10,8 +10,9 @@
 #include <Amuse/RPI/FrameGraph/FG.h>
 
 
-namespace Amuse::RPI {
+namespace Amuse {
 
+	//! @ingroup AmuseRPI
 	class RenderPassBuilder {
 	public:
 

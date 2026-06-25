@@ -5,7 +5,7 @@
 #include <Amuse/Core/File/Xml.h>
 #include <filesystem>
 
-using namespace Amuse::Core;
+using namespace Amuse;
 
 TEST(XmlNode, Constructor) {
 	// デフォルトコンストラクタ

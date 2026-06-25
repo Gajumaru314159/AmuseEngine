@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -8,14 +8,16 @@
 #include <Amuse/Core/Geometry/IntRect.h>
 #include <Amuse/Core/Graphic/Color.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
+    //! @ingroup AmuseCore
     enum class PixelFormat {
         RGBA8,
         RGBA32,
         Alpha,
     };
 
+    //! @ingroup AmuseCore
     enum class ImageFormat {
         Unspecified,
         PNG,
@@ -23,6 +25,7 @@ namespace Amuse::Core {
 
     
     //! @brief  ビットマップ
+    //! @ingroup AmuseCore
     class Bitmap {
     public:
         using base_type                 = Vector<IntColor>;                     //!< ベース型

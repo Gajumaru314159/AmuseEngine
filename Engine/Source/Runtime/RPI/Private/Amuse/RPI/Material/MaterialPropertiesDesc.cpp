@@ -1,10 +1,10 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #include <Amuse/RPI/Material/MaterialPropertiesDesc.h>
 
-namespace Amuse::RPI {
+namespace Amuse {
 
 	//! @brief プロパティ名の重複をチェックしながらプロパティを追加する
 	static bool Merge(Vector<String>& dst, const Vector<String>& src) {

@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -7,8 +7,9 @@
 #include <Amuse/Core/Thread/Thread.h>
 #include <Amuse/Core/Job/JobGroup.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
+    //! @ingroup AmuseCore
     class JobExecutor {
     public:
         JobExecutor();
@@ -20,6 +21,7 @@ namespace Amuse::Core {
         void resizeThread(s32 num);
         void executeThread(s32 threadIndex);
     private:
+        //! @ingroup AmuseCore
         struct JobThread {
             Thread      thread;
             s32         index;

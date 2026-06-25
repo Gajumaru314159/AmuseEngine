@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -11,12 +11,10 @@
 #include <Amuse/RHI/DescriptorLayout.h>
 #include <Amuse/RHI/DescriptorTable.h>
 
-namespace Amuse::RPI {
+namespace Amuse {
 
 	//! @brief MaterialBlockDescに対応するDescriptorLayoutを生成するユーティリティ関数
-	Ref<RHI::DescriptorLayout> MaterialBlock::CreateLayout(const MaterialBlockDesc& desc) {
-		using namespace Amuse::RHI;
-
+	Ref<DescriptorLayout> MaterialBlock::CreateLayout(const MaterialBlockDesc& desc) {
 		DescriptorLayoutDesc layoutDesc;
 		layoutDesc.name = desc.name;
 
@@ -46,8 +44,6 @@ namespace Amuse::RPI {
 	//! @brief プロパティを初期化する
 	//! @param desc マテリアルブロックの説明
 	void MaterialBlock::initializeProperties(const MaterialBlockDesc& desc) {
-		using namespace Amuse::RHI;
-
 		m_isBindless = desc.layout==nullptr;
 
 		// NOTE ここで生成しているマップはMaterialBlockDescが同じであればシステム内で共有可能
@@ -69,7 +65,7 @@ namespace Amuse::RPI {
 			for (auto [index, name] : Indexed(desc.textures)) {
 				auto [itr, added] = m_properties.try_emplace(name, MaterialValuePropertyDesc{ MaterialPropertyType::Texture,offset,(s32)index,slot});
 				if (!added) LOG_ERROR("プロパティ[{}]はマテリアルに既に含まれています。", name);
-				offset += sizeof(RHI::BindlessHandle) * 2;
+				offset += sizeof(BindlessHandle) * 2;
 				slot += 2;
 			}
 			m_textures.resize(desc.textures.size());
@@ -78,7 +74,7 @@ namespace Amuse::RPI {
 			for (auto [index, name] : Indexed(desc.buffers)) {
 				auto [itr, added] = m_properties.try_emplace(name, MaterialValuePropertyDesc{ MaterialPropertyType::Buffer,offset,(s32)index,slot});
 				if (!added) LOG_ERROR("プロパティ[{}]はマテリアルに既に含まれています。", name);
-				offset += sizeof(RHI::BindlessHandle);
+				offset += sizeof(BindlessHandle);
 				slot += 1;
 			}
 			m_buffers.resize(desc.buffers.size());
@@ -128,9 +124,9 @@ namespace Amuse::RPI {
 
 		// バッファ生成
 		size_t size = align_up(offset,16);
-		auto bufferDesc = RHI::BufferDesc::ByteAddress(size);
+		auto bufferDesc = BufferDesc::ByteAddress(size);
 		bufferDesc.name = Format("MaterialParameter ({})", desc.name);
-		m_valuesBuffer = RHI::Buffer::Create(bufferDesc);
+		m_valuesBuffer = Buffer::Create(bufferDesc);
 		AMUSE_ASSERT_EXPR(m_valuesBuffer);
 
 		m_values.resize(size);
@@ -143,8 +139,6 @@ namespace Amuse::RPI {
 	//! @brief デスクリプタテーブルを初期化する
 	//! @param desc マテリアルブロックの説明
 	void MaterialBlock::initializeDescriptorTables(const MaterialBlockDesc& desc) {
-		using namespace Amuse::RHI;
-
 		if (m_isBindless) {
 			for ([[maybe_unused]] auto& name : desc.buffers) {
 				// setBuffer(name, Buffer::Empty());
@@ -285,7 +279,7 @@ namespace Amuse::RPI {
 			return;
 		}
 
-		bool useBindless = RHI::Device::Instance().getConfig().enableBindless;
+		bool useBindless = Device::Instance().getConfig().enableBindless;
 
 		if (auto found = m_properties.find(name); found != m_properties.end()) {
 
@@ -294,7 +288,7 @@ namespace Amuse::RPI {
 			// バリデート
 			if (desc.type != MaterialPropertyType::Texture)return;
 			if (useBindless) {
-				if (!is_in_range(desc.offset + sizeof(RHI::BindlessHandle) * 2 - 1, m_values))return;
+				if (!is_in_range(desc.offset + sizeof(BindlessHandle) * 2 - 1, m_values))return;
 			} else {
 				if (!is_in_range(desc.index, m_textures))return;
 			}
@@ -305,8 +299,8 @@ namespace Amuse::RPI {
 			if (useBindless) {
 
 				struct TextureSamplerHandle {
-					RHI::BindlessHandle texture;
-					RHI::BindlessHandle sampler;
+					BindlessHandle texture;
+					BindlessHandle sampler;
 					bool operator == (const TextureSamplerHandle& rhs) const {
 						return texture == rhs.texture && sampler == rhs.sampler;
 					}
@@ -326,14 +320,14 @@ namespace Amuse::RPI {
 
 
 	//! @brief  Bufferプロパティを設定
-	void MaterialBlock::setBuffer(StringView name, const Ref<RHI::Buffer>& value) {
+	void MaterialBlock::setBuffer(StringView name, const Ref<Buffer>& value) {
 
 		if (!m_isBindless && !m_table) {
 			LOG_ERROR("MaterialBlockの構築に失敗しています [{}]", name);
 			return;
 		}
 
-		bool useBindless = RHI::Device::Instance().getConfig().enableBindless;
+		bool useBindless = Device::Instance().getConfig().enableBindless;
 
 		if (auto found = m_properties.find(name); found != m_properties.end()) {
 
@@ -342,7 +336,7 @@ namespace Amuse::RPI {
 			// バリデート
 			if (desc.type != MaterialPropertyType::Buffer)return;
 			if (useBindless) {
-				if (!is_in_range(desc.offset + sizeof(RHI::BindlessHandle) - 1, m_values))return;
+				if (!is_in_range(desc.offset + sizeof(BindlessHandle) - 1, m_values))return;
 			} else {
 				if (!is_in_range(desc.index, m_buffers))return;
 			}
@@ -350,7 +344,7 @@ namespace Amuse::RPI {
 			m_buffers[desc.index] = value;
 
 			if (useBindless) {
-				RHI::BindlessHandle handle = value->getHandle();
+				BindlessHandle handle = value->getHandle();
 				setValueProprty(name, MaterialPropertyType::Buffer, handle);
 			} else {
 				m_table->setResource(desc.slot, value);
@@ -366,17 +360,15 @@ namespace Amuse::RPI {
 	void MaterialBlock::record(Ref<CommandList>& commandList, s32 slot) {
 		if (!commandList) return;
 		if (!m_isBindless && !m_table) return;
-		using namespace Amuse::RHI;
-
 		updateParameterBuffer();
 
 		if (m_isBindless) {
 
-			RHI::BindlessHandle handle = m_valuesBuffer->getHandle();
+			BindlessHandle handle = m_valuesBuffer->getHandle();
 
 			SetRootConstantsParam param;
 			param.blob = BlobView(&handle, sizeof(handle));
-			param.offset = slot * sizeof(RHI::BindlessHandle);
+			param.offset = slot * sizeof(BindlessHandle);
 			commandList->setRootConstant(param);
 
 		} else {
@@ -401,7 +393,7 @@ namespace Amuse::RPI {
 
 
 	//! @brief レイアウトを取得 
-	const Ref<RHI::DescriptorLayout>& MaterialBlock::getLayout()const {
+	const Ref<DescriptorLayout>& MaterialBlock::getLayout()const {
 		return m_layout;
 	}
 

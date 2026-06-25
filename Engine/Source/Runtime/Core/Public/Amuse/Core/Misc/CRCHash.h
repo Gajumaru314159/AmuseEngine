@@ -1,13 +1,14 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/Core/CoreTypes.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief ハッシュ値の計算を行うクラス
+    //! @ingroup AmuseCore
     class CRCHash {
     public:
 
@@ -46,6 +47,7 @@ namespace Amuse::Core {
 
     //! @cond
     namespace Internal {
+        //! @ingroup AmuseCore
         struct CRCHashInternal {
             static const unsigned* GetCRCTable();
         };

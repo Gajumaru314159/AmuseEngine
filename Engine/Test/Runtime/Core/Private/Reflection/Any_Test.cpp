@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -7,7 +7,7 @@
 #include <Amuse/Core/Reflection/TypeInfoPrinter.h>
 #include <nlohmann/json.hpp>
 
-using namespace Amuse::Core;
+using namespace Amuse;
 
 struct AnyBar {
 	s32 value = 0;

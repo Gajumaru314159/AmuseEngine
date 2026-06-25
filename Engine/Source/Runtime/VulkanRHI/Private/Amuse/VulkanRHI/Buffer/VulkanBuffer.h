@@ -9,13 +9,12 @@
 #include <Amuse/RHI/Types/BufferDesc.h>
 #include <Amuse/VulkanRHI/Descriptor/VulkanDescriptorHandle.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	class VulkanDevice;
 
 	//! @brief      バッファ
-	class VulkanBuffer:public Amuse::RHI::Buffer {
+	//! @ingroup AmuseVulkanRHI
+	class VulkanBuffer:public Amuse::Buffer {
 	public:
 
 		//! @brief  コンストラクタ
@@ -95,6 +94,7 @@ namespace Amuse::RHI {
 		BufferViewDesc m_viewDesc;
 		CpuAccess m_mapAccess = CpuAccess::Read;
 
+		//! @ingroup AmuseVulkanRHI
 		struct SharedResource {
 			vk::raii::Buffer buffer = nullptr;
 			vk::raii::DeviceMemory memory = nullptr;

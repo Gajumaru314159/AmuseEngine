@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -7,7 +7,7 @@
 #include <Amuse/Core/String/Format.h>
 #include <Amuse/Core/Reflection/TypeInfo.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief  TypeInfoを文字列化する
 	inline String PrintTypeInfo(const TypeInfo& info) {

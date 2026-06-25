@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -7,10 +7,9 @@
 #include <Amuse/RHI/Forward.h>
 #include <Amuse/RHI/Types/TextureFormat.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief  テクスチャ・タイプ
+    //! @ingroup AmuseRHI
     enum class TextureType {
         Texture1D,          //!< 1Dテクスチャ
         Texture2D,          //!< 2Dテクスチャ
@@ -33,6 +32,7 @@ namespace Amuse::RHI {
     //!             | CopyDest                          | COPY_DEST                         | TRANSFER_SRC                  |
     //!             | CopySource                        | COPY_SOURCE                       | TRANSFER_DST                  |
     //!             | Present                           | PRESENT                           | PRESENT_SRC_KHR               |
+    //! @ingroup AmuseRHI
     enum class TextureState {
         Unknown,            //!< 現在状態をRHIが知らない
         Common,
@@ -49,6 +49,7 @@ namespace Amuse::RHI {
     };
 
 
+    //! @ingroup AmuseRHI
     enum class TextureFlag {
         ShaderResource = get_bit(0),	//!< シェーダでバインド許可
         UnorderedAccess = get_bit(1),   //!< UnorderedAccessのバインド許可
@@ -56,12 +57,14 @@ namespace Amuse::RHI {
     using TextureFlags = BitFlags<TextureFlag>;
 
 
+    //! @ingroup AmuseRHI
     enum class TextureViewType {
         Texture,
         RWTexture,
     };
 
     //! @brief D3D12_SHADER_RESOURCE_VIEW_DESCまたはD3D12_UNORDERED_ACCESS_VIEW_DESC相当
+    //! @ingroup AmuseRHI
     struct TextureViewDesc {
         Ref<Texture> base; //!< base
         TextureViewType type = TextureViewType::Texture; //!< 種別
@@ -74,6 +77,7 @@ namespace Amuse::RHI {
 
 
     //! @brief  テクスチャ定義
+    //! @ingroup AmuseRHI
     struct TextureDesc {
         String          name; //!< 名前
         TextureType     type        = TextureType::Texture2D;   //!< テクスチャタイプ

@@ -5,8 +5,8 @@
 #include <RHITestBase.h>
 #include <magic_enum.hpp>
 
-using namespace Amuse::Core;
-using namespace Amuse::RHI;
+using namespace Amuse;
+using namespace Amuse;
 
 // Emptyテスト
 TYPED_TEST(RHITest, RootSignature_Empty) {

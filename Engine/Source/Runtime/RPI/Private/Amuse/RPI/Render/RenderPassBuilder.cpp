@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -6,7 +6,7 @@
 #include <Amuse/Core/Utility/Algorithm.h>
 #include <Amuse/RPI/Render/RenderPassBuilder.h>
 
-namespace Amuse::RPI {
+namespace Amuse {
 
 	void RenderPassBuilder::connect(const RenderPassConnection& connection) {
 		m_connections.push_back(connection);

@@ -6,9 +6,7 @@
 #include <Amuse/RHI/RHI.h>
 #include <Amuse/RHI/SystemResource.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	static Ref<Sampler> GetPreset(PresetSampler type) {
 		if (auto instance = SystemResource::Get()) {
 			return instance->getPresetSampler(type);

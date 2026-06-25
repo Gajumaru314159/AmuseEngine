@@ -7,7 +7,7 @@
 #include <Amuse/Core/Memory/MimallocAllocator.h>
 #include <Amuse/Core/Profile/Profile.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	constexpr size_t MEMORY_SIGNATURE = 0xDEAD000DEAD000;
 

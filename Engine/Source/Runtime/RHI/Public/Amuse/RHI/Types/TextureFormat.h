@@ -5,10 +5,9 @@
 #pragma once
 #include <Amuse/Core/Core.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief  テクスチャ・フォーマット
+    //! @ingroup AmuseRHI
     enum class TextureFormat {
         Unknown = -1,    //!< 不明なフォーマット
 #include "TextureFormat_Color.h"
@@ -17,6 +16,7 @@ namespace Amuse::RHI {
 
 
     //! @brief  カラー・テクスチャ・フォーマット
+    //! @ingroup AmuseRHI
     enum class ColorTextureFormat {
         Unknown = -1,    //!< 不明なフォーマット
 #include "TextureFormat_Color.h"
@@ -24,6 +24,7 @@ namespace Amuse::RHI {
 
 
     //! @brief  デプス・テクスチャ・フォーマット
+    //! @ingroup AmuseRHI
     enum class DepthTextureFormat {
         Unknown = -1,    //!< 不明なフォーマット
 #include "TextureFormat_Depth.h"
@@ -31,6 +32,7 @@ namespace Amuse::RHI {
 
 
     //! @brief  テクスチャ・フォーマット・ユーティリティ
+    //! @ingroup AmuseRHI
     class TextureFormatUtility {
     public:
 

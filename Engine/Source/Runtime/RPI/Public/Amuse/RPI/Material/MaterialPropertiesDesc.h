@@ -1,12 +1,13 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 
-namespace Amuse::RPI {
+namespace Amuse {
 
 	//! @brief マテリアルプロパティ名の集合
+	//! @ingroup AmuseRPI
 	struct MaterialPropertiesDesc {
 		Vector<String>  textures; //!< テクスチャ名
 		Vector<String>  buffers; //!< バッファ名
@@ -22,6 +23,7 @@ namespace Amuse::RPI {
 	};
 
 	//! @brief グローバル・シーン・ビュー別のマテリアルプロパティ集合
+	//! @ingroup AmuseRPI
 	struct MaterialPropertiesSetDesc {
 		MaterialPropertiesDesc global; //!< グローバルプロパティ
 		MaterialPropertiesDesc scene; //!< シーンプロパティ

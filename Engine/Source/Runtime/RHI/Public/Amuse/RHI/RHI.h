@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -29,11 +29,10 @@
 #include <Amuse/RHI/Query.h>
 #include <Amuse/RHI/Fence.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief      Rendering Hardware Interface (RHI)
 	//! @details    DirectX, Vulkan, MetalなどのグラフィックAPIを抽象化したインターフェース。
+	//! @ingroup AmuseRHI
 	class Device:public Singleton<Device> {
 	public:
 

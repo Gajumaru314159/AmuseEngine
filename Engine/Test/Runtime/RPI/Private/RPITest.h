@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -15,10 +15,10 @@
 #include <magic_enum.hpp>
 
 using namespace Amuse;
-using namespace Amuse::RHI;
-using namespace Amuse::Platform;
+using namespace Amuse;
+using namespace Amuse;
 
-namespace Amuse::RHI {
+namespace Amuse {
 	class SystemResource;
 }
 
@@ -46,15 +46,15 @@ protected:
 
 #ifdef OS_WINDOWS
 		if constexpr (std::is_same_v<T, DirectX12Tag>) {
-			RHI::RegisterDirectX12RHIService(injector);
+			RegisterDirectX12RHIService(injector);
 		}
 #endif
 		if constexpr (std::is_same_v<T, VulkanTag>) {
-			RHI::RegisterVulkanRHIService(injector);
+			RegisterVulkanRHIService(injector);
 		}
 
-		RHI::RegisterRHIService(injector);
-		RPI::RegisterGraphicsService(injector);
+		RegisterRHIService(injector);
+		RegisterGraphicsService(injector);
 
 		injector.bind(m_config);
 #ifdef OS_WINDOWS
@@ -62,7 +62,7 @@ protected:
 #endif
 		injector.bind(m_vkconfig);
 
-		injector.createAll<Amuse::RHI::SystemResource, Amuse::RPI::Graphics>(m_container);
+		injector.createAll<Amuse::SystemResource, Amuse::Graphics>(m_container);
 
 	};
 	virtual void TearDown() {};

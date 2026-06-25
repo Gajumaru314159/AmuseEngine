@@ -6,15 +6,14 @@
 #include <Amuse/Core/Core.h>
 #include <Amuse/Input/InputType.h>
 
-namespace Amuse::Input {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief		入力デバイス・インターフェイス
 	//! 
 	//! @details	入力デバイスを追加する場合はこのインターフェイスを実装する。<br>
 	//!				デバイスは固有のIDを持つ必要があり、ボタン入力を取得する場合は Button 、<br>
 	//!				軸入力を取得する場合は Axis のコンストラクタに固有IDを渡すことで値を取得できる。
 	//!				InputManagerにデバイスを登録してください。
+	//! @ingroup AmuseInput
 	class IInputDevice {
 	public:
 

@@ -50,12 +50,12 @@
 //#define IMGUI_DISABLE_DEFAULT_ALLOCATORS                  // Don't implement default allocators calling malloc()/free() to avoid linking with them. You will need to call ImGui::SetAllocatorFunctions().
 //#define IMGUI_DISABLE_SSE                                 // Disable use of SSE intrinsics even if available
 
-using ImFileHandle = Amuse::Core::File*;
+using ImFileHandle = Amuse::File*;
 ImFileHandle      ImFileOpen(const char* filename, const char* mode);
 bool              ImFileClose(ImFileHandle file);
-Amuse::Core::u64           ImFileGetSize(ImFileHandle file);
-Amuse::Core::u64           ImFileRead(void* data, Amuse::Core::u64 size, Amuse::Core::u64 count, ImFileHandle file);
-Amuse::Core::u64           ImFileWrite(const void* data, Amuse::Core::u64 size, Amuse::Core::u64 count, ImFileHandle file);
+Amuse::u64           ImFileGetSize(ImFileHandle file);
+Amuse::u64           ImFileRead(void* data, Amuse::u64 size, Amuse::u64 count, ImFileHandle file);
+Amuse::u64           ImFileWrite(const void* data, Amuse::u64 size, Amuse::u64 count, ImFileHandle file);
 
 //---- Include imgui_user.h at the end of imgui.h as a convenience
 //#define IMGUI_INCLUDE_IMGUI_USER_H
@@ -91,12 +91,12 @@ Amuse::Core::u64           ImFileWrite(const void* data, Amuse::Core::u64 size, 
 // This will be inlined as part of ImVec2 and ImVec4 class declarations.
 
 #define IM_VEC2_CLASS_EXTRA                                                     \
-        constexpr ImVec2(const Amuse::Core::Vec2& f) : x(f.x), y(f.y) {}                   \
-        operator Amuse::Core::Vec2() const { return Amuse::Core::Vec2(x,y); }
+        constexpr ImVec2(const Amuse::Vec2& f) : x(f.x), y(f.y) {}                   \
+        operator Amuse::Vec2() const { return Amuse::Vec2(x,y); }
 
 #define IM_VEC4_CLASS_EXTRA                                                     \
-        constexpr ImVec4(const Amuse::Core::Vec4& f) : x(f.x), y(f.y), z(f.z), w(f.w) {}   \
-        operator Amuse::Core::Vec4() const { return Amuse::Core::Vec4(x,y,z,w); }
+        constexpr ImVec4(const Amuse::Vec4& f) : x(f.x), y(f.y), z(f.z), w(f.w) {}   \
+        operator Amuse::Vec4() const { return Amuse::Vec4(x,y,z,w); }
 
 
 //---- Use 32-bit vertex indices (default is 16-bit) is one way to allow large meshes with more than 64K vertices.

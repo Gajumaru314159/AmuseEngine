@@ -1,10 +1,10 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #include <Amuse/Core/Misc/TimeSpan.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief  システムを起動してからの時間
 	TimeSpan::TimeSpan(const DateTime& from, const DateTime& to) noexcept {

@@ -1,10 +1,10 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #include <Amuse/Core/Misc/Locale.h>
 
-using namespace Amuse::Core;
+using namespace Amuse;
 
 TEST(Locale, Constructor)
 {

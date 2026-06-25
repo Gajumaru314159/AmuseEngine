@@ -9,9 +9,7 @@
 #include <Amuse/DirectX12RHI/Buffer/SmallBufferAllocator.h>
 #include <Amuse/RHI/Types/CommandParam.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief  BufferFlags を D3D12_RESOURCE_FLAGS に変換
 	static D3D12_RESOURCE_FLAGS Convert(BufferFlags value) {
 		D3D12_RESOURCE_FLAGS flags = D3D12_RESOURCE_FLAG_NONE;

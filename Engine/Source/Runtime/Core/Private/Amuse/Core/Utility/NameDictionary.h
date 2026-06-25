@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -6,11 +6,12 @@
 #include <Amuse/Core/Utility/Name.h>
 #include <Amuse/Core/Utility/Singleton.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @cond
     namespace internal{
 
+        //! @ingroup AmuseCore
         class NameData {
         public:
             using Hash = Name::Hash;
@@ -32,6 +33,7 @@ namespace Amuse::Core {
 
 
     //! @brief  識別用名辞書
+    //! @ingroup AmuseCore
     class NameDictionary : public Singleton<NameDictionary> {
     public:
 

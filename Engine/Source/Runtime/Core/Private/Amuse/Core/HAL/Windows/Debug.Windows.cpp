@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -15,20 +15,18 @@
 #include <crtdbg.h> 
 #endif
 
-using namespace Amuse::Core;
-
 //! @brief  システムログ出力 
 void OutputDebugLog(const char* message) {
-    WString wmessage;
-    StringEncoder::Encode(message, wmessage);
+    Amuse::WString wmessage;
+    Amuse::StringEncoder::Encode(message, wmessage);
     ::OutputDebugStringW(wmessage.c_str());
     ::OutputDebugStringW(L"\n");
 }
 
 //! @brief  ブレークポイントを呼び出し
 void ShowMessageBox(const char* message) {
-    WString wmessage;
-    StringEncoder::Encode(message, wmessage);
+    Amuse::WString wmessage;
+    Amuse::StringEncoder::Encode(message, wmessage);
     ::MessageBoxW(nullptr, wmessage.c_str(), L"OctbitEngine", MB_OK);
 }
 

@@ -8,14 +8,14 @@
 #include <Amuse/VulkanRHI/System.h>
 #include <Amuse/VulkanRHI/VulkanDevice.h>
 
-namespace Amuse::RHI
+namespace Amuse
 {
 	//@―---------------------------------------------------------------------------
 	//! @brief      システムをServiceInjectorに登録
 	//@―---------------------------------------------------------------------------
 	void RegisterVulkanRHIService(ServiceInjector& injector) {
 		injector.bind<VulkanDevice>().as<Device>();
-		Platform::RegisterPlatformService(injector);
+		RegisterPlatformService(injector);
 	}
 
 

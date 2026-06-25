@@ -13,9 +13,7 @@
 #include <Amuse/DirectX12RHI/Sampler/DirectX12Sampler.h>
 #include <Amuse/DirectX12RHI/Texture/DirectX12Texture.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief              コンストラクタ
 	DirectX12DescriptorTable::DirectX12DescriptorTable(DirectX12Device& device, const DescriptorTableDesc& desc, DescriptorHeap& heap0, DescriptorHeap& heap1)
 		: m_device(device)
@@ -225,7 +223,7 @@ namespace Amuse::RHI {
 
 
 	//! @brief 指定されたインデックスとバッファに基づいて、対応するDirectX 12ディスクリプタレンジタイプを取得しようとします。
-	bool DirectX12DescriptorTable::tryGetRangeType(s32 index, const Ref<Amuse::RHI::Buffer>& buffer, D3D12_DESCRIPTOR_RANGE_TYPE& type) const {
+	bool DirectX12DescriptorTable::tryGetRangeType(s32 index, const Ref<Amuse::Buffer>& buffer, D3D12_DESCRIPTOR_RANGE_TYPE& type) const {
 		auto& items = m_layout->getDesc().items;
 		if (!buffer) return false;
 		if(!is_in_range(index, items)) return false;
@@ -254,7 +252,7 @@ namespace Amuse::RHI {
 
 
 	//! @brief 指定されたインデックスとバッファに基づいて、対応するDirectX 12ディスクリプタレンジタイプを取得しようとします。
-	bool DirectX12DescriptorTable::tryGetRangeType(s32 index, const Ref<Amuse::RHI::Texture>& texture, D3D12_DESCRIPTOR_RANGE_TYPE& type) const {
+	bool DirectX12DescriptorTable::tryGetRangeType(s32 index, const Ref<Amuse::Texture>& texture, D3D12_DESCRIPTOR_RANGE_TYPE& type) const {
 		auto& items = m_layout->getDesc().items;
 		if (!texture) return false;
 		if (!is_in_range(index, items)) return false;
@@ -272,7 +270,7 @@ namespace Amuse::RHI {
 
 
 	//! @brief 指定されたインデックスとバッファに基づいて、対応するDirectX 12ディスクリプタレンジタイプを取得しようとします。
-	bool DirectX12DescriptorTable::tryGetRangeType(s32 index, const Ref<Amuse::RHI::Sampler>& sampler, D3D12_DESCRIPTOR_RANGE_TYPE& type) const {
+	bool DirectX12DescriptorTable::tryGetRangeType(s32 index, const Ref<Amuse::Sampler>& sampler, D3D12_DESCRIPTOR_RANGE_TYPE& type) const {
 		auto& items = m_layout->getDesc().items;
 		if (!sampler) return false;
 		if (!is_in_range(index, items)) return false;

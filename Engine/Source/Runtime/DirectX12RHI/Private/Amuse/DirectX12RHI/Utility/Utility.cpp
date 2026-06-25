@@ -6,9 +6,7 @@
 #include <Amuse/Core/String/StringEncoder.h>
 #include <Amuse/Core/Misc/Blob.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief  エラーメッセージを取得
     String Utility::GetErrorMessage(DWORD errorCode) {
         WCHAR buffer[256];

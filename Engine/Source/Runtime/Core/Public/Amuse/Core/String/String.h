@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -8,11 +8,12 @@
 #include <Amuse/Core/CoreTypes.h>
 #include <Amuse/Core/String/StringView.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief		文字列基底
 	//! @details	任意の型の文字を文字列として扱えるクラス。
 	//!				相互変換可能な文字は char, wchar_t, char16_t, char32_t です。
+	//! @ingroup AmuseCore
 	template<class TChar>
 	class StringBase {
 	public:
@@ -440,29 +441,29 @@ namespace Amuse::Core {
 // ハッシュ化
 //===============================================================
 template <>
-struct std::hash<Amuse::Core::StringBase<char>> {
-	size_t operator ()(const Amuse::Core::StringViewBase<char>& value) const noexcept
+struct std::hash<Amuse::StringBase<char>> {
+	size_t operator ()(const Amuse::StringViewBase<char>& value) const noexcept
 	{
 		return std::hash<std::string_view>()({ value.data(), value.size() });
 	}
 };
 template <>
-struct std::hash<Amuse::Core::StringBase<wchar_t>> {
-	size_t operator ()(const Amuse::Core::StringBase<wchar_t>& value) const noexcept
+struct std::hash<Amuse::StringBase<wchar_t>> {
+	size_t operator ()(const Amuse::StringBase<wchar_t>& value) const noexcept
 	{
 		return std::hash<std::wstring_view>()({ value.data(), value.size() });
 	}
 };
 template <>
-struct std::hash<Amuse::Core::StringBase<char16_t>> {
-	size_t operator ()(const Amuse::Core::StringBase<char16_t>& value) const noexcept
+struct std::hash<Amuse::StringBase<char16_t>> {
+	size_t operator ()(const Amuse::StringBase<char16_t>& value) const noexcept
 	{
 		return std::hash<std::u16string_view>()({ value.data(), value.size() });
 	}
 };
 template <>
-struct std::hash<Amuse::Core::StringBase<char32_t>> {
-	size_t operator ()(const Amuse::Core::StringBase<char32_t>& value) const noexcept
+struct std::hash<Amuse::StringBase<char32_t>> {
+	size_t operator ()(const Amuse::StringBase<char32_t>& value) const noexcept
 	{
 		return std::hash<std::u32string_view>()({ value.data(), value.size() });
 	}
@@ -472,12 +473,12 @@ struct std::hash<Amuse::Core::StringBase<char32_t>> {
 //===============================================================
 // フォーマット
 //===============================================================
-template <> struct std::formatter<Amuse::Core::String, Amuse::Core::Char> {
+template <> struct std::formatter<Amuse::String, Amuse::Char> {
 	constexpr auto parse(std::format_parse_context& ctx) {
 		return ctx.begin();
 	}
 
-	auto format(const Amuse::Core::String& value, std::format_context& ctx) const {
+	auto format(const Amuse::String& value, std::format_context& ctx) const {
 		return format_to(ctx.out(), "{}", value.c_str());
 	}
 };
@@ -486,7 +487,7 @@ template <> struct std::formatter<Amuse::Core::String, Amuse::Core::Char> {
 //===============================================================
 // ストリーム
 //===============================================================
-inline std::ostream& operator<<(std::ostream& stream, const Amuse::Core::String& value) {
+inline std::ostream& operator<<(std::ostream& stream, const Amuse::String& value) {
 	stream << std::string_view(value.data(), value.size());
 	return stream;
 }

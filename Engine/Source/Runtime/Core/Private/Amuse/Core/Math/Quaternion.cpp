@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author Gajumaru
 //***********************************************************
@@ -8,7 +8,7 @@
 #include <Amuse/Core/Math/Rotation.h>
 #include <Amuse/Core/Math/Vectors.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     const Quat Quat::Identity = Quat(0,0,0,1);
 

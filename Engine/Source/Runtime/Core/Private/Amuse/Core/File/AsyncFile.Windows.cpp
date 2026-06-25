@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -15,7 +15,7 @@
 #include <vector>
 #include <dstorage.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	static ComPtr<IDStorageFactory> g_factory;
 

@@ -6,9 +6,10 @@
 #include "Amuse/Core/Memory/Allocator.h"
 #include <mimalloc.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief mimallocベースのアロケーター
+    //! @ingroup AmuseCore
     class MimallocAllocator : public Allocator {
     public:
         //! @brief メモリを確保する

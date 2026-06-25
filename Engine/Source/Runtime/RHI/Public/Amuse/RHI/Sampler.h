@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -8,10 +8,9 @@
 #include <Amuse/RHI/Types/SamplerDesc.h>
 #include <Amuse/RHI/Types/BindlessHandle.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief      サンプラー
+    //! @ingroup AmuseRHI
     class Sampler :public GraphicObject {
     public:
         //! @brief Default を実行する

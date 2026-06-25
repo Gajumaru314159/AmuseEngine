@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -6,7 +6,7 @@
 #include <Amuse/Core/Math/Vector3.h>
 #include <Amuse/Core/Math/Quaternion.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     const Rot Rot::Identity = Rot(0, 0, 0);
 

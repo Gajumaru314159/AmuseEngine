@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -6,9 +6,9 @@
 #include <Amuse/Core/Job/Job.h>
 #include <Amuse/Core/Job/JobGroup.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
-    JAmuse::Core::Job(JobGroup& group, StringView name,Action&& action)
+    JAmuse::Job(JobGroup& group, StringView name,Action&& action)
         : m_group(group)
         , m_name(name)
         , m_action(action)
@@ -19,28 +19,28 @@ namespace Amuse::Core {
 
     //! @brief      デストラクタ
     //! @details    デストラクタは必ずフレームの最初に行われる
-    JAmuse::Core::~Job() {
-        // 削除順は JobHandle::~JobHandle → JAmuse::Core::requestRelease / JAmuse::Core::~Job
+    JAmuse::~Job() {
+        // 削除順は JobHandle::~JobHandle → JAmuse::requestRelease / JAmuse::~Job
         m_group.removeJob(*this);
     }
 
-    auto JAmuse::Core::getName()const->const String& {
+    auto JAmuse::getName()const->const String& {
         return m_name;
     }
 
-    void JAmuse::Core::execute() {
+    void JAmuse::execute() {
         if (m_action) {
             m_action();
         }
     }
-    void JAmuse::Core::setSuspend(bool value) {
+    void JAmuse::setSuspend(bool value) {
         m_isSuspended = value;
     }
-    bool JAmuse::Core::isSuspended()const {
+    bool JAmuse::isSuspended()const {
         return m_isSuspended;
     }
 
-    void JAmuse::Core::requestRelease() {
+    void JAmuse::requestRelease() {
         setSuspend(true);
         m_group.removeJob(*this);
     }

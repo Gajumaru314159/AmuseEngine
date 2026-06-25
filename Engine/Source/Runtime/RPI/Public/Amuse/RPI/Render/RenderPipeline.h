@@ -1,13 +1,14 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/RPI/Forward.h>
 
-namespace Amuse::RPI {
+namespace Amuse {
 
 	//! @brief シーンとビューの描画手順を定義する基底クラス
+	//! @ingroup AmuseRPI
 	class RenderPipeline : public RefObject {
 	public:
 		//! @brief RTTI 情報を宣言する

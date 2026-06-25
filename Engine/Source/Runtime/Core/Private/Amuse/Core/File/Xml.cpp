@@ -9,7 +9,7 @@
 #include <charconv>
 #include <algorithm>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//===============================================================
 	// XmlNode

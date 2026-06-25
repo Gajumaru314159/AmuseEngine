@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -6,9 +6,7 @@
 #include <Amuse/Core/Core.h>
 #include <Amuse/Core/Utility/Ref.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief      グラフィック・オブジェクト
 	//! 
 	//! @details    グラフィック・オブジェクトは描画時まで削除されない必要があります。
@@ -18,6 +16,7 @@ namespace Amuse::RHI {
 	//!             システムの遅延開放スタックに積まれます。
 	//!             システムのスタックに積まれている間は破棄されていないことが保証できるため
 	//!             GPUからのアクセスにも対応できます。
+	//! @ingroup AmuseRHI
 	class GraphicObject : public RefObject {
 	public:
 

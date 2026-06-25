@@ -5,9 +5,7 @@
 #include <Amuse/Input/Button.h>
 #include <Amuse/Input/InputManager.h>
 
-namespace Amuse::Input {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief	状態が state か
 	bool Button::is(ButtonState state)const {
 		if (auto m = InputModule::Get()) {

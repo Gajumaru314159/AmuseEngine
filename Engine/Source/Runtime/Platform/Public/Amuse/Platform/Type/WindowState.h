@@ -5,10 +5,9 @@
 #pragma once
 #include <Amuse/Core/Core.h>
 
-namespace Amuse::Platform {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief  ウィンドウスタイル
+    //! @ingroup AmusePlatform
     enum class WindowStyle :u8 {
         Fixed,      // サイズ変更不可
         Sizable,    // サイズ変更可能
@@ -16,6 +15,7 @@ namespace Amuse::Platform {
     };
 
     //! @brief  ウィンドウ状態
+    //! @ingroup AmusePlatform
     enum class WindowState {
         FullScreen  = get_bit(0),//!< フルスクリーン
         Minimized   = get_bit(1),//!< 最小化されているか

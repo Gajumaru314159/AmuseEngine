@@ -1,13 +1,14 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/Core/Math/Vector3.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief  半直線
+    //! @ingroup AmuseCore
     class HalfLine {
     public:
 

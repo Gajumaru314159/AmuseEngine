@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author Gajumaru
 //***********************************************************
@@ -10,7 +10,7 @@
 #include <Amuse/Core/Geometry/Frustum.h>
 #include <Amuse/Core/Log/Assertion.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	const Matrix Matrix::Identity = Matrix(
 		1, 0, 0, 0,

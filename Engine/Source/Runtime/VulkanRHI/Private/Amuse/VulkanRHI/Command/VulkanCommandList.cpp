@@ -18,9 +18,7 @@
 #include <Amuse/VulkanRHI/Utility/TypeConverter.h>
 #include <Amuse/VulkanRHI/VulkanDevice.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	namespace {
 
 		struct VulkanResourceState {
@@ -713,7 +711,7 @@ namespace Amuse::RHI {
 
 
 	//! @brief      デスクリプタテーブルを設定
-	void VulkanCommandList::setDescriptorTables(const Amuse::RHI::SetDescriptorTableParam* params, s32 num) {
+	void VulkanCommandList::setDescriptorTables(const Amuse::SetDescriptorTableParam* params, s32 num) {
 
 		auto pipeline = m_pipeline.cast<VulkanPipelineState>();
 		auto computePipeline = m_computePipeline.cast<VulkanComputePipelineState>();

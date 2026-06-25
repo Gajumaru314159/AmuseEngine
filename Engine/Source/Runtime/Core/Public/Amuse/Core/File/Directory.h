@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -6,12 +6,13 @@
 #include <Amuse/Core/CorePrivate.h>
 #include <Amuse/Core/Misc/YesNo.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief  再帰的か
     DEFINE_YES_NO(Recursive);
 
     //! @brief  ディレクトリ
+    //! @ingroup AmuseCore
     class Directory {
     public:
 

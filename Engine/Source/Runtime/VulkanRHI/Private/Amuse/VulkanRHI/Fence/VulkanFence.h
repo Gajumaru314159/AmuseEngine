@@ -7,12 +7,11 @@
 #include <Amuse/Core/Core.h>
 #include <Amuse/RHI/Fence.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	class VulkanDevice;
 
 	//! @brief  Vulkan GPU同期フェンス
+	//! @ingroup AmuseVulkanRHI
 	class VulkanFence : public Fence {
 	public:
 

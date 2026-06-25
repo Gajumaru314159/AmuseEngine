@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -8,11 +8,12 @@
 #include <Amuse/Core/Utility/Ref.h>
 #include <Amuse/Core/Job/JobHandle.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     class JobGroup;
 
     //! @brief Job
+    //! @ingroup AmuseCore
     class Job {
     public:
         Job(JobGroup&,StringView name,Action&& action);

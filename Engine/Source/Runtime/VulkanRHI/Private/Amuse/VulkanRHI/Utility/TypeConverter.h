@@ -14,9 +14,8 @@
 #include <Amuse/RHI/Types/RenderPassDesc.h>
 #include <Amuse/RHI/Types/VertexLayout.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
+	//! @ingroup AmuseVulkanRHI
 	class TypeConverter {
 	public:
 		static vk::ImageType Convert(TextureType value);

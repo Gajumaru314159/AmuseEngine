@@ -9,9 +9,7 @@
 #include <Amuse/VulkanRHI/RootSignature/VulkanRootSignature.h>
 #include <Amuse/RHI/VertexLayout.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief		コンストラクタ
 	VulkanPipelineState::VulkanPipelineState(VulkanDevice& device,const PipelineStateDesc& desc)
 		: m_desc(desc)

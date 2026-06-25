@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -7,7 +7,7 @@
 #include <Amuse/Core/Template/Allocator/STLAllocator.h>
 #include <Amuse/Core/Template/Container/Deque.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief スタック
     template <class T,class TContainer = Deque<T>>

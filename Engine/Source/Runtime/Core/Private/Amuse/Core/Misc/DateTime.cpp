@@ -1,11 +1,11 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #include <Amuse/Core/Misc/DateTime.h>
 #include <chrono>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//!	@brief	曜日
 	DayOfWeek DateTime::dayOfWeek()const {

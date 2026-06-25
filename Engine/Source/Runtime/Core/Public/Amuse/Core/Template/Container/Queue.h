@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -8,7 +8,7 @@
 #include <Amuse/Core/Template/Container/Deque.h>
 #include <Amuse/Core/Template/Container/Vector.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief キュー
     template <class T, class TConatiner = Deque<T>>

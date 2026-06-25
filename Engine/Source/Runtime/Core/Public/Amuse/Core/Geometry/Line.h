@@ -1,13 +1,14 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/Core/Math/Vector3.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief  線分
+    //! @ingroup AmuseCore
     struct Line {
     public:
 

@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //! @reference	https://zenn.dev/suuta/articles/c4c47e8626d5aa
@@ -8,7 +8,7 @@
 #include <Amuse/Core/Template/Utility/TypeTraits.h>
 #include <Amuse/Core/Template/Utility/FixedFunc.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @cond 
 	template <class Signature, std::size_t BufferSize = 32>
@@ -17,6 +17,7 @@ namespace Amuse::Core {
 
 	//! @brief デリゲート
 	//! @details デリゲートは関数ポインタ、メンバ関数ポインタ、ラムダ式などを保持し、呼び出す。
+	//! @ingroup AmuseCore
 	template <class R, class... Args, std::size_t BufferSize>
 	class Delegate<R(Args...), BufferSize> {
 	public:

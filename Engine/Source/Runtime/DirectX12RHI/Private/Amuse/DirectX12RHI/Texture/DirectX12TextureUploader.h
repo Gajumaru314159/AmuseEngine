@@ -7,15 +7,14 @@
 #include <Amuse/Core/Core.h>
 #include <Amuse/Core/Utility/Swapper.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief  テクスチャ・アップローダー
     //! 
     //! テクスチャのデータを効率的にアップロードするための機能を提供します。
     //! CPUからデータを書き込めるGPUリソースは読み取り速度に制限がかかるため、
     //! 書き込み用のステージングバッファに書き込んだものをまとめてハイパフォーマンスなバッファにコピーします。
     //! コピー処理はフレームの先頭に行われます。必ず毎フレーム描画処理より前に実行してください。         
+    //! @ingroup AmuseDirectX12RHI
     class DirectX12TextureUploader {
     public:
         struct Subresource {
@@ -38,6 +37,7 @@ namespace Amuse::RHI {
     private:
 
         // コピーリクエスト
+        //! @ingroup AmuseDirectX12RHI
         struct Request {
             ComPtr<ID3D12Resource> source;
             ComPtr<ID3D12Resource> dest;
@@ -54,6 +54,7 @@ namespace Amuse::RHI {
             // D3D12_BOX sourceBox;
         };
 
+        //! @ingroup AmuseDirectX12RHI
         struct FrameData {
             Vector<Request>     requests;
 

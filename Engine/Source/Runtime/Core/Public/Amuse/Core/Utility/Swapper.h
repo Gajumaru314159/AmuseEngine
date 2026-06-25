@@ -1,13 +1,14 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/Core/CorePrivate.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief  入れ替えユーティリティ
+	//! @ingroup AmuseCore
 	template<typename T>
 	class Swapper {
 	public:

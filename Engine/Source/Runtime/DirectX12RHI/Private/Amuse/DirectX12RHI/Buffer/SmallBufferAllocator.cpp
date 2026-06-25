@@ -5,9 +5,7 @@
 #include <Amuse/DirectX12RHI/Buffer/SmallBufferAllocator.h>
 #include <Amuse/DirectX12RHI/Utility/Utility.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief バッファ記述からアライメント要求を取得
 	size_t SmallBufferAllocator::GetAlignmentFromUsage(const BufferDesc& desc) {
 		switch (desc.state) {
@@ -82,7 +80,7 @@ namespace Amuse::RHI {
 	BufferAllocation SmallBufferAllocator::allocate(size_t size, size_t alignment) {
 		ScopeLock lock(m_spinLock);
 
-		size_t alignedSize = Amuse::Core::align_up(size, alignment);
+		size_t alignedSize = Amuse::align_up(size, alignment);
 
 		BufferAllocation allocation = {};
 		allocation.size = size;

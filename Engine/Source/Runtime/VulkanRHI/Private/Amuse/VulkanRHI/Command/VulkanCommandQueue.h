@@ -7,10 +7,9 @@
 #include <Amuse/Core/Core.h>
 #include <Amuse/RHI/CommandList.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief  コマンドキュー
+    //! @ingroup AmuseVulkanRHI
     class VulkanCommandQueue {
     public:
 
@@ -37,6 +36,7 @@ namespace Amuse::RHI {
 
         Vector<vk::CommandBuffer>   m_commandBuffers;
 
+        //! @ingroup AmuseVulkanRHI
         struct SubmissionFence {
             u64 value = 0;
             vk::raii::Fence fence = nullptr;

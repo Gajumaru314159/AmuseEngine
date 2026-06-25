@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -10,7 +10,7 @@
 #include <Amuse/Core/Template/Utility/Memory.h>
 #include <Amuse/Core/Template/Utility/TypeTraits.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	class Any;
 	struct TypeInfo;
@@ -20,6 +20,7 @@ namespace Amuse::Core {
 
 
 	//! @brief プロパティ
+	//! @ingroup AmuseCore
 	class Property {
 	public:
 		//! @brief プロパティ所有者への書き込み可否を表すフラグ型。
@@ -156,6 +157,7 @@ namespace Amuse::Core {
 	//! @brief 任意の型を保持するクラス
 	//! @details 型情報を保持し、型情報に基づいて値を取得、設定できます。
 	//!			 内部値はconstかと、参照型かを保持します。
+	//! @ingroup AmuseCore
 	class Any {
 	private:
 		DEFINE_YES_NO(Reference);
@@ -366,6 +368,7 @@ namespace Amuse::Core {
 
 	private:
 
+		//! @ingroup AmuseCore
 		template < typename T >
 		class has_get_type {
 		private:

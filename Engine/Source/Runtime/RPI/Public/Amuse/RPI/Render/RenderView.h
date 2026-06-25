@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -6,9 +6,10 @@
 #include <Amuse/Core/Reflection/AnyContainer.h>
 #include <Amuse/RPI/Render/RenderScene.h>
 
-namespace Amuse::RPI {
+namespace Amuse {
 
 	//! @brief RenderView の生成設定
+	//! @ingroup AmuseRPI
 	struct RenderViewData {
 		String name; //!< ビュー名
 		s32 pipeline = 0; //!< パイプライン番号
@@ -18,6 +19,7 @@ namespace Amuse::RPI {
 
 	//! @brief      レンダー・ビュー
 	//! @ref 		RenderView
+	//! @ingroup AmuseRPI
 	class RenderView {
 	public:
 

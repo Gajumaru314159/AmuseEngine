@@ -11,8 +11,7 @@
 //===============================================================
 // 前方宣言
 //===============================================================
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
+namespace Amuse {
     class DirectX12Device;
     class ITexture;
 }
@@ -21,11 +20,10 @@ namespace Amuse::RHI {
 //===============================================================
 // クラス宣言
 //===============================================================
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief  ルートシグネチャ実装(DirectX12)
-    class DirectX12RootSignature :public Amuse::RHI::RootSignature {
+    //! @ingroup AmuseDirectX12RHI
+    class DirectX12RootSignature :public Amuse::RootSignature {
     public:
         struct MapInfo {
             s32 samplerSlot = -1;

@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -6,9 +6,10 @@
 #include <Amuse/Core/Math/Vector3.h>
 
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief  線分
+    //! @ingroup AmuseCore
     class Segment {
     public:
 

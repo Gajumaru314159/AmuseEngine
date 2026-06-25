@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -7,9 +7,10 @@
 #include <Amuse/Core/Thread/Thread.h>
 #include <Amuse/Core/Utility/Singleton.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief スレッドプールを表す。
+	//! @ingroup AmuseCore
 	class ThreadPool : public Singleton<ThreadPool> {
 	public:
 

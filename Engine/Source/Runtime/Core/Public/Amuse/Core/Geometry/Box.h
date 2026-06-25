@@ -1,16 +1,17 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/Core/Math/Vector3.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief      ボックス
     //! 
     //! @details    ボックスは内部的に中心座標とサイズで管理されます。
     //! @note       size が負の数の時は未定義動作です。
+    //! @ingroup AmuseCore
     struct Box {
     public:
 

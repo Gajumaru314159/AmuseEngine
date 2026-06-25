@@ -8,10 +8,9 @@
 #include <Amuse/RHI/Texture.h>
 #include <Amuse/RHI/Types/RenderTextureDesc.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief      描画テクスチャ
+    //! @ingroup AmuseRHI
     class RenderTexture :public Texture {
     public:
 

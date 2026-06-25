@@ -1,11 +1,11 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/Core/Math/Math.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	struct Vec3;
 	struct Quat;
@@ -13,6 +13,7 @@ namespace Amuse::Core {
 	//! @brief      オイラー回転を表す構造体
 	//! 
 	//! @details    回転はZXYの順に行われる。内部の値は度数法で表される。
+	//! @ingroup AmuseCore
 	struct Rot {
 	public:
 
@@ -177,8 +178,8 @@ namespace Amuse::Core {
 // フォーマット
 //===============================================================
 //! @cond
-template <> struct std::formatter<Amuse::Core::Rot, Amuse::Core::Char> : std::formatter<Amuse::Core::f32, Amuse::Core::Char> {
-	using base = std::formatter<Amuse::Core::f32, Amuse::Core::Char>;
+template <> struct std::formatter<Amuse::Rot, Amuse::Char> : std::formatter<Amuse::f32, Amuse::Char> {
+	using base = std::formatter<Amuse::f32, Amuse::Char>;
 	bool isRad = false;
 	template<typename ParseContext>
 	constexpr auto parse(ParseContext& ctx) -> decltype(ctx.begin()) {		
@@ -196,14 +197,14 @@ template <> struct std::formatter<Amuse::Core::Rot, Amuse::Core::Char> : std::fo
 		return base::parse(ctx);
 	}
 	template<typename FormatContext>
-	auto format(const Amuse::Core::Rot& value, FormatContext& ctx) const {
+	auto format(const Amuse::Rot& value, FormatContext& ctx) const {
 		auto x = value.x;
 		auto y = value.y;
 		auto z = value.z;
 		if (isRad) {
-			x = Amuse::Core::Math::Degrees(x);
-			y = Amuse::Core::Math::Degrees(y);
-			z = Amuse::Core::Math::Degrees(z);
+			x = Amuse::Math::Degrees(x);
+			y = Amuse::Math::Degrees(y);
+			z = Amuse::Math::Degrees(z);
 		}
 		ctx.advance_to(format_to(ctx.out(), "("));
 		ctx.advance_to(base::format(x, ctx));

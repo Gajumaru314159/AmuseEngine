@@ -1,11 +1,11 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/Core/Template/Utility/Function.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief		スコープ値
 	//! 
@@ -31,6 +31,7 @@ namespace Amuse::Core {
 	//!				}
 	//!				std::cout<<value<<std::endl;// 4
 	//!				```
+	//! @ingroup AmuseCore
 	template<typename T, typename V = T>
 	class ScopeValue {
 	public:
@@ -87,6 +88,7 @@ namespace Amuse::Core {
 	//! @details	スコープを抜けるときに登録した処理を実行します。
 	//!				エラーハンドリングなどに使用します。
 	//!				ローカル変数をキャプチャする場合は解放順に注意が必要です。
+	//! @ingroup AmuseCore
 	class ScopeOutAction
 	{
 	public:

@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -29,7 +29,7 @@
 #define AMUSE_PROFILE_ALLOC(category,ptr,size)             TracyAllocS(ptr,size,8)
 #define AMUSE_PROFILE_FREE(category,ptr)                   TracyFreeS(ptr,8)
 
-namespace Amuse::Core {
+namespace Amuse {
 
     void BeginProfile();
     void EndProfile();

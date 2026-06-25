@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -10,7 +10,7 @@
 #include <Amuse/RPI/FrameGraph/FG.h>
 #include "Amuse/RPI/Render/Feature/MeshRenderFeature.h"
 
-namespace Amuse::RPI {
+namespace Amuse {
 
 	void UniversalRenderPipeline::setup(RenderScene& scene, RenderFeatureSet& features) const {
 		features.add<MaterialRenderFeature>(scene);
@@ -48,29 +48,29 @@ namespace Amuse::RPI {
 		auto resource = fg.addPass<Resources>(
 			"ResourceSetup",
 			[&](FGBuilder& builder, Resources& resources) {
-				RHI::RenderTextureDesc desc;
+				RenderTextureDesc desc;
 				desc.size = *size;
 				{
 					desc.name = "Albedo";
-					desc.format = RHI::TextureFormat::RGBA8;
+					desc.format = TextureFormat::RGBA8;
 					desc.clear.color = Color::Black;
 					resources.albedo = builder.write(builder.create(desc));
 				}
 				{
 					desc.name = "Normal";
-					desc.format = RHI::TextureFormat::RGBA8;
+					desc.format = TextureFormat::RGBA8;
 					desc.clear.color = Color::Normal;
 					resources.normal = builder.write(builder.create(desc));
 				}
 				{
 					desc.name = "Params";
-					desc.format = RHI::TextureFormat::RGBA8;
+					desc.format = TextureFormat::RGBA8;
 					desc.clear.color = Color::Black;
 					resources.params = builder.write(builder.create(desc));
 				}
 				{
 					desc.name = "Depth";
-					desc.format = RHI::TextureFormat::D32;
+					desc.format = TextureFormat::D32;
 					resources.depth = builder.write(builder.create(desc));
 				}
 			}

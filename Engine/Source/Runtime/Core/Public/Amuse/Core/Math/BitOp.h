@@ -1,13 +1,14 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/Core/CoreTypes.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief      ビット操作ユーティリティ
+	//! @ingroup AmuseCore
 	struct BitOp {
 	public:
 
@@ -47,7 +48,7 @@ namespace Amuse::Core {
 
 
 //! @cond
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief 有効ビット数を計算
 	constexpr s32 BitOp::GetBitCount(u8  value) {

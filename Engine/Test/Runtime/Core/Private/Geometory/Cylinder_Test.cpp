@@ -1,10 +1,10 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #include <Amuse/Core/Geometry/Cylinder.h>
 
-using namespace Amuse::Core;
+using namespace Amuse;
 
 TEST(Cylinder, Constructor)
 {

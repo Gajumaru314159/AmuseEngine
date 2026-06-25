@@ -19,9 +19,7 @@
 #include <Amuse/RHI/VertexLayout.h>
 #include <magic_enum.hpp>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief  コンストラクタ
 	VulkanSwapChain::VulkanSwapChain(VulkanDevice& device, const SwapChainDesc& desc)
 		: m_device(device)
@@ -457,9 +455,9 @@ namespace Amuse::RHI {
 
 
 	//! @brief      ウィンドウの更新イベント
-	void VulkanSwapChain::onWindowChanged(const Platform::WindowEventArgs& args) {
+	void VulkanSwapChain::onWindowChanged(const WindowEventArgs& args) {
 
-		if (args.type == Platform::WindowEventType::Size || args.type == Platform::WindowEventType::Maximize) {
+		if (args.type == WindowEventType::Size || args.type == WindowEventType::Maximize) {
 			if (!args.isSizing) {
 				if (m_desc.size.width != args.newSize.x || m_desc.size.height != args.newSize.y) {
 
@@ -481,14 +479,14 @@ namespace Amuse::RHI {
 			}
 		}
 
-		if (args.type == Platform::WindowEventType::Minimize) {
+		if (args.type == WindowEventType::Minimize) {
 			m_visible = false;
 		}
-		if (args.type == Platform::WindowEventType::Maximize || args.type == Platform::WindowEventType::Move) {
+		if (args.type == WindowEventType::Maximize || args.type == WindowEventType::Move) {
 			m_visible = true;
 		}
 
-		if(args.type == Platform::WindowEventType::Close) {
+		if(args.type == WindowEventType::Close) {
 			m_closed = true;
 		}	
 

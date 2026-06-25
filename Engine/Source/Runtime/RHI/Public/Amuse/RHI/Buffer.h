@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -8,14 +8,13 @@
 #include <Amuse/RHI/Types/BufferDesc.h>
 #include <Amuse/RHI/Types/BindlessHandle.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	struct DrawParam;
 	struct DrawIndexedParam;
 	struct DispatchParam;
 
 	//! @brief      バッファ
+	//! @ingroup AmuseRHI
 	class Buffer :public GraphicObject {
 	public:
 		//! @brief バッファコピー関数型

@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -14,7 +14,7 @@
 #include <assimp/postprocess.h>
 
 
-namespace Amuse::RPI {
+namespace Amuse {
 
 	Ref<Mesh> Mesh::Load(StringView path) {
 
@@ -36,8 +36,8 @@ namespace Amuse::RPI {
 
 
 		// テクスチャ
-		Map<String, Ref<RHI::Texture>, std::less<>> textures;
-		Vector<Ref<RPI::Material>> materials;
+		Map<String, Ref<Texture>, std::less<>> textures;
+		Vector<Ref<Material>> materials;
 
 
 		// マテリアル
@@ -46,12 +46,7 @@ namespace Amuse::RPI {
 			String name(m->GetName().C_Str());
 
 			// マテリアル生成
-			using namespace Amuse::RPI;
-
 			Ref<Material> material = [&] {
-				using namespace Amuse::RHI;
-				using namespace Amuse::RPI;
-
 				MaterialDesc desc;
 				desc.name = path;
 				desc.textures = { "Main", "Normal", "Params" };
@@ -101,7 +96,7 @@ namespace Amuse::RPI {
 
 			// テクスチャ読み込み
 			{
-				Ref<RHI::Texture> texture;
+				Ref<Texture> texture;
 				aiString texturePath;
 				if (texturePath.length == 0)m->Get(AI_MATKEY_TEXTURE_DIFFUSE(0), texturePath);
 				if (texturePath.length == 0)m->Get(AI_MATKEY_TEXTURE_EMISSIVE(0), texturePath);
@@ -111,14 +106,14 @@ namespace Amuse::RPI {
 						fullPath = Path::Combine(directory, texturePath.C_Str());
 					}
 					if (File::Exists(fullPath)) {
-						texture = textures[fullPath] = RHI::Texture::Load(fullPath);
+						texture = textures[fullPath] = Texture::Load(fullPath);
 					}
 				}
-				if (!texture) texture = RHI::Texture::White();
+				if (!texture) texture = Texture::White();
 				material->setTexture("Main", texture);
 			}
 			{
-				Ref<RHI::Texture> texture;
+				Ref<Texture> texture;
 				aiString texturePath;
 				if (texturePath.length == 0)m->Get(AI_MATKEY_TEXTURE_NORMALS(0), texturePath);
 				if (texturePath.length) {
@@ -127,16 +122,16 @@ namespace Amuse::RPI {
 						fullPath = Path::Combine(directory, texturePath.C_Str());
 					}
 					if (File::Exists(fullPath)) {
-						texture = textures[fullPath] = RHI::Texture::Load(fullPath);
+						texture = textures[fullPath] = Texture::Load(fullPath);
 					}
 				}
-				if (!texture) texture = RHI::Texture::White();
+				if (!texture) texture = Texture::White();
 				material->setTexture("Normal", texture);
 			}
 			{
-				Ref<RHI::Texture> texture;
-				if (!texture) texture = RHI::Texture::White();
-				material->setTexture("Params", RHI::Texture::Black());
+				Ref<Texture> texture;
+				if (!texture) texture = Texture::White();
+				material->setTexture("Params", Texture::Black());
 			}
 
 			Color color = Color::White;
@@ -176,7 +171,7 @@ namespace Amuse::RPI {
 				//continue;
 			}
 
-			auto result = Amuse::RPI::Mesh::Create();
+			auto result = Amuse::Mesh::Create();
 			auto& lod0 = result->lods.emplace_back();
 			lod0.source.emplace();
 
@@ -239,8 +234,6 @@ namespace Amuse::RPI {
 
 	void Mesh::apply()
 	{
-		using namespace Amuse::RHI;
-
 		bounds.box = Box::Empty;
 
 		for (auto& lod : lods)

@@ -14,10 +14,9 @@
 #include <dinput.h>
 #endif
 
-namespace Amuse::Input {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief  ゲームパッド・デバイス
+    //! @ingroup AmuseInput
     class GamePadDevice : public IInputDevice {
     public:
         GamePadDevice();
@@ -42,6 +41,7 @@ namespace Amuse::Input {
         bool bindAxis(u32 code, AxisHandle& handle, const AxisDelegate& func) override;
 
     private:
+        //! @ingroup AmuseInput
         struct KeyState {
             HashMap<ButtonState, ButtonNotifier> notifiers;
             ButtonStates prev;

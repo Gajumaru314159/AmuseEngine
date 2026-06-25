@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -9,11 +9,10 @@
 #include <Amuse/RHI/Types/ShaderStage.h>
 #include <Amuse/RHI/Types/SamplerDesc.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief      ルートシグネチャ・フラグ
 	//! @see        RootSignatureDesc
+	//! @ingroup AmuseRHI
 	enum class RootSignatureFlag :u32 {
 		None							= 0,
 		AllowInputAssemblerInputLayout  = get_bit(0),	//!< 頂点入力あり
@@ -34,6 +33,7 @@ namespace Amuse::RHI {
 
 	//! @brief      ルートコンスタント定義
 	//! @see        RootParameter
+	//! @ingroup AmuseRHI
 	struct RootConstantsDesc {
 		u32 size;          //!< 値
 		u32 registerNo;     //!< レジスタ番号 (D3D12のみ)
@@ -62,6 +62,7 @@ namespace Amuse::RHI {
 	//!             ```SamplerState  mainSampler : register(s1,space0)```
 	//!             レジスタ空間を分けることで、同じレジスタ番号を使用することができます。
 	//! @see        RootSignatureDesc
+	//! @ingroup AmuseRHI
 	struct StaticSamplerDesc {
 		SamplerDesc     sampler;        //!< サンプラー設定
 		u32             registerNo;     //!< レジスタ番号
@@ -81,6 +82,7 @@ namespace Amuse::RHI {
 
 
 	//! @brief ルートシグネチャ定義
+	//! @ingroup AmuseRHI
 	struct RootSignatureDesc {
 		String							name;		//!< 名前
 		Vector<Ref<DescriptorLayout>>	layouts;	//!< バインディングスロット

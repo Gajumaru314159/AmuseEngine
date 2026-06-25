@@ -17,26 +17,30 @@
 #include <unordered_map>
 #include <unordered_set>
 
-namespace Amuse::Core {
+namespace Amuse {
 
+	//! @ingroup AmuseCore
 	enum class ExecutorKind {
 		SingleThreaded,
 		MultiThreaded,
 	};
 
 	//! @brief スケジュール実行設定を表す。
+	//! @ingroup AmuseCore
 	struct ScheduleExecutorConfig {
 		s32 workerCount = 0; //!< ワーカー数
 		bool allowWorkerSleep = true; //!< ワーカースリープ許可
 		bool enableWorkStealing = true; //!< ワークスティール有効フラグ
 	};
 
+	//! @ingroup AmuseCore
 	enum class ScheduleBuildLogLevel {
 		Ignore,
 		Warn,
 		Error,
 	};
 
+	//! @ingroup AmuseCore
 	enum class ScheduleBuildErrorType {
 		DuplicateLabel,
 		UnresolvedLabel,
@@ -46,6 +50,7 @@ namespace Amuse::Core {
 	};
 
 	//! @brief スケジュール構築エラーを表す。
+	//! @ingroup AmuseCore
 	struct ScheduleBuildError {
 		ScheduleBuildErrorType type{}; //!< 型
 		String message; //!< メッセージ
@@ -53,6 +58,7 @@ namespace Amuse::Core {
 	};
 
 	//! @brief スケジュール構築警告を表す。
+	//! @ingroup AmuseCore
 	struct ScheduleBuildWarning {
 		ScheduleBuildErrorType type{}; //!< 型
 		String message; //!< メッセージ
@@ -60,6 +66,7 @@ namespace Amuse::Core {
 	};
 
 	//! @brief スケジュール構築設定を表す。
+	//! @ingroup AmuseCore
 	struct ScheduleBuildSettings {
 		ScheduleBuildLogLevel unresolvedLabel = ScheduleBuildLogLevel::Error; //!< 未解決ラベル検証フラグ
 		ScheduleBuildLogLevel dependencyCycle = ScheduleBuildLogLevel::Error; //!< 依存循環検証フラグ
@@ -68,6 +75,7 @@ namespace Amuse::Core {
 	};
 
 	//! @brief スケジュール構築結果を表す。
+	//! @ingroup AmuseCore
 	class ScheduleBuildResult {
 	public:
 		//! @brief ビルドが成功したか
@@ -91,6 +99,7 @@ namespace Amuse::Core {
 	};
 
 	//! @brief スケジュール実行器を表す。
+	//! @ingroup AmuseCore
 	class ScheduleExecutor {
 	public:
 		//! @brief Executor を作成
@@ -189,12 +198,14 @@ namespace Amuse::Core {
 
 	//! @cond
 	namespace Internal {
+		//! @ingroup AmuseCore
 		enum class ScheduleNodeKind {
 			Task,
 			Set,
 		};
 
 		//! @brief スケジュールノード参照を表す。
+		//! @ingroup AmuseCore
 		struct ScheduleNodeRef {
 			ScheduleNodeKind kind = ScheduleNodeKind::Task; //!< ノード種別
 			s32 id = -1; //!< ノードID
@@ -206,6 +217,7 @@ namespace Amuse::Core {
 		};
 
 		//! @brief スケジュールノード間の依存辺を表す。
+		//! @ingroup AmuseCore
 		struct ScheduleEdge {
 			ScheduleNodeRef from; //!< 依存元ノード
 			ScheduleNodeRef to; //!< 依存先ノード
@@ -217,6 +229,7 @@ namespace Amuse::Core {
 	class TaskGroup;
 
 	//! @brief 非同期タスクを表す。
+	//! @ingroup AmuseCore
 	class Task {
 	public:
 		//! @brief 空のタスクハンドルを作成
@@ -323,6 +336,7 @@ namespace Amuse::Core {
 	};
 
 	//! @brief スケジュール集合を表す。
+	//! @ingroup AmuseCore
 	class ScheduleSet {
 	public:
 		//! @brief 空のセットハンドルを作成
@@ -399,6 +413,7 @@ namespace Amuse::Core {
 	}
 
 	//! @brief タスクグループを表す。
+	//! @ingroup AmuseCore
 	class TaskGroup {
 	public:
 		//! @brief 空のタスクグループを作成
@@ -435,6 +450,7 @@ namespace Amuse::Core {
 
 	template<class... Args>
 	//! @brief スケジュールを表す。
+	//! @ingroup AmuseCore
 	class Schedule {
 	public:
 		//! @brief スケジュールを作成
@@ -582,6 +598,7 @@ namespace Amuse::Core {
 		}
 
 	private:
+		//! @ingroup AmuseCore
 		struct SystemNode {
 			s32 id = -1;
 			String name;
@@ -593,6 +610,7 @@ namespace Amuse::Core {
 			Func<void(Args...)> invoker;
 		};
 
+		//! @ingroup AmuseCore
 		struct SetNode {
 			s32 id = -1;
 			String name;
@@ -600,6 +618,7 @@ namespace Amuse::Core {
 			bool chain = false;
 		};
 
+		//! @ingroup AmuseCore
 		struct ExecutionBatch {
 			Vector<s32> systems;
 		};

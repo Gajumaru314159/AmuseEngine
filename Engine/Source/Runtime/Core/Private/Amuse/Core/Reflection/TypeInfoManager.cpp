@@ -1,11 +1,11 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #include <Amuse/Core/Reflection/TypeInfoManager.h>
 #include <Amuse/Core/Reflection/TypeBuilder.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	TypeInfoManager::TypeInfoManager() {
 

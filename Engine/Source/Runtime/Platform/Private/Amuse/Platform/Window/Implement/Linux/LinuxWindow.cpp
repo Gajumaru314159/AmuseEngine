@@ -9,9 +9,7 @@
 #include <X11/Xutil.h>
 #include <Amuse/Platform/Window/WindowManager.h>
 
-namespace Amuse::Platform {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     namespace {
 
         class X11Context {
@@ -340,6 +338,6 @@ namespace Amuse::Platform {
         }
     }
 
-} // namespace Amuse::Platform
+} // namespace Amuse
 
 #endif // OS_LINUX

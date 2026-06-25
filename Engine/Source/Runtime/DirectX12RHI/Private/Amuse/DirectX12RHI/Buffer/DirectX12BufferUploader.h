@@ -8,15 +8,14 @@
 #include <Amuse/RHI/Buffer.h>
 #include <Amuse/Core/Utility/Swapper.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief  バッファ・アップローダー
     //! 
     //! バッファのデータを効率的にアップロードするための機能を提供します。
     //! CPUからデータを書き込めるGPUリソースは読み取り速度に制限がかかるため、
     //! 書き込み用のステージングバッファに書き込んだものをまとめてハイパフォーマンスなバッファにコピーします。
     //! コピー処理はフレームの先頭に行われます。必ず毎フレーム描画処理より前に実行してください。         
+    //! @ingroup AmuseDirectX12RHI
     class DirectX12BufferUploader {
     public:
 
@@ -34,6 +33,7 @@ namespace Amuse::RHI {
     private:
 
         // コピーリクエストごとの
+        //! @ingroup AmuseDirectX12RHI
         struct Request {
             ComPtr<ID3D12Resource> source;
             ComPtr<ID3D12Resource> dest;
@@ -43,6 +43,7 @@ namespace Amuse::RHI {
             D3D12_RESOURCE_STATES afterState;
         };
 
+        //! @ingroup AmuseDirectX12RHI
         struct FrameBlock {
             ComPtr<ID3D12Resource> resource;
             Blob blob;
@@ -52,6 +53,7 @@ namespace Amuse::RHI {
 			}
         };
 
+        //! @ingroup AmuseDirectX12RHI
         struct FrameData {
 			s32                 blockIndex = -1;
             Vector<FrameBlock>  blocks;

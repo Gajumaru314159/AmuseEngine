@@ -7,9 +7,7 @@
 #include <Amuse/Core/Utility/DI.h>
 #include <Amuse/Core/Platform/WindowsHeaders.h>
 
-namespace Amuse::Platform {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief      システムをServiceInjectorに登録
 	void RegisterPlatformService(ServiceInjector& injector) {
 		injector.bind<WindowManager>();
@@ -17,7 +15,7 @@ namespace Amuse::Platform {
 
 }
 
-namespace Amuse::Platform::System {
+namespace Amuse {
 
 	//! @brief  プラットフォームの言語を取得
 	Language GetLanguage() {
@@ -101,8 +99,8 @@ namespace Amuse::Platform::System {
 			auto rootMarkPath = path / "EngineRootMark";
 			if (std::filesystem::exists(rootMarkPath)) {
 				std::filesystem::current_path(path);
-				Amuse::Core::String t;
-				Amuse::Core::StringEncoder::Encode(path.u16string(), t);
+				Amuse::String t;
+				Amuse::StringEncoder::Encode(path.u16string(), t);
 				LOG_INFO("カレントパスを{}に設定", t);
 				break;
 			}

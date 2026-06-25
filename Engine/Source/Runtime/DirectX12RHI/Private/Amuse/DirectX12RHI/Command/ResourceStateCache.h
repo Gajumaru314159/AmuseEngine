@@ -8,10 +8,9 @@
 #include <Amuse/DirectX12RHI/Texture/DirectX12Texture.h>
 #include <Amuse/DirectX12RHI/Buffer/DirectX12Buffer.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief  リソースステート・キャッシュ
+    //! @ingroup AmuseDirectX12RHI
     class ResourceStateCache {
     public:
 

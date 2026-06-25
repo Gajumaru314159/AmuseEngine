@@ -12,8 +12,7 @@
 //===============================================================
 // 前方宣言
 //===============================================================
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
+namespace Amuse {
     class VulkanDevice;
 }
 
@@ -21,10 +20,9 @@ namespace Amuse::RHI {
 //===============================================================
 // クラス定義
 //===============================================================
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief		コンピュート・パイプライン実装(Vulkan)
+    //! @ingroup AmuseVulkanRHI
     class VulkanComputePipelineState :public ComputePipelineState {
     public:
 

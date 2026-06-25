@@ -34,17 +34,15 @@
 	if(p.cast<type_impl>()->isValid() == false) p = {};			\
 	return p;		
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief  DirectX12RHIの起動に必要なサービスを登録
 	void DirectX12Device::Inject(ServiceInjector& injector) {
 		injector.bind<DirectX12Device>().as<Device>();
-		Platform::RegisterPlatformService(injector);
+		RegisterPlatformService(injector);
 	}
 
 	//! @brief  コンストラクタ
-	DirectX12Device::DirectX12Device(Platform::WindowManager&, GraphicObjectManager& objectManager, const RHIConfig* config, const DirectX12RHIConfig* dx12config)
+	DirectX12Device::DirectX12Device(WindowManager&, GraphicObjectManager& objectManager, const RHIConfig* config, const DirectX12RHIConfig* dx12config)
 		: Device(objectManager,config)
 		, m_config(config ? *config : RHIConfig{})
 		, m_dx12config(dx12config ? *dx12config : DirectX12RHIConfig{})

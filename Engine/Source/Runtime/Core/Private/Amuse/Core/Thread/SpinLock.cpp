@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -6,7 +6,7 @@
 #include <Amuse/Core/Thread/Thread.h>
 #include <atomic>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief  ロックを取得する
 	void SpinLock::Impl::lock() {

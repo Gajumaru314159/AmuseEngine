@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -8,7 +8,7 @@
 #include <Amuse/Core/Utility/Nonmovable.h>
 #include <Amuse/Core/Log/Assertion.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief		メモリストレージ
 	//! 
@@ -16,6 +16,7 @@ namespace Amuse::Core {
 	//!				通常はRAIIに則り生成時に初期化することが望ましいですが、
 	//!				初期化を遅らせる必要がある場合に使用します。
 	//!				unique_ptrと違いメンバ変数として使用する場合はクラスのインクルードが必要です。
+	//! @ingroup AmuseCore
 	template<class T,size_t SIZE,size_t ALIGN>
 	class MemoryStorageBase : Noncopyable,Nonmovable{
 	public:

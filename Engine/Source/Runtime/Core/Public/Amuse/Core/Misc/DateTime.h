@@ -1,13 +1,14 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/Core/CorePrivate.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief  曜日
+	//! @ingroup AmuseCore
 	enum class DayOfWeek {
 		Sunday = 0, //!< 日曜日
 		Monday,     //!< 月曜日 
@@ -22,6 +23,7 @@ namespace Amuse::Core {
 	//! @brief		日時型
 	//! 
 	//! @details	各種関数は時刻が正規化されているものとして計算されます。
+	//! @ingroup AmuseCore
 	struct DateTime {
 	public:
 		s32			year = 0;						//!< 年
@@ -206,14 +208,14 @@ namespace Amuse::Core {
 // フォーマット
 //===============================================================
 //! @cond
-template <> struct std::formatter<Amuse::Core::DateTime, Amuse::Core::Char> {
+template <> struct std::formatter<Amuse::DateTime, Amuse::Char> {
 	template<typename ParseContext>
 	constexpr auto parse(ParseContext& ctx) -> decltype(ctx.begin()) {
 		return ctx.end();
 	}
 
 	template<typename FormatContext>
-	auto format(const Amuse::Core::DateTime& dt, FormatContext& ctx) const {
+	auto format(const Amuse::DateTime& dt, FormatContext& ctx) const {
 		return format_to(ctx.out(), dt.toString().c_str());
 	}
 };

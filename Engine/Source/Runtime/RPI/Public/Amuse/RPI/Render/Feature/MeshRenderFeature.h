@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -13,10 +13,11 @@
 #include "Amuse/RHI/Buffer.h"
 #include "Amuse/RHI/CommandList.h"
 
-namespace Amuse::RPI {
+namespace Amuse {
 
 	template<class T>
 	//! @brief CPU 側の疎配列領域を GPU バッファへアップロードするバッファ
+	//! @ingroup AmuseRPI
 	class SparseUploadBuffer {
 	public:
 		//! @brief SparseUploadBuffer の割り当て範囲
@@ -56,16 +57,17 @@ namespace Amuse::RPI {
 		void reserve() {
 			m_cpu.resize(m_allocator.maxSize());
 			if (!m_gpu || m_gpu->getDesc().size < m_cpu.size() * sizeof(T)) {
-				m_gpu = RHI::Buffer::Create(RHI::BufferDesc::Structured<T>(m_cpu.size()));
+				m_gpu = Buffer::Create(BufferDesc::Structured<T>(m_cpu.size()));
 			}
 		}
 	private:
 		Vector<T>			m_cpu;
-		Ref<RHI::Buffer>	m_gpu;
+		Ref<Buffer>	m_gpu;
 		SpanAllocator		m_allocator;
 	};
 
 	//! @brief 同一描画単位を識別するキー
+	//! @ingroup AmuseRPI
 	struct MeshUnitKey
 	{
 		Ref<Mesh> mesh; //!< メッシュ
@@ -79,6 +81,7 @@ namespace Amuse::RPI {
 		}
 	};
 	//! @brief MeshUnitKey 用ハッシュ
+	//! @ingroup AmuseRPI
 	struct MeshUnitKeyHasher
 	{
 		//! @brief MeshUnitKey のハッシュ値を計算する
@@ -96,6 +99,7 @@ namespace Amuse::RPI {
 
 
 	//! @brief シーン内に配置されたメッシュインスタンス
+	//! @ingroup AmuseRPI
 	struct MeshProxy
 	{
 		MeshUnitKey key; //!< 描画単位キー
@@ -104,6 +108,7 @@ namespace Amuse::RPI {
 	};
 
 	//! @brief      マテリアル描画機能
+	//! @ingroup AmuseRPI
 	class MeshRenderFeature : public RenderFeature
 	{
 	public:
@@ -114,12 +119,14 @@ namespace Amuse::RPI {
 		};
 
 		//! @brief メッシュ更新コマンド種別
+		//! @ingroup AmuseRPI
 		enum class MeshCommandType {
 			Add,
 			Remove,
 			Update
 		};
 		//! @brief メッシュ更新コマンド
+		//! @ingroup AmuseRPI
 		struct MeshCommand
 		{
 			MeshCommandType type; //!< コマンド種別
@@ -155,12 +162,14 @@ namespace Amuse::RPI {
 		void processCommands(UpdateContext& context);
 		void buildPackets(UpdateContext& context);
 	private:
+		//! @ingroup AmuseRPI
 		struct MeshUnit {
 			Vector<MeshProxy*> proxies; //!< 所属プロキシ
 		};
 		//! @brief RenderView ごとのメッシュ描画データ
 		struct MeshViewData {
 			//! @brief CPU 側メッシュ描画データ
+			//! @ingroup AmuseRPI
 			struct CPUData {
 				//! @brief メッシュ単位の CPU 描画データ
 				struct Unit {
@@ -180,8 +189,9 @@ namespace Amuse::RPI {
 			} cpu;
 
 			//! @brief GPU 側メッシュ描画データ
+			//! @ingroup AmuseRPI
 			struct GPUData {
-				Ref<RHI::Buffer> instances; //!< インスタンスバッファ
+				Ref<Buffer> instances; //!< インスタンスバッファ
 
 				//! @brief CPU 側データを GPU バッファへ反映する
 				void update(const CPUData& cpu);
@@ -195,7 +205,7 @@ namespace Amuse::RPI {
 		Vector<Matrix> m_matrices;
 		Vector<Bounds> m_bounds;
 
-		Ref<RHI::Buffer> m_matrixBuffer;
+		Ref<Buffer> m_matrixBuffer;
 
 		SparseUploadBuffer<u32> m_instances;
 

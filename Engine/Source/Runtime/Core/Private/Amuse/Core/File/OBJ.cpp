@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -6,7 +6,7 @@
 #include <fstream>
 #include <sstream>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief  ファイルに保存
 	bool OBJ::save(StringView path) const {

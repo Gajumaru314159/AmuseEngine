@@ -1,13 +1,14 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/Core/Math/Math.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief      範囲
+	//! @ingroup AmuseCore
 	struct Range {
 	public:
 
@@ -104,14 +105,14 @@ namespace Amuse::Core {
 // フォーマット
 //===============================================================
 //! @cond
-template <> struct std::formatter<Amuse::Core::Range, Amuse::Core::Char> {
+template <> struct std::formatter<Amuse::Range, Amuse::Char> {
 	template<typename ParseContext>
 	constexpr auto parse(ParseContext& ctx) -> decltype(ctx.begin()) {
 		return ctx.end();
 	}
 
 	template<typename FormatContext>
-	auto format(Amuse::Core::Range value, FormatContext& ctx) const {
+	auto format(Amuse::Range value, FormatContext& ctx) const {
 		return format_to(ctx.out(), "({:.5},{:.5})", value.min,value.max);
 	}
 };

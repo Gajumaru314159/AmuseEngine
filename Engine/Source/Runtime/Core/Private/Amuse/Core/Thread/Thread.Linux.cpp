@@ -1,11 +1,11 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #include <Amuse/Core/Thread/Thread.h>
 #ifdef OS_LINUX
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	void Thread::setup()
 	{

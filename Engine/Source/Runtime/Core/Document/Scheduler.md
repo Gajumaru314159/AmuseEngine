@@ -189,7 +189,7 @@ schedule.enableProfiler(true);
 ### 主要クラス
 
 ```cpp
-namespace Amuse::Core {
+namespace Amuse {
 
 enum class ExecutorKind {
 	SingleThreaded,

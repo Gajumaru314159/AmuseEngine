@@ -10,10 +10,10 @@
 
 #include <Amuse/Input/Config.h>
 
-namespace Amuse::Input{
+namespace Amuse{
 
     //! @brief  コンストラクタ
-    InputModule::InputModule(InputConfig* config, Platform::WindowManager&) {
+    InputModule::InputModule(InputConfig* config, WindowManager&) {
 
         if (config) {
             m_config = *config;
@@ -36,7 +36,7 @@ namespace Amuse::Input{
     //! @brief  更新
     void InputModule::update() {
         if (m_mouseAdded == false && m_config.useMouse) {
-            if (auto window = Platform::Window::Main(); window && window->isValid()) {
+            if (auto window = Window::Main(); window && window->isValid()) {
 
                 auto device = std::make_unique<MouseDevice>(*window);
                 DeviceKey key{ device->getDeviceId() ,0 };

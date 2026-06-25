@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -10,28 +10,31 @@
 
 #include <Amuse/RHI/CommandList.h>
 
-namespace Amuse::RPI {
+namespace Amuse {
 
 
 	//! @brief MaterialRenderFeature に渡す描画要求
+	//! @ingroup AmuseRPI
 	struct MaterialDrawPacket {
 		Material* material; //!< マテリアル
-		RHI::VertexLayout* layout; //!< 頂点レイアウト
-		RHI::Buffer* vertices; //!< 頂点バッファ
-		RHI::Buffer* indices; //!< インデックスバッファ
-		RHI::DrawIndexedParam args; //!< 描画引数
+		VertexLayout* layout; //!< 頂点レイアウト
+		Buffer* vertices; //!< 頂点バッファ
+		Buffer* indices; //!< インデックスバッファ
+		DrawIndexedParam args; //!< 描画引数
 	};
 
 	//! @brief パイプライン解決後の描画項目
+	//! @ingroup AmuseRPI
 	struct MaterialDrawItem {
-		RHI::PipelineState* pipeline; //!< パイプラインステート
+		PipelineState* pipeline; //!< パイプラインステート
 		MaterialBlock* block; //!< マテリアルブロック
-		RHI::Buffer* vertices; //!< 頂点バッファ
-		RHI::Buffer* indices; //!< インデックスバッファ
-		RHI::DrawIndexedParam args; //!< 描画引数
+		Buffer* vertices; //!< 頂点バッファ
+		Buffer* indices; //!< インデックスバッファ
+		DrawIndexedParam args; //!< 描画引数
 	};
 
 	//! @brief マテリアルパス単位の描画項目リスト
+	//! @ingroup AmuseRPI
 	struct MaterialDrawPass {
 		Vector<MaterialDrawItem> items; //!< 描画項目
 	};
@@ -43,6 +46,7 @@ namespace Amuse::RPI {
 	};
 
 	//! @brief      マテリアル描画機能
+	//! @ingroup AmuseRPI
 	class MaterialRenderFeature : public RenderFeature {
 	public:
 
@@ -56,7 +60,7 @@ namespace Amuse::RPI {
 		void addDrawPackets(RenderView* view,Span<MaterialDrawPacket> packets);
 
 		//! @brief      描画
-		bool render(RenderView* view,Ref<RHI::CommandList>& cmdList, MaterialBlockSet& blocks, StringView pass);
+		bool render(RenderView* view,Ref<CommandList>& cmdList, MaterialBlockSet& blocks, StringView pass);
 
 		//! @brief 指定ビューの描画データを破棄する
 		void cleanup(RenderView* view);

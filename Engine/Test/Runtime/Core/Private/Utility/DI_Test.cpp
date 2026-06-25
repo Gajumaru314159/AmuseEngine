@@ -1,11 +1,11 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #include <Amuse/Core/Core.h>
 #include <Amuse/Core/Utility/DI.h>
 
-using namespace Amuse::Core;
+using namespace Amuse;
 
 namespace test {
 

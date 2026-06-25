@@ -90,7 +90,7 @@ DirectXRHI rhi(/*引数*/);
 Ref<Texture> texture = Texture::Create(TextureDesc{});
 Ref<Buffer> buffer = Buffer::Create(BufferDesc{});
 
-// 内部的には RHI::Instance().createTexture(TextureDesc{});と同等
+// 内部的には Instance().createTexture(TextureDesc{});と同等
 // RHIがインスタンス化されていない場合は空のオブジェクトが返る
 ```
 生成したTextureやBufferなどのインスタンスは```Ref<T>```によって参照カウントベースで管理されています。これらはRHIインスタンスの解放までに全て解放されている必要があります。

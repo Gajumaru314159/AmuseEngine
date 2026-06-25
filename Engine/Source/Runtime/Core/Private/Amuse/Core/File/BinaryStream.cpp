@@ -1,10 +1,10 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #include <Amuse/Core/File/BinaryStream.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief  コンストラクタ
 	BinaryStream::BinaryStream(Blob& blob)

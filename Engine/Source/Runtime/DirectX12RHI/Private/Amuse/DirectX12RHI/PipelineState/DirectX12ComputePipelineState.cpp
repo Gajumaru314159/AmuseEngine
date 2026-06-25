@@ -8,10 +8,7 @@
 #include <Amuse/DirectX12RHI/Shader/DirectX12Shader.h>
 #include <Amuse/DirectX12RHI/Utility/Utility.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
-
+namespace Amuse {
 	//! @brief		コンストラクタ
 	DirectX12ComputePipelineState::DirectX12ComputePipelineState(DirectX12Device& device, const ComputePipelineStateDesc& desc)
 		: m_desc(desc)

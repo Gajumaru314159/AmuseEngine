@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -8,10 +8,9 @@
 #include <Amuse/Core/String/StringView.h>
 #include <Amuse/RHI/Forward.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief グラフィックファイル読み込みキュー設定
+	//! @ingroup AmuseRHI
 	struct GraphicFileQueueDesc {
 		s32 capacity = 0; //!< 容量
 		String name; //!< 名前
@@ -21,6 +20,7 @@ namespace Amuse::RHI {
 	//! @details	* uncompressedSizeが0以外の場合はプラットフォームに応じた解凍処理が行われます。
 	//!				* destが指定されている場合は指定先にファイルの内容が展開されます。
 	//!				* destが指定されていない場合は内部的にバッファを確保し、そのバッファに展開されます。
+	//! @ingroup AmuseRHI
 	struct GraphicFileRequest {
 		Ref<GraphicFileHandle> handle;			//!< ファイルハンドル
 		size_t			offset = 0;				//!< 読み込み開始位置
@@ -28,16 +28,18 @@ namespace Amuse::RHI {
 		size_t			uncompressedSize = 0;	//!< 解凍後サイズ
 		
 		//! @brief バッファへの転送先情報
+		//! @ingroup AmuseRHI
 		struct BufferDesc {
-			Ref<Amuse::RHI::Buffer> buffer; //!< 転送先バッファ
+			Ref<Amuse::Buffer> buffer; //!< 転送先バッファ
 			size_t offset = 0; //!< オフセット
 		};
 		//! @brief テクスチャ生成情報
 		struct TextureDesc {
-			Ref<Amuse::RHI::Texture> texture; //!< 転送先テクスチャ
+			Ref<Amuse::Texture> texture; //!< 転送先テクスチャ
 			s32 subresourceIndex = 0; //!< サブリソースインデックス
 		};
 		//! @brief 連続テクスチャ転送先情報
+		//! @ingroup AmuseRHI
 		struct TextureSequenceDesc {
 			Ref<Texture> texture; //!< テクスチャ
 			s32 firstSubresourceIndex = 0; //!< 先頭サブリソースインデックス
@@ -48,6 +50,7 @@ namespace Amuse::RHI {
 	};
 
 	//! @brief 非同期ファイルハンドル
+	//! @ingroup AmuseRHI
 	class GraphicFileHandle : public RefObject {
 	public:
 		//! @brief インスタンスを生成する
@@ -62,6 +65,7 @@ namespace Amuse::RHI {
 	};
 
 	//! @brief 非同期ファイル読み込みイベント
+	//! @ingroup AmuseRHI
 	class GraphicFileEvent : public RefObject {
 	public:
 		//! @brief インスタンスを生成する
@@ -75,6 +79,7 @@ namespace Amuse::RHI {
 
 	//! @brief 非同期ファイル読み込みキュー
 	//! @details このクラスは非同期ファイル読み込みを管理するキューです。
+	//! @ingroup AmuseRHI
 	class GraphicFileQueue : public RefObject {
 	public:
 		//! @brief インスタンスを生成する
@@ -93,6 +98,7 @@ namespace Amuse::RHI {
 	};
 
 	//! @brief グラフィックファイルの Mip 情報
+	//! @ingroup AmuseRHI
 	struct GraphicFileMipInfo {
 		u32 offset = 0; //!< オフセット
 		u32 size = 0; //!< サイズ
@@ -102,6 +108,7 @@ namespace Amuse::RHI {
 	};
 
 	//! @brief グラフィックファイル
+	//! @ingroup AmuseRHI
 	class GraphicFile {
 	public:
 		//! @brief 入力テクスチャをプラットフォームごとの直接アップロード可能な形式に変換してファイルに保存します。

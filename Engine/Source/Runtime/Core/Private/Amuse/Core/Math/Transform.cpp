@@ -1,11 +1,11 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #include <Amuse/Core/Math/Transform.h>
 #include <Amuse/Core/Math/Matrix.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     const Transform Transform::Identity = Transform{ Vec3::Zero,Quat::Identity,Vec3::One };
 

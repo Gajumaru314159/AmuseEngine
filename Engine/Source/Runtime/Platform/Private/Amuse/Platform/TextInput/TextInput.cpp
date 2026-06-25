@@ -5,8 +5,7 @@
 #include <Amuse/Platform/TextInput.h>
 #include <Amuse/Platform/Window.h>
 
-namespace Amuse::Platform {
-    using namespace Amuse::Core;
+namespace Amuse {
     /*
     String TextInput::GetText() {
         return "";

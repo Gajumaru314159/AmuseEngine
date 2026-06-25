@@ -1,11 +1,11 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/Core/String/String.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief      文字列変換
     //! 
@@ -16,6 +16,7 @@ namespace Amuse::Core {
     //!             StringBase<wchar_t> のエンコーディングはUTF-8かUTF-16かUTF-32である必要があります。
     //!             Char は上記型のいずれかのエイリアスです。
     //!             任意の型の文字列と String を相互に変換可能です。
+    //! @ingroup AmuseCore
     class StringEncoder {
     public:
 

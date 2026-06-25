@@ -1,11 +1,11 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <functional>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief      関数オブジェクト
 	template<class SIGNATURE>

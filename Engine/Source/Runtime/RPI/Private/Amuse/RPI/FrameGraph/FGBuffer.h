@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -6,12 +6,13 @@
 #include <Amuse/RHI/Forward.h>
 #include <Amuse/RHI/Types/BufferDesc.h>
 
-namespace Amuse::RPI {
+namespace Amuse {
 
     //! @brief      FrameGraph中間テクスチャ
+    //! @ingroup AmuseRPI
     class FGBuffer{
     public:
-        using Desc = RHI::BufferDesc;
+        using Desc = BufferDesc;
 
         void create(const Desc& desc, void* allocator);
         void destroy(const Desc& desc, void* allocator);
@@ -20,7 +21,7 @@ namespace Amuse::RPI {
         void preRead(const Desc& desc, uint32_t flags, void* ctx);
         void preWrite(const Desc& desc, uint32_t flags, void* ctx);
 
-        Ref<RHI::Buffer> instance;
+        Ref<Buffer> instance;
     };
 
 }

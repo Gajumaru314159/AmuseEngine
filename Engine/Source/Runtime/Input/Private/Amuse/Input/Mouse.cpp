@@ -5,9 +5,7 @@
 #include <Amuse/Input/Mouse.h>
 #include <Amuse/Input/InputManager.h>
 
-namespace Amuse::Input {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief  マウスポインタの座標を取得
 	Vec2 Mouse::GetPos() {
 

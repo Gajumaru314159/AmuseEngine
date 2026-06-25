@@ -6,9 +6,7 @@
 #include <Amuse/VulkanRHI/VulkanDevice.h>
 #include <Amuse/VulkanRHI/Descriptor/VulkanDescriptorHandle.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief          コンストラクタ
 	VulkanDescriptorHeap::VulkanDescriptorHeap(VulkanDevice& device, s32 resourceCapacity, s32 samplerCapacity)
 		: m_samplerMapper(samplerCapacity)

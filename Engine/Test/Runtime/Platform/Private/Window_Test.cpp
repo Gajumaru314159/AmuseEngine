@@ -5,11 +5,11 @@
 #include <Amuse/Platform/Window.h>
 #include <Amuse/Core/Thread/Thread.h>
 
-using namespace Amuse::Core;
+using namespace Amuse;
 
 TEST(Window, ShowHide) {
 
-    using namespace Amuse::Platform;
+    using namespace Amuse;
     WindowDesc desc;
     auto window = Window::Create(desc);
 
@@ -30,7 +30,7 @@ TEST(Window, ShowHide) {
 
 TEST(Window, Title) {
 
-    using namespace Amuse::Platform;
+    using namespace Amuse;
     WindowDesc desc;
     desc.title = "AAA";
     auto window = Window::Create(desc);
@@ -43,7 +43,7 @@ TEST(Window, Title) {
 
 TEST(Window, PosSize) {
 
-    using namespace Amuse::Platform;
+    using namespace Amuse;
     WindowDesc desc;
     desc.clientSize = { 512, 256 };
     auto window = Window::Create(desc);

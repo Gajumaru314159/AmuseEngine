@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -11,7 +11,7 @@
 #include <Amuse/RHI/CommandList.h>
 #include <Amuse/RHI/RootSignature.h>
 
-namespace Amuse::RPI {
+namespace Amuse {
 
 	enum class MaterialBlockScope {
 		Material,
@@ -23,7 +23,7 @@ namespace Amuse::RPI {
 
 
 	//!	@brief			コンストラクタ
-	MaterialManager::MaterialManager(RHI::Device&, NameDictionary&) {
+	MaterialManager::MaterialManager(Device&, NameDictionary&) {
 	}
 
 	//!	@brief			デストラクタ
@@ -31,7 +31,7 @@ namespace Amuse::RPI {
 	}
 
 	//!	@brief			レイアウトID取得
-	VertexLayoutId MaterialManager::getVertexLayoutId(const Ref<RHI::VertexLayout>& layout) {
+	VertexLayoutId MaterialManager::getVertexLayoutId(const Ref<VertexLayout>& layout) {
 		ScopeLock lock(m_lock);
 		auto found = m_vertexLayoutCache.find(layout);
 		if (found == m_vertexLayoutCache.end()) {
@@ -42,7 +42,7 @@ namespace Amuse::RPI {
 	}
 
 	//! @brief  
-	void MaterialManager::recordGlobalShaderProperties(Ref<RHI::CommandList>& cmdList) {
+	void MaterialManager::recordGlobalShaderProperties(Ref<CommandList>& cmdList) {
 		auto& m_block = MaterialSystem::Instance().getGlobalBlock();
 		return m_block.record(cmdList, enum_cast(MaterialBlockScope::Global));
 	}

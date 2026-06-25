@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -6,11 +6,12 @@
 #include <Amuse/Core/Math/Vector3.h>
 #include <Amuse/Core/Math/Quaternion.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief  シリンダー
     //! 
     //! @note   radius が負の数の時は未定義動作です。
+    //! @ingroup AmuseCore
     struct Cylinder {
     public:
 

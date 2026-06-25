@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -10,9 +10,10 @@
 #include <Amuse/RPI/Material/MaterialPropertiesDesc.h>
 #include <Amuse/RHI/VertexLayout.h>
 
-namespace Amuse::RPI {
+namespace Amuse {
 
 	//! @brief マテリアルシステム初期化設定
+	//! @ingroup AmuseRPI
 	struct MaterialSystemDesc {
 		MaterialPropertiesSetDesc properties; //!< プロパティ定義
 	};
@@ -22,21 +23,23 @@ namespace Amuse::RPI {
 	//! マテリアルを使用するために必要な管理機構を提供します。
 	//! 事前に各RenderFeatureから必要なマテリアルのプロパティを収集して初期化することで、RenderSceneやRenderViewの生成時に
 	//! 自動的に MaterialBlock を生成します。
+	//! @ingroup AmuseRPI
 	class MaterialSystem : public Singleton<MaterialSystem> {
 	public:
 		//! @brief グローバル・シーン・ビュー別のレイアウト
 		struct MaterialLayoutSet {
-			Ref<RHI::DescriptorLayout> global; //!< グローバルレイアウト
-			Ref<RHI::DescriptorLayout> scene; //!< シーンレイアウト
-			Ref<RHI::DescriptorLayout> view; //!< ビューレイアウト
+			Ref<DescriptorLayout> global; //!< グローバルレイアウト
+			Ref<DescriptorLayout> scene; //!< シーンレイアウト
+			Ref<DescriptorLayout> view; //!< ビューレイアウト
 		};
 		//! @brief グローバル・シーン・ビュー別のブロック定義
+		//! @ingroup AmuseRPI
 		struct MateriaBlockDescSet {
 			MaterialBlockDesc global; //!< グローバルブロック定義
 			MaterialBlockDesc scene; //!< シーンブロック定義
 			MaterialBlockDesc view; //!< ビューブロック定義
 		};
-		using VertexLayout = Amuse::RHI::VertexLayout; //!< 頂点レイアウト型
+		using VertexLayout = Amuse::VertexLayout; //!< 頂点レイアウト型
 	public:
 
 		//! @brief マテリアルシステムを初期化する
@@ -64,6 +67,7 @@ namespace Amuse::RPI {
 	};
 
 	//! @brief 描画時に使用するマテリアルブロック一式
+	//! @ingroup AmuseRPI
 	struct MaterialBlockSet {
 		MaterialBlock* global = nullptr; //!< グローバルブロック
 		MaterialBlock* scene = nullptr; //!< シーンブロック

@@ -5,9 +5,7 @@
 #include <Amuse/RHI/PipelineState.h>
 #include <Amuse/RHI/RHI.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief  生成
 	Ref<PipelineState> PipelineState::Create(const PipelineStateDesc& desc) {
 		if (auto device = Device::Get()) {

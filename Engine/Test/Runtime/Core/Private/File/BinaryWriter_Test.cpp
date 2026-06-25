@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -6,7 +6,7 @@
 #include <Amuse/Core/File/BinaryWriter.h>
 #include <Amuse/Core/File/BinaryStream.h>
 
-using namespace Amuse::Core;
+using namespace Amuse;
 
 TEST(BinaryWriter, Constructor)
 {

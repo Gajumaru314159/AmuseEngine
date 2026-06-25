@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -6,10 +6,9 @@
 #include <Amuse/Core/Core.h>
 #include <Amuse/RHI/Types/DescriptorLayoutDesc.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief バインドレスリソースハンドル
+	//! @ingroup AmuseRHI
 	struct BindlessHandle {
 		BindingType type = BindingType::Unknown; //!< 種別
 		u32			index = 0; //!< インデックス

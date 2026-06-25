@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -6,12 +6,13 @@
 #include <Amuse/Core/CoreTypes.h>
 #include <type_traits>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief		enum値をビットフラグとして扱うためのラップクラス
 	//! @details	enum型の内部値が1以上TBitsTypeの最大値以下の2のべき乗である必要があります。
 	//! @tparam		TEnum ビットフラグに用いるenum型
 	//! @tparam		TBitsType 内部でビットを管理する変数の型
+	//! @ingroup AmuseCore
 	template<typename TEnum, typename TBitsType = u32>
 	class BitFlags {
 	public:

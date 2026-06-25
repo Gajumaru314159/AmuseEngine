@@ -1,11 +1,11 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #include <Amuse/Core/File/INI.h>
 #include <filesystem>
 
-using namespace Amuse::Core;
+using namespace Amuse;
 
 TEST(INI, Test)
 {

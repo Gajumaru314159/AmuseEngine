@@ -10,10 +10,7 @@
 #include <Amuse/DirectX12RHI/Utility/TypeConverter.h>
 #include <Amuse/RHI/VertexLayout.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
-
+namespace Amuse {
 	//! @brief		コンストラクタ
 	DirectX12PipelineState::DirectX12PipelineState(DirectX12Device& device, const PipelineStateDesc& desc)
 		: m_desc(desc)

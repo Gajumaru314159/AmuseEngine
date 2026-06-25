@@ -7,12 +7,11 @@
 #include <Amuse/Core/Core.h>
 #include <Amuse/RHI/Query.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	class VulkanDevice;
 
 	//! @brief GPUイベントクエリ実装(Vulkan)
+	//! @ingroup AmuseVulkanRHI
 	class VulkanEventQuery : public EventQuery {
 	public:
 		//! @brief コンストラクタ
@@ -37,6 +36,7 @@ namespace Amuse::RHI {
 	};
 
 	//! @brief GPUタイマークエリ実装(Vulkan)
+	//! @ingroup AmuseVulkanRHI
 	class VulkanTimerQuery : public TimerQuery {
 	public:
 		//! @brief コンストラクタ

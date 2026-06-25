@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -6,9 +6,10 @@
 #include <Amuse/Core/File/Stream.h>
 #include <Amuse/Core/Misc/Blob.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief  Blobストリーム
+	//! @ingroup AmuseCore
 	class BinaryStream :public Stream {
 	public:
 

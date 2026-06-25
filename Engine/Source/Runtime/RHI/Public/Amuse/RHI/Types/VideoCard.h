@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -7,10 +7,9 @@
 #include <Amuse/Core/Misc/MemorySize.h>
 #include <Amuse/RHI/Types/TextureFormat.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief 映像出力モード
+	//! @ingroup AmuseRHI
 	struct VideoOutputMode {
 		u32				width;		//!< 幅
 		u32				height;		//!< 高さ
@@ -19,6 +18,7 @@ namespace Amuse::RHI {
 	};
 
 	//! @brief 映像出力情報
+	//! @ingroup AmuseRHI
 	struct VideoOutput {
 		String	name;		//!< 名前
 		IntRect	rect;		//!< 出力領域
@@ -28,6 +28,7 @@ namespace Amuse::RHI {
 	};
 
 	//! @brief ビデオカード情報
+	//! @ingroup AmuseRHI
 	struct VideoCard {
 		String				name;		//!< 名前
 		MemorySize			memory;		//!< メモリサイズ

@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -7,8 +7,9 @@
 #include <Amuse/Core/String/String.h>
 #include <Amuse/Core/Template/Utility/Function.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
+	//! @ingroup AmuseCore
 	class Task {
 	public:
 		//! @brief インスタンスを生成する。

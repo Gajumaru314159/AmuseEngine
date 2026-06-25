@@ -6,13 +6,14 @@
 #include <Amuse/Core/CoreTypes.h>
 #include <Amuse/Core/Template/Container/Vector.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief	連続した整数範囲を管理するスパンアロケータ
 	//!
 	//! @details	任意サイズの連続範囲を割り当て、解放済み範囲を再利用します。
 	//!			解放された範囲は一時リストに積まれ、必要時または consolidate() 呼び出し時に
 	//!			ソートと結合を行います。大量の allocate/free をまとめて処理する用途に向いています。
+	//! @ingroup AmuseCore
 	class SpanAllocator {
 	public:
 
@@ -64,6 +65,7 @@ namespace Amuse::Core {
 
 	private:
 
+		//! @ingroup AmuseCore
 		struct AllocationSpan {
 			s32 start = 0;
 			s32 num = 0;

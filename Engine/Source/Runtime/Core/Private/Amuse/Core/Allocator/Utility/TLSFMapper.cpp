@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -6,7 +6,7 @@
 #include <Amuse/Core/Log/Assertion.h>
 #include <Amuse/Core/Math/BitOp.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//===============================================================
 	// 0b0011'1001'0101'0000
@@ -83,7 +83,7 @@ namespace Amuse::Core {
 				}
 			}
 		}
-		AMUSE_ASSERT(m_freeList.size() + 1 == m_capacity, "{}つの未開放のTLSFBlockがあります。RHI::finalize()の呼び出しを確認してください。",blocks.size());
+		AMUSE_ASSERT(m_freeList.size() + 1 == m_capacity, "{}つの未開放のTLSFBlockがあります。finalize()の呼び出しを確認してください。",blocks.size());
 	}
 
 

@@ -7,10 +7,9 @@
 #include <Amuse/RHI/GraphicObject.h>
 #include <Amuse/RHI/Types/PipelineStateDesc.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief      パイプラインステート
+    //! @ingroup AmuseRHI
     class PipelineState :public GraphicObject {
     public:
 

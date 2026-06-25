@@ -6,9 +6,7 @@
 #include <Amuse/RHI/RHI.h>
 #include <Amuse/RHI/Types/CommandParam.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief  空のバッファを作成
     Ref<Buffer> Buffer::Create(const BufferDesc& desc) {
         if (auto device = Device::Get()) {

@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 #include <array>
 #include <stdexcept>
 #include <iterator>
@@ -7,9 +7,10 @@
 #include <utility>
 #include <Amuse/Core/Template/Utility/TypeTraits.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief  Fixed配列
+    //! @ingroup AmuseCore
     template<typename T, std::size_t N>
     class FixedVector {
     public:

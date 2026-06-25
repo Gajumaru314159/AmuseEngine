@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -8,10 +8,9 @@
 #include <Amuse/RHI/Types/BufferDesc.h>
 #include <Amuse/RHI/Types/TextureDesc.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief  テクスチャサブリソース範囲
+	//! @ingroup AmuseRHI
 	struct TextureSubresourceRange {
 		static constexpr u32 All = static_cast<u32>(-1); //!< All
 
@@ -22,6 +21,7 @@ namespace Amuse::RHI {
 	};
 
 	//! @brief  テクスチャ遷移バリア
+	//! @ingroup AmuseRHI
 	struct TextureBarrier {
 		Ref<Texture> texture;							//!< 対象テクスチャ
 		TextureSubresourceRange range;					//!< 対象範囲
@@ -30,6 +30,7 @@ namespace Amuse::RHI {
 	};
 
 	//! @brief  バッファ遷移バリア
+	//! @ingroup AmuseRHI
 	struct BufferBarrier {
 		Ref<Buffer> buffer;								//!< 対象バッファ
 		BufferState before = BufferState::Unknown;		//!< 遷移前状態

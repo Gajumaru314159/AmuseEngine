@@ -1,11 +1,11 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #include <Amuse/Core/Graphic/IntColor.h>
 
 
-namespace Amuse::Core {
+namespace Amuse {
 
     const IntColor IntColor::White = { 255,255,255,255 };
     const IntColor IntColor::Gray = { 128,128,128,255 };

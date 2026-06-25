@@ -6,13 +6,12 @@
 #include <Amuse/Core/Core.h>
 #include <Amuse/RHI/Constants.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief		型
 	//! 
 	//! @see		VertexAttribute
 	//! @see		VertexLayout
+	//! @ingroup AmuseRHI
 	enum class ElementType : u32 {
 		Int8,
 		Int16,
@@ -28,15 +27,15 @@ namespace Amuse::RHI {
 	inline s32 GetSize(ElementType type) {
 		switch (type)	
 		{
-		case Amuse::RHI::ElementType::Int8:		return 1;
-		case Amuse::RHI::ElementType::Int16:		return 2;
-		case Amuse::RHI::ElementType::Int32:		return 4;
-		case Amuse::RHI::ElementType::UInt8:		return 1;
-		case Amuse::RHI::ElementType::UInt16:		return 2;
-		case Amuse::RHI::ElementType::UInt32:		return 4;
-		case Amuse::RHI::ElementType::Float:		return 4;
-		case Amuse::RHI::ElementType::Int8Norm:	return 1;
-		case Amuse::RHI::ElementType::UInt8Norm:	return 1;
+		case Amuse::ElementType::Int8:		return 1;
+		case Amuse::ElementType::Int16:		return 2;
+		case Amuse::ElementType::Int32:		return 4;
+		case Amuse::ElementType::UInt8:		return 1;
+		case Amuse::ElementType::UInt16:		return 2;
+		case Amuse::ElementType::UInt32:		return 4;
+		case Amuse::ElementType::Float:		return 4;
+		case Amuse::ElementType::Int8Norm:	return 1;
+		case Amuse::ElementType::UInt8Norm:	return 1;
 		default: return 0;
 		}
 	}
@@ -47,6 +46,7 @@ namespace Amuse::RHI {
 	//! @details	Positionは頂点内で1度しか使用できません。
 	//! @see		VertexAttribute
 	//! @see		VertexLayout
+	//! @ingroup AmuseRHI
 	enum class Semantic : u32 {
 		Position,		//!< 頂点
 		Normal,			//!< 法線
@@ -59,6 +59,7 @@ namespace Amuse::RHI {
 		PointSize,		//!< ポイントサイズ
 	};
 
+	//! @ingroup AmuseRHI
 	enum class VertexInputRate : u32 {
 		Vertex,			//!< 頂点ごと
 		Instance,		//!< インスタンスごと
@@ -66,6 +67,7 @@ namespace Amuse::RHI {
 
 	//! @brief  頂点属性
 	//! @see    VertexLayout
+	//! @ingroup AmuseRHI
 	struct VertexAttribute {
 
 		Semantic		semantic;	//!< セマンティクス
@@ -91,6 +93,7 @@ namespace Amuse::RHI {
 
 
 	//! @brief  頂点レイアウト
+	//! @ingroup AmuseRHI
 	struct VertexLayoutDesc {
 		String				 name;				//!< 名前
 		VertexAttributeArray attributes;			//!< 属性リスト

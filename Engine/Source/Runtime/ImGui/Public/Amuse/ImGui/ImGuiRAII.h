@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -45,7 +45,7 @@ namespace ImGui {
         //@―---------------------------------------------------------------------------
         class ScopedStyleColor {
         public:
-            ScopedStyleColor(ImGuiCol idx, const Amuse::Core::Color& col) {
+            ScopedStyleColor(ImGuiCol idx, const Amuse::Color& col) {
                 ImVec4 imcol(col.r, col.g, col.b, col.a);
                 ::ImGui::PushStyleColor(idx, imcol);
             }
@@ -55,19 +55,19 @@ namespace ImGui {
         };
         class ScopedTextColor :public ScopedStyleColor {
         public:
-            ScopedTextColor(const Amuse::Core::Color& col) :ScopedStyleColor(ImGuiCol_Text, col) {}
+            ScopedTextColor(const Amuse::Color& col) :ScopedStyleColor(ImGuiCol_Text, col) {}
         };
         class ScopedButtonColor :public ScopedStyleColor {
         public:
-            ScopedButtonColor(const Amuse::Core::Color& col) :ScopedStyleColor(ImGuiCol_Button, col) {}
+            ScopedButtonColor(const Amuse::Color& col) :ScopedStyleColor(ImGuiCol_Button, col) {}
         };
         class ScopedButtonHoveredColor :public ScopedStyleColor {
         public:
-            ScopedButtonHoveredColor(const Amuse::Core::Color& col) :ScopedStyleColor(ImGuiCol_ButtonHovered, col) {}
+            ScopedButtonHoveredColor(const Amuse::Color& col) :ScopedStyleColor(ImGuiCol_ButtonHovered, col) {}
         };
         class ScopedButtonActiveColor :public ScopedStyleColor {
         public:
-            ScopedButtonActiveColor(const Amuse::Core::Color& col) :ScopedStyleColor(ImGuiCol_ButtonActive, col) {}
+            ScopedButtonActiveColor(const Amuse::Color& col) :ScopedStyleColor(ImGuiCol_ButtonActive, col) {}
         };
 
         //@―---------------------------------------------------------------------------
@@ -88,7 +88,7 @@ namespace ImGui {
         //@―---------------------------------------------------------------------------
         class ScopedStyleVec2Var {
         public:
-            ScopedStyleVec2Var(ImGuiStyleVar idx, const Amuse::Core::Vec2& val) {
+            ScopedStyleVec2Var(ImGuiStyleVar idx, const Amuse::Vec2& val) {
                 ImVec2 v(val.x, val.y);
                 ::ImGui::PushStyleVar(idx, v);
             }

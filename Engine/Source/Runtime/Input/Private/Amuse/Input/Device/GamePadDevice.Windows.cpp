@@ -1,8 +1,7 @@
 #include <Amuse/Input/Device/GamePadDevice.h>
 #include <Amuse/Platform/Window.h>
 
-namespace Amuse::Input {
-    using namespace Amuse::Core;
+namespace Amuse {
 #if defined(OS_WINDOWS)
 
 	BOOL CALLBACK DeviceFindCallBack(LPCDIDEVICEINSTANCE lpddi, LPVOID pvRef) {
@@ -21,7 +20,7 @@ namespace Amuse::Input {
 	GamePadDevice::GamePadDevice()
 		: m_position{}
 	{
-		const auto window = Platform::Window::Main();
+		const auto window = Window::Main();
 		if (!window || !window->isValid()) {
 			LOG_ERROR("ウィンドウが設定されていません。");
 			return;

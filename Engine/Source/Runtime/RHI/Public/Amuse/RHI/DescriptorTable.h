@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -8,10 +8,9 @@
 #include <Amuse/RHI/Forward.h>
 #include <Amuse/RHI/Types/DescriptorTableDesc.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief      デスクリプタテーブル
+    //! @ingroup AmuseRHI
     class DescriptorTable :public GraphicObject {
     public:
 

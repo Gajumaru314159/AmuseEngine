@@ -5,10 +5,9 @@
 #pragma once
 #include <Amuse/DirectX12RHI/pch.h>
 #include <Amuse/Core/Core.h>
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief  デスクリプタ・タイプ
+	//! @ingroup AmuseDirectX12RHI
 	enum class DescriptorHeapType :u32 {
 		CBV_SRV_UAV,    //!< 定数バッファ/シェーダリソース/アンオーダードアクセス
 		RTV,            //!< レンダーターゲット

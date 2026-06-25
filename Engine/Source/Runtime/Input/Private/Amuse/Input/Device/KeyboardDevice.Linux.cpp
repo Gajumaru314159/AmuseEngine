@@ -1,7 +1,6 @@
 #include <Amuse/Input/Device/KeyboardDevice.h>
 
-namespace Amuse::Input {
-    using namespace Amuse::Core;
+namespace Amuse {
 #if defined(OS_LINUX)
 
 	namespace {

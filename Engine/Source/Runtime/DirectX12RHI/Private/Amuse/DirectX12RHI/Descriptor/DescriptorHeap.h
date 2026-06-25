@@ -8,12 +8,11 @@
 #include <Amuse/Core/Allocator/Utility/TLSFMapper.h>
 #include <Amuse/DirectX12RHI/Descriptor/DescriptorHeapType.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief      デスクリプタのアロケータ
 	//! 
 	//! @details    Two-Level Segregate Fit を利用してデスクリプタを割り当てます。
+	//! @ingroup AmuseDirectX12RHI
 	class DescriptorHeap :private Noncopyable {
 		friend class DescriptorHandle;
 	public:
@@ -74,6 +73,7 @@ namespace Amuse::RHI {
 	};
 
 
+	//! @ingroup AmuseDirectX12RHI
 	class DescriptorStagingHeap :private Noncopyable {
 	public:
 

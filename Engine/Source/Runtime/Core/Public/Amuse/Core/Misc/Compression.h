@@ -1,13 +1,14 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/Core/CoreTypes.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief  圧縮
+    //! @ingroup AmuseCore
     class Compression {
     public:
 
@@ -24,6 +25,7 @@ namespace Amuse::Core {
     };
 
     //! @brief GDeflate 圧縮ユーティリティを表す。
+    //! @ingroup AmuseCore
     class GDeflate {
     public:
         static constexpr u32 MinCompressionLevel = 1; //!< GDeflate で指定できる最小圧縮レベル

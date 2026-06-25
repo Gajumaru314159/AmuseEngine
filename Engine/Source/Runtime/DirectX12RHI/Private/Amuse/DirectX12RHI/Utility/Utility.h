@@ -6,10 +6,9 @@
 #include <Amuse/DirectX12RHI/pch.h>
 #include <Amuse/Core/Core.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief  ユーティリティ
+    //! @ingroup AmuseDirectX12RHI
     class Utility {
     public:
 

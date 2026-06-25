@@ -1,11 +1,11 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #include <Amuse/Core/File/Path.h>
 #include <filesystem>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	namespace {
 		//! @brief		std::filesystem::pathに変換

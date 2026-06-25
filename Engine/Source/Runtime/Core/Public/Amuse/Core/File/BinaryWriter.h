@@ -1,15 +1,16 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/Core/File/ByteOrder.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	class Stream;
 
 	//! @brief 指定したバイトオーダーでストリームへバイナリ値を書き込む。
+	//! @ingroup AmuseCore
 	class BinaryWriter{
 	public:
 		//! @brief BinaryWriter を初期化する。

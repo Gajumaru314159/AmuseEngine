@@ -5,9 +5,7 @@
 #include <Amuse/RHI/DescriptorLayout.h>
 #include <Amuse/RHI/RHI.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     Ref<DescriptorLayout> DescriptorLayout::Create(const DescriptorLayoutDesc& desc) {
         if (auto device = Device::Get()) {
             return device->createDescriptorLayout(desc);

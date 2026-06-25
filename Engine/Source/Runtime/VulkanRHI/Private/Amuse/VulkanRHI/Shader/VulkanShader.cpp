@@ -17,9 +17,7 @@
 #include <wrl/client.h>
 #endif
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     static const wchar_t* getEntryW(ShaderStage stage) {
         switch (stage)
         {

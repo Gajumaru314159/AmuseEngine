@@ -9,9 +9,7 @@
 #include <Amuse/Platform/Window/WindowManager.h>
 #include <Amuse/Core/String/StringEncoder.h>
 
-namespace Amuse::Platform {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	static TCHAR WINDOW_CLASS_NAME[] = TEXT("OctbitWindow");//!< WNDCLASSEXに登録するウィンドウクラス名
 	static TCHAR PROPERTY_NAME[] = TEXT("OctbitWindowProp");//!< HWNDに結びつけるプロパティ名
 
@@ -481,7 +479,7 @@ namespace Amuse::Platform {
 	//! @brief              Window Proceduer
 	LRESULT CALLBACK WindowsWindow::staticWndProc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam) {
 		// ウィンドウに結びつけられた WindowsWindow を取得
-		auto pWindow = reinterpret_cast<Amuse::Platform::WindowsWindow*>(::GetProp(hwnd, PROPERTY_NAME));
+		auto pWindow = reinterpret_cast<Amuse::WindowsWindow*>(::GetProp(hwnd, PROPERTY_NAME));
 
 		if (pWindow) {
 			return pWindow->wndProc(hwnd, msg, wparam, lparam);

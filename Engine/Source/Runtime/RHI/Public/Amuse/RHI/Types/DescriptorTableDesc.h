@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -6,10 +6,9 @@
 #include <Amuse/Core/Core.h>
 #include <Amuse/RHI/Forward.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief      スワップチェーン定義
+    //! @ingroup AmuseRHI
     struct DescriptorTableDesc {
         String name; //!< 名前
 		Ref<DescriptorLayout> layout; //!< layout

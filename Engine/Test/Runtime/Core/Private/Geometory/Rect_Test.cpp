@@ -1,11 +1,11 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #include <gtest/gtest.h>
 #include <Amuse/Core/Geometry/Rect.h>
 
-using namespace Amuse::Core;
+using namespace Amuse;
 
 TEST(Rect, Constructor) {
 	// デフォルトコンストラクタ

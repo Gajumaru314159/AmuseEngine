@@ -4,21 +4,22 @@
   <navindex>
     <tab type="mainpage" visible="yes" title=""/>
     <tab type="pages" visible="yes" title="" intro=""/>
+    <tab type="topics" visible="yes" title="APIドキュメント" intro="Runtimeモジュール"/>
     <tab type="modules" visible="yes" title="" intro=""/>
-    <tab type="namespaces" visible="yes" title="">
-      <tab type="namespacelist" visible="yes" title="" intro=""/>
-      <tab type="namespacemembers" visible="yes" title="" intro=""/>
+    <tab type="namespaces" visible="no" title="">
+      <tab type="namespacelist" visible="no" title="" intro=""/>
+      <tab type="namespacemembers" visible="no" title="" intro=""/>
     </tab>
     <tab type="interfaces" visible="yes" title="">
       <tab type="interfacelist" visible="yes" title="" intro=""/>
       <tab type="interfaceindex" visible="$ALPHABETICAL_INDEX" title=""/> 
       <tab type="interfacehierarchy" visible="yes" title="" intro=""/>
     </tab>
-    <tab type="classes" visible="yes" title="">
-      <tab type="classlist" visible="yes" title="" intro=""/>
+    <tab type="classes" visible="no" title="">
+      <tab type="classlist" visible="no" title="" intro=""/>
       <tab type="classindex" visible="$ALPHABETICAL_INDEX" title=""/> 
-      <tab type="hierarchy" visible="yes" title="" intro=""/>
-      <tab type="classmembers" visible="yes" title="" intro=""/>
+      <tab type="hierarchy" visible="no" title="" intro=""/>
+      <tab type="classmembers" visible="no" title="" intro=""/>
     </tab>
     <tab type="structs" visible="yes" title="">
       <tab type="structlist" visible="yes" title="" intro=""/>
@@ -39,8 +40,8 @@
   <!-- Layout definition for a class page -->
   <class>
     <includes visible="$SHOW_INCLUDE_FILES"/>
-    <briefdescription visible="yes"/>
-    <detaileddescription title=""/>
+    <briefdescription visible="no"/>
+    <detaileddescription title="説明"/>
     <inheritancegraph visible="$CLASS_GRAPH"/>
     <collaborationgraph visible="$COLLABORATION_GRAPH"/>
     <memberdecl>
@@ -50,10 +51,10 @@
       <interfaces title=""/>
       <publicslots title=""/>
       <signals title=""/>
-      <publicmethods title=""/>
-      <publicstaticmethods title=""/>
-      <publicattributes title=""/>
-      <publicstaticattributes title=""/>
+      <publicmethods title="メソッド"/>
+      <publicstaticmethods title="静的関数"/>
+      <publicattributes title="変数"/>
+      <publicstaticattributes title="静的変数"/>
       <protectedtypes title=""/>
       <protectedslots title=""/>
       <protectedmethods title=""/>
@@ -83,7 +84,7 @@
       <enums title=""/>
       <services title=""/>
       <interfaces title=""/>
-      <constructors title=""/>
+      <constructors title="コンストラクタ"/>
       <functions title=""/>
       <related title=""/>
       <variables title=""/>
@@ -165,8 +166,8 @@
 
   <!-- Layout definition for a group page -->
   <group>
-    <briefdescription visible="yes"/>
-    <detaileddescription title=""/>
+    <briefdescription visible="no"/>
+    <detaileddescription title="詳細"/>
     <groupgraph visible="$GROUP_GRAPHS"/>
     <memberdecl>
       <nestedgroups visible="yes" title=""/>

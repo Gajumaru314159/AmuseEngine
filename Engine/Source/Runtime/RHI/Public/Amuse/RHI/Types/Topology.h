@@ -5,10 +5,9 @@
 #pragma once
 #include <Amuse/Core/Core.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief      トポロジー
+	//! @ingroup AmuseRHI
 	enum class Topology :u32 {
 		PointList,		//!< 頂点リスト
 		LineList,		//!< 線分リスト

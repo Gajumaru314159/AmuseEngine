@@ -9,9 +9,7 @@
 #define STB_IMAGE_IMPLEMENTATION
 #include <stb/stb_image.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	static u32 GetViewMipLevels(const TextureViewDesc& viewDesc) {
 		return viewDesc.mipLevels <= 0 ? VK_REMAINING_MIP_LEVELS : static_cast<u32>(viewDesc.mipLevels);
 	}

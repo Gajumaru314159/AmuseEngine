@@ -7,11 +7,10 @@
 #include <Amuse/RHI/RHI.h>
 #include <Amuse/RHI/GraphicObjectManager.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief      空RHI
 	//! @details	Headlessビルドなどで使用する空のRHI
+	//! @ingroup AmuseRHI
 	class EmptyRHI : public Device {
 	public:
 

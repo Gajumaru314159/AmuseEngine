@@ -9,35 +9,35 @@
 #pragma warning(disable : 28251)
 
 void operator delete  (void* p, [[maybe_unused]]std::align_val_t al) noexcept {
-    Amuse::Core::Free(p);
+    Amuse::Free(p);
 }
 void operator delete[](void* p, [[maybe_unused]]std::align_val_t al) noexcept {
-    Amuse::Core::Free(p);
+    Amuse::Free(p);
 }
 void operator delete  (void* p, [[maybe_unused]]std::size_t n, [[maybe_unused]]std::align_val_t al) noexcept {
-    Amuse::Core::Free(p);
+    Amuse::Free(p);
 }
 void operator delete[](void* p, [[maybe_unused]]std::size_t n, [[maybe_unused]]std::align_val_t al) noexcept {
-    Amuse::Core::Free(p);
+    Amuse::Free(p);
 }
 void operator delete  (void* p, [[maybe_unused]]std::align_val_t al, [[maybe_unused]]const std::nothrow_t&) noexcept {
-    Amuse::Core::Free(p);
+    Amuse::Free(p);
 }
 void operator delete[](void* p, [[maybe_unused]]std::align_val_t al, [[maybe_unused]]const std::nothrow_t&) noexcept {
-    Amuse::Core::Free(p);
+    Amuse::Free(p);
 }
 
 void* operator new( std::size_t n, std::align_val_t al)   noexcept(false) {
-    return Amuse::Core::Alloc(n, static_cast<size_t>(al));
+    return Amuse::Alloc(n, static_cast<size_t>(al));
 }
 void* operator new[]( std::size_t n, std::align_val_t al) noexcept(false) {
-    return Amuse::Core::Alloc(n, static_cast<size_t>(al));
+    return Amuse::Alloc(n, static_cast<size_t>(al));
 }
 void* operator new  (std::size_t n, std::align_val_t al, const std::nothrow_t&) noexcept {
-    return Amuse::Core::Alloc(n, static_cast<size_t>(al));
+    return Amuse::Alloc(n, static_cast<size_t>(al));
 }
 void* operator new[](std::size_t n, std::align_val_t al, const std::nothrow_t&) noexcept {
-    return Amuse::Core::Alloc(n, static_cast<size_t>(al));
+    return Amuse::Alloc(n, static_cast<size_t>(al));
 }
 
 #pragma warning(pop)

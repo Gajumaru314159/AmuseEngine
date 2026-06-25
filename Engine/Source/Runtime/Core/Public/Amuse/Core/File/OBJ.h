@@ -1,13 +1,14 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/Core/Core.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief		Wavefront OBJ Writer
+	//! @ingroup AmuseCore
 	class OBJ {
 	public:
 		OBJ() = default;
@@ -155,6 +156,7 @@ namespace Amuse::Core {
 
 
 	//! @brief		Material Template Library Writer
+	//! @ingroup AmuseCore
 	class MTL {
 	public:
 		//! @brief データを保存する。

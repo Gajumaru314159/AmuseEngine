@@ -1,12 +1,13 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 
-namespace Amuse::RPI {
+namespace Amuse {
 
     //! @brief      FrameGraphダミーインスタンス
+    //! @ingroup AmuseRPI
     class FGDummy{
     public:
         using Desc = int;

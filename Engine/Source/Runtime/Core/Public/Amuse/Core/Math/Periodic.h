@@ -1,13 +1,14 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/Core/Math/Math.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief  周期関数
+    //! @ingroup AmuseCore
     class Periodic {
     public:
 

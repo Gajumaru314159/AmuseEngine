@@ -5,28 +5,26 @@
 #include <Amuse/RHI/Shader.h>
 #include <Amuse/RHI/RHI.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief      シェーダのエントリ関数名を取得
     const char* Shader::GetEntryName(ShaderStage stage) {
         switch (stage)
         {
-        case Amuse::RHI::ShaderStage::Vertex:          return "VS_Main";
-        case Amuse::RHI::ShaderStage::Hull:            return "HS_Main";
-        case Amuse::RHI::ShaderStage::Domain:          return "DS_Main";
-        case Amuse::RHI::ShaderStage::Geometry:        return "GS_Main";
-        case Amuse::RHI::ShaderStage::Pixel:           return "PS_Main";
-        case Amuse::RHI::ShaderStage::Compute:         return "CS_Main";
-        case Amuse::RHI::ShaderStage::Task:            return "TS_Main";
-        case Amuse::RHI::ShaderStage::Mesh:            return "MS_Main";
-        case Amuse::RHI::ShaderStage::RayGen:          return "RGS_Main";
-        case Amuse::RHI::ShaderStage::AnyHit:          return "AHS_Main";
-        case Amuse::RHI::ShaderStage::ClosestHit:      return "CHS_Main";
-        case Amuse::RHI::ShaderStage::Miss:            return "MS_Main";
-        case Amuse::RHI::ShaderStage::Intersection:    return "IS_Main";
-        case Amuse::RHI::ShaderStage::Callable:        return "CS_Main";
-        case Amuse::RHI::ShaderStage::Amplification:   return "AS_Main";
+        case Amuse::ShaderStage::Vertex:          return "VS_Main";
+        case Amuse::ShaderStage::Hull:            return "HS_Main";
+        case Amuse::ShaderStage::Domain:          return "DS_Main";
+        case Amuse::ShaderStage::Geometry:        return "GS_Main";
+        case Amuse::ShaderStage::Pixel:           return "PS_Main";
+        case Amuse::ShaderStage::Compute:         return "CS_Main";
+        case Amuse::ShaderStage::Task:            return "TS_Main";
+        case Amuse::ShaderStage::Mesh:            return "MS_Main";
+        case Amuse::ShaderStage::RayGen:          return "RGS_Main";
+        case Amuse::ShaderStage::AnyHit:          return "AHS_Main";
+        case Amuse::ShaderStage::ClosestHit:      return "CHS_Main";
+        case Amuse::ShaderStage::Miss:            return "MS_Main";
+        case Amuse::ShaderStage::Intersection:    return "IS_Main";
+        case Amuse::ShaderStage::Callable:        return "CS_Main";
+        case Amuse::ShaderStage::Amplification:   return "AS_Main";
 		default:                                    return "";
         }
     }

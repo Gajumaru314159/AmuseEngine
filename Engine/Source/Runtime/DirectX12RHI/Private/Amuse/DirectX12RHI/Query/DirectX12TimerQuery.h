@@ -7,12 +7,11 @@
 #include <Amuse/Core/Core.h>
 #include <Amuse/RHI/Query.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	class DirectX12Device;
 
 	//! @brief GPUイベントクエリ実装(DirectX12)
+	//! @ingroup AmuseDirectX12RHI
 	class DirectX12EventQuery : public EventQuery {
 	public:
 		//! @brief コンストラクタ
@@ -37,6 +36,7 @@ namespace Amuse::RHI {
 	};
 
 	//! @brief GPUタイマークエリ実装(DirectX12)
+	//! @ingroup AmuseDirectX12RHI
 	class DirectX12TimerQuery : public TimerQuery {
 	public:
 		//! @brief コンストラクタ

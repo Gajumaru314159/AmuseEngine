@@ -9,21 +9,21 @@
 #ifdef OS_WINDOWS
 
 #include <Windows.h>
-static void GetCommandLine(Amuse::Platform::Arguments::container_type& dest) {
+static void GetCommandLine(Amuse::Arguments::container_type& dest) {
     dest.clear();
     int numArgs;
     LPWSTR* ppArgs = ::CommandLineToArgvW(GetCommandLineW(), &numArgs);
     for (int i = 0; i < numArgs; ++i) {
-        Amuse::Core::StringBase<wchar_t> warg = ppArgs[i];
-        Amuse::Core::String arg;
-        Amuse::Core::StringEncoder::Encode(warg, arg);
+        Amuse::StringBase<wchar_t> warg = ppArgs[i];
+        Amuse::String arg;
+        Amuse::StringEncoder::Encode(warg, arg);
         dest.push_back(arg);
     }
 }
 
 #elif defined(OS_LINUX)
 #include <wordexp.h>
-static void GetCommandLine(Amuse::Platform::Arguments::container_type& dest) {
+static void GetCommandLine(Amuse::Arguments::container_type& dest) {
     dest.clear();
     LOG_ERROR("GetCommandLineは未実装です");
 }
@@ -32,9 +32,7 @@ static void GetCommandLine(Amuse::Platform::Arguments::container_type& dest) {
 
 
 
-namespace Amuse::Platform {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief  コンストラクタ
     Arguments::Arguments() {
         ::GetCommandLine(m_args);

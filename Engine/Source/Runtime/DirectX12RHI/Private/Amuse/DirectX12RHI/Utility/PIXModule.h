@@ -7,10 +7,9 @@
 #include <Amuse/Core/Core.h>
 #ifdef AMUSE_DEBUG
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief  説明
+    //! @ingroup AmuseDirectX12RHI
     class PIXModule {
     public:
 

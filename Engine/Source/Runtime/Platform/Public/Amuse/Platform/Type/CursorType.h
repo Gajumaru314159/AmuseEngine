@@ -5,10 +5,9 @@
 #pragma once
 #include <Amuse/Core/Core.h>
 
-namespace Amuse::Platform {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief  カーソルタイプ
+    //! @ingroup AmusePlatform
     enum class CursorType {
         Arrow,
     };

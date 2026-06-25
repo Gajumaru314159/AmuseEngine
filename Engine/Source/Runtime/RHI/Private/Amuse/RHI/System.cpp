@@ -8,9 +8,7 @@
 #include <Amuse/RHI/SystemResource.h>
 #include <Amuse/Core/Utility/DI.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief      システムをServiceInjectorに登録
 	void RegisterRHIService(ServiceInjector& injector) {
 		injector.bind<GraphicObjectManager>();

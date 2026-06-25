@@ -1,8 +1,6 @@
 #include <Amuse/Input/Device/KeyboardDevice.h>
 
-namespace Amuse::Input {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief  ボタンの入力状態を取得
 	ButtonStates KeyboardDevice::getButtonStates(u32 code) const {
 		auto key = static_cast<Key>(code);

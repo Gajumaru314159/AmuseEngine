@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -6,7 +6,7 @@
 #include <Amuse/Core/Utility/NameDictionary.h>
 #include <Amuse/Core/Utility/DI.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief  ServiceInjectorに登録
     void Name::Register(ServiceInjector& injector) {

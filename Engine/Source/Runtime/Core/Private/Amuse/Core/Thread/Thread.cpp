@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -15,7 +15,7 @@
 # include <sys/syscall.h>
 #endif
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	class ThreadImpl {
 	public:
@@ -25,7 +25,7 @@ namespace Amuse::Core {
 
 }
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief				デフォルトコンストラクタ
 	Thread::Thread() {

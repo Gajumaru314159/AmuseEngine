@@ -1,0 +1,69 @@
+//***********************************************************
+//! @file
+//! @brief Amuse Runtime の Doxygen グループ定義
+//***********************************************************
+
+/*!
+    @defgroup AmuseCore Core
+    @brief 基本型、コンテナ、数学、ファイル、メモリなどの基盤機能。
+
+    @defgroup AmusePlatform Platform
+    @brief ウィンドウ、システム、DLL、テキスト入力などのプラットフォーム機能。
+
+    @defgroup AmuseInput Input
+    @brief キーボード、マウス、ゲームパッドなどの入力機能。
+
+    @defgroup AmuseRHI RHI
+    @brief グラフィックス API 抽象化とリソース管理機能。
+
+    @defgroup AmuseDirectX12RHI DirectX12RHI
+    @brief DirectX 12 バックエンド実装。
+
+    @defgroup AmuseVulkanRHI VulkanRHI
+    @brief Vulkan バックエンド実装。
+
+    @defgroup AmuseRPI RPI
+    @brief レンダーパイプライン、マテリアル、メッシュなどの描画上位機能。
+
+    @defgroup AmuseEntry Entry
+    @brief アプリケーションエントリーポイント機能。
+
+    @defgroup AmuseImGui ImGui
+    @brief ImGui 連携機能。
+
+    @addtogroup AmuseCore
+    @{
+    @}
+
+    @addtogroup AmusePlatform
+    @{
+    @}
+
+    @addtogroup AmuseInput
+    @{
+    @}
+
+    @addtogroup AmuseRHI
+    @{
+    @}
+
+    @addtogroup AmuseDirectX12RHI
+    @{
+    @}
+
+    @addtogroup AmuseVulkanRHI
+    @{
+    @}
+
+    @addtogroup AmuseRPI
+    @{
+    @}
+
+    @addtogroup AmuseEntry
+    @{
+    @}
+
+    @addtogroup AmuseImGui
+    @{
+    @}
+*/

@@ -7,14 +7,13 @@
 #include <Amuse/Core/Core.h>
 #include <Amuse/DirectX12RHI/Descriptor/DescriptorHeapType.h>
 
-namespace Amuse::Core {
+namespace Amuse {
     struct TLSFBlock;
 }
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief  説明
+    //! @ingroup AmuseDirectX12RHI
     class DescriptorHandle:private Noncopyable {
         friend class DescriptorHeap;
     public:

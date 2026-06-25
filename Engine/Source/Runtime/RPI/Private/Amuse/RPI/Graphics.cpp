@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -12,27 +12,27 @@
 #include <Amuse/RHI/System.h>
 #include <Amuse/RPI/FrameGraph/FGResourcePool.h>
 
-namespace Amuse::RPI {
+namespace Amuse {
 
 	//! @brief      システムをServiceInjectorに登録
 	void RegisterGraphicsService(ServiceInjector& injector) {
 		injector.bind<MaterialManager>();
 		injector.bind<Graphics>();
-		RHI::RegisterRHIService(injector);
+		RegisterRHIService(injector);
 		Name::Register(injector);
 	}
 
 	//! @brief      コンストラクタ
-	Graphics::Graphics(RHI::Device& rhi,MaterialManager&)
+	Graphics::Graphics(Device& rhi,MaterialManager&)
 		: m_rhi(rhi)
 		, m_fgResourcePool(rhi)
 	{
 
 		for (s32 i = 0; i < 3; ++i) {
-			RHI::CommandListDesc desc;
+			CommandListDesc desc;
 			desc.name = Format("SystemCommanList_{}", i);
-			desc.type = RHI::CommandListType::Graphic;
-			m_commandLists.emplace_back(RHI::CommandList::Create(desc));
+			desc.type = CommandListType::Graphic;
+			m_commandLists.emplace_back(CommandList::Create(desc));
 		}
 
 	}
@@ -86,7 +86,7 @@ namespace Amuse::RPI {
 		commandList->begin();
 		m_fg->execute(commandList, *m_fgResourcePool);
 		commandList->end();
-		Ref<RHI::CommandList> commandLists[] = { commandList };
+		Ref<CommandList> commandLists[] = { commandList };
 		m_rhi.executeCommandLists(commandLists);
 
 	}

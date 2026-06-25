@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -6,11 +6,12 @@
 #include <Amuse/Core/Math/IntVector2.h>
 #include <Amuse/Core/Math/Vector2.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief      矩形
     //! 
     //! @details    矩形は内部的に中心座標とサイズで管理されます。
+    //! @ingroup AmuseCore
     struct IntRect {
     public:
 

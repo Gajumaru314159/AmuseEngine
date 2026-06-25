@@ -5,9 +5,7 @@
 #include <Amuse/VulkanRHI/Fence/VulkanFence.h>
 #include <Amuse/VulkanRHI/VulkanDevice.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief  コンストラクタ
 	VulkanFence::VulkanFence(VulkanDevice& device, const FenceDesc& desc)
 		: m_device(device)

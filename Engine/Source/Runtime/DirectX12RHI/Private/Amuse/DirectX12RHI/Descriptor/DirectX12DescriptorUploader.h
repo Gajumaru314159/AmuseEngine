@@ -7,15 +7,14 @@
 #include <Amuse/Core/Core.h>
 #include <Amuse/Core/Utility/Swapper.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief  バッファ・アップローダー
     //! 
     //! バッファのデータを効率的にアップロードするための機能を提供します。
     //! CPUからデータを書き込めるGPUリソースは読み取り速度に制限がかかるため、
     //! 書き込み用のステージングバッファに書き込んだものをまとめてハイパフォーマンスなバッファにコピーします。
     //! コピー処理はフレームの先頭に行われます。必ず毎フレーム描画処理より前に実行してください。         
+    //! @ingroup AmuseDirectX12RHI
     class DirectX12DescriptorUploader {
     public:
 
@@ -29,6 +28,7 @@ namespace Amuse::RHI {
 
     private:
         
+        //! @ingroup AmuseDirectX12RHI
         struct Request {
 			D3D12_CPU_DESCRIPTOR_HANDLE src; //!< コピー元のCPUハンドル
 			D3D12_CPU_DESCRIPTOR_HANDLE dst; //!< コピー先のCPUハンドル

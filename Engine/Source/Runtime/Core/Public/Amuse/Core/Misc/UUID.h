@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author Gajumaru
 //***********************************************************
@@ -6,9 +6,10 @@
 #include <Amuse/Core/CorePrivate.h>
 #include <Amuse/Core/String/String.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief UUIDクラス
+    //! @ingroup AmuseCore
     struct UUID {
     public:
         u32 data[4]; //!< 生データ
@@ -124,15 +125,15 @@ namespace Amuse::Core {
 // フォーマット
 //===============================================================
 //! @cond
-template <> struct std::formatter<Amuse::Core::UUID, Amuse::Core::Char> {
+template <> struct std::formatter<Amuse::UUID, Amuse::Char> {
     template<typename ParseContext>
     constexpr auto parse(ParseContext& ctx) -> decltype(ctx.begin()) {
         return ctx.end();
     }
 
     template<typename FormatContext>
-    auto format(Amuse::Core::UUID value, FormatContext& ctx) const {
-        Amuse::Core::Char text[37];
+    auto format(Amuse::UUID value, FormatContext& ctx) const {
+        Amuse::Char text[37];
         value.toString(text);
         return format_to(ctx.out(), "{}", text);
     }
@@ -142,15 +143,15 @@ template <> struct std::formatter<Amuse::Core::UUID, Amuse::Core::Char> {
 // ハッシュ化
 //===============================================================
 template<>
-struct std::hash<Amuse::Core::UUID> {
-    constexpr size_t operator()(const Amuse::Core::UUID& value)const noexcept {
+struct std::hash<Amuse::UUID> {
+    constexpr size_t operator()(const Amuse::UUID& value)const noexcept {
 
-        constexpr Amuse::Core::u64 offset_basis = 14695981039346656037u;
-        constexpr Amuse::Core::u64 fnv_prime = 1099511628211u;
-        Amuse::Core::u64 result = offset_basis;
+        constexpr Amuse::u64 offset_basis = 14695981039346656037u;
+        constexpr Amuse::u64 fnv_prime = 1099511628211u;
+        Amuse::u64 result = offset_basis;
 
         for (size_t i = 0; i < 4; ++i) {
-            result ^= static_cast<Amuse::Core::u64>(value.data[i]);
+            result ^= static_cast<Amuse::u64>(value.data[i]);
             result *= fnv_prime;
         }
 

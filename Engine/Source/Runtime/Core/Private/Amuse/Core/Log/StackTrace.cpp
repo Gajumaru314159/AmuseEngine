@@ -1,11 +1,11 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //***********************************************************
 #include <Amuse/Core/Log/StackTrace.h>
 #include <Amuse/Core/CoreTypes.h>
 #include <Amuse/Core/String/StringEncoder.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	StackTrace StackTrace::Capture(s32 frameToSkip) {
 		StackTrace result;

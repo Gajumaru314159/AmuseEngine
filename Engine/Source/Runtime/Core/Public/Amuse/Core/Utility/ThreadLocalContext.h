@@ -1,14 +1,15 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/Core/Utility/Nonmovable.h>
 #include <Amuse/Core/Thread/Thread.h>
-namespace Amuse::Core {
+namespace Amuse {
 
     template<class T>
     //! @brief スレッドごとのコンテキストを表す。
+    //! @ingroup AmuseCore
     class ThreadLocalContext : Nonmovable {
     public:
         //! @brief 参照先または演算結果を取得する。

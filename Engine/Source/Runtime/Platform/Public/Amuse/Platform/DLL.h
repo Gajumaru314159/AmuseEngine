@@ -5,19 +5,19 @@
 #pragma once
 #include <Amuse/Core/Core.h>
 
-namespace Amuse::Platform {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief      動的ライブラリ
     //! 
     //! @details    DLLから生成されたインスタンスはDLLが解放されるまで
     //!             に解放される必要があります。
+    //! @ingroup AmusePlatform
     class DLL {
 
         //! @brief      関数オブジェクト
         //! 
         //! @deiltas    内部に動的ライブラリ内の関数ポインタを保持します。
         //!             関数のシグネチャはチェックすることができないので注意してください。
+        //! @ingroup AmusePlatform
         class Function {
             friend class DLL;
         public:

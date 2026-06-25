@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -7,9 +7,10 @@
 #include <Amuse/Core/String/Format.h>
 #include <string_view>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief		文字列ビュー基底
+	//! @ingroup AmuseCore
 	template<class TChar>
 	class StringViewBase {
 	public:
@@ -196,33 +197,33 @@ namespace Amuse::Core {
 // ハッシュ化
 //===============================================================
 template <>
-struct std::hash<Amuse::Core::StringViewBase<char>>
+struct std::hash<Amuse::StringViewBase<char>>
 {
-	size_t operator ()(const Amuse::Core::StringViewBase<char>& value) const noexcept
+	size_t operator ()(const Amuse::StringViewBase<char>& value) const noexcept
 	{
 		return std::hash<std::string_view>()({ value.data(), value.size() });
 	}
 };
 template <>
-struct std::hash<Amuse::Core::StringViewBase<wchar_t>>
+struct std::hash<Amuse::StringViewBase<wchar_t>>
 {
-	size_t operator ()(const Amuse::Core::StringViewBase<wchar_t>& value) const noexcept
+	size_t operator ()(const Amuse::StringViewBase<wchar_t>& value) const noexcept
 	{
 		return std::hash<std::wstring_view>()({ value.data(), value.size() });
 	}
 };
 template <>
-struct std::hash<Amuse::Core::StringViewBase<char16_t>>
+struct std::hash<Amuse::StringViewBase<char16_t>>
 {
-	size_t operator ()(const Amuse::Core::StringViewBase<char16_t>& value) const noexcept
+	size_t operator ()(const Amuse::StringViewBase<char16_t>& value) const noexcept
 	{
 		return std::hash<std::u16string_view>()({ value.data(), value.size() });
 	}
 };
 template <>
-struct std::hash<Amuse::Core::StringViewBase<char32_t>>
+struct std::hash<Amuse::StringViewBase<char32_t>>
 {
-	size_t operator ()(const Amuse::Core::StringViewBase<char32_t>& value) const noexcept
+	size_t operator ()(const Amuse::StringViewBase<char32_t>& value) const noexcept
 	{
 		return std::hash<std::u32string_view>()({ value.data(), value.size() });
 	}
@@ -232,10 +233,10 @@ struct std::hash<Amuse::Core::StringViewBase<char32_t>>
 //===============================================================
 // フォーマット
 //===============================================================
-template <> struct std::formatter<Amuse::Core::StringView, Amuse::Core::Char> : std::formatter<std::basic_string_view<Amuse::Core::Char>> {
+template <> struct std::formatter<Amuse::StringView, Amuse::Char> : std::formatter<std::basic_string_view<Amuse::Char>> {
 	template<typename FormatContext>
-	auto format(const Amuse::Core::StringView& value, FormatContext& ctx) const {
-		return format_to(ctx.out(), "{}", std::basic_string_view<Amuse::Core::Char>(value.data(), value.size()));
+	auto format(const Amuse::StringView& value, FormatContext& ctx) const {
+		return format_to(ctx.out(), "{}", std::basic_string_view<Amuse::Char>(value.data(), value.size()));
 	}
 };
 
@@ -243,7 +244,7 @@ template <> struct std::formatter<Amuse::Core::StringView, Amuse::Core::Char> : 
 //===============================================================
 // ストリーム
 //===============================================================
-inline std::ostream& operator<<(std::ostream& stream, const Amuse::Core::StringView& value) {
+inline std::ostream& operator<<(std::ostream& stream, const Amuse::StringView& value) {
 	stream << std::string_view(value.data(), value.size());
 	return stream;
 }

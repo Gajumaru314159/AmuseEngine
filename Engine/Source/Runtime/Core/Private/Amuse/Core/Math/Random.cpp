@@ -1,11 +1,11 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author Gajumaru
 //***********************************************************
 #include <Amuse/Core/Math/Random.h>
 #include <Amuse/Core/Misc/DateTime.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief デフォルトコンストラクタ
     Random::Random() {

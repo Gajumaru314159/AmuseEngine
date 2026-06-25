@@ -1,11 +1,11 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author Gajumaru
 //***********************************************************
 #include <Amuse/Core/Math/Math.h>
 #include <cmath>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief 値が無効な数字か判定する
     bool Math::IsNaN(f32 value) {

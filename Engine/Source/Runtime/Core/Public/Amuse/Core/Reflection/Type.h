@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -6,7 +6,7 @@
 #include <Amuse/Core/CorePrivate.h>
 #include <Amuse/Core/Hash/Hash.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @cond
 	namespace internal::type_id {
@@ -54,9 +54,10 @@ namespace Amuse::Core {
 	}
 	//! @endcond
 
-#define AMUSE_RTTI()	virtual Amuse::Core::Type getType()const{return Amuse::Core::Type::Get<std::remove_cv_t<std::remove_reference_t<decltype(*this)>>>();}
+#define AMUSE_RTTI()	virtual Amuse::Type getType()const{return Amuse::Type::Get<std::remove_cv_t<std::remove_reference_t<decltype(*this)>>>();}
 
 	//! @brief 型名と固定ハッシュでリフレクション対象の型を識別する。
+	//! @ingroup AmuseCore
 	class Type {
 	public:
 		//! @brief 型名ハッシュを表す型。
@@ -163,6 +164,7 @@ namespace Amuse::Core {
 			m_hash = hash;
 		}
 
+		//! @ingroup AmuseCore
 		class InvalidType {
 
 		};
@@ -181,9 +183,9 @@ namespace Amuse::Core {
 //===============================================================
 //! @cond
 template<>
-struct std::hash<Amuse::Core::Type> {
+struct std::hash<Amuse::Type> {
 public:
-	size_t operator()(const Amuse::Core::Type& value)const noexcept {
+	size_t operator()(const Amuse::Type& value)const noexcept {
 		return value.hash();
 	}
 };

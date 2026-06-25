@@ -1,11 +1,11 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <cassert>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief      グローバルインスタンス
     //! @details    インスタンスの寿命を厳格に管理するためのクラス。
@@ -19,6 +19,7 @@ namespace Amuse::Core {
     //!                 // 処理
     //!             }
     //!             ```
+    //! @ingroup AmuseCore
     template<class T>
     class Global {
     public:

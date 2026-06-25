@@ -8,19 +8,19 @@
 #include <Amuse/RHI/DescriptorLayout.h>
 #include <Amuse/DirectX12RHI/Descriptor/DescriptorHeapType.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	class DirectX12Device;
 
     //! @brief  デスクリプタ・レイアウト実装(DirectX12)
 	//! @details DirectX12では対応するオブジェクトが存在しません。RootSignature/DescriptorTable生成時に必要な情報を保持します。
+    //! @ingroup AmuseDirectX12RHI
     class DirectX12DescriptorLayout :public DescriptorLayout {
 	public:
 		struct HeapInfo {
 			s32 samplerNum;
 			s32 othersNum;
 		};
+		//! @ingroup AmuseDirectX12RHI
 		struct MapInfo {
 			DescriptorHeapType	type;
 			u32					index;

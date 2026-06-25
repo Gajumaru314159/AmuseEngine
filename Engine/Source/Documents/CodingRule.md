@@ -69,8 +69,8 @@ void Func(){
 
 - 名前空間はすべて小文字にし、一単語で記述するようにしてください。
 - 全てのエンジンコードは`namespace Amuse`内に記述してください。
-- モジュールごとに名前空間を分けるようにしてください。
-- ネストした名前空間は`namespace Amuse::Core{}`のような表記します。
+- モジュールごとの分類は名前空間ではなくDoxygenの`@defgroup`、`@ingroup`、`@addtogroup`で行ってください。
+- エンジンコードでは`Amuse`の後ろにモジュール名を連結した名前空間を使用しないでください。
 
 ## 構造体
 
@@ -113,7 +113,7 @@ void Func(){
 | マクロ           | SAMPLE_ID            |
 | マクロ(内部)     | \_internal_SAMPLE_ID |
 
-内部で使用する機能は`Internal`という名前空間に実装してください (例：`namespace Amuse::Core::Internal`)
+内部で使用する機能は`Internal`という名前空間に実装してください (例：`namespace Amuse { namespace Internal { ... } }`)
 
 ```cpp
 #define _internal_ADD(a,b) (a+b)

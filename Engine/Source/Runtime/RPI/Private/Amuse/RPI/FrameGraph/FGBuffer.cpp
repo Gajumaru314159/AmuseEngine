@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -6,7 +6,7 @@
 #include <Amuse/RPI/FrameGraph/FGResourcePool.h>
 #include <magic_enum.hpp>
 
-namespace Amuse::RPI {
+namespace Amuse {
 
 	void FGBuffer::create(const Desc& desc, void* allocator) {
 		AMUSE_ASSERT_EXPR(allocator);
@@ -34,10 +34,10 @@ namespace Amuse::RPI {
 	}
 
 	void FGBuffer::preRead([[maybe_unused]]const Desc& desc, [[maybe_unused]]uint32_t flags, [[maybe_unused]]void* ctx) {
-		// auto& cmd = *static_cast<Ref<RHI::CommandList>*>(ctx);
+		// auto& cmd = *static_cast<Ref<CommandList>*>(ctx);
 	}
 	void FGBuffer::preWrite([[maybe_unused]]const Desc& desc, [[maybe_unused]]uint32_t flags, [[maybe_unused]]void* ctx) {
-		// auto& cmd = *static_cast<Ref<RHI::CommandList>*>(ctx);
+		// auto& cmd = *static_cast<Ref<CommandList>*>(ctx);
 	}
 
 }

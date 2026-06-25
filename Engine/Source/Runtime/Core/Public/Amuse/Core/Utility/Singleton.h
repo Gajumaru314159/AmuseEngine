@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -7,9 +7,10 @@
 #include <Amuse/Core/Reflection/Type.h>
 #include <Amuse/Core/Exception/Exception.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief          シングルトン・パターン
+    //! @ingroup AmuseCore
     template<class T>
     class Singleton {
     public:

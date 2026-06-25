@@ -6,7 +6,7 @@
 #include <atomic>
 #include <fstream>
 
-using namespace Amuse::Core;
+using namespace Amuse;
 
 TEST(Scheduler, DependencyOrder)
 {

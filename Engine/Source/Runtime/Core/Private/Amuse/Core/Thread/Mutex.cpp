@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -14,7 +14,7 @@
 #	define AMUSE_DEBUG_MUTEX_CONTEX(contex)	/**/
 #endif
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief  説明
 	class MutexImpl {

@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -7,9 +7,10 @@
 #include <Amuse/Core/File/Stream.h>
 #include <Amuse/Core/Misc/Blob.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief  ファイル
+	//! @ingroup AmuseCore
 	class File : public Stream {
 	public:
 

@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -7,9 +7,10 @@
 #include <Amuse/Core/CoreTypes.h>
 #include <Amuse/Core/String/StringView.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief		固定長文字列基底
+	//! @ingroup AmuseCore
 	template<class TChar, size_t N>
 	class FixedStringBase {
 		static_assert(0<N);

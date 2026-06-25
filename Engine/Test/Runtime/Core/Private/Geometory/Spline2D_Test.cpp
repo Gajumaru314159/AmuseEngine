@@ -1,11 +1,11 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #include <gtest/gtest.h>
 #include <Amuse/Core/Geometry/Spline2D.h>
 
-using namespace Amuse::Core;
+using namespace Amuse;
 
 TEST(Spline2D, BasicConstruction) {
     Spline2D spline;

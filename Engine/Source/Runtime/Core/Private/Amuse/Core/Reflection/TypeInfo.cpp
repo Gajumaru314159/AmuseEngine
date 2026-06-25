@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -6,7 +6,7 @@
 #include <Amuse/Core/Reflection/TypeInfoManager.h>
 #include <Amuse/Core/Core.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	bool TypeInfo::isBaseOf(const Type& super)const {
 

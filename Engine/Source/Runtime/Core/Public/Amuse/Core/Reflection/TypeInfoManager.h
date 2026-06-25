@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -8,9 +8,10 @@
 #include <Amuse/Core/Reflection/Type.h>
 #include <Amuse/Core/Reflection/TypeInfo.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief 登録済み TypeInfo を Type で管理するシングルトン。
+	//! @ingroup AmuseCore
 	class TypeInfoManager : public Singleton<TypeInfoManager> {
 	public:
 

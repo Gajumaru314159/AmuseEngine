@@ -1,16 +1,17 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/RHI/Types/RenderTextureDesc.h>
 
-namespace Amuse::RPI {
+namespace Amuse {
 
     //! @brief      FrameGraph中間テクスチャ
+    //! @ingroup AmuseRPI
     class FGTexture {
     public:
-        using Desc = RHI::RenderTextureDesc;
+        using Desc = RenderTextureDesc;
 
         void create(const Desc& desc, void* allocator);
         void destroy(const Desc& desc, void* allocator);
@@ -19,7 +20,7 @@ namespace Amuse::RPI {
         void preRead(const Desc& desc, uint32_t flags, void* ctx);
         void preWrite(const Desc& desc, uint32_t flags, void* ctx);
 
-        Ref<RHI::RenderTexture> instance;
+        Ref<RenderTexture> instance;
     };
 
 }

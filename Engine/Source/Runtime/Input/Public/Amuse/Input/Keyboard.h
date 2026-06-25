@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -7,10 +7,9 @@
 #include <Amuse/Input/Button.h>
 #include <Amuse/Core/Hash/Hash.h>
 
-namespace Amuse::Input {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief キーボード入力デバイス
+	//! @ingroup AmuseInput
 	class Keyboard {
 	public:
 		//! @brief 入力デバイスIDを宣言する

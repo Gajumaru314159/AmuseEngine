@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -10,7 +10,7 @@
 #include <Amuse/Core/Template/Event/EventNotifier.h>
 
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief      ロガー
     //! 
@@ -18,6 +18,7 @@ namespace Amuse::Core {
     //!             このクラスではログの登録と通知のみを行うため、ログウィンドウへの
     //!             出力やログファイルへの保存をする場合は別途実装し登録する必要があ
     //!             る。
+    //! @ingroup AmuseCore
     class Logger {
     public:
 

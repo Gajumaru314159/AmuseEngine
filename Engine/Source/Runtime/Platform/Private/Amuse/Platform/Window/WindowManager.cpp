@@ -4,9 +4,7 @@
 //***********************************************************
 #include <Amuse/Platform/Window/WindowManager.h>
 
-namespace Amuse::Platform {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     static WindowManager* s_instance = nullptr;
 
     WindowManager* WindowManager::Get() {
@@ -37,9 +35,9 @@ namespace Amuse::Platform {
         static bool isAutoGenerate = false;
         if ((!m_mainWindow || !m_mainWindow->isValid()) && isAutoGenerate==false) {
             isAutoGenerate = true;
-            Platform::WindowDesc windowDesc;
+            WindowDesc windowDesc;
             windowDesc.title = "Application";
-            m_mainWindow = Platform::Window::Create(windowDesc);
+            m_mainWindow = Window::Create(windowDesc);
         }
         return m_mainWindow;
     }

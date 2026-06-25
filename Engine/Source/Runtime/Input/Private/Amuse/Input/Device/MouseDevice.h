@@ -17,15 +17,14 @@
 #include <X11/Xlib.h>
 #endif
 
-namespace Amuse::Input {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief  マウス・デバイス
+    //! @ingroup AmuseInput
     class MouseDevice:public IInputDevice {
     public:
 
         //! @brief  コンストラクタ
-        MouseDevice(Platform::Window&);
+        MouseDevice(Window&);
 
         //! @brief  デストラクタ
         ~MouseDevice();
@@ -50,6 +49,7 @@ namespace Amuse::Input {
 
     private:
 
+        //! @ingroup AmuseInput
         struct KeyState {
             HashMap<ButtonState, ButtonNotifier> notifiers;
             ButtonStates prev;

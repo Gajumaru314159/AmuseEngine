@@ -16,8 +16,7 @@
 //===============================================================
 // 前方宣言
 //===============================================================
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
+namespace Amuse {
     class DirectX12Device;
     class DirectX12CommandList;
     class ITexture;
@@ -27,11 +26,10 @@ namespace Amuse::RHI {
 //===============================================================
 // クラス宣言
 //===============================================================
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief  説明
-    class DirectX12SwapChain :public Amuse::RHI::SwapChain {
+    //! @ingroup AmuseDirectX12RHI
+    class DirectX12SwapChain :public Amuse::SwapChain {
     public:
 
         //===============================================================
@@ -95,7 +93,7 @@ namespace Amuse::RHI {
 
     private:
 
-        void onWindowChanged(const Platform::WindowEventArgs& args);
+        void onWindowChanged(const WindowEventArgs& args);
 
     private:
 
@@ -113,7 +111,7 @@ namespace Amuse::RHI {
         SwapChainDesc m_desc;
         TextureFormat m_format;
 
-        Platform::WindowEventHandle m_hEvent;
+        WindowEventHandle m_hEvent;
         
         ComPtr<IDXGISwapChain4>     m_swapChain;
         Swapper<Ref<RenderTexture>> m_textures;

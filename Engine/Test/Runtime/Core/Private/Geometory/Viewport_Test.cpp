@@ -1,10 +1,10 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #include <Amuse/Core/Geometry/Viewport.h>
 
-using namespace Amuse::Core;
+using namespace Amuse;
 
 TEST(Viewport, Constructor) {
 	// デフォルトコンストラクタ

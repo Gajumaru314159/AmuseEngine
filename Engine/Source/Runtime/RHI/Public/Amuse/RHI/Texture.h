@@ -9,10 +9,9 @@
 #include <Amuse/RHI/Types/BindlessHandle.h>
 #include <Amuse/Core/Graphic/Bitmap.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief      テクスチャ
+    //! @ingroup AmuseRHI
     class Texture :public GraphicObject {
     public:
 

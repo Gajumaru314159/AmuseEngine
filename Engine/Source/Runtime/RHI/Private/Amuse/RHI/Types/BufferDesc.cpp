@@ -4,9 +4,7 @@
 //***********************************************************
 #include <Amuse/RHI/Types/BufferDesc.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief バリデート
 	bool BufferDesc::isValid() const {
 

@@ -1,11 +1,11 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #include <Amuse/Core/Utility/NameDictionary.h>
 #include <Amuse/Core/Misc/CRCHash.h>
 
-namespace Amuse::Core{
+namespace Amuse{
 
     //! @brief      コンストラクタ
     NameDictionary::NameDictionary() {

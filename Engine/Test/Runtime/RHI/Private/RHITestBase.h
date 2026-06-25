@@ -12,9 +12,9 @@
 #include <Amuse/DirectX12RHI/System.h>
 #include <Amuse/DirectX12RHI/DirectX12RHIConfig.h>
 #endif
-using namespace Amuse::Core;
-using namespace Amuse::RHI;
-using namespace Amuse::Platform;
+using namespace Amuse;
+using namespace Amuse;
+using namespace Amuse;
 
 struct DirectX12Tag {};
 struct VulkanTag {};
@@ -29,14 +29,14 @@ protected:
 
 #ifdef OS_WINDOWS
 		if constexpr (std::is_same_v<T, DirectX12Tag>) {
-			Amuse::RHI::RegisterDirectX12RHIService(injector);
+			Amuse::RegisterDirectX12RHIService(injector);
 		}
 #endif
 		if constexpr (std::is_same_v<T, VulkanTag>) {
-			Amuse::RHI::RegisterVulkanRHIService(injector);
+			Amuse::RegisterVulkanRHIService(injector);
 		}
 
-		Amuse::RHI::RegisterRHIService(injector);
+		Amuse::RegisterRHIService(injector);
 
 #ifdef OS_WINDOWS
 		m_dx12config.enableDebugLayer = true;

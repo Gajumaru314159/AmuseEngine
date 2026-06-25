@@ -17,8 +17,7 @@
 //===============================================================
 // 前方宣言
 //===============================================================
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
+namespace Amuse {
     class DirectX12Device;
 }
 
@@ -26,10 +25,9 @@ namespace Amuse::RHI {
 //===============================================================
 // クラス定義
 //===============================================================
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
-    class DirectX12Texture :public Amuse::RHI::RenderTexture {
+namespace Amuse {
+    //! @ingroup AmuseDirectX12RHI
+    class DirectX12Texture :public Amuse::RenderTexture {
     public:
 
         //! @brief      空テクスチャを生成
@@ -149,9 +147,7 @@ namespace Amuse::RHI {
 //===============================================================
 // インライン
 //===============================================================
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief  妥当な状態か
     inline bool DirectX12Texture::isValid()const {
         return !!m_resource;

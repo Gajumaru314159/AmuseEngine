@@ -1,8 +1,8 @@
-﻿///***********************************************************
+///***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
-using namespace Amuse::Core;
+using namespace Amuse;
 #include <Amuse/Core/Math/Vectors.h>
 #include <Amuse/Core/Math/Quaternion.h>
 #include <Amuse/Core/Math/Rotation.h>

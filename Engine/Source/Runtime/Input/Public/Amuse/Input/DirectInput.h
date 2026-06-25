@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -7,10 +7,9 @@
 #include <Amuse/Input/Button.h>
 #include <Amuse/Input/Axis.h>
 
-namespace Amuse::Input {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief DirectInput デバイス
+	//! @ingroup AmuseInput
 	class DirectInput {
 	public:
 		//! @brief 入力デバイスIDを宣言する

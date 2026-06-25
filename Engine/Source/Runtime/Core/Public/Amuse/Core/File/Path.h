@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -8,11 +8,12 @@
 #include <Amuse/Core/String/Format.h>
 #include <Amuse/Core/Misc/YesNo.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 	
 	DEFINE_YES_NO(WithDot);
 
 	//! @brief		ファイルパスのユーティリティ
+	//! @ingroup AmuseCore
 	class Path {
 	public:
 

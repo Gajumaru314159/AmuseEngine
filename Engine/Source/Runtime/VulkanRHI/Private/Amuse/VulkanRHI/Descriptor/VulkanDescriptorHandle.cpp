@@ -5,9 +5,7 @@
 #include <Amuse/VulkanRHI/Descriptor/VulkanDescriptorHandle.h>
 #include <Amuse/VulkanRHI/Descriptor/VulkanDescriptorHeap.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief  コンストラクタ
 	VulkanDescriptorHandle::VulkanDescriptorHandle()
 		:m_pBlock(nullptr)

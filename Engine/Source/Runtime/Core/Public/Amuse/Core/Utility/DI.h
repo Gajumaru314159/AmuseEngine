@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -7,7 +7,7 @@
 #include <Amuse/Core/Reflection/Type.h>
 #include <Amuse/Core/Exception/Exception.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     constexpr size_t MAX_INJECTION = 16;    // サービスのコンストラクタ引数の最大数
 
@@ -21,6 +21,7 @@ namespace Amuse::Core {
 
     //! @brief 型ごとの生成方法と依存関係を登録するサービス注入器。
     //! @details 詳細は DI ドキュメントを確認してください
+    //! @ingroup AmuseCore
     class ServiceInjector {
     public:
 
@@ -65,6 +66,7 @@ namespace Amuse::Core {
         // T(Impl) -> U(Interface) 変換
         template<class T>
         //! @brief コンストラクタ引数型から必要なサービスを遅延解決する変換オブジェクト。
+        //! @ingroup AmuseCore
         struct arg_resolver {
             const ServiceInjector& injector; //!< 依存注入定義
             ServiceContainer& container; //!< サービスコンテナ
@@ -94,6 +96,7 @@ namespace Amuse::Core {
         };
 
         // arg_types
+        //! @ingroup AmuseCore
         template<class...>
         struct arg_types {};
 
@@ -117,6 +120,7 @@ namespace Amuse::Core {
 
 
         // ベース
+        //! @ingroup AmuseCore
         template <class T, class ArgsSequence, class Constructable = void>
         struct constructor {};
 
@@ -131,6 +135,7 @@ namespace Amuse::Core {
         // 引数なしで構築できる場合
         template <class T>
         //! @brief 引数なしで構築可能な場合のコンストラクタ候補。
+        //! @ingroup AmuseCore
         struct constructor<T, std::index_sequence<>, can_construct_true<T>> {
             //! @brief 空のコンストラクタ引数列。
             using args = arg_types<>;
@@ -139,6 +144,7 @@ namespace Amuse::Core {
         // つくれない場合
         template <class T, size_t... ArgIndex>
         //! @brief 構築できない引数数から 1 つ少ない候補へ進む探索ノード。
+        //! @ingroup AmuseCore
         struct constructor<T, std::index_sequence<ArgIndex...>, can_construct_false<T, ArgIndex...>> {
             //! @brief 次に試す、引数数を 1 つ減らしたコンストラクタ候補型。
             using next = constructor<T, std::make_index_sequence<sizeof...(ArgIndex) - 1>>;
@@ -149,6 +155,7 @@ namespace Amuse::Core {
         // これ以上引数を減らせない場合
         template <class T>
         //! @brief 構築可能な引数列が見つからない場合の終端候補。
+        //! @ingroup AmuseCore
         struct constructor<T, std::index_sequence<>, can_construct_false<T>> {
             static_assert(can_construct<T>::value, "Type is not constructible with provided dependencies.");
             //! @brief static_assert 後の形式上の空引数列。
@@ -171,6 +178,7 @@ namespace Amuse::Core {
         // Args = arg_array<U,0>;
         template<class T, class... Args>
         //! @brief 解決済み引数列からサービス実体を生成するファクトリ。
+        //! @ingroup AmuseCore
         struct FactoryBase<T, arg_types<Args...>> {
             //! @brief 依存サービスを引数として解決し T のインスタンスを生成する。
             static void* Create(const ServiceInjector& injector, ServiceContainer& container) {
@@ -212,6 +220,7 @@ namespace Amuse::Core {
 
 
     //! @brief サービス生成情報を型消去して扱う基底クラス。
+    //! @ingroup AmuseCore
     class ServiceBuilderBase {
     public:
         virtual ~ServiceBuilderBase() = default;
@@ -222,6 +231,7 @@ namespace Amuse::Core {
 
 
     //! @brief サービス型 T の生成方法と公開する基底型を保持する。
+    //! @ingroup AmuseCore
     template<class T>
     class ServiceBuilder :public ServiceBuilderBase {
     public:
@@ -269,6 +279,7 @@ namespace Amuse::Core {
     namespace Internal {
 
         //! @brief 型消去されたサービスインスタンス保持クラスの基底。
+        //! @ingroup AmuseCore
         struct ServiceHolderBase {
             virtual ~ServiceHolderBase() = default;
             //! @brief 保持しているサービスインスタンスを取得する。
@@ -277,6 +288,7 @@ namespace Amuse::Core {
 
         //! @brief サービスインスタンスと破棄責任を保持する。
         //@―--------------------------------------------------------------------------- 
+        //! @ingroup AmuseCore
         template<class T>
         class ServiceHolder : public ServiceHolderBase {
         public:
@@ -305,6 +317,7 @@ namespace Amuse::Core {
 
 
     //! @brief 生成済みサービスの寿命と型インデックスを管理するコンテナ。
+    //! @ingroup AmuseCore
     class ServiceContainer {
     public:
 

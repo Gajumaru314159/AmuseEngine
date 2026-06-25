@@ -1,15 +1,16 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/Core/Math/Math.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief  トランジション
     //! 
     //! @details    値を0から1、1から0補完する
+    //! @ingroup AmuseCore
     class Transition {
     public:
 

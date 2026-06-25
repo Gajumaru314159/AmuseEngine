@@ -10,9 +10,7 @@
 #include <Amuse/RHI/Forward.h>
 #include <Amuse/RHI/Texture.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     class VulkanDevice;
 
     //! @brief  テクスチャ・アップローダー
@@ -21,6 +19,7 @@ namespace Amuse::RHI {
     //! CPUからデータを書き込めるGPUリソースは読み取り速度に制限がかかるため、
     //! 書き込み用のステージングバッファに書き込んだものをまとめてハイパフォーマンスなバッファにコピーします。
     //! コピー処理はフレームの先頭に行われます。必ず毎フレーム描画処理より前に実行してください。         
+    //! @ingroup AmuseVulkanRHI
     class VulkanTextureUploader {
     public:
         struct Subresource {
@@ -39,6 +38,7 @@ namespace Amuse::RHI {
     private:
 
         // コピーリクエスト
+        //! @ingroup AmuseVulkanRHI
         struct Request {
             vk::Image dest;
 
@@ -63,6 +63,7 @@ namespace Amuse::RHI {
             // D3D12_BOX sourceBox;
         };
 
+        //! @ingroup AmuseVulkanRHI
         struct FrameData {
             Vector<Request>     requests;
 

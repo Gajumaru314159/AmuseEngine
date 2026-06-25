@@ -7,10 +7,9 @@
 #include <Amuse/Core/Core.h>
 #include <Amuse/RHI/GraphicFile.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief 非同期ファイルハンドル
+	//! @ingroup AmuseDirectX12RHI
 	class DirectX12GraphicFileHandle : public GraphicFileHandle {
 	public:
 		DirectX12GraphicFileHandle(IDStorageFactory& factory, StringView path);
@@ -25,6 +24,7 @@ namespace Amuse::RHI {
 	};
 
 	//! @brief 非同期ファイル読み込みイベント
+	//! @ingroup AmuseDirectX12RHI
 	class DirectX12GraphicFileEvent : public GraphicFileEvent {
 	public:
 		DirectX12GraphicFileEvent();
@@ -40,6 +40,7 @@ namespace Amuse::RHI {
 
 	//! @brief 非同期ファイル読み込みキュー
 	//! @detail このクラスは非同期ファイル読み込みを管理するキューです。
+	//! @ingroup AmuseDirectX12RHI
 	class DirectX12GraphicFileQueue : public GraphicFileQueue {
 	public:
 		DirectX12GraphicFileQueue(ID3D12Device8& device, IDStorageFactory& factory, const GraphicFileQueueDesc& desc);
@@ -56,6 +57,7 @@ namespace Amuse::RHI {
 	};
 
 	
+	//! @ingroup AmuseDirectX12RHI
 	class DirectX12GraphicFile {
 	public:
 		static bool Generate(ID3D12Device8& device, StringView input, StringView output, s32 compressionLevel);

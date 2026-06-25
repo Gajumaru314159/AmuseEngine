@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -7,7 +7,7 @@
 #include <fstream>
 #include <sstream>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief  キーを指定して要素アクセス
 	String& INISection::operator[](String key) {

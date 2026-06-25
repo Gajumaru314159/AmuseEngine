@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -10,9 +10,10 @@
 #include <Amuse/Core/Log/StackTrace.h>
 #endif
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief      Two Level Segregate Fit Mapper Block
+	//! @ingroup AmuseCore
 	struct TLSFBlock {
 		void*		pUser;		//!< ユーザデータ
 		TLSFBlock*	pPrev;      //!< 前のポインタ(ブロックヒープ内)
@@ -35,6 +36,7 @@ namespace Amuse::Core {
 	//!				pUserに必要なデータを設定して使用してください。
 	//! @note		コンストラクタに設定されたcapacityより大きめのヒープが確保される場合があります。
 	//!				実際に確保されたcapacityはTLSFMapper::capacity()で確認してください。
+	//! @ingroup AmuseCore
 	class TLSFMapper :private Noncopyable {
 	public:
 

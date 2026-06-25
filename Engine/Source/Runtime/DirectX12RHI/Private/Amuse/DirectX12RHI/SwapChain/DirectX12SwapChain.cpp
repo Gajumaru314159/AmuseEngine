@@ -17,9 +17,7 @@ namespace {
 	constexpr int static s_maxSwapChainCount = 4;
 }
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief  コンストラクタ
 	DirectX12SwapChain::DirectX12SwapChain(DirectX12Device& device, const SwapChainDesc& desc)
 		: m_device(device)
@@ -132,7 +130,7 @@ namespace Amuse::RHI {
 			// Alt + Enter でウィンドウモードに変わらないようにする 
 			device.getFactory()->MakeWindowAssociation(hWnd, DXGI_MWA_NO_WINDOW_CHANGES | DXGI_MWA_NO_ALT_ENTER);
 
-			if (window->getMode() == Platform::WindowMode::FullScreen) {
+			if (window->getMode() == WindowMode::FullScreen) {
 				// TODO フルスクリーンの場合バックバッファをリサイズ
 			}
 		}
@@ -437,9 +435,9 @@ namespace Amuse::RHI {
 
 
 	//! @brief      ウィンドウの更新イベント
-	void DirectX12SwapChain::onWindowChanged(const Platform::WindowEventArgs& args) {
+	void DirectX12SwapChain::onWindowChanged(const WindowEventArgs& args) {
 
-		if (args.type == Platform::WindowEventType::Size || args.type == Platform::WindowEventType::Maximize) {
+		if (args.type == WindowEventType::Size || args.type == WindowEventType::Maximize) {
 			if (!args.isSizing) {
 
 				DXGI_SWAP_CHAIN_DESC desc = {};
@@ -480,10 +478,10 @@ namespace Amuse::RHI {
 			}
 		}
 
-		if (args.type == Platform::WindowEventType::Minimize) {
+		if (args.type == WindowEventType::Minimize) {
 			m_visible = false;
 		}
-		if (args.type == Platform::WindowEventType::Maximize || args.type == Platform::WindowEventType::Move) {
+		if (args.type == WindowEventType::Maximize || args.type == WindowEventType::Move) {
 			m_visible = true;
 		}
 

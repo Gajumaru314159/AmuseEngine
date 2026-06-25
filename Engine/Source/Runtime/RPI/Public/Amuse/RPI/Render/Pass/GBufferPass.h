@@ -1,13 +1,14 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/RPI/Render/RenderPass.h>
 
-namespace Amuse::RPI {
+namespace Amuse {
 
 	//! @brief 深度のみを先行描画するパス
+	//! @ingroup AmuseRPI
 	class EarlyZPass : public RenderPass {
 	public:
 		//! @brief EarlyZPass の入力リソース
@@ -15,6 +16,7 @@ namespace Amuse::RPI {
 			FGResource depth; //!< 深度
 		};
 		//! @brief EarlyZPass の出力リソース
+		//! @ingroup AmuseRPI
 		struct Output {
 			FGResource depth; //!< 深度
 		};
@@ -26,6 +28,7 @@ namespace Amuse::RPI {
 	};
 
 	//! @brief 不透明メッシュを GBuffer へ描画するパス
+	//! @ingroup AmuseRPI
 	class OpaquePass : public RenderPass {
 	public:
 		//! @brief OpaquePass の入力リソース
@@ -36,6 +39,7 @@ namespace Amuse::RPI {
 			FGResource depth; //!< 深度
 		};
 		//! @brief OpaquePass の出力リソース
+		//! @ingroup AmuseRPI
 		struct Output : Input{
 		};
 	public:
@@ -46,6 +50,7 @@ namespace Amuse::RPI {
 	};
 
 	//! @brief マスク付きメッシュを GBuffer へ描画するパス
+	//! @ingroup AmuseRPI
 	class MaskedPass : public RenderPass {
 	public:
 		//! @brief MaskedPass の入力リソース
@@ -56,6 +61,7 @@ namespace Amuse::RPI {
 			FGResource depth; //!< 深度
 		};
 		//! @brief MaskedPass の出力リソース
+		//! @ingroup AmuseRPI
 		struct Output : Input{
 		};
 	public:
@@ -67,6 +73,7 @@ namespace Amuse::RPI {
 
 
 	//! @brief GBuffer 生成に必要なパスをまとめた描画パス
+	//! @ingroup AmuseRPI
 	class GBufferPass : public RenderPass {
 	public:
 		//! @brief GBufferPass の入力リソース
@@ -77,6 +84,7 @@ namespace Amuse::RPI {
 			FGResource depth; //!< 深度
 		};
 		//! @brief GBufferPass の出力リソース
+		//! @ingroup AmuseRPI
 		struct Output : Input{
 		};
 	public:

@@ -5,9 +5,7 @@
 #include <Amuse/Input/Axis.h>
 #include <Amuse/Input/InputManager.h>
 
-namespace Amuse::Input {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief	値
 	f32 Axis::value()const {
 		if (auto m = InputModule::Get()) {

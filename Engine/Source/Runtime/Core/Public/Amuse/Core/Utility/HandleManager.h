@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -8,9 +8,10 @@
 #include <Amuse/Core/Template/Container/Set.h>
 #include <Amuse/Core/Template/Utility/Function.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief ノード内ポインタを使って要素を連結する侵入型キュー。
+	//! @ingroup AmuseCore
 	template<class T, T* T::* pMember>
 	class IntrusiveQueue {
 	public:
@@ -90,6 +91,7 @@ namespace Amuse::Core {
 
 	//! @brief		ハンドル・マネージャ
 	//! @details	このクラスは、Handleを使用してインスタンスを管理するためのハンドルマネージャです。
+	//! @ingroup AmuseCore
 	template<class T,class Deleter = std::default_delete<T>>
 	class HandleManager {
 	public:
@@ -125,6 +127,7 @@ namespace Amuse::Core {
 		};
 
 		//! @brief 管理対象ノードを表す。
+		//! @ingroup AmuseCore
 		struct Node {
 			Node* next = nullptr; //!< 空きリスト上の次ノード
 			T* instance = nullptr; //!< 管理対象インスタンス
@@ -196,6 +199,7 @@ namespace Amuse::Core {
 
 	template<class T, class Deleter = std::default_delete<T>>
 	//! @brief 同期付きハンドルマネージャを表す。
+	//! @ingroup AmuseCore
 	class SyncHandleManager {
 	public:
 		//! @brief manager_type 型のエイリアス。
@@ -204,6 +208,7 @@ namespace Amuse::Core {
 		using handle_type = typename manager_type::Handle;
 	public:
 		//! @brief ハンドル用ハッシュ関数を表す。
+		//! @ingroup AmuseCore
 		struct Hasher {
 			//! @brief 関数オブジェクトとして呼び出す。
 			size_t operator()(const handle_type& handle)const {

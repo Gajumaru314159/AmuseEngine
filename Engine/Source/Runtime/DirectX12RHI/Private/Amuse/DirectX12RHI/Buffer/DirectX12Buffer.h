@@ -10,11 +10,10 @@
 #include <Amuse/DirectX12RHI/Descriptor/DescriptorHandle.h>
 #include "SmallBufferAllocator.h"
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief      バッファ
-	class DirectX12Buffer:public Amuse::RHI::Buffer {
+	//! @ingroup AmuseDirectX12RHI
+	class DirectX12Buffer:public Amuse::Buffer {
 	public:
 
 		//! @brief  コンストラクタ

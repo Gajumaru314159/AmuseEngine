@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -6,11 +6,12 @@
 #include <Amuse/Core/Math/Vector2.h>
 #include <Amuse/Core/Math/Math.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief      ビューポート
 	//! 
 	//! @details    全ての値は0～1に正規化された値です。
+	//! @ingroup AmuseCore
 	struct Viewport {
 	public:
 

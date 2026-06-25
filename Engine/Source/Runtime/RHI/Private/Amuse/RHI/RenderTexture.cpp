@@ -5,9 +5,7 @@
 #include <Amuse/RHI/RenderTexture.h>
 #include <Amuse/RHI/RHI.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief          生成
     Ref<RenderTexture> RenderTexture::Create(const RenderTextureDesc& desc) {
         if (auto device = Device::Get()) {

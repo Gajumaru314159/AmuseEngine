@@ -4,7 +4,7 @@
 //***********************************************************
 #include <Amuse/DirectX12RHI/Descriptor/DirectX12DescriptorLayout.h>
 
-namespace Amuse::RHI
+namespace Amuse
 {
 
 	//! @brief コンストラクタ

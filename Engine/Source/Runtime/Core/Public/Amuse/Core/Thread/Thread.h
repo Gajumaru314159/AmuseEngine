@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -7,9 +7,10 @@
 #include <Amuse/Core/String/String.h>
 #include <Amuse/Core/Utility/Noncopyable.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief スレッド生成時に指定する実行優先度。
+	//! @ingroup AmuseCore
 	enum class ThreadPriority : u32 {
 		Level1,	//!< Critical
 		Level2,	//!< Highest
@@ -20,6 +21,7 @@ namespace Amuse::Core {
 	};
 
 	//! @brief スレッドの実行条件を指定する設定。
+	//! @ingroup AmuseCore
 	struct ThreadDesc {
 		u32 affinity = 0xFFFFFFFF; //!< スレッドアフィニティ
 		ThreadPriority priority = ThreadPriority::Level3; //!< スレッド優先度
@@ -30,6 +32,7 @@ namespace Amuse::Core {
 	};
 
 	//! @brief  スレッド
+	//! @ingroup AmuseCore
 	class Thread : Noncopyable {
 	public:
 

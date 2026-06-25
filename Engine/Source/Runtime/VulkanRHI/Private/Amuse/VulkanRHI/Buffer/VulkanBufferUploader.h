@@ -9,9 +9,7 @@
 #include <Amuse/Core/Utility/Swapper.h>
 #include <Amuse/RHI/CommandList.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	class VulkanDevice;
 
     //! @brief  バッファ・アップローダー
@@ -20,6 +18,7 @@ namespace Amuse::RHI {
     //! CPUからデータを書き込めるGPUリソースは読み取り速度に制限がかかるため、
     //! 書き込み用のステージングバッファに書き込んだものをまとめてハイパフォーマンスなバッファにコピーします。
     //! コピー処理はフレームの先頭に行われます。必ず毎フレーム描画処理より前に実行してください。         
+    //! @ingroup AmuseVulkanRHI
     class VulkanBufferUploader {
     public:
 
@@ -40,6 +39,7 @@ namespace Amuse::RHI {
 
         // コピーリクエストごとの
         // バッファの寿命はBufferImplが保証し、かつGraphicObjectManagerが数フレームの寿命延長を行っているためvk::Bufferでの受け取りで問題ない
+        //! @ingroup AmuseVulkanRHI
         struct Request {
             vk::Buffer source;
             vk::Buffer dest;
@@ -48,6 +48,7 @@ namespace Amuse::RHI {
             UINT64 size;
         };
 
+        //! @ingroup AmuseVulkanRHI
         struct FrameBlock {
             vk::raii::Buffer buffer = nullptr;
             vk::raii::DeviceMemory memory = nullptr;
@@ -58,6 +59,7 @@ namespace Amuse::RHI {
 			}
         };
 
+        //! @ingroup AmuseVulkanRHI
         struct FrameData {
 			s32                 blockIndex = -1;
             Vector<FrameBlock>  blocks;

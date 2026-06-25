@@ -4,9 +4,7 @@
 //***********************************************************
 #include <Amuse/RHI/Types/BlendDesc.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 #define SHARED_STATE        \
         BlendFactor::One,   \
         BlendFactor::Zero,  \

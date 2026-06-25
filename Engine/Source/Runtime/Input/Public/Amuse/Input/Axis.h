@@ -10,10 +10,9 @@
 //! @brief	ボタン定義マクロ
 #define AMUSE_DECL_AXIS(type,name) static constexpr Axis name{ ID,type::name };
 
-namespace Amuse::Input {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief  軸
+	//! @ingroup AmuseInput
 	class Axis {
 	public:
 

@@ -1,10 +1,10 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #include <Amuse/Core/Reflection/AnyContainer.h>
 
-using namespace Amuse::Core;
+using namespace Amuse;
 
 TEST(AnyContainer, Get) {
 

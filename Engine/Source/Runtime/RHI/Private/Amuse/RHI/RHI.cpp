@@ -5,9 +5,7 @@
 #include <Amuse/RHI/RHI.h>
 #include <Amuse/RHI/GraphicObjectManager.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief  コンストラクタ
     Device::Device(GraphicObjectManager& manager, const RHIConfig* config)
         : m_config(config? *config:RHIConfig())

@@ -14,10 +14,9 @@
 #include <Amuse/RHI/Types/DescriptorLayoutDesc.h>
 #include <Amuse/RHI/Types/VertexLayout.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief  DirectXの内部型変換
+    //! @ingroup AmuseDirectX12RHI
     class TypeConverter {
     public:
 

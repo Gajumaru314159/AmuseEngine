@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -12,9 +12,10 @@
 #	define AMUSE_DEBUG_SPIN_LOCK_CONTEX(contex)	/**/
 #endif
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief  スピンロック
+    //! @ingroup AmuseCore
     class SpinLock : Noncopyable {
     public:
 
@@ -35,6 +36,7 @@ namespace Amuse::Core {
 
     private:
 
+        //! @ingroup AmuseCore
         struct Impl {
             std::atomic<bool> m_lock;
             AMUSE_DEBUG_SPIN_LOCK_CONTEX(

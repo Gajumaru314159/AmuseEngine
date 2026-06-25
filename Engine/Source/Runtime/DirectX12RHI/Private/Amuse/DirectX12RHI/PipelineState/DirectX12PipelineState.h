@@ -13,8 +13,7 @@
 //===============================================================
 // 前方宣言
 //===============================================================
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
+namespace Amuse {
     class DirectX12Device;
 }
 
@@ -22,10 +21,9 @@ namespace Amuse::RHI {
 //===============================================================
 // クラス定義
 //===============================================================
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief		グラフィック・パイプライン実装(DirectX12)
+    //! @ingroup AmuseDirectX12RHI
     class DirectX12PipelineState :public PipelineState {
     public:
 

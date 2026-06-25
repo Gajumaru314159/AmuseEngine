@@ -28,8 +28,7 @@
 
 #include <Amuse/VulkanRHI/Utility/Utility.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
+namespace Amuse {
 	class VulkanDevice;
 }
 

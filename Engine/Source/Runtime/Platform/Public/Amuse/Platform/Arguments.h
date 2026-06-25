@@ -5,10 +5,9 @@
 #pragma once
 #include <Amuse/Core/Core.h>
 
-namespace Amuse::Platform {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief コマンドライン引数
+    //! @ingroup AmusePlatform
     class Arguments {
     public:
         using container_type = Vector<String>;                       //!< 引数コンテナ

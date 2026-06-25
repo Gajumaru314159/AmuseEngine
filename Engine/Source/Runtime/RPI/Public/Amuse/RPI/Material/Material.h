@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -7,17 +7,18 @@
 #include <Amuse/RPI/Material/MaterialDesc.h>
 #include <Amuse/RPI/Material/MaterialBlock.h>
 
-namespace Amuse::RPI {
+namespace Amuse {
 
 	class MaterialShader;
 	struct MaterialBlockSet;
 
 	//! @brief  マテリアル
+	//! @ingroup AmuseRPI
 	class Material : public RefObject {
 	public:
-		using Texture = Amuse::RHI::Texture; //!< テクスチャ型
-		using Sampler = Amuse::RHI::Sampler; //!< サンプラ型
-		using Buffer = Amuse::RHI::Buffer; //!< バッファ型
+		using Texture = Amuse::Texture; //!< テクスチャ型
+		using Sampler = Amuse::Sampler; //!< サンプラ型
+		using Buffer = Amuse::Buffer; //!< バッファ型
 	public:
 
 		//! @brief  生成
@@ -62,7 +63,7 @@ namespace Amuse::RPI {
 		bool prepare(const Ref<Mesh>& mesh);
 
 		//! @brief 指定したメッシュサブセットの描画コマンドを記録する
-		void record(Ref<RHI::CommandList>& commandList, MaterialBlockSet& blocks, const Ref<Mesh>& mesh, s32 submesh, StringView pass, s32 quality = 0);
+		void record(Ref<CommandList>& commandList, MaterialBlockSet& blocks, const Ref<Mesh>& mesh, s32 submesh, StringView pass, s32 quality = 0);
 
 		//! @brief マテリアル固有ブロックを取得する
 		auto& getBlock() { return m_block;}

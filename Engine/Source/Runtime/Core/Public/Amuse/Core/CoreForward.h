@@ -1,10 +1,10 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author Gajumaru
 //***********************************************************
 #pragma once
 
-namespace Amuse::Core{
+namespace Amuse{
     class ServiceInjector;
     class ServiceContainer;
 

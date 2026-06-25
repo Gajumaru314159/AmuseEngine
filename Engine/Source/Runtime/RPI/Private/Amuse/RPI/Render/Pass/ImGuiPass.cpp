@@ -18,21 +18,17 @@
 #ifdef OS_WINDOWS
 #include <Windows.h>
 #endif
-
-using namespace Amuse::RHI;
-
 #pragma region
 
 //! @brief      ファイルオープン
 ImFileHandle ImFileOpen(const char* filename, const char* mode) {
-	using namespace Amuse::Core;
-	BitFlags<FileOpenMode> modes;
-	if (strchr(mode, 'r'))modes.on(FileOpenMode::Read);
-	if (strchr(mode, 'w'))modes.on(FileOpenMode::Write);
-	if (strchr(mode, 'a'))modes.on(FileOpenMode::Append);
-	if (strchr(mode, 'b') == nullptr)modes.on(FileOpenMode::Text);
+	Amuse::BitFlags<Amuse::FileOpenMode> modes;
+	if (strchr(mode, 'r'))modes.on(Amuse::FileOpenMode::Read);
+	if (strchr(mode, 'w'))modes.on(Amuse::FileOpenMode::Write);
+	if (strchr(mode, 'a'))modes.on(Amuse::FileOpenMode::Append);
+	if (strchr(mode, 'b') == nullptr)modes.on(Amuse::FileOpenMode::Text);
 	if (strchr(mode, '+'))LOG_FATAL("Not supported");// modes.on(FileOpenMode::Append);
-	return new Amuse::Core::File(filename, modes.get_enum());
+	return new Amuse::File(filename, modes.get_enum());
 }
 //! @brief      ファイルクローズ
 bool ImFileClose(ImFileHandle file) {
@@ -41,18 +37,18 @@ bool ImFileClose(ImFileHandle file) {
 	return true;
 }
 //! @brief      ファイルサイズ取得
-Amuse::Core::u64 ImFileGetSize(ImFileHandle file) {
+Amuse::u64 ImFileGetSize(ImFileHandle file) {
 	return file ? file->size() : 0;
 }
 //! @brief      ファイル読み込み
-Amuse::Core::u64 ImFileRead(void* data, Amuse::Core::u64 size, Amuse::Core::u64 count, ImFileHandle file) {
+Amuse::u64 ImFileRead(void* data, Amuse::u64 size, Amuse::u64 count, ImFileHandle file) {
 	if (!file)return 0;
 	if (file->canRead() == false)return 0;
 	file->read(data, size * count);
 	return size * count;
 }
 //! @brief      ファイル書き込み
-Amuse::Core::u64 ImFileWrite(const void* data, Amuse::Core::u64 size, Amuse::Core::u64 count, ImFileHandle file) {
+Amuse::u64 ImFileWrite(const void* data, Amuse::u64 size, Amuse::u64 count, ImFileHandle file) {
 	if (!file)return 0;
 	if (file->canWrite() == false)return 0;
 	file->write(data, size * count);
@@ -61,7 +57,7 @@ Amuse::Core::u64 ImFileWrite(const void* data, Amuse::Core::u64 size, Amuse::Cor
 
 #pragma endregion
 
-namespace Amuse::RPI {
+namespace Amuse {
 
 	struct BackendData
 	{
@@ -142,7 +138,7 @@ namespace Amuse::RPI {
 		if (data->WantVisible) {
 #ifdef OS_WINDOWS
 			// TODO ウィンドウごとにIMEコンテキストが異なる
-			if (auto window = Platform::Window::Main(); window && window->isValid()) {
+			if (auto window = Window::Main(); window && window->isValid()) {
 				HIMC hIMC = ImmGetContext((HWND)window->getHandle());
 				COMPOSITIONFORM d;
 				d.dwStyle = CFS_POINT;
@@ -211,7 +207,7 @@ namespace Amuse::RPI {
 
 }
 
-namespace Amuse::RPI {
+namespace Amuse {
 
 
 	struct ImGuiData {
@@ -235,10 +231,10 @@ namespace Amuse::RPI {
 		bool update(RenderView& view);
 
 		//! @brief      マウス更新
-		void updateMouse(const Ref<Platform::Window>& window);
+		void updateMouse(const Ref<Window>& window);
 
 		//! @brief      キーボード更新
-		void updateKeyboard(const Ref<Platform::Window>& window);
+		void updateKeyboard(const Ref<Window>& window);
 
 		//! @brief      時間更新
 		void updateTime();
@@ -252,28 +248,28 @@ namespace Amuse::RPI {
 		struct DrawCommand {
 			IntRect					rect;
 			ImTextureID				texture;
-			RHI::DrawIndexedParam	param;
+			DrawIndexedParam	param;
 		};
 
 		ImGuiContext* m_imguiContext;
 		ImPlotContext* m_implotContext;
 		void* m_fontBlob = nullptr;
 
-		Amuse::Core::DateTime          m_time;
+		Amuse::DateTime          m_time;
 
 		Vector<DrawCommand>			m_commands;
 
 		size_t						m_vertexCount = 0;
 		size_t                      m_indexCount = 0;
 
-		Ref<RHI::DescriptorLayout>	m_layout;
-		Ref<RHI::DescriptorTable>   m_table;
-		Ref<RHI::RootSignature>		m_signature;
-		Ref<RHI::PipelineState>		m_pipeline;
-		Ref<RHI::Buffer>			m_vertexBuffer;
-		Ref<RHI::Buffer>			m_indexBuffer;
-		Ref<RHI::Buffer>            m_constantBuffer;
-		Ref<RHI::Texture>           m_fontTexture;
+		Ref<DescriptorLayout>	m_layout;
+		Ref<DescriptorTable>   m_table;
+		Ref<RootSignature>		m_signature;
+		Ref<PipelineState>		m_pipeline;
+		Ref<Buffer>			m_vertexBuffer;
+		Ref<Buffer>			m_indexBuffer;
+		Ref<Buffer>            m_constantBuffer;
+		Ref<Texture>           m_fontTexture;
 
 		ImGuiNotifier				m_notifier;
 	};
@@ -329,9 +325,6 @@ namespace Amuse::RPI {
 	//! @details	RootSignatureやシェーダはRenderFeatureで共用することも可能。
 	//!				実装をシンプルにするためView毎に生成しています。
 	void ImGuiData::initializeResource() {
-
-		using namespace Amuse::RHI;
-
 		{
 			m_layout = DescriptorLayout::Create({ Binding::Texture(0),Binding::Sampler(1),Binding::ConstantBuffer(2) });
 
@@ -451,7 +444,7 @@ namespace Amuse::RPI {
 			}
 
 			// グラフィックリソース生成
-			m_fontTexture = RHI::Texture::Create("ImGuiFont", TextureType::Texture2D, Size(width, height), colors);
+			m_fontTexture = Texture::Create("ImGuiFont", TextureType::Texture2D, Size(width, height), colors);
 			m_table->setResource(0, m_fontTexture);
 			m_table->setResource(1, Sampler::Default());
 		}
@@ -501,10 +494,8 @@ namespace Amuse::RPI {
 	}
 
 	//! @brief      マウス更新
-	void ImGuiData::updateMouse(const Ref<Platform::Window>& window)
+	void ImGuiData::updateMouse(const Ref<Window>& window)
 	{
-		using namespace Amuse::Input;
-		using namespace Amuse::Platform;
 		ImGuiIO& io = ::ImGui::GetIO();
 		BackendData* bd = GetBackendData();
 
@@ -520,12 +511,12 @@ namespace Amuse::RPI {
 			io.AddMousePosEvent((float)pos.x, (float)pos.y);
 
 			// ボタン入力
-			if (Input::Mouse::Left.down())	io.AddMouseButtonEvent(0, true);
-			if (Input::Mouse::Left.up())	io.AddMouseButtonEvent(0, false);
-			if (Input::Mouse::Right.down())	io.AddMouseButtonEvent(1, true);
-			if (Input::Mouse::Right.up())	io.AddMouseButtonEvent(1, false);
-			if (Input::Mouse::Middle.down())io.AddMouseButtonEvent(2, true);
-			if (Input::Mouse::Middle.up())	io.AddMouseButtonEvent(2, false);
+			if (Mouse::Left.down())	io.AddMouseButtonEvent(0, true);
+			if (Mouse::Left.up())	io.AddMouseButtonEvent(0, false);
+			if (Mouse::Right.down())	io.AddMouseButtonEvent(1, true);
+			if (Mouse::Right.up())	io.AddMouseButtonEvent(1, false);
+			if (Mouse::Middle.down())io.AddMouseButtonEvent(2, true);
+			if (Mouse::Middle.up())	io.AddMouseButtonEvent(2, false);
 
 			// ホイール
 			if (auto value = Mouse::WheelX.value(); value != 0.0f) io.AddMouseWheelEvent(value, 0);
@@ -535,10 +526,7 @@ namespace Amuse::RPI {
 	}
 
 	//! @brief      キーボード更新
-	void ImGuiData::updateKeyboard(const Ref<Platform::Window>& window) {
-
-		using namespace Amuse::Input;
-
+	void ImGuiData::updateKeyboard(const Ref<Window>& window) {
 		// NOTE 同時押し対応が必要？
 		struct KeyMap { Key from; ImGuiKey to; };
 		static const KeyMap keyMap[]{
@@ -687,9 +675,6 @@ namespace Amuse::RPI {
 
 	//! @brief		バッファ更新
 	void ImGuiData::updateBuffer() {
-
-		using namespace Amuse::RHI;
-
 		const auto overAllocVertexSize = 5000;
 		const auto overAllocIndexSize = 5000;
 
@@ -824,10 +809,7 @@ namespace Amuse::RPI {
 			[&](FGBuilder& builder, Output& output) {
 				output.color = builder.write(input.color);
 			},
-			[&](const Output& data, FGResources& resources, Ref<RHI::CommandList>& cmdList) {
-
-				using namespace Amuse::RHI;
-
+			[&](const Output& data, FGResources& resources, Ref<CommandList>& cmdList) {
 				auto& imgui = view.get<ImGuiData>();
 
 				auto texture = resources.getTexture(data.color);
@@ -844,7 +826,7 @@ namespace Amuse::RPI {
 				cmdList->setVertexBuffer(imgui.m_vertexBuffer);
 				cmdList->setIndexBuffer(imgui.m_indexBuffer);
 
-				RHI::SetDescriptorTableParam param = { imgui.m_table,0 };
+				SetDescriptorTableParam param = { imgui.m_table,0 };
 				cmdList->setDescriptorTables(&param, 1);
 
 

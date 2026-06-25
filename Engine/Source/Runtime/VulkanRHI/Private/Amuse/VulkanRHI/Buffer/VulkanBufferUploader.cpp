@@ -6,7 +6,7 @@
 #include <Amuse/VulkanRHI/VulkanDevice.h>
 #include <Amuse/VulkanRHI/Command/VulkanCommandList.h>
 
-namespace Amuse::RHI
+namespace Amuse
 {
 
 	//! @brief  コンストラクタ

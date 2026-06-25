@@ -7,9 +7,7 @@
 #include <Amuse/Platform/Window/Implement/Windows/WindowsWindow.h>
 #include <Amuse/Platform/Window/Implement/Linux/LinuxWindow.h>
 
-namespace Amuse::Platform {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief      ウィンドウを生成
     Ref<Window> Window::Create(const WindowDesc& desc) {
 #include <Amuse/Core/Core.h>

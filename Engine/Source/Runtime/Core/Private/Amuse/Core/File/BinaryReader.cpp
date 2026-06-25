@@ -1,11 +1,11 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #include <Amuse/Core/File/BinaryReader.h>
 #include <Amuse/Core/File/Stream.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief  コンストラクタ
 	//! 

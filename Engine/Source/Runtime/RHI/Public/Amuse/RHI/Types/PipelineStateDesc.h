@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -12,12 +12,11 @@
 #include <Amuse/RHI/Types/Topology.h>
 #include <Amuse/RHI/Types/TextureFormat.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief		サンプリング定義
 	//! 
 	//! @details	描画速度に直結するため、アンチエイリアシングの使用を検討してください。
+	//! @ingroup AmuseRHI
 	struct SampleDesc {
 		s32 count	=1;		//!< ピクセル当たりのマルチサンプル数
 		s32 quality =0;		//!< 品質
@@ -27,6 +26,7 @@ namespace Amuse::RHI {
 	using RenderTargetFormatArray = FixedVector<TextureFormat, RENDER_TARGET_MAX>;
 
 	//! @brief  パイプラインステート定義
+	//! @ingroup AmuseRHI
 	struct PipelineStateDesc {
 		
 		String					name;							//!< 名前

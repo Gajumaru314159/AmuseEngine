@@ -8,10 +8,9 @@
 #include <Amuse/RHI/GraphicObject.h>
 #include <Amuse/RHI/Types/VertexLayout.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief      頂点レイアウト
+	//! @ingroup AmuseRHI
 	class VertexLayout : public GraphicObject {
 	public:
 

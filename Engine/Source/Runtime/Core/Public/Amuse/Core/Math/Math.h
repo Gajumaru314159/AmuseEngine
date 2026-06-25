@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author Gajumaru
 //***********************************************************
@@ -9,9 +9,10 @@
 #include <gsl/gsl>
 #include <Amuse/Core/CorePrivate.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief f32型算術演算
+    //! @ingroup AmuseCore
     class Math {
     public:
 

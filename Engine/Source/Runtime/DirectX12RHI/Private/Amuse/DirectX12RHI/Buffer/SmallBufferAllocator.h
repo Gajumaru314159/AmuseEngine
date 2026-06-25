@@ -11,18 +11,17 @@
 #include <d3d12.h>
 #include <wrl/client.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	using Microsoft::WRL::ComPtr;
-	using Amuse::Core::TLSFMapper;
-	using Amuse::Core::TLSFBlock;
+	using Amuse::TLSFMapper;
+	using Amuse::TLSFBlock;
 
 	// 前方宣言
 	class SmallBufferAllocator;
 
 
 	//! @brief バッファ確保情報
+	//! @ingroup AmuseDirectX12RHI
 	struct BufferAllocation {
 		ComPtr<ID3D12Resource> resource;			//!< DirectX12リソース
 		size_t offset = 0;							//!< ビュー開始オフセット
@@ -36,6 +35,7 @@ namespace Amuse::RHI {
 	//!
 	//! @details D3D12_DEFAULT_RESOURCE_PLACEMENT_ALIGNMENT以下の
 	//!          小さなバッファを効率的に管理するアロケーター
+	//! @ingroup AmuseDirectX12RHI
 	class SmallBufferAllocator : private Noncopyable {
 	public:
 
@@ -64,6 +64,7 @@ namespace Amuse::RHI {
 	private:
 
 		//! @brief バッファチャンク
+		//! @ingroup AmuseDirectX12RHI
 		struct BufferChunk {
 			ComPtr<ID3D12Resource> resource;  //!< 64KBリソース
 			TLSFMapper mapper;               //!< メモリマッパー

@@ -9,9 +9,7 @@
 #include <Amuse/DirectX12RHI/Utility/TypeConverter.h>
 #include <Amuse/DirectX12RHI/Descriptor/DirectX12DescriptorLayout.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief  コンストラクタ
 	DirectX12RootSignature::DirectX12RootSignature(DirectX12Device& device, const RootSignatureDesc& desc)
 		: m_desc(desc)

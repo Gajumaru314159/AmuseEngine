@@ -1,11 +1,11 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <cassert>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @cond
 	template<class>
@@ -14,6 +14,7 @@ namespace Amuse::Core {
 
     //! @brief      Ownerのみをキャプチャできる軽量デリゲート
     //!	@details    通常のデリゲートよりも軽量ですが、ラムダ式のように変数をキャプチャすることはできません。
+    //! @ingroup AmuseCore
     template<class R, class... Args>
     class MiniDelegate<R(Args...)> {
     public:
@@ -96,6 +97,7 @@ namespace Amuse::Core {
 
     private:
 
+        //! @ingroup AmuseCore
         struct BaseInvoker {
             virtual ~BaseInvoker() = default;
             virtual R invoke(Args... args) const = 0;
@@ -109,6 +111,7 @@ namespace Amuse::Core {
             }
         };
 
+        //! @ingroup AmuseCore
         template<class T>
         struct Invoker : public BaseInvoker {
             using SIG = R(T::*)(Args...);
@@ -120,6 +123,7 @@ namespace Amuse::Core {
             }
         };
 
+        //! @ingroup AmuseCore
         template<class T>
         struct ConstInvoker : public BaseInvoker {
             using SIG = R(T::*)(Args...) const;

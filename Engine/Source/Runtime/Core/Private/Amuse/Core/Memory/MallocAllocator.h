@@ -10,9 +10,10 @@
 #include <malloc.h>
 #endif
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief malloc/freeベースのアロケーター
+    //! @ingroup AmuseCore
     class MallocAllocator : public Allocator {
     public:
         //! @brief メモリを確保する

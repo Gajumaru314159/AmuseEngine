@@ -5,20 +5,20 @@
 #include <RHITestBase.h>
 #include <magic_enum.hpp>
 
-using namespace Amuse::Core;
-using namespace Amuse::RHI;
+using namespace Amuse;
+using namespace Amuse;
 
 TYPED_TEST(RHITest, Triangle_Test) {
 
-	using namespace Amuse::RHI;
+	using namespace Amuse;
 
 
 	{
 
 		// ウィンドウ生成
-		Amuse::Platform::WindowDesc windowDesc;
+		Amuse::WindowDesc windowDesc;
 		windowDesc.title = "Graphic Test";
-		auto window = Amuse::Platform::Window::Create(windowDesc); window->show();
+		auto window = Amuse::Window::Create(windowDesc); window->show();
 
 
 		// ディスプレイ

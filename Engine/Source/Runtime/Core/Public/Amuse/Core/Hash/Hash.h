@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -6,9 +6,10 @@
 #include <Amuse/Core/CorePrivate.h>
 #include <Amuse/Core/String/StringView.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief  ハッシュ
+	//! @ingroup AmuseCore
 	class Hash {
 	public:
 
@@ -105,9 +106,9 @@ namespace Amuse::Core {
 
 
 //! @brief  FNV-1aによる文字列の32bitハッシュ化
-#define AMUSE_FNV32(str) (ConstValue<u32,Amuse::Core::Hash::FNV32(str)>::value)
+#define AMUSE_FNV32(str) (ConstValue<u32,Amuse::Hash::FNV32(str)>::value)
 //! @brief  FNV-1aによる文字列の64bitハッシュ化
-#define AMUSE_FNV64(str) (ConstValue<u64,Amuse::Core::Hash::FNV64(str)>::value)
+#define AMUSE_FNV64(str) (ConstValue<u64,Amuse::Hash::FNV64(str)>::value)
 
 
 //! @brief  文字列の32bitハッシュ化

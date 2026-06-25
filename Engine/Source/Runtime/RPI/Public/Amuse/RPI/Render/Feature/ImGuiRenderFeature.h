@@ -1,13 +1,14 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/RPI/Render/RenderFeature.h>
 
-namespace Amuse::RPI {
+namespace Amuse {
 
 	//! @brief      ImGui描画機能
+	//! @ingroup AmuseRPI
 	class ImGuiRenderFeature : public RenderFeature {
 	public:
 

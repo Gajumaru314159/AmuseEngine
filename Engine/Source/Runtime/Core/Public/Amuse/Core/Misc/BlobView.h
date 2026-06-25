@@ -1,15 +1,16 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/Core/Misc/Blob.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief バイナリデータビュー(Binary Large Object View)
     //! 
     //! @details    Blob と異なり、内部にバイト列のコピーを持ちません。
+    //! @ingroup AmuseCore
     class BlobView {
     public:
 

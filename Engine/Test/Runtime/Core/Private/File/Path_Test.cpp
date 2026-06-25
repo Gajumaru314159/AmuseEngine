@@ -1,11 +1,11 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #include <gtest/gtest.h>
 #include <Amuse/Core/File/Path.h>
 
-using namespace Amuse::Core;
+using namespace Amuse;
 
 TEST(Path, Combine)
 {

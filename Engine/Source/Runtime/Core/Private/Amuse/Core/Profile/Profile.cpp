@@ -1,11 +1,11 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #include <Amuse/Core/Profile/Profile.h>
 #include <tracy/TracyC.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     void BeginProfile() {
 #if TRACY_MANUAL_LIFETIME

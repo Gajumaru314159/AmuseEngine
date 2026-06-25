@@ -1,18 +1,19 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/Core/CorePrivate.h>
 
-namespace Amuse::Core {
+namespace Amuse {
     struct Vec3;
 }
 
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! 圧縮浮動小数点ユーティリティ
+    //! @ingroup AmuseCore
     class FloatCompression {
     public:
 

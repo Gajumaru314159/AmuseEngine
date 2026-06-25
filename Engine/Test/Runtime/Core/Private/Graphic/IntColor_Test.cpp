@@ -1,10 +1,10 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #include <Amuse/Core/Graphic/IntColor.h>
 
-using namespace Amuse::Core;
+using namespace Amuse;
 
 TEST(IntColor, Constructor)
 {

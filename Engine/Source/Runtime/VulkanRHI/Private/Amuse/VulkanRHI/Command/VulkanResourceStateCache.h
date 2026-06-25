@@ -7,10 +7,9 @@
 #include <Amuse/Core/Core.h>
 #include <Amuse/RHI/Types/Barrier.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief  リソースステート・キャッシュ
+    //! @ingroup AmuseVulkanRHI
     class VulkanResourceStateCache {
     public:
 

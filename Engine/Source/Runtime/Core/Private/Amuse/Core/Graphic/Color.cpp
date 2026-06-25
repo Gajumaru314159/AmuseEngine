@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -9,7 +9,7 @@
 #include <Amuse/Core/Math/Math.h>
 #include <Amuse/Core/Math/Vectors.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     const Color Color::White = { 1,1,1,1 };
     const Color Color::Gray = { 0.5,0.5,0.5,1 };

@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -11,7 +11,7 @@
 #include <Amuse/Core/Utility/Noncopyable.h>
 #include <Amuse/Core/Utility/Nonmovable.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 
     //! @brief          ハンドル管理式単方向連結リスト
@@ -23,8 +23,8 @@ namespace Amuse::Core {
     //!                 <br> 
     //!                 使用方法：<br> 
     //! ```
-    //!                 Amuse::Core::HandleForwardList<Amuse::Core::s32> ls;
-    //!                 using Handle =  Amuse::Core::HandleForwardList<Amuse::Core::s32>::Handle;
+    //!                 Amuse::HandleForwardList<Amuse::s32> ls;
+    //!                 using Handle =  Amuse::HandleForwardList<Amuse::s32>::Handle;
     //!                 {
     //!                     Handle Handle;
     //!                     ls.emplace_front(Handle,123);
@@ -32,6 +32,7 @@ namespace Amuse::Core {
     //!                 }
     //!                 std::cout<<ls.size()<<std::endl;    // 0
     //! ```
+    //! @ingroup AmuseCore
     template<typename T>
     class HandleForwardList :Noncopyable {
     public:
@@ -60,6 +61,7 @@ namespace Amuse::Core {
 
 
         //! @brief ハンドル
+        //! @ingroup AmuseCore
         class Handle :public HandleBase, private Noncopyable, private Nonmovable {
             friend class HandleForwardList;
         public:
@@ -110,6 +112,7 @@ namespace Amuse::Core {
 
 
         //! @brief constイテレータ
+        //! @ingroup AmuseCore
         class const_iterator {
             friend class HandleForwardList;
         public:
@@ -138,6 +141,7 @@ namespace Amuse::Core {
 
 
         //! @brief イテレータ
+        //! @ingroup AmuseCore
         class iterator :public const_iterator {
             friend class HandleForwardList;
         public:

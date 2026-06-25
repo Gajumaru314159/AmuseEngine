@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -7,7 +7,7 @@
 #include <cstring>
 #include <utility>
 
-namespace Amuse::Core::CAPI {
+namespace Amuse {
 
     //! @brief sscanf の安全ラッパー（MSVCのセキュリティ警告対策）
     template<class... Args>

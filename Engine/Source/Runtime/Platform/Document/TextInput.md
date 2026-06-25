@@ -18,14 +18,14 @@ TextInputは、キーボード入力から文字列編集結果を取得する�
 String text = "Player";
 size_t cursor = text.size();
 
-cursor = Platform::TextInput::UpdateText(
+cursor = TextInput::UpdateText(
     text,
     cursor,
-    Platform::TextInputMode::Default
+    TextInputMode::Default
 );
 
-String committed = Platform::TextInput::GetText();
-String editing = Platform::TextInput::GetEditingText();
+String committed = TextInput::GetText();
+String editing = TextInput::GetEditingText();
 ```
 
 ## API

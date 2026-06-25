@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -16,7 +16,7 @@ namespace ImGui {
         //! @brief  ImGui::DrawFloatのVecラッパー
         //@―---------------------------------------------------------------------------
         //! @{
-        inline bool DragFloat2(const char* label, Amuse::Core::Vec2& v, float v_speed = 1.0f, float v_min = 0.0f, float v_max = 0.0f, const char* format = "%.3f", ImGuiSliderFlags flags = 0) {
+        inline bool DragFloat2(const char* label, Amuse::Vec2& v, float v_speed = 1.0f, float v_min = 0.0f, float v_max = 0.0f, const char* format = "%.3f", ImGuiSliderFlags flags = 0) {
             float values[] = { v.x,v.y };
             if (::ImGui::DragFloat2(label, values, v_speed, v_min, v_max, format, flags)) {
                 v.x = values[0];
@@ -25,7 +25,7 @@ namespace ImGui {
             }
             return false;
         }
-        inline bool DragFloat3(const char* label, Amuse::Core::Vec3& v, float v_speed = 1.0f, float v_min = 0.0f, float v_max = 0.0f, const char* format = "%.3f", ImGuiSliderFlags flags = 0) {
+        inline bool DragFloat3(const char* label, Amuse::Vec3& v, float v_speed = 1.0f, float v_min = 0.0f, float v_max = 0.0f, const char* format = "%.3f", ImGuiSliderFlags flags = 0) {
             float values[] = { v.x,v.y,v.z };
             if (::ImGui::DragFloat3(label, values, v_speed, v_min, v_max, format, flags)) {
                 v.x = values[0];
@@ -35,7 +35,7 @@ namespace ImGui {
             }
             return false;
         }
-        inline bool DragFloat4(const char* label, Amuse::Core::Vec4& v, float v_speed = 1.0f, float v_min = 0.0f, float v_max = 0.0f, const char* format = "%.3f", ImGuiSliderFlags flags = 0) {
+        inline bool DragFloat4(const char* label, Amuse::Vec4& v, float v_speed = 1.0f, float v_min = 0.0f, float v_max = 0.0f, const char* format = "%.3f", ImGuiSliderFlags flags = 0) {
             float values[] = { v.x,v.y,v.z,v.w };
             if (::ImGui::DragFloat4(label, values, v_speed, v_min, v_max, format, flags)) {
                 v.x = values[0];
@@ -53,7 +53,7 @@ namespace ImGui {
         //! @brief  ImGui::DrawIntのVecラッパー
         //@―---------------------------------------------------------------------------
         //! @{
-        inline bool DragInt2(const char* label, Amuse::Core::IntVec2& v, float v_speed = 1.0f, int v_min = 0, int v_max = 0, const char* format = "%d", ImGuiSliderFlags flags = 0) {
+        inline bool DragInt2(const char* label, Amuse::IntVec2& v, float v_speed = 1.0f, int v_min = 0, int v_max = 0, const char* format = "%d", ImGuiSliderFlags flags = 0) {
             int values[] = { v.x,v.y };
             if (::ImGui::DragInt2(label, values, v_speed, v_min, v_max, format, flags)) {
                 v.x = values[0];
@@ -62,7 +62,7 @@ namespace ImGui {
             }
             return false;
         }
-        inline bool DragInt3(const char* label, Amuse::Core::IntVec3& v, float v_speed = 1.0f, int v_min = 0, int v_max = 0, const char* format = "%d", ImGuiSliderFlags flags = 0) {
+        inline bool DragInt3(const char* label, Amuse::IntVec3& v, float v_speed = 1.0f, int v_min = 0, int v_max = 0, const char* format = "%d", ImGuiSliderFlags flags = 0) {
             int values[] = { v.x,v.y,v.z };
             if (::ImGui::DragInt3(label, values, v_speed, v_min, v_max, format, flags)) {
                 v.x = values[0];
@@ -72,7 +72,7 @@ namespace ImGui {
             }
             return false;
         }
-        inline bool DragInt4(const char* label, Amuse::Core::IntVec4& v, float v_speed = 1.0f, int v_min = 0, int v_max = 0, const char* format = "%d", ImGuiSliderFlags flags = 0) {
+        inline bool DragInt4(const char* label, Amuse::IntVec4& v, float v_speed = 1.0f, int v_min = 0, int v_max = 0, const char* format = "%d", ImGuiSliderFlags flags = 0) {
             int values[] = { v.x,v.y,v.z,v.w };
             if (::ImGui::DragInt4(label, values, v_speed, v_min, v_max, format, flags)) {
                 v.x = values[0];
@@ -90,7 +90,7 @@ namespace ImGui {
         //! @brief  ImGui::SliderFloatのVecラッパー
         //@―---------------------------------------------------------------------------
         //! @{
-        inline bool SliderFloat2(const char* label, Amuse::Core::Vec2& v, float v_min = 0.0f, float v_max = 0.0f, const char* format = "%.3f", ImGuiSliderFlags flags = 0) {
+        inline bool SliderFloat2(const char* label, Amuse::Vec2& v, float v_min = 0.0f, float v_max = 0.0f, const char* format = "%.3f", ImGuiSliderFlags flags = 0) {
             float values[] = { v.x,v.y };
             if (::ImGui::SliderFloat2(label, values, v_min, v_max, format, flags)) {
                 v.x = values[0];
@@ -99,7 +99,7 @@ namespace ImGui {
             }
             return false;
         }
-        inline bool SliderFloat3(const char* label, Amuse::Core::Vec3& v, float v_min = 0.0f, float v_max = 0.0f, const char* format = "%.3f", ImGuiSliderFlags flags = 0) {
+        inline bool SliderFloat3(const char* label, Amuse::Vec3& v, float v_min = 0.0f, float v_max = 0.0f, const char* format = "%.3f", ImGuiSliderFlags flags = 0) {
             float values[] = { v.x,v.y,v.z };
             if (::ImGui::SliderFloat3(label, values, v_min, v_max, format, flags)) {
                 v.x = values[0];
@@ -109,7 +109,7 @@ namespace ImGui {
             }
             return false;
         }
-        inline bool SliderFloat4(const char* label, Amuse::Core::Vec4& v, float v_min = 0.0f, float v_max = 0.0f, const char* format = "%.3f", ImGuiSliderFlags flags = 0) {
+        inline bool SliderFloat4(const char* label, Amuse::Vec4& v, float v_min = 0.0f, float v_max = 0.0f, const char* format = "%.3f", ImGuiSliderFlags flags = 0) {
             float values[] = { v.x,v.y,v.z,v.w };
             if (::ImGui::SliderFloat4(label, values, v_min, v_max, format, flags)) {
                 v.x = values[0];
@@ -127,7 +127,7 @@ namespace ImGui {
         //! @brief  ImGui::SliderIntのVecラッパー
         //@―---------------------------------------------------------------------------
         //! @{
-        inline bool SliderInt2(const char* label, Amuse::Core::IntVec2& v, int v_min, int v_max, const char* format = "%d", ImGuiSliderFlags flags = 0) {
+        inline bool SliderInt2(const char* label, Amuse::IntVec2& v, int v_min, int v_max, const char* format = "%d", ImGuiSliderFlags flags = 0) {
             int values[] = { v.x,v.y };
             if (::ImGui::SliderInt2(label, values, v_min, v_max, format, flags)) {
                 v.x = values[0];
@@ -136,7 +136,7 @@ namespace ImGui {
             }
             return false;
         }
-        inline bool SliderInt3(const char* label, Amuse::Core::IntVec3& v, int v_min, int v_max, const char* format = "%d", ImGuiSliderFlags flags = 0) {
+        inline bool SliderInt3(const char* label, Amuse::IntVec3& v, int v_min, int v_max, const char* format = "%d", ImGuiSliderFlags flags = 0) {
             int values[] = { v.x,v.y,v.z };
             if (::ImGui::SliderInt3(label, values, v_min, v_max, format, flags)) {
                 v.x = values[0];
@@ -146,7 +146,7 @@ namespace ImGui {
             }
             return false;
         }
-        inline bool SliderInt4(const char* label, Amuse::Core::IntVec4& v, int v_min, int v_max, const char* format = "%d", ImGuiSliderFlags flags = 0) {
+        inline bool SliderInt4(const char* label, Amuse::IntVec4& v, int v_min, int v_max, const char* format = "%d", ImGuiSliderFlags flags = 0) {
             int values[] = { v.x,v.y,v.z,v.w };
             if (::ImGui::SliderInt4(label, values, v_min, v_max, format, flags)) {
                 v.x = values[0];
@@ -164,7 +164,7 @@ namespace ImGui {
         //! @brief  ImGui::InputFloatのVecラッパー
         //@―---------------------------------------------------------------------------
         //! @{
-        inline bool InputFloat2(const char* label, Amuse::Core::Vec2& v, const char* format = "%.3f", ImGuiInputTextFlags flags = 0) {
+        inline bool InputFloat2(const char* label, Amuse::Vec2& v, const char* format = "%.3f", ImGuiInputTextFlags flags = 0) {
             float values[] = { v.x,v.y };
             if (::ImGui::InputFloat2(label, values, format, flags)) {
                 v.x = values[0];
@@ -173,7 +173,7 @@ namespace ImGui {
             }
             return false;
         }
-        inline bool InputFloat3(const char* label, Amuse::Core::Vec3& v, const char* format = "%.3f", ImGuiInputTextFlags flags = 0) {
+        inline bool InputFloat3(const char* label, Amuse::Vec3& v, const char* format = "%.3f", ImGuiInputTextFlags flags = 0) {
             float values[] = { v.x,v.y,v.z };
             if (::ImGui::InputFloat3(label, values, format, flags)) {
                 v.x = values[0];
@@ -183,7 +183,7 @@ namespace ImGui {
             }
             return false;
         }
-        inline bool InputFloat4(const char* label, Amuse::Core::Vec4& v, const char* format = "%.3f", ImGuiInputTextFlags flags = 0) {
+        inline bool InputFloat4(const char* label, Amuse::Vec4& v, const char* format = "%.3f", ImGuiInputTextFlags flags = 0) {
             float values[] = { v.x,v.y,v.z,v.w };
             if (::ImGui::InputFloat4(label, values, format, flags)) {
                 v.x = values[0];
@@ -201,7 +201,7 @@ namespace ImGui {
         //! @brief  ImGui::InputIntのVecラッパー
         //@―---------------------------------------------------------------------------
         //! @{
-        inline bool InputInt2(const char* label, Amuse::Core::IntVec2& v, ImGuiInputTextFlags flags = 0) {
+        inline bool InputInt2(const char* label, Amuse::IntVec2& v, ImGuiInputTextFlags flags = 0) {
             int values[] = { v.x,v.y };
             if (::ImGui::InputInt2(label, values, flags)) {
                 v.x = values[0];
@@ -210,7 +210,7 @@ namespace ImGui {
             }
             return false;
         }
-        inline bool InputInt3(const char* label, Amuse::Core::IntVec3& v, ImGuiInputTextFlags flags = 0) {
+        inline bool InputInt3(const char* label, Amuse::IntVec3& v, ImGuiInputTextFlags flags = 0) {
             int values[] = { v.x,v.y,v.z };
             if (::ImGui::InputInt3(label, values, flags)) {
                 v.x = values[0];
@@ -220,7 +220,7 @@ namespace ImGui {
             }
             return false;
         }
-        inline bool InputInt4(const char* label, Amuse::Core::IntVec4& v, ImGuiInputTextFlags flags = 0) {
+        inline bool InputInt4(const char* label, Amuse::IntVec4& v, ImGuiInputTextFlags flags = 0) {
             int values[] = { v.x,v.y,v.z,v.w };
             if (::ImGui::InputInt4(label, values, flags)) {
                 v.x = values[0];
@@ -238,7 +238,7 @@ namespace ImGui {
         //! @brief  ImGui::InputIntのVecラッパー
         //@―---------------------------------------------------------------------------
         //! @{
-        inline bool ColorEdit3(const char* label, Amuse::Core::Color& color, ImGuiColorEditFlags flags = 0) {
+        inline bool ColorEdit3(const char* label, Amuse::Color& color, ImGuiColorEditFlags flags = 0) {
             float values[] = { color.r,color.g,color.b };
             if (::ImGui::ColorEdit3(label, values, flags)) {
                 color.r = values[0];
@@ -248,7 +248,7 @@ namespace ImGui {
             }
             return false;
         }
-        inline bool ColorEdit4(const char* label, Amuse::Core::Color& color, ImGuiColorEditFlags flags = 0) {
+        inline bool ColorEdit4(const char* label, Amuse::Color& color, ImGuiColorEditFlags flags = 0) {
             float values[] = { color.r,color.g,color.b,color.a };
             if (::ImGui::ColorEdit4(label, values, flags)) {
                 color.r = values[0];
@@ -259,7 +259,7 @@ namespace ImGui {
             }
             return false;
         }
-        inline bool ColorPicker3(const char* label, Amuse::Core::Color& color, ImGuiColorEditFlags flags = 0) {
+        inline bool ColorPicker3(const char* label, Amuse::Color& color, ImGuiColorEditFlags flags = 0) {
             float values[] = { color.r,color.g,color.b };
             if (::ImGui::ColorPicker3(label, values, flags)) {
                 color.r = values[0];
@@ -269,7 +269,7 @@ namespace ImGui {
             }
             return false;
         }
-        inline bool ColorPicker4(const char* label, Amuse::Core::Color& color, ImGuiColorEditFlags flags = 0) {
+        inline bool ColorPicker4(const char* label, Amuse::Color& color, ImGuiColorEditFlags flags = 0) {
             float values[] = { color.r,color.g,color.b,color.a };
             if (::ImGui::ColorPicker4(label, values, flags)) {
                 color.r = values[0];

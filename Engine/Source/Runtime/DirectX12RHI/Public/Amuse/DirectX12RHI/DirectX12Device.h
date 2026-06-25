@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -14,27 +14,24 @@
 #include "Amuse/DirectX12RHI/Sampler/DirectX12Sampler.h"
 
 // 前方宣言
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
+namespace Amuse {
 	class SmallBufferAllocator;
 }
 
-namespace Amuse::Platform {
-    using namespace Amuse::Core;
+namespace Amuse {
 	class WindowManager;
 }
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief DirectX 12 RHI デバイス
+	//! @ingroup AmuseDirectX12RHI
 	class DirectX12Device : public Device{
 	public:
 		//! @brief  DirectX12RHIの起動に必要なサービスを登録
 		static void Inject(ServiceInjector&);
 	public:
 		//! @brief DirectX 12 デバイスを初期化する
-		DirectX12Device(Amuse::Platform::WindowManager&, GraphicObjectManager&, const RHIConfig*, const DirectX12RHIConfig*);
+		DirectX12Device(Amuse::WindowManager&, GraphicObjectManager&, const RHIConfig*, const DirectX12RHIConfig*);
 		~DirectX12Device();
 
 		//! @brief  ゲーム更新イベント
@@ -259,6 +256,7 @@ namespace Amuse::RHI {
 #endif
 
 	private:
+		//! @ingroup AmuseDirectX12RHI
 		template<class TKey,class TValue,class THasher, class TEqual>
 		class ResourceCache
 		{
@@ -318,7 +316,7 @@ namespace Amuse::RHI {
 		ComPtr<IDStorageFactory>			g_dsfactory;
 
 		// SmallBufferAllocator管理
-		HashMap<BufferFlag, Amuse::Core::UPtr<SmallBufferAllocator>>	m_smallBufferAllocators;
+		HashMap<BufferFlag, Amuse::UPtr<SmallBufferAllocator>>	m_smallBufferAllocators;
 
 #ifdef AMUSE_DEBUG
 		UPtr<class PIXModule> m_pixModule;
@@ -330,9 +328,7 @@ namespace Amuse::RHI {
 //===============================================================
 // インライン
 //===============================================================
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief  ネイティブ・デバイスを取得
 	inline ComPtr<ID3D12Device8>& DirectX12Device::getNative() {
 		return m_device;

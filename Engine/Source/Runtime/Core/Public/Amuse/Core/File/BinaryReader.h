@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -7,11 +7,12 @@
 #include <Amuse/Core/File/FileTypes.h>
 #include <Amuse/Core/File/Stream.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	class Stream;
 
 	//! @brief  バイナリ・リーダー
+	//! @ingroup AmuseCore
 	class BinaryReader {
 	public:
 

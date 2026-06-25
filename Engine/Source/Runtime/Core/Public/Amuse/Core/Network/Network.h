@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author Gajumaru
 //***********************************************************
@@ -6,7 +6,7 @@
 #include <Amuse/Core/CorePrivate.h>
 #include <Amuse/Core/Network/IPAddress.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	/// ネットワーク
 	/// 
@@ -20,6 +20,7 @@ namespace Amuse::Core {
 	///		Network::Shutdown();
 	/// }
 	/// @endcode
+	//! @ingroup AmuseCore
 	class Network {
 	public:
 

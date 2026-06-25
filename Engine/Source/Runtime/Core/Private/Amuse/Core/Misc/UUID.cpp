@@ -1,11 +1,11 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author Gajumaru
 //***********************************************************
 #include <Amuse/Core/Misc/UUID.h>
 #include <Amuse/Core/Utility/Indexed.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 
     byte DigitCharToHex(int ch) {

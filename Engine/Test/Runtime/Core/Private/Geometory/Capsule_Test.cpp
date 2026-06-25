@@ -1,10 +1,10 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #include <Amuse/Core/Geometry/Capsule.h>
 
-using namespace Amuse::Core;
+using namespace Amuse;
 
 TEST(Capsule, Construct) {
 

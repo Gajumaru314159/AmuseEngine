@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -8,16 +8,18 @@
 #include <Amuse/RHI/CommandList.h>
 #include <Amuse/RPI/Material/Material.h>
 
-namespace Amuse::RPI {
+namespace Amuse {
 
 	//! @brief メッシュ LOD の GPU バッファ
+	//! @ingroup AmuseRPI
 	struct MeshLodBuffer
 	{
-		Ref<RHI::VertexLayout> layout; //!< 頂点レイアウト
-		Ref<RHI::Buffer> vertices; //!< 頂点バッファ
-		Ref<RHI::Buffer> indices; //!< インデックスバッファ
+		Ref<VertexLayout> layout; //!< 頂点レイアウト
+		Ref<Buffer> vertices; //!< 頂点バッファ
+		Ref<Buffer> indices; //!< インデックスバッファ
 	};
 	//! @brief メッシュ LOD の CPU 側頂点ソース
+	//! @ingroup AmuseRPI
 	struct MeshLodSource
 	{
 		Vector<u32>		indices; //!< インデックス配列
@@ -30,6 +32,7 @@ namespace Amuse::RPI {
 	};
 
 	//! @brief メッシュ内のマテリアル割り当て範囲
+	//! @ingroup AmuseRPI
 	struct MeshSection
 	{
 		s32 material = 0; //!< マテリアルインデックス
@@ -39,6 +42,7 @@ namespace Amuse::RPI {
 	};
 
 	//! @brief メッシュの LOD データ
+	//! @ingroup AmuseRPI
 	struct MeshLod
 	{
 		MeshLodBuffer buffer; //!< GPU バッファ
@@ -49,10 +53,11 @@ namespace Amuse::RPI {
 	};
 
 	//! @brief 描画用メッシュリソース
+	//! @ingroup AmuseRPI
 	class Mesh : public RefObject
 	{
 	public:
-		using VertexLayout = Amuse::RHI::VertexLayout; //!< 頂点レイアウト型
+		using VertexLayout = Amuse::VertexLayout; //!< 頂点レイアウト型
 
 		Bounds bounds; //!< 境界ボックス
 		Vector<MeshLod> lods; //!< LOD 一覧

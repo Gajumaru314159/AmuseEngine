@@ -15,7 +15,7 @@ OSごとに異なる引数取得処理をPlatformモジュール内で吸収し�
 ## 基本設計
 
 ```cpp
-Platform::Arguments args;
+Arguments args;
 
 if (!args.empty()) {
     const String& first = args.at(0);

@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -14,10 +14,9 @@
 #include <Amuse/RHI/Types/Barrier.h>
 #include <Amuse/RHI/Types/Copy.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief      コマンドリスト
+    //! @ingroup AmuseRHI
     class CommandList :public GraphicObject {
     public:
 

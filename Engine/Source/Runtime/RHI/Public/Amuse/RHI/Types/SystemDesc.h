@@ -5,10 +5,9 @@
 #pragma once
 #include <Amuse/Core/Core.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief  システム定義
+    //! @ingroup AmuseRHI
     struct SystemDesc {
         s32 bufferCount;    //!< レンダリングバッファの数
     };

@@ -6,9 +6,7 @@
 #include <Amuse/Core/Core.h>
 #include <Amuse/Core/Utility/Ref.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	// 列挙型
 	enum class PresetTexture;
 

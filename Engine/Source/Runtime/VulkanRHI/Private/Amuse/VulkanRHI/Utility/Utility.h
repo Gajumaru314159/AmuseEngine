@@ -7,9 +7,7 @@
 #include <Amuse/Core/Core.h>
 #undef Success
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	class VulkanDevice;
 
     inline bool Failed(::VkResult res)

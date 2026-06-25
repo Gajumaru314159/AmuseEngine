@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -8,11 +8,11 @@
 
 int AmuseInternalMain(int argc, char *argv[])
 {
-    Amuse::Core::Internal::InitMemory();
+    Amuse::Internal::InitMemory();
 
     int result = AmuseMain(argc,argv);
 
-    Amuse::Core::Internal::FinalizeMemory();
+    Amuse::Internal::FinalizeMemory();
 
     return result;
 }

@@ -10,12 +10,11 @@
 #include <Amuse/Core/Misc/BlobView.h>
 #include <Amuse/VulkanRHI/Descriptor/VulkanDescriptorHandle.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     class VulkanDevice;
 
-    class VulkanTexture :public Amuse::RHI::RenderTexture {
+    //! @ingroup AmuseVulkanRHI
+    class VulkanTexture :public Amuse::RenderTexture {
     public:
 
         //! @brief      TextureDesc から空のテクスチャを生成
@@ -82,6 +81,7 @@ namespace Amuse::RHI {
 		TextureViewDesc         m_viewDesc;     //!< ビュー定義
 		VulkanDescriptorHandle  m_handle;       //!< デスクリプタハンドル
 
+        //! @ingroup AmuseVulkanRHI
         struct SharedResource {
             vk::raii::DeviceMemory	memory = nullptr;
             vk::raii::Image         image = nullptr;
@@ -104,9 +104,7 @@ namespace Amuse::RHI {
 //===============================================================
 // インライン
 //===============================================================
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief      名前を取得
     inline const String& VulkanTexture::getName()const {
         return m_desc.name;

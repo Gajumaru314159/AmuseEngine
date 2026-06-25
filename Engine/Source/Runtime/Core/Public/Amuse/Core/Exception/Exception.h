@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -10,9 +10,10 @@
 
 #undef GetMessage
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief 例外クラス
+    //! @ingroup AmuseCore
     class Exception : public std::exception {
     public:
         using NotificationHandler = bool(*)(const Exception& e);		//!< 例外ハンドラ型
@@ -63,6 +64,7 @@ public:										\
 //! @endcond
 
     //! @brief 無効な引数に対する例外クラス
+    //! @ingroup AmuseCore
     class ArgumentException :public Exception {
         //! @cond
         EXCEPTION_CONSTRUCTORS(ArgumentException)
@@ -70,6 +72,7 @@ public:										\
     };
 
     //! @brief 算術演算の失敗に対する例外クラス
+    //! @ingroup AmuseCore
     class ArithmeticException :public Exception {
         //! @cond
         EXCEPTION_CONSTRUCTORS(ArithmeticException)
@@ -77,6 +80,7 @@ public:										\
     };
 
     //! @brief 存在しないファイルパス/ディレクトリパスに対する例外クラス
+    //! @ingroup AmuseCore
     class PathNotFoundException :public Exception {
         //! @cond
         EXCEPTION_CONSTRUCTORS(PathNotFoundException)
@@ -84,6 +88,7 @@ public:										\
     };
 
     //! @brief 値などの変換の失敗に対する例外クラス
+    //! @ingroup AmuseCore
     class FormatException :public Exception {
         //! @cond
         EXCEPTION_CONSTRUCTORS(FormatException)
@@ -91,6 +96,7 @@ public:										\
     };
 
     //! @brief 範囲外アクセスに対する例外クラス
+    //! @ingroup AmuseCore
     class OutOfRangeException :public Exception {
         //! @cond
         EXCEPTION_CONSTRUCTORS(OutOfRangeException)
@@ -98,6 +104,7 @@ public:										\
     };
 
     //! @brief 無効な状態でのメソッド呼び出しに対する例外クラス
+    //! @ingroup AmuseCore
     class InvalidOperationException :public Exception {
         //! @cond
         EXCEPTION_CONSTRUCTORS(InvalidOperationException)
@@ -105,6 +112,7 @@ public:										\
     };
 
     //! @brief コレクションのアクセスに存在しないキーを使用した場合の例外クラス
+    //! @ingroup AmuseCore
     class KeyNotFoundException :public Exception {
         //! @cond
         EXCEPTION_CONSTRUCTORS(KeyNotFoundException)
@@ -112,6 +120,7 @@ public:										\
     };
 
     //! @brief 未実装メソッド呼び出しに対する例外クラス
+    //! @ingroup AmuseCore
     class NotImplementedException :public Exception {
         //! @cond
         EXCEPTION_CONSTRUCTORS(NotImplementedException)
@@ -119,6 +128,7 @@ public:										\
     };
 
     //! @brief サポートされていない操作に対する例外クラス
+    //! @ingroup AmuseCore
     class NotSupportedException :public Exception {
         //! @cond
         EXCEPTION_CONSTRUCTORS(NotSupportedException)

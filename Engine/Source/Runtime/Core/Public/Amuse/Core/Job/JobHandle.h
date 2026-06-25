@@ -1,11 +1,11 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/Core/CorePrivate.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	class Job;
 	class JobGroup;
@@ -14,6 +14,7 @@ namespace Amuse::Core {
 	//! @details	ジョブに登録した関数がオブジェクトの解放後に実行されないように
 	//!				するためのハンドルです。JobHandleの解放と同時にJobはサスペンド
 	//!				状態に移行します。
+	//! @ingroup AmuseCore
 	class JobHandle : Noncopyable, Nonmovable {
 	public:
 		JobHandle();
@@ -30,6 +31,7 @@ namespace Amuse::Core {
 	//! @details	ジョブに登録した関数がオブジェクトの解放後に実行されないように
 	//!				するためのハンドルです。JobHandleの解放と同時にJobはサスペンド
 	//!				状態に移行します。
+	//! @ingroup AmuseCore
 	class JobGroupHandle : Noncopyable, Nonmovable {
 	public:
 		JobGroupHandle();

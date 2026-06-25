@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?> 
+<?xml version="1.0" encoding="utf-8"?> 
 <AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
 
 	<!--String-->
@@ -25,24 +25,24 @@
 	</Type>
 
 	<!--String-->
-	<Type Name="Amuse::Core::StringBase&lt;char&gt;">
+	<Type Name="Amuse::StringBase&lt;char&gt;">
 		<DisplayString>{m_str,s8}</DisplayString>
 		<StringView>m_str</StringView>
 	</Type>
 	
 	<!--StringView-->
-	<Type Name="Amuse::Core::StringViewBase&lt;*&gt;">
+	<Type Name="Amuse::StringViewBase&lt;*&gt;">
 		<DisplayString>{m_view,s8}</DisplayString>
 		<StringView>m_view</StringView>
 	</Type>
 
 	<!--Pimpl-->
-	<Type Name="Amuse::Core::Pimpl&lt;*&gt;">
+	<Type Name="Amuse::Pimpl&lt;*&gt;">
 		<DisplayString>value = {*m_impl}</DisplayString>
 	</Type>
 
 	<!--MemoryStorageBase-->
-	<Type Name="Amuse::Core::MemoryStorageBase&lt;*,*,*&gt;">
+	<Type Name="Amuse::MemoryStorageBase&lt;*,*,*&gt;">
 		<Expand>
 			<Item Name="[constructed]">m_constructed</Item>
 			<Item Name="[instance]" Condition="m_constructed">*($T1*)(m_data)</Item>
@@ -51,7 +51,7 @@
 	</Type>
 
 	<!--Matrix-->
-	<Type Name="Amuse::Core::Matrix">
+	<Type Name="Amuse::Matrix">
 		<DisplayString>[4, 4]</DisplayString>
 		<Expand>
 			<Synthetic Name="0">
@@ -74,12 +74,12 @@
 
 
 	<!--AnyContainer-->
-	<Type Name="Amuse::Core::AnyContainer">
+	<Type Name="Amuse::AnyContainer">
 		<Expand>
 			<ExpandedItem>m_container,view(AnyContainerHelper)</ExpandedItem>
 		</Expand>
 	</Type>
-	<Type Name="Amuse::Core::AnyContainer::Holder&lt;*&gt;">
+	<Type Name="Amuse::AnyContainer::Holder&lt;*&gt;">
 		<Expand>
 			<Item Name="instance">instance</Item>
 		</Expand>
@@ -120,13 +120,13 @@
 
 
 	<!--Type-->
-	<Type Name="Amuse::Core::Type">
+	<Type Name="Amuse::Type">
 		<DisplayString>{m_name.m_view,sb}</DisplayString>
 	</Type>
 
 
 	<!--HandeManager<T>::Handle-->
-	<Type Name="Amuse::Core::HandleManager&lt;*&gt;::Handle">
+	<Type Name="Amuse::HandleManager&lt;*&gt;::Handle">
 		<DisplayString Condition="m_owner!=nullptr &amp; m_owner->m_nodes[m_index].version == m_version">{*m_owner->m_nodes[m_index].instance}</DisplayString>
 		<DisplayString>Empty</DisplayString>
 
@@ -137,36 +137,36 @@
 	</Type>
 
 	<!--ArgumentInfo-->
-	<Type Name="Amuse::Core::ArgumentInfo">
+	<Type Name="Amuse::ArgumentInfo">
 		<DisplayString>{type.m_name,sb}    {name,sb}</DisplayString>
 	</Type>
 
 	<!--Any-->
-	<Type Name="Amuse::Core::Any">
+	<Type Name="Amuse::Any">
 		<DisplayString Condition="m_info">({m_info->type}*)({m_pointer})</DisplayString>
 		<DisplayString Condition="!m_info">empty</DisplayString>
 	</Type>
 
 	<!--Property-->
-	<Type Name="Amuse::Core::Property">
+	<Type Name="Amuse::Property">
 		<DisplayString Condition="m_info">{m_ownerInfo->type}::{m_info->name.m_view._Mydata,s8b}</DisplayString>
 		<DisplayString Condition="!m_info">empty</DisplayString>
 	</Type>
 
 
 	<!--IPAddress-->
-	<Type Name="Amuse::Core::IPAddress">
+	<Type Name="Amuse::IPAddress">
 		<DisplayString >{(int)a}.{(int)b}.{(int)c}.{(int)d}</DisplayString>
 	</Type>
 
 	<!--YesNo-->
-	<Type Name="Amuse::Core::YesNo&lt;*&gt;">
+	<Type Name="Amuse::YesNo&lt;*&gt;">
 		<DisplayString Condition="m_yesNo">Yes</DisplayString>
 		<DisplayString Condition="!m_yesNo">No</DisplayString>
 	</Type>
 	
 	<!--FixedVector-->
-	<Type Name="Amuse::Core::FixedVector&lt;*,*&gt;">
+	<Type Name="Amuse::FixedVector&lt;*,*&gt;">
 		<DisplayString>size={m_size}, capacity={0}</DisplayString>
 		<Expand>
 			<Item Name="[capacity]">0</Item>
@@ -194,7 +194,7 @@
 
 
 	<!--Ref-->
-	<Type Name="Amuse::Core::Ref&lt;*&gt;">
+	<Type Name="Amuse::Ref&lt;*&gt;">
 		<DisplayString Condition="m_ptr==nullptr">null</DisplayString>
 		<DisplayString>{*m_ptr}</DisplayString>
 		<Expand>
@@ -203,7 +203,7 @@
 	</Type>
 	
 	<!-- BitFlags -->
-	<Type Name="Amuse::Core::BitFlags&lt;*&gt;">
+	<Type Name="Amuse::BitFlags&lt;*&gt;">
 		<Intrinsic Name="count0" Expression="(value &amp; 0x5555555555555555) + ((value &gt;&gt; 1) &amp; 0x5555555555555555)">
 			<Parameter Name="value" Type="uint64_t" />
 		</Intrinsic>
@@ -240,7 +240,7 @@
 	</Type>
 
 
-	<Type Name="Amuse::Core::MemorySize">
+	<Type Name="Amuse::MemorySize">
 		<DisplayString Condition="1024ull*1024*1024*1024 &lt; size">{size/(1024.0*1024*1024*1024),g} TiB</DisplayString>
 		<DisplayString Condition="1024ull*1024*1024 &lt; size">{size/(1024.0*1024*1024),g} GiB</DisplayString>
 		<DisplayString Condition="1024ull*1024 &lt; size">{size/(1024.0*1024),g} MiB</DisplayString>

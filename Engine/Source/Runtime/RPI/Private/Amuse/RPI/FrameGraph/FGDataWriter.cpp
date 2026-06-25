@@ -1,10 +1,10 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #include <Amuse/RPI/FrameGraph/FGDataWriter.h>
 
-namespace Amuse::RPI {
+namespace Amuse {
 
 
 	FGDataWriter::FGDataWriter(FGData& data)

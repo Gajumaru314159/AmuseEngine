@@ -8,17 +8,16 @@
 #include <Amuse/Platform/Window.h>
 
 #include <X11/Xlib.h>
-namespace Amuse::Platform {
-    using namespace Amuse::Core;
+namespace Amuse {
+    //! @ingroup AmusePlatform
     struct NativeWindowHandle {
         ::Display* display = nullptr;
         ::Window window = 0;
     };
 }
 
-namespace Amuse::Platform {
-    using namespace Amuse::Core;
-
+namespace Amuse {
+    //! @ingroup AmusePlatform
     class LinuxWindow : public Window {
     public:
         explicit LinuxWindow(const WindowDesc& desc);

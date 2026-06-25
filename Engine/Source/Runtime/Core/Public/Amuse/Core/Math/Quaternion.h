@@ -1,11 +1,11 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/Core/Math/Math.h>
 
-namespace Amuse::Core {
+namespace Amuse {
     struct Vec3;
     struct Rot;
     struct Matrix;
@@ -16,6 +16,7 @@ namespace Amuse::Core {
     //!             オイラー角と違いジンバルロックがなく、簡単に補完可能である。
     //!             Quaternionは複素数に基づいており直感的に理解することは難しい。そのため各成分(x,y,z,w)にアクセスすることは推奨しない。
     //! @note       回転へのアクセスや構築はオイラー角表現を通して行うことが推奨される。
+    //! @ingroup AmuseCore
     struct Quat {
     public:
 
@@ -422,10 +423,10 @@ namespace Amuse::Core {
 // フォーマット
 //===============================================================
 //! @cond
-template <> struct std::formatter<Amuse::Core::Quat, Amuse::Core::Char> : std::formatter<Amuse::Core::f32, Amuse::Core::Char> {
-    using base = std::formatter<Amuse::Core::f32, Amuse::Core::Char>;
+template <> struct std::formatter<Amuse::Quat, Amuse::Char> : std::formatter<Amuse::f32, Amuse::Char> {
+    using base = std::formatter<Amuse::f32, Amuse::Char>;
     template<typename FormatContext>
-    auto format(const Amuse::Core::Quat& value, FormatContext& ctx) const {
+    auto format(const Amuse::Quat& value, FormatContext& ctx) const {
         ctx.advance_to(format_to(ctx.out(), "("));
         ctx.advance_to(base::format(value.x, ctx));
         ctx.advance_to(format_to(ctx.out(), ","));

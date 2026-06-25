@@ -15,14 +15,14 @@ Platformモジュールのサービス登録口として`RegisterPlatformService
 
 ```cpp
 ServiceInjector injector;
-Platform::RegisterPlatformService(injector);
+RegisterPlatformService(injector);
 
-if (!Platform::System::Setup()) {
+if (!Setup()) {
     return false;
 }
 
 while (running) {
-    Platform::System::Update();
+    Update();
 }
 ```
 

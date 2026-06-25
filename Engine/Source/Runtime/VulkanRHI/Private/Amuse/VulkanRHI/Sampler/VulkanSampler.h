@@ -8,10 +8,9 @@
 #include <Amuse/RHI/Sampler.h>
 #include <Amuse/VulkanRHI/Descriptor/VulkanDescriptorHandle.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief  サンプラー実装(Vulkan)
+    //! @ingroup AmuseVulkanRHI
     class VulkanSampler :public Sampler {
     public:
 

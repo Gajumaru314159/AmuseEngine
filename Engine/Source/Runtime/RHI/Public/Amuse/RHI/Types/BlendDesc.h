@@ -6,14 +6,13 @@
 #include <Amuse/Core/Core.h>
 #include <Amuse/RHI/Constants.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 #pragma region Enum
 
     //! @brief      ブレンド係数
     //! 
     //! @see        BlendState    
+    //! @ingroup AmuseRHI
     enum class BlendFactor :u32 {
         Zero,                       //!< ブレンド係数は (0, 0, 0, 0)
         One,                        //!< ブレンド係数は (1, 1, 1, 1)
@@ -32,6 +31,7 @@ namespace Amuse::RHI {
     //! 
     //! @details    ピクセルシェーダが出力するRGBまたはAのレンダーターゲットへのブレンド方法です。
     //! @see        BlendState    
+    //! @ingroup AmuseRHI
     enum class BlendOp :u32 {
         Add,        //!< A+B
         Sub,        //!< A-B
@@ -45,6 +45,7 @@ namespace Amuse::RHI {
     //! 
     //! @details    現在使用されていません。
     //! @see        BlendState    
+    //! @ingroup AmuseRHI
     enum class LogicOp :u32 {
         Clear,			//!< 0
         Set,			//!< 1
@@ -69,6 +70,7 @@ namespace Amuse::RHI {
 #pragma region Flag
 
     //! @brief      色要素   
+    //! @ingroup AmuseRHI
     enum class ColorComponent :u8 {
         Red     = get_bit(0),               //!< 赤
         Green   = get_bit(1),               //!< 緑
@@ -90,6 +92,7 @@ namespace Amuse::RHI {
     //! @brief      ブレンド定義
     //! 
     //! @details    レンダーターゲットのブレンド方法を定義
+    //! @ingroup AmuseRHI
     struct BlendDesc{
 
         bool        blendEnable{false}; //!< ブレンドの有効設定

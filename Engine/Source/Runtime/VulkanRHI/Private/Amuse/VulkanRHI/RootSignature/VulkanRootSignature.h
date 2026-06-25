@@ -7,11 +7,10 @@
 #include <Amuse/Core/Core.h>
 #include <Amuse/RHI/RootSignature.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief  ルートシグネチャ実装(Vulkan)
-    class VulkanRootSignature :public Amuse::RHI::RootSignature {
+    //! @ingroup AmuseVulkanRHI
+    class VulkanRootSignature :public Amuse::RootSignature {
     public:
 
         //! @brief  コンストラクタ

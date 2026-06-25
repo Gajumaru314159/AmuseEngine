@@ -7,10 +7,9 @@
 #include <Amuse/RHI/GraphicObject.h>
 #include <Amuse/RHI/Types/RootSignatureDesc.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief      ルートシグネチャ
+    //! @ingroup AmuseRHI
     class RootSignature :public GraphicObject {
     public:
         

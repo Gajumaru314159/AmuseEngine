@@ -6,7 +6,7 @@
 #include <Amuse/DirectX12RHI/Utility/Utility.h>
 #include <pix3.h>
 
-namespace Amuse::RHI
+namespace Amuse
 {
 
 	//! @brief  コンストラクタ

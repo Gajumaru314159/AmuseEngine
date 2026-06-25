@@ -9,10 +9,9 @@
 #include <Amuse/Core/Misc/Blob.h>
 #include <Amuse/RHI/Types/PipelineStateDesc.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief  シェーダ実装(DirectX12)
+    //! @ingroup AmuseVulkanRHI
     class VulkanShader :public Shader {
     public:
 

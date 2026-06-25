@@ -1,21 +1,22 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/Core/CorePrivate.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 #define AMUSE_DEFINE_HANDLE_WITH_BASE(type,base) \
     struct Handle_##type {};\
-    using type = Amuse::Core::Handle<base,Handle_##type>
+    using type = Amuse::Handle<base,Handle_##type>
 
-#define AMUSE_DEFINE_HANDLE(type) AMUSE_DEFINE_HANDLE_WITH_BASE(type,Amuse::Core::s32)
+#define AMUSE_DEFINE_HANDLE(type) AMUSE_DEFINE_HANDLE_WITH_BASE(type,Amuse::s32)
 
 
     template<class T = s32, class TNamespace = void>
     //! @brief ハンドル値を表す。
+    //! @ingroup AmuseCore
     class Handle {
     public:
         //! @brief IndexType 型のエイリアス。
@@ -104,11 +105,11 @@ namespace Amuse::Core {
 
 //! @cond
 template<class T>
-struct std::hash<Amuse::Core::Handle<T>>
+struct std::hash<Amuse::Handle<T>>
 {
-    constexpr size_t operator()(const Amuse::Core::Handle<T>& value)const noexcept {
+    constexpr size_t operator()(const Amuse::Handle<T>& value)const noexcept {
         size_t result = 0;
-        Amuse::Core::Hash::Combine(result,value.index());
+        Amuse::Hash::Combine(result,value.index());
         return result;
     }
 

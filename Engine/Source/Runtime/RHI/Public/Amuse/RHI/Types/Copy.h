@@ -8,10 +8,9 @@
 #include <Amuse/RHI/Types/Barrier.h>
 #include <Amuse/RHI/Types/CommandParam.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief  バッファコピー範囲
+	//! @ingroup AmuseRHI
 	struct BufferCopyRegion {
 		Ref<Buffer> source;		//!< コピー元
 		Ref<Buffer> target;		//!< コピー先
@@ -21,6 +20,7 @@ namespace Amuse::RHI {
 	};
 
 	//! @brief  テクスチャコピー範囲
+	//! @ingroup AmuseRHI
 	struct TextureCopyRegion {
 		Ref<Texture> source;						//!< コピー元
 		Ref<Texture> target;						//!< コピー先
@@ -32,6 +32,7 @@ namespace Amuse::RHI {
 	};
 
 	//! @brief  バッファ/テクスチャコピー範囲
+	//! @ingroup AmuseRHI
 	struct BufferTextureCopyRegion {
 		Ref<Buffer> buffer;							//!< バッファ
 		Ref<Texture> texture;						//!< テクスチャ

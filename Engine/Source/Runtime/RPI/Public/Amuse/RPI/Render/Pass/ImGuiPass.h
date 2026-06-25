@@ -1,15 +1,16 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/RPI/Render/RenderPass.h>
 
-namespace Amuse::RPI {
+namespace Amuse {
 
 	AMUSE_EVENT_NOTIFIER(ImGui);
 
 	//! @brief		RenderView毎のImGui描画処理
+	//! @ingroup AmuseRPI
 	class ImGuiPass : public RenderPass {
 	public:
 		//! @brief ImGuiPass の入力リソース
@@ -17,6 +18,7 @@ namespace Amuse::RPI {
 			FGResource color; //!< カラー
 		};
 		//! @brief ImGuiPass の出力リソース
+		//! @ingroup AmuseRPI
 		struct Output {
 			FGResource color; //!< カラー
 		};

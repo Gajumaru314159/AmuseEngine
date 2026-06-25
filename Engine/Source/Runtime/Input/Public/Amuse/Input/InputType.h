@@ -6,9 +6,7 @@
 #include <Amuse/Core/Core.h>
 #include <Amuse/Core/Hash/Hash.h>
 
-namespace Amuse::Input {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief	デバイスID
 	enum class DeviceID : u32;
 #define	AMUSE_DEVICE_ID(name) DeviceID{AMUSE_HASH32(name)}
@@ -19,6 +17,7 @@ namespace Amuse::Input {
 	//! @details	キーボードで入力することのできるコード一覧。
 	//! @ref		MouseButton
 	//! @ref		PadButtton
+    //! @ingroup AmuseInput
     enum class Key :u32 {
 		Unknown = 0,		//!< 不明
 
@@ -175,6 +174,7 @@ namespace Amuse::Input {
 
 
 	//! @brief		修飾キー
+	//! @ingroup AmuseInput
 	enum class ModifierKey :u32 {
 		None	= 0x0000,	//!< なし
 		Alt		= 0x0001,	//!< Altキー
@@ -184,6 +184,7 @@ namespace Amuse::Input {
 
 
 	//! @brief		マウスボタン
+	//! @ingroup AmuseInput
 	enum class MouseButton :u32 {
 		Left,		//!< 左ボタン
 		Right,		//!< 右ボタン
@@ -195,6 +196,7 @@ namespace Amuse::Input {
 	};
 
 	//! @brief		マウス軸
+	//! @ingroup AmuseInput
 	enum class MouseAxis :u32 {
 		Wheel,		//!< ホイール
 		WheelX,		//!< ホイールX
@@ -207,6 +209,7 @@ namespace Amuse::Input {
 
 
 	//! @brief		入力状態
+	//! @ingroup AmuseInput
 	enum class ButtonState {
 		Down		= get_bit(0),	//!< 押された瞬間か
 		Up			= get_bit(1),	//!< 離された瞬間か

@@ -15,13 +15,13 @@ Mouseは、マウスボタン、ホイール、座標、移動量をButtonまた
 ## 基本設計
 
 ```cpp
-if (Input::Mouse::Left.down()) {
-    Vec2 pos = Input::Mouse::GetPos();
+if (Mouse::Left.down()) {
+    Vec2 pos = Mouse::GetPos();
     LOG_INFO("Click: {}, {}", pos.x, pos.y);
 }
 
-f32 wheel = Input::Mouse::Wheel.value();
-Vec2 delta = Input::Mouse::GetDeltaPos();
+f32 wheel = Mouse::Wheel.value();
+Vec2 delta = Mouse::GetDeltaPos();
 ```
 
 ## API

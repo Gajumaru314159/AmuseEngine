@@ -5,11 +5,12 @@
 #pragma once
 #include <cstddef>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief 抽象アロケーター
     //! メモリの確保と解放の責務を持つ基底クラス
     //! 具体的な実装クラスを継承して様々なアロケーターを利用できる
+    //! @ingroup AmuseCore
     class Allocator {
     public:
         virtual ~Allocator() = default;

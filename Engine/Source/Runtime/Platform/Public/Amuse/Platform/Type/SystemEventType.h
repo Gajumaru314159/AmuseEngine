@@ -1,14 +1,13 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/Core/Core.h>
 
-namespace Amuse::Platform {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief  ウィンドウ・イベント・タイプ
+    //! @ingroup AmusePlatform
     enum class WindowEventType {
         Unknown,    //!< 不明
 
@@ -37,6 +36,7 @@ namespace Amuse::Platform {
     class Draggable;
 
     //! @brief ウィンドウイベント引数
+    //! @ingroup AmusePlatform
     struct WindowEventArgs {
 
         WindowEventType type; //!< 種別

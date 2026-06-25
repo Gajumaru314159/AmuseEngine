@@ -1,16 +1,17 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/RPI/Forward.h>
 
-namespace Amuse::RPI {
+namespace Amuse {
 
 	//! @brief      描画機能
 	//! @details    O3DEでいうところのFeatureProcessor。
 	//!				初期状態は非アクティブです。
 	//! @ref 		RenderFeature
+	//! @ingroup AmuseRPI
 	class RenderFeature {
 	public:
 

@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -6,9 +6,10 @@
 #include <Amuse/Core/Utility/Noncopyable.h>
 #include <Amuse/Core/Utility/Pimpl.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief  ミューテックス
+    //! @ingroup AmuseCore
     class Mutex : Noncopyable{
     public:
 

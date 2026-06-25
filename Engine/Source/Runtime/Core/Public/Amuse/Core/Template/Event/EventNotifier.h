@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -7,10 +7,10 @@
 #include <Amuse/Core/Template/Container/HandleList.h>
 #include <Amuse/Core/Thread/ScopeLock.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 #define AMUSE_EVENT_NOTIFIER(prefix,...) \
-    class prefix##Notifier : public Amuse::Core::EventNotifier<__VA_ARGS__> {};\
+    class prefix##Notifier : public Amuse::EventNotifier<__VA_ARGS__> {};\
     using prefix##Handle = typename prefix##Notifier::Handle;\
     using prefix##Delegate = typename prefix##Notifier::delegate_type;
 
@@ -18,13 +18,14 @@ namespace Amuse::Core {
     //! 
     //! @details            登録したイベントをまとめて呼び出す
     //! @tparam Args        イベント引数
+    //! @ingroup AmuseCore
     template<typename... Args>
     class EventNotifier :Noncopyable {
     public:
 
         using this_type = EventNotifier <Args...>;                                  //!< 型
 
-        using delegate_type = Amuse::Core::Delegate<void(Args...)>;                 //!< デリゲート型
+        using delegate_type = Amuse::Delegate<void(Args...)>;                 //!< デリゲート型
         using function_type = void(Args...);                                        //!< 関数型
         template<typename T>using method_type = void(T::*)(Args...);                //!< メンバ関数ポインタ型
         template<typename T>using const_method_type = void(T::*)(Args...)const;     //!< constメンバ関数ポインタ型
@@ -34,6 +35,7 @@ namespace Amuse::Core {
     public:
 
         //! @brief イベント通知の購読プロキシを表す。
+        //! @ingroup AmuseCore
         class Proxy {
         public:
             //! @brief Proxy を初期化する。

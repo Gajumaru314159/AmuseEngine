@@ -6,9 +6,7 @@
 #include <Amuse/DirectX12RHI/DirectX12Device.h>
 #include <Amuse/DirectX12RHI/Utility/TypeConverter.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief				シェーダーコードからシェーダーオブジェクトを生成
     DirectX12Sampler::DirectX12Sampler(DirectX12Device& device,const SamplerDesc& desc)
 		: m_device(device)

@@ -1,10 +1,10 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #include <Amuse/Core/Exception/Exception.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief	コンストラクタ
     Exception::Exception()

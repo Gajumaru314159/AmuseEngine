@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -11,10 +11,7 @@
 #include <Amuse/RHI/CommandList.h>
 #include <Amuse/RHI/RenderTexture.h>
 #include <Amuse/RHI/Shader.h>
-
-using namespace Amuse::RHI;
-
-namespace Amuse::RPI {
+namespace Amuse {
 
 
 	DeferredPass::DeferredPass() {
@@ -82,9 +79,6 @@ namespace Amuse::RPI {
 	}
 
 	DeferredPass::Output DeferredPass::render(FG& fg, RenderView& view, const Input& input)const {
-
-		using namespace Amuse::RHI;
-
 		auto& data = view.get<DeferredData>();
 		if (!data.material) {
 			data.material = [&] {
@@ -120,15 +114,15 @@ namespace Amuse::RPI {
 				output.params = builder.read(input.params);
 				output.depth = builder.read(input.depth);
 
-				RHI::RenderTextureDesc desc = fg.getTextureDesc(input.albedo);
+				RenderTextureDesc desc = fg.getTextureDesc(input.albedo);
 				{
 					desc.name = "Color";
-					desc.format = RHI::TextureFormat::RGBA8;
+					desc.format = TextureFormat::RGBA8;
 					desc.clear.color = Color::Black;
 					output.color = builder.write(builder.create(desc));
 				}
 			},
-			[&](const Output& output, FGResources& resources, Ref<RHI::CommandList>& cmdList) {
+			[&](const Output& output, FGResources& resources, Ref<CommandList>& cmdList) {
 
 				cmdList->pushMarker("Deferred Lighting");
 

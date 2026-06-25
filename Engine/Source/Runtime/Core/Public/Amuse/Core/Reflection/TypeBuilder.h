@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -7,10 +7,11 @@
 #include <Amuse/Core/Reflection/TypeInfo.h>
 #include <Amuse/Core/Reflection/TypeInfoManager.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief 静的初期化で収集されるリフレクション登録関数ノード。
 	//! @details リフレクション登録関数を連結リストとして管理するためのオブジェクトです。
+	//! @ingroup AmuseCore
 	struct ReflectionFunction {
 		//! @brief 型情報登録関数の関数ポインタ型。
 		using func_type = void(*)();
@@ -32,6 +33,7 @@ namespace Amuse::Core {
 
 	//! @brief		リフレクション登録オブジェクト
 	//!	@details	AMUSE_DEFINE_INFO_BASE 経由で使用してください。
+	//! @ingroup AmuseCore
 	template<class T>
 	struct TypeRegisterTemplate {
 		//! @brief 対象型の登録関数を明示的にリンクする。
@@ -43,6 +45,7 @@ namespace Amuse::Core {
 	};
 
 	//! @brief		リフレクション登録関数をリンクする
+	//! @ingroup AmuseCore
 	struct TypeRegister {
 		template<class... Ts>
 		//! @brief 指定した型群の登録関数を明示的にリンクする。
@@ -57,7 +60,7 @@ namespace Amuse::Core {
 //! @brief		型情報の定義
 //! @details	Builderを通じて型情報を登録するRegister()と、翻訳単位を明示的にリンクするためのLink()を定義します。
 #define AMUSE_DEFINE_INFO_BASE(builder_type,type)\
-namespace Amuse::Core {\
+namespace Amuse {\
 	template<> void TypeRegisterTemplate<::type>::Register() {\
 		builder_type<::type> builder{};\
 	}\
@@ -72,7 +75,7 @@ template<> void builder_type<::type>::Register()
 //!					desc("32bit符号付き整数型");
 //! 			}	
 //!				```
-#define AMUSE_DEFINE_PRIMITIVE_INFO(type) AMUSE_DEFINE_INFO_BASE(Amuse::Core::PrimitiveBuilderTemplate,type)
+#define AMUSE_DEFINE_PRIMITIVE_INFO(type) AMUSE_DEFINE_INFO_BASE(Amuse::PrimitiveBuilderTemplate,type)
 
 //! @brief		Enum型情報の定義
 //!	@details	```cpp
@@ -81,7 +84,7 @@ template<> void builder_type<::type>::Register()
 //!					element(T::Second);
 //! 			}	
 //!				```
-#define AMUSE_DEFINE_ENUM_INFO(type) AMUSE_DEFINE_INFO_BASE(Amuse::Core::EnumBuilderTemplate,type)
+#define AMUSE_DEFINE_ENUM_INFO(type) AMUSE_DEFINE_INFO_BASE(Amuse::EnumBuilderTemplate,type)
 
 //! @brief		Class型情報の定義
 //!	@details	```cpp
@@ -92,12 +95,13 @@ template<> void builder_type<::type>::Register()
 //!					method("method",&T::method,"arg0","arg1");
 //! 			}	
 //!				```
-#define AMUSE_DEFINE_CLASS_INFO(type) AMUSE_DEFINE_INFO_BASE(Amuse::Core::ClassBuilderTemplate,type)
+#define AMUSE_DEFINE_CLASS_INFO(type) AMUSE_DEFINE_INFO_BASE(Amuse::ClassBuilderTemplate,type)
 
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief TypeInfo や要素へタグ情報を追加するビルダー。
+	//! @ingroup AmuseCore
 	class TagBuilder {
 	public:
 
@@ -118,6 +122,7 @@ namespace Amuse::Core {
 
 
 	//! @brief		Primitive型情報ビルダー
+	//! @ingroup AmuseCore
 	class PrimitiveBuilder : public TagBuilder {
 	public:
 
@@ -133,6 +138,7 @@ namespace Amuse::Core {
 	};
 
 	//! @brief 列挙型の TypeInfo と列挙要素を登録するビルダー。
+	//! @ingroup AmuseCore
 	class EnumBuilder : public TagBuilder {
 	public:
 
@@ -155,6 +161,7 @@ namespace Amuse::Core {
 	};
 
 	//! @brief クラス型の基底、コンストラクタ、プロパティ、メソッドを登録するビルダー。
+	//! @ingroup AmuseCore
 	class ClassBuilder : public TagBuilder {
 	public:
 
@@ -171,6 +178,7 @@ namespace Amuse::Core {
 	};
 
 	//! @brief コンストラクタやデストラクタなどのオペレータを間接的に呼び出すためのクラス
+	//! @ingroup AmuseCore
 	template<class T>
 	class ClassTrait {
 	public:
@@ -216,6 +224,7 @@ namespace Amuse::Core {
 
 
 	//! @brief		Primitive型情報ビルダー
+	//! @ingroup AmuseCore
 	template<class _T>
 	class PrimitiveBuilderTemplate :public PrimitiveBuilder {
 	public:
@@ -270,6 +279,7 @@ namespace Amuse::Core {
 
 
 	//! @brief		Enum型情報ビルダー
+	//! @ingroup AmuseCore
 	template<class _T>
 	class EnumBuilderTemplate :public EnumBuilder {
 	public:
@@ -331,6 +341,7 @@ namespace Amuse::Core {
 	};
 
 	//! @brief		Class型情報ビルダー
+	//! @ingroup AmuseCore
 	template<class _T>
 	class ClassBuilderTemplate : public ClassBuilder {
 	public:
@@ -372,7 +383,7 @@ namespace Amuse::Core {
 		//! @brief			基底クラスを追加
 		template<class TBase, class = std::enable_if_t<std::is_base_of_v<TBase, T>>>
 		void base() {
-			m_info.bases.emplace(::Amuse::Core::Type::Get<TBase>());
+			m_info.bases.emplace(::Amuse::Type::Get<TBase>());
 		}
 
 		//===============================================================
@@ -425,6 +436,7 @@ namespace Amuse::Core {
 		struct MethodTraits;
 
 		//! 関数ポインタの特殊化
+		//! @ingroup AmuseCore
 		template<typename OwnerType, typename ReturnType, typename... Args>
 		struct MethodTraits<ReturnType(OwnerType::*)(Args...)> {
 			using return_type = ReturnType;
@@ -435,6 +447,7 @@ namespace Amuse::Core {
 			static constexpr bool Const = false;
 		};
 
+		//! @ingroup AmuseCore
 		template<typename OwnerType, typename ReturnType, typename... Args>
 		struct MethodTraits<ReturnType(OwnerType::*)(Args...)const> {
 			using return_type = ReturnType;
@@ -444,6 +457,7 @@ namespace Amuse::Core {
 			static constexpr size_t Count = sizeof...(Args);
 			static constexpr bool Const = true;
 		};
+		//! @ingroup AmuseCore
 		template<typename OwnerType, typename ReturnType, typename... Args>
 		struct MethodTraits<ReturnType(OwnerType::*)(Args...)noexcept> {
 			using return_type = ReturnType;
@@ -454,6 +468,7 @@ namespace Amuse::Core {
 			static constexpr bool Const = false;
 		};
 
+		//! @ingroup AmuseCore
 		template<typename OwnerType, typename ReturnType, typename... Args>
 		struct MethodTraits<ReturnType(OwnerType::*)(Args...)const noexcept> {
 			using return_type = ReturnType;

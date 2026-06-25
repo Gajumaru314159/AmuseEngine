@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -26,11 +26,12 @@
 
 //! @endcond
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief		参照カウントオブジェクト
 	//! @details	std::shared_ptr と異なり、参照カウントが0になったときの処理を
 	//!				カスタマイズ可能です。
+	//! @ingroup AmuseCore
 	class RefObject {
 		template<class T> friend class Ref;
 	protected:
@@ -60,6 +61,7 @@ namespace Amuse::Core {
 	};
 
 	//! @brief  RefObject 用スマートポインタ
+	//! @ingroup AmuseCore
 	template<class T>
 	class Ref {
 	public:

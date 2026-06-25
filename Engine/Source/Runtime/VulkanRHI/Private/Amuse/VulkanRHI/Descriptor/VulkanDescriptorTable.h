@@ -7,12 +7,11 @@
 #include <Amuse/Core/Core.h>
 #include <Amuse/RHI/DescriptorTable.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	class VulkanDescriptorLayout;
 
     //! @brief  デスクリプタ・テーブル実装(DirectX12)
+    //! @ingroup AmuseVulkanRHI
     class VulkanDescriptorTable :public DescriptorTable {
     public:
 
@@ -40,12 +39,13 @@ namespace Amuse::RHI {
 
 	private:
 
-		bool tryGetRangeType(s32 index, const Ref<Amuse::RHI::Buffer>& buffer, vk::DescriptorType& type) const;
-		bool tryGetRangeType(s32 index, const Ref<Amuse::RHI::Texture>& texture, vk::DescriptorType& type) const;
-		bool tryGetRangeType(s32 index, const Ref<Amuse::RHI::Sampler>& sampler, vk::DescriptorType& type) const;
+		bool tryGetRangeType(s32 index, const Ref<Amuse::Buffer>& buffer, vk::DescriptorType& type) const;
+		bool tryGetRangeType(s32 index, const Ref<Amuse::Texture>& texture, vk::DescriptorType& type) const;
+		bool tryGetRangeType(s32 index, const Ref<Amuse::Sampler>& sampler, vk::DescriptorType& type) const;
 
 	private:
 
+		//! @ingroup AmuseVulkanRHI
 		struct BufferElement {
 			Ref<Buffer> resource;
 		};
@@ -53,6 +53,7 @@ namespace Amuse::RHI {
 			Ref<Texture> resource;
 			vk::raii::ImageView view;
 		};
+		//! @ingroup AmuseVulkanRHI
 		struct SamplerElement {
 			Ref<Sampler> resource;
 		};

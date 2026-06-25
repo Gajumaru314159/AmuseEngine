@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -6,7 +6,7 @@
 #include <Amuse/Core/Math/IntVector4.h>
 #include <Amuse/Core/Math/Quaternion.h>
 
-using namespace Amuse::Core;
+using namespace Amuse;
 
 TEST(Vector, Constructor) {
     Vec4    vf(4.0f, 5.0f, 6.0f, 7.0f);

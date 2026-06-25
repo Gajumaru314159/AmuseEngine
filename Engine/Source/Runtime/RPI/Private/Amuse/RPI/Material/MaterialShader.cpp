@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -10,7 +10,7 @@
 #include <Amuse/RHI/Types/BindlessHandle.h>
 #include <Amuse/RHI/RHI.h>
 
-namespace Amuse::RPI {
+namespace Amuse {
 
 
 	Ref<MaterialShader> MaterialShader::Create(const MaterialDesc& desc) {
@@ -18,8 +18,6 @@ namespace Amuse::RPI {
 	}
 
 	MaterialShader::MaterialShader(const MaterialDesc& desc) {
-		using namespace Amuse::RHI;
-
 		m_desc = desc;
 
 		bool isBindless = Device::Instance().getConfig().enableBindless;
@@ -39,8 +37,8 @@ namespace Amuse::RPI {
 
 		RootSignatureDesc rdesc;
 		rdesc.name = desc.name;
-		if (RHI::Device::Instance().getConfig().enableBindless) {
-			rdesc.constants.set(sizeof(RHI::BindlessHandle) * 4, 0);
+		if (Device::Instance().getConfig().enableBindless) {
+			rdesc.constants.set(sizeof(BindlessHandle) * 4, 0);
 			rdesc.flags = RootSignatureFlag::EnableBindless;
 		} else {
 			rdesc.layouts = { m_blockDesc.layout, layouts.global, layouts.scene, layouts.view };
@@ -49,7 +47,7 @@ namespace Amuse::RPI {
 		m_signature = RootSignature::Create(rdesc);
 	}
 
-	bool MaterialShader::prepare(const Ref<RHI::VertexLayout>& layout) {
+	bool MaterialShader::prepare(const Ref<VertexLayout>& layout) {
 
 		if (!layout) return false;
 
@@ -94,7 +92,7 @@ namespace Amuse::RPI {
 		return index;
 	}
 
-	Ref<MaterialShader::PipelineState> MaterialShader::getPipeline(const Ref<RHI::VertexLayout>& layout, StringView passName, s32 quality) {
+	Ref<MaterialShader::PipelineState> MaterialShader::getPipeline(const Ref<VertexLayout>& layout, StringView passName, s32 quality) {
 
 		if (!layout) return nullptr;
 
@@ -128,9 +126,7 @@ namespace Amuse::RPI {
 	}
 
 	//! @brief PipelineStateを作成 
-	Ref<MaterialShader::PipelineState> MaterialShader::createPipeline(const PipelineKey& key, const ShaderSet& shaders, const Ref<RHI::VertexLayout>& vertexLayout) {
-		using namespace Amuse::RHI;
-
+	Ref<MaterialShader::PipelineState> MaterialShader::createPipeline(const PipelineKey& key, const ShaderSet& shaders, const Ref<VertexLayout>& vertexLayout) {
 		// 既に作成済み
 		{
 			ScopeLock lock(m_pipelinesLock);

@@ -7,10 +7,9 @@
 #include <Amuse/Core/Core.h>
 #include <Amuse/RHI/CommandList.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief  コマンドキュー
+    //! @ingroup AmuseDirectX12RHI
     class CommandQueue {
     public:
 

@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author Gajumaru
 //***********************************************************
@@ -8,7 +8,7 @@
 #include <WinSock2.h>
 #pragma comment(lib, "ws2_32.lib")
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	static bool s_isStartedUp = false;
 

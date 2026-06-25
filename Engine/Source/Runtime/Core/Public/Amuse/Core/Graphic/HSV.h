@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -7,9 +7,10 @@
 #include <Amuse/Core/Math/Vectors.h>
 #include <Amuse/Core/Graphic/Color.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief		HSVカラー
+    //! @ingroup AmuseCore
     struct HSV {
     public:
 
@@ -208,14 +209,14 @@ namespace Amuse::Core {
 // フォーマット
 //===============================================================
 //! @cond
-template <> struct std::formatter<Amuse::Core::HSV, Amuse::Core::Char> {
+template <> struct std::formatter<Amuse::HSV, Amuse::Char> {
     template<typename ParseContext>
     constexpr auto parse(ParseContext& ctx) -> decltype(ctx.begin()) {
         return ctx.end();
     }
 
     template<typename FormatContext>
-    auto format(Amuse::Core::HSV value, FormatContext& ctx) const {
+    auto format(Amuse::HSV value, FormatContext& ctx) const {
         return format_to(ctx.out(), "({},{},{},{})", value.h, value.s, value.v, value.a);
     }
 };

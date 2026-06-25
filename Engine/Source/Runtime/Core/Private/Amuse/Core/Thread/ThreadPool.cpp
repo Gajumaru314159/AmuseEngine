@@ -1,10 +1,10 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #include <Amuse/Core/Thread/ThreadPool.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	ThreadPool::ThreadPool() {
 		resize(4);

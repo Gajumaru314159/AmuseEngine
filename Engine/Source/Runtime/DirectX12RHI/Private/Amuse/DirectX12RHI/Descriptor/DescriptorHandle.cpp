@@ -6,9 +6,7 @@
 #include <Amuse/DirectX12RHI/Descriptor/DescriptorHandle.h>
 #include <Amuse/DirectX12RHI/Descriptor/DescriptorHeap.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief  コンストラクタ
 	DescriptorHandle::DescriptorHandle()
 		:m_pBlock(nullptr)

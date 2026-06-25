@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -9,11 +9,12 @@
 #include <Amuse/Core/Graphic/IntColor.h>
 #include <Amuse/Core/String/String.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief		RGBAカラーを表現するクラス
     //! 
     //! @details	各色要素は、0〜1の範囲のf32型で表現されます。アルファ(a)は透過度を表し、0で完全な透明、1で完全な不透明を表します。
+    //! @ingroup AmuseCore
     struct Color {
     public:
 
@@ -506,10 +507,10 @@ namespace Amuse::Core {
 // フォーマット
 //===============================================================
 //! @cond
-template <> struct std::formatter<Amuse::Core::Color, Amuse::Core::Char> : std::formatter<Amuse::Core::f32, Amuse::Core::Char> {
-    using base = std::formatter<Amuse::Core::f32, Amuse::Core::Char>;
+template <> struct std::formatter<Amuse::Color, Amuse::Char> : std::formatter<Amuse::f32, Amuse::Char> {
+    using base = std::formatter<Amuse::f32, Amuse::Char>;
     template<typename FormatContext>
-    auto format(const Amuse::Core::Color& value, FormatContext& ctx) const {
+    auto format(const Amuse::Color& value, FormatContext& ctx) const {
         ctx.advance_to(format_to(ctx.out(), "("));
         ctx.advance_to(base::format(value.r, ctx));
         ctx.advance_to(format_to(ctx.out(), ","));

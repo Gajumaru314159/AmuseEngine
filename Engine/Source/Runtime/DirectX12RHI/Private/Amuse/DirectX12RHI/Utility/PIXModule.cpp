@@ -39,9 +39,7 @@ namespace {
 }
 
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief  説明
 
 	PIXModule::PIXModule() 

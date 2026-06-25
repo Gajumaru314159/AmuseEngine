@@ -13,8 +13,7 @@
 //===============================================================
 // 前方宣言
 //===============================================================
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
+namespace Amuse {
     class DirectX12Device;
     class ITexture;
 }
@@ -23,10 +22,9 @@ namespace Amuse::RHI {
 //===============================================================
 // クラス定義
 //===============================================================
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief  シェーダ実装(DirectX12)
+    //! @ingroup AmuseDirectX12RHI
     class DirectX12Shader :public Shader {
     public:
 

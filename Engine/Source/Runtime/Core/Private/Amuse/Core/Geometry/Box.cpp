@@ -1,11 +1,11 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 
 #include <Amuse/Core/Geometry/Box.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     const Box Box::Empty { Vec3::Zero };
 

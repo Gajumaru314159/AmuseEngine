@@ -5,12 +5,11 @@
 #pragma once
 #include <Amuse/Core/Core.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 #pragma region Enum
 
 	//! @brief      ステンシル・オペレータ
+	//! @ingroup AmuseRHI
 	enum class StencilOp :u32 {
 		Keep,				//!< 			
 		Replace,			//!< 
@@ -24,6 +23,7 @@ namespace Amuse::RHI {
 
 
 	//! @brief      比較関数 
+	//! @ingroup AmuseRHI
 	enum class ComparisonFunc :u32 {
 		Never,			//!< 必ず失敗
 		Always,			//!< 常に成功
@@ -38,6 +38,7 @@ namespace Amuse::RHI {
 #pragma endregion
 
     //! @brief  デプス・ステンシル定義
+	//! @ingroup AmuseRHI
 	struct DepthStencilDesc {
 		struct {
 			bool            enable{ false };					//!< デプステストを有効にする

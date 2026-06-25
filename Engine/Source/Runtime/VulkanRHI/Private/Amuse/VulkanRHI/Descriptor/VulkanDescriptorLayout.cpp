@@ -6,9 +6,7 @@
 #include <Amuse/VulkanRHI/VulkanDevice.h>
 #include <Amuse/VulkanRHI/Utility/TypeConverter.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
 	//! @brief              コンストラクタ
 	VulkanDescriptorLayout::VulkanDescriptorLayout(VulkanDevice& device, const DescriptorLayoutDesc& desc)
 		: m_desc(desc)

@@ -1,11 +1,11 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #include <Amuse/RPI/Render/Feature/MeshRenderFeature.h>
 #include "Amuse/Core/Geometry/Bounding.h"
 
-namespace Amuse::RPI {
+namespace Amuse {
 
 	void MeshRenderFeature::update(UpdateContext& context)
 	{

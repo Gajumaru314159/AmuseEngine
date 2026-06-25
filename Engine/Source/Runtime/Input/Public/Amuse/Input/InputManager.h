@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -7,15 +7,13 @@
 #include <Amuse/Input/Interface/IInputDevice.h>
 #include <Amuse/Input/Config.h>
 
-namespace Amuse::Platform {
-    using namespace Amuse::Core;
+namespace Amuse {
     class WindowManager;
 }
 
-namespace Amuse::Input {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief  説明
+    //! @ingroup AmuseInput
     class InputModule : public Singleton<InputModule> {
     public:
 
@@ -23,7 +21,7 @@ namespace Amuse::Input {
         // コンストラクタ / デストラクタ
         //===============================================================
         //! @brief 入力モジュールを初期化する
-        InputModule(InputConfig*, Platform::WindowManager&);
+        InputModule(InputConfig*, WindowManager&);
         ~InputModule();
 
         //! @brief  更新
@@ -41,12 +39,14 @@ namespace Amuse::Input {
 
     private:
 
+        //! @ingroup AmuseInput
         struct DeviceKey {
             DeviceID id{ 0 };
             u32 user{ 0 };
             bool operator==(const DeviceKey& rhs) const { return id == rhs.id && user == rhs.user; }
             bool operator!=(const DeviceKey& rhs) const { return !(*this == rhs); }
         };
+        //! @ingroup AmuseInput
         struct Hash {
             std::size_t operator()(const DeviceKey& key) const {
                 return static_cast<size_t>(static_cast<size_t>(key.id) ^ ((size_t)key.user << 28));

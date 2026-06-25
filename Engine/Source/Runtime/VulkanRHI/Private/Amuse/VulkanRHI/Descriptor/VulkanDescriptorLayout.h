@@ -7,10 +7,9 @@
 #include <Amuse/Core/Core.h>
 #include <Amuse/RHI/DescriptorLayout.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief  デスクリプタ・テーブル実装(Vulkan)
+    //! @ingroup AmuseVulkanRHI
     class VulkanDescriptorLayout :public DescriptorLayout {
     public:
 

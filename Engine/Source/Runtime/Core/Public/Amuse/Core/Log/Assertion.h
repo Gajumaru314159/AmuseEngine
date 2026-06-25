@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //! 
@@ -18,7 +18,7 @@
 #define _internal_AMUSE_ASSERT_BASE(expr,format,...)                                           \
 do{                                                                                         \
     if(UNLIKELY(!(expr))){                                                                  \
-        _internal_AMUSE_LOG_BASE(Amuse::Core::LogLevel::Fatal,"Assertion",format,##__VA_ARGS__);  \
+        _internal_AMUSE_LOG_BASE(Amuse::LogLevel::Fatal,"Assertion",format,##__VA_ARGS__);  \
     }                                                                                       \
 }while(0)
 

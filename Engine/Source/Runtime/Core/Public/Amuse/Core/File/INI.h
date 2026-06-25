@@ -1,13 +1,14 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
 #include <Amuse/Core/CorePrivate.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief  INIセクションオブジェクト
+	//! @ingroup AmuseCore
 	class INISection {
 	public:
 		INISection() = default;
@@ -41,6 +42,7 @@ namespace Amuse::Core {
 	};
 
 	//! @brief  INIオブジェクト
+	//! @ingroup AmuseCore
 	class INI {
 	public:
 

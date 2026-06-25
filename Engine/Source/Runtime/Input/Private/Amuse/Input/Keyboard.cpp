@@ -4,7 +4,7 @@
 //***********************************************************
 #include <Amuse/Input/Keyboard.h>
 
-namespace Amuse::Input
+namespace Amuse
 {
 
 }

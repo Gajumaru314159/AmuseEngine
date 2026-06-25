@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author Gajumaru
 //***********************************************************
@@ -8,7 +8,7 @@
 #include <Amuse/Core/Math/Rotation.h>
 #include <Amuse/Core/Math/Quaternion.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	struct Vec3;
 	struct Vec4;
@@ -28,6 +28,7 @@ namespace Amuse::Core {
 	//!             複数の行列とベクトルを計算する場合は明示的に行列とベクトルの合成を先にするようにしてください。
 	//!				<br><br>
 	//!				メモリレイアウトはシェーダと合わせるために列優先データです。
+	//! @ingroup AmuseCore
 	struct Matrix {
 	public:
 

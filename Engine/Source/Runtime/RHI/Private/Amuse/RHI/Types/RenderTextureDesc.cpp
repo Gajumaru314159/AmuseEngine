@@ -6,9 +6,7 @@
 #include <Amuse/RHI/Types/RenderTextureDesc.h>
 #include <Amuse/RHI/RenderTexture.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     bool RenderTextureDesc::isValid() const {
 
         // サイズ

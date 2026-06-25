@@ -16,7 +16,7 @@
 #include <sys/types.h>
 #include <unistd.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	namespace {
 

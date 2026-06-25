@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -21,8 +21,8 @@ namespace std {
 	}
 
 	template<>
-	struct hash<::Amuse::RHI::RenderTextureDesc> {
-		size_t operator()(const ::Amuse::RHI::RenderTextureDesc& desc) {
+	struct hash<::Amuse::RenderTextureDesc> {
+		size_t operator()(const ::Amuse::RenderTextureDesc& desc) {
 			size_t h = 0;
 			hash_combine(
 				h, 
@@ -36,16 +36,16 @@ namespace std {
 	};
 
 	template<>
-	struct hash<::Amuse::RHI::BufferDesc> {
-		size_t operator()(const ::Amuse::RHI::BufferDesc& desc) {
+	struct hash<::Amuse::BufferDesc> {
+		size_t operator()(const ::Amuse::BufferDesc& desc) {
 			size_t h = 0;
 			hash_combine(
 				h, 
-				Amuse::Core::enum_cast(desc.state),
-				Amuse::Core::enum_cast(desc.state),
+				Amuse::enum_cast(desc.state),
+				Amuse::enum_cast(desc.state),
 				desc.size, 
 				desc.stride,
-				(Amuse::Core::u32)desc.flags
+				(Amuse::u32)desc.flags
 			);
 			return h;
 		}
@@ -54,9 +54,9 @@ namespace std {
 }
 
 
-namespace Amuse::RPI {
+namespace Amuse {
 
-	FGResourcePool::FGResourcePool(::Amuse::RHI::Device& rhi)
+	FGResourcePool::FGResourcePool(::Amuse::Device& rhi)
 		: m_rhi(rhi)
 	{
 	}
@@ -93,7 +93,7 @@ namespace Amuse::RPI {
 
 	}
 
-	auto FGResourcePool::createTexture(const FGTexture::Desc& desc) ->Ref<::Amuse::RHI::RenderTexture> {
+	auto FGResourcePool::createTexture(const FGTexture::Desc& desc) ->Ref<::Amuse::RenderTexture> {
 		const auto hash = std::hash<FGTexture::Desc>{}(desc);
 		auto& pool = m_texturePools[hash];
 		if (pool.empty()) {
@@ -105,7 +105,7 @@ namespace Amuse::RPI {
 			return resource;
 		}
 	}
-	auto FGResourcePool::createBuffer(const FGBuffer::Desc& desc) -> Ref<::Amuse::RHI::Buffer> {
+	auto FGResourcePool::createBuffer(const FGBuffer::Desc& desc) -> Ref<::Amuse::Buffer> {
 		const auto hash = std::hash<FGBuffer::Desc>{}(desc);
 		auto& pool = m_bufferPools[hash];
 		if (pool.empty()) {
@@ -117,11 +117,11 @@ namespace Amuse::RPI {
 		}
 	}
 	
-	void FGResourcePool::destroyTexture(const FGTexture::Desc& desc, const Ref<RHI::RenderTexture>& texture) {
+	void FGResourcePool::destroyTexture(const FGTexture::Desc& desc, const Ref<RenderTexture>& texture) {
 		const auto h = std::hash<FGTexture::Desc>{}(desc);
 		m_texturePools[h].push_back({ texture, 0 });
 	}
-	void FGResourcePool::destroyBuffer(const FGBuffer::Desc& desc, const Ref<RHI::Buffer>& buffer) {
+	void FGResourcePool::destroyBuffer(const FGBuffer::Desc& desc, const Ref<Buffer>& buffer) {
 		const auto h = std::hash<FGBuffer::Desc>{}(desc);
 		m_bufferPools[h].push_back({ buffer, 0 });
 	}

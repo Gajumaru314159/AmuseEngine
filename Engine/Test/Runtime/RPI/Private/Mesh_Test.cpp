@@ -5,8 +5,8 @@
 #include <RPITest.h>
 #include <Amuse/RPI/Mesh/Mesh.h>
 
-using namespace Amuse::Core;
-using namespace Amuse::RPI;
+using namespace Amuse;
+using namespace Amuse;
 
 TYPED_TEST(BindfullRPITest, MeshCreate) {
 

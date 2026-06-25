@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -7,7 +7,7 @@
 #include <Amuse/Core/Job/Job.h>
 #include <Amuse/Core/Job/JobExecutor.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief コンストラクタ
     JobHandle::JobHandle() {

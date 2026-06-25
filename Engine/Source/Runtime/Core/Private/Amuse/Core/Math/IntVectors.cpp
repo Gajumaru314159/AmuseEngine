@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -9,7 +9,7 @@
 #include <Amuse/Core/Math/Vector2.h>
 #include <Amuse/Core/Math/Vector3.h>
 #include <Amuse/Core/Math/Vector4.h>
-namespace Amuse::Core {
+namespace Amuse {
 
     const IntVec2 IntVec2::Left(-1, 0);
     const IntVec2 IntVec2::Right(1, 0);

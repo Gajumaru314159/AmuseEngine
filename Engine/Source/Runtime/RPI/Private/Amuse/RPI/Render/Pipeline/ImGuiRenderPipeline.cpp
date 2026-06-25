@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -8,7 +8,7 @@
 #include <Amuse/RPI/Render/Feature/ImGuiRenderFeature.h>
 #include <Amuse/RPI/Render/Feature/MaterialRenderFeature.h>
 
-namespace Amuse::RPI {
+namespace Amuse {
 
 	void ImGuiRenderPipeline::setup(RenderScene& scene, RenderFeatureSet& features) const {
 		features.add<MaterialRenderFeature>(scene);
@@ -31,10 +31,10 @@ namespace Amuse::RPI {
 		auto resources = fg.addPass<Resources>(
 			"ResourceSetup",
 			[&](FGBuilder& builder, Resources& resources) {
-				RHI::RenderTextureDesc desc;
+				RenderTextureDesc desc;
 				desc.name = "Color";
 				desc.size = *size;
-				desc.format = RHI::TextureFormat::RGBA8;
+				desc.format = TextureFormat::RGBA8;
 				desc.clear.color = Color::Black;
 				resources.color = builder.write(builder.create(desc));
 			}

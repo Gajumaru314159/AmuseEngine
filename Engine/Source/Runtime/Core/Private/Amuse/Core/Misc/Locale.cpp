@@ -1,11 +1,11 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author Gajumaru
 //***********************************************************
 #include <Amuse/Core/Misc/Locale.h>
 #include <Amuse/Core/Template/Utility/Utility.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief IETFタグからロケールを生成する
 	Locale::Locale(StringView tag) {

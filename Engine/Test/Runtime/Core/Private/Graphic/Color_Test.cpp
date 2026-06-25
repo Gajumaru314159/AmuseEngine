@@ -1,10 +1,10 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #include <Amuse/Core/Graphic/Color.h>
 
-using namespace Amuse::Core;
+using namespace Amuse;
 
 TEST(Color, Constructor)
 {

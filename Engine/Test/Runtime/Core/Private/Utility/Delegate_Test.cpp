@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -6,7 +6,7 @@
 #include <Amuse/Core/Template/Utility/MiniDelegate.h>
 
 #if 0
-using namespace Amuse::Core;
+using namespace Amuse;
 
 BitSet<4> s_result;
 

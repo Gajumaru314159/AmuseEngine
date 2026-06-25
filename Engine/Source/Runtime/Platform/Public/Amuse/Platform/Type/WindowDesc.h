@@ -5,10 +5,9 @@
 #pragma once
 #include <Amuse/Core/Core.h>
 
-namespace Amuse::Platform {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief  ウィンドウ・モード
+    //! @ingroup AmusePlatform
     enum class WindowMode {
         Window,     //!< ウィンドウ
         FullScreen, //!< フルスクリーン
@@ -16,6 +15,7 @@ namespace Amuse::Platform {
     };
 
     //! @brief  ウィンドウ生成設定
+    //! @ingroup AmusePlatform
     struct WindowDesc {
         String      title = "NONAME";			//!< ウィンドウタイトル
         Vec2		clientSize{ 1280, 720};	    //!< クライアント領域のピクセルサイズ

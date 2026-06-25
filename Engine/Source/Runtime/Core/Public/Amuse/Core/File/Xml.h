@@ -6,9 +6,10 @@
 #include <Amuse/Core/CorePrivate.h>
 #include <Amuse/Core/Exception/Exception.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief XMLパースエラーに対する例外クラス
+	//! @ingroup AmuseCore
 	class XmlException : public Exception {
 	public:
 		//! @brief デフォルトコンストラクタ
@@ -39,6 +40,7 @@ namespace Amuse::Core {
 	//! @par 特殊ノード
 	//! - `#comment` - XMLコメント（属性"content"にコメント内容を保持）
 	//! - `#text` - テキストノード（属性"content"にテキスト内容を保持）
+	//! @ingroup AmuseCore
 	class XmlNode {
 	public:
 		String name;							//!< 要素名
@@ -204,6 +206,7 @@ namespace Amuse::Core {
 	//! - 関数（`text()`, `contains()` など）
 	//! - `//` による子孫検索
 	//! - ワイルドカード（`*`）
+	//! @ingroup AmuseCore
 	class Xml : public XmlNode {
 	public:
 		//! @brief デフォルトコンストラクタ

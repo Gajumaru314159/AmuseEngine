@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author Gajumaru
 //***********************************************************
@@ -8,7 +8,7 @@
 // sudo apt-get install uuid-dev
 #include <uuid/uuid.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief 新しいUUIDを生成
     UUID UUID::Generate() {

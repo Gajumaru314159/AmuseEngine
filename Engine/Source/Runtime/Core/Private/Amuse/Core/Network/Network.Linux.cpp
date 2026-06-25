@@ -8,7 +8,7 @@
 #include <sys/types.h>
 #include <sys/socket.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	namespace {
 		bool g_isStartedUp = false;

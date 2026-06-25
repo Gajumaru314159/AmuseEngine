@@ -5,10 +5,9 @@
 #pragma once
 #include <Amuse/Core/Core.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief      シェーダ・ステージ
+    //! @ingroup AmuseRHI
     enum class ShaderStage :u32{
         Unknown         = 0,
 

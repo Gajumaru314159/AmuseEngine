@@ -10,9 +10,7 @@
 #include <Amuse/DirectX12RHI/DirectX12Device.h>
 #include <Amuse/DirectX12RHI/Utility/Utility.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     static const wchar_t* getEntryW(ShaderStage stage) {
         switch (stage)
         {

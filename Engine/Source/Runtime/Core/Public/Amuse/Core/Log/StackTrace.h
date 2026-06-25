@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -9,9 +9,10 @@
 #include <Amuse/Core/Template/Container/Vector.h>
 #include <Amuse/Core/Template/Container/FixedVector.h>
 
-namespace Amuse::Core {
+namespace Amuse {
 
 	//! @brief      スタックトレース情報
+	//! @ingroup AmuseCore
 	struct StackTraceElement {
 		String name; //!< name
 		String filename; //!< filename
@@ -19,6 +20,7 @@ namespace Amuse::Core {
 	};
 
 	//! @brief      スタック情報を取得
+	//! @ingroup AmuseCore
 	struct StackTrace {
 
 		static constexpr auto MAX_ENTRY_COUNT = 32; //!< MAX_ENTRY_COUNT

@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -6,7 +6,7 @@
 #include <Amuse/Core/Math/Quaternion.h>
 #include <Amuse/Core/Math/Rotation.h>
 
-using namespace Amuse::Core;
+using namespace Amuse;
 
 TEST(Quat, Construct) {
 

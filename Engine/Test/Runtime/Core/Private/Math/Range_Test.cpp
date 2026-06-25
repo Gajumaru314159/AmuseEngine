@@ -1,10 +1,10 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
 #include <Amuse/Core/Math/Range.h>
 
-using namespace Amuse::Core;
+using namespace Amuse;
 
 TEST(Range, Constructor) {
 	// デフォルトコンストラクタ

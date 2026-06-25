@@ -4,7 +4,7 @@
 //***********************************************************
 #include <Amuse/Core/Misc/DateTime.h>
 
-using namespace Amuse::Core;
+using namespace Amuse;
 
 TEST(DateTime, Constructor)
 {

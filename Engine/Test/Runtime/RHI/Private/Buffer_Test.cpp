@@ -6,8 +6,8 @@
 #include <magic_enum.hpp>
 #include <cstring>
 
-using namespace Amuse::Core;
-using namespace Amuse::RHI;
+using namespace Amuse;
+using namespace Amuse;
 
 TYPED_TEST(RHITest, Buffer_Create) {
 

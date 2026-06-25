@@ -1,4 +1,4 @@
-﻿//***********************************************************
+//***********************************************************
 //! @file
 //! @author		Gajumaru
 //***********************************************************
@@ -7,9 +7,10 @@
 #include <Amuse/Core/Template/include.h>
 #include <cstring>
 
-namespace Amuse::Core {
+namespace Amuse {
 
     //! @brief バイナリデータ(Binary Large Object)
+    //! @ingroup AmuseCore
     class Blob {
     public:
 

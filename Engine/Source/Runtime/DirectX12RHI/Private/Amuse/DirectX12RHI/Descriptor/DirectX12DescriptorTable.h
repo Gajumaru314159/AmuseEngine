@@ -11,17 +11,15 @@
 #include <Amuse/DirectX12RHI/Descriptor/DescriptorHandle.h>
 #include <Amuse/DirectX12RHI/RootSignature/DirectX12RootSignature.h>
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
+namespace Amuse {
 	class DirectX12Device;
 	class DescriptorHeap;
 	class DirectX12DescriptorLayout;
 }
 
-namespace Amuse::RHI {
-    using namespace Amuse::Core;
-
+namespace Amuse {
     //! @brief  デスクリプタ・テーブル実装(DirectX12)
+    //! @ingroup AmuseDirectX12RHI
     class DirectX12DescriptorTable :public DescriptorTable {
     public:
 
@@ -50,9 +48,9 @@ namespace Amuse::RHI {
 
 	private:
 
-		bool tryGetRangeType(s32 index, const Ref<Amuse::RHI::Buffer>& buffer, D3D12_DESCRIPTOR_RANGE_TYPE& type) const;
-		bool tryGetRangeType(s32 index, const Ref<Amuse::RHI::Texture>& texture, D3D12_DESCRIPTOR_RANGE_TYPE& type) const;
-		bool tryGetRangeType(s32 index, const Ref<Amuse::RHI::Sampler>& sampler, D3D12_DESCRIPTOR_RANGE_TYPE& type) const;
+		bool tryGetRangeType(s32 index, const Ref<Amuse::Buffer>& buffer, D3D12_DESCRIPTOR_RANGE_TYPE& type) const;
+		bool tryGetRangeType(s32 index, const Ref<Amuse::Texture>& texture, D3D12_DESCRIPTOR_RANGE_TYPE& type) const;
+		bool tryGetRangeType(s32 index, const Ref<Amuse::Sampler>& sampler, D3D12_DESCRIPTOR_RANGE_TYPE& type) const;
 
     private:
 		DirectX12Device&		m_device;
