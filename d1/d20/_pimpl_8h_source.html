@@ -128,86 +128,87 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('d1/d20/_pimpl_
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;Amuse/Core/Template/Utility/Memory.h&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;assert.h&gt;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span>Amuse::Core {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span>Amuse {</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="../../d4/d30/class_amuse_1_1_core_1_1_pimpl.html">   18</a></span>    <span class="keyword">class </span><a class="code hl_function" href="../../d4/d30/class_amuse_1_1_core_1_1_pimpl.html#a145c84e728c4a366d49dd55f20a74343">Pimpl</a> {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ...Args&gt;</div>
-<div class="foldopen" id="foldopen00023" data-start="{" data-end="}">
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="../../d4/d30/class_amuse_1_1_core_1_1_pimpl.html#a145c84e728c4a366d49dd55f20a74343">   23</a></span>        <a class="code hl_function" href="../../d4/d30/class_amuse_1_1_core_1_1_pimpl.html#a145c84e728c4a366d49dd55f20a74343">Pimpl</a>(Args&amp;&amp;... args) </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            : m_impl(std::make_unique&lt;T&gt;(std::forward&lt;Args&gt;(args)...))</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        {}</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="../../d8/dc3/class_amuse_1_1_pimpl.html">   19</a></span>    <span class="keyword">class </span><a class="code hl_function" href="../../d8/dc3/class_amuse_1_1_pimpl.html#ad3b5599fdbe30703fcaa513e4659fd1c">Pimpl</a> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ...Args&gt;</div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="}">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="../../d8/dc3/class_amuse_1_1_pimpl.html#ad3b5599fdbe30703fcaa513e4659fd1c">   24</a></span>        <a class="code hl_function" href="../../d8/dc3/class_amuse_1_1_pimpl.html#ad3b5599fdbe30703fcaa513e4659fd1c">Pimpl</a>(Args&amp;&amp;... args) </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            : m_impl(std::make_unique&lt;<a class="code hl_enumvalue" href="../../d1/da5/group___amuse_input.html#gga7f039edf8ca5f938e3d74c5e6eaf5f51ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>&gt;(std::forward&lt;Args&gt;(args)...))</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        {}</div>
 </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
-<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../d4/d30/class_amuse_1_1_core_1_1_pimpl.html#a51b106975c40c3222f3d2b07e37ae306">   28</a></span>        <a class="code hl_function" href="../../d4/d30/class_amuse_1_1_core_1_1_pimpl.html#a51b106975c40c3222f3d2b07e37ae306">Pimpl</a>(<a class="code hl_function" href="../../d4/d30/class_amuse_1_1_core_1_1_pimpl.html#a145c84e728c4a366d49dd55f20a74343">Pimpl</a> &amp;&amp; rhs) noexcept</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            : m_impl(std::move(rhs.m_impl))</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        {}</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="../../d8/dc3/class_amuse_1_1_pimpl.html#a18b8121e65e17b8d63530961711ba57c">   29</a></span>        <a class="code hl_function" href="../../d8/dc3/class_amuse_1_1_pimpl.html#a18b8121e65e17b8d63530961711ba57c">Pimpl</a>(<a class="code hl_function" href="../../d8/dc3/class_amuse_1_1_pimpl.html#ad3b5599fdbe30703fcaa513e4659fd1c">Pimpl</a> &amp;&amp; rhs) noexcept</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            : m_impl(std::move(rhs.m_impl))</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        {}</div>
 </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span></div>
-<div class="foldopen" id="foldopen00033" data-start="{" data-end="}">
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../d4/d30/class_amuse_1_1_core_1_1_pimpl.html#a5bd131c5c4193fa987253cd8313bea31">   33</a></span>        <a class="code hl_function" href="../../d4/d30/class_amuse_1_1_core_1_1_pimpl.html#a145c84e728c4a366d49dd55f20a74343">Pimpl</a>&amp; <a class="code hl_function" href="../../d4/d30/class_amuse_1_1_core_1_1_pimpl.html#a5bd131c5c4193fa987253cd8313bea31">operator =</a>(<a class="code hl_function" href="../../d4/d30/class_amuse_1_1_core_1_1_pimpl.html#a145c84e728c4a366d49dd55f20a74343">Pimpl</a> &amp;&amp; rhs) <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            m_impl = std::move(rhs.m_impl);</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        }</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span></div>
+<div class="foldopen" id="foldopen00034" data-start="{" data-end="}">
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="../../d8/dc3/class_amuse_1_1_pimpl.html#a68a92c831da6019b241a8de8d4cf5eb2">   34</a></span>        <a class="code hl_function" href="../../d8/dc3/class_amuse_1_1_pimpl.html#ad3b5599fdbe30703fcaa513e4659fd1c">Pimpl</a>&amp; <a class="code hl_function" href="../../d8/dc3/class_amuse_1_1_pimpl.html#a68a92c831da6019b241a8de8d4cf5eb2">operator =</a>(<a class="code hl_function" href="../../d8/dc3/class_amuse_1_1_pimpl.html#ad3b5599fdbe30703fcaa513e4659fd1c">Pimpl</a> &amp;&amp; rhs) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            m_impl = std::move(rhs.m_impl);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        }</div>
 </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span></div>
-<div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../d4/d30/class_amuse_1_1_core_1_1_pimpl.html#ac15dccfed1a0e7e36f974aa2aa0bb6d1">   39</a></span>        T* <a class="code hl_function" href="../../d4/d30/class_amuse_1_1_core_1_1_pimpl.html#ac15dccfed1a0e7e36f974aa2aa0bb6d1">operator -&gt;</a>() noexcept {</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <span class="keywordflow">return</span> m_impl.get();</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span></div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../d8/dc3/class_amuse_1_1_pimpl.html#ad728d8b1b343869d8f0aa27e8fadf24a">   40</a></span>        <a class="code hl_enumvalue" href="../../d1/da5/group___amuse_input.html#gga7f039edf8ca5f938e3d74c5e6eaf5f51ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>* <a class="code hl_function" href="../../d8/dc3/class_amuse_1_1_pimpl.html#ad728d8b1b343869d8f0aa27e8fadf24a">operator -&gt;</a>() noexcept {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <span class="keywordflow">return</span> m_impl.<a class="code hl_function" href="../../d8/dc3/class_amuse_1_1_pimpl.html#a51d6a06d4fb74d1d01ccb35b3492f7a9">get</a>();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        }</div>
 </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span></div>
-<div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="../../d4/d30/class_amuse_1_1_core_1_1_pimpl.html#a2f7b537f152ba763be49e1ccfa25e0e3">   44</a></span>        <span class="keyword">const</span> T* <a class="code hl_function" href="../../d4/d30/class_amuse_1_1_core_1_1_pimpl.html#ac15dccfed1a0e7e36f974aa2aa0bb6d1">operator -&gt;</a>()const noexcept {</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <span class="keywordflow">return</span> m_impl.get();</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span></div>
+<div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="../../d8/dc3/class_amuse_1_1_pimpl.html#a7e84d95ae6045721f4c97508a1050eb7">   45</a></span>        <span class="keyword">const</span> <a class="code hl_enumvalue" href="../../d1/da5/group___amuse_input.html#gga7f039edf8ca5f938e3d74c5e6eaf5f51ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>* <a class="code hl_function" href="../../d8/dc3/class_amuse_1_1_pimpl.html#ad728d8b1b343869d8f0aa27e8fadf24a">operator -&gt;</a>()const noexcept {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <span class="keywordflow">return</span> m_impl.get();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        }</div>
 </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span></div>
-<div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="../../d4/d30/class_amuse_1_1_core_1_1_pimpl.html#a8452cc630867f2b1c83348ab2bb3d9e2">   49</a></span>        T&amp; <a class="code hl_function" href="../../d4/d30/class_amuse_1_1_core_1_1_pimpl.html#a8452cc630867f2b1c83348ab2bb3d9e2">operator *</a>() noexcept {</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            assert(m_impl != <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <span class="keywordflow">return</span> *m_impl;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span></div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="../../d8/dc3/class_amuse_1_1_pimpl.html#ae39b4c1ef7cf55e194e27de74d2b71eb">   50</a></span>        <a class="code hl_enumvalue" href="../../d1/da5/group___amuse_input.html#gga7f039edf8ca5f938e3d74c5e6eaf5f51ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>&amp; <a class="code hl_function" href="../../d8/dc3/class_amuse_1_1_pimpl.html#ae39b4c1ef7cf55e194e27de74d2b71eb">operator *</a>() noexcept {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            assert(m_impl != <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <span class="keywordflow">return</span> *m_impl;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        }</div>
 </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span></div>
-<div class="foldopen" id="foldopen00055" data-start="{" data-end="}">
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="../../d4/d30/class_amuse_1_1_core_1_1_pimpl.html#aae7df8e0f2bff8a95d521bdef3063029">   55</a></span>        <span class="keyword">const</span> T&amp; <a class="code hl_function" href="../../d4/d30/class_amuse_1_1_core_1_1_pimpl.html#a8452cc630867f2b1c83348ab2bb3d9e2">operator *</a>()const noexcept {</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            assert(m_impl != <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <span class="keywordflow">return</span> *m_impl;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
+<div class="foldopen" id="foldopen00056" data-start="{" data-end="}">
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="../../d8/dc3/class_amuse_1_1_pimpl.html#a64739e85c2e6880359a194b23ce0b5d0">   56</a></span>        <span class="keyword">const</span> <a class="code hl_enumvalue" href="../../d1/da5/group___amuse_input.html#gga7f039edf8ca5f938e3d74c5e6eaf5f51ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>&amp; <a class="code hl_function" href="../../d8/dc3/class_amuse_1_1_pimpl.html#ae39b4c1ef7cf55e194e27de74d2b71eb">operator *</a>()const noexcept {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            assert(m_impl != <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <span class="keywordflow">return</span> *m_impl;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        }</div>
 </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span></div>
-<div class="foldopen" id="foldopen00061" data-start="{" data-end="}">
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="../../d4/d30/class_amuse_1_1_core_1_1_pimpl.html#abfa54b021693f8754ef090d34c440e61">   61</a></span>        T* <a class="code hl_function" href="../../d4/d30/class_amuse_1_1_core_1_1_pimpl.html#abfa54b021693f8754ef090d34c440e61">get</a>() noexcept {</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="keywordflow">return</span> m_impl.get();</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span></div>
+<div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="../../d8/dc3/class_amuse_1_1_pimpl.html#a51d6a06d4fb74d1d01ccb35b3492f7a9">   62</a></span>        <a class="code hl_enumvalue" href="../../d1/da5/group___amuse_input.html#gga7f039edf8ca5f938e3d74c5e6eaf5f51ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>* <a class="code hl_function" href="../../d8/dc3/class_amuse_1_1_pimpl.html#a51d6a06d4fb74d1d01ccb35b3492f7a9">get</a>() noexcept {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            <span class="keywordflow">return</span> m_impl.get();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        }</div>
 </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span></div>
-<div class="foldopen" id="foldopen00066" data-start="{" data-end="}">
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="../../d4/d30/class_amuse_1_1_core_1_1_pimpl.html#aa829a87171f9b2c5645f0990790ce033">   66</a></span>        <span class="keyword">const</span> T* <a class="code hl_function" href="../../d4/d30/class_amuse_1_1_core_1_1_pimpl.html#aa829a87171f9b2c5645f0990790ce033">get</a>()const noexcept {</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            <span class="keywordflow">return</span> m_impl.get();</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span></div>
+<div class="foldopen" id="foldopen00067" data-start="{" data-end="}">
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="../../d8/dc3/class_amuse_1_1_pimpl.html#a6bd1472e6d131375f0e2670b789cbd0f">   67</a></span>        <span class="keyword">const</span> <a class="code hl_enumvalue" href="../../d1/da5/group___amuse_input.html#gga7f039edf8ca5f938e3d74c5e6eaf5f51ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>* <a class="code hl_function" href="../../d8/dc3/class_amuse_1_1_pimpl.html#a6bd1472e6d131375f0e2670b789cbd0f">get</a>()const noexcept {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            <span class="keywordflow">return</span> m_impl.get();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        }</div>
 </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        UPtr&lt;T&gt; m_impl{<span class="keyword">nullptr</span>};</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    };</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        UPtr&lt;T&gt; m_impl{<span class="keyword">nullptr</span>};</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    };</div>
 </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>}</div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_pimpl_html_a145c84e728c4a366d49dd55f20a74343"><div class="ttname"><a href="../../d4/d30/class_amuse_1_1_core_1_1_pimpl.html#a145c84e728c4a366d49dd55f20a74343">Amuse::Core::Pimpl::Pimpl</a></div><div class="ttdeci">Pimpl(Args &amp;&amp;... args)</div><div class="ttdoc">コンストラクタ</div><div class="ttdef"><b>Definition</b> Pimpl.h:23</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_pimpl_html_a51b106975c40c3222f3d2b07e37ae306"><div class="ttname"><a href="../../d4/d30/class_amuse_1_1_core_1_1_pimpl.html#a51b106975c40c3222f3d2b07e37ae306">Amuse::Core::Pimpl::Pimpl</a></div><div class="ttdeci">Pimpl(Pimpl &amp;&amp;rhs) noexcept</div><div class="ttdoc">ムーブコンストラクタ</div><div class="ttdef"><b>Definition</b> Pimpl.h:28</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_pimpl_html_a5bd131c5c4193fa987253cd8313bea31"><div class="ttname"><a href="../../d4/d30/class_amuse_1_1_core_1_1_pimpl.html#a5bd131c5c4193fa987253cd8313bea31">Amuse::Core::Pimpl::operator=</a></div><div class="ttdeci">Pimpl &amp; operator=(Pimpl &amp;&amp;rhs) noexcept</div><div class="ttdoc">ムーブ代入演算子</div><div class="ttdef"><b>Definition</b> Pimpl.h:33</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_pimpl_html_a8452cc630867f2b1c83348ab2bb3d9e2"><div class="ttname"><a href="../../d4/d30/class_amuse_1_1_core_1_1_pimpl.html#a8452cc630867f2b1c83348ab2bb3d9e2">Amuse::Core::Pimpl::operator*</a></div><div class="ttdeci">T &amp; operator*() noexcept</div><div class="ttdoc">参照アクセス</div><div class="ttdef"><b>Definition</b> Pimpl.h:49</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_pimpl_html_aa829a87171f9b2c5645f0990790ce033"><div class="ttname"><a href="../../d4/d30/class_amuse_1_1_core_1_1_pimpl.html#aa829a87171f9b2c5645f0990790ce033">Amuse::Core::Pimpl::get</a></div><div class="ttdeci">const T * get() const noexcept</div><div class="ttdoc">ポインタアクセス(const)</div><div class="ttdef"><b>Definition</b> Pimpl.h:66</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_pimpl_html_abfa54b021693f8754ef090d34c440e61"><div class="ttname"><a href="../../d4/d30/class_amuse_1_1_core_1_1_pimpl.html#abfa54b021693f8754ef090d34c440e61">Amuse::Core::Pimpl::get</a></div><div class="ttdeci">T * get() noexcept</div><div class="ttdoc">ポインタアクセス</div><div class="ttdef"><b>Definition</b> Pimpl.h:61</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_pimpl_html_ac15dccfed1a0e7e36f974aa2aa0bb6d1"><div class="ttname"><a href="../../d4/d30/class_amuse_1_1_core_1_1_pimpl.html#ac15dccfed1a0e7e36f974aa2aa0bb6d1">Amuse::Core::Pimpl::operator-&gt;</a></div><div class="ttdeci">T * operator-&gt;() noexcept</div><div class="ttdoc">ポインタアクセス</div><div class="ttdef"><b>Definition</b> Pimpl.h:39</div></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>}</div>
+<div class="ttc" id="aclass_amuse_1_1_pimpl_html_a18b8121e65e17b8d63530961711ba57c"><div class="ttname"><a href="../../d8/dc3/class_amuse_1_1_pimpl.html#a18b8121e65e17b8d63530961711ba57c">Amuse::Pimpl::Pimpl</a></div><div class="ttdeci">Pimpl(Pimpl &amp;&amp;rhs) noexcept</div><div class="ttdoc">ムーブコンストラクタ</div><div class="ttdef"><b>Definition</b> Pimpl.h:29</div></div>
+<div class="ttc" id="aclass_amuse_1_1_pimpl_html_a51d6a06d4fb74d1d01ccb35b3492f7a9"><div class="ttname"><a href="../../d8/dc3/class_amuse_1_1_pimpl.html#a51d6a06d4fb74d1d01ccb35b3492f7a9">Amuse::Pimpl::get</a></div><div class="ttdeci">T * get() noexcept</div><div class="ttdoc">ポインタアクセス</div><div class="ttdef"><b>Definition</b> Pimpl.h:62</div></div>
+<div class="ttc" id="aclass_amuse_1_1_pimpl_html_a68a92c831da6019b241a8de8d4cf5eb2"><div class="ttname"><a href="../../d8/dc3/class_amuse_1_1_pimpl.html#a68a92c831da6019b241a8de8d4cf5eb2">Amuse::Pimpl::operator=</a></div><div class="ttdeci">Pimpl &amp; operator=(Pimpl &amp;&amp;rhs) noexcept</div><div class="ttdoc">ムーブ代入演算子</div><div class="ttdef"><b>Definition</b> Pimpl.h:34</div></div>
+<div class="ttc" id="aclass_amuse_1_1_pimpl_html_a6bd1472e6d131375f0e2670b789cbd0f"><div class="ttname"><a href="../../d8/dc3/class_amuse_1_1_pimpl.html#a6bd1472e6d131375f0e2670b789cbd0f">Amuse::Pimpl::get</a></div><div class="ttdeci">const T * get() const noexcept</div><div class="ttdoc">ポインタアクセス(const)</div><div class="ttdef"><b>Definition</b> Pimpl.h:67</div></div>
+<div class="ttc" id="aclass_amuse_1_1_pimpl_html_ad3b5599fdbe30703fcaa513e4659fd1c"><div class="ttname"><a href="../../d8/dc3/class_amuse_1_1_pimpl.html#ad3b5599fdbe30703fcaa513e4659fd1c">Amuse::Pimpl::Pimpl</a></div><div class="ttdeci">Pimpl(Args &amp;&amp;... args)</div><div class="ttdoc">コンストラクタ</div><div class="ttdef"><b>Definition</b> Pimpl.h:24</div></div>
+<div class="ttc" id="aclass_amuse_1_1_pimpl_html_ad728d8b1b343869d8f0aa27e8fadf24a"><div class="ttname"><a href="../../d8/dc3/class_amuse_1_1_pimpl.html#ad728d8b1b343869d8f0aa27e8fadf24a">Amuse::Pimpl::operator-&gt;</a></div><div class="ttdeci">T * operator-&gt;() noexcept</div><div class="ttdoc">ポインタアクセス</div><div class="ttdef"><b>Definition</b> Pimpl.h:40</div></div>
+<div class="ttc" id="aclass_amuse_1_1_pimpl_html_ae39b4c1ef7cf55e194e27de74d2b71eb"><div class="ttname"><a href="../../d8/dc3/class_amuse_1_1_pimpl.html#ae39b4c1ef7cf55e194e27de74d2b71eb">Amuse::Pimpl::operator*</a></div><div class="ttdeci">T &amp; operator*() noexcept</div><div class="ttdoc">参照アクセス</div><div class="ttdef"><b>Definition</b> Pimpl.h:50</div></div>
+<div class="ttc" id="agroup___amuse_input_html_gga7f039edf8ca5f938e3d74c5e6eaf5f51ab9ece18c950afbfa6b0fdbfa4ff731d3"><div class="ttname"><a href="../../d1/da5/group___amuse_input.html#gga7f039edf8ca5f938e3d74c5e6eaf5f51ab9ece18c950afbfa6b0fdbfa4ff731d3">Amuse::Key::T</a></div><div class="ttdeci">@ T</div><div class="ttdoc">T</div><div class="ttdef"><b>Definition</b> InputType.h:84</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

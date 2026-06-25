@@ -283,7 +283,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('d8/dfd/_schedu
 </ul>
 <h1>基本設計</h1>
 <h2>主要クラス</h2>
-<div class="fragment"><div class="line"><span class="keyword">namespace </span>Amuse::Core {</div>
+<div class="fragment"><div class="line"><span class="keyword">namespace </span>Amuse {</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">enum class</span> ExecutorKind {</div>
 <div class="line">    SingleThreaded,</div>
@@ -291,15 +291,15 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('d8/dfd/_schedu
 <div class="line">};</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">struct </span>ScheduleExecutorConfig {</div>
-<div class="line">    s32 <a class="code hl_variable" href="../../de/d86/struct_amuse_1_1_core_1_1_schedule_executor_config.html#acfb8e321d979d530161daa81176aa84d">workerCount</a> = 0;</div>
-<div class="line">    <span class="keywordtype">bool</span> <a class="code hl_variable" href="../../de/d86/struct_amuse_1_1_core_1_1_schedule_executor_config.html#a90d5086481b319e7b9b12520baabea63">allowWorkerSleep</a> = <span class="keyword">true</span>;</div>
-<div class="line">    <span class="keywordtype">bool</span> <a class="code hl_variable" href="../../de/d86/struct_amuse_1_1_core_1_1_schedule_executor_config.html#a8ee0c781b05f76eaea2c296fcf16ff68">enableWorkStealing</a> = <span class="keyword">true</span>;</div>
+<div class="line">    s32 <a class="code hl_variable" href="../../d2/dad/struct_amuse_1_1_schedule_executor_config.html#ad705c8a27ca26a4b94e2c7c9bfa3c7f0">workerCount</a> = 0;</div>
+<div class="line">    <span class="keywordtype">bool</span> <a class="code hl_variable" href="../../d2/dad/struct_amuse_1_1_schedule_executor_config.html#a19cf62e2d5b9e4aac74be2e0f3ff5451">allowWorkerSleep</a> = <span class="keyword">true</span>;</div>
+<div class="line">    <span class="keywordtype">bool</span> <a class="code hl_variable" href="../../d2/dad/struct_amuse_1_1_schedule_executor_config.html#a281703cc2f18c56c915e9f09291fffc0">enableWorkStealing</a> = <span class="keyword">true</span>;</div>
 <div class="line">};</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">enum class</span> ScheduleBuildLogLevel {</div>
 <div class="line">    Ignore,</div>
 <div class="line">    Warn,</div>
-<div class="line">    Error,</div>
+<div class="line">    <a class="code hl_enumvalue" href="../../da/d78/group___amuse_core.html#gga811aa33e65020e8164eeba74920e19bba902b0d55fddef6f8d651fe1035b7d4bd">Error</a>,</div>
 <div class="line">};</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">class </span>Task;</div>
@@ -312,9 +312,10 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('d8/dfd/_schedu
 <div class="line"><span class="keyword">class </span>Schedule;</div>
 <div class="line"> </div>
 <div class="line">}</div>
-<div class="ttc" id="astruct_amuse_1_1_core_1_1_schedule_executor_config_html_a8ee0c781b05f76eaea2c296fcf16ff68"><div class="ttname"><a href="../../de/d86/struct_amuse_1_1_core_1_1_schedule_executor_config.html#a8ee0c781b05f76eaea2c296fcf16ff68">Amuse::Core::ScheduleExecutorConfig::enableWorkStealing</a></div><div class="ttdeci">bool enableWorkStealing</div><div class="ttdoc">ワークスティール有効フラグ</div><div class="ttdef"><b>Definition</b> Scheduler.h:31</div></div>
-<div class="ttc" id="astruct_amuse_1_1_core_1_1_schedule_executor_config_html_a90d5086481b319e7b9b12520baabea63"><div class="ttname"><a href="../../de/d86/struct_amuse_1_1_core_1_1_schedule_executor_config.html#a90d5086481b319e7b9b12520baabea63">Amuse::Core::ScheduleExecutorConfig::allowWorkerSleep</a></div><div class="ttdeci">bool allowWorkerSleep</div><div class="ttdoc">ワーカースリープ許可</div><div class="ttdef"><b>Definition</b> Scheduler.h:30</div></div>
-<div class="ttc" id="astruct_amuse_1_1_core_1_1_schedule_executor_config_html_acfb8e321d979d530161daa81176aa84d"><div class="ttname"><a href="../../de/d86/struct_amuse_1_1_core_1_1_schedule_executor_config.html#acfb8e321d979d530161daa81176aa84d">Amuse::Core::ScheduleExecutorConfig::workerCount</a></div><div class="ttdeci">s32 workerCount</div><div class="ttdoc">ワーカー数</div><div class="ttdef"><b>Definition</b> Scheduler.h:29</div></div>
+<div class="ttc" id="agroup___amuse_core_html_gga811aa33e65020e8164eeba74920e19bba902b0d55fddef6f8d651fe1035b7d4bd"><div class="ttname"><a href="../../da/d78/group___amuse_core.html#gga811aa33e65020e8164eeba74920e19bba902b0d55fddef6f8d651fe1035b7d4bd">Amuse::ExceptionLevel::Error</a></div><div class="ttdeci">@ Error</div><div class="ttdoc">プログラムが不正な状態になる可能性がある例外。プログラムの継続が危険であり、早急に終了することが望まれる。</div><div class="ttdef"><b>Definition</b> ExceptionType.h:13</div></div>
+<div class="ttc" id="astruct_amuse_1_1_schedule_executor_config_html_a19cf62e2d5b9e4aac74be2e0f3ff5451"><div class="ttname"><a href="../../d2/dad/struct_amuse_1_1_schedule_executor_config.html#a19cf62e2d5b9e4aac74be2e0f3ff5451">Amuse::ScheduleExecutorConfig::allowWorkerSleep</a></div><div class="ttdeci">bool allowWorkerSleep</div><div class="ttdoc">ワーカースリープ許可</div><div class="ttdef"><b>Definition</b> Scheduler.h:32</div></div>
+<div class="ttc" id="astruct_amuse_1_1_schedule_executor_config_html_a281703cc2f18c56c915e9f09291fffc0"><div class="ttname"><a href="../../d2/dad/struct_amuse_1_1_schedule_executor_config.html#a281703cc2f18c56c915e9f09291fffc0">Amuse::ScheduleExecutorConfig::enableWorkStealing</a></div><div class="ttdeci">bool enableWorkStealing</div><div class="ttdoc">ワークスティール有効フラグ</div><div class="ttdef"><b>Definition</b> Scheduler.h:33</div></div>
+<div class="ttc" id="astruct_amuse_1_1_schedule_executor_config_html_ad705c8a27ca26a4b94e2c7c9bfa3c7f0"><div class="ttname"><a href="../../d2/dad/struct_amuse_1_1_schedule_executor_config.html#ad705c8a27ca26a4b94e2c7c9bfa3c7f0">Amuse::ScheduleExecutorConfig::workerCount</a></div><div class="ttdeci">s32 workerCount</div><div class="ttdoc">ワーカー数</div><div class="ttdef"><b>Definition</b> Scheduler.h:31</div></div>
 </div><!-- fragment --><h2>データ構造</h2>
 <div class="fragment"><div class="line">Schedule</div>
 <div class="line">  Vector&lt;SystemNode&gt;       systems</div>

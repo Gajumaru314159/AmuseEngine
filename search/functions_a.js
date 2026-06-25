@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['jobgroup_0',['JobGroup',['../d0/d57/class_amuse_1_1_core_1_1_job_group.html#a0433cc7b06aabd928fe1913a4b5b7bdd',1,'Amuse::Core::JobGroup']]],
-  ['jobgrouphandle_1',['JobGroupHandle',['../dc/d1f/class_amuse_1_1_core_1_1_job_group_handle.html#a7f437ad7349c33145951a40ab171bf35',1,'Amuse::Core::JobGroupHandle']]],
-  ['jobhandle_2',['JobHandle',['../da/d98/class_amuse_1_1_core_1_1_job_handle.html#a9f89ea98b0123a26510600343150c9cd',1,'Amuse::Core::JobHandle']]],
-  ['jobsystem_3',['JobSystem',['../da/d28/class_amuse_1_1_core_1_1_job_system.html#af1af9e472ed91e89329a1c0d32fcba43',1,'Amuse::Core::JobSystem']]],
-  ['join_4',['join',['../d4/dc8/class_amuse_1_1_core_1_1_thread.html#a4efd74e79993bd3f3da7ca1bb54df05d',1,'Amuse::Core::Thread']]]
+  ['jobgroup_0',['JobGroup',['../d5/d64/class_amuse_1_1_job_group.html#a6de0fb434a9928dd3a8c6342941fe9d1',1,'Amuse::JobGroup']]],
+  ['jobgrouphandle_1',['JobGroupHandle',['../d3/d81/class_amuse_1_1_job_group_handle.html#a94e23e9f83888a4894056a2a887d9cfa',1,'Amuse::JobGroupHandle']]],
+  ['jobhandle_2',['JobHandle',['../dc/de3/class_amuse_1_1_job_handle.html#a37f078e06a87229ab33946b5c5cff523',1,'Amuse::JobHandle']]],
+  ['jobsystem_3',['JobSystem',['../d0/db7/class_amuse_1_1_job_system.html#acc6e0bfe31c3f95eeb4f0b072bfc8a20',1,'Amuse::JobSystem']]],
+  ['join_4',['join',['../d7/d67/class_amuse_1_1_thread.html#a6c7abfff648dad193674fc432ad4840d',1,'Amuse::Thread']]]
 ];

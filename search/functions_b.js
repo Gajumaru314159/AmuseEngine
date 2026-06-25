@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['kb_0',['KB',['../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a26b1103cd401e724f1e2c767dec89de8',1,'Amuse::Core::MemorySize']]],
-  ['kbf_1',['KBF',['../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#aa5d652acaf2e2382656020208ec88b64',1,'Amuse::Core::MemorySize']]],
-  ['kib_2',['KiB',['../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a6ea3e1a3d8edbbd7ecdb146182f80c49',1,'Amuse::Core::MemorySize']]],
-  ['kibf_3',['KiBF',['../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a6f39dd1f1a12eb0b25cee1bf7bc7f2bc',1,'Amuse::Core::MemorySize']]]
+  ['kb_0',['KB',['../db/df6/struct_amuse_1_1_memory_size.html#aa8b9dcd6a7525e7ad79556f4bee406ed',1,'Amuse::MemorySize']]],
+  ['kbf_1',['KBF',['../db/df6/struct_amuse_1_1_memory_size.html#aa7b15f3111ad62c155de5c330586edf0',1,'Amuse::MemorySize']]],
+  ['kib_2',['KiB',['../db/df6/struct_amuse_1_1_memory_size.html#a2ac50922684eb0d4c80ea07a9324c22e',1,'Amuse::MemorySize']]],
+  ['kibf_3',['KiBF',['../db/df6/struct_amuse_1_1_memory_size.html#adbf78e51f3e1059705e6abc44b627856',1,'Amuse::MemorySize']]]
 ];

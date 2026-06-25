@@ -1,0 +1,787 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: XmlNode クラス</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d1/d8f/class_amuse_1_1_xml_node.html','../../','d8/db5/class_amuse_1_1_xml_node-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">メソッド</a> &#124;
+<a href="#pub-attribs">変数</a> &#124;
+<a href="../../d8/db5/class_amuse_1_1_xml_node-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">XmlNode クラス<div class="ingroups"><a class="el" href="../../da/d78/group___amuse_core.html">Core</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">説明</h2>
+<div class="textblock"><p>XMLの要素を表現するクラス </p>
+<p>属性、子ノード、テキストコンテンツを保持します。</p>
+<dl class="section user"><dt>特殊ノード</dt><dd><ul>
+<li><span class="tt">#comment</span> - XMLコメント（属性"content"にコメント内容を保持）</li>
+<li><span class="tt">#text</span> - テキストノード（属性"content"にテキスト内容を保持） </li>
+</ul>
+</dd></dl>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+メソッド</h2></td></tr>
+<tr class="memitem:a78fa4ee3155e743b843fc1ceac1f642a" id="r_a78fa4ee3155e743b843fc1ceac1f642a"><td class="memItemLeft"><a id="a78fa4ee3155e743b843fc1ceac1f642a" name="a78fa4ee3155e743b843fc1ceac1f642a"></a>
+&#160;</td><td class="memItemRight"><b>XmlNode</b> ()=default</td></tr>
+<tr class="memdesc:a78fa4ee3155e743b843fc1ceac1f642a"><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトコンストラクタ <br /></td></tr>
+<tr class="memitem:a9a90e4ac373fd602d61b162316e0e6c5" id="r_a9a90e4ac373fd602d61b162316e0e6c5"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a9a90e4ac373fd602d61b162316e0e6c5">XmlNode</a> (StringView name)</td></tr>
+<tr class="memdesc:a9a90e4ac373fd602d61b162316e0e6c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素名を指定して生成  <br /></td></tr>
+<tr class="memitem:a10d497b70ab9dcfa2e7adafd25d57c74" id="r_a10d497b70ab9dcfa2e7adafd25d57c74"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a10d497b70ab9dcfa2e7adafd25d57c74">XmlNode</a> (StringView name, Map&lt; String, String &gt; attributes)</td></tr>
+<tr class="memdesc:a10d497b70ab9dcfa2e7adafd25d57c74"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素名と属性を指定して生成  <br /></td></tr>
+<tr class="memitem:a29d28f793865f694a44e4184cbcf4db8" id="r_a29d28f793865f694a44e4184cbcf4db8"><td class="memItemLeft"><a class="el" href="#a78fa4ee3155e743b843fc1ceac1f642a">XmlNode</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a29d28f793865f694a44e4184cbcf4db8">at</a> (StringView name)</td></tr>
+<tr class="memdesc:a29d28f793865f694a44e4184cbcf4db8"><td class="mdescLeft">&#160;</td><td class="mdescRight">名前を指定して子ノードにアクセス  <br /></td></tr>
+<tr class="memitem:acff301398e31ecd3cf3f5d555908ed7d" id="r_acff301398e31ecd3cf3f5d555908ed7d"><td class="memItemLeft"><a id="acff301398e31ecd3cf3f5d555908ed7d" name="acff301398e31ecd3cf3f5d555908ed7d"></a>
+const <a class="el" href="#a78fa4ee3155e743b843fc1ceac1f642a">XmlNode</a> &amp;&#160;</td><td class="memItemRight"><b>at</b> (StringView name) const</td></tr>
+<tr class="memdesc:acff301398e31ecd3cf3f5d555908ed7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">名前を指定して子ノードにアクセス <br /></td></tr>
+<tr class="memitem:a97e4a2ad622b548fb1a0b0bf3dd2571b" id="r_a97e4a2ad622b548fb1a0b0bf3dd2571b"><td class="memItemLeft"><a class="el" href="#a78fa4ee3155e743b843fc1ceac1f642a">XmlNode</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a97e4a2ad622b548fb1a0b0bf3dd2571b">at</a> (StringView name, size_t index)</td></tr>
+<tr class="memdesc:a97e4a2ad622b548fb1a0b0bf3dd2571b"><td class="mdescLeft">&#160;</td><td class="mdescRight">名前とインデックスを指定して子ノードにアクセス  <br /></td></tr>
+<tr class="memitem:a17affac32ae0e622c674b2fef07d0ef7" id="r_a17affac32ae0e622c674b2fef07d0ef7"><td class="memItemLeft"><a id="a17affac32ae0e622c674b2fef07d0ef7" name="a17affac32ae0e622c674b2fef07d0ef7"></a>
+const <a class="el" href="#a78fa4ee3155e743b843fc1ceac1f642a">XmlNode</a> &amp;&#160;</td><td class="memItemRight"><b>at</b> (StringView name, size_t index) const</td></tr>
+<tr class="memdesc:a17affac32ae0e622c674b2fef07d0ef7"><td class="mdescLeft">&#160;</td><td class="mdescRight">名前とインデックスを指定して子ノードにアクセス <br /></td></tr>
+<tr class="memitem:a05c5067472991fc9e201aaf7b1b3cb24" id="r_a05c5067472991fc9e201aaf7b1b3cb24"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a05c5067472991fc9e201aaf7b1b3cb24">has</a> (StringView name) const</td></tr>
+<tr class="memdesc:a05c5067472991fc9e201aaf7b1b3cb24"><td class="mdescLeft">&#160;</td><td class="mdescRight">子ノードが存在するか確認  <br /></td></tr>
+<tr class="memitem:aa33be68588109fdaf471e623600ff34a" id="r_aa33be68588109fdaf471e623600ff34a"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#aa33be68588109fdaf471e623600ff34a">count</a> (StringView name) const</td></tr>
+<tr class="memdesc:aa33be68588109fdaf471e623600ff34a"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定名の子ノード数を取得  <br /></td></tr>
+<tr class="memitem:ad88a345d131fe19b710fab0de035acf3" id="r_ad88a345d131fe19b710fab0de035acf3"><td class="memItemLeft"><a class="el" href="#a78fa4ee3155e743b843fc1ceac1f642a">XmlNode</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ad88a345d131fe19b710fab0de035acf3">add</a> (<a class="el" href="#a78fa4ee3155e743b843fc1ceac1f642a">XmlNode</a> child)</td></tr>
+<tr class="memdesc:ad88a345d131fe19b710fab0de035acf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">子ノードを追加  <br /></td></tr>
+<tr class="memitem:a11147fa08e199655e272ba9efff49bbf" id="r_a11147fa08e199655e272ba9efff49bbf"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a11147fa08e199655e272ba9efff49bbf">remove</a> (StringView name)</td></tr>
+<tr class="memdesc:a11147fa08e199655e272ba9efff49bbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">子ノードを削除  <br /></td></tr>
+<tr class="memitem:a8841312207c9590860095153a781eab2" id="r_a8841312207c9590860095153a781eab2"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a8841312207c9590860095153a781eab2">remove</a> (StringView name, size_t index)</td></tr>
+<tr class="memdesc:a8841312207c9590860095153a781eab2"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定名・インデックスの子ノードを削除  <br /></td></tr>
+<tr class="memitem:a94b503aff8894729e26533472ac8d4ca" id="r_a94b503aff8894729e26533472ac8d4ca"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a94b503aff8894729e26533472ac8d4ca">has_attr</a> (StringView key) const</td></tr>
+<tr class="memdesc:a94b503aff8894729e26533472ac8d4ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">属性が存在するか確認  <br /></td></tr>
+<tr class="memitem:a9f4878f8e6f9f804f506a7cc436e6e8e" id="r_a9f4878f8e6f9f804f506a7cc436e6e8e"><td class="memItemLeft">String &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a9f4878f8e6f9f804f506a7cc436e6e8e">attr</a> (StringView key)</td></tr>
+<tr class="memdesc:a9f4878f8e6f9f804f506a7cc436e6e8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">属性値への参照を取得（存在しない場合は作成）  <br /></td></tr>
+<tr class="memitem:a931fc1b85bf9fcc19a58773162def330" id="r_a931fc1b85bf9fcc19a58773162def330"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a931fc1b85bf9fcc19a58773162def330">attr</a> (StringView key) const</td></tr>
+<tr class="memdesc:a931fc1b85bf9fcc19a58773162def330"><td class="mdescLeft">&#160;</td><td class="mdescRight">属性値を取得（存在しない場合は空文字列）  <br /></td></tr>
+<tr class="memitem:a7d709b3fc874284fa1eebadb5324478d" id="r_a7d709b3fc874284fa1eebadb5324478d"><td class="memItemLeft">s32&#160;</td><td class="memItemRight"><a class="el" href="#a7d709b3fc874284fa1eebadb5324478d">attr_int</a> (StringView key, s32 fallback) const</td></tr>
+<tr class="memdesc:a7d709b3fc874284fa1eebadb5324478d"><td class="mdescLeft">&#160;</td><td class="mdescRight">属性値を整数として取得  <br /></td></tr>
+<tr class="memitem:af07170db7eaa6780710e28b3c7bbf564" id="r_af07170db7eaa6780710e28b3c7bbf564"><td class="memItemLeft">Optional&lt; s32 &gt;&#160;</td><td class="memItemRight"><a class="el" href="#af07170db7eaa6780710e28b3c7bbf564">attr_int</a> (StringView key) const</td></tr>
+<tr class="memdesc:af07170db7eaa6780710e28b3c7bbf564"><td class="mdescLeft">&#160;</td><td class="mdescRight">属性値を整数として取得（Optional版）  <br /></td></tr>
+<tr class="memitem:a4388bf30130c72aa2463b6ff2f127fbe" id="r_a4388bf30130c72aa2463b6ff2f127fbe"><td class="memItemLeft">f32&#160;</td><td class="memItemRight"><a class="el" href="#a4388bf30130c72aa2463b6ff2f127fbe">attr_float</a> (StringView key, f32 fallback) const</td></tr>
+<tr class="memdesc:a4388bf30130c72aa2463b6ff2f127fbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">属性値を浮動小数点数として取得  <br /></td></tr>
+<tr class="memitem:a27b75a90096d3406ee6ac700ee2ec05a" id="r_a27b75a90096d3406ee6ac700ee2ec05a"><td class="memItemLeft">Optional&lt; f32 &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a27b75a90096d3406ee6ac700ee2ec05a">attr_float</a> (StringView key) const</td></tr>
+<tr class="memdesc:a27b75a90096d3406ee6ac700ee2ec05a"><td class="mdescLeft">&#160;</td><td class="mdescRight">属性値を浮動小数点数として取得（Optional版）  <br /></td></tr>
+<tr class="memitem:a0ca5e1879522fbe73448defa1e5c8243" id="r_a0ca5e1879522fbe73448defa1e5c8243"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a0ca5e1879522fbe73448defa1e5c8243">attr_bool</a> (StringView key, bool fallback) const</td></tr>
+<tr class="memdesc:a0ca5e1879522fbe73448defa1e5c8243"><td class="mdescLeft">&#160;</td><td class="mdescRight">属性値を真偽値として取得  <br /></td></tr>
+<tr class="memitem:a0424696b4d48c0899629a5f484a8e806" id="r_a0424696b4d48c0899629a5f484a8e806"><td class="memItemLeft">Optional&lt; bool &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a0424696b4d48c0899629a5f484a8e806">attr_bool</a> (StringView key) const</td></tr>
+<tr class="memdesc:a0424696b4d48c0899629a5f484a8e806"><td class="mdescLeft">&#160;</td><td class="mdescRight">属性値を真偽値として取得（Optional版）  <br /></td></tr>
+<tr class="memitem:a64feefd2ad88d6cd691f8d620210015b" id="r_a64feefd2ad88d6cd691f8d620210015b"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a64feefd2ad88d6cd691f8d620210015b">remove_attr</a> (StringView key)</td></tr>
+<tr class="memdesc:a64feefd2ad88d6cd691f8d620210015b"><td class="mdescLeft">&#160;</td><td class="mdescRight">属性を削除  <br /></td></tr>
+<tr class="memitem:a4ca0583c2e9afa471b1eab10981b00c1" id="r_a4ca0583c2e9afa471b1eab10981b00c1"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a4ca0583c2e9afa471b1eab10981b00c1">string</a> (s32 indent=0) const</td></tr>
+<tr class="memdesc:a4ca0583c2e9afa471b1eab10981b00c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">XMLノードを整形済み文字列に変換  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+変数</h2></td></tr>
+<tr class="memitem:a9a2326f35466e54c36c070829245c557" id="r_a9a2326f35466e54c36c070829245c557"><td class="memItemLeft"><a id="a9a2326f35466e54c36c070829245c557" name="a9a2326f35466e54c36c070829245c557"></a>
+String&#160;</td><td class="memItemRight"><b>name</b></td></tr>
+<tr class="memdesc:a9a2326f35466e54c36c070829245c557"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素名 <br /></td></tr>
+<tr class="memitem:a001ed1657f09fdcadae9e0042c445b49" id="r_a001ed1657f09fdcadae9e0042c445b49"><td class="memItemLeft"><a id="a001ed1657f09fdcadae9e0042c445b49" name="a001ed1657f09fdcadae9e0042c445b49"></a>
+Map&lt; String, String &gt;&#160;</td><td class="memItemRight"><b>attributes</b></td></tr>
+<tr class="memdesc:a001ed1657f09fdcadae9e0042c445b49"><td class="mdescLeft">&#160;</td><td class="mdescRight">属性のキーと値のペア <br /></td></tr>
+<tr class="memitem:aa132b5bd5139a7f0201665a463be3d5b" id="r_aa132b5bd5139a7f0201665a463be3d5b"><td class="memItemLeft"><a id="aa132b5bd5139a7f0201665a463be3d5b" name="aa132b5bd5139a7f0201665a463be3d5b"></a>
+Vector&lt; <a class="el" href="#a78fa4ee3155e743b843fc1ceac1f642a">XmlNode</a> &gt;&#160;</td><td class="memItemRight"><b>children</b></td></tr>
+<tr class="memdesc:aa132b5bd5139a7f0201665a463be3d5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">子ノードのリスト <br /></td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">コンストラクタ</h2>
+<a id="a9a90e4ac373fd602d61b162316e0e6c5" name="a9a90e4ac373fd602d61b162316e0e6c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a90e4ac373fd602d61b162316e0e6c5">&#9670;&#160;</a></span>XmlNode() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">XmlNode </td>
+          <td>(</td>
+          <td class="paramtype">StringView</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>要素名を指定して生成 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>要素名 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a10d497b70ab9dcfa2e7adafd25d57c74" name="a10d497b70ab9dcfa2e7adafd25d57c74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10d497b70ab9dcfa2e7adafd25d57c74">&#9670;&#160;</a></span>XmlNode() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">XmlNode </td>
+          <td>(</td>
+          <td class="paramtype">StringView</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Map&lt; String, String &gt;</td>          <td class="paramname"><span class="paramname"><em>attributes</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>要素名と属性を指定して生成 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>要素名 </td></tr>
+    <tr><td class="paramname">attributes</td><td>属性マップ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="ad88a345d131fe19b710fab0de035acf3" name="ad88a345d131fe19b710fab0de035acf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad88a345d131fe19b710fab0de035acf3">&#9670;&#160;</a></span>add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a78fa4ee3155e743b843fc1ceac1f642a">XmlNode</a> &amp; add </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a78fa4ee3155e743b843fc1ceac1f642a">XmlNode</a></td>          <td class="paramname"><span class="paramname"><em>child</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>子ノードを追加 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">child</td><td>追加するノード </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>追加したノードへの参照 </dd></dl>
+
+</div>
+</div>
+<a id="a29d28f793865f694a44e4184cbcf4db8" name="a29d28f793865f694a44e4184cbcf4db8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29d28f793865f694a44e4184cbcf4db8">&#9670;&#160;</a></span>at() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a78fa4ee3155e743b843fc1ceac1f642a">XmlNode</a> &amp; at </td>
+          <td>(</td>
+          <td class="paramtype">StringView</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>名前を指定して子ノードにアクセス </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>要素名 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>最初に見つかった子ノードへの参照 </dd></dl>
+<dl class="exception"><dt>例外</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">XmlException</td><td>該当する子ノードが存在しない場合 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a97e4a2ad622b548fb1a0b0bf3dd2571b" name="a97e4a2ad622b548fb1a0b0bf3dd2571b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97e4a2ad622b548fb1a0b0bf3dd2571b">&#9670;&#160;</a></span>at() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a78fa4ee3155e743b843fc1ceac1f642a">XmlNode</a> &amp; at </td>
+          <td>(</td>
+          <td class="paramtype">StringView</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>index</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>名前とインデックスを指定して子ノードにアクセス </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>要素名 </td></tr>
+    <tr><td class="paramname">index</td><td>同名要素の中でのインデックス（1始まり） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>該当する子ノードへの参照 </dd></dl>
+<dl class="exception"><dt>例外</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">XmlException</td><td>該当する子ノードが存在しない場合 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9f4878f8e6f9f804f506a7cc436e6e8e" name="a9f4878f8e6f9f804f506a7cc436e6e8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f4878f8e6f9f804f506a7cc436e6e8e">&#9670;&#160;</a></span>attr() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String &amp; attr </td>
+          <td>(</td>
+          <td class="paramtype">StringView</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>属性値への参照を取得（存在しない場合は作成） </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>属性名 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>属性値への参照 </dd></dl>
+
+</div>
+</div>
+<a id="a931fc1b85bf9fcc19a58773162def330" name="a931fc1b85bf9fcc19a58773162def330"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a931fc1b85bf9fcc19a58773162def330">&#9670;&#160;</a></span>attr() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String attr </td>
+          <td>(</td>
+          <td class="paramtype">StringView</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>属性値を取得（存在しない場合は空文字列） </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>属性名 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>属性値 </dd></dl>
+
+</div>
+</div>
+<a id="a0424696b4d48c0899629a5f484a8e806" name="a0424696b4d48c0899629a5f484a8e806"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0424696b4d48c0899629a5f484a8e806">&#9670;&#160;</a></span>attr_bool() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Optional&lt; bool &gt; attr_bool </td>
+          <td>(</td>
+          <td class="paramtype">StringView</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>属性値を真偽値として取得（Optional版） </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>属性名 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>属性値を真偽値に変換した値、存在しないか変換失敗時はnullopt </dd></dl>
+
+</div>
+</div>
+<a id="a0ca5e1879522fbe73448defa1e5c8243" name="a0ca5e1879522fbe73448defa1e5c8243"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ca5e1879522fbe73448defa1e5c8243">&#9670;&#160;</a></span>attr_bool() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool attr_bool </td>
+          <td>(</td>
+          <td class="paramtype">StringView</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>fallback</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>属性値を真偽値として取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>属性名 </td></tr>
+    <tr><td class="paramname">fallback</td><td>デフォルト値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>属性値を真偽値に変換した値、変換失敗時はfallback</dd></dl>
+<p>"true", "1", "yes" をtrue、"false", "0", "no" をfalseとして解釈 </p>
+
+</div>
+</div>
+<a id="a27b75a90096d3406ee6ac700ee2ec05a" name="a27b75a90096d3406ee6ac700ee2ec05a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27b75a90096d3406ee6ac700ee2ec05a">&#9670;&#160;</a></span>attr_float() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Optional&lt; f32 &gt; attr_float </td>
+          <td>(</td>
+          <td class="paramtype">StringView</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>属性値を浮動小数点数として取得（Optional版） </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>属性名 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>属性値を浮動小数点数に変換した値、存在しないか変換失敗時はnullopt </dd></dl>
+
+</div>
+</div>
+<a id="a4388bf30130c72aa2463b6ff2f127fbe" name="a4388bf30130c72aa2463b6ff2f127fbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4388bf30130c72aa2463b6ff2f127fbe">&#9670;&#160;</a></span>attr_float() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">f32 attr_float </td>
+          <td>(</td>
+          <td class="paramtype">StringView</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>fallback</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>属性値を浮動小数点数として取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>属性名 </td></tr>
+    <tr><td class="paramname">fallback</td><td>デフォルト値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>属性値を浮動小数点数に変換した値、変換失敗時はfallback </dd></dl>
+
+</div>
+</div>
+<a id="af07170db7eaa6780710e28b3c7bbf564" name="af07170db7eaa6780710e28b3c7bbf564"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af07170db7eaa6780710e28b3c7bbf564">&#9670;&#160;</a></span>attr_int() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Optional&lt; s32 &gt; attr_int </td>
+          <td>(</td>
+          <td class="paramtype">StringView</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>属性値を整数として取得（Optional版） </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>属性名 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>属性値を整数に変換した値、存在しないか変換失敗時はnullopt </dd></dl>
+
+</div>
+</div>
+<a id="a7d709b3fc874284fa1eebadb5324478d" name="a7d709b3fc874284fa1eebadb5324478d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d709b3fc874284fa1eebadb5324478d">&#9670;&#160;</a></span>attr_int() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">s32 attr_int </td>
+          <td>(</td>
+          <td class="paramtype">StringView</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">s32</td>          <td class="paramname"><span class="paramname"><em>fallback</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>属性値を整数として取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>属性名 </td></tr>
+    <tr><td class="paramname">fallback</td><td>デフォルト値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>属性値を整数に変換した値、変換失敗時はfallback </dd></dl>
+
+</div>
+</div>
+<a id="aa33be68588109fdaf471e623600ff34a" name="aa33be68588109fdaf471e623600ff34a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa33be68588109fdaf471e623600ff34a">&#9670;&#160;</a></span>count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t count </td>
+          <td>(</td>
+          <td class="paramtype">StringView</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定名の子ノード数を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>要素名 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>該当する子ノードの数 </dd></dl>
+
+</div>
+</div>
+<a id="a05c5067472991fc9e201aaf7b1b3cb24" name="a05c5067472991fc9e201aaf7b1b3cb24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05c5067472991fc9e201aaf7b1b3cb24">&#9670;&#160;</a></span>has()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool has </td>
+          <td>(</td>
+          <td class="paramtype">StringView</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>子ノードが存在するか確認 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>要素名 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>存在する場合true </dd></dl>
+
+</div>
+</div>
+<a id="a94b503aff8894729e26533472ac8d4ca" name="a94b503aff8894729e26533472ac8d4ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94b503aff8894729e26533472ac8d4ca">&#9670;&#160;</a></span>has_attr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool has_attr </td>
+          <td>(</td>
+          <td class="paramtype">StringView</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>属性が存在するか確認 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>属性名 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>存在する場合true </dd></dl>
+
+</div>
+</div>
+<a id="a11147fa08e199655e272ba9efff49bbf" name="a11147fa08e199655e272ba9efff49bbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11147fa08e199655e272ba9efff49bbf">&#9670;&#160;</a></span>remove() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool remove </td>
+          <td>(</td>
+          <td class="paramtype">StringView</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>子ノードを削除 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>要素名 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>削除に成功した場合true </dd></dl>
+
+</div>
+</div>
+<a id="a8841312207c9590860095153a781eab2" name="a8841312207c9590860095153a781eab2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8841312207c9590860095153a781eab2">&#9670;&#160;</a></span>remove() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool remove </td>
+          <td>(</td>
+          <td class="paramtype">StringView</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>index</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定名・インデックスの子ノードを削除 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>要素名 </td></tr>
+    <tr><td class="paramname">index</td><td>同名要素の中でのインデックス（1始まり） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>削除に成功した場合true </dd></dl>
+
+</div>
+</div>
+<a id="a64feefd2ad88d6cd691f8d620210015b" name="a64feefd2ad88d6cd691f8d620210015b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64feefd2ad88d6cd691f8d620210015b">&#9670;&#160;</a></span>remove_attr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool remove_attr </td>
+          <td>(</td>
+          <td class="paramtype">StringView</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>属性を削除 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>属性名 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>削除に成功した場合true </dd></dl>
+
+</div>
+</div>
+<a id="a4ca0583c2e9afa471b1eab10981b00c1" name="a4ca0583c2e9afa471b1eab10981b00c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ca0583c2e9afa471b1eab10981b00c1">&#9670;&#160;</a></span>string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String string </td>
+          <td>(</td>
+          <td class="paramtype">s32</td>          <td class="paramname"><span class="paramname"><em>indent</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>XMLノードを整形済み文字列に変換 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">indent</td><td>インデント深度（デフォルト: 0） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>XML形式の文字列 </dd></dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>Runtime/Core/Public/Amuse/Core/File/<a class="el" href="../../d9/d1c/_xml_8h_source.html">Xml.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><a href="../../d1/d8f/class_amuse_1_1_xml_node.html">XmlNode</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

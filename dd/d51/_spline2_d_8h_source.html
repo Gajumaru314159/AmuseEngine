@@ -128,111 +128,111 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('dd/d51/_spline
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;Amuse/Core/Math/Vector2.h&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;Amuse/Core/Template/include.h&gt;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span>Amuse::Core {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span>Amuse {</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span></div>
-<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html">   12</a></span>    <span class="keyword">class </span><a class="code hl_function" href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a48fc912a72f8dac415d7fe4cc76cce9a">Spline2D</a> {</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="comment">//===============================================================</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="comment">// コンストラクタ / デストラクタ</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="comment">//===============================================================</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a48fc912a72f8dac415d7fe4cc76cce9a">   20</a></span>        <a class="code hl_function" href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a48fc912a72f8dac415d7fe4cc76cce9a">Spline2D</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a4afcbd5220f4a7fa616328a33d9bc190">   24</a></span>        <span class="keyword">explicit</span> <a class="code hl_function" href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a4afcbd5220f4a7fa616328a33d9bc190">Spline2D</a>(Span&lt;Vec2&gt;);</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a8951a887304aa20adf0c748729151140">   28</a></span>        <span class="keyword">explicit</span> <a class="code hl_function" href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a8951a887304aa20adf0c748729151140">Spline2D</a>(<span class="keyword">const</span> Vector&lt;Vec2&gt;&amp;&amp;);</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a62b8bfdba1600229656d812435e70b44">   32</a></span>        s32 <a class="code hl_function" href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a62b8bfdba1600229656d812435e70b44">size</a>()const noexcept;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#aa12196696d1a0cd4695f31beb5689b4c">   36</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#aa12196696d1a0cd4695f31beb5689b4c">empty</a>()const noexcept;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a3eea6f1202f9b0b21e015f4f8c65e8d1">   40</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a3eea6f1202f9b0b21e015f4f8c65e8d1">clear</a>();</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a19d64e434f156695ad686badd2733354">   46</a></span>        f32 <a class="code hl_function" href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a19d64e434f156695ad686badd2733354">length</a>(s32 resolution = 100)const;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#aebe5cdf1b944a459c175fada39011feb">   55</a></span>        f32 <a class="code hl_function" href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a19d64e434f156695ad686badd2733354">length</a>(f32 t0, f32 t1, s32 resolution = 100)const;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a6ccee16f774e47adf9f140012c8a3006">   61</a></span>        <a class="code hl_struct" href="../../df/d62/struct_amuse_1_1_core_1_1_vec2.html">Vec2</a> <a class="code hl_function" href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a6ccee16f774e47adf9f140012c8a3006">position</a>(f32 t)const;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a8e9c6e756607297c0b331d02aa07b31a">   67</a></span>        <a class="code hl_struct" href="../../df/d62/struct_amuse_1_1_core_1_1_vec2.html">Vec2</a> <a class="code hl_function" href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a8e9c6e756607297c0b331d02aa07b31a">velocity</a>(f32 t)const;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a9a273373013ce33278278b4a1de01ac4">   73</a></span>        <a class="code hl_struct" href="../../df/d62/struct_amuse_1_1_core_1_1_vec2.html">Vec2</a> <a class="code hl_function" href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a9a273373013ce33278278b4a1de01ac4">acceleration</a>(f32 t)const;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a747fb27c191a21d629273ee309a53131">   79</a></span>        f32 <a class="code hl_function" href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a747fb27c191a21d629273ee309a53131">curvature</a>(f32 t)const;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    private:</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span></div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <a class="code hl_struct" href="../../df/d62/struct_amuse_1_1_core_1_1_vec2.html">Vec2</a> getControlPoint(s32 index) const;</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    public:</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a4bd38895340a8ebe891f15fd7fe0cdef">   88</a></span>        Vector&lt;<a class="code hl_struct" href="../../df/d62/struct_amuse_1_1_core_1_1_vec2.html">Vec2</a>&gt; <a class="code hl_variable" href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a4bd38895340a8ebe891f15fd7fe0cdef">points</a>;         </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a6e117b5341b4acee90bdbf07dfd8bca5">   89</a></span>        <span class="keywordtype">bool</span>        <a class="code hl_variable" href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a6e117b5341b4acee90bdbf07dfd8bca5">closed</a>{<span class="keyword">false</span>};  </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    };</div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../d1/d6b/class_amuse_1_1_spline2_d.html">   13</a></span>    <span class="keyword">class </span><a class="code hl_function" href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a646ffeeda7c78aa190100a8f6d8252d1">Spline2D</a> {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="comment">//===============================================================</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="comment">// コンストラクタ / デストラクタ</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="comment">//===============================================================</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a646ffeeda7c78aa190100a8f6d8252d1">   21</a></span>        <a class="code hl_function" href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a646ffeeda7c78aa190100a8f6d8252d1">Spline2D</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a82b9785d1c71cf6e0063e00b532d949a">   25</a></span>        <span class="keyword">explicit</span> <a class="code hl_function" href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a82b9785d1c71cf6e0063e00b532d949a">Spline2D</a>(Span&lt;Vec2&gt;);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="../../d1/d6b/class_amuse_1_1_spline2_d.html#ada5d3d43f5676f86940de61535be9fe6">   29</a></span>        <span class="keyword">explicit</span> <a class="code hl_function" href="../../d1/d6b/class_amuse_1_1_spline2_d.html#ada5d3d43f5676f86940de61535be9fe6">Spline2D</a>(<span class="keyword">const</span> Vector&lt;Vec2&gt;&amp;&amp;);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a11245877381a9e1da742081eb8baecb2">   33</a></span>        s32 <a class="code hl_function" href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a11245877381a9e1da742081eb8baecb2">size</a>()const noexcept;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a3f6fc5de06a318920d84f3c3742db07f">   37</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a3f6fc5de06a318920d84f3c3742db07f">empty</a>()const noexcept;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="../../d1/d6b/class_amuse_1_1_spline2_d.html#ac8bb3912a3ce86b15842e79d0b421204">   41</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/d6b/class_amuse_1_1_spline2_d.html#ac8bb3912a3ce86b15842e79d0b421204">clear</a>();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a4200590806b282a4de9be2d680addea9">   47</a></span>        f32 <a class="code hl_function" href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a4200590806b282a4de9be2d680addea9">length</a>(s32 resolution = 100)const;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a0f5e4ba4e6ceb971f02d9bb02ea9f300">   56</a></span>        f32 <a class="code hl_function" href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a4200590806b282a4de9be2d680addea9">length</a>(f32 t0, f32 t1, s32 resolution = 100)const;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a345f4b717e1444ef501eb9f94aa5acc4">   62</a></span>        <a class="code hl_struct" href="../../d3/d51/struct_amuse_1_1_vec2.html">Vec2</a> <a class="code hl_function" href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a345f4b717e1444ef501eb9f94aa5acc4">position</a>(f32 t)const;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a48dd0914f27e7e1c18e19806938b01a2">   68</a></span>        <a class="code hl_struct" href="../../d3/d51/struct_amuse_1_1_vec2.html">Vec2</a> <a class="code hl_function" href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a48dd0914f27e7e1c18e19806938b01a2">velocity</a>(f32 t)const;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a56f3dc162846dd3ffac6b702b58256ca">   74</a></span>        <a class="code hl_struct" href="../../d3/d51/struct_amuse_1_1_vec2.html">Vec2</a> <a class="code hl_function" href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a56f3dc162846dd3ffac6b702b58256ca">acceleration</a>(f32 t)const;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a5b5178db86fe6d534286f829b58aed2b">   80</a></span>        f32 <a class="code hl_function" href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a5b5178db86fe6d534286f829b58aed2b">curvature</a>(f32 t)const;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    private:</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <a class="code hl_struct" href="../../d3/d51/struct_amuse_1_1_vec2.html">Vec2</a> getControlPoint(s32 index) const;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    public:</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a3e27a1be55c730b6040efb548e12f44c">   89</a></span>        Vector&lt;<a class="code hl_struct" href="../../d3/d51/struct_amuse_1_1_vec2.html">Vec2</a>&gt; <a class="code hl_variable" href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a3e27a1be55c730b6040efb548e12f44c">points</a>;         </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a624c24d3973e790d23212b57f13e894b">   90</a></span>        <span class="keywordtype">bool</span>        <a class="code hl_variable" href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a624c24d3973e790d23212b57f13e894b">closed</a>{<span class="keyword">false</span>};  </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    };</div>
 </div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="comment">//===============================================================</span></div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="comment">// インライン関数</span></div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="comment">//===============================================================</span></div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span></div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keyword">inline</span> <a class="code hl_function" href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a48fc912a72f8dac415d7fe4cc76cce9a">Spline2D::Spline2D</a>(Span&lt;Vec2&gt; another) {</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <a class="code hl_variable" href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a4bd38895340a8ebe891f15fd7fe0cdef">points</a> = Vector&lt;Vec2&gt;(another.begin(),another.end());</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    }</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span></div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keyword">inline</span> <a class="code hl_function" href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a48fc912a72f8dac415d7fe4cc76cce9a">Spline2D::Spline2D</a>(<span class="keyword">const</span> Vector&lt;Vec2&gt;&amp;&amp; another) {</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <a class="code hl_variable" href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a4bd38895340a8ebe891f15fd7fe0cdef">points</a> = another;</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    }</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span></div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keyword">inline</span> s32 <a class="code hl_function" href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a62b8bfdba1600229656d812435e70b44">Spline2D::size</a>()const noexcept {</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>s32<span class="keyword">&gt;</span>(<a class="code hl_variable" href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a4bd38895340a8ebe891f15fd7fe0cdef">points</a>.size());</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    }</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span></div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#aa12196696d1a0cd4695f31beb5689b4c">Spline2D::empty</a>()const noexcept {</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a4bd38895340a8ebe891f15fd7fe0cdef">points</a>.empty();</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    }</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span></div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a3eea6f1202f9b0b21e015f4f8c65e8d1">Spline2D::clear</a>() {</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        <a class="code hl_variable" href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a4bd38895340a8ebe891f15fd7fe0cdef">points</a>.clear();</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    }</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span></div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>}</div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_spline2_d_html_a19d64e434f156695ad686badd2733354"><div class="ttname"><a href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a19d64e434f156695ad686badd2733354">Amuse::Core::Spline2D::length</a></div><div class="ttdeci">f32 length(s32 resolution=100) const</div><div class="ttdoc">カーブの長さを計算</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_spline2_d_html_a3eea6f1202f9b0b21e015f4f8c65e8d1"><div class="ttname"><a href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a3eea6f1202f9b0b21e015f4f8c65e8d1">Amuse::Core::Spline2D::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">ポイントリストを空にする</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_spline2_d_html_a48fc912a72f8dac415d7fe4cc76cce9a"><div class="ttname"><a href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a48fc912a72f8dac415d7fe4cc76cce9a">Amuse::Core::Spline2D::Spline2D</a></div><div class="ttdeci">Spline2D()=default</div><div class="ttdoc">コンストラクタ</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_spline2_d_html_a4afcbd5220f4a7fa616328a33d9bc190"><div class="ttname"><a href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a4afcbd5220f4a7fa616328a33d9bc190">Amuse::Core::Spline2D::Spline2D</a></div><div class="ttdeci">Spline2D(Span&lt; Vec2 &gt;)</div><div class="ttdoc">ポイントリストから構築</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_spline2_d_html_a4bd38895340a8ebe891f15fd7fe0cdef"><div class="ttname"><a href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a4bd38895340a8ebe891f15fd7fe0cdef">Amuse::Core::Spline2D::points</a></div><div class="ttdeci">Vector&lt; Vec2 &gt; points</div><div class="ttdoc">ポイントリスト</div><div class="ttdef"><b>Definition</b> Spline2D.h:88</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_spline2_d_html_a62b8bfdba1600229656d812435e70b44"><div class="ttname"><a href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a62b8bfdba1600229656d812435e70b44">Amuse::Core::Spline2D::size</a></div><div class="ttdeci">s32 size() const noexcept</div><div class="ttdoc">ポイント・サイズ</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_spline2_d_html_a6ccee16f774e47adf9f140012c8a3006"><div class="ttname"><a href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a6ccee16f774e47adf9f140012c8a3006">Amuse::Core::Spline2D::position</a></div><div class="ttdeci">Vec2 position(f32 t) const</div><div class="ttdoc">座標を計算</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_spline2_d_html_a6e117b5341b4acee90bdbf07dfd8bca5"><div class="ttname"><a href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a6e117b5341b4acee90bdbf07dfd8bca5">Amuse::Core::Spline2D::closed</a></div><div class="ttdeci">bool closed</div><div class="ttdoc">閉じているか</div><div class="ttdef"><b>Definition</b> Spline2D.h:89</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_spline2_d_html_a747fb27c191a21d629273ee309a53131"><div class="ttname"><a href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a747fb27c191a21d629273ee309a53131">Amuse::Core::Spline2D::curvature</a></div><div class="ttdeci">f32 curvature(f32 t) const</div><div class="ttdoc">曲率を計算</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_spline2_d_html_a8951a887304aa20adf0c748729151140"><div class="ttname"><a href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a8951a887304aa20adf0c748729151140">Amuse::Core::Spline2D::Spline2D</a></div><div class="ttdeci">Spline2D(const Vector&lt; Vec2 &gt; &amp;&amp;)</div><div class="ttdoc">ポイントリストから構築</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_spline2_d_html_a8e9c6e756607297c0b331d02aa07b31a"><div class="ttname"><a href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a8e9c6e756607297c0b331d02aa07b31a">Amuse::Core::Spline2D::velocity</a></div><div class="ttdeci">Vec2 velocity(f32 t) const</div><div class="ttdoc">速度を計算</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_spline2_d_html_a9a273373013ce33278278b4a1de01ac4"><div class="ttname"><a href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#a9a273373013ce33278278b4a1de01ac4">Amuse::Core::Spline2D::acceleration</a></div><div class="ttdeci">Vec2 acceleration(f32 t) const</div><div class="ttdoc">加速度を計算</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_spline2_d_html_aa12196696d1a0cd4695f31beb5689b4c"><div class="ttname"><a href="../../db/d6b/class_amuse_1_1_core_1_1_spline2_d.html#aa12196696d1a0cd4695f31beb5689b4c">Amuse::Core::Spline2D::empty</a></div><div class="ttdeci">bool empty() const noexcept</div><div class="ttdoc">ポイントが存在するか</div></div>
-<div class="ttc" id="astruct_amuse_1_1_core_1_1_vec2_html"><div class="ttname"><a href="../../df/d62/struct_amuse_1_1_core_1_1_vec2.html">Amuse::Core::Vec2</a></div><div class="ttdoc">二次元ベクトル</div><div class="ttdef"><b>Definition</b> Vector2.h:11</div></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="comment">//===============================================================</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="comment">// インライン関数</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="comment">//===============================================================</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keyword">inline</span> <a class="code hl_function" href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a646ffeeda7c78aa190100a8f6d8252d1">Spline2D::Spline2D</a>(Span&lt;Vec2&gt; another) {</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <a class="code hl_variable" href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a3e27a1be55c730b6040efb548e12f44c">points</a> = Vector&lt;Vec2&gt;(another.begin(),another.end());</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    }</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keyword">inline</span> <a class="code hl_function" href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a646ffeeda7c78aa190100a8f6d8252d1">Spline2D::Spline2D</a>(<span class="keyword">const</span> Vector&lt;Vec2&gt;&amp;&amp; another) {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <a class="code hl_variable" href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a3e27a1be55c730b6040efb548e12f44c">points</a> = another;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    }</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keyword">inline</span> s32 <a class="code hl_function" href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a11245877381a9e1da742081eb8baecb2">Spline2D::size</a>()const noexcept {</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>s32<span class="keyword">&gt;</span>(<a class="code hl_variable" href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a3e27a1be55c730b6040efb548e12f44c">points</a>.size());</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    }</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a3f6fc5de06a318920d84f3c3742db07f">Spline2D::empty</a>()const noexcept {</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a3e27a1be55c730b6040efb548e12f44c">points</a>.empty();</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    }</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/d6b/class_amuse_1_1_spline2_d.html#ac8bb3912a3ce86b15842e79d0b421204">Spline2D::clear</a>() {</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        <a class="code hl_variable" href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a3e27a1be55c730b6040efb548e12f44c">points</a>.clear();</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    }</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>}</div>
+<div class="ttc" id="aclass_amuse_1_1_spline2_d_html_a11245877381a9e1da742081eb8baecb2"><div class="ttname"><a href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a11245877381a9e1da742081eb8baecb2">Amuse::Spline2D::size</a></div><div class="ttdeci">s32 size() const noexcept</div><div class="ttdoc">ポイント・サイズ</div></div>
+<div class="ttc" id="aclass_amuse_1_1_spline2_d_html_a345f4b717e1444ef501eb9f94aa5acc4"><div class="ttname"><a href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a345f4b717e1444ef501eb9f94aa5acc4">Amuse::Spline2D::position</a></div><div class="ttdeci">Vec2 position(f32 t) const</div><div class="ttdoc">座標を計算</div></div>
+<div class="ttc" id="aclass_amuse_1_1_spline2_d_html_a3e27a1be55c730b6040efb548e12f44c"><div class="ttname"><a href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a3e27a1be55c730b6040efb548e12f44c">Amuse::Spline2D::points</a></div><div class="ttdeci">Vector&lt; Vec2 &gt; points</div><div class="ttdoc">ポイントリスト</div><div class="ttdef"><b>Definition</b> Spline2D.h:89</div></div>
+<div class="ttc" id="aclass_amuse_1_1_spline2_d_html_a3f6fc5de06a318920d84f3c3742db07f"><div class="ttname"><a href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a3f6fc5de06a318920d84f3c3742db07f">Amuse::Spline2D::empty</a></div><div class="ttdeci">bool empty() const noexcept</div><div class="ttdoc">ポイントが存在するか</div></div>
+<div class="ttc" id="aclass_amuse_1_1_spline2_d_html_a4200590806b282a4de9be2d680addea9"><div class="ttname"><a href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a4200590806b282a4de9be2d680addea9">Amuse::Spline2D::length</a></div><div class="ttdeci">f32 length(s32 resolution=100) const</div><div class="ttdoc">カーブの長さを計算</div></div>
+<div class="ttc" id="aclass_amuse_1_1_spline2_d_html_a48dd0914f27e7e1c18e19806938b01a2"><div class="ttname"><a href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a48dd0914f27e7e1c18e19806938b01a2">Amuse::Spline2D::velocity</a></div><div class="ttdeci">Vec2 velocity(f32 t) const</div><div class="ttdoc">速度を計算</div></div>
+<div class="ttc" id="aclass_amuse_1_1_spline2_d_html_a56f3dc162846dd3ffac6b702b58256ca"><div class="ttname"><a href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a56f3dc162846dd3ffac6b702b58256ca">Amuse::Spline2D::acceleration</a></div><div class="ttdeci">Vec2 acceleration(f32 t) const</div><div class="ttdoc">加速度を計算</div></div>
+<div class="ttc" id="aclass_amuse_1_1_spline2_d_html_a5b5178db86fe6d534286f829b58aed2b"><div class="ttname"><a href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a5b5178db86fe6d534286f829b58aed2b">Amuse::Spline2D::curvature</a></div><div class="ttdeci">f32 curvature(f32 t) const</div><div class="ttdoc">曲率を計算</div></div>
+<div class="ttc" id="aclass_amuse_1_1_spline2_d_html_a624c24d3973e790d23212b57f13e894b"><div class="ttname"><a href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a624c24d3973e790d23212b57f13e894b">Amuse::Spline2D::closed</a></div><div class="ttdeci">bool closed</div><div class="ttdoc">閉じているか</div><div class="ttdef"><b>Definition</b> Spline2D.h:90</div></div>
+<div class="ttc" id="aclass_amuse_1_1_spline2_d_html_a646ffeeda7c78aa190100a8f6d8252d1"><div class="ttname"><a href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a646ffeeda7c78aa190100a8f6d8252d1">Amuse::Spline2D::Spline2D</a></div><div class="ttdeci">Spline2D()=default</div><div class="ttdoc">コンストラクタ</div></div>
+<div class="ttc" id="aclass_amuse_1_1_spline2_d_html_a82b9785d1c71cf6e0063e00b532d949a"><div class="ttname"><a href="../../d1/d6b/class_amuse_1_1_spline2_d.html#a82b9785d1c71cf6e0063e00b532d949a">Amuse::Spline2D::Spline2D</a></div><div class="ttdeci">Spline2D(Span&lt; Vec2 &gt;)</div><div class="ttdoc">ポイントリストから構築</div></div>
+<div class="ttc" id="aclass_amuse_1_1_spline2_d_html_ac8bb3912a3ce86b15842e79d0b421204"><div class="ttname"><a href="../../d1/d6b/class_amuse_1_1_spline2_d.html#ac8bb3912a3ce86b15842e79d0b421204">Amuse::Spline2D::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">ポイントリストを空にする</div></div>
+<div class="ttc" id="aclass_amuse_1_1_spline2_d_html_ada5d3d43f5676f86940de61535be9fe6"><div class="ttname"><a href="../../d1/d6b/class_amuse_1_1_spline2_d.html#ada5d3d43f5676f86940de61535be9fe6">Amuse::Spline2D::Spline2D</a></div><div class="ttdeci">Spline2D(const Vector&lt; Vec2 &gt; &amp;&amp;)</div><div class="ttdoc">ポイントリストから構築</div></div>
+<div class="ttc" id="astruct_amuse_1_1_vec2_html"><div class="ttname"><a href="../../d3/d51/struct_amuse_1_1_vec2.html">Amuse::Vec2</a></div><div class="ttdoc">二次元ベクトル</div><div class="ttdef"><b>Definition</b> Vector2.h:12</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

@@ -1,0 +1,399 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: Platform</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('df/de5/group___amuse_platform.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#enum-members">列挙型</a>  </div>
+  <div class="headertitle"><div class="title">Platform </div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳細</h2>
+<div class="textblock"><p>ウィンドウ、システム、DLL、テキスト入力などのプラットフォーム機能。 </p>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:Arguments" id="r_Arguments"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../db/d22/class_amuse_1_1_arguments.html">Arguments</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">コマンドライン引数  <a href="../../db/d22/class_amuse_1_1_arguments.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:DLL" id="r_DLL"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d6/d5d/class_amuse_1_1_d_l_l.html">DLL</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">動的ライブラリ  <a href="../../d6/d5d/class_amuse_1_1_d_l_l.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:TextInput" id="r_TextInput"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../dc/ddd/class_amuse_1_1_text_input.html">TextInput</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">説明  <a href="../../dc/ddd/class_amuse_1_1_text_input.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:WindowEventArgs" id="r_WindowEventArgs"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d1/d68/struct_amuse_1_1_window_event_args.html">WindowEventArgs</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウイベント引数  <a href="../../d1/d68/struct_amuse_1_1_window_event_args.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:WindowDesc" id="r_WindowDesc"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d1/d0c/struct_amuse_1_1_window_desc.html">WindowDesc</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウ生成設定  <a href="../../d1/d0c/struct_amuse_1_1_window_desc.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Window" id="r_Window"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d6/d33/class_amuse_1_1_window.html">Window</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウ  <a href="../../d6/d33/class_amuse_1_1_window.html#details">[詳解]</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+列挙型</h2></td></tr>
+<tr class="memitem:ga46cc43e9f943ba8cfa8d80c9aafb1334" id="r_ga46cc43e9f943ba8cfa8d80c9aafb1334"><td class="memItemLeft"><a id="ga46cc43e9f943ba8cfa8d80c9aafb1334" name="ga46cc43e9f943ba8cfa8d80c9aafb1334"></a>enum class &#160;</td><td class="memItemRight"><b>TextInputMode</b> { <br />
+&#160;&#160;<b>DenyCtrl</b> = get_bit(0)
+, <b>AllowEnter</b> = get_bit(1)
+, <b>AllowTab</b> = get_bit(2)
+, <b>AllowBackSpace</b> = get_bit(3)
+, <br />
+&#160;&#160;<b>AllowDelete</b> = get_bit(4)
+, <b>Default</b> = AllowEnter | AllowTab | AllowBackSpace | AllowDelete
+<br />
+ }</td></tr>
+<tr class="memitem:gabbe637356c8cb749a9726f13658031fa" id="r_gabbe637356c8cb749a9726f13658031fa"><td class="memItemLeft"><a id="gabbe637356c8cb749a9726f13658031fa" name="gabbe637356c8cb749a9726f13658031fa"></a>enum class &#160;</td><td class="memItemRight"><a class="el" href="#gabbe637356c8cb749a9726f13658031fa">CursorType</a> { <b>Arrow</b>
+ }</td></tr>
+<tr class="memdesc:gabbe637356c8cb749a9726f13658031fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">カーソルタイプ <br /></td></tr>
+<tr class="memitem:ga315ca917ad583797f709ea477dd28705" id="r_ga315ca917ad583797f709ea477dd28705"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#ga315ca917ad583797f709ea477dd28705">Language</a> { <br />
+&#160;&#160;<a class="el" href="#gga315ca917ad583797f709ea477dd28705a88183b946cc5f0e8c96b2e66e1c74a7e">Unknown</a> = -1
+, <a class="el" href="#gga315ca917ad583797f709ea477dd28705af32ced6a9ba164c4b3c047fd1d7c882e">Japanese</a>
+, <a class="el" href="#gga315ca917ad583797f709ea477dd28705a78463a384a5aa4fad5fa73e2f506ecfc">English</a>
+, <a class="el" href="#gga315ca917ad583797f709ea477dd28705aad225f707802ba118c22987186dd38e8">French</a>
+, <br />
+&#160;&#160;<a class="el" href="#gga315ca917ad583797f709ea477dd28705a4be8e06d27bca7e1828f2fa9a49ca985">Italian</a>
+, <a class="el" href="#gga315ca917ad583797f709ea477dd28705a86bc3115eb4e9873ac96904a4a68e19e">German</a>
+, <a class="el" href="#gga315ca917ad583797f709ea477dd28705acb5480c32e71778852b08ae1e8712775">Spanish</a>
+, <a class="el" href="#gga315ca917ad583797f709ea477dd28705ad0bdb3cde477d82e766da05ebda50ccb">Korean</a>
+, <br />
+&#160;&#160;<a class="el" href="#gga315ca917ad583797f709ea477dd28705a30e32c7c4cf434e9c75e60c14c442541">Portuguese</a>
+, <a class="el" href="#gga315ca917ad583797f709ea477dd28705adeba6920e70615401385fe1fb5a379ec">Russian</a>
+, <a class="el" href="#gga315ca917ad583797f709ea477dd28705a3b261136e3c33f35e0a58611b1f344cb">Chinese</a>
+, <b>MAX</b>
+<br />
+ }</td></tr>
+<tr class="memdesc:ga315ca917ad583797f709ea477dd28705"><td class="mdescLeft">&#160;</td><td class="mdescRight">言語  <a href="#ga315ca917ad583797f709ea477dd28705">[詳解]</a><br /></td></tr>
+<tr class="memitem:ga6fe22635c1a150712fae448cd85a86c1" id="r_ga6fe22635c1a150712fae448cd85a86c1"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#ga6fe22635c1a150712fae448cd85a86c1">WindowEventType</a> { <br />
+&#160;&#160;<a class="el" href="#gga6fe22635c1a150712fae448cd85a86c1a88183b946cc5f0e8c96b2e66e1c74a7e">Unknown</a>
+, <a class="el" href="#gga6fe22635c1a150712fae448cd85a86c1a6bc362dbf494c61ea117fe3c71ca48a5">Move</a>
+, <a class="el" href="#gga6fe22635c1a150712fae448cd85a86c1a6f6cb72d544962fa333e2e34ce64f719">Size</a>
+, <a class="el" href="#gga6fe22635c1a150712fae448cd85a86c1ad27532d90ecd513e97ab811c0f34dbfd">Minimize</a>
+, <br />
+&#160;&#160;<a class="el" href="#gga6fe22635c1a150712fae448cd85a86c1a9369ba148ee259473fc1fb4939b6c2e8">Maximize</a>
+, <a class="el" href="#gga6fe22635c1a150712fae448cd85a86c1aa13367a8e2a3f3bf4f3409079e3fdf87">Activate</a>
+, <a class="el" href="#gga6fe22635c1a150712fae448cd85a86c1a109fec06829bd79d222cfc8af52aaaf1">Deactivate</a>
+, <a class="el" href="#gga6fe22635c1a150712fae448cd85a86c1a2faec1f9f8cc7f8f40d521c4dd574f49">Enable</a>
+, <br />
+&#160;&#160;<a class="el" href="#gga6fe22635c1a150712fae448cd85a86c1abcfaccebf745acfd5e75351095a5394a">Disable</a>
+, <a class="el" href="#gga6fe22635c1a150712fae448cd85a86c1a498f79c4c5bbde77f1bceb6c86fd0f6d">Show</a>
+, <a class="el" href="#gga6fe22635c1a150712fae448cd85a86c1a62a5e490880a92eef74f167d9dc6dca0">Hide</a>
+, <a class="el" href="#gga6fe22635c1a150712fae448cd85a86c1a490b2e0a61ad3ca9a255343037bbb74c">DragEnter</a>
+, <br />
+&#160;&#160;<a class="el" href="#gga6fe22635c1a150712fae448cd85a86c1a386cca7abd81cdd80d0d6f881e02ce87">DragDrop</a>
+, <a class="el" href="#gga6fe22635c1a150712fae448cd85a86c1ad3d2e617335f08df83599665eef8a418">Close</a>
+, <a class="el" href="#gga6fe22635c1a150712fae448cd85a86c1a0e181f89f47654b86f3beb42f5cc08b8">Destroy</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ga6fe22635c1a150712fae448cd85a86c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウ・イベント・タイプ  <a href="#ga6fe22635c1a150712fae448cd85a86c1">[詳解]</a><br /></td></tr>
+<tr class="memitem:ga5773202ab7ffd1746de9d527927198a3" id="r_ga5773202ab7ffd1746de9d527927198a3"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#ga5773202ab7ffd1746de9d527927198a3">WindowMode</a> { <a class="el" href="#gga5773202ab7ffd1746de9d527927198a3ac89686a387d2b12b3c729ce35a0bcb5b">Window</a>
+, <a class="el" href="#gga5773202ab7ffd1746de9d527927198a3ae7ec409749889353b8f83a6b04159420">FullScreen</a>
+, <a class="el" href="#gga5773202ab7ffd1746de9d527927198a3a78f0192ac55eba33ee88d026452952e5">Borderless</a>
+ }</td></tr>
+<tr class="memdesc:ga5773202ab7ffd1746de9d527927198a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウ・モード  <a href="#ga5773202ab7ffd1746de9d527927198a3">[詳解]</a><br /></td></tr>
+<tr class="memitem:ga60208dacff2b4c11b684ab1e19eda6d3" id="r_ga60208dacff2b4c11b684ab1e19eda6d3"><td class="memItemLeft"><a id="ga60208dacff2b4c11b684ab1e19eda6d3" name="ga60208dacff2b4c11b684ab1e19eda6d3"></a>enum class &#160;</td><td class="memItemRight"><a class="el" href="#ga60208dacff2b4c11b684ab1e19eda6d3">WindowStyle</a> : u8 { <b>Fixed</b>
+, <b>Sizable</b>
+, <b>Frameless</b>
+ }</td></tr>
+<tr class="memdesc:ga60208dacff2b4c11b684ab1e19eda6d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウスタイル <br /></td></tr>
+<tr class="memitem:ga7688310f9a1664a9fc20b8989418de4a" id="r_ga7688310f9a1664a9fc20b8989418de4a"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#ga7688310f9a1664a9fc20b8989418de4a">WindowState</a> { <a class="el" href="#gga7688310f9a1664a9fc20b8989418de4aae7ec409749889353b8f83a6b04159420">FullScreen</a> = get_bit(0)
+, <a class="el" href="#gga7688310f9a1664a9fc20b8989418de4aa074afcc50ae51f248cbae4950845549e">Minimized</a> = get_bit(1)
+, <a class="el" href="#gga7688310f9a1664a9fc20b8989418de4aa49d903a5c02560cf79bf6b516cc89457">Maximized</a> = get_bit(2)
+, <a class="el" href="#gga7688310f9a1664a9fc20b8989418de4aaa2e08e1fbbc3e1489d688eba112f7964">Focused</a> = get_bit(3)
+ }</td></tr>
+<tr class="memdesc:ga7688310f9a1664a9fc20b8989418de4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウ状態  <a href="#ga7688310f9a1664a9fc20b8989418de4a">[詳解]</a><br /></td></tr>
+</table>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">列挙型詳解</h2>
+<a id="ga315ca917ad583797f709ea477dd28705" name="ga315ca917ad583797f709ea477dd28705"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga315ca917ad583797f709ea477dd28705">&#9670;&#160;</a></span>Language</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#ga315ca917ad583797f709ea477dd28705">Language</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>言語 </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="gga315ca917ad583797f709ea477dd28705a88183b946cc5f0e8c96b2e66e1c74a7e" name="gga315ca917ad583797f709ea477dd28705a88183b946cc5f0e8c96b2e66e1c74a7e"></a>Unknown&#160;</td><td class="fielddoc"><p>不明 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga315ca917ad583797f709ea477dd28705af32ced6a9ba164c4b3c047fd1d7c882e" name="gga315ca917ad583797f709ea477dd28705af32ced6a9ba164c4b3c047fd1d7c882e"></a>Japanese&#160;</td><td class="fielddoc"><p>日本語 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga315ca917ad583797f709ea477dd28705a78463a384a5aa4fad5fa73e2f506ecfc" name="gga315ca917ad583797f709ea477dd28705a78463a384a5aa4fad5fa73e2f506ecfc"></a>English&#160;</td><td class="fielddoc"><p>英語 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga315ca917ad583797f709ea477dd28705aad225f707802ba118c22987186dd38e8" name="gga315ca917ad583797f709ea477dd28705aad225f707802ba118c22987186dd38e8"></a>French&#160;</td><td class="fielddoc"><p>フランス語 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga315ca917ad583797f709ea477dd28705a4be8e06d27bca7e1828f2fa9a49ca985" name="gga315ca917ad583797f709ea477dd28705a4be8e06d27bca7e1828f2fa9a49ca985"></a>Italian&#160;</td><td class="fielddoc"><p>イタリア語 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga315ca917ad583797f709ea477dd28705a86bc3115eb4e9873ac96904a4a68e19e" name="gga315ca917ad583797f709ea477dd28705a86bc3115eb4e9873ac96904a4a68e19e"></a>German&#160;</td><td class="fielddoc"><p>ドイツ語 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga315ca917ad583797f709ea477dd28705acb5480c32e71778852b08ae1e8712775" name="gga315ca917ad583797f709ea477dd28705acb5480c32e71778852b08ae1e8712775"></a>Spanish&#160;</td><td class="fielddoc"><p>スペイン語 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga315ca917ad583797f709ea477dd28705ad0bdb3cde477d82e766da05ebda50ccb" name="gga315ca917ad583797f709ea477dd28705ad0bdb3cde477d82e766da05ebda50ccb"></a>Korean&#160;</td><td class="fielddoc"><p>韓国語 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga315ca917ad583797f709ea477dd28705a30e32c7c4cf434e9c75e60c14c442541" name="gga315ca917ad583797f709ea477dd28705a30e32c7c4cf434e9c75e60c14c442541"></a>Portuguese&#160;</td><td class="fielddoc"><p>ポルトガル語 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga315ca917ad583797f709ea477dd28705adeba6920e70615401385fe1fb5a379ec" name="gga315ca917ad583797f709ea477dd28705adeba6920e70615401385fe1fb5a379ec"></a>Russian&#160;</td><td class="fielddoc"><p>ロシア語 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga315ca917ad583797f709ea477dd28705a3b261136e3c33f35e0a58611b1f344cb" name="gga315ca917ad583797f709ea477dd28705a3b261136e3c33f35e0a58611b1f344cb"></a>Chinese&#160;</td><td class="fielddoc"><p>中国語 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga6fe22635c1a150712fae448cd85a86c1" name="ga6fe22635c1a150712fae448cd85a86c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6fe22635c1a150712fae448cd85a86c1">&#9670;&#160;</a></span>WindowEventType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#ga6fe22635c1a150712fae448cd85a86c1">WindowEventType</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ウィンドウ・イベント・タイプ </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="gga6fe22635c1a150712fae448cd85a86c1a88183b946cc5f0e8c96b2e66e1c74a7e" name="gga6fe22635c1a150712fae448cd85a86c1a88183b946cc5f0e8c96b2e66e1c74a7e"></a>Unknown&#160;</td><td class="fielddoc"><p>不明 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga6fe22635c1a150712fae448cd85a86c1a6bc362dbf494c61ea117fe3c71ca48a5" name="gga6fe22635c1a150712fae448cd85a86c1a6bc362dbf494c61ea117fe3c71ca48a5"></a>Move&#160;</td><td class="fielddoc"><p>ウィンドウが移動 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga6fe22635c1a150712fae448cd85a86c1a6f6cb72d544962fa333e2e34ce64f719" name="gga6fe22635c1a150712fae448cd85a86c1a6f6cb72d544962fa333e2e34ce64f719"></a>Size&#160;</td><td class="fielddoc"><p>サイズ変更 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga6fe22635c1a150712fae448cd85a86c1ad27532d90ecd513e97ab811c0f34dbfd" name="gga6fe22635c1a150712fae448cd85a86c1ad27532d90ecd513e97ab811c0f34dbfd"></a>Minimize&#160;</td><td class="fielddoc"><p>最小化 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga6fe22635c1a150712fae448cd85a86c1a9369ba148ee259473fc1fb4939b6c2e8" name="gga6fe22635c1a150712fae448cd85a86c1a9369ba148ee259473fc1fb4939b6c2e8"></a>Maximize&#160;</td><td class="fielddoc"><p>最大化 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga6fe22635c1a150712fae448cd85a86c1aa13367a8e2a3f3bf4f3409079e3fdf87" name="gga6fe22635c1a150712fae448cd85a86c1aa13367a8e2a3f3bf4f3409079e3fdf87"></a>Activate&#160;</td><td class="fielddoc"><p>アクティブ状態に変更 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga6fe22635c1a150712fae448cd85a86c1a109fec06829bd79d222cfc8af52aaaf1" name="gga6fe22635c1a150712fae448cd85a86c1a109fec06829bd79d222cfc8af52aaaf1"></a>Deactivate&#160;</td><td class="fielddoc"><p>非アクティブ状態に変更 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga6fe22635c1a150712fae448cd85a86c1a2faec1f9f8cc7f8f40d521c4dd574f49" name="gga6fe22635c1a150712fae448cd85a86c1a2faec1f9f8cc7f8f40d521c4dd574f49"></a>Enable&#160;</td><td class="fielddoc"><p>入力有効化 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga6fe22635c1a150712fae448cd85a86c1abcfaccebf745acfd5e75351095a5394a" name="gga6fe22635c1a150712fae448cd85a86c1abcfaccebf745acfd5e75351095a5394a"></a>Disable&#160;</td><td class="fielddoc"><p>入力無効化 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga6fe22635c1a150712fae448cd85a86c1a498f79c4c5bbde77f1bceb6c86fd0f6d" name="gga6fe22635c1a150712fae448cd85a86c1a498f79c4c5bbde77f1bceb6c86fd0f6d"></a>Show&#160;</td><td class="fielddoc"><p>表示 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga6fe22635c1a150712fae448cd85a86c1a62a5e490880a92eef74f167d9dc6dca0" name="gga6fe22635c1a150712fae448cd85a86c1a62a5e490880a92eef74f167d9dc6dca0"></a>Hide&#160;</td><td class="fielddoc"><p>非表示 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga6fe22635c1a150712fae448cd85a86c1a490b2e0a61ad3ca9a255343037bbb74c" name="gga6fe22635c1a150712fae448cd85a86c1a490b2e0a61ad3ca9a255343037bbb74c"></a>DragEnter&#160;</td><td class="fielddoc"><p>ドラッグアイテムがウィンドウ内に入った </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga6fe22635c1a150712fae448cd85a86c1a386cca7abd81cdd80d0d6f881e02ce87" name="gga6fe22635c1a150712fae448cd85a86c1a386cca7abd81cdd80d0d6f881e02ce87"></a>DragDrop&#160;</td><td class="fielddoc"><p>ドラッグアイテムがドロップされた </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga6fe22635c1a150712fae448cd85a86c1ad3d2e617335f08df83599665eef8a418" name="gga6fe22635c1a150712fae448cd85a86c1ad3d2e617335f08df83599665eef8a418"></a>Close&#160;</td><td class="fielddoc"><p>終了時 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga6fe22635c1a150712fae448cd85a86c1a0e181f89f47654b86f3beb42f5cc08b8" name="gga6fe22635c1a150712fae448cd85a86c1a0e181f89f47654b86f3beb42f5cc08b8"></a>Destroy&#160;</td><td class="fielddoc"><p>破棄 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga5773202ab7ffd1746de9d527927198a3" name="ga5773202ab7ffd1746de9d527927198a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5773202ab7ffd1746de9d527927198a3">&#9670;&#160;</a></span>WindowMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#ga5773202ab7ffd1746de9d527927198a3">WindowMode</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ウィンドウ・モード </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="gga5773202ab7ffd1746de9d527927198a3ac89686a387d2b12b3c729ce35a0bcb5b" name="gga5773202ab7ffd1746de9d527927198a3ac89686a387d2b12b3c729ce35a0bcb5b"></a>Window&#160;</td><td class="fielddoc"><p>ウィンドウ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga5773202ab7ffd1746de9d527927198a3ae7ec409749889353b8f83a6b04159420" name="gga5773202ab7ffd1746de9d527927198a3ae7ec409749889353b8f83a6b04159420"></a>FullScreen&#160;</td><td class="fielddoc"><p>フルスクリーン </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga5773202ab7ffd1746de9d527927198a3a78f0192ac55eba33ee88d026452952e5" name="gga5773202ab7ffd1746de9d527927198a3a78f0192ac55eba33ee88d026452952e5"></a>Borderless&#160;</td><td class="fielddoc"><p>ボーダーレス(仮想フルスクリーン) </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga7688310f9a1664a9fc20b8989418de4a" name="ga7688310f9a1664a9fc20b8989418de4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7688310f9a1664a9fc20b8989418de4a">&#9670;&#160;</a></span>WindowState</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#ga7688310f9a1664a9fc20b8989418de4a">WindowState</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ウィンドウ状態 </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="gga7688310f9a1664a9fc20b8989418de4aae7ec409749889353b8f83a6b04159420" name="gga7688310f9a1664a9fc20b8989418de4aae7ec409749889353b8f83a6b04159420"></a>FullScreen&#160;</td><td class="fielddoc"><p>フルスクリーン </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga7688310f9a1664a9fc20b8989418de4aa074afcc50ae51f248cbae4950845549e" name="gga7688310f9a1664a9fc20b8989418de4aa074afcc50ae51f248cbae4950845549e"></a>Minimized&#160;</td><td class="fielddoc"><p>最小化されているか </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga7688310f9a1664a9fc20b8989418de4aa49d903a5c02560cf79bf6b516cc89457" name="gga7688310f9a1664a9fc20b8989418de4aa49d903a5c02560cf79bf6b516cc89457"></a>Maximized&#160;</td><td class="fielddoc"><p>最小化されているか </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga7688310f9a1664a9fc20b8989418de4aaa2e08e1fbbc3e1489d688eba112f7964" name="gga7688310f9a1664a9fc20b8989418de4aaa2e08e1fbbc3e1489d688eba112f7964"></a>Focused&#160;</td><td class="fielddoc"><p>フォーカス中 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

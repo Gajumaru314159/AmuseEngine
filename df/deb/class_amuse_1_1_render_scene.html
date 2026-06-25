@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: RenderScene クラス</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('df/deb/class_amuse_1_1_render_scene.html','../../','d0/d45/class_amuse_1_1_render_scene-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">メソッド</a> &#124;
+<a href="#friends">フレンド</a> &#124;
+<a href="../../d0/d45/class_amuse_1_1_render_scene-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">RenderScene クラス<div class="ingroups"><a class="el" href="../../db/db7/group___amuse_r_p_i.html">RPI</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">説明</h2>
+<div class="textblock"><p>描画シーン <a class="el" href="../../df/deb/class_amuse_1_1_render_scene.html" title="RenderScene">RenderScene</a> </p>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+メソッド</h2></td></tr>
+<tr class="memitem:a02e250e789f6fdae53ded3cc6ccf890d" id="r_a02e250e789f6fdae53ded3cc6ccf890d"><td class="memItemLeft"><a id="a02e250e789f6fdae53ded3cc6ccf890d" name="a02e250e789f6fdae53ded3cc6ccf890d"></a>
+&#160;</td><td class="memItemRight"><b>RenderScene</b> ()</td></tr>
+<tr class="memdesc:a02e250e789f6fdae53ded3cc6ccf890d"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画シーンを生成する <br /></td></tr>
+<tr class="memitem:a70b9b558dab1ac726f45d2a1c1482bec" id="r_a70b9b558dab1ac726f45d2a1c1482bec"><td class="memItemLeft"><a id="a70b9b558dab1ac726f45d2a1c1482bec" name="a70b9b558dab1ac726f45d2a1c1482bec"></a>
+&#160;</td><td class="memItemRight"><b>~RenderScene</b> ()</td></tr>
+<tr class="memdesc:a70b9b558dab1ac726f45d2a1c1482bec"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画シーンを破棄する <br /></td></tr>
+<tr class="memitem:aef0c37eeaf39d52585af0193fae7c80e" id="r_aef0c37eeaf39d52585af0193fae7c80e"><td class="memTemplParams" colspan="2"><a id="aef0c37eeaf39d52585af0193fae7c80e" name="aef0c37eeaf39d52585af0193fae7c80e"></a>
+template&lt;class T&gt; </td></tr>
+<tr class="memitem:aef0c37eeaf39d52585af0193fae7c80e template"><td class="memItemLeft">T *&#160;</td><td class="memItemRight"><b>findFeature</b> () const</td></tr>
+<tr class="memdesc:aef0c37eeaf39d52585af0193fae7c80e"><td class="mdescLeft">&#160;</td><td class="mdescRight">RenderFeatureを見つける <br /></td></tr>
+<tr class="memitem:a7d9fc6af9d9e0f544a8be266b67917e4" id="r_a7d9fc6af9d9e0f544a8be266b67917e4"><td class="memItemLeft"><a id="a7d9fc6af9d9e0f544a8be266b67917e4" name="a7d9fc6af9d9e0f544a8be266b67917e4"></a>
+<a class="el" href="../../df/de6/class_amuse_1_1_render_feature.html">RenderFeature</a> *&#160;</td><td class="memItemRight"><b>findFeature</b> (<a class="el" href="../../d5/d11/class_amuse_1_1_type.html">Type</a> type) const</td></tr>
+<tr class="memdesc:a7d9fc6af9d9e0f544a8be266b67917e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">型情報から <a class="el" href="../../df/de6/class_amuse_1_1_render_feature.html" title="描画機能">RenderFeature</a> を見つける <br /></td></tr>
+<tr class="memitem:a041a00af8e972420ecffb2b5f76ddb5f" id="r_a041a00af8e972420ecffb2b5f76ddb5f"><td class="memItemLeft"><a id="a041a00af8e972420ecffb2b5f76ddb5f" name="a041a00af8e972420ecffb2b5f76ddb5f"></a>
+void&#160;</td><td class="memItemRight"><b>setPipeline</b> (s32 index, <a class="el" href="../../de/d8b/class_amuse_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d0/dd5/class_amuse_1_1_render_pipeline.html">RenderPipeline</a> &gt; pipeline)</td></tr>
+<tr class="memdesc:a041a00af8e972420ecffb2b5f76ddb5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定インデックスの描画パイプラインを設定する <br /></td></tr>
+<tr class="memitem:a4fd844977f051005658c752d2a638947" id="r_a4fd844977f051005658c752d2a638947"><td class="memItemLeft"><a id="a4fd844977f051005658c752d2a638947" name="a4fd844977f051005658c752d2a638947"></a>
+void&#160;</td><td class="memItemRight"><b>render</b> (<a class="el" href="../../d9/d73/class_amuse_1_1_f_g.html">FG</a> &amp;fg)</td></tr>
+<tr class="memdesc:a4fd844977f051005658c752d2a638947"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画 <br /></td></tr>
+<tr class="memitem:af69286ba71beaedcce971a77189b8bd8" id="r_af69286ba71beaedcce971a77189b8bd8"><td class="memItemLeft"><a id="af69286ba71beaedcce971a77189b8bd8" name="af69286ba71beaedcce971a77189b8bd8"></a>
+void&#160;</td><td class="memItemRight"><b>addReleasedEvent</b> (RenderSceneEventHandle &amp;handle, RenderSceneEventDelegate func)</td></tr>
+<tr class="memdesc:af69286ba71beaedcce971a77189b8bd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">解放時イベント <br /></td></tr>
+<tr class="memitem:a3310e9504953f5f7658c873c71c22492" id="r_a3310e9504953f5f7658c873c71c22492"><td class="memItemLeft"><a id="a3310e9504953f5f7658c873c71c22492" name="a3310e9504953f5f7658c873c71c22492"></a>
+void&#160;</td><td class="memItemRight"><b>visitView</b> (Func&lt; void(RenderView &amp;)&gt; visitor)</td></tr>
+<tr class="memdesc:a3310e9504953f5f7658c873c71c22492"><td class="mdescLeft">&#160;</td><td class="mdescRight">所属する <a class="el" href="../../d2/df2/class_amuse_1_1_render_view.html" title="レンダー・ビュー RenderView">RenderView</a> を順に訪問する <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
+フレンド</h2></td></tr>
+<tr class="memitem:a1a3589ecc9ab0ed636f3568dfd987a7e" id="r_a1a3589ecc9ab0ed636f3568dfd987a7e"><td class="memItemLeft"><a id="a1a3589ecc9ab0ed636f3568dfd987a7e" name="a1a3589ecc9ab0ed636f3568dfd987a7e"></a>
+class&#160;</td><td class="memItemRight"><b>RenderView</b></td></tr>
+</table>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>Runtime/RPI/Public/Amuse/RPI/Render/<a class="el" href="../../d6/d67/_render_scene_8h_source.html">RenderScene.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><a href="../../df/deb/class_amuse_1_1_render_scene.html">RenderScene</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

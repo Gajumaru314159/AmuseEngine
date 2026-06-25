@@ -1,0 +1,706 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: Vec2 構造体</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d3/d51/struct_amuse_1_1_vec2.html','../../','d0/dc1/struct_amuse_1_1_vec2-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">メソッド</a> &#124;
+<a href="#pub-static-methods">静的関数</a> &#124;
+<a href="#pub-attribs">変数</a> &#124;
+<a href="#pub-static-attribs">静的変数</a> &#124;
+<a href="#friends">フレンド</a> &#124;
+<a href="../../d0/dc1/struct_amuse_1_1_vec2-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">Vec2 構造体<div class="ingroups"><a class="el" href="../../da/d78/group___amuse_core.html">Core</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">説明</h2>
+<div class="textblock"><p>二次元ベクトル </p>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+メソッド</h2></td></tr>
+<tr class="memitem:a405027a3ac69d54dc8e544a69af23885" id="r_a405027a3ac69d54dc8e544a69af23885"><td class="memItemLeft"><a id="a405027a3ac69d54dc8e544a69af23885" name="a405027a3ac69d54dc8e544a69af23885"></a>
+&#160;</td><td class="memItemRight"><b>Vec2</b> () noexcept=default</td></tr>
+<tr class="memdesc:a405027a3ac69d54dc8e544a69af23885"><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトコンストラクタ(初期化なし) <br /></td></tr>
+<tr class="memitem:af979e9865e6052602e3f44fb5d75760a" id="r_af979e9865e6052602e3f44fb5d75760a"><td class="memItemLeft"><a id="af979e9865e6052602e3f44fb5d75760a" name="af979e9865e6052602e3f44fb5d75760a"></a>
+constexpr&#160;</td><td class="memItemRight"><b>Vec2</b> (f32 scalar) noexcept</td></tr>
+<tr class="memdesc:af979e9865e6052602e3f44fb5d75760a"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ(すべての要素を同じ値で初期化) <br /></td></tr>
+<tr class="memitem:ab0a4cef8356316342949dcf4df3d9489" id="r_ab0a4cef8356316342949dcf4df3d9489"><td class="memItemLeft"><a id="ab0a4cef8356316342949dcf4df3d9489" name="ab0a4cef8356316342949dcf4df3d9489"></a>
+constexpr&#160;</td><td class="memItemRight"><b>Vec2</b> (f32 x, f32 y) noexcept</td></tr>
+<tr class="memdesc:ab0a4cef8356316342949dcf4df3d9489"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ(要素を指定して初期化) <br /></td></tr>
+<tr class="memitem:a4e669fa67d813df86cd2dceb991c1761" id="r_a4e669fa67d813df86cd2dceb991c1761"><td class="memItemLeft">constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="#a4e669fa67d813df86cd2dceb991c1761">operator==</a> (const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;v) const noexcept</td></tr>
+<tr class="memdesc:a4e669fa67d813df86cd2dceb991c1761"><td class="mdescLeft">&#160;</td><td class="mdescRight">等価演算子  <br /></td></tr>
+<tr class="memitem:a6d2832a3b4b93a3cb62df52c0a1cad09" id="r_a6d2832a3b4b93a3cb62df52c0a1cad09"><td class="memItemLeft">constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="#a6d2832a3b4b93a3cb62df52c0a1cad09">operator!=</a> (const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;v) const noexcept</td></tr>
+<tr class="memdesc:a6d2832a3b4b93a3cb62df52c0a1cad09"><td class="mdescLeft">&#160;</td><td class="mdescRight">否等価演算子  <br /></td></tr>
+<tr class="memitem:ac7e5bb4d66e402edd982052f98f2aeff" id="r_ac7e5bb4d66e402edd982052f98f2aeff"><td class="memItemLeft"><a id="ac7e5bb4d66e402edd982052f98f2aeff" name="ac7e5bb4d66e402edd982052f98f2aeff"></a>
+constexpr <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a>&#160;</td><td class="memItemRight"><b>operator+</b> (const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;v) const noexcept</td></tr>
+<tr class="memdesc:ac7e5bb4d66e402edd982052f98f2aeff"><td class="mdescLeft">&#160;</td><td class="mdescRight">加算演算子 <br /></td></tr>
+<tr class="memitem:aadc7ef5e8e17d4abd3b951c36de3db0f" id="r_aadc7ef5e8e17d4abd3b951c36de3db0f"><td class="memItemLeft"><a id="aadc7ef5e8e17d4abd3b951c36de3db0f" name="aadc7ef5e8e17d4abd3b951c36de3db0f"></a>
+constexpr <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a>&#160;</td><td class="memItemRight"><b>operator+</b> (f32 scalar) const noexcept</td></tr>
+<tr class="memdesc:aadc7ef5e8e17d4abd3b951c36de3db0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">加算演算子(スカラー) <br /></td></tr>
+<tr class="memitem:ac33db4fca259e471eea741e7fd32b975" id="r_ac33db4fca259e471eea741e7fd32b975"><td class="memItemLeft"><a id="ac33db4fca259e471eea741e7fd32b975" name="ac33db4fca259e471eea741e7fd32b975"></a>
+constexpr <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a>&#160;</td><td class="memItemRight"><b>operator-</b> (const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;v) const noexcept</td></tr>
+<tr class="memdesc:ac33db4fca259e471eea741e7fd32b975"><td class="mdescLeft">&#160;</td><td class="mdescRight">減算演算子 <br /></td></tr>
+<tr class="memitem:a88eec14c78d88033bd19e44d5c0fa04d" id="r_a88eec14c78d88033bd19e44d5c0fa04d"><td class="memItemLeft"><a id="a88eec14c78d88033bd19e44d5c0fa04d" name="a88eec14c78d88033bd19e44d5c0fa04d"></a>
+constexpr <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a>&#160;</td><td class="memItemRight"><b>operator-</b> (f32 scalar) const noexcept</td></tr>
+<tr class="memdesc:a88eec14c78d88033bd19e44d5c0fa04d"><td class="mdescLeft">&#160;</td><td class="mdescRight">減算演算子(スカラー) <br /></td></tr>
+<tr class="memitem:aa8da916de7023f353edd08228e9aefbc" id="r_aa8da916de7023f353edd08228e9aefbc"><td class="memItemLeft"><a id="aa8da916de7023f353edd08228e9aefbc" name="aa8da916de7023f353edd08228e9aefbc"></a>
+constexpr <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a>&#160;</td><td class="memItemRight"><b>operator*</b> (const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;v) const noexcept</td></tr>
+<tr class="memdesc:aa8da916de7023f353edd08228e9aefbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">乗算演算子 <br /></td></tr>
+<tr class="memitem:a4638162503ce5484b5a4fda05f11eb47" id="r_a4638162503ce5484b5a4fda05f11eb47"><td class="memItemLeft"><a id="a4638162503ce5484b5a4fda05f11eb47" name="a4638162503ce5484b5a4fda05f11eb47"></a>
+constexpr <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a>&#160;</td><td class="memItemRight"><b>operator*</b> (f32 scalar) const noexcept</td></tr>
+<tr class="memdesc:a4638162503ce5484b5a4fda05f11eb47"><td class="mdescLeft">&#160;</td><td class="mdescRight">乗算演算子(スカラー) <br /></td></tr>
+<tr class="memitem:a96f1934af525f28d995a3e9db71e260c" id="r_a96f1934af525f28d995a3e9db71e260c"><td class="memItemLeft"><a id="a96f1934af525f28d995a3e9db71e260c" name="a96f1934af525f28d995a3e9db71e260c"></a>
+constexpr <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a>&#160;</td><td class="memItemRight"><b>operator/</b> (const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;v) const noexcept</td></tr>
+<tr class="memdesc:a96f1934af525f28d995a3e9db71e260c"><td class="mdescLeft">&#160;</td><td class="mdescRight">除算演算子 <br /></td></tr>
+<tr class="memitem:a7c20144ff0f96b41ffa98b397a7b271e" id="r_a7c20144ff0f96b41ffa98b397a7b271e"><td class="memItemLeft"><a id="a7c20144ff0f96b41ffa98b397a7b271e" name="a7c20144ff0f96b41ffa98b397a7b271e"></a>
+constexpr <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a>&#160;</td><td class="memItemRight"><b>operator/</b> (f32 scalar) const noexcept</td></tr>
+<tr class="memdesc:a7c20144ff0f96b41ffa98b397a7b271e"><td class="mdescLeft">&#160;</td><td class="mdescRight">除算演算子(スカラー) <br /></td></tr>
+<tr class="memitem:a0f25b09a625193476cc8effef727ea45" id="r_a0f25b09a625193476cc8effef727ea45"><td class="memItemLeft"><a id="a0f25b09a625193476cc8effef727ea45" name="a0f25b09a625193476cc8effef727ea45"></a>
+constexpr <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;&#160;</td><td class="memItemRight"><b>operator+=</b> (const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;v) noexcept</td></tr>
+<tr class="memdesc:a0f25b09a625193476cc8effef727ea45"><td class="mdescLeft">&#160;</td><td class="mdescRight">加算代入演算子 <br /></td></tr>
+<tr class="memitem:a7ca1dd88deb0ec5341f68b0668eb0274" id="r_a7ca1dd88deb0ec5341f68b0668eb0274"><td class="memItemLeft"><a id="a7ca1dd88deb0ec5341f68b0668eb0274" name="a7ca1dd88deb0ec5341f68b0668eb0274"></a>
+constexpr <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;&#160;</td><td class="memItemRight"><b>operator+=</b> (f32 scalar) noexcept</td></tr>
+<tr class="memdesc:a7ca1dd88deb0ec5341f68b0668eb0274"><td class="mdescLeft">&#160;</td><td class="mdescRight">加算代入演算子(スカラー) <br /></td></tr>
+<tr class="memitem:a8ae30d77a194056308adaf2960cad457" id="r_a8ae30d77a194056308adaf2960cad457"><td class="memItemLeft"><a id="a8ae30d77a194056308adaf2960cad457" name="a8ae30d77a194056308adaf2960cad457"></a>
+constexpr <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;&#160;</td><td class="memItemRight"><b>operator-=</b> (const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;v) noexcept</td></tr>
+<tr class="memdesc:a8ae30d77a194056308adaf2960cad457"><td class="mdescLeft">&#160;</td><td class="mdescRight">減算代入演算子 <br /></td></tr>
+<tr class="memitem:a311e67e4ecc667dc0e8a06fe96d12776" id="r_a311e67e4ecc667dc0e8a06fe96d12776"><td class="memItemLeft"><a id="a311e67e4ecc667dc0e8a06fe96d12776" name="a311e67e4ecc667dc0e8a06fe96d12776"></a>
+constexpr <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;&#160;</td><td class="memItemRight"><b>operator-=</b> (f32 scalar) noexcept</td></tr>
+<tr class="memdesc:a311e67e4ecc667dc0e8a06fe96d12776"><td class="mdescLeft">&#160;</td><td class="mdescRight">減算代入演算子(スカラー) <br /></td></tr>
+<tr class="memitem:aad583ee994aa9bf8262f6a97a260d628" id="r_aad583ee994aa9bf8262f6a97a260d628"><td class="memItemLeft"><a id="aad583ee994aa9bf8262f6a97a260d628" name="aad583ee994aa9bf8262f6a97a260d628"></a>
+constexpr <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;&#160;</td><td class="memItemRight"><b>operator*=</b> (const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;v) noexcept</td></tr>
+<tr class="memdesc:aad583ee994aa9bf8262f6a97a260d628"><td class="mdescLeft">&#160;</td><td class="mdescRight">乗算代入演算子 <br /></td></tr>
+<tr class="memitem:a01c7a110c46c4a0aa2fe5850ab768bdb" id="r_a01c7a110c46c4a0aa2fe5850ab768bdb"><td class="memItemLeft"><a id="a01c7a110c46c4a0aa2fe5850ab768bdb" name="a01c7a110c46c4a0aa2fe5850ab768bdb"></a>
+constexpr <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;&#160;</td><td class="memItemRight"><b>operator*=</b> (f32 scalar) noexcept</td></tr>
+<tr class="memdesc:a01c7a110c46c4a0aa2fe5850ab768bdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">乗算代入演算子 (スカラー) <br /></td></tr>
+<tr class="memitem:a4c834ad29a6b7f33b7d66f9ac0971cf3" id="r_a4c834ad29a6b7f33b7d66f9ac0971cf3"><td class="memItemLeft"><a id="a4c834ad29a6b7f33b7d66f9ac0971cf3" name="a4c834ad29a6b7f33b7d66f9ac0971cf3"></a>
+constexpr <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;&#160;</td><td class="memItemRight"><b>operator/=</b> (const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;v) noexcept</td></tr>
+<tr class="memdesc:a4c834ad29a6b7f33b7d66f9ac0971cf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">除算代入演算子 <br /></td></tr>
+<tr class="memitem:a6e838acef55cbe67459e47abe55c3d65" id="r_a6e838acef55cbe67459e47abe55c3d65"><td class="memItemLeft"><a id="a6e838acef55cbe67459e47abe55c3d65" name="a6e838acef55cbe67459e47abe55c3d65"></a>
+constexpr <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;&#160;</td><td class="memItemRight"><b>operator/=</b> (f32 scalar) noexcept</td></tr>
+<tr class="memdesc:a6e838acef55cbe67459e47abe55c3d65"><td class="mdescLeft">&#160;</td><td class="mdescRight">除算代入演算子(スカラー) <br /></td></tr>
+<tr class="memitem:a2482132c2c1c55d5bdadfe40f3859d09" id="r_a2482132c2c1c55d5bdadfe40f3859d09"><td class="memItemLeft"><a id="a2482132c2c1c55d5bdadfe40f3859d09" name="a2482132c2c1c55d5bdadfe40f3859d09"></a>
+constexpr <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a>&#160;</td><td class="memItemRight"><b>operator-</b> () const noexcept</td></tr>
+<tr class="memdesc:a2482132c2c1c55d5bdadfe40f3859d09"><td class="mdescLeft">&#160;</td><td class="mdescRight">単項マイナス演算子 <br /></td></tr>
+<tr class="memitem:af7a6382e041b6eaeee6017a26123b3d8" id="r_af7a6382e041b6eaeee6017a26123b3d8"><td class="memItemLeft">constexpr f32&#160;</td><td class="memItemRight"><a class="el" href="#af7a6382e041b6eaeee6017a26123b3d8">operator[]</a> (size_t index) const noexcept</td></tr>
+<tr class="memdesc:af7a6382e041b6eaeee6017a26123b3d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素取得  <br /></td></tr>
+<tr class="memitem:ad2cc5032b2058895ef66f82835009e49" id="r_ad2cc5032b2058895ef66f82835009e49"><td class="memItemLeft"><a id="ad2cc5032b2058895ef66f82835009e49" name="ad2cc5032b2058895ef66f82835009e49"></a>
+constexpr void&#160;</td><td class="memItemRight"><b>set</b> (f32 x, f32 y) noexcept</td></tr>
+<tr class="memdesc:ad2cc5032b2058895ef66f82835009e49"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素を設定 <br /></td></tr>
+<tr class="memitem:acc8c3a5ecea0522250ae235b93b53de2" id="r_acc8c3a5ecea0522250ae235b93b53de2"><td class="memItemLeft"><a id="acc8c3a5ecea0522250ae235b93b53de2" name="acc8c3a5ecea0522250ae235b93b53de2"></a>
+constexpr void&#160;</td><td class="memItemRight"><b>set</b> (const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;v) noexcept</td></tr>
+<tr class="memdesc:acc8c3a5ecea0522250ae235b93b53de2"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素を設定 <br /></td></tr>
+<tr class="memitem:a971011d1a86f609271893f8e259bd042" id="r_a971011d1a86f609271893f8e259bd042"><td class="memItemLeft"><a id="a971011d1a86f609271893f8e259bd042" name="a971011d1a86f609271893f8e259bd042"></a>
+constexpr void&#160;</td><td class="memItemRight"><b>setZero</b> () noexcept</td></tr>
+<tr class="memdesc:a971011d1a86f609271893f8e259bd042"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素を全て0に設定 <br /></td></tr>
+<tr class="memitem:a644f4685f7ed6aee47f5a3f95c0a0c2c" id="r_a644f4685f7ed6aee47f5a3f95c0a0c2c"><td class="memItemLeft"><a id="a644f4685f7ed6aee47f5a3f95c0a0c2c" name="a644f4685f7ed6aee47f5a3f95c0a0c2c"></a>
+constexpr void&#160;</td><td class="memItemRight"><b>setAll</b> (f32 scalar) noexcept</td></tr>
+<tr class="memdesc:a644f4685f7ed6aee47f5a3f95c0a0c2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">全ての要素を同じ値で設定 <br /></td></tr>
+<tr class="memitem:a7a85a3b3155ddc669d4f83642f774b04" id="r_a7a85a3b3155ddc669d4f83642f774b04"><td class="memItemLeft"><a id="a7a85a3b3155ddc669d4f83642f774b04" name="a7a85a3b3155ddc669d4f83642f774b04"></a>
+constexpr f32&#160;</td><td class="memItemRight"><b>maxComponent</b> () const noexcept</td></tr>
+<tr class="memdesc:a7a85a3b3155ddc669d4f83642f774b04"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素の最大を取得 <br /></td></tr>
+<tr class="memitem:ac2076885b14bad8886173d436e090f20" id="r_ac2076885b14bad8886173d436e090f20"><td class="memItemLeft"><a id="ac2076885b14bad8886173d436e090f20" name="ac2076885b14bad8886173d436e090f20"></a>
+constexpr f32&#160;</td><td class="memItemRight"><b>maxAbsComponent</b> () const noexcept</td></tr>
+<tr class="memdesc:ac2076885b14bad8886173d436e090f20"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素の絶対値の最大を取得 <br /></td></tr>
+<tr class="memitem:a8eaf889b04730a324266b62cabb84bb1" id="r_a8eaf889b04730a324266b62cabb84bb1"><td class="memItemLeft"><a id="a8eaf889b04730a324266b62cabb84bb1" name="a8eaf889b04730a324266b62cabb84bb1"></a>
+constexpr f32&#160;</td><td class="memItemRight"><b>minComponent</b> () const noexcept</td></tr>
+<tr class="memdesc:a8eaf889b04730a324266b62cabb84bb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素の最小を取得 <br /></td></tr>
+<tr class="memitem:abe51716ed7fbc9df30ca6a000a2102f4" id="r_abe51716ed7fbc9df30ca6a000a2102f4"><td class="memItemLeft"><a id="abe51716ed7fbc9df30ca6a000a2102f4" name="abe51716ed7fbc9df30ca6a000a2102f4"></a>
+constexpr f32&#160;</td><td class="memItemRight"><b>minAbsComponent</b> () const noexcept</td></tr>
+<tr class="memdesc:abe51716ed7fbc9df30ca6a000a2102f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素の絶対値の最小を取得 <br /></td></tr>
+<tr class="memitem:a6320968dd51149e02578e927b28baf11" id="r_a6320968dd51149e02578e927b28baf11"><td class="memItemLeft">f32&#160;</td><td class="memItemRight"><a class="el" href="#a6320968dd51149e02578e927b28baf11">length</a> () const</td></tr>
+<tr class="memdesc:a6320968dd51149e02578e927b28baf11"><td class="mdescLeft">&#160;</td><td class="mdescRight">ベクトルの長さを取得  <br /></td></tr>
+<tr class="memitem:a3c6c7f38be23ca2988ecb08e1880db38" id="r_a3c6c7f38be23ca2988ecb08e1880db38"><td class="memItemLeft"><a id="a3c6c7f38be23ca2988ecb08e1880db38" name="a3c6c7f38be23ca2988ecb08e1880db38"></a>
+constexpr f32&#160;</td><td class="memItemRight"><b>sqrLength</b> () const noexcept</td></tr>
+<tr class="memdesc:a3c6c7f38be23ca2988ecb08e1880db38"><td class="mdescLeft">&#160;</td><td class="mdescRight">ベクトルの長さの二乗を取得 <br /></td></tr>
+<tr class="memitem:abdfc7b251b0e2ede2e5aab25cca0e29e" id="r_abdfc7b251b0e2ede2e5aab25cca0e29e"><td class="memItemLeft"><a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a>&#160;</td><td class="memItemRight"><a class="el" href="#abdfc7b251b0e2ede2e5aab25cca0e29e">unitVec</a> (f32 tolerance=<a class="el" href="../../d2/d39/class_amuse_1_1_math.html#a2e9981ebd4af1a2ffb80b23d1aae12e9">Math::TOLERANCE</a>) const</td></tr>
+<tr class="memdesc:abdfc7b251b0e2ede2e5aab25cca0e29e"><td class="mdescLeft">&#160;</td><td class="mdescRight">単位ベクトルを取得  <br /></td></tr>
+<tr class="memitem:afb2c5b77e668423befdc5df8a9e2bfde" id="r_afb2c5b77e668423befdc5df8a9e2bfde"><td class="memItemLeft"><a id="afb2c5b77e668423befdc5df8a9e2bfde" name="afb2c5b77e668423befdc5df8a9e2bfde"></a>
+<a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a>&#160;</td><td class="memItemRight"><b>getUnitVecUnsafe</b> () const</td></tr>
+<tr class="memdesc:afb2c5b77e668423befdc5df8a9e2bfde"><td class="mdescLeft">&#160;</td><td class="mdescRight">単位ベクトルを取得(ゼロチェックなし) <br /></td></tr>
+<tr class="memitem:a75690b977de7221b1eb6ab4623b35d4a" id="r_a75690b977de7221b1eb6ab4623b35d4a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a75690b977de7221b1eb6ab4623b35d4a">toDirectionAndLength</a> (<a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;outDir, f32 &amp;outLen) const</td></tr>
+<tr class="memdesc:a75690b977de7221b1eb6ab4623b35d4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">方向ベクトルとベクトルの長さを取得  <br /></td></tr>
+<tr class="memitem:a999df214a522eedaf9ad6ad830fe152b" id="r_a999df214a522eedaf9ad6ad830fe152b"><td class="memItemLeft"><a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a999df214a522eedaf9ad6ad830fe152b">normalize</a> (f32 tolerance=<a class="el" href="../../d2/d39/class_amuse_1_1_math.html#a2e9981ebd4af1a2ffb80b23d1aae12e9">Math::TOLERANCE</a>)</td></tr>
+<tr class="memdesc:a999df214a522eedaf9ad6ad830fe152b"><td class="mdescLeft">&#160;</td><td class="mdescRight">ベクトルの正規化  <br /></td></tr>
+<tr class="memitem:aa5f3f44ffc914cd14795a9f2d069b693" id="r_aa5f3f44ffc914cd14795a9f2d069b693"><td class="memItemLeft"><a id="aa5f3f44ffc914cd14795a9f2d069b693" name="aa5f3f44ffc914cd14795a9f2d069b693"></a>
+<a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;&#160;</td><td class="memItemRight"><b>normalizeUnsafe</b> ()</td></tr>
+<tr class="memdesc:aa5f3f44ffc914cd14795a9f2d069b693"><td class="mdescLeft">&#160;</td><td class="mdescRight">ベクトルの正規化(ゼロチェックなし) <br /></td></tr>
+<tr class="memitem:a41eefdf6755997afe608fd48b8d19f6d" id="r_a41eefdf6755997afe608fd48b8d19f6d"><td class="memItemLeft"><a id="a41eefdf6755997afe608fd48b8d19f6d" name="a41eefdf6755997afe608fd48b8d19f6d"></a>
+bool&#160;</td><td class="memItemRight"><b>isUnit</b> (f32 tolerance=<a class="el" href="../../d2/d39/class_amuse_1_1_math.html#a2e9981ebd4af1a2ffb80b23d1aae12e9">Math::TOLERANCE</a>) const</td></tr>
+<tr class="memdesc:a41eefdf6755997afe608fd48b8d19f6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">単位ベクトルか判定 <br /></td></tr>
+<tr class="memitem:a49d1d42b0113189cc19258742f3996b0" id="r_a49d1d42b0113189cc19258742f3996b0"><td class="memItemLeft">constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="#a49d1d42b0113189cc19258742f3996b0">equals</a> (const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;v, f32 tolerance=<a class="el" href="../../d2/d39/class_amuse_1_1_math.html#a2e9981ebd4af1a2ffb80b23d1aae12e9">Math::TOLERANCE</a>) const noexcept</td></tr>
+<tr class="memdesc:a49d1d42b0113189cc19258742f3996b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">等価判定(許容誤差指定)  <br /></td></tr>
+<tr class="memitem:af64f0827eb91c829d2e2d72be75cf38f" id="r_af64f0827eb91c829d2e2d72be75cf38f"><td class="memItemLeft">constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="#af64f0827eb91c829d2e2d72be75cf38f">allComponentsEqual</a> (f32 tolerance=<a class="el" href="../../d2/d39/class_amuse_1_1_math.html#a2e9981ebd4af1a2ffb80b23d1aae12e9">Math::TOLERANCE</a>) const noexcept</td></tr>
+<tr class="memdesc:af64f0827eb91c829d2e2d72be75cf38f"><td class="mdescLeft">&#160;</td><td class="mdescRight">すべての要素が同じ値か判定  <br /></td></tr>
+<tr class="memitem:a35e03918345c9e9cddb9bbf7ab1a63d3" id="r_a35e03918345c9e9cddb9bbf7ab1a63d3"><td class="memItemLeft"><a id="a35e03918345c9e9cddb9bbf7ab1a63d3" name="a35e03918345c9e9cddb9bbf7ab1a63d3"></a>
+constexpr bool&#160;</td><td class="memItemRight"><b>isZero</b> (f32 tolerance=<a class="el" href="../../d2/d39/class_amuse_1_1_math.html#a2e9981ebd4af1a2ffb80b23d1aae12e9">Math::TOLERANCE</a>) const noexcept</td></tr>
+<tr class="memdesc:a35e03918345c9e9cddb9bbf7ab1a63d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">ゼロベクトルか判定 <br /></td></tr>
+<tr class="memitem:a0f14bad11d673c61a550d48d6777eae1" id="r_a0f14bad11d673c61a550d48d6777eae1"><td class="memItemLeft"><a id="a0f14bad11d673c61a550d48d6777eae1" name="a0f14bad11d673c61a550d48d6777eae1"></a>
+bool&#160;</td><td class="memItemRight"><b>isNaN</b> () const</td></tr>
+<tr class="memdesc:a0f14bad11d673c61a550d48d6777eae1"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素にNaNを含むか判定 <br /></td></tr>
+<tr class="memitem:afe8246e867e93283cdfac59d16941411" id="r_afe8246e867e93283cdfac59d16941411"><td class="memItemLeft"><a id="afe8246e867e93283cdfac59d16941411" name="afe8246e867e93283cdfac59d16941411"></a>
+bool&#160;</td><td class="memItemRight"><b>isInf</b> () const</td></tr>
+<tr class="memdesc:afe8246e867e93283cdfac59d16941411"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素にInfを含むか判定 <br /></td></tr>
+<tr class="memitem:a5ae949b970ecd36bc00d578eb1c49375" id="r_a5ae949b970ecd36bc00d578eb1c49375"><td class="memItemLeft"><a id="a5ae949b970ecd36bc00d578eb1c49375" name="a5ae949b970ecd36bc00d578eb1c49375"></a>
+bool&#160;</td><td class="memItemRight"><b>isNaNOrInf</b> () const</td></tr>
+<tr class="memdesc:a5ae949b970ecd36bc00d578eb1c49375"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素にNaNまたはInfを含むか判定 <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静的関数</h2></td></tr>
+<tr class="memitem:a9c8918749c93d817fbbe5d3db398d7b5" id="r_a9c8918749c93d817fbbe5d3db398d7b5"><td class="memItemLeft"><a id="a9c8918749c93d817fbbe5d3db398d7b5" name="a9c8918749c93d817fbbe5d3db398d7b5"></a>
+static constexpr <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a>&#160;</td><td class="memItemRight"><b>Abs</b> (const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;v) noexcept</td></tr>
+<tr class="memdesc:a9c8918749c93d817fbbe5d3db398d7b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">ベクトルの各要素の絶対値からベクトルを作成 <br /></td></tr>
+<tr class="memitem:a17b7d17a81787adfcc6631ade03ebf0a" id="r_a17b7d17a81787adfcc6631ade03ebf0a"><td class="memItemLeft"><a id="a17b7d17a81787adfcc6631ade03ebf0a" name="a17b7d17a81787adfcc6631ade03ebf0a"></a>
+static constexpr f32&#160;</td><td class="memItemRight"><b>Dot</b> (const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;a, const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;b) noexcept</td></tr>
+<tr class="memdesc:a17b7d17a81787adfcc6631ade03ebf0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">内積 <br /></td></tr>
+<tr class="memitem:a5d360653b10902d5751bff7af2d0c48e" id="r_a5d360653b10902d5751bff7af2d0c48e"><td class="memItemLeft"><a id="a5d360653b10902d5751bff7af2d0c48e" name="a5d360653b10902d5751bff7af2d0c48e"></a>
+static constexpr f32&#160;</td><td class="memItemRight"><b>Cross</b> (const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;a, const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;b) noexcept</td></tr>
+<tr class="memdesc:a5d360653b10902d5751bff7af2d0c48e"><td class="mdescLeft">&#160;</td><td class="mdescRight">外積 <br /></td></tr>
+<tr class="memitem:a9a08ac9e6311b789e049ab8f9fd77f5d" id="r_a9a08ac9e6311b789e049ab8f9fd77f5d"><td class="memItemLeft"><a id="a9a08ac9e6311b789e049ab8f9fd77f5d" name="a9a08ac9e6311b789e049ab8f9fd77f5d"></a>
+static f32&#160;</td><td class="memItemRight"><b>Dist</b> (const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;a, const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;b)</td></tr>
+<tr class="memdesc:a9a08ac9e6311b789e049ab8f9fd77f5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">二つのベクトルの距離を計算 <br /></td></tr>
+<tr class="memitem:a49ff355879430d9204824c46e5563f4b" id="r_a49ff355879430d9204824c46e5563f4b"><td class="memItemLeft"><a id="a49ff355879430d9204824c46e5563f4b" name="a49ff355879430d9204824c46e5563f4b"></a>
+static constexpr f32&#160;</td><td class="memItemRight"><b>SqrDist</b> (const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;a, const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;b) noexcept</td></tr>
+<tr class="memdesc:a49ff355879430d9204824c46e5563f4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">二つのベクトルの距離の二乗を計算 <br /></td></tr>
+<tr class="memitem:a3fd9fc8fef069ba8b2a94133337470b0" id="r_a3fd9fc8fef069ba8b2a94133337470b0"><td class="memItemLeft"><a id="a3fd9fc8fef069ba8b2a94133337470b0" name="a3fd9fc8fef069ba8b2a94133337470b0"></a>
+static constexpr f32&#160;</td><td class="memItemRight"><b>MDist</b> (const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;a, const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;b) noexcept</td></tr>
+<tr class="memdesc:a3fd9fc8fef069ba8b2a94133337470b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">二つのベクトルのマンハッタン距離を計算 <br /></td></tr>
+<tr class="memitem:a4ca57fa1cc8120d5f6db69af68cfd0b1" id="r_a4ca57fa1cc8120d5f6db69af68cfd0b1"><td class="memItemLeft">static constexpr <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a>&#160;</td><td class="memItemRight"><a class="el" href="#a4ca57fa1cc8120d5f6db69af68cfd0b1">Lerp</a> (const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;a, const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;b, f32 t) noexcept</td></tr>
+<tr class="memdesc:a4ca57fa1cc8120d5f6db69af68cfd0b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">二つのベクトルの線形補間  <br /></td></tr>
+<tr class="memitem:a77e65c9b2b478a24cc8167dfae16b480" id="r_a77e65c9b2b478a24cc8167dfae16b480"><td class="memItemLeft">static <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a>&#160;</td><td class="memItemRight"><a class="el" href="#a77e65c9b2b478a24cc8167dfae16b480">Slerp</a> (const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;a, const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;b, f32 t)</td></tr>
+<tr class="memdesc:a77e65c9b2b478a24cc8167dfae16b480"><td class="mdescLeft">&#160;</td><td class="mdescRight">二つのベクトルの球面補間  <br /></td></tr>
+<tr class="memitem:a2405768b2791f93f84039784efc3ac75" id="r_a2405768b2791f93f84039784efc3ac75"><td class="memItemLeft"><a id="a2405768b2791f93f84039784efc3ac75" name="a2405768b2791f93f84039784efc3ac75"></a>
+static constexpr <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a>&#160;</td><td class="memItemRight"><b>Max</b> (const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;a, const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;b) noexcept</td></tr>
+<tr class="memdesc:a2405768b2791f93f84039784efc3ac75"><td class="mdescLeft">&#160;</td><td class="mdescRight">二つのベクトルの各要素の大きいほうからベクトルを生成 <br /></td></tr>
+<tr class="memitem:ae35874aaffe1407f89bbc50f4bd1a96c" id="r_ae35874aaffe1407f89bbc50f4bd1a96c"><td class="memItemLeft"><a id="ae35874aaffe1407f89bbc50f4bd1a96c" name="ae35874aaffe1407f89bbc50f4bd1a96c"></a>
+static constexpr <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a>&#160;</td><td class="memItemRight"><b>Min</b> (const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;a, const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;b) noexcept</td></tr>
+<tr class="memdesc:ae35874aaffe1407f89bbc50f4bd1a96c"><td class="mdescLeft">&#160;</td><td class="mdescRight">二つのベクトルの各要素の小さいほうからベクトルを生成 <br /></td></tr>
+<tr class="memitem:a54e08e1ebec92dc602c866dac0f9a753" id="r_a54e08e1ebec92dc602c866dac0f9a753"><td class="memItemLeft"><a id="a54e08e1ebec92dc602c866dac0f9a753" name="a54e08e1ebec92dc602c866dac0f9a753"></a>
+static f32&#160;</td><td class="memItemRight"><b>CosAngle</b> (const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;a, const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;b)</td></tr>
+<tr class="memdesc:a54e08e1ebec92dc602c866dac0f9a753"><td class="mdescLeft">&#160;</td><td class="mdescRight">二つのベクトルのなす角のコサインを取得 <br /></td></tr>
+<tr class="memitem:ace881dedc1b76b4b18a0930ddb0c263c" id="r_ace881dedc1b76b4b18a0930ddb0c263c"><td class="memItemLeft"><a id="ace881dedc1b76b4b18a0930ddb0c263c" name="ace881dedc1b76b4b18a0930ddb0c263c"></a>
+static f32&#160;</td><td class="memItemRight"><b>Angle</b> (const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;a, const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;b)</td></tr>
+<tr class="memdesc:ace881dedc1b76b4b18a0930ddb0c263c"><td class="mdescLeft">&#160;</td><td class="mdescRight">二つのベクトルのなす角を取得 <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+変数</h2></td></tr>
+<tr class="memitem:a6b05cac69c0301ab972c27ce208373be" id="r_a6b05cac69c0301ab972c27ce208373be"><td class="memItemLeft"><a id="a6b05cac69c0301ab972c27ce208373be" name="a6b05cac69c0301ab972c27ce208373be"></a>
+f32&#160;</td><td class="memItemRight"><b>x</b></td></tr>
+<tr class="memdesc:a6b05cac69c0301ab972c27ce208373be"><td class="mdescLeft">&#160;</td><td class="mdescRight">ベクトルのX成分 <br /></td></tr>
+<tr class="memitem:ab7291adeb8828a0cba3aedf332c2053d" id="r_ab7291adeb8828a0cba3aedf332c2053d"><td class="memItemLeft"><a id="ab7291adeb8828a0cba3aedf332c2053d" name="ab7291adeb8828a0cba3aedf332c2053d"></a>
+f32&#160;</td><td class="memItemRight"><b>y</b></td></tr>
+<tr class="memdesc:ab7291adeb8828a0cba3aedf332c2053d"><td class="mdescLeft">&#160;</td><td class="mdescRight">ベクトルのY成分 <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+静的変数</h2></td></tr>
+<tr class="memitem:aa0a8b1fa3eb9459936831e87edb4d177" id="r_aa0a8b1fa3eb9459936831e87edb4d177"><td class="memItemLeft"><a id="aa0a8b1fa3eb9459936831e87edb4d177" name="aa0a8b1fa3eb9459936831e87edb4d177"></a>
+static const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a>&#160;</td><td class="memItemRight"><b>Zero</b></td></tr>
+<tr class="memdesc:aa0a8b1fa3eb9459936831e87edb4d177"><td class="mdescLeft">&#160;</td><td class="mdescRight">( 0.0f, 0.0f) <br /></td></tr>
+<tr class="memitem:ac863650f900b208bedd8e5127277575a" id="r_ac863650f900b208bedd8e5127277575a"><td class="memItemLeft"><a id="ac863650f900b208bedd8e5127277575a" name="ac863650f900b208bedd8e5127277575a"></a>
+static const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a>&#160;</td><td class="memItemRight"><b>One</b></td></tr>
+<tr class="memdesc:ac863650f900b208bedd8e5127277575a"><td class="mdescLeft">&#160;</td><td class="mdescRight">( 1.0f, 1.0f) <br /></td></tr>
+<tr class="memitem:a14144d6c0dd69a4d80b12598929fc987" id="r_a14144d6c0dd69a4d80b12598929fc987"><td class="memItemLeft"><a id="a14144d6c0dd69a4d80b12598929fc987" name="a14144d6c0dd69a4d80b12598929fc987"></a>
+static const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a>&#160;</td><td class="memItemRight"><b>Left</b></td></tr>
+<tr class="memdesc:a14144d6c0dd69a4d80b12598929fc987"><td class="mdescLeft">&#160;</td><td class="mdescRight">(-1.0f, 0.0f) <br /></td></tr>
+<tr class="memitem:a88bca2c72f270c42cd2e7180446df6fd" id="r_a88bca2c72f270c42cd2e7180446df6fd"><td class="memItemLeft"><a id="a88bca2c72f270c42cd2e7180446df6fd" name="a88bca2c72f270c42cd2e7180446df6fd"></a>
+static const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a>&#160;</td><td class="memItemRight"><b>Right</b></td></tr>
+<tr class="memdesc:a88bca2c72f270c42cd2e7180446df6fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">( 1.0f, 0.0f) <br /></td></tr>
+<tr class="memitem:af1d28fe3dff07ecc2dba3c4661f9aefd" id="r_af1d28fe3dff07ecc2dba3c4661f9aefd"><td class="memItemLeft"><a id="af1d28fe3dff07ecc2dba3c4661f9aefd" name="af1d28fe3dff07ecc2dba3c4661f9aefd"></a>
+static const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a>&#160;</td><td class="memItemRight"><b>Down</b></td></tr>
+<tr class="memdesc:af1d28fe3dff07ecc2dba3c4661f9aefd"><td class="mdescLeft">&#160;</td><td class="mdescRight">( 0.0f,-1.0f) <br /></td></tr>
+<tr class="memitem:a102c5bc29385b47f18fdc26d144a2cf0" id="r_a102c5bc29385b47f18fdc26d144a2cf0"><td class="memItemLeft"><a id="a102c5bc29385b47f18fdc26d144a2cf0" name="a102c5bc29385b47f18fdc26d144a2cf0"></a>
+static const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a>&#160;</td><td class="memItemRight"><b>Up</b></td></tr>
+<tr class="memdesc:a102c5bc29385b47f18fdc26d144a2cf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">( 0.0f, 1.0f) <br /></td></tr>
+<tr class="memitem:a8f3dcde8df5ec16af1eb399227f225e8" id="r_a8f3dcde8df5ec16af1eb399227f225e8"><td class="memItemLeft"><a id="a8f3dcde8df5ec16af1eb399227f225e8" name="a8f3dcde8df5ec16af1eb399227f225e8"></a>
+static const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a>&#160;</td><td class="memItemRight"><b>Minimum</b></td></tr>
+<tr class="memdesc:a8f3dcde8df5ec16af1eb399227f225e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">( -inf, -inf) <br /></td></tr>
+<tr class="memitem:a302347df281e15f1cc24788992059b08" id="r_a302347df281e15f1cc24788992059b08"><td class="memItemLeft"><a id="a302347df281e15f1cc24788992059b08" name="a302347df281e15f1cc24788992059b08"></a>
+static const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a>&#160;</td><td class="memItemRight"><b>Maximum</b></td></tr>
+<tr class="memdesc:a302347df281e15f1cc24788992059b08"><td class="mdescLeft">&#160;</td><td class="mdescRight">( inf, inf) <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
+フレンド</h2></td></tr>
+<tr class="memitem:a6c0b9296a9eab0bfe2ac79939a03ca35" id="r_a6c0b9296a9eab0bfe2ac79939a03ca35"><td class="memItemLeft"><a id="a6c0b9296a9eab0bfe2ac79939a03ca35" name="a6c0b9296a9eab0bfe2ac79939a03ca35"></a>
+constexpr friend <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a>&#160;</td><td class="memItemRight"><b>operator*</b> (f32 scalar, const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;v)</td></tr>
+<tr class="memdesc:a6c0b9296a9eab0bfe2ac79939a03ca35"><td class="mdescLeft">&#160;</td><td class="mdescRight">f32*Vec2演算子 <br /></td></tr>
+<tr class="memitem:a0984f52c9cd7b69b7ad39fc49bf1530c" id="r_a0984f52c9cd7b69b7ad39fc49bf1530c"><td class="memItemLeft"><a id="a0984f52c9cd7b69b7ad39fc49bf1530c" name="a0984f52c9cd7b69b7ad39fc49bf1530c"></a>
+constexpr friend <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a>&#160;</td><td class="memItemRight"><b>operator/</b> (f32 scalar, const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;v)</td></tr>
+<tr class="memdesc:a0984f52c9cd7b69b7ad39fc49bf1530c"><td class="mdescLeft">&#160;</td><td class="mdescRight">f32/Vec2演算子 <br /></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="af64f0827eb91c829d2e2d72be75cf38f" name="af64f0827eb91c829d2e2d72be75cf38f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af64f0827eb91c829d2e2d72be75cf38f">&#9670;&#160;</a></span>allComponentsEqual()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool allComponentsEqual </td>
+          <td>(</td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>tolerance</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="../../d2/d39/class_amuse_1_1_math.html#a2e9981ebd4af1a2ffb80b23d1aae12e9">Math::TOLERANCE</a></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>すべての要素が同じ値か判定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tolerance</td><td>許容誤差 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a49d1d42b0113189cc19258742f3996b0" name="a49d1d42b0113189cc19258742f3996b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49d1d42b0113189cc19258742f3996b0">&#9670;&#160;</a></span>equals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool equals </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>v</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>tolerance</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="../../d2/d39/class_amuse_1_1_math.html#a2e9981ebd4af1a2ffb80b23d1aae12e9">Math::TOLERANCE</a></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>等価判定(許容誤差指定) </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>比較対象 </td></tr>
+    <tr><td class="paramname">tolerance</td><td>許容誤差 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6320968dd51149e02578e927b28baf11" name="a6320968dd51149e02578e927b28baf11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6320968dd51149e02578e927b28baf11">&#9670;&#160;</a></span>length()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">f32 length </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ベクトルの長さを取得 </p>
+<p>二つのベクトルの長さを比較する場合はSqrMagのほうが高速です。 </p>
+
+</div>
+</div>
+<a id="a4ca57fa1cc8120d5f6db69af68cfd0b1" name="a4ca57fa1cc8120d5f6db69af68cfd0b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ca57fa1cc8120d5f6db69af68cfd0b1">&#9670;&#160;</a></span>Lerp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> Lerp </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>t</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>二つのベクトルの線形補間 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>開始ベクトル </td></tr>
+    <tr><td class="paramname">b</td><td>終了ベクトル </td></tr>
+    <tr><td class="paramname">t</td><td>補間係数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>t=0のときa、t=1の時bを返す。 </dd></dl>
+
+</div>
+</div>
+<a id="a999df214a522eedaf9ad6ad830fe152b" name="a999df214a522eedaf9ad6ad830fe152b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a999df214a522eedaf9ad6ad830fe152b">&#9670;&#160;</a></span>normalize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp; normalize </td>
+          <td>(</td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>tolerance</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="../../d2/d39/class_amuse_1_1_math.html#a2e9981ebd4af1a2ffb80b23d1aae12e9">Math::TOLERANCE</a></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ベクトルの正規化 </p>
+<p>0ベクトルの場合は何もしない。 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tolerance</td><td>ゼロベクトル判定の誤差の許容誤差 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6d2832a3b4b93a3cb62df52c0a1cad09" name="a6d2832a3b4b93a3cb62df52c0a1cad09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d2832a3b4b93a3cb62df52c0a1cad09">&#9670;&#160;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>否等価演算子 </p>
+<p>2つのベクトルの差が <a class="el" href="../../d2/d39/class_amuse_1_1_math.html#a2e9981ebd4af1a2ffb80b23d1aae12e9" title="誤差許容値">Math::TOLERANCE</a> より大きい場合、2つのベクトルは異なると 見なされます。 </p>
+
+</div>
+</div>
+<a id="a4e669fa67d813df86cd2dceb991c1761" name="a4e669fa67d813df86cd2dceb991c1761"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e669fa67d813df86cd2dceb991c1761">&#9670;&#160;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>等価演算子 </p>
+<p>2つのベクトルの差が <a class="el" href="../../d2/d39/class_amuse_1_1_math.html#a2e9981ebd4af1a2ffb80b23d1aae12e9" title="誤差許容値">Math::TOLERANCE</a> より小さい場合、2つのベクトルは等しいと 見なされます。 </p>
+
+</div>
+</div>
+<a id="af7a6382e041b6eaeee6017a26123b3d8" name="af7a6382e041b6eaeee6017a26123b3d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7a6382e041b6eaeee6017a26123b3d8">&#9670;&#160;</a></span>operator[]()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">f32 operator[] </td>
+          <td>(</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>要素取得 </p>
+<p>範囲外の場合は0を返します。 </p>
+
+</div>
+</div>
+<a id="a77e65c9b2b478a24cc8167dfae16b480" name="a77e65c9b2b478a24cc8167dfae16b480"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77e65c9b2b478a24cc8167dfae16b480">&#9670;&#160;</a></span>Slerp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> Slerp </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>t</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>二つのベクトルの球面補間 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>開始ベクトル </td></tr>
+    <tr><td class="paramname">b</td><td>終了ベクトル </td></tr>
+    <tr><td class="paramname">t</td><td>補間係数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>t=0のときa、t=1の時bを返す。 </dd></dl>
+
+</div>
+</div>
+<a id="a75690b977de7221b1eb6ab4623b35d4a" name="a75690b977de7221b1eb6ab4623b35d4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75690b977de7221b1eb6ab4623b35d4a">&#9670;&#160;</a></span>toDirectionAndLength()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void toDirectionAndLength </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>outDir</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">f32 &amp;</td>          <td class="paramname"><span class="paramname"><em>outLen</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>方向ベクトルとベクトルの長さを取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">outDir</td><td>方向ベクトルの出力 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">outLen</td><td>ベクトルの大きさ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abdfc7b251b0e2ede2e5aab25cca0e29e" name="abdfc7b251b0e2ede2e5aab25cca0e29e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdfc7b251b0e2ede2e5aab25cca0e29e">&#9670;&#160;</a></span>unitVec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a405027a3ac69d54dc8e544a69af23885">Vec2</a> unitVec </td>
+          <td>(</td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>tolerance</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="../../d2/d39/class_amuse_1_1_math.html#a2e9981ebd4af1a2ffb80b23d1aae12e9">Math::TOLERANCE</a></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>単位ベクトルを取得 </p>
+<p>0ベクトルの場合は0ベクトルを返す。 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tolerance</td><td>ゼロベクトル判定の誤差の許容誤差 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>この構造体詳解は次のファイルから抽出されました:<ul>
+<li>Runtime/Core/Public/Amuse/Core/Math/<a class="el" href="../../dd/d09/_vector2_8h_source.html">Vector2.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><a href="../../d3/d51/struct_amuse_1_1_vec2.html">Vec2</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

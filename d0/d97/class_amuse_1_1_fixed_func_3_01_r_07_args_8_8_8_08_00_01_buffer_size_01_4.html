@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: FixedFunc&lt; R(Args...), BufferSize &gt; クラステンプレート</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d0/d97/class_amuse_1_1_fixed_func_3_01_r_07_args_8_8_8_08_00_01_buffer_size_01_4.html','../../','d3/d58/class_amuse_1_1_fixed_func_3_01_r_07_args_8_8_8_08_00_01_buffer_size_01_4-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-methods">メソッド</a> &#124;
+<a href="../../d3/d58/class_amuse_1_1_fixed_func_3_01_r_07_args_8_8_8_08_00_01_buffer_size_01_4-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">FixedFunc&lt; R(Args...), BufferSize &gt; クラステンプレート<div class="ingroups"><a class="el" href="../../da/d78/group___amuse_core.html">Core</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">説明</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;class R, class... Args, size_t BufferSize&gt;<br />
+class Amuse::FixedFunc&lt; R(Args...), BufferSize &gt;</div><p>固定長関数オブジェクト </p>
+<p>std::functionと異なりヒープアロケーションを行わない関数オブジェクト </p>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:af0a0fb4e03f3ee75d63d438aa3f1f1fb" id="r_af0a0fb4e03f3ee75d63d438aa3f1f1fb"><td class="memItemLeft"><a id="af0a0fb4e03f3ee75d63d438aa3f1f1fb" name="af0a0fb4e03f3ee75d63d438aa3f1f1fb"></a>
+using&#160;</td><td class="memItemRight"><b>result_type</b> = R</td></tr>
+<tr class="memdesc:af0a0fb4e03f3ee75d63d438aa3f1f1fb"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="#af0a0fb4e03f3ee75d63d438aa3f1f1fb" title="result_type 型のエイリアス。">result_type</a> 型のエイリアス。 <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+メソッド</h2></td></tr>
+<tr class="memitem:a1b2b0bbfa7a2696c096df61d099db732" id="r_a1b2b0bbfa7a2696c096df61d099db732"><td class="memItemLeft"><a id="a1b2b0bbfa7a2696c096df61d099db732" name="a1b2b0bbfa7a2696c096df61d099db732"></a>
+&#160;</td><td class="memItemRight"><b>FixedFunc</b> ()=default</td></tr>
+<tr class="memdesc:a1b2b0bbfa7a2696c096df61d099db732"><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトコンストラクタ <br /></td></tr>
+<tr class="memitem:a5895bb55d6b83071cfc9e9f281e79475" id="r_a5895bb55d6b83071cfc9e9f281e79475"><td class="memItemLeft"><a id="a5895bb55d6b83071cfc9e9f281e79475" name="a5895bb55d6b83071cfc9e9f281e79475"></a>
+&#160;</td><td class="memItemRight"><b>~FixedFunc</b> ()</td></tr>
+<tr class="memdesc:a5895bb55d6b83071cfc9e9f281e79475"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ <br /></td></tr>
+<tr class="memitem:afcf4080cce4ab02a5802d185dea25c4c" id="r_afcf4080cce4ab02a5802d185dea25c4c"><td class="memItemLeft"><a id="afcf4080cce4ab02a5802d185dea25c4c" name="afcf4080cce4ab02a5802d185dea25c4c"></a>
+&#160;</td><td class="memItemRight"><b>FixedFunc</b> (const FixedFunc &amp;other)</td></tr>
+<tr class="memdesc:afcf4080cce4ab02a5802d185dea25c4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">コピーコンストラクタ <br /></td></tr>
+<tr class="memitem:afb6570a0ff210d102cb3ba6986626a87" id="r_afb6570a0ff210d102cb3ba6986626a87"><td class="memItemLeft"><a id="afb6570a0ff210d102cb3ba6986626a87" name="afb6570a0ff210d102cb3ba6986626a87"></a>
+&#160;</td><td class="memItemRight"><b>FixedFunc</b> (FixedFunc &amp;&amp;other) noexcept</td></tr>
+<tr class="memdesc:afb6570a0ff210d102cb3ba6986626a87"><td class="mdescLeft">&#160;</td><td class="mdescRight">ムーブコンストラクタ <br /></td></tr>
+<tr class="memitem:acbccc92cee83e3ca5288595d709b7ef9" id="r_acbccc92cee83e3ca5288595d709b7ef9"><td class="memItemLeft"><a id="acbccc92cee83e3ca5288595d709b7ef9" name="acbccc92cee83e3ca5288595d709b7ef9"></a>
+<a class="el" href="#a1b2b0bbfa7a2696c096df61d099db732">FixedFunc</a> &amp;&#160;</td><td class="memItemRight"><b>operator=</b> (const <a class="el" href="#a1b2b0bbfa7a2696c096df61d099db732">FixedFunc</a> &amp;other)</td></tr>
+<tr class="memdesc:acbccc92cee83e3ca5288595d709b7ef9"><td class="mdescLeft">&#160;</td><td class="mdescRight">コピー代入演算子 <br /></td></tr>
+<tr class="memitem:a9d1e9ac68bc2e0e38c38ce2a7ae3c543" id="r_a9d1e9ac68bc2e0e38c38ce2a7ae3c543"><td class="memItemLeft"><a id="a9d1e9ac68bc2e0e38c38ce2a7ae3c543" name="a9d1e9ac68bc2e0e38c38ce2a7ae3c543"></a>
+<a class="el" href="#a1b2b0bbfa7a2696c096df61d099db732">FixedFunc</a> &amp;&#160;</td><td class="memItemRight"><b>operator=</b> (<a class="el" href="#a1b2b0bbfa7a2696c096df61d099db732">FixedFunc</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="memdesc:a9d1e9ac68bc2e0e38c38ce2a7ae3c543"><td class="mdescLeft">&#160;</td><td class="mdescRight">ムーブ代入演算子 <br /></td></tr>
+<tr class="memitem:ad2c8cc452436471c3bbadf4d10327a3d" id="r_ad2c8cc452436471c3bbadf4d10327a3d"><td class="memTemplParams" colspan="2"><a id="ad2c8cc452436471c3bbadf4d10327a3d" name="ad2c8cc452436471c3bbadf4d10327a3d"></a>
+template&lt;class F&gt; </td></tr>
+<tr class="memitem:ad2c8cc452436471c3bbadf4d10327a3d template"><td class="memItemLeft"><a class="el" href="#a1b2b0bbfa7a2696c096df61d099db732">FixedFunc</a>&#160;</td><td class="memItemRight"><b>operator=</b> (F &amp;&amp;f)</td></tr>
+<tr class="memdesc:ad2c8cc452436471c3bbadf4d10327a3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">関数オブジェクトの登録 <br /></td></tr>
+<tr class="memitem:a67b76affb3b5d35fa419ac234144038b" id="r_a67b76affb3b5d35fa419ac234144038b"><td class="memItemLeft"><a id="a67b76affb3b5d35fa419ac234144038b" name="a67b76affb3b5d35fa419ac234144038b"></a>
+&#160;</td><td class="memItemRight"><b>operator bool</b> () const</td></tr>
+<tr class="memdesc:a67b76affb3b5d35fa419ac234144038b"><td class="mdescLeft">&#160;</td><td class="mdescRight">空の関数オブジェクトか <br /></td></tr>
+<tr class="memitem:ad7e5180a82f0d5ff79ede955169ab083" id="r_ad7e5180a82f0d5ff79ede955169ab083"><td class="memItemLeft"><a id="ad7e5180a82f0d5ff79ede955169ab083" name="ad7e5180a82f0d5ff79ede955169ab083"></a>
+R&#160;</td><td class="memItemRight"><b>operator()</b> (Args... args) const</td></tr>
+<tr class="memdesc:ad7e5180a82f0d5ff79ede955169ab083"><td class="mdescLeft">&#160;</td><td class="mdescRight">関数オブジェクトの呼び出し <br /></td></tr>
+<tr class="memitem:ad20897c5c8bd47f5d4005989bead0e55" id="r_ad20897c5c8bd47f5d4005989bead0e55"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad20897c5c8bd47f5d4005989bead0e55">reset</a> ()</td></tr>
+<tr class="memdesc:ad20897c5c8bd47f5d4005989bead0e55"><td class="mdescLeft">&#160;</td><td class="mdescRight">関数オブジェクトの解除  <br /></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="ad20897c5c8bd47f5d4005989bead0e55" name="ad20897c5c8bd47f5d4005989bead0e55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad20897c5c8bd47f5d4005989bead0e55">&#9670;&#160;</a></span>reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class R, class... Args, size_t BufferSize&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void reset </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>関数オブジェクトの解除 </p>
+<p>&lt; 呼び出し対象</p>
+<p>配置済み関数オブジェクト用の内部バッファをゼロクリアする。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>Runtime/Core/Public/Amuse/Core/Template/Utility/<a class="el" href="../../d9/d4f/_fixed_func_8h_source.html">FixedFunc.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><a href="../../d0/d97/class_amuse_1_1_fixed_func_3_01_r_07_args_8_8_8_08_00_01_buffer_size_01_4.html">FixedFunc&lt; R(Args...), BufferSize &gt;</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

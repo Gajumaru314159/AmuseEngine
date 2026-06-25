@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: Ref&lt; T &gt; クラステンプレート</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('de/d8b/class_amuse_1_1_ref.html','../../','d3/dcd/class_amuse_1_1_ref-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">メソッド</a> &#124;
+<a href="../../d3/dcd/class_amuse_1_1_ref-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">Ref&lt; T &gt; クラステンプレート<div class="ingroups"><a class="el" href="../../da/d78/group___amuse_core.html">Core</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">説明</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;class T&gt;<br />
+class Amuse::Ref&lt; T &gt;</div><p><a class="el" href="../../d0/dcb/class_amuse_1_1_ref_object.html" title="参照カウントオブジェクト">RefObject</a> 用スマートポインタ </p>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+メソッド</h2></td></tr>
+<tr class="memitem:a0a6673217dd48d00f33710aee0c849d1" id="r_a0a6673217dd48d00f33710aee0c849d1"><td class="memItemLeft"><a id="a0a6673217dd48d00f33710aee0c849d1" name="a0a6673217dd48d00f33710aee0c849d1"></a>
+constexpr&#160;</td><td class="memItemRight"><b>Ref</b> () noexcept</td></tr>
+<tr class="memdesc:a0a6673217dd48d00f33710aee0c849d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">空の <a class="el" href="../../de/d8b/class_amuse_1_1_ref.html" title="RefObject 用スマートポインタ">Ref</a> を構築 <br /></td></tr>
+<tr class="memitem:a98d8e335cff12189fa1444aeed34ec2e" id="r_a98d8e335cff12189fa1444aeed34ec2e"><td class="memItemLeft"><a id="a98d8e335cff12189fa1444aeed34ec2e" name="a98d8e335cff12189fa1444aeed34ec2e"></a>
+constexpr&#160;</td><td class="memItemRight"><b>Ref</b> (std::nullptr_t) noexcept</td></tr>
+<tr class="memdesc:a98d8e335cff12189fa1444aeed34ec2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">空の <a class="el" href="../../de/d8b/class_amuse_1_1_ref.html" title="RefObject 用スマートポインタ">Ref</a> を構築 <br /></td></tr>
+<tr class="memitem:acff499314748751dbe2b4b717533f426" id="r_acff499314748751dbe2b4b717533f426"><td class="memItemLeft"><a id="acff499314748751dbe2b4b717533f426" name="acff499314748751dbe2b4b717533f426"></a>
+&#160;</td><td class="memItemRight"><b>Ref</b> (T *ptr)</td></tr>
+<tr class="memdesc:acff499314748751dbe2b4b717533f426"><td class="mdescLeft">&#160;</td><td class="mdescRight">生ポインタから構築 <br /></td></tr>
+<tr class="memitem:a4a79d6e7c27f62b2a22460c1e60df9ed" id="r_a4a79d6e7c27f62b2a22460c1e60df9ed"><td class="memItemLeft"><a id="a4a79d6e7c27f62b2a22460c1e60df9ed" name="a4a79d6e7c27f62b2a22460c1e60df9ed"></a>
+&#160;</td><td class="memItemRight"><b>Ref</b> (const Ref &amp;ref) noexcept</td></tr>
+<tr class="memdesc:a4a79d6e7c27f62b2a22460c1e60df9ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">コピーコンストラクタ <br /></td></tr>
+<tr class="memitem:a1ab8684f16038e7b6e7dadd4816b6962" id="r_a1ab8684f16038e7b6e7dadd4816b6962"><td class="memTemplParams" colspan="2"><a id="a1ab8684f16038e7b6e7dadd4816b6962" name="a1ab8684f16038e7b6e7dadd4816b6962"></a>
+template&lt;class Y&gt; </td></tr>
+<tr class="memitem:a1ab8684f16038e7b6e7dadd4816b6962 template"><td class="memItemLeft">&#160;</td><td class="memItemRight"><b>Ref</b> (const Ref&lt; Y &gt; &amp;ref) noexcept</td></tr>
+<tr class="memdesc:a1ab8684f16038e7b6e7dadd4816b6962"><td class="mdescLeft">&#160;</td><td class="mdescRight">コピーコンストラクタ <br /></td></tr>
+<tr class="memitem:afb1552a9e52e30339c0013da6e23fe21" id="r_afb1552a9e52e30339c0013da6e23fe21"><td class="memItemLeft"><a id="afb1552a9e52e30339c0013da6e23fe21" name="afb1552a9e52e30339c0013da6e23fe21"></a>
+&#160;</td><td class="memItemRight"><b>Ref</b> (Ref &amp;&amp;ref) noexcept</td></tr>
+<tr class="memdesc:afb1552a9e52e30339c0013da6e23fe21"><td class="mdescLeft">&#160;</td><td class="mdescRight">ムーブコンストラクタ <br /></td></tr>
+<tr class="memitem:a06f3095317edf467b97d2a9b589916a6" id="r_a06f3095317edf467b97d2a9b589916a6"><td class="memTemplParams" colspan="2"><a id="a06f3095317edf467b97d2a9b589916a6" name="a06f3095317edf467b97d2a9b589916a6"></a>
+template&lt;class Y&gt; </td></tr>
+<tr class="memitem:a06f3095317edf467b97d2a9b589916a6 template"><td class="memItemLeft">&#160;</td><td class="memItemRight"><b>Ref</b> (Ref&lt; Y &gt; &amp;&amp;ref) noexcept</td></tr>
+<tr class="memdesc:a06f3095317edf467b97d2a9b589916a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">ムーブコンストラクタ <br /></td></tr>
+<tr class="memitem:a7182949e6c96dd4e57b612ca3ceeb51b" id="r_a7182949e6c96dd4e57b612ca3ceeb51b"><td class="memItemLeft"><a id="a7182949e6c96dd4e57b612ca3ceeb51b" name="a7182949e6c96dd4e57b612ca3ceeb51b"></a>
+&#160;</td><td class="memItemRight"><b>~Ref</b> ()</td></tr>
+<tr class="memdesc:a7182949e6c96dd4e57b612ca3ceeb51b"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ <br /></td></tr>
+<tr class="memitem:a57503dd43e62c7e21deb8cd3bed1fd0d" id="r_a57503dd43e62c7e21deb8cd3bed1fd0d"><td class="memItemLeft"><a id="a57503dd43e62c7e21deb8cd3bed1fd0d" name="a57503dd43e62c7e21deb8cd3bed1fd0d"></a>
+<a class="el" href="#a0a6673217dd48d00f33710aee0c849d1">Ref</a> &amp;&#160;</td><td class="memItemRight"><b>operator=</b> (const <a class="el" href="#a0a6673217dd48d00f33710aee0c849d1">Ref</a> &amp;ref) noexcept</td></tr>
+<tr class="memdesc:a57503dd43e62c7e21deb8cd3bed1fd0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">コピー代入 <br /></td></tr>
+<tr class="memitem:aaa8caba73aaf7c135edf39a2bd679fee" id="r_aaa8caba73aaf7c135edf39a2bd679fee"><td class="memTemplParams" colspan="2"><a id="aaa8caba73aaf7c135edf39a2bd679fee" name="aaa8caba73aaf7c135edf39a2bd679fee"></a>
+template&lt;class Y&gt; </td></tr>
+<tr class="memitem:aaa8caba73aaf7c135edf39a2bd679fee template"><td class="memItemLeft"><a class="el" href="#a0a6673217dd48d00f33710aee0c849d1">Ref</a> &amp;&#160;</td><td class="memItemRight"><b>operator=</b> (const <a class="el" href="#a0a6673217dd48d00f33710aee0c849d1">Ref</a>&lt; Y &gt; &amp;ref) noexcept</td></tr>
+<tr class="memdesc:aaa8caba73aaf7c135edf39a2bd679fee"><td class="mdescLeft">&#160;</td><td class="mdescRight">コピー代入 <br /></td></tr>
+<tr class="memitem:a8925c9c4c1127d63b232762967aa73a3" id="r_a8925c9c4c1127d63b232762967aa73a3"><td class="memItemLeft"><a id="a8925c9c4c1127d63b232762967aa73a3" name="a8925c9c4c1127d63b232762967aa73a3"></a>
+<a class="el" href="#a0a6673217dd48d00f33710aee0c849d1">Ref</a> &amp;&#160;</td><td class="memItemRight"><b>operator=</b> (<a class="el" href="#a0a6673217dd48d00f33710aee0c849d1">Ref</a> &amp;&amp;ref) noexcept</td></tr>
+<tr class="memdesc:a8925c9c4c1127d63b232762967aa73a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">ムーブ代入 <br /></td></tr>
+<tr class="memitem:a38a9fa03130e1b44afd6ab7874507504" id="r_a38a9fa03130e1b44afd6ab7874507504"><td class="memTemplParams" colspan="2"><a id="a38a9fa03130e1b44afd6ab7874507504" name="a38a9fa03130e1b44afd6ab7874507504"></a>
+template&lt;class Y&gt; </td></tr>
+<tr class="memitem:a38a9fa03130e1b44afd6ab7874507504 template"><td class="memItemLeft"><a class="el" href="#a0a6673217dd48d00f33710aee0c849d1">Ref</a> &amp;&#160;</td><td class="memItemRight"><b>operator=</b> (<a class="el" href="#a0a6673217dd48d00f33710aee0c849d1">Ref</a>&lt; Y &gt; &amp;&amp;ref) noexcept</td></tr>
+<tr class="memdesc:a38a9fa03130e1b44afd6ab7874507504"><td class="mdescLeft">&#160;</td><td class="mdescRight">ムーブ代入 <br /></td></tr>
+<tr class="memitem:a753183be51c9bf8deee6738409577ec7" id="r_a753183be51c9bf8deee6738409577ec7"><td class="memItemLeft"><a id="a753183be51c9bf8deee6738409577ec7" name="a753183be51c9bf8deee6738409577ec7"></a>
+T &amp;&#160;</td><td class="memItemRight"><b>operator*</b> () const noexcept</td></tr>
+<tr class="memdesc:a753183be51c9bf8deee6738409577ec7"><td class="mdescLeft">&#160;</td><td class="mdescRight">ポインタを間接参照する <br /></td></tr>
+<tr class="memitem:a2483b26a3b69ecd5f7db6ca9093282a7" id="r_a2483b26a3b69ecd5f7db6ca9093282a7"><td class="memItemLeft"><a id="a2483b26a3b69ecd5f7db6ca9093282a7" name="a2483b26a3b69ecd5f7db6ca9093282a7"></a>
+T *&#160;</td><td class="memItemRight"><b>operator-&gt;</b> () const noexcept</td></tr>
+<tr class="memdesc:a2483b26a3b69ecd5f7db6ca9093282a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">ポインタアクセス <br /></td></tr>
+<tr class="memitem:a420e60e9788bfa3b52aa3aab72ea3a5e" id="r_a420e60e9788bfa3b52aa3aab72ea3a5e"><td class="memItemLeft"><a id="a420e60e9788bfa3b52aa3aab72ea3a5e" name="a420e60e9788bfa3b52aa3aab72ea3a5e"></a>
+&#160;</td><td class="memItemRight"><b>operator bool</b> () const noexcept</td></tr>
+<tr class="memdesc:a420e60e9788bfa3b52aa3aab72ea3a5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">有効なポインタを保持しているか <br /></td></tr>
+<tr class="memitem:ad20897c5c8bd47f5d4005989bead0e55" id="r_ad20897c5c8bd47f5d4005989bead0e55"><td class="memItemLeft"><a id="ad20897c5c8bd47f5d4005989bead0e55" name="ad20897c5c8bd47f5d4005989bead0e55"></a>
+void&#160;</td><td class="memItemRight"><b>reset</b> ()</td></tr>
+<tr class="memdesc:ad20897c5c8bd47f5d4005989bead0e55"><td class="mdescLeft">&#160;</td><td class="mdescRight">解放 <br /></td></tr>
+<tr class="memitem:a0ff4c1e43de29981c2993daa4d655082" id="r_a0ff4c1e43de29981c2993daa4d655082"><td class="memItemLeft"><a id="a0ff4c1e43de29981c2993daa4d655082" name="a0ff4c1e43de29981c2993daa4d655082"></a>
+void&#160;</td><td class="memItemRight"><b>swap</b> (<a class="el" href="#a0a6673217dd48d00f33710aee0c849d1">Ref</a>&lt; T &gt; &amp;other) noexcept</td></tr>
+<tr class="memdesc:a0ff4c1e43de29981c2993daa4d655082"><td class="mdescLeft">&#160;</td><td class="mdescRight">2つの <a class="el" href="../../de/d8b/class_amuse_1_1_ref.html" title="RefObject 用スマートポインタ">Ref</a> オブジェクトを入れ替える <br /></td></tr>
+<tr class="memitem:aed182ab5a4742a6fc2f9fe79773c12e1" id="r_aed182ab5a4742a6fc2f9fe79773c12e1"><td class="memItemLeft"><a id="aed182ab5a4742a6fc2f9fe79773c12e1" name="aed182ab5a4742a6fc2f9fe79773c12e1"></a>
+T *&#160;</td><td class="memItemRight"><b>get</b> () const</td></tr>
+<tr class="memdesc:aed182ab5a4742a6fc2f9fe79773c12e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">保持しているオブジェクトへのポインタを取得 <br /></td></tr>
+<tr class="memitem:a3efedfc79726ae494572af41183b3803" id="r_a3efedfc79726ae494572af41183b3803"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a3efedfc79726ae494572af41183b3803">operator T*</a> () const</td></tr>
+<tr class="memdesc:a3efedfc79726ae494572af41183b3803"><td class="mdescLeft">&#160;</td><td class="mdescRight">オブジェクトのポインタへの変換をサポート  <br /></td></tr>
+<tr class="memitem:a7a44d65cab19027f933d77c7ff4ad1da" id="r_a7a44d65cab19027f933d77c7ff4ad1da"><td class="memTemplParams" colspan="2"><a id="a7a44d65cab19027f933d77c7ff4ad1da" name="a7a44d65cab19027f933d77c7ff4ad1da"></a>
+template&lt;class Y&gt; </td></tr>
+<tr class="memitem:a7a44d65cab19027f933d77c7ff4ad1da template"><td class="memItemLeft">auto&#160;</td><td class="memItemRight"><b>cast</b> () const -&gt; std::enable_if_t&lt; std::is_base_of_v&lt; T, Y &gt;, Y * &gt;</td></tr>
+<tr class="memdesc:a7a44d65cab19027f933d77c7ff4ad1da"><td class="mdescLeft">&#160;</td><td class="mdescRight">派生クラスへキャスト <br /></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="a3efedfc79726ae494572af41183b3803" name="a3efedfc79726ae494572af41183b3803"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3efedfc79726ae494572af41183b3803">&#9670;&#160;</a></span>operator T*()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">operator T* </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>オブジェクトのポインタへの変換をサポート </p>
+<dl class="section note"><dt>覚え書き</dt><dd>ここでコンパイルエラーとなる場合、T の定義があるヘッダファイルを include しているか確認すること。 </dd></dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>Runtime/Core/Public/Amuse/Core/Utility/<a class="el" href="../../db/db7/_ref_8h_source.html">Ref.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><a href="../../de/d8b/class_amuse_1_1_ref.html">Ref</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

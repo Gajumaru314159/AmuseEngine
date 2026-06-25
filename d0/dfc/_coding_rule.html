@@ -193,8 +193,8 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('d0/dfc/_coding
 <ul>
 <li>名前空間はすべて小文字にし、一単語で記述するようにしてください。</li>
 <li>全てのエンジンコードは<span class="tt">namespace Amuse</span>内に記述してください。</li>
-<li>モジュールごとに名前空間を分けるようにしてください。</li>
-<li>ネストした名前空間は<span class="tt">namespace Amuse::Core{}</span>のような表記します。</li>
+<li>モジュールごとの分類は名前空間ではなくDoxygenの<span class="tt">@defgroup</span>、<span class="tt">@ingroup</span>、<span class="tt">@addtogroup</span>で行ってください。</li>
+<li>エンジンコードでは<span class="tt">Amuse</span>の後ろにモジュール名を連結した名前空間を使用しないでください。</li>
 </ul>
 <h1>構造体</h1>
 <ul>
@@ -248,7 +248,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('d0/dfc/_coding
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">マクロ(内部)  </td><td class="markdownTableBodyNone">_internal_SAMPLE_ID  </td></tr>
 </table>
-<p>内部で使用する機能は<span class="tt">Internal</span>という名前空間に実装してください (例：<span class="tt">namespace Amuse::Core::Internal</span>)</p>
+<p>内部で使用する機能は<span class="tt">Internal</span>という名前空間に実装してください (例：<span class="tt">namespace Amuse { namespace Internal { ... } }</span>)</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#define _internal_ADD(a,b) (a+b)</span></div>
 <div class="line"><span class="preprocessor">#define ADD(a,b) _internal_ADD(a,b)</span></div>
 <div class="line"><span class="keyword">enum class</span> Type{</div>

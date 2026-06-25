@@ -127,27 +127,27 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('df/d4d/_alloca
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;cstddef&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span>Amuse::Core {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span>Amuse {</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span></div>
-<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../da/dba/class_amuse_1_1_core_1_1_allocator.html">   13</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../da/dba/class_amuse_1_1_core_1_1_allocator.html">Allocator</a> {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keyword">virtual</span> <a class="code hl_class" href="../../da/dba/class_amuse_1_1_core_1_1_allocator.html">~Allocator</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="../../da/dba/class_amuse_1_1_core_1_1_allocator.html#a9d5e649ca99e6557b30632d117df0daa">   21</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span>* <a class="code hl_function" href="../../da/dba/class_amuse_1_1_core_1_1_allocator.html#a9d5e649ca99e6557b30632d117df0daa">alloc</a>(<span class="keywordtype">size_t</span> size, <span class="keywordtype">size_t</span> alignment) = 0;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../da/dba/class_amuse_1_1_core_1_1_allocator.html#a7e5efef46736c55ac8f51f4326010f99">   25</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../da/dba/class_amuse_1_1_core_1_1_allocator.html#a7e5efef46736c55ac8f51f4326010f99">free</a>(<span class="keywordtype">void</span>* ptr) = 0;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    };</div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="../../d4/d2b/class_amuse_1_1_allocator.html">   14</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d4/d2b/class_amuse_1_1_allocator.html">Allocator</a> {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keyword">virtual</span> <a class="code hl_class" href="../../d4/d2b/class_amuse_1_1_allocator.html">~Allocator</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../d4/d2b/class_amuse_1_1_allocator.html#a4b3ce502afff1173161f0d7ecdf401d0">   22</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span>* <a class="code hl_function" href="../../d4/d2b/class_amuse_1_1_allocator.html#a4b3ce502afff1173161f0d7ecdf401d0">alloc</a>(<span class="keywordtype">size_t</span> size, <span class="keywordtype">size_t</span> alignment) = 0;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="../../d4/d2b/class_amuse_1_1_allocator.html#a7dbeba9295a3f52ea54698c31e555dff">   26</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d4/d2b/class_amuse_1_1_allocator.html#a7dbeba9295a3f52ea54698c31e555dff">free</a>(<span class="keywordtype">void</span>* ptr) = 0;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    };</div>
 </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">void</span> SetAllocator(<a class="code hl_class" href="../../da/dba/class_amuse_1_1_core_1_1_allocator.html">Allocator</a>&amp; allocator);</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_class" href="../../da/dba/class_amuse_1_1_core_1_1_allocator.html">Allocator</a>* GetAllocator();</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>}</div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_allocator_html"><div class="ttname"><a href="../../da/dba/class_amuse_1_1_core_1_1_allocator.html">Amuse::Core::Allocator</a></div><div class="ttdoc">抽象アロケーター メモリの確保と解放の責務を持つ基底クラス 具体的な実装クラスを継承して様々なアロケーターを利用できる</div><div class="ttdef"><b>Definition</b> Allocator.h:13</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_allocator_html_a7e5efef46736c55ac8f51f4326010f99"><div class="ttname"><a href="../../da/dba/class_amuse_1_1_core_1_1_allocator.html#a7e5efef46736c55ac8f51f4326010f99">Amuse::Core::Allocator::free</a></div><div class="ttdeci">virtual void free(void *ptr)=0</div><div class="ttdoc">メモリを解放する</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_allocator_html_a9d5e649ca99e6557b30632d117df0daa"><div class="ttname"><a href="../../da/dba/class_amuse_1_1_core_1_1_allocator.html#a9d5e649ca99e6557b30632d117df0daa">Amuse::Core::Allocator::alloc</a></div><div class="ttdeci">virtual void * alloc(size_t size, size_t alignment)=0</div><div class="ttdoc">メモリを確保する</div></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">void</span> SetAllocator(<a class="code hl_class" href="../../d4/d2b/class_amuse_1_1_allocator.html">Allocator</a>&amp; allocator);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <a class="code hl_class" href="../../d4/d2b/class_amuse_1_1_allocator.html">Allocator</a>* GetAllocator();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>}</div>
+<div class="ttc" id="aclass_amuse_1_1_allocator_html"><div class="ttname"><a href="../../d4/d2b/class_amuse_1_1_allocator.html">Amuse::Allocator</a></div><div class="ttdoc">抽象アロケーター メモリの確保と解放の責務を持つ基底クラス 具体的な実装クラスを継承して様々なアロケーターを利用できる</div><div class="ttdef"><b>Definition</b> Allocator.h:14</div></div>
+<div class="ttc" id="aclass_amuse_1_1_allocator_html_a4b3ce502afff1173161f0d7ecdf401d0"><div class="ttname"><a href="../../d4/d2b/class_amuse_1_1_allocator.html#a4b3ce502afff1173161f0d7ecdf401d0">Amuse::Allocator::alloc</a></div><div class="ttdeci">virtual void * alloc(size_t size, size_t alignment)=0</div><div class="ttdoc">メモリを確保する</div></div>
+<div class="ttc" id="aclass_amuse_1_1_allocator_html_a7dbeba9295a3f52ea54698c31e555dff"><div class="ttname"><a href="../../d4/d2b/class_amuse_1_1_allocator.html#a7dbeba9295a3f52ea54698c31e555dff">Amuse::Allocator::free</a></div><div class="ttdeci">virtual void free(void *ptr)=0</div><div class="ttdoc">メモリを解放する</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

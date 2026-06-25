@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('d8/db9/_d_l_l.
 <li>DLLオブジェクト破棄時にライブラリを解放すること。</li>
 </ul>
 <h1>基本設計</h1>
-<div class="fragment"><div class="line">Platform::DLL dll(<span class="stringliteral">&quot;Plugins/SamplePlugin&quot;</span>);</div>
+<div class="fragment"><div class="line">DLL dll(<span class="stringliteral">&quot;Plugins/SamplePlugin&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">auto</span> create = dll.getFunction(<span class="stringliteral">&quot;CreatePlugin&quot;</span>);</div>
 <div class="line"><span class="keywordflow">if</span> (create) {</div>

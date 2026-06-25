@@ -185,7 +185,7 @@ graph TD
 <div class="line">Ref&lt;Texture&gt; texture = Texture::Create(TextureDesc{});</div>
 <div class="line">Ref&lt;Buffer&gt; buffer = Buffer::Create(BufferDesc{});</div>
 <div class="line"> </div>
-<div class="line"><span class="comment">// 内部的には RHI::Instance().createTexture(TextureDesc{});と同等</span></div>
+<div class="line"><span class="comment">// 内部的には Instance().createTexture(TextureDesc{});と同等</span></div>
 <div class="line"><span class="comment">// RHIがインスタンス化されていない場合は空のオブジェクトが返る</span></div>
 </div><!-- fragment --><p> 生成したTextureやBufferなどのインスタンスは<span class="tt">Ref&lt;T&gt;</span>によって参照カウントベースで管理されています。これらはRHIインスタンスの解放までに全て解放されている必要があります。 </p><div class="fragment"><div class="line">Ref&lt;Texture&gt; texture;</div>
 <div class="line">{</div>
@@ -230,7 +230,7 @@ graph TD
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// PipelineState</span></div>
-<div class="line"><span class="keyword">struct </span>Vertex {</div>
+<div class="line"><span class="keyword">struct </span><a class="code hl_enumvalue" href="../../d9/de0/group___amuse_r_h_i.html#gga83ecb2e2f53d94c9339969a2968fd174ab22b929ba52471a02d18bb3a4e4472e6">Vertex</a> {</div>
 <div class="line">    Vec4 position;</div>
 <div class="line">};</div>
 <div class="line">Ref&lt;PipelineState&gt; pipeline;</div>
@@ -243,7 +243,7 @@ graph TD
 <div class="line">    desc.vertexLayout.attributes = {</div>
 <div class="line">        VertexAttribute(Semantic::Position,offsetof(Vertex,position),ElementType::Float,4)</div>
 <div class="line">    };</div>
-<div class="line">    desc.vertexLayout.vertexStride = <span class="keyword">sizeof</span>(Vertex);</div>
+<div class="line">    desc.vertexLayout.vertexStride = <span class="keyword">sizeof</span>(<a class="code hl_enumvalue" href="../../d9/de0/group___amuse_r_h_i.html#gga83ecb2e2f53d94c9339969a2968fd174ab22b929ba52471a02d18bb3a4e4472e6">Vertex</a>);</div>
 <div class="line">    pipeline = PipelineState::Create(desc);</div>
 <div class="line">}</div>
 <div class="line"> </div>
@@ -307,6 +307,7 @@ graph TD
 <div class="line">    commandList-&gt;flush();</div>
 <div class="line"> </div>
 <div class="line">}</div>
+<div class="ttc" id="agroup___amuse_r_h_i_html_gga83ecb2e2f53d94c9339969a2968fd174ab22b929ba52471a02d18bb3a4e4472e6"><div class="ttname"><a href="../../d9/de0/group___amuse_r_h_i.html#gga83ecb2e2f53d94c9339969a2968fd174ab22b929ba52471a02d18bb3a4e4472e6">Amuse::BufferState::Vertex</a></div><div class="ttdeci">@ Vertex</div><div class="ttdoc">頂点</div><div class="ttdef"><b>Definition</b> BufferDesc.h:37</div></div>
 </div><!-- fragment --><h1>RHIプラグインの実装</h1>
 <p>DirectX12やVulkanといったRHIはプラグインとして実装されます。</p><ul>
 <li>Sources/Plugins/DirectX12RHI</li>

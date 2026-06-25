@@ -1,0 +1,418 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: IndexMap&lt; TKey, TValue, THasher, TKeyEqual, TAllocator &gt; クラステンプレート</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d5/d9e/class_amuse_1_1_index_map.html','../../','d3/d9b/class_amuse_1_1_index_map-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-methods">メソッド</a> &#124;
+<a href="#pub-static-attribs">静的変数</a> &#124;
+<a href="#friends">フレンド</a> &#124;
+<a href="../../d3/d9b/class_amuse_1_1_index_map-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">IndexMap&lt; TKey, TValue, THasher, TKeyEqual, TAllocator &gt; クラステンプレート<div class="ingroups"><a class="el" href="../../da/d78/group___amuse_core.html">Core</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">説明</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;class TKey, class TValue, class THasher = std::hash&lt;TKey&gt;, class TKeyEqual = std::equal_to&lt;TKey&gt;, class TAllocator = Amuse::STLAllocator&lt;Pair&lt;TKey, TValue&gt;&gt;&gt;<br />
+class Amuse::IndexMap&lt; TKey, TValue, THasher, TKeyEqual, TAllocator &gt;</div><p>安定した反復順序を持つ順序付きハッシュマップ </p>
+<p>VectorストレージとHashMapインデックスにより挿入順序を維持しながら、平均O(1)の検索/更新を実現します。 内部のキーとインデックスのマッピングが壊れないようにするため、キーは挿入後も不変である必要があります。 </p>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:ad745a09c33298e4684643ead548547ca" id="r_ad745a09c33298e4684643ead548547ca"><td class="memItemLeft"><a id="ad745a09c33298e4684643ead548547ca" name="ad745a09c33298e4684643ead548547ca"></a>
+using&#160;</td><td class="memItemRight"><b>key_type</b> = TKey</td></tr>
+<tr class="memdesc:ad745a09c33298e4684643ead548547ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">キーの型。 <br /></td></tr>
+<tr class="memitem:a3e07520515382180d7213ecd8e14e104" id="r_a3e07520515382180d7213ecd8e14e104"><td class="memItemLeft"><a id="a3e07520515382180d7213ecd8e14e104" name="a3e07520515382180d7213ecd8e14e104"></a>
+using&#160;</td><td class="memItemRight"><b>mapped_type</b> = TValue</td></tr>
+<tr class="memdesc:a3e07520515382180d7213ecd8e14e104"><td class="mdescLeft">&#160;</td><td class="mdescRight">キーに対応する値の型。 <br /></td></tr>
+<tr class="memitem:aa829b326745694e25726f69badb6cd8c" id="r_aa829b326745694e25726f69badb6cd8c"><td class="memItemLeft"><a id="aa829b326745694e25726f69badb6cd8c" name="aa829b326745694e25726f69badb6cd8c"></a>
+using&#160;</td><td class="memItemRight"><b>value_type</b> = Pair&lt;TKey, TValue&gt;</td></tr>
+<tr class="memdesc:aa829b326745694e25726f69badb6cd8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">格納する値の型。 <br /></td></tr>
+<tr class="memitem:af38ce1af42d538f410180c265518d4f0" id="r_af38ce1af42d538f410180c265518d4f0"><td class="memItemLeft"><a id="af38ce1af42d538f410180c265518d4f0" name="af38ce1af42d538f410180c265518d4f0"></a>
+using&#160;</td><td class="memItemRight"><b>size_type</b> = std::size_t</td></tr>
+<tr class="memdesc:af38ce1af42d538f410180c265518d4f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素数を表す型。 <br /></td></tr>
+<tr class="memitem:ace405568d0b2f3fad4990044252c7732" id="r_ace405568d0b2f3fad4990044252c7732"><td class="memItemLeft"><a id="ace405568d0b2f3fad4990044252c7732" name="ace405568d0b2f3fad4990044252c7732"></a>
+using&#160;</td><td class="memItemRight"><b>difference_type</b> = std::ptrdiff_t</td></tr>
+<tr class="memdesc:ace405568d0b2f3fad4990044252c7732"><td class="mdescLeft">&#160;</td><td class="mdescRight">イテレータ差分を表す型。 <br /></td></tr>
+<tr class="memitem:a452eac185628d1af58aa3d1dfba92843" id="r_a452eac185628d1af58aa3d1dfba92843"><td class="memItemLeft"><a id="a452eac185628d1af58aa3d1dfba92843" name="a452eac185628d1af58aa3d1dfba92843"></a>
+using&#160;</td><td class="memItemRight"><b>hasher</b> = THasher</td></tr>
+<tr class="memdesc:a452eac185628d1af58aa3d1dfba92843"><td class="mdescLeft">&#160;</td><td class="mdescRight">hasher 型のエイリアス。 <br /></td></tr>
+<tr class="memitem:a721c8f7cfb61a2c3b39810382334652c" id="r_a721c8f7cfb61a2c3b39810382334652c"><td class="memItemLeft"><a id="a721c8f7cfb61a2c3b39810382334652c" name="a721c8f7cfb61a2c3b39810382334652c"></a>
+using&#160;</td><td class="memItemRight"><b>key_equal</b> = TKeyEqual</td></tr>
+<tr class="memdesc:a721c8f7cfb61a2c3b39810382334652c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="#a721c8f7cfb61a2c3b39810382334652c" title="key_equal 型のエイリアス。">key_equal</a> 型のエイリアス。 <br /></td></tr>
+<tr class="memitem:a252e40f251a78f4865d12ab285c22a77" id="r_a252e40f251a78f4865d12ab285c22a77"><td class="memItemLeft"><a id="a252e40f251a78f4865d12ab285c22a77" name="a252e40f251a78f4865d12ab285c22a77"></a>
+using&#160;</td><td class="memItemRight"><b>allocator_type</b> = TAllocator</td></tr>
+<tr class="memdesc:a252e40f251a78f4865d12ab285c22a77"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素確保に使用するアロケータ型。 <br /></td></tr>
+<tr class="memitem:ae33ae62db2e0ee03e17dd2809a8bbbcb" id="r_ae33ae62db2e0ee03e17dd2809a8bbbcb"><td class="memItemLeft"><a id="ae33ae62db2e0ee03e17dd2809a8bbbcb" name="ae33ae62db2e0ee03e17dd2809a8bbbcb"></a>
+using&#160;</td><td class="memItemRight"><b>reference</b> = value_reference</td></tr>
+<tr class="memdesc:ae33ae62db2e0ee03e17dd2809a8bbbcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素参照型。 <br /></td></tr>
+<tr class="memitem:ae08bd68e1fccf7faa7859da579ca0782" id="r_ae08bd68e1fccf7faa7859da579ca0782"><td class="memItemLeft"><a id="ae08bd68e1fccf7faa7859da579ca0782" name="ae08bd68e1fccf7faa7859da579ca0782"></a>
+using&#160;</td><td class="memItemRight"><b>const_reference</b> = const_value_reference</td></tr>
+<tr class="memdesc:ae08bd68e1fccf7faa7859da579ca0782"><td class="mdescLeft">&#160;</td><td class="mdescRight">読み取り専用の要素参照型。 <br /></td></tr>
+<tr class="memitem:a4738635aff9c2bb2c8ccc2875ae72496" id="r_a4738635aff9c2bb2c8ccc2875ae72496"><td class="memItemLeft"><a id="a4738635aff9c2bb2c8ccc2875ae72496" name="a4738635aff9c2bb2c8ccc2875ae72496"></a>
+using&#160;</td><td class="memItemRight"><b>pointer</b> = <a class="el" href="#aa829b326745694e25726f69badb6cd8c">value_type</a>*</td></tr>
+<tr class="memdesc:a4738635aff9c2bb2c8ccc2875ae72496"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素ポインタ型。 <br /></td></tr>
+<tr class="memitem:a7fe8aeab7b1ee136c0e5accd9e21abc1" id="r_a7fe8aeab7b1ee136c0e5accd9e21abc1"><td class="memItemLeft"><a id="a7fe8aeab7b1ee136c0e5accd9e21abc1" name="a7fe8aeab7b1ee136c0e5accd9e21abc1"></a>
+using&#160;</td><td class="memItemRight"><b>const_pointer</b> = const <a class="el" href="#aa829b326745694e25726f69badb6cd8c">value_type</a>*</td></tr>
+<tr class="memdesc:a7fe8aeab7b1ee136c0e5accd9e21abc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">読み取り専用の要素ポインタ型。 <br /></td></tr>
+<tr class="memitem:a71826acf87563891400d86ba9d4c9636" id="r_a71826acf87563891400d86ba9d4c9636"><td class="memItemLeft"><a id="a71826acf87563891400d86ba9d4c9636" name="a71826acf87563891400d86ba9d4c9636"></a>
+using&#160;</td><td class="memItemRight"><b>iterator</b> = iterator_base&lt;false&gt;</td></tr>
+<tr class="memdesc:a71826acf87563891400d86ba9d4c9636"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素を走査するイテレータ型。 <br /></td></tr>
+<tr class="memitem:a1d98c67d0ef657617bbb19ef397c08d8" id="r_a1d98c67d0ef657617bbb19ef397c08d8"><td class="memItemLeft"><a id="a1d98c67d0ef657617bbb19ef397c08d8" name="a1d98c67d0ef657617bbb19ef397c08d8"></a>
+using&#160;</td><td class="memItemRight"><b>const_iterator</b> = iterator_base&lt;true&gt;</td></tr>
+<tr class="memdesc:a1d98c67d0ef657617bbb19ef397c08d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">読み取り専用で要素を走査するイテレータ型。 <br /></td></tr>
+<tr class="memitem:adb9a673a4271b497ef05158e05170942" id="r_adb9a673a4271b497ef05158e05170942"><td class="memItemLeft"><a id="adb9a673a4271b497ef05158e05170942" name="adb9a673a4271b497ef05158e05170942"></a>
+using&#160;</td><td class="memItemRight"><b>reverse_iterator</b> = std::reverse_iterator&lt;<a class="el" href="#a71826acf87563891400d86ba9d4c9636">iterator</a>&gt;</td></tr>
+<tr class="memdesc:adb9a673a4271b497ef05158e05170942"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆順に要素を走査するイテレータ型。 <br /></td></tr>
+<tr class="memitem:af0af7cd2cb131805b96d2b01cae24bf1" id="r_af0af7cd2cb131805b96d2b01cae24bf1"><td class="memItemLeft"><a id="af0af7cd2cb131805b96d2b01cae24bf1" name="af0af7cd2cb131805b96d2b01cae24bf1"></a>
+using&#160;</td><td class="memItemRight"><b>const_reverse_iterator</b> = std::reverse_iterator&lt;<a class="el" href="#a1d98c67d0ef657617bbb19ef397c08d8">const_iterator</a>&gt;</td></tr>
+<tr class="memdesc:af0af7cd2cb131805b96d2b01cae24bf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">読み取り専用で逆順に要素を走査するイテレータ型。 <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+メソッド</h2></td></tr>
+<tr class="memitem:a152c67ee1124016b66d24893f83a0965" id="r_a152c67ee1124016b66d24893f83a0965"><td class="memItemLeft"><a id="a152c67ee1124016b66d24893f83a0965" name="a152c67ee1124016b66d24893f83a0965"></a>
+&#160;</td><td class="memItemRight"><b>IndexMap</b> (<a class="el" href="#af38ce1af42d538f410180c265518d4f0">size_type</a> capacity)</td></tr>
+<tr class="memdesc:a152c67ee1124016b66d24893f83a0965"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定容量を予約した空のマップを構築する。 <br /></td></tr>
+<tr class="memitem:a1bf19d8ff28b7ccdfa1d071df9f8579b" id="r_a1bf19d8ff28b7ccdfa1d071df9f8579b"><td class="memItemLeft"><a id="a1bf19d8ff28b7ccdfa1d071df9f8579b" name="a1bf19d8ff28b7ccdfa1d071df9f8579b"></a>
+&#160;</td><td class="memItemRight"><b>IndexMap</b> (std::initializer_list&lt; <a class="el" href="#aa829b326745694e25726f69badb6cd8c">value_type</a> &gt; init)</td></tr>
+<tr class="memdesc:a1bf19d8ff28b7ccdfa1d071df9f8579b"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化リストのキーと値でマップを構築する。 <br /></td></tr>
+<tr class="memitem:a23e1434aa4eb6a2951281329bcbaee07" id="r_a23e1434aa4eb6a2951281329bcbaee07"><td class="memItemLeft"><a id="a23e1434aa4eb6a2951281329bcbaee07" name="a23e1434aa4eb6a2951281329bcbaee07"></a>
+&#160;</td><td class="memItemRight"><b>IndexMap</b> (const IndexMap &amp;)=default</td></tr>
+<tr class="memdesc:a23e1434aa4eb6a2951281329bcbaee07"><td class="mdescLeft">&#160;</td><td class="mdescRight">他のマップからコピー構築する。 <br /></td></tr>
+<tr class="memitem:aaa9bcfaff9e75cd9c9f84192b4f60925" id="r_aaa9bcfaff9e75cd9c9f84192b4f60925"><td class="memItemLeft"><a id="aaa9bcfaff9e75cd9c9f84192b4f60925" name="aaa9bcfaff9e75cd9c9f84192b4f60925"></a>
+&#160;</td><td class="memItemRight"><b>IndexMap</b> (IndexMap &amp;&amp;) noexcept=default</td></tr>
+<tr class="memdesc:aaa9bcfaff9e75cd9c9f84192b4f60925"><td class="mdescLeft">&#160;</td><td class="mdescRight">他のマップからムーブ構築する。 <br /></td></tr>
+<tr class="memitem:a86bfd521c516961c230709549433078e" id="r_a86bfd521c516961c230709549433078e"><td class="memItemLeft"><a id="a86bfd521c516961c230709549433078e" name="a86bfd521c516961c230709549433078e"></a>
+IndexMap &amp;&#160;</td><td class="memItemRight"><b>operator=</b> (const IndexMap &amp;)=default</td></tr>
+<tr class="memdesc:a86bfd521c516961c230709549433078e"><td class="mdescLeft">&#160;</td><td class="mdescRight">他のマップをコピー代入する。 <br /></td></tr>
+<tr class="memitem:a22fe42791e91c781c26003981edb9d1a" id="r_a22fe42791e91c781c26003981edb9d1a"><td class="memItemLeft"><a id="a22fe42791e91c781c26003981edb9d1a" name="a22fe42791e91c781c26003981edb9d1a"></a>
+IndexMap &amp;&#160;</td><td class="memItemRight"><b>operator=</b> (IndexMap &amp;&amp;) noexcept=default</td></tr>
+<tr class="memdesc:a22fe42791e91c781c26003981edb9d1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">他のマップをムーブ代入する。 <br /></td></tr>
+<tr class="memitem:a92d030fc85259d455c55f3c85855a6e5" id="r_a92d030fc85259d455c55f3c85855a6e5"><td class="memItemLeft"><a id="a92d030fc85259d455c55f3c85855a6e5" name="a92d030fc85259d455c55f3c85855a6e5"></a>
+IndexMap &amp;&#160;</td><td class="memItemRight"><b>operator=</b> (std::initializer_list&lt; <a class="el" href="#aa829b326745694e25726f69badb6cd8c">value_type</a> &gt; init)</td></tr>
+<tr class="memdesc:a92d030fc85259d455c55f3c85855a6e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化リストのキーと値を代入する。 <br /></td></tr>
+<tr class="memitem:a0801762a3fe36fe32dca5f16e515478d" id="r_a0801762a3fe36fe32dca5f16e515478d"><td class="memItemLeft"><a id="a0801762a3fe36fe32dca5f16e515478d" name="a0801762a3fe36fe32dca5f16e515478d"></a>
+<a class="el" href="#af38ce1af42d538f410180c265518d4f0">size_type</a>&#160;</td><td class="memItemRight"><b>size</b> () const noexcept</td></tr>
+<tr class="memdesc:a0801762a3fe36fe32dca5f16e515478d"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在格納している要素数を返す。 <br /></td></tr>
+<tr class="memitem:a3f6fc5de06a318920d84f3c3742db07f" id="r_a3f6fc5de06a318920d84f3c3742db07f"><td class="memItemLeft"><a id="a3f6fc5de06a318920d84f3c3742db07f" name="a3f6fc5de06a318920d84f3c3742db07f"></a>
+bool&#160;</td><td class="memItemRight"><b>empty</b> () const noexcept</td></tr>
+<tr class="memdesc:a3f6fc5de06a318920d84f3c3742db07f"><td class="mdescLeft">&#160;</td><td class="mdescRight">空かどうかを判定する。 <br /></td></tr>
+<tr class="memitem:a2376d19610c52c54a71ad09f66d1b732" id="r_a2376d19610c52c54a71ad09f66d1b732"><td class="memItemLeft"><a id="a2376d19610c52c54a71ad09f66d1b732" name="a2376d19610c52c54a71ad09f66d1b732"></a>
+void&#160;</td><td class="memItemRight"><b>reserve</b> (<a class="el" href="#af38ce1af42d538f410180c265518d4f0">size_type</a> newCapacity)</td></tr>
+<tr class="memdesc:a2376d19610c52c54a71ad09f66d1b732"><td class="mdescLeft">&#160;</td><td class="mdescRight">容量を予約する。 <br /></td></tr>
+<tr class="memitem:ae3adf2a15f25070d980012ce40c5de5f" id="r_ae3adf2a15f25070d980012ce40c5de5f"><td class="memItemLeft"><a id="ae3adf2a15f25070d980012ce40c5de5f" name="ae3adf2a15f25070d980012ce40c5de5f"></a>
+<a class="el" href="#af38ce1af42d538f410180c265518d4f0">size_type</a>&#160;</td><td class="memItemRight"><b>capacity</b> () const noexcept</td></tr>
+<tr class="memdesc:ae3adf2a15f25070d980012ce40c5de5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">値ストレージの確保済み容量を返す。 <br /></td></tr>
+<tr class="memitem:a8efa7e19416c16d4fbed426c00f119c5" id="r_a8efa7e19416c16d4fbed426c00f119c5"><td class="memItemLeft"><a id="a8efa7e19416c16d4fbed426c00f119c5" name="a8efa7e19416c16d4fbed426c00f119c5"></a>
+<a class="el" href="#a3e07520515382180d7213ecd8e14e104">mapped_type</a> *&#160;</td><td class="memItemRight"><b>data</b> () noexcept</td></tr>
+<tr class="memdesc:a8efa7e19416c16d4fbed426c00f119c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">値ストレージの先頭ポインタを返す。 <br /></td></tr>
+<tr class="memitem:a5e09be605db3e79778f0e20aaef2b51a" id="r_a5e09be605db3e79778f0e20aaef2b51a"><td class="memItemLeft"><a id="a5e09be605db3e79778f0e20aaef2b51a" name="a5e09be605db3e79778f0e20aaef2b51a"></a>
+const <a class="el" href="#a3e07520515382180d7213ecd8e14e104">mapped_type</a> *&#160;</td><td class="memItemRight"><b>data</b> () const noexcept</td></tr>
+<tr class="memdesc:a5e09be605db3e79778f0e20aaef2b51a"><td class="mdescLeft">&#160;</td><td class="mdescRight">値ストレージの読み取り専用先頭ポインタを返す。 <br /></td></tr>
+<tr class="memitem:a5f16304f80b6fb253c7b0ead3e16dd18" id="r_a5f16304f80b6fb253c7b0ead3e16dd18"><td class="memItemLeft"><a id="a5f16304f80b6fb253c7b0ead3e16dd18" name="a5f16304f80b6fb253c7b0ead3e16dd18"></a>
+void&#160;</td><td class="memItemRight"><b>shrink_to_fit</b> ()</td></tr>
+<tr class="memdesc:a5f16304f80b6fb253c7b0ead3e16dd18"><td class="mdescLeft">&#160;</td><td class="mdescRight">余剰容量を解放し、キーからインデックスへの対応を再構築する。 <br /></td></tr>
+<tr class="memitem:a03bfacfaaba9195e4498375659f43531" id="r_a03bfacfaaba9195e4498375659f43531"><td class="memItemLeft"><a id="a03bfacfaaba9195e4498375659f43531" name="a03bfacfaaba9195e4498375659f43531"></a>
+void&#160;</td><td class="memItemRight"><b>clear</b> () noexcept</td></tr>
+<tr class="memdesc:a03bfacfaaba9195e4498375659f43531"><td class="mdescLeft">&#160;</td><td class="mdescRight">全要素を取り除き、キーと値とインデックスを空にする。 <br /></td></tr>
+<tr class="memitem:a979556eb331ec35eb33472a90a160f99" id="r_a979556eb331ec35eb33472a90a160f99"><td class="memItemLeft"><a id="a979556eb331ec35eb33472a90a160f99" name="a979556eb331ec35eb33472a90a160f99"></a>
+<a class="el" href="#a71826acf87563891400d86ba9d4c9636">iterator</a>&#160;</td><td class="memItemRight"><b>begin</b> () noexcept</td></tr>
+<tr class="memdesc:a979556eb331ec35eb33472a90a160f99"><td class="mdescLeft">&#160;</td><td class="mdescRight">先頭要素を指すイテレータを返す。 <br /></td></tr>
+<tr class="memitem:a1ca1fc2c9fc3e169d5d0decfd1e54221" id="r_a1ca1fc2c9fc3e169d5d0decfd1e54221"><td class="memItemLeft"><a id="a1ca1fc2c9fc3e169d5d0decfd1e54221" name="a1ca1fc2c9fc3e169d5d0decfd1e54221"></a>
+<a class="el" href="#a1d98c67d0ef657617bbb19ef397c08d8">const_iterator</a>&#160;</td><td class="memItemRight"><b>begin</b> () const noexcept</td></tr>
+<tr class="memdesc:a1ca1fc2c9fc3e169d5d0decfd1e54221"><td class="mdescLeft">&#160;</td><td class="mdescRight">先頭要素を指す読み取り専用イテレータを返す。 <br /></td></tr>
+<tr class="memitem:abeb76f7f3414f270020e6f467586bd93" id="r_abeb76f7f3414f270020e6f467586bd93"><td class="memItemLeft"><a id="abeb76f7f3414f270020e6f467586bd93" name="abeb76f7f3414f270020e6f467586bd93"></a>
+<a class="el" href="#a1d98c67d0ef657617bbb19ef397c08d8">const_iterator</a>&#160;</td><td class="memItemRight"><b>cbegin</b> () const noexcept</td></tr>
+<tr class="memdesc:abeb76f7f3414f270020e6f467586bd93"><td class="mdescLeft">&#160;</td><td class="mdescRight">先頭要素を指す読み取り専用イテレータを返す。 <br /></td></tr>
+<tr class="memitem:afc5380afa64b233d0df01a147616974b" id="r_afc5380afa64b233d0df01a147616974b"><td class="memItemLeft"><a id="afc5380afa64b233d0df01a147616974b" name="afc5380afa64b233d0df01a147616974b"></a>
+<a class="el" href="#a71826acf87563891400d86ba9d4c9636">iterator</a>&#160;</td><td class="memItemRight"><b>end</b> () noexcept</td></tr>
+<tr class="memdesc:afc5380afa64b233d0df01a147616974b"><td class="mdescLeft">&#160;</td><td class="mdescRight">末尾要素の次を指すイテレータを返す。 <br /></td></tr>
+<tr class="memitem:a5b9b57293fae9b18b26349ac0b3fdcd3" id="r_a5b9b57293fae9b18b26349ac0b3fdcd3"><td class="memItemLeft"><a id="a5b9b57293fae9b18b26349ac0b3fdcd3" name="a5b9b57293fae9b18b26349ac0b3fdcd3"></a>
+<a class="el" href="#a1d98c67d0ef657617bbb19ef397c08d8">const_iterator</a>&#160;</td><td class="memItemRight"><b>end</b> () const noexcept</td></tr>
+<tr class="memdesc:a5b9b57293fae9b18b26349ac0b3fdcd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">末尾要素の次を指す読み取り専用イテレータを返す。 <br /></td></tr>
+<tr class="memitem:a9859a454bb6f50c654e280274d6a9d13" id="r_a9859a454bb6f50c654e280274d6a9d13"><td class="memItemLeft"><a id="a9859a454bb6f50c654e280274d6a9d13" name="a9859a454bb6f50c654e280274d6a9d13"></a>
+<a class="el" href="#a1d98c67d0ef657617bbb19ef397c08d8">const_iterator</a>&#160;</td><td class="memItemRight"><b>cend</b> () const noexcept</td></tr>
+<tr class="memdesc:a9859a454bb6f50c654e280274d6a9d13"><td class="mdescLeft">&#160;</td><td class="mdescRight">末尾要素の次を指す読み取り専用イテレータを返す。 <br /></td></tr>
+<tr class="memitem:ac7cd69c57ab7c76ac6eb26c474a43053" id="r_ac7cd69c57ab7c76ac6eb26c474a43053"><td class="memItemLeft"><a id="ac7cd69c57ab7c76ac6eb26c474a43053" name="ac7cd69c57ab7c76ac6eb26c474a43053"></a>
+<a class="el" href="#adb9a673a4271b497ef05158e05170942">reverse_iterator</a>&#160;</td><td class="memItemRight"><b>rbegin</b> () noexcept</td></tr>
+<tr class="memdesc:ac7cd69c57ab7c76ac6eb26c474a43053"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆順の先頭要素を指すイテレータを返す。 <br /></td></tr>
+<tr class="memitem:aff2c14a4e54378db02316aa5dacce912" id="r_aff2c14a4e54378db02316aa5dacce912"><td class="memItemLeft"><a id="aff2c14a4e54378db02316aa5dacce912" name="aff2c14a4e54378db02316aa5dacce912"></a>
+<a class="el" href="#af0af7cd2cb131805b96d2b01cae24bf1">const_reverse_iterator</a>&#160;</td><td class="memItemRight"><b>rbegin</b> () const noexcept</td></tr>
+<tr class="memdesc:aff2c14a4e54378db02316aa5dacce912"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆順の先頭要素を指す読み取り専用イテレータを返す。 <br /></td></tr>
+<tr class="memitem:abd227f43fec65b1bfeb96751b5eea9c4" id="r_abd227f43fec65b1bfeb96751b5eea9c4"><td class="memItemLeft"><a id="abd227f43fec65b1bfeb96751b5eea9c4" name="abd227f43fec65b1bfeb96751b5eea9c4"></a>
+<a class="el" href="#af0af7cd2cb131805b96d2b01cae24bf1">const_reverse_iterator</a>&#160;</td><td class="memItemRight"><b>crbegin</b> () const noexcept</td></tr>
+<tr class="memdesc:abd227f43fec65b1bfeb96751b5eea9c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆順の先頭要素を指す読み取り専用イテレータを返す。 <br /></td></tr>
+<tr class="memitem:ad4e3dd675f301e0b86183699a2db7d79" id="r_ad4e3dd675f301e0b86183699a2db7d79"><td class="memItemLeft"><a id="ad4e3dd675f301e0b86183699a2db7d79" name="ad4e3dd675f301e0b86183699a2db7d79"></a>
+<a class="el" href="#adb9a673a4271b497ef05158e05170942">reverse_iterator</a>&#160;</td><td class="memItemRight"><b>rend</b> () noexcept</td></tr>
+<tr class="memdesc:ad4e3dd675f301e0b86183699a2db7d79"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆順の末尾要素の次を指すイテレータを返す。 <br /></td></tr>
+<tr class="memitem:ac5bfd48090cb59d7dd635954831415df" id="r_ac5bfd48090cb59d7dd635954831415df"><td class="memItemLeft"><a id="ac5bfd48090cb59d7dd635954831415df" name="ac5bfd48090cb59d7dd635954831415df"></a>
+<a class="el" href="#af0af7cd2cb131805b96d2b01cae24bf1">const_reverse_iterator</a>&#160;</td><td class="memItemRight"><b>rend</b> () const noexcept</td></tr>
+<tr class="memdesc:ac5bfd48090cb59d7dd635954831415df"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆順の末尾要素の次を指す読み取り専用イテレータを返す。 <br /></td></tr>
+<tr class="memitem:acbe115c4709d004c9899ef5855f96288" id="r_acbe115c4709d004c9899ef5855f96288"><td class="memItemLeft"><a id="acbe115c4709d004c9899ef5855f96288" name="acbe115c4709d004c9899ef5855f96288"></a>
+<a class="el" href="#af0af7cd2cb131805b96d2b01cae24bf1">const_reverse_iterator</a>&#160;</td><td class="memItemRight"><b>crend</b> () const noexcept</td></tr>
+<tr class="memdesc:acbe115c4709d004c9899ef5855f96288"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆順の末尾要素の次を指す読み取り専用イテレータを返す。 <br /></td></tr>
+<tr class="memitem:a643c844d6def137b6b06f62c6354b826" id="r_a643c844d6def137b6b06f62c6354b826"><td class="memItemLeft"><a id="a643c844d6def137b6b06f62c6354b826" name="a643c844d6def137b6b06f62c6354b826"></a>
+<a class="el" href="#a71826acf87563891400d86ba9d4c9636">iterator</a>&#160;</td><td class="memItemRight"><b>find</b> (const <a class="el" href="#ad745a09c33298e4684643ead548547ca">key_type</a> &amp;key) noexcept</td></tr>
+<tr class="memdesc:a643c844d6def137b6b06f62c6354b826"><td class="mdescLeft">&#160;</td><td class="mdescRight">キーに一致する要素を検索し、見つからない場合は <a class="el" href="#afc5380afa64b233d0df01a147616974b" title="末尾要素の次を指すイテレータを返す。">end()</a> を返す。 <br /></td></tr>
+<tr class="memitem:af4df55757824858ed2226e5c59e4e22f" id="r_af4df55757824858ed2226e5c59e4e22f"><td class="memItemLeft"><a id="af4df55757824858ed2226e5c59e4e22f" name="af4df55757824858ed2226e5c59e4e22f"></a>
+<a class="el" href="#a1d98c67d0ef657617bbb19ef397c08d8">const_iterator</a>&#160;</td><td class="memItemRight"><b>find</b> (const <a class="el" href="#ad745a09c33298e4684643ead548547ca">key_type</a> &amp;key) const noexcept</td></tr>
+<tr class="memdesc:af4df55757824858ed2226e5c59e4e22f"><td class="mdescLeft">&#160;</td><td class="mdescRight">キーに一致する要素を検索し、見つからない場合は <a class="el" href="#a9859a454bb6f50c654e280274d6a9d13" title="末尾要素の次を指す読み取り専用イテレータを返す。">cend()</a> を返す。 <br /></td></tr>
+<tr class="memitem:a60995e7c4de0c2c646df15db6b35e4cd" id="r_a60995e7c4de0c2c646df15db6b35e4cd"><td class="memItemLeft"><a id="a60995e7c4de0c2c646df15db6b35e4cd" name="a60995e7c4de0c2c646df15db6b35e4cd"></a>
+bool&#160;</td><td class="memItemRight"><b>contains</b> (const <a class="el" href="#ad745a09c33298e4684643ead548547ca">key_type</a> &amp;key) const noexcept</td></tr>
+<tr class="memdesc:a60995e7c4de0c2c646df15db6b35e4cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素が存在するか判定する。 <br /></td></tr>
+<tr class="memitem:a39324583b4921f2c27cc67eac850622d" id="r_a39324583b4921f2c27cc67eac850622d"><td class="memItemLeft"><a id="a39324583b4921f2c27cc67eac850622d" name="a39324583b4921f2c27cc67eac850622d"></a>
+<a class="el" href="#af38ce1af42d538f410180c265518d4f0">size_type</a>&#160;</td><td class="memItemRight"><b>index_of</b> (const <a class="el" href="#ad745a09c33298e4684643ead548547ca">key_type</a> &amp;key) const noexcept</td></tr>
+<tr class="memdesc:a39324583b4921f2c27cc67eac850622d"><td class="mdescLeft">&#160;</td><td class="mdescRight">キーに対応する格納順インデックスを返し、見つからない場合は npos を返す。 <br /></td></tr>
+<tr class="memitem:adfb42bf455e9fa077a9915ec112d3a47" id="r_adfb42bf455e9fa077a9915ec112d3a47"><td class="memItemLeft"><a id="adfb42bf455e9fa077a9915ec112d3a47" name="adfb42bf455e9fa077a9915ec112d3a47"></a>
+<a class="el" href="#ae33ae62db2e0ee03e17dd2809a8bbbcb">reference</a>&#160;</td><td class="memItemRight"><b>at_index</b> (<a class="el" href="#af38ce1af42d538f410180c265518d4f0">size_type</a> index)</td></tr>
+<tr class="memdesc:adfb42bf455e9fa077a9915ec112d3a47"><td class="mdescLeft">&#160;</td><td class="mdescRight">格納順インデックスにあるキーと値の参照を返す。 <br /></td></tr>
+<tr class="memitem:a23732a7f84d86c7bb2fb087d223086ab" id="r_a23732a7f84d86c7bb2fb087d223086ab"><td class="memItemLeft"><a id="a23732a7f84d86c7bb2fb087d223086ab" name="a23732a7f84d86c7bb2fb087d223086ab"></a>
+<a class="el" href="#ae08bd68e1fccf7faa7859da579ca0782">const_reference</a>&#160;</td><td class="memItemRight"><b>at_index</b> (<a class="el" href="#af38ce1af42d538f410180c265518d4f0">size_type</a> index) const</td></tr>
+<tr class="memdesc:a23732a7f84d86c7bb2fb087d223086ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">格納順インデックスにあるキーと値の読み取り専用参照を返す。 <br /></td></tr>
+<tr class="memitem:ab833a0ad379a078008019079f600125b" id="r_ab833a0ad379a078008019079f600125b"><td class="memItemLeft"><a id="ab833a0ad379a078008019079f600125b" name="ab833a0ad379a078008019079f600125b"></a>
+<a class="el" href="#a3e07520515382180d7213ecd8e14e104">mapped_type</a> *&#160;</td><td class="memItemRight"><b>try_at_index</b> (<a class="el" href="#af38ce1af42d538f410180c265518d4f0">size_type</a> index) noexcept</td></tr>
+<tr class="memdesc:ab833a0ad379a078008019079f600125b"><td class="mdescLeft">&#160;</td><td class="mdescRight">格納順インデックスにある値のポインタを返し、範囲外の場合は nullptr を返す。 <br /></td></tr>
+<tr class="memitem:a0593e58270ed1e0a573f26c000e0ed3c" id="r_a0593e58270ed1e0a573f26c000e0ed3c"><td class="memItemLeft"><a id="a0593e58270ed1e0a573f26c000e0ed3c" name="a0593e58270ed1e0a573f26c000e0ed3c"></a>
+const <a class="el" href="#a3e07520515382180d7213ecd8e14e104">mapped_type</a> *&#160;</td><td class="memItemRight"><b>try_at_index</b> (<a class="el" href="#af38ce1af42d538f410180c265518d4f0">size_type</a> index) const noexcept</td></tr>
+<tr class="memdesc:a0593e58270ed1e0a573f26c000e0ed3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">格納順インデックスにある値の読み取り専用ポインタを返し、範囲外の場合は nullptr を返す。 <br /></td></tr>
+<tr class="memitem:ad1a5bd0b040d2abe9949edc93c8b92c3" id="r_ad1a5bd0b040d2abe9949edc93c8b92c3"><td class="memItemLeft"><a id="ad1a5bd0b040d2abe9949edc93c8b92c3" name="ad1a5bd0b040d2abe9949edc93c8b92c3"></a>
+<a class="el" href="#a3e07520515382180d7213ecd8e14e104">mapped_type</a> &amp;&#160;</td><td class="memItemRight"><b>at</b> (const <a class="el" href="#ad745a09c33298e4684643ead548547ca">key_type</a> &amp;key)</td></tr>
+<tr class="memdesc:ad1a5bd0b040d2abe9949edc93c8b92c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定位置の要素へアクセスする。 <br /></td></tr>
+<tr class="memitem:aa143d24d76a62f86dced427856d79ceb" id="r_aa143d24d76a62f86dced427856d79ceb"><td class="memItemLeft"><a id="aa143d24d76a62f86dced427856d79ceb" name="aa143d24d76a62f86dced427856d79ceb"></a>
+const <a class="el" href="#a3e07520515382180d7213ecd8e14e104">mapped_type</a> &amp;&#160;</td><td class="memItemRight"><b>at</b> (const <a class="el" href="#ad745a09c33298e4684643ead548547ca">key_type</a> &amp;key) const</td></tr>
+<tr class="memdesc:aa143d24d76a62f86dced427856d79ceb"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定位置の要素へアクセスする。 <br /></td></tr>
+<tr class="memitem:a7341c11644d652df0033753eda70be56" id="r_a7341c11644d652df0033753eda70be56"><td class="memItemLeft"><a id="a7341c11644d652df0033753eda70be56" name="a7341c11644d652df0033753eda70be56"></a>
+<a class="el" href="#a3e07520515382180d7213ecd8e14e104">mapped_type</a> *&#160;</td><td class="memItemRight"><b>try_get</b> (const <a class="el" href="#ad745a09c33298e4684643ead548547ca">key_type</a> &amp;key) noexcept</td></tr>
+<tr class="memdesc:a7341c11644d652df0033753eda70be56"><td class="mdescLeft">&#160;</td><td class="mdescRight">キーに対応する値のポインタを返し、見つからない場合は nullptr を返す。 <br /></td></tr>
+<tr class="memitem:a358146d905b8640a2cf471b2be8e0947" id="r_a358146d905b8640a2cf471b2be8e0947"><td class="memItemLeft"><a id="a358146d905b8640a2cf471b2be8e0947" name="a358146d905b8640a2cf471b2be8e0947"></a>
+const <a class="el" href="#a3e07520515382180d7213ecd8e14e104">mapped_type</a> *&#160;</td><td class="memItemRight"><b>try_get</b> (const <a class="el" href="#ad745a09c33298e4684643ead548547ca">key_type</a> &amp;key) const noexcept</td></tr>
+<tr class="memdesc:a358146d905b8640a2cf471b2be8e0947"><td class="mdescLeft">&#160;</td><td class="mdescRight">キーに対応する値の読み取り専用ポインタを返し、見つからない場合は nullptr を返す。 <br /></td></tr>
+<tr class="memitem:a7cc8a2be227f99e53efabb3c3a7e750f" id="r_a7cc8a2be227f99e53efabb3c3a7e750f"><td class="memItemLeft"><a id="a7cc8a2be227f99e53efabb3c3a7e750f" name="a7cc8a2be227f99e53efabb3c3a7e750f"></a>
+<a class="el" href="#a3e07520515382180d7213ecd8e14e104">mapped_type</a> &amp;&#160;</td><td class="memItemRight"><b>operator[]</b> (const <a class="el" href="#ad745a09c33298e4684643ead548547ca">key_type</a> &amp;key)</td></tr>
+<tr class="memdesc:a7cc8a2be227f99e53efabb3c3a7e750f"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した要素へアクセスする。 <br /></td></tr>
+<tr class="memitem:a956e288822dd62abcd184833920df611" id="r_a956e288822dd62abcd184833920df611"><td class="memTemplParams" colspan="2"><a id="a956e288822dd62abcd184833920df611" name="a956e288822dd62abcd184833920df611"></a>
+template&lt;class K&gt; </td></tr>
+<tr class="memitem:a956e288822dd62abcd184833920df611 template"><td class="memItemLeft"><a class="el" href="#a3e07520515382180d7213ecd8e14e104">mapped_type</a> &amp;&#160;</td><td class="memItemRight"><b>operator[]</b> (K &amp;&amp;key)</td></tr>
+<tr class="memdesc:a956e288822dd62abcd184833920df611"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した要素へアクセスする。 <br /></td></tr>
+<tr class="memitem:a45549ac2883165244dbc0005a33dac64" id="r_a45549ac2883165244dbc0005a33dac64"><td class="memItemLeft"><a id="a45549ac2883165244dbc0005a33dac64" name="a45549ac2883165244dbc0005a33dac64"></a>
+Pair&lt; <a class="el" href="#a71826acf87563891400d86ba9d4c9636">iterator</a>, bool &gt;&#160;</td><td class="memItemRight"><b>insert</b> (const <a class="el" href="#aa829b326745694e25726f69badb6cd8c">value_type</a> &amp;value)</td></tr>
+<tr class="memdesc:a45549ac2883165244dbc0005a33dac64"><td class="mdescLeft">&#160;</td><td class="mdescRight">キーが未登録なら要素を挿入し、挿入結果を返す。 <br /></td></tr>
+<tr class="memitem:adfc3632f295d0c500bafbe68b91757f8" id="r_adfc3632f295d0c500bafbe68b91757f8"><td class="memItemLeft"><a id="adfc3632f295d0c500bafbe68b91757f8" name="adfc3632f295d0c500bafbe68b91757f8"></a>
+Pair&lt; <a class="el" href="#a71826acf87563891400d86ba9d4c9636">iterator</a>, bool &gt;&#160;</td><td class="memItemRight"><b>insert</b> (<a class="el" href="#aa829b326745694e25726f69badb6cd8c">value_type</a> &amp;&amp;value)</td></tr>
+<tr class="memdesc:adfc3632f295d0c500bafbe68b91757f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">キーが未登録なら要素をムーブ挿入し、挿入結果を返す。 <br /></td></tr>
+<tr class="memitem:ae4c3c7c7ef9f0e53751e927447e07b26" id="r_ae4c3c7c7ef9f0e53751e927447e07b26"><td class="memItemLeft"><a id="ae4c3c7c7ef9f0e53751e927447e07b26" name="ae4c3c7c7ef9f0e53751e927447e07b26"></a>
+<a class="el" href="#a71826acf87563891400d86ba9d4c9636">iterator</a>&#160;</td><td class="memItemRight"><b>insert</b> (<a class="el" href="#a1d98c67d0ef657617bbb19ef397c08d8">const_iterator</a> hint, const <a class="el" href="#aa829b326745694e25726f69badb6cd8c">value_type</a> &amp;value)</td></tr>
+<tr class="memdesc:ae4c3c7c7ef9f0e53751e927447e07b26"><td class="mdescLeft">&#160;</td><td class="mdescRight">ヒント付きでキーが未登録なら要素を挿入し、要素のイテレータを返す。 <br /></td></tr>
+<tr class="memitem:ab0f735db4267778060c126f8925a4569" id="r_ab0f735db4267778060c126f8925a4569"><td class="memItemLeft"><a id="ab0f735db4267778060c126f8925a4569" name="ab0f735db4267778060c126f8925a4569"></a>
+<a class="el" href="#a71826acf87563891400d86ba9d4c9636">iterator</a>&#160;</td><td class="memItemRight"><b>insert</b> (<a class="el" href="#a1d98c67d0ef657617bbb19ef397c08d8">const_iterator</a> hint, <a class="el" href="#aa829b326745694e25726f69badb6cd8c">value_type</a> &amp;&amp;value)</td></tr>
+<tr class="memdesc:ab0f735db4267778060c126f8925a4569"><td class="mdescLeft">&#160;</td><td class="mdescRight">ヒント付きでキーが未登録なら要素をムーブ挿入し、要素のイテレータを返す。 <br /></td></tr>
+<tr class="memitem:a327bfe8ae1f7565885bce845f31eaca1" id="r_a327bfe8ae1f7565885bce845f31eaca1"><td class="memTemplParams" colspan="2"><a id="a327bfe8ae1f7565885bce845f31eaca1" name="a327bfe8ae1f7565885bce845f31eaca1"></a>
+template&lt;class InputIt&gt; </td></tr>
+<tr class="memitem:a327bfe8ae1f7565885bce845f31eaca1 template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><b>insert</b> (InputIt first, InputIt last)</td></tr>
+<tr class="memdesc:a327bfe8ae1f7565885bce845f31eaca1"><td class="mdescLeft">&#160;</td><td class="mdescRight">イテレータ範囲 [first, last) の未登録キーを挿入する。 <br /></td></tr>
+<tr class="memitem:aa9bafed96a9344f21018de8f91009720" id="r_aa9bafed96a9344f21018de8f91009720"><td class="memItemLeft"><a id="aa9bafed96a9344f21018de8f91009720" name="aa9bafed96a9344f21018de8f91009720"></a>
+void&#160;</td><td class="memItemRight"><b>insert</b> (std::initializer_list&lt; <a class="el" href="#aa829b326745694e25726f69badb6cd8c">value_type</a> &gt; init)</td></tr>
+<tr class="memdesc:aa9bafed96a9344f21018de8f91009720"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化リスト内の未登録キーを挿入する。 <br /></td></tr>
+<tr class="memitem:aeb60f4218b1c700ca8118559612247a7" id="r_aeb60f4218b1c700ca8118559612247a7"><td class="memTemplParams" colspan="2"><a id="aeb60f4218b1c700ca8118559612247a7" name="aeb60f4218b1c700ca8118559612247a7"></a>
+template&lt;class... Args&gt; </td></tr>
+<tr class="memitem:aeb60f4218b1c700ca8118559612247a7 template"><td class="memItemLeft">Pair&lt; <a class="el" href="#a71826acf87563891400d86ba9d4c9636">iterator</a>, bool &gt;&#160;</td><td class="memItemRight"><b>emplace</b> (Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:aeb60f4218b1c700ca8118559612247a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素を直接構築し、キーが未登録なら挿入する。 <br /></td></tr>
+<tr class="memitem:afbe2719a5fa4a1610cd4c396050306f3" id="r_afbe2719a5fa4a1610cd4c396050306f3"><td class="memTemplParams" colspan="2"><a id="afbe2719a5fa4a1610cd4c396050306f3" name="afbe2719a5fa4a1610cd4c396050306f3"></a>
+template&lt;class... Args&gt; </td></tr>
+<tr class="memitem:afbe2719a5fa4a1610cd4c396050306f3 template"><td class="memItemLeft">Pair&lt; <a class="el" href="#a71826acf87563891400d86ba9d4c9636">iterator</a>, bool &gt;&#160;</td><td class="memItemRight"><b>try_emplace</b> (const <a class="el" href="#ad745a09c33298e4684643ead548547ca">key_type</a> &amp;key, Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:afbe2719a5fa4a1610cd4c396050306f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">キーが未登録の場合だけ値を直接構築して挿入する。 <br /></td></tr>
+<tr class="memitem:a60743ac218b3ff73fdf3473ad61c7dd0" id="r_a60743ac218b3ff73fdf3473ad61c7dd0"><td class="memTemplParams" colspan="2"><a id="a60743ac218b3ff73fdf3473ad61c7dd0" name="a60743ac218b3ff73fdf3473ad61c7dd0"></a>
+template&lt;class K, class... Args&gt; </td></tr>
+<tr class="memitem:a60743ac218b3ff73fdf3473ad61c7dd0 template"><td class="memItemLeft">Pair&lt; <a class="el" href="#a71826acf87563891400d86ba9d4c9636">iterator</a>, bool &gt;&#160;</td><td class="memItemRight"><b>try_emplace</b> (K &amp;&amp;key, Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:a60743ac218b3ff73fdf3473ad61c7dd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">転送されたキーが未登録の場合だけ値を直接構築して挿入する。 <br /></td></tr>
+<tr class="memitem:a45bf42be15361adba2c69c378692b94e" id="r_a45bf42be15361adba2c69c378692b94e"><td class="memTemplParams" colspan="2"><a id="a45bf42be15361adba2c69c378692b94e" name="a45bf42be15361adba2c69c378692b94e"></a>
+template&lt;class M&gt; </td></tr>
+<tr class="memitem:a45bf42be15361adba2c69c378692b94e template"><td class="memItemLeft">Pair&lt; <a class="el" href="#a71826acf87563891400d86ba9d4c9636">iterator</a>, bool &gt;&#160;</td><td class="memItemRight"><b>insert_or_assign</b> (const <a class="el" href="#ad745a09c33298e4684643ead548547ca">key_type</a> &amp;key, M &amp;&amp;obj)</td></tr>
+<tr class="memdesc:a45bf42be15361adba2c69c378692b94e"><td class="mdescLeft">&#160;</td><td class="mdescRight">キーが未登録なら挿入し、登録済みなら値を代入する。 <br /></td></tr>
+<tr class="memitem:ada9755b7c3834703f8820d3f945e2ac3" id="r_ada9755b7c3834703f8820d3f945e2ac3"><td class="memTemplParams" colspan="2"><a id="ada9755b7c3834703f8820d3f945e2ac3" name="ada9755b7c3834703f8820d3f945e2ac3"></a>
+template&lt;class K, class M&gt; </td></tr>
+<tr class="memitem:ada9755b7c3834703f8820d3f945e2ac3 template"><td class="memItemLeft">Pair&lt; <a class="el" href="#a71826acf87563891400d86ba9d4c9636">iterator</a>, bool &gt;&#160;</td><td class="memItemRight"><b>insert_or_assign</b> (K &amp;&amp;key, M &amp;&amp;obj)</td></tr>
+<tr class="memdesc:ada9755b7c3834703f8820d3f945e2ac3"><td class="mdescLeft">&#160;</td><td class="mdescRight">転送されたキーが未登録なら挿入し、登録済みなら値を代入する。 <br /></td></tr>
+<tr class="memitem:a6a48363b4355f6f5b441637774f79a59" id="r_a6a48363b4355f6f5b441637774f79a59"><td class="memItemLeft"><a id="a6a48363b4355f6f5b441637774f79a59" name="a6a48363b4355f6f5b441637774f79a59"></a>
+<a class="el" href="#ae33ae62db2e0ee03e17dd2809a8bbbcb">reference</a>&#160;</td><td class="memItemRight"><b>front</b> ()</td></tr>
+<tr class="memdesc:a6a48363b4355f6f5b441637774f79a59"><td class="mdescLeft">&#160;</td><td class="mdescRight">先頭要素へアクセスする。 <br /></td></tr>
+<tr class="memitem:a0ae6b4f9719202f7ddb334c16fb03d80" id="r_a0ae6b4f9719202f7ddb334c16fb03d80"><td class="memItemLeft"><a id="a0ae6b4f9719202f7ddb334c16fb03d80" name="a0ae6b4f9719202f7ddb334c16fb03d80"></a>
+<a class="el" href="#ae08bd68e1fccf7faa7859da579ca0782">const_reference</a>&#160;</td><td class="memItemRight"><b>front</b> () const</td></tr>
+<tr class="memdesc:a0ae6b4f9719202f7ddb334c16fb03d80"><td class="mdescLeft">&#160;</td><td class="mdescRight">先頭要素へアクセスする。 <br /></td></tr>
+<tr class="memitem:af71e6c1eccbc12e9339c00a86a981a43" id="r_af71e6c1eccbc12e9339c00a86a981a43"><td class="memItemLeft"><a id="af71e6c1eccbc12e9339c00a86a981a43" name="af71e6c1eccbc12e9339c00a86a981a43"></a>
+<a class="el" href="#ae33ae62db2e0ee03e17dd2809a8bbbcb">reference</a>&#160;</td><td class="memItemRight"><b>back</b> ()</td></tr>
+<tr class="memdesc:af71e6c1eccbc12e9339c00a86a981a43"><td class="mdescLeft">&#160;</td><td class="mdescRight">末尾要素へアクセスする。 <br /></td></tr>
+<tr class="memitem:a61772c77ad2abfbb296912e7281e154c" id="r_a61772c77ad2abfbb296912e7281e154c"><td class="memItemLeft"><a id="a61772c77ad2abfbb296912e7281e154c" name="a61772c77ad2abfbb296912e7281e154c"></a>
+<a class="el" href="#ae08bd68e1fccf7faa7859da579ca0782">const_reference</a>&#160;</td><td class="memItemRight"><b>back</b> () const</td></tr>
+<tr class="memdesc:a61772c77ad2abfbb296912e7281e154c"><td class="mdescLeft">&#160;</td><td class="mdescRight">末尾要素へアクセスする。 <br /></td></tr>
+<tr class="memitem:a5e4bbe8b1e4c557d077f1a62c95a9cf2" id="r_a5e4bbe8b1e4c557d077f1a62c95a9cf2"><td class="memItemLeft"><a id="a5e4bbe8b1e4c557d077f1a62c95a9cf2" name="a5e4bbe8b1e4c557d077f1a62c95a9cf2"></a>
+Optional&lt; <a class="el" href="#aa829b326745694e25726f69badb6cd8c">value_type</a> &gt;&#160;</td><td class="memItemRight"><b>pop_back</b> ()</td></tr>
+<tr class="memdesc:a5e4bbe8b1e4c557d077f1a62c95a9cf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">末尾要素を取り除いて返し、空の場合は空の Optional を返す。 <br /></td></tr>
+<tr class="memitem:a1bf5a1ffe13dd2ac309d08ae9cacac0d" id="r_a1bf5a1ffe13dd2ac309d08ae9cacac0d"><td class="memItemLeft"><a id="a1bf5a1ffe13dd2ac309d08ae9cacac0d" name="a1bf5a1ffe13dd2ac309d08ae9cacac0d"></a>
+bool&#160;</td><td class="memItemRight"><b>erase</b> (const <a class="el" href="#ad745a09c33298e4684643ead548547ca">key_type</a> &amp;key)</td></tr>
+<tr class="memdesc:a1bf5a1ffe13dd2ac309d08ae9cacac0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">キーに一致する要素を取り除き、削除できたかを返す。 <br /></td></tr>
+<tr class="memitem:aa4f777f9ec38203efa8ca1b43f15eaf9" id="r_aa4f777f9ec38203efa8ca1b43f15eaf9"><td class="memItemLeft"><a id="aa4f777f9ec38203efa8ca1b43f15eaf9" name="aa4f777f9ec38203efa8ca1b43f15eaf9"></a>
+Optional&lt; <a class="el" href="#aa829b326745694e25726f69badb6cd8c">value_type</a> &gt;&#160;</td><td class="memItemRight"><b>erase_entry</b> (const <a class="el" href="#ad745a09c33298e4684643ead548547ca">key_type</a> &amp;key)</td></tr>
+<tr class="memdesc:aa4f777f9ec38203efa8ca1b43f15eaf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">キーに一致する要素を取り除いて返し、見つからない場合は空の Optional を返す。 <br /></td></tr>
+<tr class="memitem:a474279476b0d0b816a5dfe0e0810e4ff" id="r_a474279476b0d0b816a5dfe0e0810e4ff"><td class="memItemLeft"><a id="a474279476b0d0b816a5dfe0e0810e4ff" name="a474279476b0d0b816a5dfe0e0810e4ff"></a>
+Optional&lt; <a class="el" href="#aa829b326745694e25726f69badb6cd8c">value_type</a> &gt;&#160;</td><td class="memItemRight"><b>erase_index</b> (<a class="el" href="#af38ce1af42d538f410180c265518d4f0">size_type</a> index)</td></tr>
+<tr class="memdesc:a474279476b0d0b816a5dfe0e0810e4ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">格納順インデックスの要素を順序を保って取り除き、範囲外の場合は空の Optional を返す。 <br /></td></tr>
+<tr class="memitem:afa97629745e8a8fecc654a21a165f18d" id="r_afa97629745e8a8fecc654a21a165f18d"><td class="memItemLeft"><a id="afa97629745e8a8fecc654a21a165f18d" name="afa97629745e8a8fecc654a21a165f18d"></a>
+Optional&lt; <a class="el" href="#aa829b326745694e25726f69badb6cd8c">value_type</a> &gt;&#160;</td><td class="memItemRight"><b>swap_erase_index</b> (<a class="el" href="#af38ce1af42d538f410180c265518d4f0">size_type</a> index)</td></tr>
+<tr class="memdesc:afa97629745e8a8fecc654a21a165f18d"><td class="mdescLeft">&#160;</td><td class="mdescRight">格納順インデックスの要素を末尾要素と入れ替えて取り除き、範囲外の場合は空の Optional を返す。 <br /></td></tr>
+<tr class="memitem:a20fc5728b610475aa965152a5ab82084" id="r_a20fc5728b610475aa965152a5ab82084"><td class="memItemLeft"><a id="a20fc5728b610475aa965152a5ab82084" name="a20fc5728b610475aa965152a5ab82084"></a>
+Optional&lt; <a class="el" href="#aa829b326745694e25726f69badb6cd8c">value_type</a> &gt;&#160;</td><td class="memItemRight"><b>swap_erase</b> (const <a class="el" href="#ad745a09c33298e4684643ead548547ca">key_type</a> &amp;key)</td></tr>
+<tr class="memdesc:a20fc5728b610475aa965152a5ab82084"><td class="mdescLeft">&#160;</td><td class="mdescRight">キーに一致する要素を末尾要素と入れ替えて取り除き、見つからない場合は空の Optional を返す。 <br /></td></tr>
+<tr class="memitem:a29790c28710ec0e64b48c2f4edd0b08c" id="r_a29790c28710ec0e64b48c2f4edd0b08c"><td class="memItemLeft"><a id="a29790c28710ec0e64b48c2f4edd0b08c" name="a29790c28710ec0e64b48c2f4edd0b08c"></a>
+<a class="el" href="#a71826acf87563891400d86ba9d4c9636">iterator</a>&#160;</td><td class="memItemRight"><b>erase</b> (<a class="el" href="#a1d98c67d0ef657617bbb19ef397c08d8">const_iterator</a> pos)</td></tr>
+<tr class="memdesc:a29790c28710ec0e64b48c2f4edd0b08c"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定位置の要素を取り除き、次の要素を指すイテレータを返す。 <br /></td></tr>
+<tr class="memitem:aa3af768723cd533218ea3d83af440713" id="r_aa3af768723cd533218ea3d83af440713"><td class="memItemLeft"><a id="aa3af768723cd533218ea3d83af440713" name="aa3af768723cd533218ea3d83af440713"></a>
+<a class="el" href="#a71826acf87563891400d86ba9d4c9636">iterator</a>&#160;</td><td class="memItemRight"><b>erase</b> (<a class="el" href="#a1d98c67d0ef657617bbb19ef397c08d8">const_iterator</a> first, <a class="el" href="#a1d98c67d0ef657617bbb19ef397c08d8">const_iterator</a> last)</td></tr>
+<tr class="memdesc:aa3af768723cd533218ea3d83af440713"><td class="mdescLeft">&#160;</td><td class="mdescRight">範囲 [first, last) の要素を取り除き、次の要素を指すイテレータを返す。 <br /></td></tr>
+<tr class="memitem:ac39e7e61507818cdb95caa064437bc3a" id="r_ac39e7e61507818cdb95caa064437bc3a"><td class="memItemLeft"><a id="ac39e7e61507818cdb95caa064437bc3a" name="ac39e7e61507818cdb95caa064437bc3a"></a>
+void&#160;</td><td class="memItemRight"><b>swap</b> (IndexMap &amp;other) noexcept</td></tr>
+<tr class="memdesc:ac39e7e61507818cdb95caa064437bc3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">内容を入れ替える。 <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+静的変数</h2></td></tr>
+<tr class="memitem:a29abf0eaf62dbe10174db67475599a1b" id="r_a29abf0eaf62dbe10174db67475599a1b"><td class="memItemLeft"><a id="a29abf0eaf62dbe10174db67475599a1b" name="a29abf0eaf62dbe10174db67475599a1b"></a>
+static constexpr <a class="el" href="#af38ce1af42d538f410180c265518d4f0">size_type</a>&#160;</td><td class="memItemRight"><b>npos</b> = static_cast&lt;<a class="el" href="#af38ce1af42d538f410180c265518d4f0">size_type</a>&gt;(-1)</td></tr>
+<tr class="memdesc:a29abf0eaf62dbe10174db67475599a1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">無効インデックス <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
+フレンド</h2></td></tr>
+<tr class="memitem:add450fa27158311ce7a1161c6e14d8a3" id="r_add450fa27158311ce7a1161c6e14d8a3"><td class="memItemLeft"><a id="add450fa27158311ce7a1161c6e14d8a3" name="add450fa27158311ce7a1161c6e14d8a3"></a>
+void&#160;</td><td class="memItemRight"><b>swap</b> (IndexMap &amp;lhs, IndexMap &amp;rhs) noexcept</td></tr>
+<tr class="memdesc:add450fa27158311ce7a1161c6e14d8a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">2 つのマップの内容を入れ替える。 <br /></td></tr>
+</table>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>Runtime/Core/Public/Amuse/Core/Template/Container/<a class="el" href="../../d4/d0e/_index_map_8h_source.html">IndexMap.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><a href="../../d5/d9e/class_amuse_1_1_index_map.html">IndexMap</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

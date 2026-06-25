@@ -1,12 +1,12 @@
 var searchData=
 [
-  ['w_0',['w',['../d8/dad/struct_amuse_1_1_core_1_1_int_vec4.html#ab5dda036b99d5ca1295623c96fa212b0',1,'Amuse::Core::IntVec4::w'],['../d3/da5/struct_amuse_1_1_core_1_1_quat.html#a59dda808557fe3782c2926930838f147',1,'Amuse::Core::Quat::w'],['../da/da9/struct_amuse_1_1_core_1_1_vec4.html#a3234e6141c1e10fd6052cce884a12738',1,'Amuse::Core::Vec4::w']]],
-  ['white_1',['White',['../d9/de4/struct_amuse_1_1_core_1_1_color.html#a1ad9485c7164c0431949a3db317df3a0',1,'Amuse::Core::Color::White'],['../d3/d4e/struct_amuse_1_1_core_1_1_h_s_v.html#a10970dd9bfd1748207fae6b7d259b501',1,'Amuse::Core::HSV::White'],['../dc/d7f/struct_amuse_1_1_core_1_1_int_color.html#ac3cc63914556e67fa766a8eb00ec64c1',1,'Amuse::Core::IntColor::White']]],
-  ['width_2',['width',['../de/d30/struct_amuse_1_1_core_1_1_size.html#ac5fe8e61439925baf80d147863827a6b',1,'Amuse::Core::Size::width'],['../d8/d14/struct_amuse_1_1_r_h_i_1_1_graphic_file_mip_info.html#a9ddf8185930ce10bdde81dcc7492355b',1,'Amuse::RHI::GraphicFileMipInfo::width'],['../dd/de9/struct_amuse_1_1_r_h_i_1_1_video_output_mode.html#a4006c160956387254410ed6725b2c2f3',1,'Amuse::RHI::VideoOutputMode::width']]],
-  ['window_3',['window',['../d6/d44/struct_amuse_1_1_r_h_i_1_1_swap_chain_desc.html#aae97c8a0b658a693011353fe7b3ec0c6',1,'Amuse::RHI::SwapChainDesc']]],
-  ['workercount_4',['workerCount',['../de/d86/struct_amuse_1_1_core_1_1_schedule_executor_config.html#acfb8e321d979d530161daa81176aa84d',1,'Amuse::Core::ScheduleExecutorConfig']]],
-  ['write_5',['write',['../db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html#a2165391c9e49be19c0c47e9c3169de6d',1,'Amuse::RHI::DepthStencilDesc']]],
-  ['write_5fmask_6',['write_mask',['../db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html#a144b2f9ee9adb0b31cea1d488c494b43',1,'Amuse::RHI::DepthStencilDesc']]],
-  ['writers_7',['writers',['../d9/da8/struct_amuse_1_1_r_p_i_1_1_f_g_data_1_1_resource.html#a816e33fcbc6b73e2cf2dc1f4dfd469fb',1,'Amuse::RPI::FGData::Resource']]],
-  ['writes_8',['writes',['../d0/dc2/struct_amuse_1_1_r_p_i_1_1_f_g_data.html#aaadc25cf11665b80da810d50b91b030c',1,'Amuse::RPI::FGData']]]
+  ['w_0',['w',['../d6/d79/struct_amuse_1_1_int_vec4.html#aeae7eba470f851e481e4c5e3a2856fcf',1,'Amuse::IntVec4::w'],['../d6/d48/struct_amuse_1_1_quat.html#adb390a9d0e1ce3b726f016e547104e35',1,'Amuse::Quat::w'],['../d2/da2/struct_amuse_1_1_vec4.html#adb390a9d0e1ce3b726f016e547104e35',1,'Amuse::Vec4::w']]],
+  ['white_1',['White',['../da/d55/struct_amuse_1_1_color.html#a7a43a04cb403aa5f48a6c416ab72051d',1,'Amuse::Color::White'],['../d3/d64/struct_amuse_1_1_h_s_v.html#a36a603918d5c3197af4e9876aba15df0',1,'Amuse::HSV::White'],['../d9/dc1/struct_amuse_1_1_int_color.html#a1893d3ee4108e85c239fe584c448b474',1,'Amuse::IntColor::White']]],
+  ['width_2',['width',['../de/d61/struct_amuse_1_1_size.html#a93c744cc8b4ebe33f2c60e39ee5563ec',1,'Amuse::Size::width'],['../dc/dce/struct_amuse_1_1_graphic_file_mip_info.html#a85db88ffee2944ecd35c616393976289',1,'Amuse::GraphicFileMipInfo::width'],['../d3/de0/struct_amuse_1_1_video_output_mode.html#a85db88ffee2944ecd35c616393976289',1,'Amuse::VideoOutputMode::width']]],
+  ['window_3',['window',['../d5/d1e/struct_amuse_1_1_swap_chain_desc.html#a7adbf793f7ae6daf5a6767cb726399ea',1,'Amuse::SwapChainDesc']]],
+  ['workercount_4',['workerCount',['../d2/dad/struct_amuse_1_1_schedule_executor_config.html#ad705c8a27ca26a4b94e2c7c9bfa3c7f0',1,'Amuse::ScheduleExecutorConfig']]],
+  ['write_5',['write',['../d2/d66/struct_amuse_1_1_depth_stencil_desc.html#ab4d8d1259f524270d625ab8933700d27',1,'Amuse::DepthStencilDesc']]],
+  ['write_5fmask_6',['write_mask',['../d2/d66/struct_amuse_1_1_depth_stencil_desc.html#afa6d5ceba310beada5ea3becf5b2e618',1,'Amuse::DepthStencilDesc']]],
+  ['writers_7',['writers',['../d8/df1/struct_amuse_1_1_f_g_data_1_1_resource.html#a0b7d46af9424b00cf4c4d74a595b5318',1,'Amuse::FGData::Resource']]],
+  ['writes_8',['writes',['../dd/da1/struct_amuse_1_1_f_g_data.html#a3a9dced18ff2d7377738ed6f540c2fbd',1,'Amuse::FGData']]]
 ];

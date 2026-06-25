@@ -134,11 +134,11 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('d5/d4a/_device
 <li>キーボードとマウスの使用有無を設定できること。</li>
 </ul>
 <h1>基本設計</h1>
-<div class="fragment"><div class="line">Input::InputConfig config;</div>
+<div class="fragment"><div class="line">InputConfig config;</div>
 <div class="line">config.useKeyboard = <span class="keyword">true</span>;</div>
 <div class="line">config.useMouse = <span class="keyword">true</span>;</div>
 <div class="line"> </div>
-<div class="line">Input::InputModule inputModule(&amp;config, windowManager);</div>
+<div class="line">InputModule inputModule(&amp;config, windowManager);</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordflow">while</span> (running) {</div>
 <div class="line">    inputModule.update();</div>
@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('d5/d4a/_device
 <div class="line"><span class="keyword">virtual</span> <span class="keywordtype">bool</span> bindAxis(u32 code, AxisHandle&amp; handle, <span class="keyword">const</span> AxisDelegate&amp; func);</div>
 </div><!-- fragment --><h1>InputModule API</h1>
 <div class="fragment"><div class="line"></div>
-<div class="line">InputModule(InputConfig* config, Platform::WindowManager&amp; windowManager);</div>
+<div class="line">InputModule(InputConfig* config, WindowManager&amp; windowManager);</div>
 <div class="line"></div>
 <div class="line"><span class="keywordtype">void</span> update();</div>
 <div class="line"></div>

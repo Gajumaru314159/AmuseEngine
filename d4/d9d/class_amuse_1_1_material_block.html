@@ -1,0 +1,269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: MaterialBlock クラス</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d4/d9d/class_amuse_1_1_material_block.html','../../','db/df6/class_amuse_1_1_material_block-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-methods">メソッド</a> &#124;
+<a href="#pub-static-methods">静的関数</a> &#124;
+<a href="../../db/df6/class_amuse_1_1_material_block-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">MaterialBlock クラス<div class="ingroups"><a class="el" href="../../db/db7/group___amuse_r_p_i.html">RPI</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">説明</h2>
+<div class="textblock"><p>マテリアルのパラメーターを管理するクラス </p>
+<p>MaterialBlockはBindlessとBindfullの両方のモードに対応しています。 ただし、内部的な挙動が変わります。</p>
+<h3>Bindfull</h3>
+<ul>
+<li><a class="el" href="../../d2/dcd/class_amuse_1_1_texture.html" title="テクスチャ">Texture</a> (SRV)</li>
+<li><a class="el" href="../../dd/d5a/class_amuse_1_1_sampler.html" title="サンプラー">Sampler</a> (<a class="el" href="../../dd/d5a/class_amuse_1_1_sampler.html" title="サンプラー">Sampler</a>)</li>
+<li><a class="el" href="../../d9/dd4/class_amuse_1_1_buffer.html" title="バッファ">Buffer</a> (SRV)</li>
+<li>Integer, Scalar, Vector, Matrixのプロパティがパッキングされたバッファ (CBV)</li>
+</ul>
+<p>上記を含むDescriptorTableを指定したスロットに対してバインドする。</p>
+<h3>Bindless</h3>
+<ul>
+<li>Integer, Scalar, Vector, Matrix、Textureのハンドル、Samplerのハンドル、Bufferのハンドルがパッキングされたバッファ</li>
+</ul>
+<p>上記のバッファのBindlessHandleを指定したオフセットのRootConstantsに書き込む。</p>
+<p><a class="el" href="../../d4/d9d/class_amuse_1_1_material_block.html" title="MaterialBlock">MaterialBlock</a> </p>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:a13484cb65727b108a0dcc6075cf58964" id="r_a13484cb65727b108a0dcc6075cf58964"><td class="memItemLeft"><a id="a13484cb65727b108a0dcc6075cf58964" name="a13484cb65727b108a0dcc6075cf58964"></a>
+using&#160;</td><td class="memItemRight"><b>CommandList</b> = <a class="el" href="../../da/d84/class_amuse_1_1_command_list.html">Amuse::CommandList</a></td></tr>
+<tr class="memdesc:a13484cb65727b108a0dcc6075cf58964"><td class="mdescLeft">&#160;</td><td class="mdescRight">コマンドリスト型 <br /></td></tr>
+<tr class="memitem:a420a4e5d2249d0f287d8b8cfca7070b3" id="r_a420a4e5d2249d0f287d8b8cfca7070b3"><td class="memItemLeft"><a id="a420a4e5d2249d0f287d8b8cfca7070b3" name="a420a4e5d2249d0f287d8b8cfca7070b3"></a>
+using&#160;</td><td class="memItemRight"><b>DescriptorLayout</b> = <a class="el" href="../../d8/dbd/class_amuse_1_1_descriptor_layout.html">Amuse::DescriptorLayout</a></td></tr>
+<tr class="memdesc:a420a4e5d2249d0f287d8b8cfca7070b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">デスクリプタレイアウト型 <br /></td></tr>
+<tr class="memitem:a984684f0a492e10b5ed7e0c61dab820b" id="r_a984684f0a492e10b5ed7e0c61dab820b"><td class="memItemLeft"><a id="a984684f0a492e10b5ed7e0c61dab820b" name="a984684f0a492e10b5ed7e0c61dab820b"></a>
+using&#160;</td><td class="memItemRight"><b>DescriptorTable</b> = <a class="el" href="../../d2/de8/class_amuse_1_1_descriptor_table.html">Amuse::DescriptorTable</a></td></tr>
+<tr class="memdesc:a984684f0a492e10b5ed7e0c61dab820b"><td class="mdescLeft">&#160;</td><td class="mdescRight">デスクリプタテーブル型 <br /></td></tr>
+<tr class="memitem:a11fe1abf800d9702dfeed7f9e9ad816d" id="r_a11fe1abf800d9702dfeed7f9e9ad816d"><td class="memItemLeft"><a id="a11fe1abf800d9702dfeed7f9e9ad816d" name="a11fe1abf800d9702dfeed7f9e9ad816d"></a>
+using&#160;</td><td class="memItemRight"><b>Sampler</b> = <a class="el" href="../../dd/d5a/class_amuse_1_1_sampler.html">Amuse::Sampler</a></td></tr>
+<tr class="memdesc:a11fe1abf800d9702dfeed7f9e9ad816d"><td class="mdescLeft">&#160;</td><td class="mdescRight">サンプラ型 <br /></td></tr>
+<tr class="memitem:aefdf74da07a4d30ebf753203c31ba0af" id="r_aefdf74da07a4d30ebf753203c31ba0af"><td class="memItemLeft"><a id="aefdf74da07a4d30ebf753203c31ba0af" name="aefdf74da07a4d30ebf753203c31ba0af"></a>
+using&#160;</td><td class="memItemRight"><b>Texture</b> = <a class="el" href="../../d2/dcd/class_amuse_1_1_texture.html">Amuse::Texture</a></td></tr>
+<tr class="memdesc:aefdf74da07a4d30ebf753203c31ba0af"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャ型 <br /></td></tr>
+<tr class="memitem:adef607cd50811e77d8cdaaf86b0ba378" id="r_adef607cd50811e77d8cdaaf86b0ba378"><td class="memItemLeft"><a id="adef607cd50811e77d8cdaaf86b0ba378" name="adef607cd50811e77d8cdaaf86b0ba378"></a>
+using&#160;</td><td class="memItemRight"><b>Buffer</b> = <a class="el" href="../../d9/dd4/class_amuse_1_1_buffer.html">Amuse::Buffer</a></td></tr>
+<tr class="memdesc:adef607cd50811e77d8cdaaf86b0ba378"><td class="mdescLeft">&#160;</td><td class="mdescRight">バッファ型 <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+メソッド</h2></td></tr>
+<tr class="memitem:afa96fc7ddcff840ca9281052ee1f627f" id="r_afa96fc7ddcff840ca9281052ee1f627f"><td class="memItemLeft"><a id="afa96fc7ddcff840ca9281052ee1f627f" name="afa96fc7ddcff840ca9281052ee1f627f"></a>
+&#160;</td><td class="memItemRight"><b>MaterialBlock</b> ()=default</td></tr>
+<tr class="memdesc:afa96fc7ddcff840ca9281052ee1f627f"><td class="mdescLeft">&#160;</td><td class="mdescRight">空のマテリアルブロックを生成する <br /></td></tr>
+<tr class="memitem:a3348ad522a8d7f0f6855415141d96e11" id="r_a3348ad522a8d7f0f6855415141d96e11"><td class="memItemLeft"><a id="a3348ad522a8d7f0f6855415141d96e11" name="a3348ad522a8d7f0f6855415141d96e11"></a>
+&#160;</td><td class="memItemRight"><b>MaterialBlock</b> (const <a class="el" href="../../df/d51/struct_amuse_1_1_material_block_desc.html">MaterialBlockDesc</a> &amp;desc)</td></tr>
+<tr class="memdesc:a3348ad522a8d7f0f6855415141d96e11"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアルブロック定義から生成する <br /></td></tr>
+<tr class="memitem:a9d5b6d10cef51df2512d1f22168bfdce" id="r_a9d5b6d10cef51df2512d1f22168bfdce"><td class="memItemLeft"><a id="a9d5b6d10cef51df2512d1f22168bfdce" name="a9d5b6d10cef51df2512d1f22168bfdce"></a>
+bool&#160;</td><td class="memItemRight"><b>hasProperty</b> (StringView name, MaterialPropertyType type) const</td></tr>
+<tr class="memdesc:a9d5b6d10cef51df2512d1f22168bfdce"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアルパラメータが存在するか <br /></td></tr>
+<tr class="memitem:a06ab549699ba39d16137d4150c54c9d6" id="r_a06ab549699ba39d16137d4150c54c9d6"><td class="memItemLeft"><a id="a06ab549699ba39d16137d4150c54c9d6" name="a06ab549699ba39d16137d4150c54c9d6"></a>
+bool&#160;</td><td class="memItemRight"><b>hasTexture</b> (StringView name) const</td></tr>
+<tr class="memdesc:a06ab549699ba39d16137d4150c54c9d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアルパラメータが存在するか    <br /></td></tr>
+<tr class="memitem:ad06963cfe41e0569626952865c9f48c0" id="r_ad06963cfe41e0569626952865c9f48c0"><td class="memItemLeft"><a id="ad06963cfe41e0569626952865c9f48c0" name="ad06963cfe41e0569626952865c9f48c0"></a>
+bool&#160;</td><td class="memItemRight"><b>hasBuffer</b> (StringView name) const</td></tr>
+<tr class="memdesc:ad06963cfe41e0569626952865c9f48c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアルパラメータが存在するか    <br /></td></tr>
+<tr class="memitem:a63b4c015606ef53d2a9ef292e13ce4f0" id="r_a63b4c015606ef53d2a9ef292e13ce4f0"><td class="memItemLeft"><a id="a63b4c015606ef53d2a9ef292e13ce4f0" name="a63b4c015606ef53d2a9ef292e13ce4f0"></a>
+bool&#160;</td><td class="memItemRight"><b>hasMatrix</b> (StringView name) const</td></tr>
+<tr class="memdesc:a63b4c015606ef53d2a9ef292e13ce4f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアルパラメータが存在するか    <br /></td></tr>
+<tr class="memitem:a0b03fa0758582f54fe02df2d6e378fae" id="r_a0b03fa0758582f54fe02df2d6e378fae"><td class="memItemLeft"><a id="a0b03fa0758582f54fe02df2d6e378fae" name="a0b03fa0758582f54fe02df2d6e378fae"></a>
+bool&#160;</td><td class="memItemRight"><b>hasVector</b> (StringView name) const</td></tr>
+<tr class="memdesc:a0b03fa0758582f54fe02df2d6e378fae"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアルパラメータが存在するか    <br /></td></tr>
+<tr class="memitem:a7d5b0aa7a83629ae2035bdfd88d139cd" id="r_a7d5b0aa7a83629ae2035bdfd88d139cd"><td class="memItemLeft"><a id="a7d5b0aa7a83629ae2035bdfd88d139cd" name="a7d5b0aa7a83629ae2035bdfd88d139cd"></a>
+bool&#160;</td><td class="memItemRight"><b>hasScalar</b> (StringView name) const</td></tr>
+<tr class="memdesc:a7d5b0aa7a83629ae2035bdfd88d139cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアルパラメータが存在するか    <br /></td></tr>
+<tr class="memitem:ac679a6bb4161e8ec4a11405e5051a054" id="r_ac679a6bb4161e8ec4a11405e5051a054"><td class="memItemLeft"><a id="ac679a6bb4161e8ec4a11405e5051a054" name="ac679a6bb4161e8ec4a11405e5051a054"></a>
+bool&#160;</td><td class="memItemRight"><b>hasInteger</b> (StringView name) const</td></tr>
+<tr class="memdesc:ac679a6bb4161e8ec4a11405e5051a054"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアルパラメータが存在するか    <br /></td></tr>
+<tr class="memitem:a62c1d6fbca178b69a76a407cc8394ac3" id="r_a62c1d6fbca178b69a76a407cc8394ac3"><td class="memItemLeft"><a id="a62c1d6fbca178b69a76a407cc8394ac3" name="a62c1d6fbca178b69a76a407cc8394ac3"></a>
+void&#160;</td><td class="memItemRight"><b>setTexture</b> (StringView name, const <a class="el" href="../../de/d8b/class_amuse_1_1_ref.html">Ref</a>&lt; <a class="el" href="#aefdf74da07a4d30ebf753203c31ba0af">Texture</a> &gt; &amp;texture, const <a class="el" href="../../de/d8b/class_amuse_1_1_ref.html">Ref</a>&lt; <a class="el" href="#a11fe1abf800d9702dfeed7f9e9ad816d">Sampler</a> &gt; &amp;sampler)</td></tr>
+<tr class="memdesc:a62c1d6fbca178b69a76a407cc8394ac3"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアルパラメータを設定 <br /></td></tr>
+<tr class="memitem:abda89543d7139fb6275b5b559d0b5535" id="r_abda89543d7139fb6275b5b559d0b5535"><td class="memItemLeft"><a id="abda89543d7139fb6275b5b559d0b5535" name="abda89543d7139fb6275b5b559d0b5535"></a>
+void&#160;</td><td class="memItemRight"><b>setBuffer</b> (StringView name, const <a class="el" href="../../de/d8b/class_amuse_1_1_ref.html">Ref</a>&lt; <a class="el" href="#adef607cd50811e77d8cdaaf86b0ba378">Buffer</a> &gt; &amp;value)</td></tr>
+<tr class="memdesc:abda89543d7139fb6275b5b559d0b5535"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアルパラメータを設定    <br /></td></tr>
+<tr class="memitem:a14d99867a309636edd781e560877c155" id="r_a14d99867a309636edd781e560877c155"><td class="memItemLeft"><a id="a14d99867a309636edd781e560877c155" name="a14d99867a309636edd781e560877c155"></a>
+void&#160;</td><td class="memItemRight"><b>setMatrix</b> (StringView name, const <a class="el" href="../../de/d07/struct_amuse_1_1_matrix.html">Matrix</a> &amp;value)</td></tr>
+<tr class="memdesc:a14d99867a309636edd781e560877c155"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアルパラメータを設定    <br /></td></tr>
+<tr class="memitem:ae5a71c1a0204f7bb17b6ba3534c9dcb3" id="r_ae5a71c1a0204f7bb17b6ba3534c9dcb3"><td class="memItemLeft"><a id="ae5a71c1a0204f7bb17b6ba3534c9dcb3" name="ae5a71c1a0204f7bb17b6ba3534c9dcb3"></a>
+void&#160;</td><td class="memItemRight"><b>setVector</b> (StringView name, <a class="el" href="../../da/d55/struct_amuse_1_1_color.html">Color</a> value)</td></tr>
+<tr class="memdesc:ae5a71c1a0204f7bb17b6ba3534c9dcb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアルパラメータを設定    <br /></td></tr>
+<tr class="memitem:a4188242bb2940ce47c9c1c6513912375" id="r_a4188242bb2940ce47c9c1c6513912375"><td class="memItemLeft"><a id="a4188242bb2940ce47c9c1c6513912375" name="a4188242bb2940ce47c9c1c6513912375"></a>
+void&#160;</td><td class="memItemRight"><b>setScalar</b> (StringView name, f32 value)</td></tr>
+<tr class="memdesc:a4188242bb2940ce47c9c1c6513912375"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアルパラメータを設定    <br /></td></tr>
+<tr class="memitem:aff5d9b04922527cc2ddddf7599884928" id="r_aff5d9b04922527cc2ddddf7599884928"><td class="memItemLeft"><a id="aff5d9b04922527cc2ddddf7599884928" name="aff5d9b04922527cc2ddddf7599884928"></a>
+void&#160;</td><td class="memItemRight"><b>setInteger</b> (StringView name, s32 value)</td></tr>
+<tr class="memdesc:aff5d9b04922527cc2ddddf7599884928"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアルパラメータを設定    <br /></td></tr>
+<tr class="memitem:ad570d5c62a610a219b6cf64b84a9145c" id="r_ad570d5c62a610a219b6cf64b84a9145c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad570d5c62a610a219b6cf64b84a9145c">record</a> (<a class="el" href="../../de/d8b/class_amuse_1_1_ref.html">Ref</a>&lt; <a class="el" href="#a13484cb65727b108a0dcc6075cf58964">CommandList</a> &gt; &amp;commandList, s32 slot)</td></tr>
+<tr class="memdesc:ad570d5c62a610a219b6cf64b84a9145c"><td class="mdescLeft">&#160;</td><td class="mdescRight">MaterialBlockのハンドルを指定のスロットに記録する  <br /></td></tr>
+<tr class="memitem:aade18d594188aa1b830133aa26fffb45" id="r_aade18d594188aa1b830133aa26fffb45"><td class="memItemLeft"><a id="aade18d594188aa1b830133aa26fffb45" name="aade18d594188aa1b830133aa26fffb45"></a>
+const <a class="el" href="../../de/d8b/class_amuse_1_1_ref.html">Ref</a>&lt; <a class="el" href="#a420a4e5d2249d0f287d8b8cfca7070b3">DescriptorLayout</a> &gt; &amp;&#160;</td><td class="memItemRight"><b>getLayout</b> () const</td></tr>
+<tr class="memdesc:aade18d594188aa1b830133aa26fffb45"><td class="mdescLeft">&#160;</td><td class="mdescRight">レイアウトを取得 <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静的関数</h2></td></tr>
+<tr class="memitem:a3caa94a39623d9c5c31ac1d21372242e" id="r_a3caa94a39623d9c5c31ac1d21372242e"><td class="memItemLeft"><a id="a3caa94a39623d9c5c31ac1d21372242e" name="a3caa94a39623d9c5c31ac1d21372242e"></a>
+static <a class="el" href="../../de/d8b/class_amuse_1_1_ref.html">Ref</a>&lt; <a class="el" href="#a420a4e5d2249d0f287d8b8cfca7070b3">DescriptorLayout</a> &gt;&#160;</td><td class="memItemRight"><b>CreateLayout</b> (const <a class="el" href="../../df/d51/struct_amuse_1_1_material_block_desc.html">MaterialBlockDesc</a> &amp;desc)</td></tr>
+<tr class="memdesc:a3caa94a39623d9c5c31ac1d21372242e"><td class="mdescLeft">&#160;</td><td class="mdescRight">MaterialBlockDescに対応するDescriptorLayoutを生成するユーティリティ関数 <br /></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="ad570d5c62a610a219b6cf64b84a9145c" name="ad570d5c62a610a219b6cf64b84a9145c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad570d5c62a610a219b6cf64b84a9145c">&#9670;&#160;</a></span>record()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void record </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../de/d8b/class_amuse_1_1_ref.html">Ref</a>&lt; <a class="el" href="#a13484cb65727b108a0dcc6075cf58964">CommandList</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>commandList</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">s32</td>          <td class="paramname"><span class="paramname"><em>slot</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>MaterialBlockのハンドルを指定のスロットに記録する </p>
+<p>Bindfullの場合はslotにRootSignatureのスロットを指定する <br  />
+ Bindfullの場合はRootConstantsのoffsetにBindlessHandleを書き込む <br  />
+ BindfullとBindlessの両方に対応しやすいようにモードによらずこの関数を使用します。 </p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>Runtime/RPI/Public/Amuse/RPI/Material/<a class="el" href="../../d8/d0b/_material_block_8h_source.html">MaterialBlock.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><a href="../../d4/d9d/class_amuse_1_1_material_block.html">MaterialBlock</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

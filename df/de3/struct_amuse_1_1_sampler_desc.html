@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: SamplerDesc 構造体</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('df/de3/struct_amuse_1_1_sampler_desc.html','../../','d0/d0a/struct_amuse_1_1_sampler_desc-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">メソッド</a> &#124;
+<a href="#pub-attribs">変数</a> &#124;
+<a href="../../d0/d0a/struct_amuse_1_1_sampler_desc-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">SamplerDesc 構造体<div class="ingroups"><a class="el" href="../../d9/de0/group___amuse_r_h_i.html">RHI</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">説明</h2>
+<div class="textblock"><p>サンプラー定義 </p>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+メソッド</h2></td></tr>
+<tr class="memitem:acb9e0deec9846d5100af4338ab35f15a" id="r_acb9e0deec9846d5100af4338ab35f15a"><td class="memItemLeft"><a id="acb9e0deec9846d5100af4338ab35f15a" name="acb9e0deec9846d5100af4338ab35f15a"></a>
+&#160;</td><td class="memItemRight"><b>SamplerDesc</b> (<a class="el" href="../../d9/de0/group___amuse_r_h_i.html#ga31cb9388ce96eb6804a294bba227df5b">TextureFilter</a> filter=<a class="el" href="../../d9/de0/group___amuse_r_h_i.html#gga31cb9388ce96eb6804a294bba227df5ba32a843da6ea40ab3b17a3421ccdf671b">TextureFilter::Linear</a>, <a class="el" href="../../d9/de0/group___amuse_r_h_i.html#gac06d679b414bf6ad84118e6e9712fd58">TextureAddress</a> addressU=<a class="el" href="../../d9/de0/group___amuse_r_h_i.html#ggac06d679b414bf6ad84118e6e9712fd58a7020426cfb0a204051be4b3053d2acc8">TextureAddress::Repeat</a>, <a class="el" href="../../d9/de0/group___amuse_r_h_i.html#gac06d679b414bf6ad84118e6e9712fd58">TextureAddress</a> addressV=<a class="el" href="../../d9/de0/group___amuse_r_h_i.html#ggac06d679b414bf6ad84118e6e9712fd58a7020426cfb0a204051be4b3053d2acc8">TextureAddress::Repeat</a>, <a class="el" href="../../d9/de0/group___amuse_r_h_i.html#gac06d679b414bf6ad84118e6e9712fd58">TextureAddress</a> addressW=<a class="el" href="../../d9/de0/group___amuse_r_h_i.html#ggac06d679b414bf6ad84118e6e9712fd58a7020426cfb0a204051be4b3053d2acc8">TextureAddress::Repeat</a>, f32 mipLodBias=0, <a class="el" href="../../d9/de0/group___amuse_r_h_i.html#ga0a3454e4f16bbf4cff3ac7ee74b41c7a">Anisotropy</a> anisotropy=Anisotropy::None, f32 minLod=0, f32 maxLod=(std::numeric_limits&lt; f32 &gt;::max)(), <a class="el" href="../../d9/de0/group___amuse_r_h_i.html#ga661c79b6bc008a523ce7e34ec711004c">MipFilter</a> mipFilter=<a class="el" href="../../d9/de0/group___amuse_r_h_i.html#gga661c79b6bc008a523ce7e34ec711004ca32a843da6ea40ab3b17a3421ccdf671b">MipFilter::Linear</a>, bool zFilter=false)</td></tr>
+<tr class="memdesc:acb9e0deec9846d5100af4338ab35f15a"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ <br /></td></tr>
+<tr class="memitem:a4c334e3bffa3362637ed3aef220a9f25" id="r_a4c334e3bffa3362637ed3aef220a9f25"><td class="memItemLeft"><a id="a4c334e3bffa3362637ed3aef220a9f25" name="a4c334e3bffa3362637ed3aef220a9f25"></a>
+<a class="el" href="#acb9e0deec9846d5100af4338ab35f15a">SamplerDesc</a> &amp;&#160;</td><td class="memItemRight"><b>setFilter</b> (<a class="el" href="../../d9/de0/group___amuse_r_h_i.html#ga31cb9388ce96eb6804a294bba227df5b">TextureFilter</a> filter, <a class="el" href="../../d9/de0/group___amuse_r_h_i.html#ga661c79b6bc008a523ce7e34ec711004c">MipFilter</a> mipFilter=<a class="el" href="../../d9/de0/group___amuse_r_h_i.html#gga661c79b6bc008a523ce7e34ec711004ca32a843da6ea40ab3b17a3421ccdf671b">MipFilter::Linear</a>)</td></tr>
+<tr class="memdesc:a4c334e3bffa3362637ed3aef220a9f25"><td class="mdescLeft">&#160;</td><td class="mdescRight">フィルタ設定 <br /></td></tr>
+<tr class="memitem:a6cb247aecb57a01bbe98fb834bd86f73" id="r_a6cb247aecb57a01bbe98fb834bd86f73"><td class="memItemLeft"><a id="a6cb247aecb57a01bbe98fb834bd86f73" name="a6cb247aecb57a01bbe98fb834bd86f73"></a>
+<a class="el" href="#acb9e0deec9846d5100af4338ab35f15a">SamplerDesc</a> &amp;&#160;</td><td class="memItemRight"><b>setZFilter</b> (bool zFilter)</td></tr>
+<tr class="memdesc:a6cb247aecb57a01bbe98fb834bd86f73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zフィルタ設定 <br /></td></tr>
+<tr class="memitem:a9c5bf0a77f16566fb9c3bc7368adec4b" id="r_a9c5bf0a77f16566fb9c3bc7368adec4b"><td class="memItemLeft"><a id="a9c5bf0a77f16566fb9c3bc7368adec4b" name="a9c5bf0a77f16566fb9c3bc7368adec4b"></a>
+<a class="el" href="#acb9e0deec9846d5100af4338ab35f15a">SamplerDesc</a> &amp;&#160;</td><td class="memItemRight"><b>setAnisotropy</b> (<a class="el" href="../../d9/de0/group___amuse_r_h_i.html#ga0a3454e4f16bbf4cff3ac7ee74b41c7a">Anisotropy</a> anisotropy)</td></tr>
+<tr class="memdesc:a9c5bf0a77f16566fb9c3bc7368adec4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">異方性フィルタレベル設定 <br /></td></tr>
+<tr class="memitem:a940e680d63bd612fcccf85f4363acb59" id="r_a940e680d63bd612fcccf85f4363acb59"><td class="memItemLeft"><a id="a940e680d63bd612fcccf85f4363acb59" name="a940e680d63bd612fcccf85f4363acb59"></a>
+<a class="el" href="#acb9e0deec9846d5100af4338ab35f15a">SamplerDesc</a> &amp;&#160;</td><td class="memItemRight"><b>setAddress</b> (<a class="el" href="../../d9/de0/group___amuse_r_h_i.html#gac06d679b414bf6ad84118e6e9712fd58">TextureAddress</a> u, <a class="el" href="../../d9/de0/group___amuse_r_h_i.html#gac06d679b414bf6ad84118e6e9712fd58">TextureAddress</a> v, <a class="el" href="../../d9/de0/group___amuse_r_h_i.html#gac06d679b414bf6ad84118e6e9712fd58">TextureAddress</a> w=<a class="el" href="../../d9/de0/group___amuse_r_h_i.html#ggac06d679b414bf6ad84118e6e9712fd58a7020426cfb0a204051be4b3053d2acc8">TextureAddress::Repeat</a>)</td></tr>
+<tr class="memdesc:a940e680d63bd612fcccf85f4363acb59"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャ・アドレス・モード設定 <br /></td></tr>
+<tr class="memitem:ad9af0e3710626f625047b3debb69d890" id="r_ad9af0e3710626f625047b3debb69d890"><td class="memItemLeft"><a id="ad9af0e3710626f625047b3debb69d890" name="ad9af0e3710626f625047b3debb69d890"></a>
+<a class="el" href="#acb9e0deec9846d5100af4338ab35f15a">SamplerDesc</a> &amp;&#160;</td><td class="memItemRight"><b>setAddress</b> (<a class="el" href="../../d9/de0/group___amuse_r_h_i.html#gac06d679b414bf6ad84118e6e9712fd58">TextureAddress</a> mode)</td></tr>
+<tr class="memdesc:ad9af0e3710626f625047b3debb69d890"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャ・アドレス・モード設定 <br /></td></tr>
+<tr class="memitem:a1b985d4c1ff8e0325ed70a8a2e79dbef" id="r_a1b985d4c1ff8e0325ed70a8a2e79dbef"><td class="memItemLeft"><a id="a1b985d4c1ff8e0325ed70a8a2e79dbef" name="a1b985d4c1ff8e0325ed70a8a2e79dbef"></a>
+<a class="el" href="#acb9e0deec9846d5100af4338ab35f15a">SamplerDesc</a> &amp;&#160;</td><td class="memItemRight"><b>setMipLod</b> (f32 bias, f32 min, f32 max)</td></tr>
+<tr class="memdesc:a1b985d4c1ff8e0325ed70a8a2e79dbef"><td class="mdescLeft">&#160;</td><td class="mdescRight">ミップLOD設定 <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+変数</h2></td></tr>
+<tr class="memitem:a9a2326f35466e54c36c070829245c557" id="r_a9a2326f35466e54c36c070829245c557"><td class="memItemLeft"><a id="a9a2326f35466e54c36c070829245c557" name="a9a2326f35466e54c36c070829245c557"></a>
+String&#160;</td><td class="memItemRight"><b>name</b></td></tr>
+<tr class="memdesc:a9a2326f35466e54c36c070829245c557"><td class="mdescLeft">&#160;</td><td class="mdescRight">名前 <br /></td></tr>
+<tr class="memitem:a48968e4ed9834fa071b3dce449b3a66d" id="r_a48968e4ed9834fa071b3dce449b3a66d"><td class="memItemLeft"><a id="a48968e4ed9834fa071b3dce449b3a66d" name="a48968e4ed9834fa071b3dce449b3a66d"></a>
+<a class="el" href="../../d9/de0/group___amuse_r_h_i.html#ga31cb9388ce96eb6804a294bba227df5b">TextureFilter</a>&#160;</td><td class="memItemRight"><b>filter</b></td></tr>
+<tr class="memdesc:a48968e4ed9834fa071b3dce449b3a66d"><td class="mdescLeft">&#160;</td><td class="mdescRight">拡縮時のフィルタ <br /></td></tr>
+<tr class="memitem:aa8cf89cca7c5457c27bba9c319979c90" id="r_aa8cf89cca7c5457c27bba9c319979c90"><td class="memItemLeft"><a id="aa8cf89cca7c5457c27bba9c319979c90" name="aa8cf89cca7c5457c27bba9c319979c90"></a>
+<a class="el" href="../../d9/de0/group___amuse_r_h_i.html#ga661c79b6bc008a523ce7e34ec711004c">MipFilter</a>&#160;</td><td class="memItemRight"><b>mipFilter</b></td></tr>
+<tr class="memdesc:aa8cf89cca7c5457c27bba9c319979c90"><td class="mdescLeft">&#160;</td><td class="mdescRight">ミップ時のフィルタ <br /></td></tr>
+<tr class="memitem:a34804b83ad504da138156088a58ce181" id="r_a34804b83ad504da138156088a58ce181"><td class="memItemLeft"><a id="a34804b83ad504da138156088a58ce181" name="a34804b83ad504da138156088a58ce181"></a>
+bool&#160;</td><td class="memItemRight"><b>zFilter</b></td></tr>
+<tr class="memdesc:a34804b83ad504da138156088a58ce181"><td class="mdescLeft">&#160;</td><td class="mdescRight">3DテクスチャのZ軸フィルタを設定するか <br /></td></tr>
+<tr class="memitem:aa80c90be7c7a8a0c2ece3447bcdfae7b" id="r_aa80c90be7c7a8a0c2ece3447bcdfae7b"><td class="memItemLeft"><a id="aa80c90be7c7a8a0c2ece3447bcdfae7b" name="aa80c90be7c7a8a0c2ece3447bcdfae7b"></a>
+<a class="el" href="../../d9/de0/group___amuse_r_h_i.html#ga0a3454e4f16bbf4cff3ac7ee74b41c7a">Anisotropy</a>&#160;</td><td class="memItemRight"><b>anisotropy</b></td></tr>
+<tr class="memdesc:aa80c90be7c7a8a0c2ece3447bcdfae7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">異方性フィルタレベル <br /></td></tr>
+<tr class="memitem:aab7377e10cb2e59f340b6349b19f4c59" id="r_aab7377e10cb2e59f340b6349b19f4c59"><td class="memItemLeft"><a id="aab7377e10cb2e59f340b6349b19f4c59" name="aab7377e10cb2e59f340b6349b19f4c59"></a>
+<a class="el" href="../../d9/de0/group___amuse_r_h_i.html#gac06d679b414bf6ad84118e6e9712fd58">TextureAddress</a>&#160;</td><td class="memItemRight"><b>addressU</b></td></tr>
+<tr class="memdesc:aab7377e10cb2e59f340b6349b19f4c59"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャ・アドレス・モード U <br /></td></tr>
+<tr class="memitem:ac92284fe45028960d8d5fc0970480d92" id="r_ac92284fe45028960d8d5fc0970480d92"><td class="memItemLeft"><a id="ac92284fe45028960d8d5fc0970480d92" name="ac92284fe45028960d8d5fc0970480d92"></a>
+<a class="el" href="../../d9/de0/group___amuse_r_h_i.html#gac06d679b414bf6ad84118e6e9712fd58">TextureAddress</a>&#160;</td><td class="memItemRight"><b>addressV</b></td></tr>
+<tr class="memdesc:ac92284fe45028960d8d5fc0970480d92"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャ・アドレス・モード V <br /></td></tr>
+<tr class="memitem:adad43b428175b86faba69391544f858e" id="r_adad43b428175b86faba69391544f858e"><td class="memItemLeft"><a id="adad43b428175b86faba69391544f858e" name="adad43b428175b86faba69391544f858e"></a>
+<a class="el" href="../../d9/de0/group___amuse_r_h_i.html#gac06d679b414bf6ad84118e6e9712fd58">TextureAddress</a>&#160;</td><td class="memItemRight"><b>addressW</b></td></tr>
+<tr class="memdesc:adad43b428175b86faba69391544f858e"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャ・アドレス・モード W <br /></td></tr>
+<tr class="memitem:a07207fdecb363ba1f39abc2c1158b571" id="r_a07207fdecb363ba1f39abc2c1158b571"><td class="memItemLeft"><a id="a07207fdecb363ba1f39abc2c1158b571" name="a07207fdecb363ba1f39abc2c1158b571"></a>
+f32&#160;</td><td class="memItemRight"><b>mipLodBias</b></td></tr>
+<tr class="memdesc:a07207fdecb363ba1f39abc2c1158b571"><td class="mdescLeft">&#160;</td><td class="mdescRight">ミップLODバイアス <br /></td></tr>
+<tr class="memitem:adf2547801edac36dabfaf826991288d9" id="r_adf2547801edac36dabfaf826991288d9"><td class="memItemLeft"><a id="adf2547801edac36dabfaf826991288d9" name="adf2547801edac36dabfaf826991288d9"></a>
+<a class="el" href="../../d6/d2c/struct_amuse_1_1_range.html">Range</a>&#160;</td><td class="memItemRight"><b>mipLodRange</b></td></tr>
+<tr class="memdesc:adf2547801edac36dabfaf826991288d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">ミップLOD範囲 <br /></td></tr>
+</table>
+<hr/>この構造体詳解は次のファイルから抽出されました:<ul>
+<li>Runtime/RHI/Public/Amuse/RHI/Types/<a class="el" href="../../df/d45/_sampler_desc_8h_source.html">SamplerDesc.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><a href="../../df/de3/struct_amuse_1_1_sampler_desc.html">SamplerDesc</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

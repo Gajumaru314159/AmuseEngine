@@ -1,0 +1,411 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: Any クラス</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d0/d4c/class_amuse_1_1_any.html','../../','d6/dde/class_amuse_1_1_any-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">メソッド</a> &#124;
+<a href="#pub-static-methods">静的関数</a> &#124;
+<a href="#friends">フレンド</a> &#124;
+<a href="../../d6/dde/class_amuse_1_1_any-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">Any クラス<div class="ingroups"><a class="el" href="../../da/d78/group___amuse_core.html">Core</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">説明</h2>
+<div class="textblock"><p>任意の型を保持するクラス </p>
+<p>型情報を保持し、型情報に基づいて値を取得、設定できます。 内部値はconstかと、参照型かを保持します。 </p>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+メソッド</h2></td></tr>
+<tr class="memitem:a19cd46690c640fe8fc18c40bc2d901db" id="r_a19cd46690c640fe8fc18c40bc2d901db"><td class="memItemLeft"><a id="a19cd46690c640fe8fc18c40bc2d901db" name="a19cd46690c640fe8fc18c40bc2d901db"></a>
+&#160;</td><td class="memItemRight"><b>Any</b> ()=default</td></tr>
+<tr class="memdesc:a19cd46690c640fe8fc18c40bc2d901db"><td class="mdescLeft">&#160;</td><td class="mdescRight">空のAnyオブジェクト作成 <br /></td></tr>
+<tr class="memitem:a43025a9031344cfc95b6f92994c73fd7" id="r_a43025a9031344cfc95b6f92994c73fd7"><td class="memItemLeft"><a id="a43025a9031344cfc95b6f92994c73fd7" name="a43025a9031344cfc95b6f92994c73fd7"></a>
+&#160;</td><td class="memItemRight"><b>Any</b> (const <a class="el" href="../../d1/de4/struct_amuse_1_1_type_info.html">TypeInfo</a> &amp;info, void *ptr)</td></tr>
+<tr class="memdesc:a43025a9031344cfc95b6f92994c73fd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">型情報とポインタから参照Anyオブジェクトを生成 <br /></td></tr>
+<tr class="memitem:ab907bff829880e0d822be8d6c4a1320e" id="r_ab907bff829880e0d822be8d6c4a1320e"><td class="memItemLeft"><a id="ab907bff829880e0d822be8d6c4a1320e" name="ab907bff829880e0d822be8d6c4a1320e"></a>
+&#160;</td><td class="memItemRight"><b>Any</b> (const <a class="el" href="../../d1/de4/struct_amuse_1_1_type_info.html">TypeInfo</a> &amp;info, const void *ptr)</td></tr>
+<tr class="memdesc:ab907bff829880e0d822be8d6c4a1320e"><td class="mdescLeft">&#160;</td><td class="mdescRight">型情報と const ポインタから読み取り専用の参照 <a class="el" href="../../d0/d4c/class_amuse_1_1_any.html" title="任意の型を保持するクラス">Any</a> を生成する。 <br /></td></tr>
+<tr class="memitem:a74082a1daff91f56146e67cc4e5e7666" id="r_a74082a1daff91f56146e67cc4e5e7666"><td class="memItemLeft"><a id="a74082a1daff91f56146e67cc4e5e7666" name="a74082a1daff91f56146e67cc4e5e7666"></a>
+&#160;</td><td class="memItemRight"><b>~Any</b> ()</td></tr>
+<tr class="memdesc:a74082a1daff91f56146e67cc4e5e7666"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ <br /></td></tr>
+<tr class="memitem:a91c4026dc28de330498ae8d94bc7b55a" id="r_a91c4026dc28de330498ae8d94bc7b55a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a91c4026dc28de330498ae8d94bc7b55a">Any</a> (const Any &amp;other)</td></tr>
+<tr class="memdesc:a91c4026dc28de330498ae8d94bc7b55a"><td class="mdescLeft">&#160;</td><td class="mdescRight">コピーコンストラクタ  <br /></td></tr>
+<tr class="memitem:ab7c0a87ed6b38f7f561d5edc4e11a511" id="r_ab7c0a87ed6b38f7f561d5edc4e11a511"><td class="memItemLeft"><a id="ab7c0a87ed6b38f7f561d5edc4e11a511" name="ab7c0a87ed6b38f7f561d5edc4e11a511"></a>
+&#160;</td><td class="memItemRight"><b>Any</b> (Any &amp;&amp;other) noexcept</td></tr>
+<tr class="memdesc:ab7c0a87ed6b38f7f561d5edc4e11a511"><td class="mdescLeft">&#160;</td><td class="mdescRight">ムーブコンストラクタ <br /></td></tr>
+<tr class="memitem:a0d7963569aafaa5ab28bc035eef2bde0" id="r_a0d7963569aafaa5ab28bc035eef2bde0"><td class="memItemLeft"><a id="a0d7963569aafaa5ab28bc035eef2bde0" name="a0d7963569aafaa5ab28bc035eef2bde0"></a>
+<a class="el" href="#a19cd46690c640fe8fc18c40bc2d901db">Any</a> &amp;&#160;</td><td class="memItemRight"><b>operator=</b> (const <a class="el" href="#a19cd46690c640fe8fc18c40bc2d901db">Any</a> &amp;other)</td></tr>
+<tr class="memdesc:a0d7963569aafaa5ab28bc035eef2bde0"><td class="mdescLeft">&#160;</td><td class="mdescRight">コピー代入演算子 <br /></td></tr>
+<tr class="memitem:a4c39951cd786d83a8c7fee37fb018460" id="r_a4c39951cd786d83a8c7fee37fb018460"><td class="memItemLeft"><a id="a4c39951cd786d83a8c7fee37fb018460" name="a4c39951cd786d83a8c7fee37fb018460"></a>
+<a class="el" href="#a19cd46690c640fe8fc18c40bc2d901db">Any</a> &amp;&#160;</td><td class="memItemRight"><b>operator=</b> (<a class="el" href="#a19cd46690c640fe8fc18c40bc2d901db">Any</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="memdesc:a4c39951cd786d83a8c7fee37fb018460"><td class="mdescLeft">&#160;</td><td class="mdescRight">ムーブ代入演算子 <br /></td></tr>
+<tr class="memitem:a6398fbd227897cbe43af25c5abf6a215" id="r_a6398fbd227897cbe43af25c5abf6a215"><td class="memTemplParams" colspan="2"><a id="a6398fbd227897cbe43af25c5abf6a215" name="a6398fbd227897cbe43af25c5abf6a215"></a>
+template&lt;class T&gt; </td></tr>
+<tr class="memitem:a6398fbd227897cbe43af25c5abf6a215 template"><td class="memItemLeft">&#160;</td><td class="memItemRight"><b>Any</b> (T &amp;value)</td></tr>
+<tr class="memdesc:a6398fbd227897cbe43af25c5abf6a215"><td class="mdescLeft">&#160;</td><td class="mdescRight">参照Anyオブジェクトを生成 <br /></td></tr>
+<tr class="memitem:aba490b0b2f9101d9cb6b3d2c7924dd4c" id="r_aba490b0b2f9101d9cb6b3d2c7924dd4c"><td class="memTemplParams" colspan="2"><a id="aba490b0b2f9101d9cb6b3d2c7924dd4c" name="aba490b0b2f9101d9cb6b3d2c7924dd4c"></a>
+template&lt;class T&gt; </td></tr>
+<tr class="memitem:aba490b0b2f9101d9cb6b3d2c7924dd4c template"><td class="memItemLeft">&#160;</td><td class="memItemRight"><b>Any</b> (const T &amp;value)</td></tr>
+<tr class="memdesc:aba490b0b2f9101d9cb6b3d2c7924dd4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">参照Anyオブジェクトを生成(const) <br /></td></tr>
+<tr class="memitem:a37e6d7789503f61ceb23e719e0ac7b79" id="r_a37e6d7789503f61ceb23e719e0ac7b79"><td class="memTemplParams" colspan="2"><a id="a37e6d7789503f61ceb23e719e0ac7b79" name="a37e6d7789503f61ceb23e719e0ac7b79"></a>
+template&lt;class T&gt; </td></tr>
+<tr class="memitem:a37e6d7789503f61ceb23e719e0ac7b79 template"><td class="memItemLeft">&#160;</td><td class="memItemRight"><b>Any</b> (T &amp;&amp;value)</td></tr>
+<tr class="memdesc:a37e6d7789503f61ceb23e719e0ac7b79"><td class="mdescLeft">&#160;</td><td class="mdescRight">コピーAnyオブジェクトを生成 <br /></td></tr>
+<tr class="memitem:ac45d32d9f84d8ad16dc39f2e14e82e41" id="r_ac45d32d9f84d8ad16dc39f2e14e82e41"><td class="memItemLeft">Property&#160;</td><td class="memItemRight"><a class="el" href="#ac45d32d9f84d8ad16dc39f2e14e82e41">operator[]</a> (StringView name) const</td></tr>
+<tr class="memdesc:ac45d32d9f84d8ad16dc39f2e14e82e41"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列からPropertyを取得  <br /></td></tr>
+<tr class="memitem:a27056b0faa225a9abcc3f4b29903a74b" id="r_a27056b0faa225a9abcc3f4b29903a74b"><td class="memItemLeft"><a id="a27056b0faa225a9abcc3f4b29903a74b" name="a27056b0faa225a9abcc3f4b29903a74b"></a>
+Property&#160;</td><td class="memItemRight"><b>operator[]</b> (StringView name)</td></tr>
+<tr class="memdesc:a27056b0faa225a9abcc3f4b29903a74b"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列からPropertyを取得 <br /></td></tr>
+<tr class="memitem:a9c3098ba7817bd76c39923064c59296b" id="r_a9c3098ba7817bd76c39923064c59296b"><td class="memTemplParams" colspan="2">template&lt;class T&gt; </td></tr>
+<tr class="memitem:a9c3098ba7817bd76c39923064c59296b template"><td class="memItemLeft">auto&#160;</td><td class="memItemRight"><a class="el" href="#a9c3098ba7817bd76c39923064c59296b">operator=</a> (T &amp;&amp;value) -&gt; std::enable_if_t&lt;!std::is_same_v&lt; remove_cvr_t&lt; T &gt;, <a class="el" href="#a19cd46690c640fe8fc18c40bc2d901db">Any</a> &gt;, <a class="el" href="#a19cd46690c640fe8fc18c40bc2d901db">Any</a> &amp; &gt;</td></tr>
+<tr class="memdesc:a9c3098ba7817bd76c39923064c59296b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Anyオブジェクトに値を代入する  <br /></td></tr>
+<tr class="memitem:a47b60b185121d1637b0aa8fc3e2e6389" id="r_a47b60b185121d1637b0aa8fc3e2e6389"><td class="memItemLeft"><a class="el" href="#a19cd46690c640fe8fc18c40bc2d901db">Any</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a47b60b185121d1637b0aa8fc3e2e6389">assign</a> (const <a class="el" href="#a19cd46690c640fe8fc18c40bc2d901db">Any</a> &amp;other)</td></tr>
+<tr class="memdesc:a47b60b185121d1637b0aa8fc3e2e6389"><td class="mdescLeft">&#160;</td><td class="mdescRight">AnyオブジェクトにAnyオブジェクトを書き込む  <br /></td></tr>
+<tr class="memitem:adf4a6727c689e0038cf2cdd158d5ed2c" id="r_adf4a6727c689e0038cf2cdd158d5ed2c"><td class="memItemLeft"><a id="adf4a6727c689e0038cf2cdd158d5ed2c" name="adf4a6727c689e0038cf2cdd158d5ed2c"></a>
+<a class="el" href="../../d5/d11/class_amuse_1_1_type.html">Type</a>&#160;</td><td class="memItemRight"><b>type</b> () const</td></tr>
+<tr class="memdesc:adf4a6727c689e0038cf2cdd158d5ed2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">内部オブジェクトの型を取得 <br /></td></tr>
+<tr class="memitem:ac4f154f0ca3db7dcab06e86bee117054" id="r_ac4f154f0ca3db7dcab06e86bee117054"><td class="memItemLeft"><a id="ac4f154f0ca3db7dcab06e86bee117054" name="ac4f154f0ca3db7dcab06e86bee117054"></a>
+bool&#160;</td><td class="memItemRight"><b>is</b> (const <a class="el" href="../../d5/d11/class_amuse_1_1_type.html">Type</a> &amp;to) const</td></tr>
+<tr class="memdesc:ac4f154f0ca3db7dcab06e86bee117054"><td class="mdescLeft">&#160;</td><td class="mdescRight">内部オブジェクトがType型のオブジェクトにキャスト可能か <br /></td></tr>
+<tr class="memitem:ace9b93173e591beddd3fdc3de5a49d05" id="r_ace9b93173e591beddd3fdc3de5a49d05"><td class="memTemplParams" colspan="2"><a id="ace9b93173e591beddd3fdc3de5a49d05" name="ace9b93173e591beddd3fdc3de5a49d05"></a>
+template&lt;class T&gt; </td></tr>
+<tr class="memitem:ace9b93173e591beddd3fdc3de5a49d05 template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><b>is</b> () const</td></tr>
+<tr class="memdesc:ace9b93173e591beddd3fdc3de5a49d05"><td class="mdescLeft">&#160;</td><td class="mdescRight">内部オブジェクトがTにキャスト可能か <br /></td></tr>
+<tr class="memitem:af1d6cb390a351848e077642db56b95b9" id="r_af1d6cb390a351848e077642db56b95b9"><td class="memTemplParams" colspan="2"><a id="af1d6cb390a351848e077642db56b95b9" name="af1d6cb390a351848e077642db56b95b9"></a>
+template&lt;class T&gt; </td></tr>
+<tr class="memitem:af1d6cb390a351848e077642db56b95b9 template"><td class="memItemLeft">T &amp;&#160;</td><td class="memItemRight"><b>as</b> ()</td></tr>
+<tr class="memdesc:af1d6cb390a351848e077642db56b95b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">内部オブジェクトを指定型の参照として取得する。 <br /></td></tr>
+<tr class="memitem:aef2cd8021dc018112498928b67440956" id="r_aef2cd8021dc018112498928b67440956"><td class="memTemplParams" colspan="2"><a id="aef2cd8021dc018112498928b67440956" name="aef2cd8021dc018112498928b67440956"></a>
+template&lt;class T&gt; </td></tr>
+<tr class="memitem:aef2cd8021dc018112498928b67440956 template"><td class="memItemLeft">const T &amp;&#160;</td><td class="memItemRight"><b>as</b> () const</td></tr>
+<tr class="memdesc:aef2cd8021dc018112498928b67440956"><td class="mdescLeft">&#160;</td><td class="mdescRight">内部オブジェクトを指定型の const 参照として取得する。 <br /></td></tr>
+<tr class="memitem:af0ca3f3a677f14c81d6fa46f0f8d5197" id="r_af0ca3f3a677f14c81d6fa46f0f8d5197"><td class="memTemplParams" colspan="2"><a id="af0ca3f3a677f14c81d6fa46f0f8d5197" name="af0ca3f3a677f14c81d6fa46f0f8d5197"></a>
+template&lt;class T&gt; </td></tr>
+<tr class="memitem:af0ca3f3a677f14c81d6fa46f0f8d5197 template"><td class="memItemLeft">T &amp;&#160;</td><td class="memItemRight"><b>as</b> (T &amp;fallback) const</td></tr>
+<tr class="memdesc:af0ca3f3a677f14c81d6fa46f0f8d5197"><td class="mdescLeft">&#160;</td><td class="mdescRight">型が一致しない場合にフォールバックを返す参照取得を行う。 <br /></td></tr>
+<tr class="memitem:a6ea0a400e8782ef66b2baa4d4ce29396" id="r_a6ea0a400e8782ef66b2baa4d4ce29396"><td class="memTemplParams" colspan="2"><a id="a6ea0a400e8782ef66b2baa4d4ce29396" name="a6ea0a400e8782ef66b2baa4d4ce29396"></a>
+template&lt;class T&gt; </td></tr>
+<tr class="memitem:a6ea0a400e8782ef66b2baa4d4ce29396 template"><td class="memItemLeft">const T &amp;&#160;</td><td class="memItemRight"><b>as</b> (const T &amp;fallback) const</td></tr>
+<tr class="memdesc:a6ea0a400e8782ef66b2baa4d4ce29396"><td class="mdescLeft">&#160;</td><td class="mdescRight">型が一致しない場合にフォールバックを返す const 参照取得を行う。 <br /></td></tr>
+<tr class="memitem:a558706ef95f65fdca18e76256cb6aab0" id="r_a558706ef95f65fdca18e76256cb6aab0"><td class="memItemLeft"><a id="a558706ef95f65fdca18e76256cb6aab0" name="a558706ef95f65fdca18e76256cb6aab0"></a>
+bool&#160;</td><td class="memItemRight"><b>isReference</b> () const</td></tr>
+<tr class="memdesc:a558706ef95f65fdca18e76256cb6aab0"><td class="mdescLeft">&#160;</td><td class="mdescRight">内部オブジェクトを参照として保持しているか判定する。 <br /></td></tr>
+<tr class="memitem:a85e799a990b59dd38f79cd2021e6d9c4" id="r_a85e799a990b59dd38f79cd2021e6d9c4"><td class="memItemLeft"><a id="a85e799a990b59dd38f79cd2021e6d9c4" name="a85e799a990b59dd38f79cd2021e6d9c4"></a>
+bool&#160;</td><td class="memItemRight"><b>isWritable</b> () const</td></tr>
+<tr class="memdesc:a85e799a990b59dd38f79cd2021e6d9c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">内部オブジェクトへ書き込み可能か判定する。 <br /></td></tr>
+<tr class="memitem:ac3527a5e8242a707c94e2822ec34a391" id="r_ac3527a5e8242a707c94e2822ec34a391"><td class="memTemplParams" colspan="2"><a id="ac3527a5e8242a707c94e2822ec34a391" name="ac3527a5e8242a707c94e2822ec34a391"></a>
+template&lt;class T&gt; </td></tr>
+<tr class="memitem:ac3527a5e8242a707c94e2822ec34a391 template"><td class="memItemLeft"><a class="el" href="#a19cd46690c640fe8fc18c40bc2d901db">Any</a> &amp;&#160;</td><td class="memItemRight"><b>set</b> (StringView name, T &amp;&amp;value)</td></tr>
+<tr class="memdesc:ac3527a5e8242a707c94e2822ec34a391"><td class="mdescLeft">&#160;</td><td class="mdescRight">名前付きプロパティへ値を設定する。 <br /></td></tr>
+<tr class="memitem:a36c7a4f0b06a6e3e6af6d452223e133b" id="r_a36c7a4f0b06a6e3e6af6d452223e133b"><td class="memTemplParams" colspan="2"><a id="a36c7a4f0b06a6e3e6af6d452223e133b" name="a36c7a4f0b06a6e3e6af6d452223e133b"></a>
+template&lt;class T, class... TNames&gt; </td></tr>
+<tr class="memitem:a36c7a4f0b06a6e3e6af6d452223e133b template"><td class="memItemLeft"><a class="el" href="#a19cd46690c640fe8fc18c40bc2d901db">Any</a> &amp;&#160;</td><td class="memItemRight"><b>set</b> (StringView name, TNames &amp;&amp;... names, T value)</td></tr>
+<tr class="memdesc:a36c7a4f0b06a6e3e6af6d452223e133b"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネストした名前付きプロパティへ値を設定する。 <br /></td></tr>
+<tr class="memitem:a644718bb2fb240de962dc3c9a1fdf0dc" id="r_a644718bb2fb240de962dc3c9a1fdf0dc"><td class="memItemLeft"><a id="a644718bb2fb240de962dc3c9a1fdf0dc" name="a644718bb2fb240de962dc3c9a1fdf0dc"></a>
+bool&#160;</td><td class="memItemRight"><b>empty</b> () const</td></tr>
+<tr class="memdesc:a644718bb2fb240de962dc3c9a1fdf0dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">空かどうかを判定する。 <br /></td></tr>
+<tr class="memitem:ac8bb3912a3ce86b15842e79d0b421204" id="r_ac8bb3912a3ce86b15842e79d0b421204"><td class="memItemLeft"><a id="ac8bb3912a3ce86b15842e79d0b421204" name="ac8bb3912a3ce86b15842e79d0b421204"></a>
+void&#160;</td><td class="memItemRight"><b>clear</b> ()</td></tr>
+<tr class="memdesc:ac8bb3912a3ce86b15842e79d0b421204"><td class="mdescLeft">&#160;</td><td class="mdescRight">保持している型情報とポインタをクリアする。 <br /></td></tr>
+<tr class="memitem:a1d5032807c4ca3f7402cc187690efd2d" id="r_a1d5032807c4ca3f7402cc187690efd2d"><td class="memItemLeft"><a id="a1d5032807c4ca3f7402cc187690efd2d" name="a1d5032807c4ca3f7402cc187690efd2d"></a>
+<a class="el" href="#a19cd46690c640fe8fc18c40bc2d901db">Any</a>&#160;</td><td class="memItemRight"><b>copy</b> () const</td></tr>
+<tr class="memdesc:a1d5032807c4ca3f7402cc187690efd2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">値をコピー生成する。 <br /></td></tr>
+<tr class="memitem:a9c330001d1593ddcf2e2aca50ffa44f0" id="r_a9c330001d1593ddcf2e2aca50ffa44f0"><td class="memTemplParams" colspan="2"><a id="a9c330001d1593ddcf2e2aca50ffa44f0" name="a9c330001d1593ddcf2e2aca50ffa44f0"></a>
+template&lt;class T&gt; </td></tr>
+<tr class="memitem:a9c330001d1593ddcf2e2aca50ffa44f0 template"><td class="memItemLeft">T&#160;</td><td class="memItemRight"><b>copy</b> () const</td></tr>
+<tr class="memdesc:a9c330001d1593ddcf2e2aca50ffa44f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">値をコピー生成する。 <br /></td></tr>
+<tr class="memitem:a8587e76420d5a2e3ae003b8baafc31dd" id="r_a8587e76420d5a2e3ae003b8baafc31dd"><td class="memTemplParams" colspan="2">template&lt;class T&gt; </td></tr>
+<tr class="memitem:a8587e76420d5a2e3ae003b8baafc31dd template"><td class="memItemLeft">UPtr&lt; T &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a8587e76420d5a2e3ae003b8baafc31dd">release</a> ()</td></tr>
+<tr class="memdesc:a8587e76420d5a2e3ae003b8baafc31dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">内部オブジェクトをUPtrとして取得する  <br /></td></tr>
+<tr class="memitem:a8bfcd3591ec247a5997356f1085901a0" id="r_a8bfcd3591ec247a5997356f1085901a0"><td class="memItemLeft"><a id="a8bfcd3591ec247a5997356f1085901a0" name="a8bfcd3591ec247a5997356f1085901a0"></a>
+void&#160;</td><td class="memItemRight"><b>serialize</b> (<a class="el" href="../../de/d55/class_amuse_1_1_binary_writer.html">BinaryWriter</a> &amp;writer)</td></tr>
+<tr class="memdesc:a8bfcd3591ec247a5997356f1085901a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">内部オブジェクトをバイナリライターへシリアライズする。 <br /></td></tr>
+<tr class="memitem:ad09635007294497b9202114fc16b29b3" id="r_ad09635007294497b9202114fc16b29b3"><td class="memItemLeft"><a id="ad09635007294497b9202114fc16b29b3" name="ad09635007294497b9202114fc16b29b3"></a>
+void&#160;</td><td class="memItemRight"><b>deserialize</b> (<a class="el" href="../../dc/d78/class_amuse_1_1_binary_reader.html">BinaryReader</a> &amp;reader)</td></tr>
+<tr class="memdesc:ad09635007294497b9202114fc16b29b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">バイナリリーダーから内部オブジェクトへデシリアライズする。 <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静的関数</h2></td></tr>
+<tr class="memitem:ade10c2c24ea5dc20e05e5a75f42ffe08" id="r_ade10c2c24ea5dc20e05e5a75f42ffe08"><td class="memTemplParams" colspan="2"><a id="ade10c2c24ea5dc20e05e5a75f42ffe08" name="ade10c2c24ea5dc20e05e5a75f42ffe08"></a>
+template&lt;class T, class... Args&gt; </td></tr>
+<tr class="memitem:ade10c2c24ea5dc20e05e5a75f42ffe08 template"><td class="memItemLeft">static <a class="el" href="#a19cd46690c640fe8fc18c40bc2d901db">Any</a>&#160;</td><td class="memItemRight"><b>Create</b> (Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:ade10c2c24ea5dc20e05e5a75f42ffe08"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンスを生成する。 <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
+フレンド</h2></td></tr>
+<tr class="memitem:a386f5a9cf65610cb62143865e5637272" id="r_a386f5a9cf65610cb62143865e5637272"><td class="memItemLeft"><a id="a386f5a9cf65610cb62143865e5637272" name="a386f5a9cf65610cb62143865e5637272"></a>
+class&#160;</td><td class="memItemRight"><b>Property</b></td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">コンストラクタ</h2>
+<a id="a91c4026dc28de330498ae8d94bc7b55a" name="a91c4026dc28de330498ae8d94bc7b55a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91c4026dc28de330498ae8d94bc7b55a">&#9670;&#160;</a></span>Any()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Any </td>
+          <td>(</td>
+          <td class="paramtype">const Any &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>コピーコンストラクタ </p>
+<p>コピー代入されたAnyオブジェクトは常に参照Anyオブジェクトとして扱われます。 　明示的にコピーする必要がある場合は <a class="el" href="#a1d5032807c4ca3f7402cc187690efd2d" title="値をコピー生成する。">copy()</a> を使用してください。 コピー元のAnyオブジェクトが破棄された場合はコピー先のAnyオブジェクトは無効な状態になります。 </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="a47b60b185121d1637b0aa8fc3e2e6389" name="a47b60b185121d1637b0aa8fc3e2e6389"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47b60b185121d1637b0aa8fc3e2e6389">&#9670;&#160;</a></span>assign()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a19cd46690c640fe8fc18c40bc2d901db">Any</a> &amp; assign </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a19cd46690c640fe8fc18c40bc2d901db">Any</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>AnyオブジェクトにAnyオブジェクトを書き込む </p>
+<p>通常の代入演算子は内部オブジェクトを変更しないため、内部オブジェクトを変更する場合はこの関数を使用してください。 　　　　　<span class="tt">
+          int value = 0;
+          <a class="el" href="../../d0/d4c/class_amuse_1_1_any.html" title="任意の型を保持するクラス">Any</a> a = value;
+          a = Any(10);
+          assert(value==0);
+          a.assign(Any(10));
+          assert(value==10);
+          </span> </p>
+
+</div>
+</div>
+<a id="a9c3098ba7817bd76c39923064c59296b" name="a9c3098ba7817bd76c39923064c59296b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c3098ba7817bd76c39923064c59296b">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto operator= </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td> -&gt; std::enable_if_t&lt;!std::is_same_v&lt; remove_cvr_t&lt; T &gt;, <a class="el" href="#a19cd46690c640fe8fc18c40bc2d901db">Any</a> &gt;, <a class="el" href="#a19cd46690c640fe8fc18c40bc2d901db">Any</a> &amp; &gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Anyオブジェクトに値を代入する </p>
+<p>以下のタイプのAnyオブジェクトに対して代入は無視されます。</p><ul>
+<li>空のAnyオブジェクト</li>
+<li>書き込み不可のAnyオブジェクト</li>
+<li>異なる型の代入 </li>
+</ul>
+
+</div>
+</div>
+<a id="ac45d32d9f84d8ad16dc39f2e14e82e41" name="ac45d32d9f84d8ad16dc39f2e14e82e41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac45d32d9f84d8ad16dc39f2e14e82e41">&#9670;&#160;</a></span>operator[]()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Property operator[] </td>
+          <td>(</td>
+          <td class="paramtype">StringView</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>文字列からPropertyを取得 </p>
+<p>取得したプロパティは書き込み不可としてマークされます。 </p>
+
+</div>
+</div>
+<a id="a8587e76420d5a2e3ae003b8baafc31dd" name="a8587e76420d5a2e3ae003b8baafc31dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8587e76420d5a2e3ae003b8baafc31dd">&#9670;&#160;</a></span>release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UPtr&lt; T &gt; release </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>内部オブジェクトをUPtrとして取得する </p>
+<p>Anyオブジェクトが参照型の場合はnullptrを返します。 　　　　 キャスト不可の型の場合もnullptrを返します。 </p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>Runtime/Core/Public/Amuse/Core/Reflection/<a class="el" href="../../d2/db0/_any_8h_source.html">Any.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><a href="../../d0/d4c/class_amuse_1_1_any.html">Any</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

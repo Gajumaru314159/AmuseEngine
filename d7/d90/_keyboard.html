@@ -132,16 +132,16 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('d7/d90/_keyboa
 <li>キーボードデバイスの実装差を公開APIから隠蔽すること。</li>
 </ul>
 <h1>基本設計</h1>
-<div class="fragment"><div class="line"><span class="keywordflow">if</span> (Input::Keyboard::Escape.down()) {</div>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span> (Keyboard::Escape.down()) {</div>
 <div class="line">    requestExit();</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line">Input::ButtonHandle handle;</div>
-<div class="line">Input::Keyboard::Space.bindDown(handle, [] {</div>
+<div class="line">ButtonHandle handle;</div>
+<div class="line">Keyboard::Space.bindDown(handle, [] {</div>
 <div class="line">    LOG_INFO(<span class="stringliteral">&quot;Space down&quot;</span>);</div>
 <div class="line">});</div>
 <div class="line"> </div>
-<div class="line">Input::Button enter = Input::Keyboard::GetButton(Input::Key::Enter);</div>
+<div class="line">Button enter = Keyboard::GetButton(Key::Enter);</div>
 </div><!-- fragment --><h1>API</h1>
 <div class="fragment"><div class="line"></div>
 <div class="line"><span class="keyword">static</span> <span class="keyword">constexpr</span> Button GetButton(Key key);</div>

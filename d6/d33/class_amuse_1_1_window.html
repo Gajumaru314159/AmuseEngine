@@ -1,0 +1,372 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: Window クラス</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d6/d33/class_amuse_1_1_window.html','../../','db/dd2/class_amuse_1_1_window-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">メソッド</a> &#124;
+<a href="#pub-static-methods">静的関数</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="../../db/dd2/class_amuse_1_1_window-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">Window クラス<span class="mlabels"><span class="mlabel abstract">abstract</span></span><div class="ingroups"><a class="el" href="../../df/de5/group___amuse_platform.html">Platform</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">説明</h2>
+<div class="textblock"><p>ウィンドウ </p>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+メソッド</h2></td></tr>
+<tr class="memitem:a01934d671f8a14acab282ff730bfd482" id="r_a01934d671f8a14acab282ff730bfd482"><td class="memItemLeft"><a id="a01934d671f8a14acab282ff730bfd482" name="a01934d671f8a14acab282ff730bfd482"></a>
+virtual&#160;</td><td class="memItemRight"><b>~Window</b> () override</td></tr>
+<tr class="memdesc:a01934d671f8a14acab282ff730bfd482"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ <br /></td></tr>
+<tr class="memitem:ac886eefcc5f111448dfb029bec0e7cf0" id="r_ac886eefcc5f111448dfb029bec0e7cf0"><td class="memItemLeft"><a id="ac886eefcc5f111448dfb029bec0e7cf0" name="ac886eefcc5f111448dfb029bec0e7cf0"></a>
+virtual void&#160;</td><td class="memItemRight"><b>show</b> ()=0</td></tr>
+<tr class="memdesc:ac886eefcc5f111448dfb029bec0e7cf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウを表示する <br /></td></tr>
+<tr class="memitem:af6ee7eacbde6b379b68d954e44f6e549" id="r_af6ee7eacbde6b379b68d954e44f6e549"><td class="memItemLeft"><a id="af6ee7eacbde6b379b68d954e44f6e549" name="af6ee7eacbde6b379b68d954e44f6e549"></a>
+virtual void&#160;</td><td class="memItemRight"><b>close</b> ()=0</td></tr>
+<tr class="memdesc:af6ee7eacbde6b379b68d954e44f6e549"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウを閉じる <br /></td></tr>
+<tr class="memitem:a1ba49ca02289f279d45e065483a392f9" id="r_a1ba49ca02289f279d45e065483a392f9"><td class="memItemLeft"><a id="a1ba49ca02289f279d45e065483a392f9" name="a1ba49ca02289f279d45e065483a392f9"></a>
+virtual void&#160;</td><td class="memItemRight"><b>maximize</b> ()=0</td></tr>
+<tr class="memdesc:a1ba49ca02289f279d45e065483a392f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウを最大化する <br /></td></tr>
+<tr class="memitem:a9e5fc714552d6e1d4e5cad5bd4eadd2d" id="r_a9e5fc714552d6e1d4e5cad5bd4eadd2d"><td class="memItemLeft"><a id="a9e5fc714552d6e1d4e5cad5bd4eadd2d" name="a9e5fc714552d6e1d4e5cad5bd4eadd2d"></a>
+virtual void&#160;</td><td class="memItemRight"><b>minimize</b> ()=0</td></tr>
+<tr class="memdesc:a9e5fc714552d6e1d4e5cad5bd4eadd2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウを最小化する <br /></td></tr>
+<tr class="memitem:afe057c9cdc56b52d0967c12beff5ec10" id="r_afe057c9cdc56b52d0967c12beff5ec10"><td class="memItemLeft"><a id="afe057c9cdc56b52d0967c12beff5ec10" name="afe057c9cdc56b52d0967c12beff5ec10"></a>
+virtual void&#160;</td><td class="memItemRight"><b>moveToCenter</b> ()=0</td></tr>
+<tr class="memdesc:afe057c9cdc56b52d0967c12beff5ec10"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウを現在のモニタの中央に移動する <br /></td></tr>
+<tr class="memitem:ab243512d3ebc29ea71a16f2b877b0e3c" id="r_ab243512d3ebc29ea71a16f2b877b0e3c"><td class="memItemLeft"><a id="ab243512d3ebc29ea71a16f2b877b0e3c" name="ab243512d3ebc29ea71a16f2b877b0e3c"></a>
+virtual void&#160;</td><td class="memItemRight"><b>restoreSize</b> ()=0</td></tr>
+<tr class="memdesc:ab243512d3ebc29ea71a16f2b877b0e3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウサイズを元のサイズに戻す <br /></td></tr>
+<tr class="memitem:ad100410d2272437d7b9d829c34cde64e" id="r_ad100410d2272437d7b9d829c34cde64e"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#ad100410d2272437d7b9d829c34cde64e">isValid</a> () const noexcept=0</td></tr>
+<tr class="memdesc:ad100410d2272437d7b9d829c34cde64e"><td class="mdescLeft">&#160;</td><td class="mdescRight">妥当な状態か  <br /></td></tr>
+<tr class="memitem:af337641b394d911826bc0b152c2121e3" id="r_af337641b394d911826bc0b152c2121e3"><td class="memItemLeft"><a id="af337641b394d911826bc0b152c2121e3" name="af337641b394d911826bc0b152c2121e3"></a>
+virtual bool&#160;</td><td class="memItemRight"><b>isMainWindow</b> () const =0</td></tr>
+<tr class="memdesc:af337641b394d911826bc0b152c2121e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">メインウィンドウか <br /></td></tr>
+<tr class="memitem:a4cf65d27fd215deab90f34224bf14f0b" id="r_a4cf65d27fd215deab90f34224bf14f0b"><td class="memItemLeft"><a id="a4cf65d27fd215deab90f34224bf14f0b" name="a4cf65d27fd215deab90f34224bf14f0b"></a>
+virtual WindowStates&#160;</td><td class="memItemRight"><b>getState</b> () const =0</td></tr>
+<tr class="memdesc:a4cf65d27fd215deab90f34224bf14f0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウの状態を取得する <br /></td></tr>
+<tr class="memitem:ade4aa70e1cf330fec39b58ebe9eb961c" id="r_ade4aa70e1cf330fec39b58ebe9eb961c"><td class="memItemLeft">virtual <a class="el" href="../../d3/d51/struct_amuse_1_1_vec2.html">Vec2</a>&#160;</td><td class="memItemRight"><a class="el" href="#ade4aa70e1cf330fec39b58ebe9eb961c">getScreenPoint</a> (const <a class="el" href="../../d3/d51/struct_amuse_1_1_vec2.html">Vec2</a> &amp;clientPoint) const =0</td></tr>
+<tr class="memdesc:ade4aa70e1cf330fec39b58ebe9eb961c"><td class="mdescLeft">&#160;</td><td class="mdescRight">スクリーン座標を取得  <br /></td></tr>
+<tr class="memitem:aa287af569300a8fe96c8632ef496821a" id="r_aa287af569300a8fe96c8632ef496821a"><td class="memItemLeft">virtual <a class="el" href="../../d3/d51/struct_amuse_1_1_vec2.html">Vec2</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa287af569300a8fe96c8632ef496821a">getClientPoint</a> (const <a class="el" href="../../d3/d51/struct_amuse_1_1_vec2.html">Vec2</a> &amp;screenPoint) const =0</td></tr>
+<tr class="memdesc:aa287af569300a8fe96c8632ef496821a"><td class="mdescLeft">&#160;</td><td class="mdescRight">クライアント座標を取得  <br /></td></tr>
+<tr class="memitem:a4d6ae6e11a9809dd3a37842f0db1a147" id="r_a4d6ae6e11a9809dd3a37842f0db1a147"><td class="memItemLeft"><a id="a4d6ae6e11a9809dd3a37842f0db1a147" name="a4d6ae6e11a9809dd3a37842f0db1a147"></a>
+virtual void&#160;</td><td class="memItemRight"><b>setTitle</b> (StringView getTitle)=0</td></tr>
+<tr class="memdesc:a4d6ae6e11a9809dd3a37842f0db1a147"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウのタイトルを設定する <br /></td></tr>
+<tr class="memitem:a92558e3c27f2a7b74f0f4810e9810b5f" id="r_a92558e3c27f2a7b74f0f4810e9810b5f"><td class="memItemLeft"><a id="a92558e3c27f2a7b74f0f4810e9810b5f" name="a92558e3c27f2a7b74f0f4810e9810b5f"></a>
+virtual const String &amp;&#160;</td><td class="memItemRight"><b>getTitle</b> () const =0</td></tr>
+<tr class="memdesc:a92558e3c27f2a7b74f0f4810e9810b5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウのタイトルを設定する <br /></td></tr>
+<tr class="memitem:aea5afbace332116576bee167fd5ebba7" id="r_aea5afbace332116576bee167fd5ebba7"><td class="memItemLeft"><a id="aea5afbace332116576bee167fd5ebba7" name="aea5afbace332116576bee167fd5ebba7"></a>
+virtual void&#160;</td><td class="memItemRight"><b>setPosition</b> (<a class="el" href="../../d3/d51/struct_amuse_1_1_vec2.html">Vec2</a> position)=0</td></tr>
+<tr class="memdesc:aea5afbace332116576bee167fd5ebba7"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウの位置を設定する <br /></td></tr>
+<tr class="memitem:a1c54a702059bf56c928a50a0517d16bf" id="r_a1c54a702059bf56c928a50a0517d16bf"><td class="memItemLeft"><a id="a1c54a702059bf56c928a50a0517d16bf" name="a1c54a702059bf56c928a50a0517d16bf"></a>
+virtual <a class="el" href="../../d3/d51/struct_amuse_1_1_vec2.html">Vec2</a>&#160;</td><td class="memItemRight"><b>getPosition</b> () const noexcept=0</td></tr>
+<tr class="memdesc:a1c54a702059bf56c928a50a0517d16bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウの位置を取得する <br /></td></tr>
+<tr class="memitem:a19ab33272200dd9468068367c84ad6b7" id="r_a19ab33272200dd9468068367c84ad6b7"><td class="memItemLeft"><a id="a19ab33272200dd9468068367c84ad6b7" name="a19ab33272200dd9468068367c84ad6b7"></a>
+virtual void&#160;</td><td class="memItemRight"><b>setSize</b> (<a class="el" href="../../d3/d51/struct_amuse_1_1_vec2.html">Vec2</a> size)=0</td></tr>
+<tr class="memdesc:a19ab33272200dd9468068367c84ad6b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウのサイズを設定する <br /></td></tr>
+<tr class="memitem:a7df2084058ee3cf62aacd4eb52122cc0" id="r_a7df2084058ee3cf62aacd4eb52122cc0"><td class="memItemLeft"><a id="a7df2084058ee3cf62aacd4eb52122cc0" name="a7df2084058ee3cf62aacd4eb52122cc0"></a>
+virtual <a class="el" href="../../d3/d51/struct_amuse_1_1_vec2.html">Vec2</a>&#160;</td><td class="memItemRight"><b>getSize</b> () const =0</td></tr>
+<tr class="memdesc:a7df2084058ee3cf62aacd4eb52122cc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウサイズを取得 <br /></td></tr>
+<tr class="memitem:a29545b002d65776f178809fb5ba566e5" id="r_a29545b002d65776f178809fb5ba566e5"><td class="memItemLeft"><a id="a29545b002d65776f178809fb5ba566e5" name="a29545b002d65776f178809fb5ba566e5"></a>
+virtual <a class="el" href="../../df/de5/group___amuse_platform.html#ga5773202ab7ffd1746de9d527927198a3">WindowMode</a>&#160;</td><td class="memItemRight"><b>getMode</b> () const =0</td></tr>
+<tr class="memdesc:a29545b002d65776f178809fb5ba566e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウ・モードを取得する <br /></td></tr>
+<tr class="memitem:ad6ccdecd690b55af0b89e048143bb0dd" id="r_ad6ccdecd690b55af0b89e048143bb0dd"><td class="memItemLeft"><a id="ad6ccdecd690b55af0b89e048143bb0dd" name="ad6ccdecd690b55af0b89e048143bb0dd"></a>
+virtual void&#160;</td><td class="memItemRight"><b>setMode</b> (<a class="el" href="../../df/de5/group___amuse_platform.html#ga5773202ab7ffd1746de9d527927198a3">WindowMode</a> mode)=0</td></tr>
+<tr class="memdesc:ad6ccdecd690b55af0b89e048143bb0dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウ・モードを設定する <br /></td></tr>
+<tr class="memitem:a64a5bafb830be9701d061b794583ac6e" id="r_a64a5bafb830be9701d061b794583ac6e"><td class="memItemLeft"><a id="a64a5bafb830be9701d061b794583ac6e" name="a64a5bafb830be9701d061b794583ac6e"></a>
+virtual <a class="el" href="../../df/de5/group___amuse_platform.html#ga60208dacff2b4c11b684ab1e19eda6d3">WindowStyle</a>&#160;</td><td class="memItemRight"><b>getStyle</b> () const =0</td></tr>
+<tr class="memdesc:a64a5bafb830be9701d061b794583ac6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウのスタイルを取得する <br /></td></tr>
+<tr class="memitem:a34b8ad707f46ff1f0a4f9a642102043c" id="r_a34b8ad707f46ff1f0a4f9a642102043c"><td class="memItemLeft"><a id="a34b8ad707f46ff1f0a4f9a642102043c" name="a34b8ad707f46ff1f0a4f9a642102043c"></a>
+virtual void&#160;</td><td class="memItemRight"><b>setStyle</b> (<a class="el" href="../../df/de5/group___amuse_platform.html#ga60208dacff2b4c11b684ab1e19eda6d3">WindowStyle</a> style)=0</td></tr>
+<tr class="memdesc:a34b8ad707f46ff1f0a4f9a642102043c"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウのスタイルを設定する <br /></td></tr>
+<tr class="memitem:a9020002c2e129d11e298ce1783810562" id="r_a9020002c2e129d11e298ce1783810562"><td class="memItemLeft">virtual void *&#160;</td><td class="memItemRight"><a class="el" href="#a9020002c2e129d11e298ce1783810562">getHandle</a> () const =0</td></tr>
+<tr class="memdesc:a9020002c2e129d11e298ce1783810562"><td class="mdescLeft">&#160;</td><td class="mdescRight">ハンドル取得  <br /></td></tr>
+<tr class="memitem:aa8371139d339f2c715ac864b4a80850d" id="r_aa8371139d339f2c715ac864b4a80850d"><td class="memItemLeft"><a id="aa8371139d339f2c715ac864b4a80850d" name="aa8371139d339f2c715ac864b4a80850d"></a>
+virtual String&#160;</td><td class="memItemRight"><b>getTextInput</b> ()=0</td></tr>
+<tr class="memdesc:aa8371139d339f2c715ac864b4a80850d"><td class="mdescLeft">&#160;</td><td class="mdescRight">テキスト入力インターフェースを取得する <br /></td></tr>
+<tr class="memitem:a1d3bc1edb1214061f48cf8b08a041f2a" id="r_a1d3bc1edb1214061f48cf8b08a041f2a"><td class="memItemLeft"><a id="a1d3bc1edb1214061f48cf8b08a041f2a" name="a1d3bc1edb1214061f48cf8b08a041f2a"></a>
+virtual void&#160;</td><td class="memItemRight"><b>addEventListener</b> (WindowEventHandle &amp;handle, <a class="el" href="../../d3/dd8/class_amuse_1_1_event_notifier.html#a986d64cc7ee2d189d43619f9eaf1ee16">WindowEventNotifier::delegate_type</a> func)=0</td></tr>
+<tr class="memdesc:a1d3bc1edb1214061f48cf8b08a041f2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウ・イベントのリスナを追加する <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静的関数</h2></td></tr>
+<tr class="memitem:aaabd27bea7c606a9016481bed702fabd" id="r_aaabd27bea7c606a9016481bed702fabd"><td class="memItemLeft"><a id="aaabd27bea7c606a9016481bed702fabd" name="aaabd27bea7c606a9016481bed702fabd"></a>
+static Ref&lt; <a class="el" href="#a6cbfa660b1af1f7020fc63dce78aabad">Window</a> &gt;&#160;</td><td class="memItemRight"><b>Create</b> (const <a class="el" href="../../d1/d0c/struct_amuse_1_1_window_desc.html">WindowDesc</a> &amp;desc)</td></tr>
+<tr class="memdesc:aaabd27bea7c606a9016481bed702fabd"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウを生成 <br /></td></tr>
+<tr class="memitem:aaedc57fb2c4337a0d31c5f57d56bfc87" id="r_aaedc57fb2c4337a0d31c5f57d56bfc87"><td class="memItemLeft"><a id="aaedc57fb2c4337a0d31c5f57d56bfc87" name="aaedc57fb2c4337a0d31c5f57d56bfc87"></a>
+static Ref&lt; <a class="el" href="#a6cbfa660b1af1f7020fc63dce78aabad">Window</a> &gt;&#160;</td><td class="memItemRight"><b>Main</b> ()</td></tr>
+<tr class="memdesc:aaedc57fb2c4337a0d31c5f57d56bfc87"><td class="mdescLeft">&#160;</td><td class="mdescRight">メインウィンドウを取得 <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a6cbfa660b1af1f7020fc63dce78aabad" id="r_a6cbfa660b1af1f7020fc63dce78aabad"><td class="memItemLeft"><a id="a6cbfa660b1af1f7020fc63dce78aabad" name="a6cbfa660b1af1f7020fc63dce78aabad"></a>
+&#160;</td><td class="memItemRight"><b>Window</b> ()=default</td></tr>
+<tr class="memdesc:a6cbfa660b1af1f7020fc63dce78aabad"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ <br /></td></tr>
+<tr class="inherit_header pro_methods_class_amuse_1_1_ref_object"><td colspan="2">基底クラス <a class="el" href="../../d0/dcb/class_amuse_1_1_ref_object.html">RefObject</a> に属する継承限定公開メンバ関数</td></tr>
+<tr class="memitem:a54e7592a1879afe888737819461f0bd6 pro_methods_class_amuse_1_1_ref_object" id="r_a54e7592a1879afe888737819461f0bd6"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="../../d0/dcb/class_amuse_1_1_ref_object.html#a54e7592a1879afe888737819461f0bd6">RefObject</a> ()</td></tr>
+<tr class="memdesc:a54e7592a1879afe888737819461f0bd6 pro_methods_class_amuse_1_1_ref_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <br /></td></tr>
+<tr class="memitem:a926c5f9b99365954b5d7865b52e9bb4b pro_methods_class_amuse_1_1_ref_object" id="r_a926c5f9b99365954b5d7865b52e9bb4b"><td class="memItemLeft">
+virtual&#160;</td><td class="memItemRight"><b>~RefObject</b> ()</td></tr>
+<tr class="memdesc:a926c5f9b99365954b5d7865b52e9bb4b pro_methods_class_amuse_1_1_ref_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ <br /></td></tr>
+<tr class="memitem:a4e44143f72657f0e69d2a1816b6cc54d pro_methods_class_amuse_1_1_ref_object" id="r_a4e44143f72657f0e69d2a1816b6cc54d"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="../../d0/dcb/class_amuse_1_1_ref_object.html#a4e44143f72657f0e69d2a1816b6cc54d">finalize</a> ()</td></tr>
+<tr class="memdesc:a4e44143f72657f0e69d2a1816b6cc54d pro_methods_class_amuse_1_1_ref_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">参照カウントが0になったときの処理  <br /></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="aa287af569300a8fe96c8632ef496821a" name="aa287af569300a8fe96c8632ef496821a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa287af569300a8fe96c8632ef496821a">&#9670;&#160;</a></span>getClientPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../d3/d51/struct_amuse_1_1_vec2.html">Vec2</a> getClientPoint </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d3/d51/struct_amuse_1_1_vec2.html">Vec2</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>screenPoint</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>クライアント座標を取得 </p>
+<p>スクリーン座標をクライアント座標に変換して取得する。 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">screenPoint</td><td>スクリーン座標 <br  />
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>クライアント座標 </dd></dl>
+
+</div>
+</div>
+<a id="a9020002c2e129d11e298ce1783810562" name="a9020002c2e129d11e298ce1783810562"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9020002c2e129d11e298ce1783810562">&#9670;&#160;</a></span>getHandle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void * getHandle </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ハンドル取得 </p>
+<pre class="fragment">     |Platform|Type  |
+     |--------|------|
+     |Windows | HWND |
+</pre> 
+</div>
+</div>
+<a id="ade4aa70e1cf330fec39b58ebe9eb961c" name="ade4aa70e1cf330fec39b58ebe9eb961c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade4aa70e1cf330fec39b58ebe9eb961c">&#9670;&#160;</a></span>getScreenPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../d3/d51/struct_amuse_1_1_vec2.html">Vec2</a> getScreenPoint </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d3/d51/struct_amuse_1_1_vec2.html">Vec2</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>clientPoint</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>スクリーン座標を取得 </p>
+<p>クライアント座標をスクリーン座標に変換して取得する。 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clientPoint</td><td>クライアント座標 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>スクリーン座標 </dd></dl>
+
+</div>
+</div>
+<a id="ad100410d2272437d7b9d829c34cde64e" name="ad100410d2272437d7b9d829c34cde64e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad100410d2272437d7b9d829c34cde64e">&#9670;&#160;</a></span>isValid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool isValid </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>妥当な状態か </p>
+<p>システムからウィンドウのクローズ処理が呼ばれた場合false を返すようになります。 </p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>Runtime/Platform/Public/Amuse/Platform/<a class="el" href="../../de/d42/_window_8h_source.html">Window.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><a href="../../d6/d33/class_amuse_1_1_window.html">Window</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

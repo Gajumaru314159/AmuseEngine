@@ -133,14 +133,14 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('de/de4/_system
 </ul>
 <h1>基本設計</h1>
 <div class="fragment"><div class="line">ServiceInjector injector;</div>
-<div class="line">Platform::RegisterPlatformService(injector);</div>
+<div class="line">RegisterPlatformService(injector);</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordflow">if</span> (!Platform::System::Setup()) {</div>
+<div class="line"><span class="keywordflow">if</span> (!Setup()) {</div>
 <div class="line">    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordflow">while</span> (running) {</div>
-<div class="line">    Platform::System::Update();</div>
+<div class="line">    Update();</div>
 <div class="line">}</div>
 </div><!-- fragment --><h1>API</h1>
 <div class="fragment"><div class="line"></div>

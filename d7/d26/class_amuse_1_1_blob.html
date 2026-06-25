@@ -1,0 +1,299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: Blob クラス</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d7/d26/class_amuse_1_1_blob.html','../../','d9/d76/class_amuse_1_1_blob-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-methods">メソッド</a> &#124;
+<a href="../../d9/d76/class_amuse_1_1_blob-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">Blob クラス<div class="ingroups"><a class="el" href="../../da/d78/group___amuse_core.html">Core</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">説明</h2>
+<div class="textblock"><p>バイナリデータ(Binary Large Object) </p>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:a20ea715a67d56ab65e28060b9e0d4361" id="r_a20ea715a67d56ab65e28060b9e0d4361"><td class="memItemLeft"><a id="a20ea715a67d56ab65e28060b9e0d4361" name="a20ea715a67d56ab65e28060b9e0d4361"></a>
+using&#160;</td><td class="memItemRight"><b>base_type</b> = Vector&lt;byte&gt;</td></tr>
+<tr class="memdesc:a20ea715a67d56ab65e28060b9e0d4361"><td class="mdescLeft">&#160;</td><td class="mdescRight">内部型 <br /></td></tr>
+<tr class="memitem:a890efd79e5a369ae8dfe7018b421a367" id="r_a890efd79e5a369ae8dfe7018b421a367"><td class="memItemLeft"><a id="a890efd79e5a369ae8dfe7018b421a367" name="a890efd79e5a369ae8dfe7018b421a367"></a>
+using&#160;</td><td class="memItemRight"><b>iterator</b> = base_type::iterator</td></tr>
+<tr class="memdesc:a890efd79e5a369ae8dfe7018b421a367"><td class="mdescLeft">&#160;</td><td class="mdescRight">イテレータ <br /></td></tr>
+<tr class="memitem:a03e021754df44f4d97102e2b86e63a7a" id="r_a03e021754df44f4d97102e2b86e63a7a"><td class="memItemLeft"><a id="a03e021754df44f4d97102e2b86e63a7a" name="a03e021754df44f4d97102e2b86e63a7a"></a>
+using&#160;</td><td class="memItemRight"><b>const_iterator</b> = base_type::const_iterator</td></tr>
+<tr class="memdesc:a03e021754df44f4d97102e2b86e63a7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">イテレータ(const) <br /></td></tr>
+<tr class="memitem:af9c8909542f1af835e7f840ec9d21d87" id="r_af9c8909542f1af835e7f840ec9d21d87"><td class="memItemLeft"><a id="af9c8909542f1af835e7f840ec9d21d87" name="af9c8909542f1af835e7f840ec9d21d87"></a>
+using&#160;</td><td class="memItemRight"><b>reverse_iterator</b> = base_type::reverse_iterator</td></tr>
+<tr class="memdesc:af9c8909542f1af835e7f840ec9d21d87"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆イテレータ <br /></td></tr>
+<tr class="memitem:a4563d54ea15d534bf6b93c38e866695d" id="r_a4563d54ea15d534bf6b93c38e866695d"><td class="memItemLeft"><a id="a4563d54ea15d534bf6b93c38e866695d" name="a4563d54ea15d534bf6b93c38e866695d"></a>
+using&#160;</td><td class="memItemRight"><b>const_reverse_iterator</b> = base_type::const_reverse_iterator</td></tr>
+<tr class="memdesc:a4563d54ea15d534bf6b93c38e866695d"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆イテレータ(const) <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+メソッド</h2></td></tr>
+<tr class="memitem:aaaf2106428424321fd018ff77db3c5b7" id="r_aaaf2106428424321fd018ff77db3c5b7"><td class="memItemLeft"><a id="aaaf2106428424321fd018ff77db3c5b7" name="aaaf2106428424321fd018ff77db3c5b7"></a>
+&#160;</td><td class="memItemRight"><b>Blob</b> ()=default</td></tr>
+<tr class="memdesc:aaaf2106428424321fd018ff77db3c5b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトコンストラクタ <br /></td></tr>
+<tr class="memitem:a8293a029ebc87be33cdd5f9e3dfcb0da" id="r_a8293a029ebc87be33cdd5f9e3dfcb0da"><td class="memItemLeft"><a id="a8293a029ebc87be33cdd5f9e3dfcb0da" name="a8293a029ebc87be33cdd5f9e3dfcb0da"></a>
+&#160;</td><td class="memItemRight"><b>Blob</b> (const Blob &amp;)=default</td></tr>
+<tr class="memdesc:a8293a029ebc87be33cdd5f9e3dfcb0da"><td class="mdescLeft">&#160;</td><td class="mdescRight">コピーコンストラクタ <br /></td></tr>
+<tr class="memitem:a7484131eeff9f0a8a03baf2432308225" id="r_a7484131eeff9f0a8a03baf2432308225"><td class="memItemLeft"><a id="a7484131eeff9f0a8a03baf2432308225" name="a7484131eeff9f0a8a03baf2432308225"></a>
+&#160;</td><td class="memItemRight"><b>Blob</b> (Blob &amp;&amp;)=default</td></tr>
+<tr class="memdesc:a7484131eeff9f0a8a03baf2432308225"><td class="mdescLeft">&#160;</td><td class="mdescRight">ムーブコンストラクタ <br /></td></tr>
+<tr class="memitem:ac0c483ac4171eb99875476ad51fd9583" id="r_ac0c483ac4171eb99875476ad51fd9583"><td class="memItemLeft"><a id="ac0c483ac4171eb99875476ad51fd9583" name="ac0c483ac4171eb99875476ad51fd9583"></a>
+&#160;</td><td class="memItemRight"><b>Blob</b> (class <a class="el" href="../../d8/df8/class_amuse_1_1_stream.html">Stream</a> &amp;)</td></tr>
+<tr class="memdesc:ac0c483ac4171eb99875476ad51fd9583"><td class="mdescLeft">&#160;</td><td class="mdescRight">ストリームから生成 <br /></td></tr>
+<tr class="memitem:a7f63e2e263638e388e28902e7871ae38" id="r_a7f63e2e263638e388e28902e7871ae38"><td class="memItemLeft"><a id="a7f63e2e263638e388e28902e7871ae38" name="a7f63e2e263638e388e28902e7871ae38"></a>
+&#160;</td><td class="memItemRight"><b>Blob</b> (size_t dataSize)</td></tr>
+<tr class="memdesc:a7f63e2e263638e388e28902e7871ae38"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ(サイズ指定) <br /></td></tr>
+<tr class="memitem:a39a75292eec1445f6185a483c7e1d4bf" id="r_a39a75292eec1445f6185a483c7e1d4bf"><td class="memItemLeft"><a id="a39a75292eec1445f6185a483c7e1d4bf" name="a39a75292eec1445f6185a483c7e1d4bf"></a>
+&#160;</td><td class="memItemRight"><b>Blob</b> (const void *pData, size_t dataSize)</td></tr>
+<tr class="memdesc:a39a75292eec1445f6185a483c7e1d4bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ(データ指定) <br /></td></tr>
+<tr class="memitem:a4b47b075cdce336f22e223391f82f38a" id="r_a4b47b075cdce336f22e223391f82f38a"><td class="memItemLeft"><a id="a4b47b075cdce336f22e223391f82f38a" name="a4b47b075cdce336f22e223391f82f38a"></a>
+&#160;</td><td class="memItemRight"><b>Blob</b> (const Vector&lt; byte &gt; &amp;data)</td></tr>
+<tr class="memdesc:a4b47b075cdce336f22e223391f82f38a"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ(vector指定) <br /></td></tr>
+<tr class="memitem:a6e261a8a1c84711148dc424029bf43a4" id="r_a6e261a8a1c84711148dc424029bf43a4"><td class="memItemLeft"><a id="a6e261a8a1c84711148dc424029bf43a4" name="a6e261a8a1c84711148dc424029bf43a4"></a>
+&#160;</td><td class="memItemRight"><b>Blob</b> (Vector&lt; byte &gt; &amp;&amp;data)</td></tr>
+<tr class="memdesc:a6e261a8a1c84711148dc424029bf43a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ(vector指定) <br /></td></tr>
+<tr class="memitem:a9f374c02f9a944b8b7d20c18215d2182" id="r_a9f374c02f9a944b8b7d20c18215d2182"><td class="memItemLeft"><a id="a9f374c02f9a944b8b7d20c18215d2182" name="a9f374c02f9a944b8b7d20c18215d2182"></a>
+<a class="el" href="#aaaf2106428424321fd018ff77db3c5b7">Blob</a> &amp;&#160;</td><td class="memItemRight"><b>operator=</b> (const <a class="el" href="#aaaf2106428424321fd018ff77db3c5b7">Blob</a> &amp;other)</td></tr>
+<tr class="memdesc:a9f374c02f9a944b8b7d20c18215d2182"><td class="mdescLeft">&#160;</td><td class="mdescRight">コピー代入演算子 <br /></td></tr>
+<tr class="memitem:a0483fe41b9e74db1d17ccfdbb0d06ad2" id="r_a0483fe41b9e74db1d17ccfdbb0d06ad2"><td class="memItemLeft"><a id="a0483fe41b9e74db1d17ccfdbb0d06ad2" name="a0483fe41b9e74db1d17ccfdbb0d06ad2"></a>
+<a class="el" href="#aaaf2106428424321fd018ff77db3c5b7">Blob</a> &amp;&#160;</td><td class="memItemRight"><b>operator=</b> (<a class="el" href="#aaaf2106428424321fd018ff77db3c5b7">Blob</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="memdesc:a0483fe41b9e74db1d17ccfdbb0d06ad2"><td class="mdescLeft">&#160;</td><td class="mdescRight">ムーブ代入演算子 <br /></td></tr>
+<tr class="memitem:a90f1fe1e8dcdef0dc533e0d611c10925" id="r_a90f1fe1e8dcdef0dc533e0d611c10925"><td class="memItemLeft"><a id="a90f1fe1e8dcdef0dc533e0d611c10925" name="a90f1fe1e8dcdef0dc533e0d611c10925"></a>
+<a class="el" href="#aaaf2106428424321fd018ff77db3c5b7">Blob</a> &amp;&#160;</td><td class="memItemRight"><b>operator=</b> (const Vector&lt; byte &gt; &amp;other)</td></tr>
+<tr class="memdesc:a90f1fe1e8dcdef0dc533e0d611c10925"><td class="mdescLeft">&#160;</td><td class="mdescRight">コピー代入演算子(Vector) <br /></td></tr>
+<tr class="memitem:a239a00874aae46d5891b6a0bf73142cf" id="r_a239a00874aae46d5891b6a0bf73142cf"><td class="memItemLeft"><a id="a239a00874aae46d5891b6a0bf73142cf" name="a239a00874aae46d5891b6a0bf73142cf"></a>
+<a class="el" href="#aaaf2106428424321fd018ff77db3c5b7">Blob</a> &amp;&#160;</td><td class="memItemRight"><b>operator=</b> (Vector&lt; byte &gt; &amp;&amp;other) noexcept</td></tr>
+<tr class="memdesc:a239a00874aae46d5891b6a0bf73142cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">ムーブ代入演算子(Vector) <br /></td></tr>
+<tr class="memitem:a5cfae1bd6d5b41b03eebbd94797d87ca" id="r_a5cfae1bd6d5b41b03eebbd94797d87ca"><td class="memItemLeft"><a id="a5cfae1bd6d5b41b03eebbd94797d87ca" name="a5cfae1bd6d5b41b03eebbd94797d87ca"></a>
+void&#160;</td><td class="memItemRight"><b>set</b> (const void *pData, size_t dataSize)</td></tr>
+<tr class="memdesc:a5cfae1bd6d5b41b03eebbd94797d87ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">データを設定 <br /></td></tr>
+<tr class="memitem:adc05293e236a433a168ddef99cc860df" id="r_adc05293e236a433a168ddef99cc860df"><td class="memItemLeft"><a id="adc05293e236a433a168ddef99cc860df" name="adc05293e236a433a168ddef99cc860df"></a>
+void&#160;</td><td class="memItemRight"><b>set</b> (const Vector&lt; byte &gt; &amp;data)</td></tr>
+<tr class="memdesc:adc05293e236a433a168ddef99cc860df"><td class="mdescLeft">&#160;</td><td class="mdescRight">データを設定(Vector) <br /></td></tr>
+<tr class="memitem:a5ef95daa28d00bd6f968316338a6102b" id="r_a5ef95daa28d00bd6f968316338a6102b"><td class="memItemLeft"><a id="a5ef95daa28d00bd6f968316338a6102b" name="a5ef95daa28d00bd6f968316338a6102b"></a>
+void&#160;</td><td class="memItemRight"><b>append</b> (byte byte)</td></tr>
+<tr class="memdesc:a5ef95daa28d00bd6f968316338a6102b"><td class="mdescLeft">&#160;</td><td class="mdescRight">データを追加 <br /></td></tr>
+<tr class="memitem:a81a15401ae826695e4e9635b98ceee0f" id="r_a81a15401ae826695e4e9635b98ceee0f"><td class="memItemLeft"><a id="a81a15401ae826695e4e9635b98ceee0f" name="a81a15401ae826695e4e9635b98ceee0f"></a>
+void&#160;</td><td class="memItemRight"><b>append</b> (const void *pData, size_t dataSize)</td></tr>
+<tr class="memdesc:a81a15401ae826695e4e9635b98ceee0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">データを追加 <br /></td></tr>
+<tr class="memitem:a2ccc67752d101e87bb65ae301a93a942" id="r_a2ccc67752d101e87bb65ae301a93a942"><td class="memItemLeft"><a id="a2ccc67752d101e87bb65ae301a93a942" name="a2ccc67752d101e87bb65ae301a93a942"></a>
+void&#160;</td><td class="memItemRight"><b>append</b> (const Vector&lt; byte &gt; &amp;data)</td></tr>
+<tr class="memdesc:a2ccc67752d101e87bb65ae301a93a942"><td class="mdescLeft">&#160;</td><td class="mdescRight">データを追加 <br /></td></tr>
+<tr class="memitem:a7c6675a5aa8c09f1efd1a7259b9a249c" id="r_a7c6675a5aa8c09f1efd1a7259b9a249c"><td class="memItemLeft"><a id="a7c6675a5aa8c09f1efd1a7259b9a249c" name="a7c6675a5aa8c09f1efd1a7259b9a249c"></a>
+bool&#160;</td><td class="memItemRight"><b>magic</b> (const Char magic[5]) const</td></tr>
+<tr class="memdesc:a7c6675a5aa8c09f1efd1a7259b9a249c"><td class="mdescLeft">&#160;</td><td class="mdescRight">マジックナンバーを持っているか <br /></td></tr>
+<tr class="memitem:aa6a7a774ff7bbb1b32760823b73b7018" id="r_aa6a7a774ff7bbb1b32760823b73b7018"><td class="memItemLeft"><a id="aa6a7a774ff7bbb1b32760823b73b7018" name="aa6a7a774ff7bbb1b32760823b73b7018"></a>
+bool&#160;</td><td class="memItemRight"><b>magic</b> (u32 magic) const</td></tr>
+<tr class="memdesc:aa6a7a774ff7bbb1b32760823b73b7018"><td class="mdescLeft">&#160;</td><td class="mdescRight">マジックナンバーを持っているか <br /></td></tr>
+<tr class="memitem:a44e12996468863794dbed8a7960a0741" id="r_a44e12996468863794dbed8a7960a0741"><td class="memItemLeft"><a id="a44e12996468863794dbed8a7960a0741" name="a44e12996468863794dbed8a7960a0741"></a>
+const byte &amp;&#160;</td><td class="memItemRight"><b>operator[]</b> (const size_t index) const</td></tr>
+<tr class="memdesc:a44e12996468863794dbed8a7960a0741"><td class="mdescLeft">&#160;</td><td class="mdescRight">バイトアクセス <br /></td></tr>
+<tr class="memitem:a85ea129a78950c982755648ac09ff0fd" id="r_a85ea129a78950c982755648ac09ff0fd"><td class="memItemLeft"><a id="a85ea129a78950c982755648ac09ff0fd" name="a85ea129a78950c982755648ac09ff0fd"></a>
+byte &amp;&#160;</td><td class="memItemRight"><b>operator[]</b> (const size_t index)</td></tr>
+<tr class="memdesc:a85ea129a78950c982755648ac09ff0fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">バイトアクセス <br /></td></tr>
+<tr class="memitem:a71d206f4d180dd0ba6d805cc21939b34" id="r_a71d206f4d180dd0ba6d805cc21939b34"><td class="memItemLeft"><a id="a71d206f4d180dd0ba6d805cc21939b34" name="a71d206f4d180dd0ba6d805cc21939b34"></a>
+const byte *&#160;</td><td class="memItemRight"><b>data</b> () const noexcept</td></tr>
+<tr class="memdesc:a71d206f4d180dd0ba6d805cc21939b34"><td class="mdescLeft">&#160;</td><td class="mdescRight">先頭データにアクセス <br /></td></tr>
+<tr class="memitem:ae855206aa5c80f9d9f3ec932ed165a55" id="r_ae855206aa5c80f9d9f3ec932ed165a55"><td class="memItemLeft"><a id="ae855206aa5c80f9d9f3ec932ed165a55" name="ae855206aa5c80f9d9f3ec932ed165a55"></a>
+byte *&#160;</td><td class="memItemRight"><b>data</b> () noexcept</td></tr>
+<tr class="memdesc:ae855206aa5c80f9d9f3ec932ed165a55"><td class="mdescLeft">&#160;</td><td class="mdescRight">先頭データにアクセス <br /></td></tr>
+<tr class="memitem:acb6e64611b9ca3c22de82e375c7d53b6" id="r_acb6e64611b9ca3c22de82e375c7d53b6"><td class="memItemLeft"><a id="acb6e64611b9ca3c22de82e375c7d53b6" name="acb6e64611b9ca3c22de82e375c7d53b6"></a>
+const Vector&lt; byte &gt; &amp;&#160;</td><td class="memItemRight"><b>toVector</b> () const noexcept</td></tr>
+<tr class="memdesc:acb6e64611b9ca3c22de82e375c7d53b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector にアクセス <br /></td></tr>
+<tr class="memitem:a3f6fc5de06a318920d84f3c3742db07f" id="r_a3f6fc5de06a318920d84f3c3742db07f"><td class="memItemLeft"><a id="a3f6fc5de06a318920d84f3c3742db07f" name="a3f6fc5de06a318920d84f3c3742db07f"></a>
+bool&#160;</td><td class="memItemRight"><b>empty</b> () const noexcept</td></tr>
+<tr class="memdesc:a3f6fc5de06a318920d84f3c3742db07f"><td class="mdescLeft">&#160;</td><td class="mdescRight">空か <br /></td></tr>
+<tr class="memitem:a420e60e9788bfa3b52aa3aab72ea3a5e" id="r_a420e60e9788bfa3b52aa3aab72ea3a5e"><td class="memItemLeft"><a id="a420e60e9788bfa3b52aa3aab72ea3a5e" name="a420e60e9788bfa3b52aa3aab72ea3a5e"></a>
+&#160;</td><td class="memItemRight"><b>operator bool</b> () const noexcept</td></tr>
+<tr class="memdesc:a420e60e9788bfa3b52aa3aab72ea3a5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">空か <br /></td></tr>
+<tr class="memitem:a3caedb145a667c26028740417dcf32c3" id="r_a3caedb145a667c26028740417dcf32c3"><td class="memItemLeft"><a id="a3caedb145a667c26028740417dcf32c3" name="a3caedb145a667c26028740417dcf32c3"></a>
+size_t&#160;</td><td class="memItemRight"><b>size</b> () const noexcept</td></tr>
+<tr class="memdesc:a3caedb145a667c26028740417dcf32c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">データサイズを取得 <br /></td></tr>
+<tr class="memitem:a260442ef344f843c480ff1f6aefd6db3" id="r_a260442ef344f843c480ff1f6aefd6db3"><td class="memItemLeft"><a id="a260442ef344f843c480ff1f6aefd6db3" name="a260442ef344f843c480ff1f6aefd6db3"></a>
+size_t&#160;</td><td class="memItemRight"><b>capacity</b> () const noexcept</td></tr>
+<tr class="memdesc:a260442ef344f843c480ff1f6aefd6db3"><td class="mdescLeft">&#160;</td><td class="mdescRight">キャパシティを取得 <br /></td></tr>
+<tr class="memitem:aecb4bd77fc3ff806ef4339e76c66bbf6" id="r_aecb4bd77fc3ff806ef4339e76c66bbf6"><td class="memItemLeft"><a id="aecb4bd77fc3ff806ef4339e76c66bbf6" name="aecb4bd77fc3ff806ef4339e76c66bbf6"></a>
+void&#160;</td><td class="memItemRight"><b>reserve</b> (size_t size)</td></tr>
+<tr class="memdesc:aecb4bd77fc3ff806ef4339e76c66bbf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">キャパシティを確保 <br /></td></tr>
+<tr class="memitem:a514affe27cc623fc5dccf1bf4648eb2a" id="r_a514affe27cc623fc5dccf1bf4648eb2a"><td class="memItemLeft"><a id="a514affe27cc623fc5dccf1bf4648eb2a" name="a514affe27cc623fc5dccf1bf4648eb2a"></a>
+void&#160;</td><td class="memItemRight"><b>resize</b> (size_t size)</td></tr>
+<tr class="memdesc:a514affe27cc623fc5dccf1bf4648eb2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">リサイズ <br /></td></tr>
+<tr class="memitem:a5f16304f80b6fb253c7b0ead3e16dd18" id="r_a5f16304f80b6fb253c7b0ead3e16dd18"><td class="memItemLeft"><a id="a5f16304f80b6fb253c7b0ead3e16dd18" name="a5f16304f80b6fb253c7b0ead3e16dd18"></a>
+void&#160;</td><td class="memItemRight"><b>shrink_to_fit</b> ()</td></tr>
+<tr class="memdesc:a5f16304f80b6fb253c7b0ead3e16dd18"><td class="mdescLeft">&#160;</td><td class="mdescRight">データサイズを縮める <br /></td></tr>
+<tr class="memitem:ac8bb3912a3ce86b15842e79d0b421204" id="r_ac8bb3912a3ce86b15842e79d0b421204"><td class="memItemLeft"><a id="ac8bb3912a3ce86b15842e79d0b421204" name="ac8bb3912a3ce86b15842e79d0b421204"></a>
+void&#160;</td><td class="memItemRight"><b>clear</b> ()</td></tr>
+<tr class="memdesc:ac8bb3912a3ce86b15842e79d0b421204"><td class="mdescLeft">&#160;</td><td class="mdescRight">データをクリア <br /></td></tr>
+<tr class="memitem:a979556eb331ec35eb33472a90a160f99" id="r_a979556eb331ec35eb33472a90a160f99"><td class="memItemLeft"><a id="a979556eb331ec35eb33472a90a160f99" name="a979556eb331ec35eb33472a90a160f99"></a>
+<a class="el" href="#a890efd79e5a369ae8dfe7018b421a367">iterator</a>&#160;</td><td class="memItemRight"><b>begin</b> () noexcept</td></tr>
+<tr class="memdesc:a979556eb331ec35eb33472a90a160f99"><td class="mdescLeft">&#160;</td><td class="mdescRight">開始イテレータ <br /></td></tr>
+<tr class="memitem:afc5380afa64b233d0df01a147616974b" id="r_afc5380afa64b233d0df01a147616974b"><td class="memItemLeft"><a id="afc5380afa64b233d0df01a147616974b" name="afc5380afa64b233d0df01a147616974b"></a>
+<a class="el" href="#a890efd79e5a369ae8dfe7018b421a367">iterator</a>&#160;</td><td class="memItemRight"><b>end</b> () noexcept</td></tr>
+<tr class="memdesc:afc5380afa64b233d0df01a147616974b"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了イテレータ <br /></td></tr>
+<tr class="memitem:a1ca1fc2c9fc3e169d5d0decfd1e54221" id="r_a1ca1fc2c9fc3e169d5d0decfd1e54221"><td class="memItemLeft"><a id="a1ca1fc2c9fc3e169d5d0decfd1e54221" name="a1ca1fc2c9fc3e169d5d0decfd1e54221"></a>
+<a class="el" href="#a03e021754df44f4d97102e2b86e63a7a">const_iterator</a>&#160;</td><td class="memItemRight"><b>begin</b> () const noexcept</td></tr>
+<tr class="memdesc:a1ca1fc2c9fc3e169d5d0decfd1e54221"><td class="mdescLeft">&#160;</td><td class="mdescRight">開始イテレータ(const) <br /></td></tr>
+<tr class="memitem:a5b9b57293fae9b18b26349ac0b3fdcd3" id="r_a5b9b57293fae9b18b26349ac0b3fdcd3"><td class="memItemLeft"><a id="a5b9b57293fae9b18b26349ac0b3fdcd3" name="a5b9b57293fae9b18b26349ac0b3fdcd3"></a>
+<a class="el" href="#a03e021754df44f4d97102e2b86e63a7a">const_iterator</a>&#160;</td><td class="memItemRight"><b>end</b> () const noexcept</td></tr>
+<tr class="memdesc:a5b9b57293fae9b18b26349ac0b3fdcd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了イテレータ(const) <br /></td></tr>
+<tr class="memitem:abeb76f7f3414f270020e6f467586bd93" id="r_abeb76f7f3414f270020e6f467586bd93"><td class="memItemLeft"><a id="abeb76f7f3414f270020e6f467586bd93" name="abeb76f7f3414f270020e6f467586bd93"></a>
+<a class="el" href="#a03e021754df44f4d97102e2b86e63a7a">const_iterator</a>&#160;</td><td class="memItemRight"><b>cbegin</b> () const noexcept</td></tr>
+<tr class="memdesc:abeb76f7f3414f270020e6f467586bd93"><td class="mdescLeft">&#160;</td><td class="mdescRight">開始イテレータ(const) <br /></td></tr>
+<tr class="memitem:a9859a454bb6f50c654e280274d6a9d13" id="r_a9859a454bb6f50c654e280274d6a9d13"><td class="memItemLeft"><a id="a9859a454bb6f50c654e280274d6a9d13" name="a9859a454bb6f50c654e280274d6a9d13"></a>
+<a class="el" href="#a03e021754df44f4d97102e2b86e63a7a">const_iterator</a>&#160;</td><td class="memItemRight"><b>cend</b> () const noexcept</td></tr>
+<tr class="memdesc:a9859a454bb6f50c654e280274d6a9d13"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了イテレータ(const) <br /></td></tr>
+<tr class="memitem:ac7cd69c57ab7c76ac6eb26c474a43053" id="r_ac7cd69c57ab7c76ac6eb26c474a43053"><td class="memItemLeft"><a id="ac7cd69c57ab7c76ac6eb26c474a43053" name="ac7cd69c57ab7c76ac6eb26c474a43053"></a>
+<a class="el" href="#af9c8909542f1af835e7f840ec9d21d87">reverse_iterator</a>&#160;</td><td class="memItemRight"><b>rbegin</b> () noexcept</td></tr>
+<tr class="memdesc:ac7cd69c57ab7c76ac6eb26c474a43053"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆開始イテレータ <br /></td></tr>
+<tr class="memitem:ad4e3dd675f301e0b86183699a2db7d79" id="r_ad4e3dd675f301e0b86183699a2db7d79"><td class="memItemLeft"><a id="ad4e3dd675f301e0b86183699a2db7d79" name="ad4e3dd675f301e0b86183699a2db7d79"></a>
+<a class="el" href="#af9c8909542f1af835e7f840ec9d21d87">reverse_iterator</a>&#160;</td><td class="memItemRight"><b>rend</b> () noexcept</td></tr>
+<tr class="memdesc:ad4e3dd675f301e0b86183699a2db7d79"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆終了イテレータ <br /></td></tr>
+<tr class="memitem:aff2c14a4e54378db02316aa5dacce912" id="r_aff2c14a4e54378db02316aa5dacce912"><td class="memItemLeft"><a id="aff2c14a4e54378db02316aa5dacce912" name="aff2c14a4e54378db02316aa5dacce912"></a>
+<a class="el" href="#a4563d54ea15d534bf6b93c38e866695d">const_reverse_iterator</a>&#160;</td><td class="memItemRight"><b>rbegin</b> () const noexcept</td></tr>
+<tr class="memdesc:aff2c14a4e54378db02316aa5dacce912"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆開始イテレータ(const) <br /></td></tr>
+<tr class="memitem:ac5bfd48090cb59d7dd635954831415df" id="r_ac5bfd48090cb59d7dd635954831415df"><td class="memItemLeft"><a id="ac5bfd48090cb59d7dd635954831415df" name="ac5bfd48090cb59d7dd635954831415df"></a>
+<a class="el" href="#a4563d54ea15d534bf6b93c38e866695d">const_reverse_iterator</a>&#160;</td><td class="memItemRight"><b>rend</b> () const noexcept</td></tr>
+<tr class="memdesc:ac5bfd48090cb59d7dd635954831415df"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆終了イテレータ(const) <br /></td></tr>
+<tr class="memitem:abd227f43fec65b1bfeb96751b5eea9c4" id="r_abd227f43fec65b1bfeb96751b5eea9c4"><td class="memItemLeft"><a id="abd227f43fec65b1bfeb96751b5eea9c4" name="abd227f43fec65b1bfeb96751b5eea9c4"></a>
+<a class="el" href="#a4563d54ea15d534bf6b93c38e866695d">const_reverse_iterator</a>&#160;</td><td class="memItemRight"><b>crbegin</b> () const noexcept</td></tr>
+<tr class="memdesc:abd227f43fec65b1bfeb96751b5eea9c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆開始イテレータ(const) <br /></td></tr>
+<tr class="memitem:acbe115c4709d004c9899ef5855f96288" id="r_acbe115c4709d004c9899ef5855f96288"><td class="memItemLeft"><a id="acbe115c4709d004c9899ef5855f96288" name="acbe115c4709d004c9899ef5855f96288"></a>
+<a class="el" href="#a4563d54ea15d534bf6b93c38e866695d">const_reverse_iterator</a>&#160;</td><td class="memItemRight"><b>crend</b> () const noexcept</td></tr>
+<tr class="memdesc:acbe115c4709d004c9899ef5855f96288"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了イテレータ(const) <br /></td></tr>
+</table>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>Runtime/Core/Public/Amuse/Core/Misc/<a class="el" href="../../d3/da9/_blob_8h_source.html">Blob.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><a href="../../d7/d26/class_amuse_1_1_blob.html">Blob</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

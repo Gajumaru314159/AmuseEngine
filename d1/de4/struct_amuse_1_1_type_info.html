@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: TypeInfo 構造体</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d1/de4/struct_amuse_1_1_type_info.html','../../','d5/d7d/struct_amuse_1_1_type_info-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">メソッド</a> &#124;
+<a href="#pub-static-methods">静的関数</a> &#124;
+<a href="#pub-attribs">変数</a> &#124;
+<a href="../../d5/d7d/struct_amuse_1_1_type_info-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">TypeInfo 構造体<div class="ingroups"><a class="el" href="../../da/d78/group___amuse_core.html">Core</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">説明</h2>
+<div class="textblock"><p>型の生成、破棄、プロパティ、メソッド、列挙要素を保持するメタ情報。 </p>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+メソッド</h2></td></tr>
+<tr class="memitem:a695d36430979b98735639d500877e9d4" id="r_a695d36430979b98735639d500877e9d4"><td class="memItemLeft"><a id="a695d36430979b98735639d500877e9d4" name="a695d36430979b98735639d500877e9d4"></a>
+void *&#160;</td><td class="memItemRight"><b>copy</b> (const void *pointer) const</td></tr>
+<tr class="memdesc:a695d36430979b98735639d500877e9d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">登録済みコピー関数で値を複製する。 <br /></td></tr>
+<tr class="memitem:ad487439e71971ca41dbce99ee3eac092" id="r_ad487439e71971ca41dbce99ee3eac092"><td class="memItemLeft"><a id="ad487439e71971ca41dbce99ee3eac092" name="ad487439e71971ca41dbce99ee3eac092"></a>
+void&#160;</td><td class="memItemRight"><b>assign</b> (const void *from, void *to) const</td></tr>
+<tr class="memdesc:ad487439e71971ca41dbce99ee3eac092"><td class="mdescLeft">&#160;</td><td class="mdescRight">登録済み代入関数で値を代入する。 <br /></td></tr>
+<tr class="memitem:ae3f496a4529aa36d5792301eaf9aee11" id="r_ae3f496a4529aa36d5792301eaf9aee11"><td class="memItemLeft"><a id="ae3f496a4529aa36d5792301eaf9aee11" name="ae3f496a4529aa36d5792301eaf9aee11"></a>
+void&#160;</td><td class="memItemRight"><b>destroy</b> (void *pointer) const</td></tr>
+<tr class="memdesc:ae3f496a4529aa36d5792301eaf9aee11"><td class="mdescLeft">&#160;</td><td class="mdescRight">登録済みデストラクタで所有オブジェクトを破棄する。 <br /></td></tr>
+<tr class="memitem:afea224cf5fadf5d361fafa5d90b476ea" id="r_afea224cf5fadf5d361fafa5d90b476ea"><td class="memItemLeft"><a id="afea224cf5fadf5d361fafa5d90b476ea" name="afea224cf5fadf5d361fafa5d90b476ea"></a>
+void&#160;</td><td class="memItemRight"><b>destroyPlaced</b> (void *pointer) const</td></tr>
+<tr class="memdesc:afea224cf5fadf5d361fafa5d90b476ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">配置構築済みオブジェクトのデストラクタを呼び出す。 <br /></td></tr>
+<tr class="memitem:ad02217cbc4e62f8dcd3b82a837e1ef27" id="r_ad02217cbc4e62f8dcd3b82a837e1ef27"><td class="memItemLeft"><a id="ad02217cbc4e62f8dcd3b82a837e1ef27" name="ad02217cbc4e62f8dcd3b82a837e1ef27"></a>
+size_t&#160;</td><td class="memItemRight"><b>stride</b> () const</td></tr>
+<tr class="memdesc:ad02217cbc4e62f8dcd3b82a837e1ef27"><td class="mdescLeft">&#160;</td><td class="mdescRight">配列要素間のバイト幅を取得する。 <br /></td></tr>
+<tr class="memitem:adaef20b72c165ddff2c6eb9eaf04c79f" id="r_adaef20b72c165ddff2c6eb9eaf04c79f"><td class="memItemLeft"><a id="adaef20b72c165ddff2c6eb9eaf04c79f" name="adaef20b72c165ddff2c6eb9eaf04c79f"></a>
+bool&#160;</td><td class="memItemRight"><b>isBaseOf</b> (const <a class="el" href="../../d5/d11/class_amuse_1_1_type.html">Type</a> &amp;super) const</td></tr>
+<tr class="memdesc:adaef20b72c165ddff2c6eb9eaf04c79f"><td class="mdescLeft">&#160;</td><td class="mdescRight">この型が指定型を基底に持つか判定する。 <br /></td></tr>
+<tr class="memitem:a74f6438e454da6f135183ab7e9938c20" id="r_a74f6438e454da6f135183ab7e9938c20"><td class="memTemplParams" colspan="2"><a id="a74f6438e454da6f135183ab7e9938c20" name="a74f6438e454da6f135183ab7e9938c20"></a>
+template&lt;class T&gt; </td></tr>
+<tr class="memitem:a74f6438e454da6f135183ab7e9938c20 template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><b>isBaseOf</b> () const</td></tr>
+<tr class="memdesc:a74f6438e454da6f135183ab7e9938c20"><td class="mdescLeft">&#160;</td><td class="mdescRight">この型がテンプレート型を基底に持つか判定する。 <br /></td></tr>
+<tr class="memitem:ab790382af305a778b3ae34d4c67d81ce" id="r_ab790382af305a778b3ae34d4c67d81ce"><td class="memItemLeft"><a id="ab790382af305a778b3ae34d4c67d81ce" name="ab790382af305a778b3ae34d4c67d81ce"></a>
+bool&#160;</td><td class="memItemRight"><b>isSuperClassOf</b> (const <a class="el" href="../../d5/d11/class_amuse_1_1_type.html">Type</a> &amp;base) const</td></tr>
+<tr class="memdesc:ab790382af305a778b3ae34d4c67d81ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">この型が指定型の基底型か判定する。 <br /></td></tr>
+<tr class="memitem:a53f543fc9ad572a14c0c445fc5983719" id="r_a53f543fc9ad572a14c0c445fc5983719"><td class="memTemplParams" colspan="2"><a id="a53f543fc9ad572a14c0c445fc5983719" name="a53f543fc9ad572a14c0c445fc5983719"></a>
+template&lt;class T&gt; </td></tr>
+<tr class="memitem:a53f543fc9ad572a14c0c445fc5983719 template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><b>isSuperClassOf</b> () const</td></tr>
+<tr class="memdesc:a53f543fc9ad572a14c0c445fc5983719"><td class="mdescLeft">&#160;</td><td class="mdescRight">この型がテンプレート型の基底型か判定する。 <br /></td></tr>
+<tr class="memitem:a9fa784a7e0485beb57c74c606e3cf2cf" id="r_a9fa784a7e0485beb57c74c606e3cf2cf"><td class="memTemplParams" colspan="2"><a id="a9fa784a7e0485beb57c74c606e3cf2cf" name="a9fa784a7e0485beb57c74c606e3cf2cf"></a>
+template&lt;class... Args&gt; </td></tr>
+<tr class="memitem:a9fa784a7e0485beb57c74c606e3cf2cf template"><td class="memItemLeft">const <a class="el" href="../../d8/dbd/struct_amuse_1_1_constructor_info.html">ConstructorInfo</a> *&#160;</td><td class="memItemRight"><b>findConstructor</b> () const</td></tr>
+<tr class="memdesc:a9fa784a7e0485beb57c74c606e3cf2cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">一致するコンストラクタ情報を検索する。 <br /></td></tr>
+<tr class="memitem:a589a71ddecd4c28b6dcdcffdeeb975f0" id="r_a589a71ddecd4c28b6dcdcffdeeb975f0"><td class="memTemplParams" colspan="2"><a id="a589a71ddecd4c28b6dcdcffdeeb975f0" name="a589a71ddecd4c28b6dcdcffdeeb975f0"></a>
+template&lt;class T = void&gt; </td></tr>
+<tr class="memitem:a589a71ddecd4c28b6dcdcffdeeb975f0 template"><td class="memItemLeft">const <a class="el" href="../../d0/db9/struct_amuse_1_1_property_info.html">PropertyInfo</a> *&#160;</td><td class="memItemRight"><b>findProperty</b> (StringView name) const</td></tr>
+<tr class="memdesc:a589a71ddecd4c28b6dcdcffdeeb975f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">名前に一致するプロパティを検索する。 <br /></td></tr>
+<tr class="memitem:a829b77eadf43212fc5107b53805d4541" id="r_a829b77eadf43212fc5107b53805d4541"><td class="memItemLeft"><a id="a829b77eadf43212fc5107b53805d4541" name="a829b77eadf43212fc5107b53805d4541"></a>
+const <a class="el" href="../../dc/d50/struct_amuse_1_1_method_info.html">MethodInfo</a> *&#160;</td><td class="memItemRight"><b>findMethod</b> (StringView name) const</td></tr>
+<tr class="memdesc:a829b77eadf43212fc5107b53805d4541"><td class="mdescLeft">&#160;</td><td class="mdescRight">名前に一致するメソッドを検索する。 <br /></td></tr>
+<tr class="memitem:a66ebec5e64856a98a15df3f337cb31ac" id="r_a66ebec5e64856a98a15df3f337cb31ac"><td class="memItemLeft"><a id="a66ebec5e64856a98a15df3f337cb31ac" name="a66ebec5e64856a98a15df3f337cb31ac"></a>
+const <a class="el" href="../../d8/d45/struct_amuse_1_1_enum_element_info.html">EnumElementInfo</a> *&#160;</td><td class="memItemRight"><b>findEnumElement</b> (StringView name) const</td></tr>
+<tr class="memdesc:a66ebec5e64856a98a15df3f337cb31ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">名前に一致する列挙要素を検索する。 <br /></td></tr>
+<tr class="memitem:a7dd0f2656d5c33fdfb20d60029cd59c6" id="r_a7dd0f2656d5c33fdfb20d60029cd59c6"><td class="memItemLeft"><a id="a7dd0f2656d5c33fdfb20d60029cd59c6" name="a7dd0f2656d5c33fdfb20d60029cd59c6"></a>
+const <a class="el" href="../../d8/d45/struct_amuse_1_1_enum_element_info.html">EnumElementInfo</a> *&#160;</td><td class="memItemRight"><b>findEnumElement</b> (s32 value) const</td></tr>
+<tr class="memdesc:a7dd0f2656d5c33fdfb20d60029cd59c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">値に一致する列挙要素を検索する。 <br /></td></tr>
+<tr class="inherit_header pub_methods_struct_amuse_1_1_tag_info"><td colspan="2">基底クラス <a class="el" href="../../d1/d70/struct_amuse_1_1_tag_info.html">TagInfo</a> に属する継承メソッド</td></tr>
+<tr class="memitem:aaf83578380f3967398cdd5664d27c6e3 pub_methods_struct_amuse_1_1_tag_info" id="r_aaf83578380f3967398cdd5664d27c6e3"><td class="memItemLeft">
+bool&#160;</td><td class="memItemRight"><b>hasTag</b> (StringView name) const</td></tr>
+<tr class="memdesc:aaf83578380f3967398cdd5664d27c6e3 pub_methods_struct_amuse_1_1_tag_info"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定名のタグを持っているか判定する。 <br /></td></tr>
+<tr class="memitem:a3345bf51bb6c81c917f77cfd8124f3da pub_methods_struct_amuse_1_1_tag_info" id="r_a3345bf51bb6c81c917f77cfd8124f3da"><td class="memItemLeft">
+Optional&lt; StringView &gt;&#160;</td><td class="memItemRight"><b>findTag</b> (StringView name) const</td></tr>
+<tr class="memdesc:a3345bf51bb6c81c917f77cfd8124f3da pub_methods_struct_amuse_1_1_tag_info"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定名のタグ値を取得する。 <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静的関数</h2></td></tr>
+<tr class="memitem:a3cf0a4e15917c083138965a1623483e8" id="r_a3cf0a4e15917c083138965a1623483e8"><td class="memTemplParams" colspan="2"><a id="a3cf0a4e15917c083138965a1623483e8" name="a3cf0a4e15917c083138965a1623483e8"></a>
+template&lt;class T&gt; </td></tr>
+<tr class="memitem:a3cf0a4e15917c083138965a1623483e8 template"><td class="memItemLeft">static const <a class="el" href="../../d1/de4/struct_amuse_1_1_type_info.html">TypeInfo</a> *&#160;</td><td class="memItemRight"><b>Find</b> ()</td></tr>
+<tr class="memdesc:a3cf0a4e15917c083138965a1623483e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">テンプレート型に一致する <a class="el" href="../../d1/de4/struct_amuse_1_1_type_info.html" title="型の生成、破棄、プロパティ、メソッド、列挙要素を保持するメタ情報。">TypeInfo</a> を検索する。 <br /></td></tr>
+<tr class="memitem:a2c707b771cd37f1ba6b8a4daab996e00" id="r_a2c707b771cd37f1ba6b8a4daab996e00"><td class="memItemLeft"><a id="a2c707b771cd37f1ba6b8a4daab996e00" name="a2c707b771cd37f1ba6b8a4daab996e00"></a>
+static const <a class="el" href="../../d1/de4/struct_amuse_1_1_type_info.html">TypeInfo</a> *&#160;</td><td class="memItemRight"><b>Find</b> (const <a class="el" href="../../d5/d11/class_amuse_1_1_type.html">Type</a> &amp;type)</td></tr>
+<tr class="memdesc:a2c707b771cd37f1ba6b8a4daab996e00"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d5/d11/class_amuse_1_1_type.html" title="型名と固定ハッシュでリフレクション対象の型を識別する。">Type</a> に一致する <a class="el" href="../../d1/de4/struct_amuse_1_1_type_info.html" title="型の生成、破棄、プロパティ、メソッド、列挙要素を保持するメタ情報。">TypeInfo</a> を検索する。 <br /></td></tr>
+<tr class="memitem:a349deadba4e3dedad068a1e62005e954" id="r_a349deadba4e3dedad068a1e62005e954"><td class="memItemLeft"><a id="a349deadba4e3dedad068a1e62005e954" name="a349deadba4e3dedad068a1e62005e954"></a>
+static const <a class="el" href="../../d1/de4/struct_amuse_1_1_type_info.html">TypeInfo</a> *&#160;</td><td class="memItemRight"><b>Find</b> (StringView type)</td></tr>
+<tr class="memdesc:a349deadba4e3dedad068a1e62005e954"><td class="mdescLeft">&#160;</td><td class="mdescRight">型名に一致する <a class="el" href="../../d1/de4/struct_amuse_1_1_type_info.html" title="型の生成、破棄、プロパティ、メソッド、列挙要素を保持するメタ情報。">TypeInfo</a> を検索する。 <br /></td></tr>
+<tr class="memitem:a32101af8695acc243d2fbd6ed94d1e8e" id="r_a32101af8695acc243d2fbd6ed94d1e8e"><td class="memItemLeft"><a id="a32101af8695acc243d2fbd6ed94d1e8e" name="a32101af8695acc243d2fbd6ed94d1e8e"></a>
+static const <a class="el" href="../../d1/de4/struct_amuse_1_1_type_info.html">TypeInfo</a> *&#160;</td><td class="memItemRight"><b>Find</b> (<a class="el" href="../../d5/d11/class_amuse_1_1_type.html#ab4ccc481db73e8ca40e56618a17175fc">Type::hash_type</a> hash)</td></tr>
+<tr class="memdesc:a32101af8695acc243d2fbd6ed94d1e8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">型ハッシュに一致する <a class="el" href="../../d1/de4/struct_amuse_1_1_type_info.html" title="型の生成、破棄、プロパティ、メソッド、列挙要素を保持するメタ情報。">TypeInfo</a> を検索する。 <br /></td></tr>
+<tr class="memitem:a91c291697d26ce29f1894fea3fb7b3cb" id="r_a91c291697d26ce29f1894fea3fb7b3cb"><td class="memItemLeft"><a id="a91c291697d26ce29f1894fea3fb7b3cb" name="a91c291697d26ce29f1894fea3fb7b3cb"></a>
+static void&#160;</td><td class="memItemRight"><b>Visit</b> (const std::function&lt; void(const <a class="el" href="../../d1/de4/struct_amuse_1_1_type_info.html">TypeInfo</a> &amp;)&gt; &amp;func)</td></tr>
+<tr class="memdesc:a91c291697d26ce29f1894fea3fb7b3cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">登録済み <a class="el" href="../../d1/de4/struct_amuse_1_1_type_info.html" title="型の生成、破棄、プロパティ、メソッド、列挙要素を保持するメタ情報。">TypeInfo</a> を順に走査する。 <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+変数</h2></td></tr>
+<tr class="memitem:ab6f4e6d3fde00ce906e46494f60dfe7a" id="r_ab6f4e6d3fde00ce906e46494f60dfe7a"><td class="memItemLeft"><a id="ab6f4e6d3fde00ce906e46494f60dfe7a" name="ab6f4e6d3fde00ce906e46494f60dfe7a"></a>
+<a class="el" href="../../d5/d11/class_amuse_1_1_type.html">Type</a>&#160;</td><td class="memItemRight"><b>type</b></td></tr>
+<tr class="memdesc:ab6f4e6d3fde00ce906e46494f60dfe7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">型 <br /></td></tr>
+<tr class="memitem:a583da4f5fec2ca49c7466e7378602eed" id="r_a583da4f5fec2ca49c7466e7378602eed"><td class="memItemLeft"><a id="a583da4f5fec2ca49c7466e7378602eed" name="a583da4f5fec2ca49c7466e7378602eed"></a>
+HashSet&lt; <a class="el" href="../../d5/d11/class_amuse_1_1_type.html">Type</a> &gt;&#160;</td><td class="memItemRight"><b>bases</b></td></tr>
+<tr class="memdesc:a583da4f5fec2ca49c7466e7378602eed"><td class="mdescLeft">&#160;</td><td class="mdescRight">基底型一覧 <br /></td></tr>
+<tr class="memitem:a854352f53b148adc24983a58a1866d66" id="r_a854352f53b148adc24983a58a1866d66"><td class="memItemLeft"><a id="a854352f53b148adc24983a58a1866d66" name="a854352f53b148adc24983a58a1866d66"></a>
+size_t&#160;</td><td class="memItemRight"><b>size</b></td></tr>
+<tr class="memdesc:a854352f53b148adc24983a58a1866d66"><td class="mdescLeft">&#160;</td><td class="mdescRight">サイズ <br /></td></tr>
+<tr class="memitem:a3afda29223eeda35afd21a6c5e121ba2" id="r_a3afda29223eeda35afd21a6c5e121ba2"><td class="memItemLeft"><a id="a3afda29223eeda35afd21a6c5e121ba2" name="a3afda29223eeda35afd21a6c5e121ba2"></a>
+size_t&#160;</td><td class="memItemRight"><b>alignment</b></td></tr>
+<tr class="memdesc:a3afda29223eeda35afd21a6c5e121ba2"><td class="mdescLeft">&#160;</td><td class="mdescRight">アライメント <br /></td></tr>
+<tr class="memitem:a48873d618c7a3d12a2290cc934626eec" id="r_a48873d618c7a3d12a2290cc934626eec"><td class="memItemLeft"><a id="a48873d618c7a3d12a2290cc934626eec" name="a48873d618c7a3d12a2290cc934626eec"></a>
+Vector&lt; <a class="el" href="../../d8/dbd/struct_amuse_1_1_constructor_info.html">ConstructorInfo</a> &gt;&#160;</td><td class="memItemRight"><b>constructors</b></td></tr>
+<tr class="memdesc:a48873d618c7a3d12a2290cc934626eec"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ一覧 <br /></td></tr>
+<tr class="memitem:ac053891e48af6b8eca5e9e9f1d517e89" id="r_ac053891e48af6b8eca5e9e9f1d517e89"><td class="memItemLeft"><a id="ac053891e48af6b8eca5e9e9f1d517e89" name="ac053891e48af6b8eca5e9e9f1d517e89"></a>
+DestructorInvoker&#160;</td><td class="memItemRight"><b>destructor</b></td></tr>
+<tr class="memdesc:ac053891e48af6b8eca5e9e9f1d517e89"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ <br /></td></tr>
+<tr class="memitem:a8f087b28b8053a8bfd11a21d3789f4c7" id="r_a8f087b28b8053a8bfd11a21d3789f4c7"><td class="memItemLeft"><a id="a8f087b28b8053a8bfd11a21d3789f4c7" name="a8f087b28b8053a8bfd11a21d3789f4c7"></a>
+PlacedDestructorInvoker&#160;</td><td class="memItemRight"><b>placedDestructor</b></td></tr>
+<tr class="memdesc:a8f087b28b8053a8bfd11a21d3789f4c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">配置済みデストラクタ <br /></td></tr>
+<tr class="memitem:a10b3e0e600618b545b07345fc87619d2" id="r_a10b3e0e600618b545b07345fc87619d2"><td class="memItemLeft"><a id="a10b3e0e600618b545b07345fc87619d2" name="a10b3e0e600618b545b07345fc87619d2"></a>
+CopyInvoker&#160;</td><td class="memItemRight"><b>copyInvoker</b></td></tr>
+<tr class="memdesc:a10b3e0e600618b545b07345fc87619d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">コピー呼び出し情報 <br /></td></tr>
+<tr class="memitem:ae22c47f22cf7f563ab0b986254b78b02" id="r_ae22c47f22cf7f563ab0b986254b78b02"><td class="memItemLeft"><a id="ae22c47f22cf7f563ab0b986254b78b02" name="ae22c47f22cf7f563ab0b986254b78b02"></a>
+AssignInvoker&#160;</td><td class="memItemRight"><b>assignInvoker</b></td></tr>
+<tr class="memdesc:ae22c47f22cf7f563ab0b986254b78b02"><td class="mdescLeft">&#160;</td><td class="mdescRight">代入呼び出し情報 <br /></td></tr>
+<tr class="memitem:a28676d4270f5da1d5fe600d200c11883" id="r_a28676d4270f5da1d5fe600d200c11883"><td class="memItemLeft"><a id="a28676d4270f5da1d5fe600d200c11883" name="a28676d4270f5da1d5fe600d200c11883"></a>
+PropertyInfoMap&#160;</td><td class="memItemRight"><b>properties</b></td></tr>
+<tr class="memdesc:a28676d4270f5da1d5fe600d200c11883"><td class="mdescLeft">&#160;</td><td class="mdescRight">プロパティ一覧 <br /></td></tr>
+<tr class="memitem:af61d173af65447353426e1282173bdce" id="r_af61d173af65447353426e1282173bdce"><td class="memItemLeft"><a id="af61d173af65447353426e1282173bdce" name="af61d173af65447353426e1282173bdce"></a>
+MethodInfoMap&#160;</td><td class="memItemRight"><b>methods</b></td></tr>
+<tr class="memdesc:af61d173af65447353426e1282173bdce"><td class="mdescLeft">&#160;</td><td class="mdescRight">メソッド一覧 <br /></td></tr>
+<tr class="memitem:a394eb2655d6c26cc95a369bdffa71c0f" id="r_a394eb2655d6c26cc95a369bdffa71c0f"><td class="memItemLeft"><a id="a394eb2655d6c26cc95a369bdffa71c0f" name="a394eb2655d6c26cc95a369bdffa71c0f"></a>
+Vector&lt; StringView &gt;&#160;</td><td class="memItemRight"><b>propertyOrder</b></td></tr>
+<tr class="memdesc:a394eb2655d6c26cc95a369bdffa71c0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">プロパティ順序 <br /></td></tr>
+<tr class="memitem:ad5bcaab25642cf003f902b532e6a19d0" id="r_ad5bcaab25642cf003f902b532e6a19d0"><td class="memItemLeft"><a id="ad5bcaab25642cf003f902b532e6a19d0" name="ad5bcaab25642cf003f902b532e6a19d0"></a>
+Vector&lt; StringView &gt;&#160;</td><td class="memItemRight"><b>methodOrder</b></td></tr>
+<tr class="memdesc:ad5bcaab25642cf003f902b532e6a19d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">メソッド順序 <br /></td></tr>
+<tr class="memitem:a7395af8c815ea4f0db50fd4a3e47d1b6" id="r_a7395af8c815ea4f0db50fd4a3e47d1b6"><td class="memItemLeft"><a id="a7395af8c815ea4f0db50fd4a3e47d1b6" name="a7395af8c815ea4f0db50fd4a3e47d1b6"></a>
+bool&#160;</td><td class="memItemRight"><b>isEnum</b></td></tr>
+<tr class="memdesc:a7395af8c815ea4f0db50fd4a3e47d1b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">列挙型フラグ <br /></td></tr>
+<tr class="memitem:ab610e9bdcbd2849fd835e74fb1dcc8d6" id="r_ab610e9bdcbd2849fd835e74fb1dcc8d6"><td class="memItemLeft"><a id="ab610e9bdcbd2849fd835e74fb1dcc8d6" name="ab610e9bdcbd2849fd835e74fb1dcc8d6"></a>
+EnumValueGetter&#160;</td><td class="memItemRight"><b>enumValueGetter</b></td></tr>
+<tr class="memdesc:ab610e9bdcbd2849fd835e74fb1dcc8d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">列挙値取得関数 <br /></td></tr>
+<tr class="memitem:ac3e17af45a30ba281ffcf4d608736380" id="r_ac3e17af45a30ba281ffcf4d608736380"><td class="memItemLeft"><a id="ac3e17af45a30ba281ffcf4d608736380" name="ac3e17af45a30ba281ffcf4d608736380"></a>
+Vector&lt; <a class="el" href="../../d8/d45/struct_amuse_1_1_enum_element_info.html">EnumElementInfo</a> &gt;&#160;</td><td class="memItemRight"><b>enumElements</b></td></tr>
+<tr class="memdesc:ac3e17af45a30ba281ffcf4d608736380"><td class="mdescLeft">&#160;</td><td class="mdescRight">列挙要素一覧 <br /></td></tr>
+<tr class="inherit_header pub_attribs_struct_amuse_1_1_tag_info"><td colspan="2">基底クラス <a class="el" href="../../d1/d70/struct_amuse_1_1_tag_info.html">TagInfo</a> に属する継承変数</td></tr>
+<tr class="memitem:a9d5ca66d47c6ee4ec23403131872a053 pub_attribs_struct_amuse_1_1_tag_info" id="r_a9d5ca66d47c6ee4ec23403131872a053"><td class="memItemLeft">
+HashMap&lt; StringView, String &gt;&#160;</td><td class="memItemRight"><b>tags</b></td></tr>
+<tr class="memdesc:a9d5ca66d47c6ee4ec23403131872a053 pub_attribs_struct_amuse_1_1_tag_info"><td class="mdescLeft">&#160;</td><td class="mdescRight">タグ一覧 <br /></td></tr>
+</table>
+<hr/>この構造体詳解は次のファイルから抽出されました:<ul>
+<li>Runtime/Core/Public/Amuse/Core/Reflection/<a class="el" href="../../d7/d4e/_type_info_8h_source.html">TypeInfo.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><a href="../../d1/de4/struct_amuse_1_1_type_info.html">TypeInfo</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: Circle 構造体</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('de/d58/struct_amuse_1_1_circle.html','../../','da/d86/struct_amuse_1_1_circle-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">メソッド</a> &#124;
+<a href="#pub-static-methods">静的関数</a> &#124;
+<a href="#pub-attribs">変数</a> &#124;
+<a href="../../da/d86/struct_amuse_1_1_circle-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">Circle 構造体<div class="ingroups"><a class="el" href="../../da/d78/group___amuse_core.html">Core</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">説明</h2>
+<div class="textblock"><p>円 </p>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+メソッド</h2></td></tr>
+<tr class="memitem:a9da7866fbd5eca70186b0774f11d6e89" id="r_a9da7866fbd5eca70186b0774f11d6e89"><td class="memItemLeft"><a id="a9da7866fbd5eca70186b0774f11d6e89" name="a9da7866fbd5eca70186b0774f11d6e89"></a>
+&#160;</td><td class="memItemRight"><b>Circle</b> () noexcept</td></tr>
+<tr class="memdesc:a9da7866fbd5eca70186b0774f11d6e89"><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトコンストラクタ( 初期化なし ) <br /></td></tr>
+<tr class="memitem:ab809154ac6abfe7973513c5d9755987b" id="r_ab809154ac6abfe7973513c5d9755987b"><td class="memItemLeft">constexpr&#160;</td><td class="memItemRight"><a class="el" href="#ab809154ac6abfe7973513c5d9755987b">Circle</a> (<a class="el" href="../../d3/d51/struct_amuse_1_1_vec2.html">Vec2</a> center, f32 radius) noexcept</td></tr>
+<tr class="memdesc:ab809154ac6abfe7973513c5d9755987b"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <br /></td></tr>
+<tr class="memitem:a3a9951516b12d33146ab7b9e5962fa16" id="r_a3a9951516b12d33146ab7b9e5962fa16"><td class="memItemLeft"><a id="a3a9951516b12d33146ab7b9e5962fa16" name="a3a9951516b12d33146ab7b9e5962fa16"></a>
+constexpr bool&#160;</td><td class="memItemRight"><b>operator==</b> (const <a class="el" href="#a9da7866fbd5eca70186b0774f11d6e89">Circle</a> &amp;other) const noexcept</td></tr>
+<tr class="memdesc:a3a9951516b12d33146ab7b9e5962fa16"><td class="mdescLeft">&#160;</td><td class="mdescRight">等価演算子 <br /></td></tr>
+<tr class="memitem:ad6d157c5d3ec32393bcb8cd1949398d6" id="r_ad6d157c5d3ec32393bcb8cd1949398d6"><td class="memItemLeft"><a id="ad6d157c5d3ec32393bcb8cd1949398d6" name="ad6d157c5d3ec32393bcb8cd1949398d6"></a>
+constexpr bool&#160;</td><td class="memItemRight"><b>operator!=</b> (const <a class="el" href="#a9da7866fbd5eca70186b0774f11d6e89">Circle</a> &amp;other) const noexcept</td></tr>
+<tr class="memdesc:ad6d157c5d3ec32393bcb8cd1949398d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">否等価演算子 <br /></td></tr>
+<tr class="memitem:abca01aa481f16813e878f01de8f4a26c" id="r_abca01aa481f16813e878f01de8f4a26c"><td class="memItemLeft"><a id="abca01aa481f16813e878f01de8f4a26c" name="abca01aa481f16813e878f01de8f4a26c"></a>
+constexpr f32&#160;</td><td class="memItemRight"><b>area</b> () const noexcept</td></tr>
+<tr class="memdesc:abca01aa481f16813e878f01de8f4a26c"><td class="mdescLeft">&#160;</td><td class="mdescRight">面積を取得 <br /></td></tr>
+<tr class="memitem:a5bfecdeb3b87c4291abc20e72d50098b" id="r_a5bfecdeb3b87c4291abc20e72d50098b"><td class="memItemLeft"><a id="a5bfecdeb3b87c4291abc20e72d50098b" name="a5bfecdeb3b87c4291abc20e72d50098b"></a>
+constexpr f32&#160;</td><td class="memItemRight"><b>perimeter</b> () const noexcept</td></tr>
+<tr class="memdesc:a5bfecdeb3b87c4291abc20e72d50098b"><td class="mdescLeft">&#160;</td><td class="mdescRight">円周の長さを取得 <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静的関数</h2></td></tr>
+<tr class="memitem:adadb0a59d5de7339dde3ee6851446208" id="r_adadb0a59d5de7339dde3ee6851446208"><td class="memItemLeft">static constexpr <a class="el" href="#a9da7866fbd5eca70186b0774f11d6e89">Circle</a>&#160;</td><td class="memItemRight"><a class="el" href="#adadb0a59d5de7339dde3ee6851446208">Lerp</a> (const <a class="el" href="#a9da7866fbd5eca70186b0774f11d6e89">Circle</a> &amp;a, const <a class="el" href="#a9da7866fbd5eca70186b0774f11d6e89">Circle</a> &amp;b, f32 t) noexcept</td></tr>
+<tr class="memdesc:adadb0a59d5de7339dde3ee6851446208"><td class="mdescLeft">&#160;</td><td class="mdescRight">補間  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+変数</h2></td></tr>
+<tr class="memitem:a2f574fa4dccc4c60b6c0404a2b25b61e" id="r_a2f574fa4dccc4c60b6c0404a2b25b61e"><td class="memItemLeft"><a id="a2f574fa4dccc4c60b6c0404a2b25b61e" name="a2f574fa4dccc4c60b6c0404a2b25b61e"></a>
+<a class="el" href="../../d3/d51/struct_amuse_1_1_vec2.html">Vec2</a>&#160;</td><td class="memItemRight"><b>center</b></td></tr>
+<tr class="memdesc:a2f574fa4dccc4c60b6c0404a2b25b61e"><td class="mdescLeft">&#160;</td><td class="mdescRight">中心座標 <br /></td></tr>
+<tr class="memitem:a2b1ebd9824ae40fb75e2c473d12c001c" id="r_a2b1ebd9824ae40fb75e2c473d12c001c"><td class="memItemLeft"><a id="a2b1ebd9824ae40fb75e2c473d12c001c" name="a2b1ebd9824ae40fb75e2c473d12c001c"></a>
+f32&#160;</td><td class="memItemRight"><b>radius</b></td></tr>
+<tr class="memdesc:a2b1ebd9824ae40fb75e2c473d12c001c"><td class="mdescLeft">&#160;</td><td class="mdescRight">半径 <br /></td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">コンストラクタ</h2>
+<a id="ab809154ac6abfe7973513c5d9755987b" name="ab809154ac6abfe7973513c5d9755987b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab809154ac6abfe7973513c5d9755987b">&#9670;&#160;</a></span>Circle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Circle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d3/d51/struct_amuse_1_1_vec2.html">Vec2</a></td>          <td class="paramname"><span class="paramname"><em>center</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>radius</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>コンストラクタ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">center</td><td>中心座標 </td></tr>
+    <tr><td class="paramname">radius</td><td>半径 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="adadb0a59d5de7339dde3ee6851446208" name="adadb0a59d5de7339dde3ee6851446208"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adadb0a59d5de7339dde3ee6851446208">&#9670;&#160;</a></span>Lerp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="#a9da7866fbd5eca70186b0774f11d6e89">Circle</a> Lerp </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a9da7866fbd5eca70186b0774f11d6e89">Circle</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="#a9da7866fbd5eca70186b0774f11d6e89">Circle</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>t</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>補間 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>開始 </td></tr>
+    <tr><td class="paramname">b</td><td>終了 </td></tr>
+    <tr><td class="paramname">t</td><td>補間係数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>t=0のときa、t=1の時bを返す。 </dd></dl>
+
+</div>
+</div>
+<hr/>この構造体詳解は次のファイルから抽出されました:<ul>
+<li>Runtime/Core/Public/Amuse/Core/Geometry/<a class="el" href="../../db/d50/_circle_8h_source.html">Circle.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><a href="../../de/d58/struct_amuse_1_1_circle.html">Circle</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

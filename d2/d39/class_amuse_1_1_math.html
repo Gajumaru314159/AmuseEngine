@@ -1,0 +1,394 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: Math クラス</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d2/d39/class_amuse_1_1_math.html','../../','dc/dd9/class_amuse_1_1_math-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">静的関数</a> &#124;
+<a href="#pub-static-attribs">静的変数</a> &#124;
+<a href="../../dc/dd9/class_amuse_1_1_math-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">Math クラス<div class="ingroups"><a class="el" href="../../da/d78/group___amuse_core.html">Core</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">説明</h2>
+<div class="textblock"><p>f32型算術演算 </p>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静的関数</h2></td></tr>
+<tr class="memitem:ae73f336db8c8880ca4dab1c6d0971c4d" id="r_ae73f336db8c8880ca4dab1c6d0971c4d"><td class="memItemLeft"><a id="ae73f336db8c8880ca4dab1c6d0971c4d" name="ae73f336db8c8880ca4dab1c6d0971c4d"></a>
+static f32&#160;</td><td class="memItemRight"><b>Sin</b> (f32 radians)</td></tr>
+<tr class="memdesc:ae73f336db8c8880ca4dab1c6d0971c4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">fの正弦を返す(Radians) <br /></td></tr>
+<tr class="memitem:a0a575a1ed91dcec57c95cc4bdabce6ef" id="r_a0a575a1ed91dcec57c95cc4bdabce6ef"><td class="memItemLeft"><a id="a0a575a1ed91dcec57c95cc4bdabce6ef" name="a0a575a1ed91dcec57c95cc4bdabce6ef"></a>
+static f32&#160;</td><td class="memItemRight"><b>SinD</b> (f32 degrees)</td></tr>
+<tr class="memdesc:a0a575a1ed91dcec57c95cc4bdabce6ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">fの正弦を返す(Degrees) <br /></td></tr>
+<tr class="memitem:a61cbd41218501686e25f7bc33cc3d47c" id="r_a61cbd41218501686e25f7bc33cc3d47c"><td class="memItemLeft"><a id="a61cbd41218501686e25f7bc33cc3d47c" name="a61cbd41218501686e25f7bc33cc3d47c"></a>
+static f32&#160;</td><td class="memItemRight"><b>Cos</b> (f32 radians)</td></tr>
+<tr class="memdesc:a61cbd41218501686e25f7bc33cc3d47c"><td class="mdescLeft">&#160;</td><td class="mdescRight">fの余弦を返す(Radians) <br /></td></tr>
+<tr class="memitem:a5b2663e6869767d2b10c34889d445c23" id="r_a5b2663e6869767d2b10c34889d445c23"><td class="memItemLeft"><a id="a5b2663e6869767d2b10c34889d445c23" name="a5b2663e6869767d2b10c34889d445c23"></a>
+static f32&#160;</td><td class="memItemRight"><b>CosD</b> (f32 degrees)</td></tr>
+<tr class="memdesc:a5b2663e6869767d2b10c34889d445c23"><td class="mdescLeft">&#160;</td><td class="mdescRight">fの余弦を返す(Degrees) <br /></td></tr>
+<tr class="memitem:afdc91e07ea9111e5b261a201af4406f5" id="r_afdc91e07ea9111e5b261a201af4406f5"><td class="memItemLeft"><a id="afdc91e07ea9111e5b261a201af4406f5" name="afdc91e07ea9111e5b261a201af4406f5"></a>
+static f32&#160;</td><td class="memItemRight"><b>Tan</b> (f32 radians)</td></tr>
+<tr class="memdesc:afdc91e07ea9111e5b261a201af4406f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">fの正接を返す(Radians) <br /></td></tr>
+<tr class="memitem:ab02096d8e4859b30c5f73686aa5f1171" id="r_ab02096d8e4859b30c5f73686aa5f1171"><td class="memItemLeft"><a id="ab02096d8e4859b30c5f73686aa5f1171" name="ab02096d8e4859b30c5f73686aa5f1171"></a>
+static f32&#160;</td><td class="memItemRight"><b>TanD</b> (f32 degrees)</td></tr>
+<tr class="memdesc:ab02096d8e4859b30c5f73686aa5f1171"><td class="mdescLeft">&#160;</td><td class="mdescRight">fの正接を返す(Degrees) <br /></td></tr>
+<tr class="memitem:a6e66cd810b5281b02599cebfeec480bc" id="r_a6e66cd810b5281b02599cebfeec480bc"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a6e66cd810b5281b02599cebfeec480bc">SinCos</a> (f32 radians, f32 &amp;outSin, f32 &amp;outCos) noexcept</td></tr>
+<tr class="memdesc:a6e66cd810b5281b02599cebfeec480bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">高速余弦正弦関数  <br /></td></tr>
+<tr class="memitem:a4e45b4d1bdfda68b7d345065aa7e69f0" id="r_a4e45b4d1bdfda68b7d345065aa7e69f0"><td class="memItemLeft"><a id="a4e45b4d1bdfda68b7d345065aa7e69f0" name="a4e45b4d1bdfda68b7d345065aa7e69f0"></a>
+static f32&#160;</td><td class="memItemRight"><b>Asin</b> (f32 f)</td></tr>
+<tr class="memdesc:a4e45b4d1bdfda68b7d345065aa7e69f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">fのアークサインを返す(Radians) <br /></td></tr>
+<tr class="memitem:ab8923a0cea0548f52ee2eaac08c8a00d" id="r_ab8923a0cea0548f52ee2eaac08c8a00d"><td class="memItemLeft"><a id="ab8923a0cea0548f52ee2eaac08c8a00d" name="ab8923a0cea0548f52ee2eaac08c8a00d"></a>
+static f32&#160;</td><td class="memItemRight"><b>AsinD</b> (f32 f)</td></tr>
+<tr class="memdesc:ab8923a0cea0548f52ee2eaac08c8a00d"><td class="mdescLeft">&#160;</td><td class="mdescRight">fのアークサインを返す(Degrees) <br /></td></tr>
+<tr class="memitem:acfc8ce037171458585f80157c6db886c" id="r_acfc8ce037171458585f80157c6db886c"><td class="memItemLeft"><a id="acfc8ce037171458585f80157c6db886c" name="acfc8ce037171458585f80157c6db886c"></a>
+static f32&#160;</td><td class="memItemRight"><b>Acos</b> (f32 f)</td></tr>
+<tr class="memdesc:acfc8ce037171458585f80157c6db886c"><td class="mdescLeft">&#160;</td><td class="mdescRight">fのアークコサインを返す(Radians) <br /></td></tr>
+<tr class="memitem:a4eab8b8faa941532712ddf3cdbafee03" id="r_a4eab8b8faa941532712ddf3cdbafee03"><td class="memItemLeft"><a id="a4eab8b8faa941532712ddf3cdbafee03" name="a4eab8b8faa941532712ddf3cdbafee03"></a>
+static f32&#160;</td><td class="memItemRight"><b>AcosD</b> (f32 f)</td></tr>
+<tr class="memdesc:a4eab8b8faa941532712ddf3cdbafee03"><td class="mdescLeft">&#160;</td><td class="mdescRight">fのアークコサインを返す(Degrees) <br /></td></tr>
+<tr class="memitem:a075dfb530797c2cfa5178be34cafa612" id="r_a075dfb530797c2cfa5178be34cafa612"><td class="memItemLeft"><a id="a075dfb530797c2cfa5178be34cafa612" name="a075dfb530797c2cfa5178be34cafa612"></a>
+static f32&#160;</td><td class="memItemRight"><b>Atan</b> (f32 f)</td></tr>
+<tr class="memdesc:a075dfb530797c2cfa5178be34cafa612"><td class="mdescLeft">&#160;</td><td class="mdescRight">fのアークタンジェントを返す(Radians) <br /></td></tr>
+<tr class="memitem:a78e0caa58fe8c07a565968ee916f60e3" id="r_a78e0caa58fe8c07a565968ee916f60e3"><td class="memItemLeft"><a id="a78e0caa58fe8c07a565968ee916f60e3" name="a78e0caa58fe8c07a565968ee916f60e3"></a>
+static f32&#160;</td><td class="memItemRight"><b>AtanD</b> (f32 f)</td></tr>
+<tr class="memdesc:a78e0caa58fe8c07a565968ee916f60e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">fのアークタンジェントを返す(Degrees) <br /></td></tr>
+<tr class="memitem:a3a037a2e927ab6117e3c1d690b5853c0" id="r_a3a037a2e927ab6117e3c1d690b5853c0"><td class="memItemLeft"><a id="a3a037a2e927ab6117e3c1d690b5853c0" name="a3a037a2e927ab6117e3c1d690b5853c0"></a>
+static f32&#160;</td><td class="memItemRight"><b>Atan2</b> (f32 y, f32 x)</td></tr>
+<tr class="memdesc:a3a037a2e927ab6117e3c1d690b5853c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tanがy/xになる角度返す(Radians) <br /></td></tr>
+<tr class="memitem:a60f8f4834e83b9d402a128f42c77f8d7" id="r_a60f8f4834e83b9d402a128f42c77f8d7"><td class="memItemLeft"><a id="a60f8f4834e83b9d402a128f42c77f8d7" name="a60f8f4834e83b9d402a128f42c77f8d7"></a>
+static f32&#160;</td><td class="memItemRight"><b>Atan2D</b> (f32 y, f32 x)</td></tr>
+<tr class="memdesc:a60f8f4834e83b9d402a128f42c77f8d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tanがy/xになる角度返す(Degrees) <br /></td></tr>
+<tr class="memitem:a043ba3d6e5cfbf40d536ceb5628e3654" id="r_a043ba3d6e5cfbf40d536ceb5628e3654"><td class="memItemLeft"><a id="a043ba3d6e5cfbf40d536ceb5628e3654" name="a043ba3d6e5cfbf40d536ceb5628e3654"></a>
+static constexpr f32&#160;</td><td class="memItemRight"><b>Degrees</b> (f32 degrees) noexcept</td></tr>
+<tr class="memdesc:a043ba3d6e5cfbf40d536ceb5628e3654"><td class="mdescLeft">&#160;</td><td class="mdescRight">度数法をラジアンに変換する <br /></td></tr>
+<tr class="memitem:a4f4fe2765bdc11ff97ddbedb4382a035" id="r_a4f4fe2765bdc11ff97ddbedb4382a035"><td class="memItemLeft"><a id="a4f4fe2765bdc11ff97ddbedb4382a035" name="a4f4fe2765bdc11ff97ddbedb4382a035"></a>
+static constexpr f32&#160;</td><td class="memItemRight"><b>Radians</b> (f32 radians) noexcept</td></tr>
+<tr class="memdesc:a4f4fe2765bdc11ff97ddbedb4382a035"><td class="mdescLeft">&#160;</td><td class="mdescRight">ラジアンを度数法に変換する <br /></td></tr>
+<tr class="memitem:ae98119fef3c32dab825607badada4d2b" id="r_ae98119fef3c32dab825607badada4d2b"><td class="memItemLeft"><a id="ae98119fef3c32dab825607badada4d2b" name="ae98119fef3c32dab825607badada4d2b"></a>
+static f32&#160;</td><td class="memItemRight"><b>Ceil</b> (f32 f)</td></tr>
+<tr class="memdesc:ae98119fef3c32dab825607badada4d2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">f以上の最小の整数を返す <br /></td></tr>
+<tr class="memitem:a601419f8fb78e6e18dfa27f392aee4cb" id="r_a601419f8fb78e6e18dfa27f392aee4cb"><td class="memItemLeft"><a id="a601419f8fb78e6e18dfa27f392aee4cb" name="a601419f8fb78e6e18dfa27f392aee4cb"></a>
+static f32&#160;</td><td class="memItemRight"><b>Floor</b> (f32 f)</td></tr>
+<tr class="memdesc:a601419f8fb78e6e18dfa27f392aee4cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">f以下の最大の整数を返す <br /></td></tr>
+<tr class="memitem:a42dbff721becf799836d283e83b6787c" id="r_a42dbff721becf799836d283e83b6787c"><td class="memItemLeft"><a id="a42dbff721becf799836d283e83b6787c" name="a42dbff721becf799836d283e83b6787c"></a>
+static f32&#160;</td><td class="memItemRight"><b>Round</b> (f32 f)</td></tr>
+<tr class="memdesc:a42dbff721becf799836d283e83b6787c"><td class="mdescLeft">&#160;</td><td class="mdescRight">fを四捨五入した値を返す <br /></td></tr>
+<tr class="memitem:a79b97da55f93c130e070c4ca82c95db0" id="r_a79b97da55f93c130e070c4ca82c95db0"><td class="memItemLeft"><a id="a79b97da55f93c130e070c4ca82c95db0" name="a79b97da55f93c130e070c4ca82c95db0"></a>
+static constexpr f32&#160;</td><td class="memItemRight"><b>Lerp</b> (f32 a, f32 b, f32 t) noexcept</td></tr>
+<tr class="memdesc:a79b97da55f93c130e070c4ca82c95db0"><td class="mdescLeft">&#160;</td><td class="mdescRight">aとbをtで線形補間する <br /></td></tr>
+<tr class="memitem:a109bd12197953e379e45fba7ee2caaf4" id="r_a109bd12197953e379e45fba7ee2caaf4"><td class="memItemLeft"><a id="a109bd12197953e379e45fba7ee2caaf4" name="a109bd12197953e379e45fba7ee2caaf4"></a>
+static f32&#160;</td><td class="memItemRight"><b>LerpAngle</b> (f32 a, f32 b, f32 t)</td></tr>
+<tr class="memdesc:a109bd12197953e379e45fba7ee2caaf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">aとbの角度をtで線形補間する <br /></td></tr>
+<tr class="memitem:a7c1738795fc882ab5f3d73bf42fdde97" id="r_a7c1738795fc882ab5f3d73bf42fdde97"><td class="memItemLeft"><a id="a7c1738795fc882ab5f3d73bf42fdde97" name="a7c1738795fc882ab5f3d73bf42fdde97"></a>
+static constexpr f32&#160;</td><td class="memItemRight"><b>InverseLerp</b> (f32 a, f32 b, f32 f) noexcept</td></tr>
+<tr class="memdesc:a7c1738795fc882ab5f3d73bf42fdde97"><td class="mdescLeft">&#160;</td><td class="mdescRight">[a,b] の範囲内で補間する値valueを生成する線形パラメータtを計算する <br /></td></tr>
+<tr class="memitem:aa79c34024f51afce4585c29c58e9bd3f" id="r_aa79c34024f51afce4585c29c58e9bd3f"><td class="memItemLeft"><a id="aa79c34024f51afce4585c29c58e9bd3f" name="aa79c34024f51afce4585c29c58e9bd3f"></a>
+static constexpr f32&#160;</td><td class="memItemRight"><b>Map</b> (f32 a, f32 b, f32 c, f32 d, f32 t) noexcept</td></tr>
+<tr class="memdesc:aa79c34024f51afce4585c29c58e9bd3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">tを[a,b]から[c,d]に変換する <br /></td></tr>
+<tr class="memitem:a3748b933784b469ac442f0488b81bfe5" id="r_a3748b933784b469ac442f0488b81bfe5"><td class="memTemplParams" colspan="2"><a id="a3748b933784b469ac442f0488b81bfe5" name="a3748b933784b469ac442f0488b81bfe5"></a>
+template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a3748b933784b469ac442f0488b81bfe5 template"><td class="memItemLeft">static constexpr f32&#160;</td><td class="memItemRight"><b>Min</b> (T a, T b) noexcept</td></tr>
+<tr class="memdesc:a3748b933784b469ac442f0488b81bfe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">2つの値から小さい値を返す <br /></td></tr>
+<tr class="memitem:abc7d9ba9f54a57cb476364bbec8ff385" id="r_abc7d9ba9f54a57cb476364bbec8ff385"><td class="memTemplParams" colspan="2"><a id="abc7d9ba9f54a57cb476364bbec8ff385" name="abc7d9ba9f54a57cb476364bbec8ff385"></a>
+template&lt;typename T&gt; </td></tr>
+<tr class="memitem:abc7d9ba9f54a57cb476364bbec8ff385 template"><td class="memItemLeft">static constexpr f32&#160;</td><td class="memItemRight"><b>Min</b> (T a, T b, T c) noexcept</td></tr>
+<tr class="memdesc:abc7d9ba9f54a57cb476364bbec8ff385"><td class="mdescLeft">&#160;</td><td class="mdescRight">3つの値から一番小さい値を返す <br /></td></tr>
+<tr class="memitem:a90faaa723ae1715daf16a0478e644df6" id="r_a90faaa723ae1715daf16a0478e644df6"><td class="memTemplParams" colspan="2"><a id="a90faaa723ae1715daf16a0478e644df6" name="a90faaa723ae1715daf16a0478e644df6"></a>
+template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a90faaa723ae1715daf16a0478e644df6 template"><td class="memItemLeft">static constexpr f32&#160;</td><td class="memItemRight"><b>Min</b> (T a, T b, T c, T d) noexcept</td></tr>
+<tr class="memdesc:a90faaa723ae1715daf16a0478e644df6"><td class="mdescLeft">&#160;</td><td class="mdescRight">4つの値から一番小さい値を返す <br /></td></tr>
+<tr class="memitem:adc7aa46fbeae45fb8dc16a3458b899a5" id="r_adc7aa46fbeae45fb8dc16a3458b899a5"><td class="memTemplParams" colspan="2"><a id="adc7aa46fbeae45fb8dc16a3458b899a5" name="adc7aa46fbeae45fb8dc16a3458b899a5"></a>
+template&lt;typename T&gt; </td></tr>
+<tr class="memitem:adc7aa46fbeae45fb8dc16a3458b899a5 template"><td class="memItemLeft">static constexpr T&#160;</td><td class="memItemRight"><b>Min</b> (gsl::span&lt; const T &gt; values) noexcept</td></tr>
+<tr class="memdesc:adc7aa46fbeae45fb8dc16a3458b899a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">配列の中から一番小さい値を返す <br /></td></tr>
+<tr class="memitem:a02503ef23c2a78b78a68c7361eb39a48" id="r_a02503ef23c2a78b78a68c7361eb39a48"><td class="memTemplParams" colspan="2"><a id="a02503ef23c2a78b78a68c7361eb39a48" name="a02503ef23c2a78b78a68c7361eb39a48"></a>
+template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a02503ef23c2a78b78a68c7361eb39a48 template"><td class="memItemLeft">static constexpr T&#160;</td><td class="memItemRight"><b>Max</b> (T a, T b) noexcept</td></tr>
+<tr class="memdesc:a02503ef23c2a78b78a68c7361eb39a48"><td class="mdescLeft">&#160;</td><td class="mdescRight">2つの値から大きい値を返す <br /></td></tr>
+<tr class="memitem:a02a1cc32b8f11664169dae98c506a99b" id="r_a02a1cc32b8f11664169dae98c506a99b"><td class="memTemplParams" colspan="2"><a id="a02a1cc32b8f11664169dae98c506a99b" name="a02a1cc32b8f11664169dae98c506a99b"></a>
+template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a02a1cc32b8f11664169dae98c506a99b template"><td class="memItemLeft">static constexpr T&#160;</td><td class="memItemRight"><b>Max</b> (T a, T b, T c) noexcept</td></tr>
+<tr class="memdesc:a02a1cc32b8f11664169dae98c506a99b"><td class="mdescLeft">&#160;</td><td class="mdescRight">3つの値から一番大きい値を返す <br /></td></tr>
+<tr class="memitem:a3d06a3e441bc28d09d28f77d575be4f3" id="r_a3d06a3e441bc28d09d28f77d575be4f3"><td class="memTemplParams" colspan="2"><a id="a3d06a3e441bc28d09d28f77d575be4f3" name="a3d06a3e441bc28d09d28f77d575be4f3"></a>
+template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a3d06a3e441bc28d09d28f77d575be4f3 template"><td class="memItemLeft">static constexpr T&#160;</td><td class="memItemRight"><b>Max</b> (T a, T b, T c, T d) noexcept</td></tr>
+<tr class="memdesc:a3d06a3e441bc28d09d28f77d575be4f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">4つの値から一番大きい値を返す <br /></td></tr>
+<tr class="memitem:a6e0ff57f535098a73117ffaaae4ef9de" id="r_a6e0ff57f535098a73117ffaaae4ef9de"><td class="memTemplParams" colspan="2"><a id="a6e0ff57f535098a73117ffaaae4ef9de" name="a6e0ff57f535098a73117ffaaae4ef9de"></a>
+template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a6e0ff57f535098a73117ffaaae4ef9de template"><td class="memItemLeft">static constexpr T&#160;</td><td class="memItemRight"><b>Max</b> (gsl::span&lt; const T &gt; values) noexcept</td></tr>
+<tr class="memdesc:a6e0ff57f535098a73117ffaaae4ef9de"><td class="mdescLeft">&#160;</td><td class="mdescRight">配列の中から一番大きい値を返す <br /></td></tr>
+<tr class="memitem:aa82aac589675bd123683a00305f07ad2" id="r_aa82aac589675bd123683a00305f07ad2"><td class="memItemLeft"><a id="aa82aac589675bd123683a00305f07ad2" name="aa82aac589675bd123683a00305f07ad2"></a>
+static constexpr bool&#160;</td><td class="memItemRight"><b>IsNearEquals</b> (f32 a, f32 b, f32 tolerance=<a class="el" href="#a2e9981ebd4af1a2ffb80b23d1aae12e9">Math::TOLERANCE</a>) noexcept</td></tr>
+<tr class="memdesc:aa82aac589675bd123683a00305f07ad2"><td class="mdescLeft">&#160;</td><td class="mdescRight">2つの浮動小数点値を比較し近似している場合はtrueを返す <br /></td></tr>
+<tr class="memitem:a3b7d9eeefc2c7bfeeea16e280db9c2d8" id="r_a3b7d9eeefc2c7bfeeea16e280db9c2d8"><td class="memItemLeft"><a id="a3b7d9eeefc2c7bfeeea16e280db9c2d8" name="a3b7d9eeefc2c7bfeeea16e280db9c2d8"></a>
+static constexpr bool&#160;</td><td class="memItemRight"><b>IsNearZero</b> (f32 a, f32 tolerance=<a class="el" href="#a2e9981ebd4af1a2ffb80b23d1aae12e9">Math::TOLERANCE</a>) noexcept</td></tr>
+<tr class="memdesc:a3b7d9eeefc2c7bfeeea16e280db9c2d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">値が0に近い場合はtrueを返す <br /></td></tr>
+<tr class="memitem:af752d79fd5ba4a9b6d4d81bbcca4235d" id="r_af752d79fd5ba4a9b6d4d81bbcca4235d"><td class="memItemLeft"><a id="af752d79fd5ba4a9b6d4d81bbcca4235d" name="af752d79fd5ba4a9b6d4d81bbcca4235d"></a>
+static bool&#160;</td><td class="memItemRight"><b>IsNaN</b> (f32 value)</td></tr>
+<tr class="memdesc:af752d79fd5ba4a9b6d4d81bbcca4235d"><td class="mdescLeft">&#160;</td><td class="mdescRight">値が無効な数字か判定する <br /></td></tr>
+<tr class="memitem:a9f2815b4037c3d338e85737a8d8bcd56" id="r_a9f2815b4037c3d338e85737a8d8bcd56"><td class="memItemLeft"><a id="a9f2815b4037c3d338e85737a8d8bcd56" name="a9f2815b4037c3d338e85737a8d8bcd56"></a>
+static bool&#160;</td><td class="memItemRight"><b>IsInf</b> (f32 value)</td></tr>
+<tr class="memdesc:a9f2815b4037c3d338e85737a8d8bcd56"><td class="mdescLeft">&#160;</td><td class="mdescRight">値が無限か判定する <br /></td></tr>
+<tr class="memitem:a89846feda08e4f0ac9713a56b5581b0c" id="r_a89846feda08e4f0ac9713a56b5581b0c"><td class="memTemplParams" colspan="2"><a id="a89846feda08e4f0ac9713a56b5581b0c" name="a89846feda08e4f0ac9713a56b5581b0c"></a>
+template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a89846feda08e4f0ac9713a56b5581b0c template"><td class="memItemLeft">static constexpr T&#160;</td><td class="memItemRight"><b>Abs</b> (T f) noexcept</td></tr>
+<tr class="memdesc:a89846feda08e4f0ac9713a56b5581b0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">fの絶対値を返す <br /></td></tr>
+<tr class="memitem:a482fd9bd0fa5e6ccf57be308f8ded0b9" id="r_a482fd9bd0fa5e6ccf57be308f8ded0b9"><td class="memTemplParams" colspan="2"><a id="a482fd9bd0fa5e6ccf57be308f8ded0b9" name="a482fd9bd0fa5e6ccf57be308f8ded0b9"></a>
+template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a482fd9bd0fa5e6ccf57be308f8ded0b9 template"><td class="memItemLeft">static constexpr T&#160;</td><td class="memItemRight"><b>Clamp</b> (T f, T minimum, T maximum) noexcept</td></tr>
+<tr class="memdesc:a482fd9bd0fa5e6ccf57be308f8ded0b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">fをminimumとmaximumの間に収まるように返す <br /></td></tr>
+<tr class="memitem:a0b6a99a6e1a8b9d90aaa4236c84cd1df" id="r_a0b6a99a6e1a8b9d90aaa4236c84cd1df"><td class="memTemplParams" colspan="2"><a id="a0b6a99a6e1a8b9d90aaa4236c84cd1df" name="a0b6a99a6e1a8b9d90aaa4236c84cd1df"></a>
+template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a0b6a99a6e1a8b9d90aaa4236c84cd1df template"><td class="memItemLeft">static constexpr T&#160;</td><td class="memItemRight"><b>Clamp01</b> (T f) noexcept</td></tr>
+<tr class="memdesc:a0b6a99a6e1a8b9d90aaa4236c84cd1df"><td class="mdescLeft">&#160;</td><td class="mdescRight">fを0と1の間に収まるように返す <br /></td></tr>
+<tr class="memitem:ade0f4829b2b8ac3ffaa297385fbc63a1" id="r_ade0f4829b2b8ac3ffaa297385fbc63a1"><td class="memItemLeft"><a id="ade0f4829b2b8ac3ffaa297385fbc63a1" name="ade0f4829b2b8ac3ffaa297385fbc63a1"></a>
+static f32&#160;</td><td class="memItemRight"><b>BetweenAngle</b> (f32 to, f32 from)</td></tr>
+<tr class="memdesc:ade0f4829b2b8ac3ffaa297385fbc63a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">toとfromの間の角度をラジアンで返す <br /></td></tr>
+<tr class="memitem:a587648cb2c1ec5ae33adab455e10b641" id="r_a587648cb2c1ec5ae33adab455e10b641"><td class="memItemLeft"><a id="a587648cb2c1ec5ae33adab455e10b641" name="a587648cb2c1ec5ae33adab455e10b641"></a>
+static f32&#160;</td><td class="memItemRight"><b>Exp</b> (f32 f)</td></tr>
+<tr class="memdesc:a587648cb2c1ec5ae33adab455e10b641"><td class="mdescLeft">&#160;</td><td class="mdescRight">fのexpを返す <br /></td></tr>
+<tr class="memitem:abae77d4baeb0e7ba36b71d657b7f2667" id="r_abae77d4baeb0e7ba36b71d657b7f2667"><td class="memItemLeft"><a id="abae77d4baeb0e7ba36b71d657b7f2667" name="abae77d4baeb0e7ba36b71d657b7f2667"></a>
+static f32&#160;</td><td class="memItemRight"><b>Fract</b> (f32 f)</td></tr>
+<tr class="memdesc:abae77d4baeb0e7ba36b71d657b7f2667"><td class="mdescLeft">&#160;</td><td class="mdescRight">fの小数部を取得する <br /></td></tr>
+<tr class="memitem:a60a0ab47bbf7d6aaf755e273f1bf99b5" id="r_a60a0ab47bbf7d6aaf755e273f1bf99b5"><td class="memItemLeft"><a id="a60a0ab47bbf7d6aaf755e273f1bf99b5" name="a60a0ab47bbf7d6aaf755e273f1bf99b5"></a>
+static f32&#160;</td><td class="memItemRight"><b>Log</b> (f32 f)</td></tr>
+<tr class="memdesc:a60a0ab47bbf7d6aaf755e273f1bf99b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">fの対数を返す <br /></td></tr>
+<tr class="memitem:a45ec35a975b50e793cf9679ddbd62d2c" id="r_a45ec35a975b50e793cf9679ddbd62d2c"><td class="memItemLeft"><a id="a45ec35a975b50e793cf9679ddbd62d2c" name="a45ec35a975b50e793cf9679ddbd62d2c"></a>
+static f32&#160;</td><td class="memItemRight"><b>Log10</b> (f32 f)</td></tr>
+<tr class="memdesc:a45ec35a975b50e793cf9679ddbd62d2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">底を10としたfの対数を返す <br /></td></tr>
+<tr class="memitem:ae443ff260334521fd06a1ea2ae6e597d" id="r_ae443ff260334521fd06a1ea2ae6e597d"><td class="memItemLeft"><a id="ae443ff260334521fd06a1ea2ae6e597d" name="ae443ff260334521fd06a1ea2ae6e597d"></a>
+static f32&#160;</td><td class="memItemRight"><b>PingPong</b> (f32 f)</td></tr>
+<tr class="memdesc:ae443ff260334521fd06a1ea2ae6e597d"><td class="mdescLeft">&#160;</td><td class="mdescRight">0と1の間を往復する値を返す <br /></td></tr>
+<tr class="memitem:af269bbdf1324539800bf833dba55638a" id="r_af269bbdf1324539800bf833dba55638a"><td class="memItemLeft"><a id="af269bbdf1324539800bf833dba55638a" name="af269bbdf1324539800bf833dba55638a"></a>
+static f32&#160;</td><td class="memItemRight"><b>Pow</b> (f32 f, f32 p)</td></tr>
+<tr class="memdesc:af269bbdf1324539800bf833dba55638a"><td class="mdescLeft">&#160;</td><td class="mdescRight">fのp乗を返す <br /></td></tr>
+<tr class="memitem:a6bdae2eab47bebbbf415bd36730f060a" id="r_a6bdae2eab47bebbbf415bd36730f060a"><td class="memTemplParams" colspan="2"><a id="a6bdae2eab47bebbbf415bd36730f060a" name="a6bdae2eab47bebbbf415bd36730f060a"></a>
+template&lt;typename T, std::enable_if_t&lt; std::is_signed_v&lt; T &gt; &gt;&gt; </td></tr>
+<tr class="memitem:a6bdae2eab47bebbbf415bd36730f060a template"><td class="memItemLeft">static constexpr T&#160;</td><td class="memItemRight"><b>Sign</b> (T f) noexcept</td></tr>
+<tr class="memdesc:a6bdae2eab47bebbbf415bd36730f060a"><td class="mdescLeft">&#160;</td><td class="mdescRight">fの符号を返す <br /></td></tr>
+<tr class="memitem:a7243920ee0d4b640248fd101974de652" id="r_a7243920ee0d4b640248fd101974de652"><td class="memTemplParams" colspan="2"><a id="a7243920ee0d4b640248fd101974de652" name="a7243920ee0d4b640248fd101974de652"></a>
+template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a7243920ee0d4b640248fd101974de652 template"><td class="memItemLeft">static constexpr T&#160;</td><td class="memItemRight"><b>Square</b> (T f) noexcept</td></tr>
+<tr class="memdesc:a7243920ee0d4b640248fd101974de652"><td class="mdescLeft">&#160;</td><td class="mdescRight">fの二乗を返す <br /></td></tr>
+<tr class="memitem:ad04d9a04bf7b78cce349723c5042ed93" id="r_ad04d9a04bf7b78cce349723c5042ed93"><td class="memItemLeft"><a id="ad04d9a04bf7b78cce349723c5042ed93" name="ad04d9a04bf7b78cce349723c5042ed93"></a>
+static f32&#160;</td><td class="memItemRight"><b>Sqrt</b> (f32 f)</td></tr>
+<tr class="memdesc:ad04d9a04bf7b78cce349723c5042ed93"><td class="mdescLeft">&#160;</td><td class="mdescRight">fの根(ルート)を返す <br /></td></tr>
+<tr class="memitem:acc56fa5577cb3a6f151739b4a20f1eb2" id="r_acc56fa5577cb3a6f151739b4a20f1eb2"><td class="memItemLeft"><a id="acc56fa5577cb3a6f151739b4a20f1eb2" name="acc56fa5577cb3a6f151739b4a20f1eb2"></a>
+static constexpr f32&#160;</td><td class="memItemRight"><b>SqrtFast</b> (f32 f) noexcept</td></tr>
+<tr class="memdesc:acc56fa5577cb3a6f151739b4a20f1eb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">fの根(ルート)を返す(高速版) <br /></td></tr>
+<tr class="memitem:a3994a1d8ea7777e66d323202159a279c" id="r_a3994a1d8ea7777e66d323202159a279c"><td class="memItemLeft"><a id="a3994a1d8ea7777e66d323202159a279c" name="a3994a1d8ea7777e66d323202159a279c"></a>
+static f32&#160;</td><td class="memItemRight"><b>Mod</b> (f32 f, f32 mod) noexcept</td></tr>
+<tr class="memdesc:a3994a1d8ea7777e66d323202159a279c"><td class="mdescLeft">&#160;</td><td class="mdescRight">割ったあまり <br /></td></tr>
+<tr class="memitem:adc9eac039e45fe2de3a57bc5b08cae87" id="r_adc9eac039e45fe2de3a57bc5b08cae87"><td class="memItemLeft"><a id="adc9eac039e45fe2de3a57bc5b08cae87" name="adc9eac039e45fe2de3a57bc5b08cae87"></a>
+static f32&#160;</td><td class="memItemRight"><b>Wrap</b> (f32 f, f32 minval, f32 maxVal) noexcept</td></tr>
+<tr class="memdesc:adc9eac039e45fe2de3a57bc5b08cae87"><td class="mdescLeft">&#160;</td><td class="mdescRight">fの根(ルート)を返す(高速版) <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+静的変数</h2></td></tr>
+<tr class="memitem:afce6d114b6c8b3f28b6b051d2c77a760" id="r_afce6d114b6c8b3f28b6b051d2c77a760"><td class="memItemLeft"><a id="afce6d114b6c8b3f28b6b051d2c77a760" name="afce6d114b6c8b3f28b6b051d2c77a760"></a>
+static constexpr f32&#160;</td><td class="memItemRight"><b>PI</b> = 3.1415926535897932384626433832795f</td></tr>
+<tr class="memdesc:afce6d114b6c8b3f28b6b051d2c77a760"><td class="mdescLeft">&#160;</td><td class="mdescRight">円周率 <br /></td></tr>
+<tr class="memitem:a575dde3ae3140c96b822ab618fef18b7" id="r_a575dde3ae3140c96b822ab618fef18b7"><td class="memItemLeft"><a id="a575dde3ae3140c96b822ab618fef18b7" name="a575dde3ae3140c96b822ab618fef18b7"></a>
+static constexpr f32&#160;</td><td class="memItemRight"><b>TWO_PI</b> = <a class="el" href="#afce6d114b6c8b3f28b6b051d2c77a760">Math::PI</a> * 2.0f</td></tr>
+<tr class="memdesc:a575dde3ae3140c96b822ab618fef18b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">円周率の2倍 <br /></td></tr>
+<tr class="memitem:a63d2da00b6dc52abcdbc77025556098e" id="r_a63d2da00b6dc52abcdbc77025556098e"><td class="memItemLeft"><a id="a63d2da00b6dc52abcdbc77025556098e" name="a63d2da00b6dc52abcdbc77025556098e"></a>
+static constexpr f32&#160;</td><td class="memItemRight"><b>HALF_PI</b> = <a class="el" href="#afce6d114b6c8b3f28b6b051d2c77a760">Math::PI</a> * 0.5f</td></tr>
+<tr class="memdesc:a63d2da00b6dc52abcdbc77025556098e"><td class="mdescLeft">&#160;</td><td class="mdescRight">円周率の半分 <br /></td></tr>
+<tr class="memitem:abbc308b5a2255295c20e9af49fede5f5" id="r_abbc308b5a2255295c20e9af49fede5f5"><td class="memItemLeft"><a id="abbc308b5a2255295c20e9af49fede5f5" name="abbc308b5a2255295c20e9af49fede5f5"></a>
+static constexpr f32&#160;</td><td class="memItemRight"><b>INV_PI</b> = 1.0f / <a class="el" href="#afce6d114b6c8b3f28b6b051d2c77a760">Math::PI</a></td></tr>
+<tr class="memdesc:abbc308b5a2255295c20e9af49fede5f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">円周率の逆数 <br /></td></tr>
+<tr class="memitem:a33ed6bf67786ae0fe58dd2a25397d1cc" id="r_a33ed6bf67786ae0fe58dd2a25397d1cc"><td class="memItemLeft"><a id="a33ed6bf67786ae0fe58dd2a25397d1cc" name="a33ed6bf67786ae0fe58dd2a25397d1cc"></a>
+static constexpr f32&#160;</td><td class="memItemRight"><b>INV_TWO_PI</b> = 1.0f / <a class="el" href="#a575dde3ae3140c96b822ab618fef18b7">Math::TWO_PI</a></td></tr>
+<tr class="memdesc:a33ed6bf67786ae0fe58dd2a25397d1cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">円周率の2倍の逆数 <br /></td></tr>
+<tr class="memitem:a8c87d6efab089d2bb4b932fab62451f0" id="r_a8c87d6efab089d2bb4b932fab62451f0"><td class="memItemLeft"><a id="a8c87d6efab089d2bb4b932fab62451f0" name="a8c87d6efab089d2bb4b932fab62451f0"></a>
+static constexpr f32&#160;</td><td class="memItemRight"><b>INV_HALF_PI</b> = 1.0f / <a class="el" href="#a63d2da00b6dc52abcdbc77025556098e">Math::HALF_PI</a></td></tr>
+<tr class="memdesc:a8c87d6efab089d2bb4b932fab62451f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">円周率の半分の逆数 <br /></td></tr>
+<tr class="memitem:af92f8e669b3dda74390bb6371e9dc8a3" id="r_af92f8e669b3dda74390bb6371e9dc8a3"><td class="memItemLeft"><a id="af92f8e669b3dda74390bb6371e9dc8a3" name="af92f8e669b3dda74390bb6371e9dc8a3"></a>
+static constexpr f32&#160;</td><td class="memItemRight"><b>EPSILON</b> = FLT_EPSILON</td></tr>
+<tr class="memdesc:af92f8e669b3dda74390bb6371e9dc8a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">ごくわずかな浮動小数点の値 <br /></td></tr>
+<tr class="memitem:a3db845f2984321ba21fe339e2bf78073" id="r_a3db845f2984321ba21fe339e2bf78073"><td class="memItemLeft"><a id="a3db845f2984321ba21fe339e2bf78073" name="a3db845f2984321ba21fe339e2bf78073"></a>
+static constexpr f32&#160;</td><td class="memItemRight"><b>NAPIER</b> = 2.71828182845904523536f</td></tr>
+<tr class="memdesc:a3db845f2984321ba21fe339e2bf78073"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネイピア数 <br /></td></tr>
+<tr class="memitem:ab25852ea7982731a8b1ebcebf4c7755f" id="r_ab25852ea7982731a8b1ebcebf4c7755f"><td class="memItemLeft"><a id="ab25852ea7982731a8b1ebcebf4c7755f" name="ab25852ea7982731a8b1ebcebf4c7755f"></a>
+static constexpr f32&#160;</td><td class="memItemRight"><b>GOLDEN_RATIO</b> = 1.6180339887498948482045868343656381f</td></tr>
+<tr class="memdesc:ab25852ea7982731a8b1ebcebf4c7755f"><td class="mdescLeft">&#160;</td><td class="mdescRight">黄金比 <br /></td></tr>
+<tr class="memitem:a929ac000cf951a6f26ac7aef965b08be" id="r_a929ac000cf951a6f26ac7aef965b08be"><td class="memItemLeft"><a id="a929ac000cf951a6f26ac7aef965b08be" name="a929ac000cf951a6f26ac7aef965b08be"></a>
+static constexpr f32&#160;</td><td class="memItemRight"><b>INF</b> = std::numeric_limits&lt;f32&gt;::infinity()</td></tr>
+<tr class="memdesc:a929ac000cf951a6f26ac7aef965b08be"><td class="mdescLeft">&#160;</td><td class="mdescRight">無限 <br /></td></tr>
+<tr class="memitem:a8371829f3a6ead26299088f6f597cbf4" id="r_a8371829f3a6ead26299088f6f597cbf4"><td class="memItemLeft"><a id="a8371829f3a6ead26299088f6f597cbf4" name="a8371829f3a6ead26299088f6f597cbf4"></a>
+static constexpr f32&#160;</td><td class="memItemRight"><b>NaN</b> = std::numeric_limits&lt;f32&gt;::quiet_NaN()</td></tr>
+<tr class="memdesc:a8371829f3a6ead26299088f6f597cbf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">無効値 <br /></td></tr>
+<tr class="memitem:a2e9981ebd4af1a2ffb80b23d1aae12e9" id="r_a2e9981ebd4af1a2ffb80b23d1aae12e9"><td class="memItemLeft"><a id="a2e9981ebd4af1a2ffb80b23d1aae12e9" name="a2e9981ebd4af1a2ffb80b23d1aae12e9"></a>
+static constexpr f32&#160;</td><td class="memItemRight"><b>TOLERANCE</b> = 0.00001f</td></tr>
+<tr class="memdesc:a2e9981ebd4af1a2ffb80b23d1aae12e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">誤差許容値 <br /></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="a6e66cd810b5281b02599cebfeec480bc" name="a6e66cd810b5281b02599cebfeec480bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e66cd810b5281b02599cebfeec480bc">&#9670;&#160;</a></span>SinCos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SinCos </td>
+          <td>(</td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>radians</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">f32 &amp;</td>          <td class="paramname"><span class="paramname"><em>outSin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">f32 &amp;</td>          <td class="paramname"><span class="paramname"><em>outCos</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>高速余弦正弦関数 </p>
+<p>-PI&lt;radians&lt;PIの時高い精度で結果が得られる。 </p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>Runtime/Core/Public/Amuse/Core/Math/<a class="el" href="../../da/db8/_math_8h_source.html">Math.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><a href="../../d2/d39/class_amuse_1_1_math.html">Math</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -135,14 +135,14 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('d8/d1a/_window
 <li>ウィンドウイベントをリスナとして購読できること。</li>
 </ul>
 <h1>基本設計</h1>
-<div class="fragment"><div class="line">Platform::WindowDesc desc;</div>
+<div class="fragment"><div class="line">WindowDesc desc;</div>
 <div class="line">desc.title = <span class="stringliteral">&quot;Amuse&quot;</span>;</div>
 <div class="line">desc.clientSize = { 1280, 720 };</div>
 <div class="line">desc.show = <span class="keyword">true</span>;</div>
 <div class="line"> </div>
-<div class="line">Ref&lt;Platform::Window&gt; window = Platform::Window::Create(desc);</div>
-<div class="line">window-&gt;addEventListener(handle, [](<span class="keyword">const</span> Platform::WindowEventArgs&amp; args) {</div>
-<div class="line">    <span class="keywordflow">if</span> (args.type == Platform::WindowEventType::Close) {</div>
+<div class="line">Ref&lt;Window&gt; window = Window::Create(desc);</div>
+<div class="line">window-&gt;addEventListener(handle, [](<span class="keyword">const</span> WindowEventArgs&amp; args) {</div>
+<div class="line">    <span class="keywordflow">if</span> (args.type == WindowEventType::Close) {</div>
 <div class="line">        LOG_INFO(<span class="stringliteral">&quot;Window closed&quot;</span>);</div>
 <div class="line">    }</div>
 <div class="line">});</div>

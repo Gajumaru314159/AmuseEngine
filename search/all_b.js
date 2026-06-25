@@ -1,13 +1,10 @@
 var searchData=
 [
-  ['kb_0',['KB',['../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a26b1103cd401e724f1e2c767dec89de8',1,'Amuse::Core::MemorySize']]],
-  ['kbf_1',['KBF',['../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#aa5d652acaf2e2382656020208ec88b64',1,'Amuse::Core::MemorySize']]],
-  ['kbuffersize_2',['kBufferSize',['../d2/d16/class_amuse_1_1_core_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#ace7696185b24e7441efa4d2935a7065a',1,'Amuse::Core::MiniDelegate&lt; R(Args...)&gt;']]],
-  ['key_3',['key',['../d0/d4d/struct_amuse_1_1_r_p_i_1_1_mesh_proxy.html#a5895aff30dbaf1f4e1800357b2abe159',1,'Amuse::RPI::MeshProxy']]],
-  ['key_5fequal_4',['key_equal',['../d7/ddc/class_amuse_1_1_core_1_1_index_map.html#aaaeb06cf95a52f39d9e893e9f3c33df6',1,'Amuse::Core::IndexMap']]],
-  ['key_5ftype_5',['key_type',['../d7/ddc/class_amuse_1_1_core_1_1_index_map.html#a5f67bcdd1525b8ff4c2803c305f9b919',1,'Amuse::Core::IndexMap']]],
-  ['keyboard_6',['Keyboard',['../df/d41/class_amuse_1_1_input_1_1_keyboard.html',1,'Amuse::Input::Keyboard'],['../d7/d90/_keyboard.html',1,'Keyboard']]],
-  ['keynotfoundexception_7',['KeyNotFoundException',['../d9/d80/class_amuse_1_1_core_1_1_key_not_found_exception.html',1,'Amuse::Core']]],
-  ['kib_8',['KiB',['../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a6ea3e1a3d8edbbd7ecdb146182f80c49',1,'Amuse::Core::MemorySize']]],
-  ['kibf_9',['KiBF',['../d5/d1f/struct_amuse_1_1_core_1_1_memory_size.html#a6f39dd1f1a12eb0b25cee1bf7bc7f2bc',1,'Amuse::Core::MemorySize']]]
+  ['j_0',['J',['../d1/da5/group___amuse_input.html#gga7f039edf8ca5f938e3d74c5e6eaf5f51aff44570aca8241914870afbc310cdb85',1,'Amuse']]],
+  ['japanese_1',['Japanese',['../df/de5/group___amuse_platform.html#gga315ca917ad583797f709ea477dd28705af32ced6a9ba164c4b3c047fd1d7c882e',1,'Amuse']]],
+  ['jobgroup_2',['JobGroup',['../d5/d64/class_amuse_1_1_job_group.html',1,'JobGroup'],['../d5/d64/class_amuse_1_1_job_group.html#a6de0fb434a9928dd3a8c6342941fe9d1',1,'Amuse::JobGroup::JobGroup()']]],
+  ['jobgrouphandle_3',['JobGroupHandle',['../d3/d81/class_amuse_1_1_job_group_handle.html',1,'JobGroupHandle'],['../d3/d81/class_amuse_1_1_job_group_handle.html#a94e23e9f83888a4894056a2a887d9cfa',1,'Amuse::JobGroupHandle::JobGroupHandle()']]],
+  ['jobhandle_4',['JobHandle',['../dc/de3/class_amuse_1_1_job_handle.html',1,'JobHandle'],['../dc/de3/class_amuse_1_1_job_handle.html#a37f078e06a87229ab33946b5c5cff523',1,'Amuse::JobHandle::JobHandle()']]],
+  ['jobsystem_5',['JobSystem',['../d0/db7/class_amuse_1_1_job_system.html',1,'JobSystem'],['../d0/db7/class_amuse_1_1_job_system.html#acc6e0bfe31c3f95eeb4f0b072bfc8a20',1,'Amuse::JobSystem::JobSystem()']]],
+  ['join_6',['join',['../d7/d67/class_amuse_1_1_thread.html#a6c7abfff648dad193674fc432ad4840d',1,'Amuse::Thread']]]
 ];

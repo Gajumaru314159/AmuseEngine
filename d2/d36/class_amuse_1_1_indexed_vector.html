@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: IndexedVector&lt; T, TIndex, TDataVector, TIndexVector &gt; クラステンプレート</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d2/d36/class_amuse_1_1_indexed_vector.html','../../','d2/d61/class_amuse_1_1_indexed_vector-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">メソッド</a> &#124;
+<a href="#pub-static-attribs">静的変数</a> &#124;
+<a href="../../d2/d61/class_amuse_1_1_indexed_vector-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">IndexedVector&lt; T, TIndex, TDataVector, TIndexVector &gt; クラステンプレート<div class="ingroups"><a class="el" href="../../da/d78/group___amuse_core.html">Core</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">説明</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;class T, class TIndex = uint16_t, class TDataVector = Vector&lt;T&gt;, class TIndexVector = Vector&lt;TIndex&gt;&gt;<br />
+class Amuse::IndexedVector&lt; T, TIndex, TDataVector, TIndexVector &gt;</div><p>インデックス付きベクターを表す。 </p>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+メソッド</h2></td></tr>
+<tr class="memitem:aecb4bd77fc3ff806ef4339e76c66bbf6" id="r_aecb4bd77fc3ff806ef4339e76c66bbf6"><td class="memItemLeft"><a id="aecb4bd77fc3ff806ef4339e76c66bbf6" name="aecb4bd77fc3ff806ef4339e76c66bbf6"></a>
+void&#160;</td><td class="memItemRight"><b>reserve</b> (size_t size)</td></tr>
+<tr class="memdesc:aecb4bd77fc3ff806ef4339e76c66bbf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">容量を予約する。 <br /></td></tr>
+<tr class="memitem:ac8bb3912a3ce86b15842e79d0b421204" id="r_ac8bb3912a3ce86b15842e79d0b421204"><td class="memItemLeft"><a id="ac8bb3912a3ce86b15842e79d0b421204" name="ac8bb3912a3ce86b15842e79d0b421204"></a>
+void&#160;</td><td class="memItemRight"><b>clear</b> ()</td></tr>
+<tr class="memdesc:ac8bb3912a3ce86b15842e79d0b421204"><td class="mdescLeft">&#160;</td><td class="mdescRight">全要素と空きインデックス情報を取り除く。 <br /></td></tr>
+<tr class="memitem:ab6cc5240536b0e6cd76b8142eead2b8a" id="r_ab6cc5240536b0e6cd76b8142eead2b8a"><td class="memItemLeft"><a id="ab6cc5240536b0e6cd76b8142eead2b8a" name="ab6cc5240536b0e6cd76b8142eead2b8a"></a>
+TIndex&#160;</td><td class="memItemRight"><b>push</b> ()</td></tr>
+<tr class="memdesc:ab6cc5240536b0e6cd76b8142eead2b8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">新しい論理インデックスを確保し、空きスロットがあれば再利用する。 <br /></td></tr>
+<tr class="memitem:a4b7c17432f16d73280507863625ac359" id="r_a4b7c17432f16d73280507863625ac359"><td class="memItemLeft"><a id="a4b7c17432f16d73280507863625ac359" name="a4b7c17432f16d73280507863625ac359"></a>
+void&#160;</td><td class="memItemRight"><b>erase</b> (TIndex index)</td></tr>
+<tr class="memdesc:a4b7c17432f16d73280507863625ac359"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した論理インデックスの要素を取り除き、インデックスを空きスロットに戻す。 <br /></td></tr>
+<tr class="memitem:ac7afbb3f26da28893af75521c85ae147" id="r_ac7afbb3f26da28893af75521c85ae147"><td class="memItemLeft"><a id="ac7afbb3f26da28893af75521c85ae147" name="ac7afbb3f26da28893af75521c85ae147"></a>
+void&#160;</td><td class="memItemRight"><b>erase</b> (T *data)</td></tr>
+<tr class="memdesc:ac7afbb3f26da28893af75521c85ae147"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した要素ポインタに対応する要素を取り除く。 <br /></td></tr>
+<tr class="memitem:a59b5346d811ab6d7d97ad6c59e32a44c" id="r_a59b5346d811ab6d7d97ad6c59e32a44c"><td class="memItemLeft"><a id="a59b5346d811ab6d7d97ad6c59e32a44c" name="a59b5346d811ab6d7d97ad6c59e32a44c"></a>
+T &amp;&#160;</td><td class="memItemRight"><b>at</b> (TIndex index)</td></tr>
+<tr class="memdesc:a59b5346d811ab6d7d97ad6c59e32a44c"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定位置の要素へアクセスする。 <br /></td></tr>
+<tr class="memitem:a8da3a1ed141e382c220332709ec9faa9" id="r_a8da3a1ed141e382c220332709ec9faa9"><td class="memItemLeft"><a id="a8da3a1ed141e382c220332709ec9faa9" name="a8da3a1ed141e382c220332709ec9faa9"></a>
+const T &amp;&#160;</td><td class="memItemRight"><b>at</b> (TIndex index) const</td></tr>
+<tr class="memdesc:a8da3a1ed141e382c220332709ec9faa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定位置の要素へアクセスする。 <br /></td></tr>
+<tr class="memitem:a259cb5a711406a8c3e5d937eb9350cca" id="r_a259cb5a711406a8c3e5d937eb9350cca"><td class="memItemLeft"><a id="a259cb5a711406a8c3e5d937eb9350cca" name="a259cb5a711406a8c3e5d937eb9350cca"></a>
+size_t&#160;</td><td class="memItemRight"><b>size</b> () const</td></tr>
+<tr class="memdesc:a259cb5a711406a8c3e5d937eb9350cca"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在格納している実データの要素数を返す。 <br /></td></tr>
+<tr class="memitem:adc1e16b293a89a9ccc9541058b5ca560" id="r_adc1e16b293a89a9ccc9541058b5ca560"><td class="memItemLeft"><a id="adc1e16b293a89a9ccc9541058b5ca560" name="adc1e16b293a89a9ccc9541058b5ca560"></a>
+T *&#160;</td><td class="memItemRight"><b>data</b> ()</td></tr>
+<tr class="memdesc:adc1e16b293a89a9ccc9541058b5ca560"><td class="mdescLeft">&#160;</td><td class="mdescRight">実データの先頭ポインタを返す。 <br /></td></tr>
+<tr class="memitem:a4ae7e1f6885eb47c11062cc74e6a6e19" id="r_a4ae7e1f6885eb47c11062cc74e6a6e19"><td class="memItemLeft"><a id="a4ae7e1f6885eb47c11062cc74e6a6e19" name="a4ae7e1f6885eb47c11062cc74e6a6e19"></a>
+const T *&#160;</td><td class="memItemRight"><b>data</b> () const</td></tr>
+<tr class="memdesc:a4ae7e1f6885eb47c11062cc74e6a6e19"><td class="mdescLeft">&#160;</td><td class="mdescRight">実データの読み取り専用先頭ポインタを返す。 <br /></td></tr>
+<tr class="memitem:acb02e41080b754b227c8fd949a0ee576" id="r_acb02e41080b754b227c8fd949a0ee576"><td class="memItemLeft"><a id="acb02e41080b754b227c8fd949a0ee576" name="acb02e41080b754b227c8fd949a0ee576"></a>
+TDataVector &amp;&#160;</td><td class="memItemRight"><b>container</b> ()</td></tr>
+<tr class="memdesc:acb02e41080b754b227c8fd949a0ee576"><td class="mdescLeft">&#160;</td><td class="mdescRight">実データを保持する内部コンテナへの参照を返す。 <br /></td></tr>
+<tr class="memitem:a6d86cfd0c8a9c245ae9b12ea420d927c" id="r_a6d86cfd0c8a9c245ae9b12ea420d927c"><td class="memItemLeft"><a id="a6d86cfd0c8a9c245ae9b12ea420d927c" name="a6d86cfd0c8a9c245ae9b12ea420d927c"></a>
+const TDataVector &amp;&#160;</td><td class="memItemRight"><b>container</b> () const</td></tr>
+<tr class="memdesc:a6d86cfd0c8a9c245ae9b12ea420d927c"><td class="mdescLeft">&#160;</td><td class="mdescRight">実データを保持する内部コンテナへの読み取り専用参照を返す。 <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+静的変数</h2></td></tr>
+<tr class="memitem:a647fe1b5826aa849e03a206233e8fc6e" id="r_a647fe1b5826aa849e03a206233e8fc6e"><td class="memItemLeft"><a id="a647fe1b5826aa849e03a206233e8fc6e" name="a647fe1b5826aa849e03a206233e8fc6e"></a>
+static constexpr TIndex&#160;</td><td class="memItemRight"><b>NoFreeSlot</b> = std::numeric_limits&lt;TIndex&gt;::max()</td></tr>
+<tr class="memdesc:a647fe1b5826aa849e03a206233e8fc6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">空きスロットなしを表す値 <br /></td></tr>
+</table>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>Runtime/Core/Public/Amuse/Core/Template/Container/<a class="el" href="../../d4/d87/_indexed_vector_8h_source.html">IndexedVector.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><a href="../../d2/d36/class_amuse_1_1_indexed_vector.html">IndexedVector</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

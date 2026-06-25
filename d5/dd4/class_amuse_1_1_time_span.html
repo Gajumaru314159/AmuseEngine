@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: TimeSpan クラス</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d5/dd4/class_amuse_1_1_time_span.html','../../','da/d86/class_amuse_1_1_time_span-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">メソッド</a> &#124;
+<a href="#pub-static-methods">静的関数</a> &#124;
+<a href="#pub-static-attribs">静的変数</a> &#124;
+<a href="../../da/d86/class_amuse_1_1_time_span-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">TimeSpan クラス<div class="ingroups"><a class="el" href="../../da/d78/group___amuse_core.html">Core</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">説明</h2>
+<div class="textblock"><p>時間間隔 </p>
+<p>長期の期間を扱うのには適していません。 内部表現に64bit整数を使用しているため±239年を超える場合は別な表現を検討してください。 経過年数を取得する場合は閏年を考慮する必要があるため独自に実装する必要があります。 </p>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+メソッド</h2></td></tr>
+<tr class="memitem:aa86894256ef4d7d07f05d3dc4d078c1d" id="r_aa86894256ef4d7d07f05d3dc4d078c1d"><td class="memItemLeft"><a id="aa86894256ef4d7d07f05d3dc4d078c1d" name="aa86894256ef4d7d07f05d3dc4d078c1d"></a>
+&#160;</td><td class="memItemRight"><b>TimeSpan</b> ()=default</td></tr>
+<tr class="memdesc:aa86894256ef4d7d07f05d3dc4d078c1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトコンストラクタ <br /></td></tr>
+<tr class="memitem:adf227e0e6c46da70f74c7803296c8d5c" id="r_adf227e0e6c46da70f74c7803296c8d5c"><td class="memItemLeft"><a id="adf227e0e6c46da70f74c7803296c8d5c" name="adf227e0e6c46da70f74c7803296c8d5c"></a>
+&#160;</td><td class="memItemRight"><b>TimeSpan</b> (s64 ticks) noexcept</td></tr>
+<tr class="memdesc:adf227e0e6c46da70f74c7803296c8d5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ(Tick初期化) <br /></td></tr>
+<tr class="memitem:ac853d2ca216230f66f2026dcb8f201db" id="r_ac853d2ca216230f66f2026dcb8f201db"><td class="memItemLeft"><a id="ac853d2ca216230f66f2026dcb8f201db" name="ac853d2ca216230f66f2026dcb8f201db"></a>
+&#160;</td><td class="memItemRight"><b>TimeSpan</b> (s32 days, s32 hours, s32 minutes, s32 seconds, s32 milliSeconds) noexcept</td></tr>
+<tr class="memdesc:ac853d2ca216230f66f2026dcb8f201db"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ <br /></td></tr>
+<tr class="memitem:ae5e4f4c7338a1dc5ebf29a23473434cd" id="r_ae5e4f4c7338a1dc5ebf29a23473434cd"><td class="memItemLeft"><a id="ae5e4f4c7338a1dc5ebf29a23473434cd" name="ae5e4f4c7338a1dc5ebf29a23473434cd"></a>
+&#160;</td><td class="memItemRight"><b>TimeSpan</b> (const <a class="el" href="../../d0/d8c/struct_amuse_1_1_date_time.html">DateTime</a> &amp;from, const <a class="el" href="../../d0/d8c/struct_amuse_1_1_date_time.html">DateTime</a> &amp;to) noexcept</td></tr>
+<tr class="memdesc:ae5e4f4c7338a1dc5ebf29a23473434cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ <br /></td></tr>
+<tr class="memitem:a8d79ae4fd1a28373db8783138413135d" id="r_a8d79ae4fd1a28373db8783138413135d"><td class="memItemLeft"><a id="a8d79ae4fd1a28373db8783138413135d" name="a8d79ae4fd1a28373db8783138413135d"></a>
+<a class="el" href="#aa86894256ef4d7d07f05d3dc4d078c1d">TimeSpan</a>&#160;</td><td class="memItemRight"><b>operator-</b> (const <a class="el" href="#aa86894256ef4d7d07f05d3dc4d078c1d">TimeSpan</a> &amp;rhs) const noexcept</td></tr>
+<tr class="memdesc:a8d79ae4fd1a28373db8783138413135d"><td class="mdescLeft">&#160;</td><td class="mdescRight">加算演算子 <br /></td></tr>
+<tr class="memitem:a190e8795aacd985cc1ec47443f4a8675" id="r_a190e8795aacd985cc1ec47443f4a8675"><td class="memItemLeft"><a id="a190e8795aacd985cc1ec47443f4a8675" name="a190e8795aacd985cc1ec47443f4a8675"></a>
+<a class="el" href="#aa86894256ef4d7d07f05d3dc4d078c1d">TimeSpan</a>&#160;</td><td class="memItemRight"><b>operator+</b> (const <a class="el" href="#aa86894256ef4d7d07f05d3dc4d078c1d">TimeSpan</a> &amp;rhs) const noexcept</td></tr>
+<tr class="memdesc:a190e8795aacd985cc1ec47443f4a8675"><td class="mdescLeft">&#160;</td><td class="mdescRight">減算演算子 <br /></td></tr>
+<tr class="memitem:a36e579ba3a25b6a397cdfac67e567025" id="r_a36e579ba3a25b6a397cdfac67e567025"><td class="memItemLeft"><a id="a36e579ba3a25b6a397cdfac67e567025" name="a36e579ba3a25b6a397cdfac67e567025"></a>
+<a class="el" href="#aa86894256ef4d7d07f05d3dc4d078c1d">TimeSpan</a>&#160;</td><td class="memItemRight"><b>operator*</b> (f64 scalar) const noexcept</td></tr>
+<tr class="memdesc:a36e579ba3a25b6a397cdfac67e567025"><td class="mdescLeft">&#160;</td><td class="mdescRight">乗算演算子 <br /></td></tr>
+<tr class="memitem:ab0f5ce72187543c343ddbd90ac8fdd03" id="r_ab0f5ce72187543c343ddbd90ac8fdd03"><td class="memItemLeft"><a id="ab0f5ce72187543c343ddbd90ac8fdd03" name="ab0f5ce72187543c343ddbd90ac8fdd03"></a>
+<a class="el" href="#aa86894256ef4d7d07f05d3dc4d078c1d">TimeSpan</a>&#160;</td><td class="memItemRight"><b>operator/</b> (f64 scalar) const noexcept</td></tr>
+<tr class="memdesc:ab0f5ce72187543c343ddbd90ac8fdd03"><td class="mdescLeft">&#160;</td><td class="mdescRight">除算演算子 <br /></td></tr>
+<tr class="memitem:a5e59ee6dab518fc2e5f64147ab98626b" id="r_a5e59ee6dab518fc2e5f64147ab98626b"><td class="memItemLeft"><a id="a5e59ee6dab518fc2e5f64147ab98626b" name="a5e59ee6dab518fc2e5f64147ab98626b"></a>
+<a class="el" href="#aa86894256ef4d7d07f05d3dc4d078c1d">TimeSpan</a>&#160;</td><td class="memItemRight"><b>operator%</b> (const <a class="el" href="#aa86894256ef4d7d07f05d3dc4d078c1d">TimeSpan</a> &amp;rhs) const noexcept</td></tr>
+<tr class="memdesc:a5e59ee6dab518fc2e5f64147ab98626b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mod演算子 <br /></td></tr>
+<tr class="memitem:a0703bcabf29925f17de7d1cc215858c2" id="r_a0703bcabf29925f17de7d1cc215858c2"><td class="memItemLeft"><a id="a0703bcabf29925f17de7d1cc215858c2" name="a0703bcabf29925f17de7d1cc215858c2"></a>
+<a class="el" href="#aa86894256ef4d7d07f05d3dc4d078c1d">TimeSpan</a> &amp;&#160;</td><td class="memItemRight"><b>operator+=</b> (const <a class="el" href="#aa86894256ef4d7d07f05d3dc4d078c1d">TimeSpan</a> &amp;rhs) noexcept</td></tr>
+<tr class="memdesc:a0703bcabf29925f17de7d1cc215858c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">加算代入演算子 <br /></td></tr>
+<tr class="memitem:ab1db5ea33fa37302313418eca9b39b73" id="r_ab1db5ea33fa37302313418eca9b39b73"><td class="memItemLeft"><a id="ab1db5ea33fa37302313418eca9b39b73" name="ab1db5ea33fa37302313418eca9b39b73"></a>
+<a class="el" href="#aa86894256ef4d7d07f05d3dc4d078c1d">TimeSpan</a> &amp;&#160;</td><td class="memItemRight"><b>operator-=</b> (const <a class="el" href="#aa86894256ef4d7d07f05d3dc4d078c1d">TimeSpan</a> &amp;rhs) noexcept</td></tr>
+<tr class="memdesc:ab1db5ea33fa37302313418eca9b39b73"><td class="mdescLeft">&#160;</td><td class="mdescRight">減算代入演算子 <br /></td></tr>
+<tr class="memitem:afd6c1d0ed914d5f6e28c5de7e014f5fd" id="r_afd6c1d0ed914d5f6e28c5de7e014f5fd"><td class="memItemLeft"><a id="afd6c1d0ed914d5f6e28c5de7e014f5fd" name="afd6c1d0ed914d5f6e28c5de7e014f5fd"></a>
+<a class="el" href="#aa86894256ef4d7d07f05d3dc4d078c1d">TimeSpan</a> &amp;&#160;</td><td class="memItemRight"><b>operator*=</b> (f64 scalar) noexcept</td></tr>
+<tr class="memdesc:afd6c1d0ed914d5f6e28c5de7e014f5fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">乗算代入演算子 <br /></td></tr>
+<tr class="memitem:a0c05705998442d1e01cb140549729436" id="r_a0c05705998442d1e01cb140549729436"><td class="memItemLeft"><a id="a0c05705998442d1e01cb140549729436" name="a0c05705998442d1e01cb140549729436"></a>
+<a class="el" href="#aa86894256ef4d7d07f05d3dc4d078c1d">TimeSpan</a> &amp;&#160;</td><td class="memItemRight"><b>operator/=</b> (f64 scalar) noexcept</td></tr>
+<tr class="memdesc:a0c05705998442d1e01cb140549729436"><td class="mdescLeft">&#160;</td><td class="mdescRight">除算代入演算子 <br /></td></tr>
+<tr class="memitem:a5c40a5203c0b20ec6884e2497a0e3645" id="r_a5c40a5203c0b20ec6884e2497a0e3645"><td class="memItemLeft"><a id="a5c40a5203c0b20ec6884e2497a0e3645" name="a5c40a5203c0b20ec6884e2497a0e3645"></a>
+<a class="el" href="#aa86894256ef4d7d07f05d3dc4d078c1d">TimeSpan</a> &amp;&#160;</td><td class="memItemRight"><b>operator%=</b> (const <a class="el" href="#aa86894256ef4d7d07f05d3dc4d078c1d">TimeSpan</a> &amp;rhs) noexcept</td></tr>
+<tr class="memdesc:a5c40a5203c0b20ec6884e2497a0e3645"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mod代入演算子 <br /></td></tr>
+<tr class="memitem:a42464d59935645e7f55d7643c1eb79c6" id="r_a42464d59935645e7f55d7643c1eb79c6"><td class="memItemLeft"><a id="a42464d59935645e7f55d7643c1eb79c6" name="a42464d59935645e7f55d7643c1eb79c6"></a>
+<a class="el" href="#aa86894256ef4d7d07f05d3dc4d078c1d">TimeSpan</a>&#160;</td><td class="memItemRight"><b>operator-</b> () const noexcept</td></tr>
+<tr class="memdesc:a42464d59935645e7f55d7643c1eb79c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">単項マイナス演算子 <br /></td></tr>
+<tr class="memitem:a884567fe1175783daa3e6cce57fcc52a" id="r_a884567fe1175783daa3e6cce57fcc52a"><td class="memItemLeft"><a id="a884567fe1175783daa3e6cce57fcc52a" name="a884567fe1175783daa3e6cce57fcc52a"></a>
+bool&#160;</td><td class="memItemRight"><b>operator==</b> (const <a class="el" href="#aa86894256ef4d7d07f05d3dc4d078c1d">TimeSpan</a> &amp;rhs) const noexcept</td></tr>
+<tr class="memdesc:a884567fe1175783daa3e6cce57fcc52a"><td class="mdescLeft">&#160;</td><td class="mdescRight">等価演算子 <br /></td></tr>
+<tr class="memitem:a8a4ee397f31f78c17df60819ae835cca" id="r_a8a4ee397f31f78c17df60819ae835cca"><td class="memItemLeft"><a id="a8a4ee397f31f78c17df60819ae835cca" name="a8a4ee397f31f78c17df60819ae835cca"></a>
+bool&#160;</td><td class="memItemRight"><b>operator!=</b> (const <a class="el" href="#aa86894256ef4d7d07f05d3dc4d078c1d">TimeSpan</a> &amp;rhs) const noexcept</td></tr>
+<tr class="memdesc:a8a4ee397f31f78c17df60819ae835cca"><td class="mdescLeft">&#160;</td><td class="mdescRight">否等価演算子 <br /></td></tr>
+<tr class="memitem:ae17bc2badac2a52365176cc05f376909" id="r_ae17bc2badac2a52365176cc05f376909"><td class="memItemLeft"><a id="ae17bc2badac2a52365176cc05f376909" name="ae17bc2badac2a52365176cc05f376909"></a>
+bool&#160;</td><td class="memItemRight"><b>operator&lt;</b> (const <a class="el" href="#aa86894256ef4d7d07f05d3dc4d078c1d">TimeSpan</a> &amp;rhs) const noexcept</td></tr>
+<tr class="memdesc:ae17bc2badac2a52365176cc05f376909"><td class="mdescLeft">&#160;</td><td class="mdescRight">比較演算子 <br /></td></tr>
+<tr class="memitem:a491a5eeba3da40aae494619fa4638b50" id="r_a491a5eeba3da40aae494619fa4638b50"><td class="memItemLeft"><a id="a491a5eeba3da40aae494619fa4638b50" name="a491a5eeba3da40aae494619fa4638b50"></a>
+bool&#160;</td><td class="memItemRight"><b>operator&lt;=</b> (const <a class="el" href="#aa86894256ef4d7d07f05d3dc4d078c1d">TimeSpan</a> &amp;rhs) const noexcept</td></tr>
+<tr class="memdesc:a491a5eeba3da40aae494619fa4638b50"><td class="mdescLeft">&#160;</td><td class="mdescRight">比較演算子 <br /></td></tr>
+<tr class="memitem:a908b3532c16f115287aaa3378faea33d" id="r_a908b3532c16f115287aaa3378faea33d"><td class="memItemLeft"><a id="a908b3532c16f115287aaa3378faea33d" name="a908b3532c16f115287aaa3378faea33d"></a>
+bool&#160;</td><td class="memItemRight"><b>operator&gt;</b> (const <a class="el" href="#aa86894256ef4d7d07f05d3dc4d078c1d">TimeSpan</a> &amp;rhs) const noexcept</td></tr>
+<tr class="memdesc:a908b3532c16f115287aaa3378faea33d"><td class="mdescLeft">&#160;</td><td class="mdescRight">比較演算子 <br /></td></tr>
+<tr class="memitem:ad1bd7bdd3dd9197aa4f0990830b66750" id="r_ad1bd7bdd3dd9197aa4f0990830b66750"><td class="memItemLeft"><a id="ad1bd7bdd3dd9197aa4f0990830b66750" name="ad1bd7bdd3dd9197aa4f0990830b66750"></a>
+bool&#160;</td><td class="memItemRight"><b>operator&gt;=</b> (const <a class="el" href="#aa86894256ef4d7d07f05d3dc4d078c1d">TimeSpan</a> &amp;rhs) const noexcept</td></tr>
+<tr class="memdesc:ad1bd7bdd3dd9197aa4f0990830b66750"><td class="mdescLeft">&#160;</td><td class="mdescRight">比較演算子 <br /></td></tr>
+<tr class="memitem:a2843b668b4d95c4a148288311357df07" id="r_a2843b668b4d95c4a148288311357df07"><td class="memItemLeft"><a id="a2843b668b4d95c4a148288311357df07" name="a2843b668b4d95c4a148288311357df07"></a>
+bool&#160;</td><td class="memItemRight"><b>isZero</b> () const noexcept</td></tr>
+<tr class="memdesc:a2843b668b4d95c4a148288311357df07"><td class="mdescLeft">&#160;</td><td class="mdescRight">間隔がゼロか <br /></td></tr>
+<tr class="memitem:adc0c160d8532b2d9cb41387dabc1eb73" id="r_adc0c160d8532b2d9cb41387dabc1eb73"><td class="memItemLeft"><a id="adc0c160d8532b2d9cb41387dabc1eb73" name="adc0c160d8532b2d9cb41387dabc1eb73"></a>
+<a class="el" href="#aa86894256ef4d7d07f05d3dc4d078c1d">TimeSpan</a>&#160;</td><td class="memItemRight"><b>abs</b> () const noexcept</td></tr>
+<tr class="memdesc:adc0c160d8532b2d9cb41387dabc1eb73"><td class="mdescLeft">&#160;</td><td class="mdescRight">絶対値を取得 <br /></td></tr>
+<tr class="memitem:a8ebef5e6c3bb27733280323f919412af" id="r_a8ebef5e6c3bb27733280323f919412af"><td class="memItemLeft"><a id="a8ebef5e6c3bb27733280323f919412af" name="a8ebef5e6c3bb27733280323f919412af"></a>
+s32&#160;</td><td class="memItemRight"><b>days</b> () const noexcept</td></tr>
+<tr class="memdesc:a8ebef5e6c3bb27733280323f919412af"><td class="mdescLeft">&#160;</td><td class="mdescRight">経過時間の日数部分を取得 <br /></td></tr>
+<tr class="memitem:aee3248e70ef19142881ce9da376ba5bc" id="r_aee3248e70ef19142881ce9da376ba5bc"><td class="memItemLeft"><a id="aee3248e70ef19142881ce9da376ba5bc" name="aee3248e70ef19142881ce9da376ba5bc"></a>
+s32&#160;</td><td class="memItemRight"><b>hours</b> () const noexcept</td></tr>
+<tr class="memdesc:aee3248e70ef19142881ce9da376ba5bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">経過時間の時間部分を取得 <br /></td></tr>
+<tr class="memitem:a282a8bbbe5ca5d36208cc433e648efb9" id="r_a282a8bbbe5ca5d36208cc433e648efb9"><td class="memItemLeft"><a id="a282a8bbbe5ca5d36208cc433e648efb9" name="a282a8bbbe5ca5d36208cc433e648efb9"></a>
+s32&#160;</td><td class="memItemRight"><b>minutes</b> () const noexcept</td></tr>
+<tr class="memdesc:a282a8bbbe5ca5d36208cc433e648efb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">経過時間の分部分を取得 <br /></td></tr>
+<tr class="memitem:af4f97bd0161257361ad3560b23558f8c" id="r_af4f97bd0161257361ad3560b23558f8c"><td class="memItemLeft"><a id="af4f97bd0161257361ad3560b23558f8c" name="af4f97bd0161257361ad3560b23558f8c"></a>
+s32&#160;</td><td class="memItemRight"><b>seconds</b> () const noexcept</td></tr>
+<tr class="memdesc:af4f97bd0161257361ad3560b23558f8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">経過時間の秒部分を取得 <br /></td></tr>
+<tr class="memitem:a899a62ad0e998aa8ca31573c5c856181" id="r_a899a62ad0e998aa8ca31573c5c856181"><td class="memItemLeft"><a id="a899a62ad0e998aa8ca31573c5c856181" name="a899a62ad0e998aa8ca31573c5c856181"></a>
+f32&#160;</td><td class="memItemRight"><b>daysF</b> () const noexcept</td></tr>
+<tr class="memdesc:a899a62ad0e998aa8ca31573c5c856181"><td class="mdescLeft">&#160;</td><td class="mdescRight">経過時間の日数部分を取得(小数込み) <br /></td></tr>
+<tr class="memitem:a8f9c6a793cad63acc2bc534dd97b3242" id="r_a8f9c6a793cad63acc2bc534dd97b3242"><td class="memItemLeft"><a id="a8f9c6a793cad63acc2bc534dd97b3242" name="a8f9c6a793cad63acc2bc534dd97b3242"></a>
+f32&#160;</td><td class="memItemRight"><b>hoursF</b> () const noexcept</td></tr>
+<tr class="memdesc:a8f9c6a793cad63acc2bc534dd97b3242"><td class="mdescLeft">&#160;</td><td class="mdescRight">経過時間の時間部分を取得(小数込み) <br /></td></tr>
+<tr class="memitem:a4345f5c0965138ddb2a53805e74698e8" id="r_a4345f5c0965138ddb2a53805e74698e8"><td class="memItemLeft"><a id="a4345f5c0965138ddb2a53805e74698e8" name="a4345f5c0965138ddb2a53805e74698e8"></a>
+f32&#160;</td><td class="memItemRight"><b>minutesF</b> () const noexcept</td></tr>
+<tr class="memdesc:a4345f5c0965138ddb2a53805e74698e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">経過時間の分部分を取得(小数込み) <br /></td></tr>
+<tr class="memitem:a678df8de8636d3a9e9d2c4b5492712cc" id="r_a678df8de8636d3a9e9d2c4b5492712cc"><td class="memItemLeft"><a id="a678df8de8636d3a9e9d2c4b5492712cc" name="a678df8de8636d3a9e9d2c4b5492712cc"></a>
+f32&#160;</td><td class="memItemRight"><b>secondsF</b> () const noexcept</td></tr>
+<tr class="memdesc:a678df8de8636d3a9e9d2c4b5492712cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">経過時間の秒部分を取得(小数込み) <br /></td></tr>
+<tr class="memitem:a530deddf37b6453fb99cdfb8ad6c1fe2" id="r_a530deddf37b6453fb99cdfb8ad6c1fe2"><td class="memItemLeft"><a id="a530deddf37b6453fb99cdfb8ad6c1fe2" name="a530deddf37b6453fb99cdfb8ad6c1fe2"></a>
+s32&#160;</td><td class="memItemRight"><b>totalDays</b> () const noexcept</td></tr>
+<tr class="memdesc:a530deddf37b6453fb99cdfb8ad6c1fe2"><td class="mdescLeft">&#160;</td><td class="mdescRight">累計経過日数を取得 <br /></td></tr>
+<tr class="memitem:a428a93e947f5e37062b22127056fe6d8" id="r_a428a93e947f5e37062b22127056fe6d8"><td class="memItemLeft"><a id="a428a93e947f5e37062b22127056fe6d8" name="a428a93e947f5e37062b22127056fe6d8"></a>
+s32&#160;</td><td class="memItemRight"><b>totalHours</b> () const noexcept</td></tr>
+<tr class="memdesc:a428a93e947f5e37062b22127056fe6d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">累計経過時間を取得 <br /></td></tr>
+<tr class="memitem:afc0e8e2d917bf8cb3ba4afb377795969" id="r_afc0e8e2d917bf8cb3ba4afb377795969"><td class="memItemLeft"><a id="afc0e8e2d917bf8cb3ba4afb377795969" name="afc0e8e2d917bf8cb3ba4afb377795969"></a>
+s32&#160;</td><td class="memItemRight"><b>totalMinutes</b> () const noexcept</td></tr>
+<tr class="memdesc:afc0e8e2d917bf8cb3ba4afb377795969"><td class="mdescLeft">&#160;</td><td class="mdescRight">累計経過分を取得 <br /></td></tr>
+<tr class="memitem:aa497116e5b9297803f47006bd40afeb4" id="r_aa497116e5b9297803f47006bd40afeb4"><td class="memItemLeft"><a id="aa497116e5b9297803f47006bd40afeb4" name="aa497116e5b9297803f47006bd40afeb4"></a>
+s32&#160;</td><td class="memItemRight"><b>totalSeconds</b> () const noexcept</td></tr>
+<tr class="memdesc:aa497116e5b9297803f47006bd40afeb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">累計経過秒を取得 <br /></td></tr>
+<tr class="memitem:a10037bb0db23eb5631b8c9a48204431e" id="r_a10037bb0db23eb5631b8c9a48204431e"><td class="memItemLeft"><a id="a10037bb0db23eb5631b8c9a48204431e" name="a10037bb0db23eb5631b8c9a48204431e"></a>
+f32&#160;</td><td class="memItemRight"><b>totalDaysF</b> () const noexcept</td></tr>
+<tr class="memdesc:a10037bb0db23eb5631b8c9a48204431e"><td class="mdescLeft">&#160;</td><td class="mdescRight">累計経過日数を取得(小数込み) <br /></td></tr>
+<tr class="memitem:af37c3dd723308df733890e1b0aa2139f" id="r_af37c3dd723308df733890e1b0aa2139f"><td class="memItemLeft"><a id="af37c3dd723308df733890e1b0aa2139f" name="af37c3dd723308df733890e1b0aa2139f"></a>
+f32&#160;</td><td class="memItemRight"><b>totalHoursF</b> () const noexcept</td></tr>
+<tr class="memdesc:af37c3dd723308df733890e1b0aa2139f"><td class="mdescLeft">&#160;</td><td class="mdescRight">累計経過時間を取得(小数込み) <br /></td></tr>
+<tr class="memitem:a04933df972f944e6d9640c6c5967f2f2" id="r_a04933df972f944e6d9640c6c5967f2f2"><td class="memItemLeft"><a id="a04933df972f944e6d9640c6c5967f2f2" name="a04933df972f944e6d9640c6c5967f2f2"></a>
+f32&#160;</td><td class="memItemRight"><b>totalMinutesF</b> () const noexcept</td></tr>
+<tr class="memdesc:a04933df972f944e6d9640c6c5967f2f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">累計経過分を取得(小数込み) <br /></td></tr>
+<tr class="memitem:a01928cfc39aaaec9eff18a35cb9ac755" id="r_a01928cfc39aaaec9eff18a35cb9ac755"><td class="memItemLeft"><a id="a01928cfc39aaaec9eff18a35cb9ac755" name="a01928cfc39aaaec9eff18a35cb9ac755"></a>
+f32&#160;</td><td class="memItemRight"><b>totalSecondsF</b> () const noexcept</td></tr>
+<tr class="memdesc:a01928cfc39aaaec9eff18a35cb9ac755"><td class="mdescLeft">&#160;</td><td class="mdescRight">累計経過秒を取得(小数込み) <br /></td></tr>
+<tr class="memitem:ab372e8e0db4e951765248412a29b3e12" id="r_ab372e8e0db4e951765248412a29b3e12"><td class="memItemLeft"><a id="ab372e8e0db4e951765248412a29b3e12" name="ab372e8e0db4e951765248412a29b3e12"></a>
+s64&#160;</td><td class="memItemRight"><b>totalTicks</b> () const noexcept</td></tr>
+<tr class="memdesc:ab372e8e0db4e951765248412a29b3e12"><td class="mdescLeft">&#160;</td><td class="mdescRight">累計経過Thick数を取得 <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静的関数</h2></td></tr>
+<tr class="memitem:adeb86e096b800c7c43a5bcde5a10d67e" id="r_adeb86e096b800c7c43a5bcde5a10d67e"><td class="memItemLeft"><a id="adeb86e096b800c7c43a5bcde5a10d67e" name="adeb86e096b800c7c43a5bcde5a10d67e"></a>
+static <a class="el" href="#aa86894256ef4d7d07f05d3dc4d078c1d">TimeSpan</a>&#160;</td><td class="memItemRight"><b>Days</b> (f64 days) noexcept</td></tr>
+<tr class="memdesc:adeb86e096b800c7c43a5bcde5a10d67e"><td class="mdescLeft">&#160;</td><td class="mdescRight">日数から <a class="el" href="../../d5/dd4/class_amuse_1_1_time_span.html" title="時間間隔">TimeSpan</a> を構築 <br /></td></tr>
+<tr class="memitem:aaf8a92cb8fe93fd06aa16b70fe2d1eaa" id="r_aaf8a92cb8fe93fd06aa16b70fe2d1eaa"><td class="memItemLeft"><a id="aaf8a92cb8fe93fd06aa16b70fe2d1eaa" name="aaf8a92cb8fe93fd06aa16b70fe2d1eaa"></a>
+static <a class="el" href="#aa86894256ef4d7d07f05d3dc4d078c1d">TimeSpan</a>&#160;</td><td class="memItemRight"><b>Hours</b> (f64 hour) noexcept</td></tr>
+<tr class="memdesc:aaf8a92cb8fe93fd06aa16b70fe2d1eaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">時間から <a class="el" href="../../d5/dd4/class_amuse_1_1_time_span.html" title="時間間隔">TimeSpan</a> を構築 <br /></td></tr>
+<tr class="memitem:a8f7994481cfa1cbd56d978628be31e7f" id="r_a8f7994481cfa1cbd56d978628be31e7f"><td class="memItemLeft"><a id="a8f7994481cfa1cbd56d978628be31e7f" name="a8f7994481cfa1cbd56d978628be31e7f"></a>
+static <a class="el" href="#aa86894256ef4d7d07f05d3dc4d078c1d">TimeSpan</a>&#160;</td><td class="memItemRight"><b>Minutes</b> (f64 minutes) noexcept</td></tr>
+<tr class="memdesc:a8f7994481cfa1cbd56d978628be31e7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">分から <a class="el" href="../../d5/dd4/class_amuse_1_1_time_span.html" title="時間間隔">TimeSpan</a> を構築 <br /></td></tr>
+<tr class="memitem:aab10e4b25da60a5db2c517a75e5a9376" id="r_aab10e4b25da60a5db2c517a75e5a9376"><td class="memItemLeft"><a id="aab10e4b25da60a5db2c517a75e5a9376" name="aab10e4b25da60a5db2c517a75e5a9376"></a>
+static <a class="el" href="#aa86894256ef4d7d07f05d3dc4d078c1d">TimeSpan</a>&#160;</td><td class="memItemRight"><b>Seconds</b> (f64 seconds) noexcept</td></tr>
+<tr class="memdesc:aab10e4b25da60a5db2c517a75e5a9376"><td class="mdescLeft">&#160;</td><td class="mdescRight">秒から <a class="el" href="../../d5/dd4/class_amuse_1_1_time_span.html" title="時間間隔">TimeSpan</a> を構築 <br /></td></tr>
+<tr class="memitem:a77f120722e404c3a0cc5089c9340950f" id="r_a77f120722e404c3a0cc5089c9340950f"><td class="memItemLeft"><a id="a77f120722e404c3a0cc5089c9340950f" name="a77f120722e404c3a0cc5089c9340950f"></a>
+static <a class="el" href="#aa86894256ef4d7d07f05d3dc4d078c1d">TimeSpan</a>&#160;</td><td class="memItemRight"><b>MilliSeconds</b> (f64 seconds) noexcept</td></tr>
+<tr class="memdesc:a77f120722e404c3a0cc5089c9340950f"><td class="mdescLeft">&#160;</td><td class="mdescRight">ミリ秒から <a class="el" href="../../d5/dd4/class_amuse_1_1_time_span.html" title="時間間隔">TimeSpan</a> を構築 <br /></td></tr>
+<tr class="memitem:a16fa208107e4154f923e6a95db40912e" id="r_a16fa208107e4154f923e6a95db40912e"><td class="memItemLeft"><a id="a16fa208107e4154f923e6a95db40912e" name="a16fa208107e4154f923e6a95db40912e"></a>
+static <a class="el" href="#aa86894256ef4d7d07f05d3dc4d078c1d">TimeSpan</a>&#160;</td><td class="memItemRight"><b>NanoSeconds</b> (f64 nanoSeconds) noexcept</td></tr>
+<tr class="memdesc:a16fa208107e4154f923e6a95db40912e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ナノ秒から <a class="el" href="../../d5/dd4/class_amuse_1_1_time_span.html" title="時間間隔">TimeSpan</a> を構築 <br /></td></tr>
+<tr class="memitem:af6ff169b4703e9181f5b6f80fe075709" id="r_af6ff169b4703e9181f5b6f80fe075709"><td class="memItemLeft"><a id="af6ff169b4703e9181f5b6f80fe075709" name="af6ff169b4703e9181f5b6f80fe075709"></a>
+static <a class="el" href="#aa86894256ef4d7d07f05d3dc4d078c1d">TimeSpan</a>&#160;</td><td class="memItemRight"><b>MicroSeconds</b> (f64 microSeconds) noexcept</td></tr>
+<tr class="memdesc:af6ff169b4703e9181f5b6f80fe075709"><td class="mdescLeft">&#160;</td><td class="mdescRight">マイクロ秒から <a class="el" href="../../d5/dd4/class_amuse_1_1_time_span.html" title="時間間隔">TimeSpan</a> を構築 <br /></td></tr>
+<tr class="memitem:ac5c9a0e7cec82adf63303d3940e81275" id="r_ac5c9a0e7cec82adf63303d3940e81275"><td class="memItemLeft"><a id="ac5c9a0e7cec82adf63303d3940e81275" name="ac5c9a0e7cec82adf63303d3940e81275"></a>
+static <a class="el" href="#aa86894256ef4d7d07f05d3dc4d078c1d">TimeSpan</a>&#160;</td><td class="memItemRight"><b>Max</b> () noexcept</td></tr>
+<tr class="memdesc:ac5c9a0e7cec82adf63303d3940e81275"><td class="mdescLeft">&#160;</td><td class="mdescRight">2^63 Tick <br /></td></tr>
+<tr class="memitem:ab30ef72eaa659f4121fee5e0cc869129" id="r_ab30ef72eaa659f4121fee5e0cc869129"><td class="memItemLeft"><a id="ab30ef72eaa659f4121fee5e0cc869129" name="ab30ef72eaa659f4121fee5e0cc869129"></a>
+static <a class="el" href="#aa86894256ef4d7d07f05d3dc4d078c1d">TimeSpan</a>&#160;</td><td class="memItemRight"><b>Min</b> () noexcept</td></tr>
+<tr class="memdesc:ab30ef72eaa659f4121fee5e0cc869129"><td class="mdescLeft">&#160;</td><td class="mdescRight">-(2^63)-1 Tick <br /></td></tr>
+<tr class="memitem:ad4c0b0fdb58e95558a5b1578efd73028" id="r_ad4c0b0fdb58e95558a5b1578efd73028"><td class="memItemLeft"><a id="ad4c0b0fdb58e95558a5b1578efd73028" name="ad4c0b0fdb58e95558a5b1578efd73028"></a>
+static <a class="el" href="#aa86894256ef4d7d07f05d3dc4d078c1d">TimeSpan</a>&#160;</td><td class="memItemRight"><b>FromSystemLaunch</b> ()</td></tr>
+<tr class="memdesc:ad4c0b0fdb58e95558a5b1578efd73028"><td class="mdescLeft">&#160;</td><td class="mdescRight">システム起動時からの時間 <br /></td></tr>
+<tr class="memitem:a2d563d8e20573227f2a1a1078c97ba70" id="r_a2d563d8e20573227f2a1a1078c97ba70"><td class="memItemLeft"><a id="a2d563d8e20573227f2a1a1078c97ba70" name="a2d563d8e20573227f2a1a1078c97ba70"></a>
+static double&#160;</td><td class="memItemRight"><b>Ratio</b> (const <a class="el" href="#aa86894256ef4d7d07f05d3dc4d078c1d">TimeSpan</a> &amp;dividend, const <a class="el" href="#aa86894256ef4d7d07f05d3dc4d078c1d">TimeSpan</a> &amp;divisor) noexcept</td></tr>
+<tr class="memdesc:a2d563d8e20573227f2a1a1078c97ba70"><td class="mdescLeft">&#160;</td><td class="mdescRight">時間の比率を計算 <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+静的変数</h2></td></tr>
+<tr class="memitem:a97ff7c75acecce8e1823a7e09a37295c" id="r_a97ff7c75acecce8e1823a7e09a37295c"><td class="memItemLeft"><a id="a97ff7c75acecce8e1823a7e09a37295c" name="a97ff7c75acecce8e1823a7e09a37295c"></a>
+static constexpr s64&#160;</td><td class="memItemRight"><b>TicksPerMicroSeconds</b> = 1</td></tr>
+<tr class="memdesc:a97ff7c75acecce8e1823a7e09a37295c"><td class="mdescLeft">&#160;</td><td class="mdescRight">1秒あたりのTick数 <br /></td></tr>
+<tr class="memitem:acf466317493eed1d5118d02853a2bfb7" id="r_acf466317493eed1d5118d02853a2bfb7"><td class="memItemLeft"><a id="acf466317493eed1d5118d02853a2bfb7" name="acf466317493eed1d5118d02853a2bfb7"></a>
+static constexpr s64&#160;</td><td class="memItemRight"><b>TicksPerNanoSeconds</b> = <a class="el" href="#a97ff7c75acecce8e1823a7e09a37295c">TicksPerMicroSeconds</a> * 1000</td></tr>
+<tr class="memdesc:acf466317493eed1d5118d02853a2bfb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">1秒あたりのTick数 <br /></td></tr>
+<tr class="memitem:a793445e585df6a6f316962b588520a40" id="r_a793445e585df6a6f316962b588520a40"><td class="memItemLeft"><a id="a793445e585df6a6f316962b588520a40" name="a793445e585df6a6f316962b588520a40"></a>
+static constexpr s64&#160;</td><td class="memItemRight"><b>TicksPerMilliSeconds</b> = <a class="el" href="#acf466317493eed1d5118d02853a2bfb7">TicksPerNanoSeconds</a> * 1000</td></tr>
+<tr class="memdesc:a793445e585df6a6f316962b588520a40"><td class="mdescLeft">&#160;</td><td class="mdescRight">1秒あたりのTick数 <br /></td></tr>
+<tr class="memitem:a71e3c3e48e9a8a0b71d4ceedc1e84fc8" id="r_a71e3c3e48e9a8a0b71d4ceedc1e84fc8"><td class="memItemLeft"><a id="a71e3c3e48e9a8a0b71d4ceedc1e84fc8" name="a71e3c3e48e9a8a0b71d4ceedc1e84fc8"></a>
+static constexpr s64&#160;</td><td class="memItemRight"><b>TicksPerSeconds</b> = <a class="el" href="#a793445e585df6a6f316962b588520a40">TicksPerMilliSeconds</a> * 100</td></tr>
+<tr class="memdesc:a71e3c3e48e9a8a0b71d4ceedc1e84fc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">1秒あたりのTick数 <br /></td></tr>
+<tr class="memitem:aca1125f0f639de07baee73abae758272" id="r_aca1125f0f639de07baee73abae758272"><td class="memItemLeft"><a id="aca1125f0f639de07baee73abae758272" name="aca1125f0f639de07baee73abae758272"></a>
+static constexpr s64&#160;</td><td class="memItemRight"><b>TicksPerMinutes</b> = <a class="el" href="#a71e3c3e48e9a8a0b71d4ceedc1e84fc8">TicksPerSeconds</a> * 60</td></tr>
+<tr class="memdesc:aca1125f0f639de07baee73abae758272"><td class="mdescLeft">&#160;</td><td class="mdescRight">1分あたりのTick数 <br /></td></tr>
+<tr class="memitem:aa2c5de95cc63562634294ffdfbaba1a2" id="r_aa2c5de95cc63562634294ffdfbaba1a2"><td class="memItemLeft"><a id="aa2c5de95cc63562634294ffdfbaba1a2" name="aa2c5de95cc63562634294ffdfbaba1a2"></a>
+static constexpr s64&#160;</td><td class="memItemRight"><b>TicksPerHours</b> = <a class="el" href="#aca1125f0f639de07baee73abae758272">TicksPerMinutes</a> * 60</td></tr>
+<tr class="memdesc:aa2c5de95cc63562634294ffdfbaba1a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">1時間あたりのTick数 <br /></td></tr>
+<tr class="memitem:a9667b21d2f07a0d3c2bde027e043cba1" id="r_a9667b21d2f07a0d3c2bde027e043cba1"><td class="memItemLeft"><a id="a9667b21d2f07a0d3c2bde027e043cba1" name="a9667b21d2f07a0d3c2bde027e043cba1"></a>
+static constexpr s64&#160;</td><td class="memItemRight"><b>TicksPerDays</b> = <a class="el" href="#aa2c5de95cc63562634294ffdfbaba1a2">TicksPerHours</a> * 24</td></tr>
+<tr class="memdesc:a9667b21d2f07a0d3c2bde027e043cba1"><td class="mdescLeft">&#160;</td><td class="mdescRight">1時間あたりのTick数 <br /></td></tr>
+</table>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>Runtime/Core/Public/Amuse/Core/Misc/<a class="el" href="../../d4/d0b/_time_span_8h_source.html">TimeSpan.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><a href="../../d5/dd4/class_amuse_1_1_time_span.html">TimeSpan</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

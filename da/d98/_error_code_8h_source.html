@@ -128,42 +128,41 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('da/d98/_error_
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;Amuse/Core/CoreTypes.h&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;Amuse/Core/String/String.h&gt;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span>Amuse::Core {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span>Amuse {</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span></div>
-<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="../../d2/d73/class_amuse_1_1_core_1_1_error_code.html">   12</a></span>    <span class="keyword">class </span>ErrorCode {</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        ErrorCode() : m_value(0) {}</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="../../d2/d73/class_amuse_1_1_core_1_1_error_code.html#a982ba73e5532f6b50f9ffe7647fb1192">   16</a></span>        <a class="code hl_function" href="../../d2/d73/class_amuse_1_1_core_1_1_error_code.html#a982ba73e5532f6b50f9ffe7647fb1192">ErrorCode</a>(u32 <a class="code hl_function" href="../../d2/d73/class_amuse_1_1_core_1_1_error_code.html#a83c4bf67471bc03131a0d82dc6c0c3be">value</a>) : m_value(<a class="code hl_function" href="../../d2/d73/class_amuse_1_1_core_1_1_error_code.html#a83c4bf67471bc03131a0d82dc6c0c3be">value</a>) {}</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="../../d2/d73/class_amuse_1_1_core_1_1_error_code.html#a83c4bf67471bc03131a0d82dc6c0c3be">   19</a></span>        u32 <a class="code hl_function" href="../../d2/d73/class_amuse_1_1_core_1_1_error_code.html#a83c4bf67471bc03131a0d82dc6c0c3be">value</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_value; }</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="../../d2/d73/class_amuse_1_1_core_1_1_error_code.html#ac17902388b9b5bb5cd91ee93c6e3723c">   21</a></span>        String <a class="code hl_function" href="../../d2/d73/class_amuse_1_1_core_1_1_error_code.html#ac17902388b9b5bb5cd91ee93c6e3723c">message</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        u32 m_value;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    };</div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../d7/d84/class_amuse_1_1_error_code.html">   13</a></span>    <span class="keyword">class </span>ErrorCode {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        ErrorCode() : m_value(0) {}</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../d7/d84/class_amuse_1_1_error_code.html#af7aeb571730d54cd6dc50bcdd390b9c7">   17</a></span>        <a class="code hl_function" href="../../d7/d84/class_amuse_1_1_error_code.html#af7aeb571730d54cd6dc50bcdd390b9c7">ErrorCode</a>(u32 <a class="code hl_function" href="../../d7/d84/class_amuse_1_1_error_code.html#af3ee00e44d09a0e782dc78a5be47e305">value</a>) : m_value(<a class="code hl_function" href="../../d7/d84/class_amuse_1_1_error_code.html#af3ee00e44d09a0e782dc78a5be47e305">value</a>) {}</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="../../d7/d84/class_amuse_1_1_error_code.html#af3ee00e44d09a0e782dc78a5be47e305">   20</a></span>        u32 <a class="code hl_function" href="../../d7/d84/class_amuse_1_1_error_code.html#af3ee00e44d09a0e782dc78a5be47e305">value</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_value; }</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../d7/d84/class_amuse_1_1_error_code.html#a97670925c191af48562c7286a14f9518">   22</a></span>        String <a class="code hl_function" href="../../d7/d84/class_amuse_1_1_error_code.html#a97670925c191af48562c7286a14f9518">message</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        u32 m_value;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    };</div>
 </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>}</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">//===============================================================</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">// フォーマット</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">//===============================================================</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">template</span> &lt;&gt; <span class="keyword">struct </span>std::formatter&lt;Amuse::<a class="code hl_class" href="../../d2/d73/class_amuse_1_1_core_1_1_error_code.html">Core::ErrorCode</a>, Amuse::Core::Char&gt; {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ParseContext&gt;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">constexpr</span> <span class="keyword">auto</span> parse(ParseContext&amp; ctx) -&gt; <span class="keyword">decltype</span>(ctx.begin()) {</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordflow">return</span> ctx.end();</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    }</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> FormatContext&gt;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">auto</span> format(<a class="code hl_class" href="../../d2/d73/class_amuse_1_1_core_1_1_error_code.html">Amuse::Core::ErrorCode</a> value, FormatContext&amp; ctx)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;0x{:08X} {}&quot;</span>, value.<a class="code hl_function" href="../../d2/d73/class_amuse_1_1_core_1_1_error_code.html#a83c4bf67471bc03131a0d82dc6c0c3be">value</a>(), value.<a class="code hl_function" href="../../d2/d73/class_amuse_1_1_core_1_1_error_code.html#ac17902388b9b5bb5cd91ee93c6e3723c">message</a>().c_str());</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    }</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>};</div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_error_code_html"><div class="ttname"><a href="../../d2/d73/class_amuse_1_1_core_1_1_error_code.html">Amuse::Core::ErrorCode</a></div><div class="ttdoc">エラーコード</div><div class="ttdef"><b>Definition</b> ErrorCode.h:12</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_error_code_html_a83c4bf67471bc03131a0d82dc6c0c3be"><div class="ttname"><a href="../../d2/d73/class_amuse_1_1_core_1_1_error_code.html#a83c4bf67471bc03131a0d82dc6c0c3be">Amuse::Core::ErrorCode::value</a></div><div class="ttdeci">u32 value() const</div><div class="ttdoc">数値のエラーコードを取得する。</div><div class="ttdef"><b>Definition</b> ErrorCode.h:19</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_error_code_html_a982ba73e5532f6b50f9ffe7647fb1192"><div class="ttname"><a href="../../d2/d73/class_amuse_1_1_core_1_1_error_code.html#a982ba73e5532f6b50f9ffe7647fb1192">Amuse::Core::ErrorCode::ErrorCode</a></div><div class="ttdeci">ErrorCode(u32 value)</div><div class="ttdoc">ErrorCode を初期化する。</div><div class="ttdef"><b>Definition</b> ErrorCode.h:16</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_error_code_html_ac17902388b9b5bb5cd91ee93c6e3723c"><div class="ttname"><a href="../../d2/d73/class_amuse_1_1_core_1_1_error_code.html#ac17902388b9b5bb5cd91ee93c6e3723c">Amuse::Core::ErrorCode::message</a></div><div class="ttdeci">String message() const</div><div class="ttdoc">エラーコードに対応するメッセージを取得する。</div></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>}</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">//===============================================================</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">// フォーマット</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">//===============================================================</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">template</span> &lt;&gt; <span class="keyword">struct </span>std::formatter&lt;Amuse::ErrorCode, Amuse::Char&gt; {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ParseContext&gt;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">constexpr</span> <span class="keyword">auto</span> parse(ParseContext&amp; ctx) -&gt; <span class="keyword">decltype</span>(ctx.begin()) {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordflow">return</span> ctx.end();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    }</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> FormatContext&gt;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">auto</span> format(Amuse::ErrorCode value, FormatContext&amp; ctx)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;0x{:08X} {}&quot;</span>, value.<a class="code hl_function" href="../../d7/d84/class_amuse_1_1_error_code.html#af3ee00e44d09a0e782dc78a5be47e305">value</a>(), value.<a class="code hl_function" href="../../d7/d84/class_amuse_1_1_error_code.html#a97670925c191af48562c7286a14f9518">message</a>().c_str());</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>};</div>
+<div class="ttc" id="aclass_amuse_1_1_error_code_html_a97670925c191af48562c7286a14f9518"><div class="ttname"><a href="../../d7/d84/class_amuse_1_1_error_code.html#a97670925c191af48562c7286a14f9518">Amuse::ErrorCode::message</a></div><div class="ttdeci">String message() const</div><div class="ttdoc">エラーコードに対応するメッセージを取得する。</div></div>
+<div class="ttc" id="aclass_amuse_1_1_error_code_html_af3ee00e44d09a0e782dc78a5be47e305"><div class="ttname"><a href="../../d7/d84/class_amuse_1_1_error_code.html#af3ee00e44d09a0e782dc78a5be47e305">Amuse::ErrorCode::value</a></div><div class="ttdeci">u32 value() const</div><div class="ttdoc">数値のエラーコードを取得する。</div><div class="ttdef"><b>Definition</b> ErrorCode.h:20</div></div>
+<div class="ttc" id="aclass_amuse_1_1_error_code_html_af7aeb571730d54cd6dc50bcdd390b9c7"><div class="ttname"><a href="../../d7/d84/class_amuse_1_1_error_code.html#af7aeb571730d54cd6dc50bcdd390b9c7">Amuse::ErrorCode::ErrorCode</a></div><div class="ttdeci">ErrorCode(u32 value)</div><div class="ttdoc">ErrorCode を初期化する。</div><div class="ttdef"><b>Definition</b> ErrorCode.h:17</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

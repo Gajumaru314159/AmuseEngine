@@ -1,0 +1,1027 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: Core</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('da/d78/group___amuse_core.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#enum-members">列挙型</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle"><div class="title">Core </div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳細</h2>
+<div class="textblock"><p>基本型、コンテナ、数学、ファイル、メモリなどの基盤機能。 </p>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:SpanAllocator" id="r_SpanAllocator"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d6/d50/class_amuse_1_1_span_allocator.html">SpanAllocator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">連続した整数範囲を管理するスパンアロケータ  <a href="../../d6/d50/class_amuse_1_1_span_allocator.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:TLSFBlock" id="r_TLSFBlock"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../dd/df0/struct_amuse_1_1_t_l_s_f_block.html">TLSFBlock</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Two Level Segregate Fit Mapper Block  <a href="../../dd/df0/struct_amuse_1_1_t_l_s_f_block.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:TLSFMapper" id="r_TLSFMapper"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d8/d2c/class_amuse_1_1_t_l_s_f_mapper.html">TLSFMapper</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Two Level Segregate Fit Mapper  <a href="../../d8/d2c/class_amuse_1_1_t_l_s_f_mapper.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Exception" id="r_Exception"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../dc/d26/class_amuse_1_1_exception.html">Exception</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">例外クラス  <a href="../../dc/d26/class_amuse_1_1_exception.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:ArgumentException" id="r_ArgumentException"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../dd/dee/class_amuse_1_1_argument_exception.html">ArgumentException</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">無効な引数に対する例外クラス  <a href="../../dd/dee/class_amuse_1_1_argument_exception.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:ArithmeticException" id="r_ArithmeticException"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d2/dcc/class_amuse_1_1_arithmetic_exception.html">ArithmeticException</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">算術演算の失敗に対する例外クラス  <a href="../../d2/dcc/class_amuse_1_1_arithmetic_exception.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:PathNotFoundException" id="r_PathNotFoundException"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d2/d35/class_amuse_1_1_path_not_found_exception.html">PathNotFoundException</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">存在しないファイルパス/ディレクトリパスに対する例外クラス  <a href="../../d2/d35/class_amuse_1_1_path_not_found_exception.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:FormatException" id="r_FormatException"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d7/d14/class_amuse_1_1_format_exception.html">FormatException</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">値などの変換の失敗に対する例外クラス  <a href="../../d7/d14/class_amuse_1_1_format_exception.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:OutOfRangeException" id="r_OutOfRangeException"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../db/d4d/class_amuse_1_1_out_of_range_exception.html">OutOfRangeException</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">範囲外アクセスに対する例外クラス  <a href="../../db/d4d/class_amuse_1_1_out_of_range_exception.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:InvalidOperationException" id="r_InvalidOperationException"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d3/d34/class_amuse_1_1_invalid_operation_exception.html">InvalidOperationException</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">無効な状態でのメソッド呼び出しに対する例外クラス  <a href="../../d3/d34/class_amuse_1_1_invalid_operation_exception.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:KeyNotFoundException" id="r_KeyNotFoundException"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d0/d11/class_amuse_1_1_key_not_found_exception.html">KeyNotFoundException</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">コレクションのアクセスに存在しないキーを使用した場合の例外クラス  <a href="../../d0/d11/class_amuse_1_1_key_not_found_exception.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:NotImplementedException" id="r_NotImplementedException"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d5/d79/class_amuse_1_1_not_implemented_exception.html">NotImplementedException</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">未実装メソッド呼び出しに対する例外クラス  <a href="../../d5/d79/class_amuse_1_1_not_implemented_exception.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:NotSupportedException" id="r_NotSupportedException"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d6/df9/class_amuse_1_1_not_supported_exception.html">NotSupportedException</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">サポートされていない操作に対する例外クラス  <a href="../../d6/df9/class_amuse_1_1_not_supported_exception.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:AsyncFileSystem" id="r_AsyncFileSystem"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../de/d16/class_amuse_1_1_async_file_system.html">AsyncFileSystem</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">非同期ファイルシステムを表す。  <a href="../../de/d16/class_amuse_1_1_async_file_system.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:AsyncFileHandle" id="r_AsyncFileHandle"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d2/d35/class_amuse_1_1_async_file_handle.html">AsyncFileHandle</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">非同期ファイル操作のハンドルを表す。  <a href="../../d2/d35/class_amuse_1_1_async_file_handle.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:AsyncFileRequest" id="r_AsyncFileRequest"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../de/d6b/struct_amuse_1_1_async_file_request.html">AsyncFileRequest</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">非同期ファイル定義  <a href="../../de/d6b/struct_amuse_1_1_async_file_request.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:AsyncFileEvent" id="r_AsyncFileEvent"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d5/dec/class_amuse_1_1_async_file_event.html">AsyncFileEvent</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">非同期ファイル読み込みイベント  <a href="../../d5/dec/class_amuse_1_1_async_file_event.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:AsyncFile" id="r_AsyncFile"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d5/d21/class_amuse_1_1_async_file.html">AsyncFile</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">非同期ファイル  <a href="../../d5/d21/class_amuse_1_1_async_file.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:BinaryReader" id="r_BinaryReader"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../dc/d78/class_amuse_1_1_binary_reader.html">BinaryReader</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">バイナリ・リーダー  <a href="../../dc/d78/class_amuse_1_1_binary_reader.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:BinaryStream" id="r_BinaryStream"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../dd/d69/class_amuse_1_1_binary_stream.html">BinaryStream</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blobストリーム  <a href="../../dd/d69/class_amuse_1_1_binary_stream.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:BinaryWriter" id="r_BinaryWriter"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../de/d55/class_amuse_1_1_binary_writer.html">BinaryWriter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定したバイトオーダーでストリームへバイナリ値を書き込む。  <a href="../../de/d55/class_amuse_1_1_binary_writer.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Endian" id="r_Endian"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d8/d28/class_amuse_1_1_endian.html">Endian</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">エンディアン・ユーティリティ  <a href="../../d8/d28/class_amuse_1_1_endian.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Directory" id="r_Directory"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d7/d3e/class_amuse_1_1_directory.html">Directory</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ディレクトリ  <a href="../../d7/d3e/class_amuse_1_1_directory.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:File" id="r_File"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../de/d75/class_amuse_1_1_file.html">File</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイル  <a href="../../de/d75/class_amuse_1_1_file.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:INISection" id="r_INISection"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d2/d20/class_amuse_1_1_i_n_i_section.html">INISection</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">INIセクションオブジェクト  <a href="../../d2/d20/class_amuse_1_1_i_n_i_section.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:INI" id="r_INI"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d0/d41/class_amuse_1_1_i_n_i.html">INI</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">INIオブジェクト  <a href="../../d0/d41/class_amuse_1_1_i_n_i.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:OBJ" id="r_OBJ"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../dd/d9c/class_amuse_1_1_o_b_j.html">OBJ</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wavefront <a class="el" href="../../dd/d9c/class_amuse_1_1_o_b_j.html" title="Wavefront OBJ Writer">OBJ</a> Writer  <a href="../../dd/d9c/class_amuse_1_1_o_b_j.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:MTL" id="r_MTL"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d4/d4e/class_amuse_1_1_m_t_l.html">MTL</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d0/dfb/class_amuse_1_1_material.html" title="マテリアル">Material</a> Template Library Writer  <a href="../../d4/d4e/class_amuse_1_1_m_t_l.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Path" id="r_Path"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../de/dd4/class_amuse_1_1_path.html">Path</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルパスのユーティリティ  <a href="../../de/dd4/class_amuse_1_1_path.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Stream" id="r_Stream"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d8/df8/class_amuse_1_1_stream.html">Stream</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ストリーム基底型  <a href="../../d8/df8/class_amuse_1_1_stream.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:XmlException" id="r_XmlException"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d9/da2/class_amuse_1_1_xml_exception.html">XmlException</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">XMLパースエラーに対する例外クラス  <a href="../../d9/da2/class_amuse_1_1_xml_exception.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:XmlNode" id="r_XmlNode"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d1/d8f/class_amuse_1_1_xml_node.html">XmlNode</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">XMLの要素を表現するクラス  <a href="../../d1/d8f/class_amuse_1_1_xml_node.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Xml" id="r_Xml"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d1/d77/class_amuse_1_1_xml.html">Xml</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">XMLドキュメント全体を表現するクラス  <a href="../../d1/d77/class_amuse_1_1_xml.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:AABB" id="r_AABB"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d3/d41/struct_amuse_1_1_a_a_b_b.html">AABB</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d7/dc4/class_amuse_1_1_axis.html" title="軸">Axis</a> Aligned Bounding <a class="el" href="../../d3/d41/struct_amuse_1_1_box.html" title="ボックス">Box</a>  <a href="../../d3/d41/struct_amuse_1_1_a_a_b_b.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:OBB" id="r_OBB"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../df/d57/struct_amuse_1_1_o_b_b.html">OBB</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Oriented Bounding <a class="el" href="../../d3/d41/struct_amuse_1_1_box.html" title="ボックス">Box</a>  <a href="../../df/d57/struct_amuse_1_1_o_b_b.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Bounds" id="r_Bounds"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../df/d24/struct_amuse_1_1_bounds.html">Bounds</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d3/d41/struct_amuse_1_1_box.html" title="ボックス">Box</a> と <a class="el" href="../../d3/d28/struct_amuse_1_1_sphere.html" title="スフィア">Sphere</a>  <a href="../../df/d24/struct_amuse_1_1_bounds.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Box" id="r_Box"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d3/d41/struct_amuse_1_1_box.html">Box</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ボックス  <a href="../../d3/d41/struct_amuse_1_1_box.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Capsule" id="r_Capsule"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../df/dc5/struct_amuse_1_1_capsule.html">Capsule</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">カプセル構造体  <a href="../../df/dc5/struct_amuse_1_1_capsule.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Circle" id="r_Circle"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../de/d58/struct_amuse_1_1_circle.html">Circle</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">円  <a href="../../de/d58/struct_amuse_1_1_circle.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Cylinder" id="r_Cylinder"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../df/d9f/struct_amuse_1_1_cylinder.html">Cylinder</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">シリンダー  <a href="../../df/d9f/struct_amuse_1_1_cylinder.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Frustum" id="r_Frustum"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d4/dde/struct_amuse_1_1_frustum.html">Frustum</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">視錐台  <a href="../../d4/dde/struct_amuse_1_1_frustum.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:HalfLine" id="r_HalfLine"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../df/d27/class_amuse_1_1_half_line.html">HalfLine</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">半直線  <a href="../../df/d27/class_amuse_1_1_half_line.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:IntRect" id="r_IntRect"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../da/d1a/struct_amuse_1_1_int_rect.html">IntRect</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">矩形  <a href="../../da/d1a/struct_amuse_1_1_int_rect.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Line" id="r_Line"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d1/d23/struct_amuse_1_1_line.html">Line</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">線分  <a href="../../d1/d23/struct_amuse_1_1_line.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Margin" id="r_Margin"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../da/d92/struct_amuse_1_1_margin.html">Margin</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">マージン  <a href="../../da/d92/struct_amuse_1_1_margin.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Plane" id="r_Plane"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../dc/de1/struct_amuse_1_1_plane.html">Plane</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">平面  <a href="../../dc/de1/struct_amuse_1_1_plane.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Point" id="r_Point"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d1/d4b/struct_amuse_1_1_point.html">Point</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ポイント  <a href="../../d1/d4b/struct_amuse_1_1_point.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Rect" id="r_Rect"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d0/d7e/struct_amuse_1_1_rect.html">Rect</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">矩形  <a href="../../d0/d7e/struct_amuse_1_1_rect.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Segment" id="r_Segment"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../db/d77/class_amuse_1_1_segment.html">Segment</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">線分  <a href="../../db/d77/class_amuse_1_1_segment.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Size" id="r_Size"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../de/d61/struct_amuse_1_1_size.html">Size</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">サイズ  <a href="../../de/d61/struct_amuse_1_1_size.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Sphere" id="r_Sphere"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d3/d28/struct_amuse_1_1_sphere.html">Sphere</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">スフィア  <a href="../../d3/d28/struct_amuse_1_1_sphere.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Spline" id="r_Spline"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../da/df3/class_amuse_1_1_spline.html">Spline</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">スプラインカーブ  <a href="../../da/df3/class_amuse_1_1_spline.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Spline2D" id="r_Spline2D"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d1/d6b/class_amuse_1_1_spline2_d.html">Spline2D</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">スプラインカーブ  <a href="../../d1/d6b/class_amuse_1_1_spline2_d.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Triangle" id="r_Triangle"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../dd/dca/class_amuse_1_1_triangle.html">Triangle</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">三角形  <a href="../../dd/dca/class_amuse_1_1_triangle.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Viewport" id="r_Viewport"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d0/d44/struct_amuse_1_1_viewport.html">Viewport</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビューポート  <a href="../../d0/d44/struct_amuse_1_1_viewport.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Bitmap" id="r_Bitmap"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d0/d4d/class_amuse_1_1_bitmap.html">Bitmap</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビットマップ  <a href="../../d0/d4d/class_amuse_1_1_bitmap.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Color" id="r_Color"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../da/d55/struct_amuse_1_1_color.html">Color</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RGBAカラーを表現するクラス  <a href="../../da/d55/struct_amuse_1_1_color.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:HSV" id="r_HSV"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d3/d64/struct_amuse_1_1_h_s_v.html">HSV</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">HSVカラー  <a href="../../d3/d64/struct_amuse_1_1_h_s_v.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:IntColor" id="r_IntColor"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d9/dc1/struct_amuse_1_1_int_color.html">IntColor</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">整数表現カラークラス  <a href="../../d9/dc1/struct_amuse_1_1_int_color.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Hash" id="r_Hash"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d3/d5e/class_amuse_1_1_hash.html">Hash</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ハッシュ  <a href="../../d3/d5e/class_amuse_1_1_hash.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:JobGroup" id="r_JobGroup"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d5/d64/class_amuse_1_1_job_group.html">JobGroup</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ジョブ・グループ  <a href="../../d5/d64/class_amuse_1_1_job_group.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:JobHandle" id="r_JobHandle"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../dc/de3/class_amuse_1_1_job_handle.html">JobHandle</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ジョブ・ハンドル  <a href="../../dc/de3/class_amuse_1_1_job_handle.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:JobGroupHandle" id="r_JobGroupHandle"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d3/d81/class_amuse_1_1_job_group_handle.html">JobGroupHandle</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ジョブ・グループ・ハンドル  <a href="../../d3/d81/class_amuse_1_1_job_group_handle.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:JobSystem" id="r_JobSystem"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d0/db7/class_amuse_1_1_job_system.html">JobSystem</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ジョブグループとジョブの生成、実行、待機を管理する。  <a href="../../d0/db7/class_amuse_1_1_job_system.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Logger" id="r_Logger"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d3/d19/class_amuse_1_1_logger.html">Logger</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ロガー  <a href="../../d3/d19/class_amuse_1_1_logger.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:SourceLocation" id="r_SourceLocation"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d3/d2d/struct_amuse_1_1_source_location.html">SourceLocation</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ソースコード上の位置を表す構造体  <a href="../../d3/d2d/struct_amuse_1_1_source_location.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Log" id="r_Log"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d2/dbd/struct_amuse_1_1_log.html">Log</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ログ・オブジェクト  <a href="../../d2/dbd/struct_amuse_1_1_log.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:StackTraceElement" id="r_StackTraceElement"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../db/d59/struct_amuse_1_1_stack_trace_element.html">StackTraceElement</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">スタックトレース情報  <a href="../../db/d59/struct_amuse_1_1_stack_trace_element.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:StackTrace" id="r_StackTrace"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d7/d5f/struct_amuse_1_1_stack_trace.html">StackTrace</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">スタック情報を取得  <a href="../../d7/d5f/struct_amuse_1_1_stack_trace.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:BitOp" id="r_BitOp"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d7/da2/struct_amuse_1_1_bit_op.html">BitOp</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビット操作ユーティリティ  <a href="../../d7/da2/struct_amuse_1_1_bit_op.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Easing" id="r_Easing"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d6/d3b/class_amuse_1_1_easing.html">Easing</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">イージング  <a href="../../d6/d3b/class_amuse_1_1_easing.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:FloatCompression" id="r_FloatCompression"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../de/d01/class_amuse_1_1_float_compression.html">FloatCompression</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">圧縮浮動小数点ユーティリティ  <a href="../../de/d01/class_amuse_1_1_float_compression.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:IntVec2" id="r_IntVec2"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d1/d1d/struct_amuse_1_1_int_vec2.html">IntVec2</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">整数二次元ベクトル  <a href="../../d1/d1d/struct_amuse_1_1_int_vec2.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:IntVec3" id="r_IntVec3"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d8/df4/struct_amuse_1_1_int_vec3.html">IntVec3</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">整数三次元ベクトル  <a href="../../d8/df4/struct_amuse_1_1_int_vec3.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:IntVec4" id="r_IntVec4"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d6/d79/struct_amuse_1_1_int_vec4.html">IntVec4</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">整数四次元ベクトル  <a href="../../d6/d79/struct_amuse_1_1_int_vec4.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Math" id="r_Math"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d2/d39/class_amuse_1_1_math.html">Math</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">f32型算術演算  <a href="../../d2/d39/class_amuse_1_1_math.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Matrix" id="r_Matrix"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../de/d07/struct_amuse_1_1_matrix.html">Matrix</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">行列クラス  <a href="../../de/d07/struct_amuse_1_1_matrix.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Periodic" id="r_Periodic"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../de/d10/class_amuse_1_1_periodic.html">Periodic</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">周期関数  <a href="../../de/d10/class_amuse_1_1_periodic.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Quat" id="r_Quat"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d6/d48/struct_amuse_1_1_quat.html">Quat</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">クォータニオン(四元数)  <a href="../../d6/d48/struct_amuse_1_1_quat.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Random" id="r_Random"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d7/d5a/class_amuse_1_1_random.html">Random</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">乱数生成器  <a href="../../d7/d5a/class_amuse_1_1_random.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Range" id="r_Range"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d6/d2c/struct_amuse_1_1_range.html">Range</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">範囲  <a href="../../d6/d2c/struct_amuse_1_1_range.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Rot" id="r_Rot"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../de/d8b/struct_amuse_1_1_rot.html">Rot</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">オイラー回転を表す構造体  <a href="../../de/d8b/struct_amuse_1_1_rot.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Transform" id="r_Transform"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d3/dfd/class_amuse_1_1_transform.html">Transform</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">トランスフォーム  <a href="../../d3/dfd/class_amuse_1_1_transform.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Vec2" id="r_Vec2"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d3/d51/struct_amuse_1_1_vec2.html">Vec2</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">二次元ベクトル  <a href="../../d3/d51/struct_amuse_1_1_vec2.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Vec3" id="r_Vec3"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d0/dcc/struct_amuse_1_1_vec3.html">Vec3</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">三次元ベクトル  <a href="../../d0/dcc/struct_amuse_1_1_vec3.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Vec4" id="r_Vec4"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d2/da2/struct_amuse_1_1_vec4.html">Vec4</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">四次元ベクトル  <a href="../../d2/da2/struct_amuse_1_1_vec4.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Allocator" id="r_Allocator"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d4/d2b/class_amuse_1_1_allocator.html">Allocator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">抽象アロケーター メモリの確保と解放の責務を持つ基底クラス 具体的な実装クラスを継承して様々なアロケーターを利用できる  <a href="../../d4/d2b/class_amuse_1_1_allocator.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Blob" id="r_Blob"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d7/d26/class_amuse_1_1_blob.html">Blob</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">バイナリデータ(Binary Large Object)  <a href="../../d7/d26/class_amuse_1_1_blob.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:BlobView" id="r_BlobView"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../da/d45/class_amuse_1_1_blob_view.html">BlobView</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">バイナリデータビュー(Binary Large Object View)  <a href="../../da/d45/class_amuse_1_1_blob_view.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Compression" id="r_Compression"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d2/d91/class_amuse_1_1_compression.html">Compression</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">圧縮  <a href="../../d2/d91/class_amuse_1_1_compression.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:GDeflate" id="r_GDeflate"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d9/dce/class_amuse_1_1_g_deflate.html">GDeflate</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d9/dce/class_amuse_1_1_g_deflate.html" title="GDeflate 圧縮ユーティリティを表す。">GDeflate</a> 圧縮ユーティリティを表す。  <a href="../../d9/dce/class_amuse_1_1_g_deflate.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:CRCHash" id="r_CRCHash"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d0/daa/class_amuse_1_1_c_r_c_hash.html">CRCHash</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ハッシュ値の計算を行うクラス  <a href="../../d0/daa/class_amuse_1_1_c_r_c_hash.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:DateTime" id="r_DateTime"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d0/d8c/struct_amuse_1_1_date_time.html">DateTime</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">日時型  <a href="../../d0/d8c/struct_amuse_1_1_date_time.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:ErrorCode" id="r_ErrorCode"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d7/d84/class_amuse_1_1_error_code.html">ErrorCode</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">エラーコード  <a href="../../d7/d84/class_amuse_1_1_error_code.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Handle_3C_20T_2C_20TNamespace_20_3E" id="r_Handle_3C_20T_2C_20TNamespace_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../de/dcc/class_amuse_1_1_handle.html">Handle&lt; T, TNamespace &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ハンドル値を表す。  <a href="../../de/dcc/class_amuse_1_1_handle.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Locale" id="r_Locale"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d2/d43/class_amuse_1_1_locale.html">Locale</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ロケール  <a href="../../d2/d43/class_amuse_1_1_locale.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:MemorySize" id="r_MemorySize"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../db/df6/struct_amuse_1_1_memory_size.html">MemorySize</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">メモリサイズ値を表す。  <a href="../../db/df6/struct_amuse_1_1_memory_size.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Noise" id="r_Noise"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../de/daf/class_amuse_1_1_noise.html">Noise</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ノイズ  <a href="../../de/daf/class_amuse_1_1_noise.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:ScheduleExecutorConfig" id="r_ScheduleExecutorConfig"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d2/dad/struct_amuse_1_1_schedule_executor_config.html">ScheduleExecutorConfig</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">スケジュール実行設定を表す。  <a href="../../d2/dad/struct_amuse_1_1_schedule_executor_config.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:ScheduleBuildError" id="r_ScheduleBuildError"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d8/d0e/struct_amuse_1_1_schedule_build_error.html">ScheduleBuildError</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">スケジュール構築エラーを表す。  <a href="../../d8/d0e/struct_amuse_1_1_schedule_build_error.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:ScheduleBuildWarning" id="r_ScheduleBuildWarning"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../df/d77/struct_amuse_1_1_schedule_build_warning.html">ScheduleBuildWarning</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">スケジュール構築警告を表す。  <a href="../../df/d77/struct_amuse_1_1_schedule_build_warning.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:ScheduleBuildSettings" id="r_ScheduleBuildSettings"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d9/dd5/struct_amuse_1_1_schedule_build_settings.html">ScheduleBuildSettings</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">スケジュール構築設定を表す。  <a href="../../d9/dd5/struct_amuse_1_1_schedule_build_settings.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:ScheduleBuildResult" id="r_ScheduleBuildResult"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d6/d71/class_amuse_1_1_schedule_build_result.html">ScheduleBuildResult</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">スケジュール構築結果を表す。  <a href="../../d6/d71/class_amuse_1_1_schedule_build_result.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:ScheduleExecutor" id="r_ScheduleExecutor"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../db/dd8/class_amuse_1_1_schedule_executor.html">ScheduleExecutor</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">スケジュール実行器を表す。  <a href="../../db/dd8/class_amuse_1_1_schedule_executor.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Task" id="r_Task"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../da/d81/class_amuse_1_1_task.html">Task</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">非同期タスクを表す。  <a href="../../da/d81/class_amuse_1_1_task.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:ScheduleSet" id="r_ScheduleSet"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../dc/d6a/class_amuse_1_1_schedule_set.html">ScheduleSet</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">スケジュール集合を表す。  <a href="../../dc/d6a/class_amuse_1_1_schedule_set.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:TaskGroup" id="r_TaskGroup"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../dd/d93/class_amuse_1_1_task_group.html">TaskGroup</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">タスクグループを表す。  <a href="../../dd/d93/class_amuse_1_1_task_group.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Schedule_3C_20Args_20_3E" id="r_Schedule_3C_20Args_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d5/dc0/class_amuse_1_1_schedule.html">Schedule&lt; Args &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">スケジュールを表す。  <a href="../../d5/dc0/class_amuse_1_1_schedule.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:TimeSpan" id="r_TimeSpan"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d5/dd4/class_amuse_1_1_time_span.html">TimeSpan</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">時間間隔  <a href="../../d5/dd4/class_amuse_1_1_time_span.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:UUID" id="r_UUID"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../da/df6/struct_amuse_1_1_u_u_i_d.html">UUID</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">UUIDクラス  <a href="../../da/df6/struct_amuse_1_1_u_u_i_d.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:YesNo_3C_20Tag_20_3E" id="r_YesNo_3C_20Tag_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../dd/d99/class_amuse_1_1_yes_no.html">YesNo&lt; Tag &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Yes/No表現  <a href="../../dd/d99/class_amuse_1_1_yes_no.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:IPAddress" id="r_IPAddress"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d8/d30/struct_amuse_1_1_i_p_address.html">IPAddress</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">IPv4 アドレスを 4 オクテットで保持する。  <a href="../../d8/d30/struct_amuse_1_1_i_p_address.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Network" id="r_Network"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../dc/d68/class_amuse_1_1_network.html">Network</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワーク  <a href="../../dc/d68/class_amuse_1_1_network.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:TCPClient" id="r_TCPClient"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../dd/d8e/class_amuse_1_1_t_c_p_client.html">TCPClient</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">TCPクライアント  <a href="../../dd/d8e/class_amuse_1_1_t_c_p_client.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:TCPServer" id="r_TCPServer"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../dd/d95/class_amuse_1_1_t_c_p_server.html">TCPServer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">TCPクライアント  <a href="../../dd/d95/class_amuse_1_1_t_c_p_server.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Property" id="r_Property"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d3/d62/class_amuse_1_1_property.html">Property</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">プロパティ  <a href="../../d3/d62/class_amuse_1_1_property.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Any" id="r_Any"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d0/d4c/class_amuse_1_1_any.html">Any</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">任意の型を保持するクラス  <a href="../../d0/d4c/class_amuse_1_1_any.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:AnyContainer" id="r_AnyContainer"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d6/d93/class_amuse_1_1_any_container.html">AnyContainer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">型ごとにインスタンスを格納・取得できるコンテナクラスです。型Tごとのインスタンスの参照取得、存在判定などの機能を提供します。コピー・ムーブは不可です。  <a href="../../d6/d93/class_amuse_1_1_any_container.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Type" id="r_Type"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d5/d11/class_amuse_1_1_type.html">Type</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">型名と固定ハッシュでリフレクション対象の型を識別する。  <a href="../../d5/d11/class_amuse_1_1_type.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:ReflectionFunction" id="r_ReflectionFunction"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d5/d10/struct_amuse_1_1_reflection_function.html">ReflectionFunction</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">静的初期化で収集されるリフレクション登録関数ノード。  <a href="../../d5/d10/struct_amuse_1_1_reflection_function.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:TypeRegisterTemplate_3C_20T_20_3E" id="r_TypeRegisterTemplate_3C_20T_20_3E"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d9/d90/struct_amuse_1_1_type_register_template.html">TypeRegisterTemplate&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">リフレクション登録オブジェクト  <a href="../../d9/d90/struct_amuse_1_1_type_register_template.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:TypeRegister" id="r_TypeRegister"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d5/df5/struct_amuse_1_1_type_register.html">TypeRegister</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">リフレクション登録関数をリンクする  <a href="../../d5/df5/struct_amuse_1_1_type_register.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:TagBuilder" id="r_TagBuilder"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d9/d9a/class_amuse_1_1_tag_builder.html">TagBuilder</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d1/de4/struct_amuse_1_1_type_info.html" title="型の生成、破棄、プロパティ、メソッド、列挙要素を保持するメタ情報。">TypeInfo</a> や要素へタグ情報を追加するビルダー。  <a href="../../d9/d9a/class_amuse_1_1_tag_builder.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:PrimitiveBuilder" id="r_PrimitiveBuilder"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d9/d95/class_amuse_1_1_primitive_builder.html">PrimitiveBuilder</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Primitive型情報ビルダー  <a href="../../d9/d95/class_amuse_1_1_primitive_builder.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:EnumBuilder" id="r_EnumBuilder"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d3/dc3/class_amuse_1_1_enum_builder.html">EnumBuilder</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">列挙型の <a class="el" href="../../d1/de4/struct_amuse_1_1_type_info.html" title="型の生成、破棄、プロパティ、メソッド、列挙要素を保持するメタ情報。">TypeInfo</a> と列挙要素を登録するビルダー。  <a href="../../d3/dc3/class_amuse_1_1_enum_builder.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:ClassBuilder" id="r_ClassBuilder"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d2/daa/class_amuse_1_1_class_builder.html">ClassBuilder</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">クラス型の基底、コンストラクタ、プロパティ、メソッドを登録するビルダー。  <a href="../../d2/daa/class_amuse_1_1_class_builder.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:ClassTrait_3C_20T_20_3E" id="r_ClassTrait_3C_20T_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d7/d28/class_amuse_1_1_class_trait.html">ClassTrait&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタやデストラクタなどのオペレータを間接的に呼び出すためのクラス  <a href="../../d7/d28/class_amuse_1_1_class_trait.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:PrimitiveBuilderTemplate_3C_20_5FT_20_3E" id="r_PrimitiveBuilderTemplate_3C_20_5FT_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../de/d17/class_amuse_1_1_primitive_builder_template.html">PrimitiveBuilderTemplate&lt; _T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Primitive型情報ビルダー  <a href="../../de/d17/class_amuse_1_1_primitive_builder_template.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:EnumBuilderTemplate_3C_20_5FT_20_3E" id="r_EnumBuilderTemplate_3C_20_5FT_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d3/dbe/class_amuse_1_1_enum_builder_template.html">EnumBuilderTemplate&lt; _T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum型情報ビルダー  <a href="../../d3/dbe/class_amuse_1_1_enum_builder_template.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:ClassBuilderTemplate_3C_20_5FT_20_3E" id="r_ClassBuilderTemplate_3C_20_5FT_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d1/dec/class_amuse_1_1_class_builder_template.html">ClassBuilderTemplate&lt; _T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class型情報ビルダー  <a href="../../d1/dec/class_amuse_1_1_class_builder_template.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:TypedPointer" id="r_TypedPointer"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../de/d7e/class_amuse_1_1_typed_pointer.html">TypedPointer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバッガー上で型情報を表示するための型情報付きポインタ  <a href="../../de/d7e/class_amuse_1_1_typed_pointer.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:TagInfo" id="r_TagInfo"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d1/d70/struct_amuse_1_1_tag_info.html">TagInfo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">リフレクション要素へ付与する任意のタグ情報。  <a href="../../d1/d70/struct_amuse_1_1_tag_info.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:EnumElementInfo" id="r_EnumElementInfo"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d8/d45/struct_amuse_1_1_enum_element_info.html">EnumElementInfo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">列挙型に登録された 1 要素のメタ情報。  <a href="../../d8/d45/struct_amuse_1_1_enum_element_info.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:ArgumentInfo" id="r_ArgumentInfo"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d7/da2/struct_amuse_1_1_argument_info.html">ArgumentInfo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタやメソッド引数のメタ情報。  <a href="../../d7/da2/struct_amuse_1_1_argument_info.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:ConstructorInfo" id="r_ConstructorInfo"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d8/dbd/struct_amuse_1_1_constructor_info.html">ConstructorInfo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">型を生成するコンストラクタのメタ情報。  <a href="../../d8/dbd/struct_amuse_1_1_constructor_info.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:PropertyInfo" id="r_PropertyInfo"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d0/db9/struct_amuse_1_1_property_info.html">PropertyInfo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">フィールドや getter/setter で公開されるプロパティのメタ情報。  <a href="../../d0/db9/struct_amuse_1_1_property_info.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:MethodInfo" id="r_MethodInfo"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../dc/d50/struct_amuse_1_1_method_info.html">MethodInfo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">リフレクション経由で呼び出せるメソッドのメタ情報。  <a href="../../dc/d50/struct_amuse_1_1_method_info.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:TypeInfo" id="r_TypeInfo"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d1/de4/struct_amuse_1_1_type_info.html">TypeInfo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">型の生成、破棄、プロパティ、メソッド、列挙要素を保持するメタ情報。  <a href="../../d1/de4/struct_amuse_1_1_type_info.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:TypeInfoManager" id="r_TypeInfoManager"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d3/dd2/class_amuse_1_1_type_info_manager.html">TypeInfoManager</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">登録済み <a class="el" href="../../d1/de4/struct_amuse_1_1_type_info.html" title="型の生成、破棄、プロパティ、メソッド、列挙要素を保持するメタ情報。">TypeInfo</a> を <a class="el" href="../../d5/d11/class_amuse_1_1_type.html" title="型名と固定ハッシュでリフレクション対象の型を識別する。">Type</a> で管理するシングルトン。  <a href="../../d3/dd2/class_amuse_1_1_type_info_manager.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:FixedStringBase_3C_20TChar_2C_20N_20_3E" id="r_FixedStringBase_3C_20TChar_2C_20N_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../dc/d56/class_amuse_1_1_fixed_string_base.html">FixedStringBase&lt; TChar, N &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">固定長文字列基底  <a href="../../dc/d56/class_amuse_1_1_fixed_string_base.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:StringBase_3C_20TChar_20_3E" id="r_StringBase_3C_20TChar_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d5/d9b/class_amuse_1_1_string_base.html">StringBase&lt; TChar &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列基底  <a href="../../d5/d9b/class_amuse_1_1_string_base.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:StringEncoder" id="r_StringEncoder"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d2/da9/class_amuse_1_1_string_encoder.html">StringEncoder</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列変換  <a href="../../d2/da9/class_amuse_1_1_string_encoder.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:StringSplitView" id="r_StringSplitView"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d0/d52/class_amuse_1_1_string_split_view.html">StringSplitView</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列分割ビューを表す。  <a href="../../d0/d52/class_amuse_1_1_string_split_view.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:CommaSplitView" id="r_CommaSplitView"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d1/dc1/class_amuse_1_1_comma_split_view.html">CommaSplitView</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">カンマ区切り分割ビューを表す。  <a href="../../d1/dc1/class_amuse_1_1_comma_split_view.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:TabSplitView" id="r_TabSplitView"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d9/d02/class_amuse_1_1_tab_split_view.html">TabSplitView</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">タブ区切り分割ビューを表す。  <a href="../../d9/d02/class_amuse_1_1_tab_split_view.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:LineBreakSplitView" id="r_LineBreakSplitView"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d9/d60/class_amuse_1_1_line_break_split_view.html">LineBreakSplitView</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">改行区切り分割ビューを表す。  <a href="../../d9/d60/class_amuse_1_1_line_break_split_view.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:StringViewBase_3C_20TChar_20_3E" id="r_StringViewBase_3C_20TChar_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d8/d9a/class_amuse_1_1_string_view_base.html">StringViewBase&lt; TChar &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列ビュー基底  <a href="../../d8/d9a/class_amuse_1_1_string_view_base.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:STLAllocator_3C_20T_20_3E" id="r_STLAllocator_3C_20T_20_3E"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d5/d48/struct_amuse_1_1_s_t_l_allocator.html">STLAllocator&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">STLアロケータ  <a href="../../d5/d48/struct_amuse_1_1_s_t_l_allocator.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:BitFlags_3C_20TEnum_2C_20TBitsType_20_3E" id="r_BitFlags_3C_20TEnum_2C_20TBitsType_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d5/d4a/class_amuse_1_1_bit_flags.html">BitFlags&lt; TEnum, TBitsType &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">enum値をビットフラグとして扱うためのラップクラス  <a href="../../d5/d4a/class_amuse_1_1_bit_flags.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:FixedVector_3C_20T_2C_20N_20_3E" id="r_FixedVector_3C_20T_2C_20N_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d1/d4e/class_amuse_1_1_fixed_vector.html">FixedVector&lt; T, N &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fixed配列  <a href="../../d1/d4e/class_amuse_1_1_fixed_vector.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:HandleForwardList_3C_20T_20_3E" id="r_HandleForwardList_3C_20T_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../de/d23/class_amuse_1_1_handle_forward_list.html">HandleForwardList&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ハンドル管理式単方向連結リスト  <a href="../../de/d23/class_amuse_1_1_handle_forward_list.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:HandleForwardList_3C_20T_20_3E_3A_3AHandle" id="r_HandleForwardList_3C_20T_20_3E_3A_3AHandle"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d8/ddb/class_amuse_1_1_handle_forward_list_1_1_handle.html">HandleForwardList&lt; T &gt;::Handle</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ハンドル基底  <a href="../../d8/ddb/class_amuse_1_1_handle_forward_list_1_1_handle.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:HandleForwardList_3C_20T_20_3E_3A_3Aconst_5Fiterator" id="r_HandleForwardList_3C_20T_20_3E_3A_3Aconst_5Fiterator"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d6/d70/class_amuse_1_1_handle_forward_list_1_1const__iterator.html">HandleForwardList&lt; T &gt;::const_iterator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">constイテレータ  <a href="../../d6/d70/class_amuse_1_1_handle_forward_list_1_1const__iterator.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:HandleForwardList_3C_20T_20_3E_3A_3Aiterator" id="r_HandleForwardList_3C_20T_20_3E_3A_3Aiterator"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d2/dbb/class_amuse_1_1_handle_forward_list_1_1iterator.html">HandleForwardList&lt; T &gt;::iterator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">イテレータ  <a href="../../d2/dbb/class_amuse_1_1_handle_forward_list_1_1iterator.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:HandleList_3C_20T_20_3E" id="r_HandleList_3C_20T_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../dd/d29/class_amuse_1_1_handle_list.html">HandleList&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ハンドル管理式双方向連結リスト  <a href="../../dd/d29/class_amuse_1_1_handle_list.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:HandleList_3C_20T_20_3E_3A_3Aconst_5Fiterator" id="r_HandleList_3C_20T_20_3E_3A_3Aconst_5Fiterator"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../db/df5/class_amuse_1_1_handle_list_1_1const__iterator.html">HandleList&lt; T &gt;::const_iterator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">constイテレータ  <a href="../../db/df5/class_amuse_1_1_handle_list_1_1const__iterator.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:HandleList_3C_20T_20_3E_3A_3Aiterator" id="r_HandleList_3C_20T_20_3E_3A_3Aiterator"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d4/d9c/class_amuse_1_1_handle_list_1_1iterator.html">HandleList&lt; T &gt;::iterator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">イテレータ  <a href="../../d4/d9c/class_amuse_1_1_handle_list_1_1iterator.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:IndexedVector_3C_20T_2C_20TIndex_2C_20TDataVector_2C_20TIndexVector_20_3E" id="r_IndexedVector_3C_20T_2C_20TIndex_2C_20TDataVector_2C_20TIndexVector_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d2/d36/class_amuse_1_1_indexed_vector.html">IndexedVector&lt; T, TIndex, TDataVector, TIndexVector &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">インデックス付きベクターを表す。  <a href="../../d2/d36/class_amuse_1_1_indexed_vector.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:IndexMap_3C_20TKey_2C_20TValue_2C_20THasher_2C_20TKeyEqual_2C_20TAllocator_20_3E" id="r_IndexMap_3C_20TKey_2C_20TValue_2C_20THasher_2C_20TKeyEqual_2C_20TAllocator_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d5/d9e/class_amuse_1_1_index_map.html">IndexMap&lt; TKey, TValue, THasher, TKeyEqual, TAllocator &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">安定した反復順序を持つ順序付きハッシュマップ  <a href="../../d5/d9e/class_amuse_1_1_index_map.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:EventNotifier_3C_20Args_20_3E" id="r_EventNotifier_3C_20Args_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d3/dd8/class_amuse_1_1_event_notifier.html">EventNotifier&lt; Args &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">イベント通知クラス  <a href="../../d3/dd8/class_amuse_1_1_event_notifier.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:EventNotifier_3C_20Args_20_3E_3A_3AProxy" id="r_EventNotifier_3C_20Args_20_3E_3A_3AProxy"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../df/d21/class_amuse_1_1_event_notifier_1_1_proxy.html">EventNotifier&lt; Args &gt;::Proxy</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">イベント通知の購読プロキシを表す。  <a href="../../df/d21/class_amuse_1_1_event_notifier_1_1_proxy.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Delegate_3C_20R_28Args_2E_2E_2E_29_2C_20BufferSize_20_3E" id="r_Delegate_3C_20R_28Args_2E_2E_2E_29_2C_20BufferSize_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d5/d03/class_amuse_1_1_delegate_3_01_r_07_args_8_8_8_08_00_01_buffer_size_01_4.html">Delegate&lt; R(Args...), BufferSize &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">デリゲート  <a href="../../d5/d03/class_amuse_1_1_delegate_3_01_r_07_args_8_8_8_08_00_01_buffer_size_01_4.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:FixedFunc_3C_20R_28Args_2E_2E_2E_29_2C_20BufferSize_20_3E" id="r_FixedFunc_3C_20R_28Args_2E_2E_2E_29_2C_20BufferSize_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d0/d97/class_amuse_1_1_fixed_func_3_01_r_07_args_8_8_8_08_00_01_buffer_size_01_4.html">FixedFunc&lt; R(Args...), BufferSize &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">固定長関数オブジェクト  <a href="../../d0/d97/class_amuse_1_1_fixed_func_3_01_r_07_args_8_8_8_08_00_01_buffer_size_01_4.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:MiniDelegate_3C_20R_28Args_2E_2E_2E_29_3E" id="r_MiniDelegate_3C_20R_28Args_2E_2E_2E_29_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../dc/d08/class_amuse_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html">MiniDelegate&lt; R(Args...)&gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ownerのみをキャプチャできる軽量デリゲート  <a href="../../dc/d08/class_amuse_1_1_mini_delegate_3_01_r_07_args_8_8_8_08_4.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:is_5Fsequence_3C_20T_20_3E" id="r_is_5Fsequence_3C_20T_20_3E"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d9/de5/struct_amuse_1_1is__sequence.html">is_sequence&lt; T &gt;</a></td></tr>
+<tr class="memitem:is_5Fsequence_3C_20Set_3C_20T_2C_20ALLOCATOR_20_3E_20_3E" id="r_is_5Fsequence_3C_20Set_3C_20T_2C_20ALLOCATOR_20_3E_20_3E"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d7/dc5/struct_amuse_1_1is__sequence_3_01_set_3_01_t_00_01_a_l_l_o_c_a_t_o_r_01_4_01_4.html">is_sequence&lt; Set&lt; T, ALLOCATOR &gt; &gt;</a></td></tr>
+<tr class="memitem:is_5Fsequence_3C_20Vector_3C_20T_2C_20ALLOCATOR_20_3E_20_3E" id="r_is_5Fsequence_3C_20Vector_3C_20T_2C_20ALLOCATOR_20_3E_20_3E"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../dc/de8/struct_amuse_1_1is__sequence_3_01_vector_3_01_t_00_01_a_l_l_o_c_a_t_o_r_01_4_01_4.html">is_sequence&lt; Vector&lt; T, ALLOCATOR &gt; &gt;</a></td></tr>
+<tr class="memitem:is_5Fsequence_3C_20T_5BN_5D_3E" id="r_is_5Fsequence_3C_20T_5BN_5D_3E"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d1/db2/struct_amuse_1_1is__sequence_3_01_t_0f_n_0e_4.html">is_sequence&lt; T[N]&gt;</a></td></tr>
+<tr class="memitem:is_5Fmap_3C_20Map_3C_20TKey_2C_20TValue_20_3E_20_3E" id="r_is_5Fmap_3C_20Map_3C_20TKey_2C_20TValue_20_3E_20_3E"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../db/d84/struct_amuse_1_1is__map_3_01_map_3_01_t_key_00_01_t_value_01_4_01_4.html">is_map&lt; Map&lt; TKey, TValue &gt; &gt;</a></td></tr>
+<tr class="memitem:is_5Fiterator_3C_20class_2C_20class_20_3E" id="r_is_5Fiterator_3C_20class_2C_20class_20_3E"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../db/dea/struct_amuse_1_1is__iterator.html">is_iterator&lt; class, class &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">イテレータか  <a href="../../db/dea/struct_amuse_1_1is__iterator.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Mutex" id="r_Mutex"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d7/d97/class_amuse_1_1_mutex.html">Mutex</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ミューテックス  <a href="../../d7/d97/class_amuse_1_1_mutex.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:ScopeLock_3C_20TLockable_20_3E" id="r_ScopeLock_3C_20TLockable_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d2/dea/class_amuse_1_1_scope_lock.html">ScopeLock&lt; TLockable &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">スコープ単位でのロックユーティリティ  <a href="../../d2/dea/class_amuse_1_1_scope_lock.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:SpinLock" id="r_SpinLock"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d9/d6f/class_amuse_1_1_spin_lock.html">SpinLock</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">スピンロック  <a href="../../d9/d6f/class_amuse_1_1_spin_lock.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:ThreadDesc" id="r_ThreadDesc"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d5/d83/struct_amuse_1_1_thread_desc.html">ThreadDesc</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">スレッドの実行条件を指定する設定。  <a href="../../d5/d83/struct_amuse_1_1_thread_desc.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Thread" id="r_Thread"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d7/d67/class_amuse_1_1_thread.html">Thread</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">スレッド  <a href="../../d7/d67/class_amuse_1_1_thread.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:ThreadPool" id="r_ThreadPool"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d1/d62/class_amuse_1_1_thread_pool.html">ThreadPool</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">スレッドプールを表す。  <a href="../../d1/d62/class_amuse_1_1_thread_pool.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:ConstValue_3C_20T_2C_20N_20_3E" id="r_ConstValue_3C_20T_2C_20N_20_3E"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../da/d88/struct_amuse_1_1_const_value.html">ConstValue&lt; T, N &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンパイル時定数  <a href="../../da/d88/struct_amuse_1_1_const_value.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:ServiceInjector" id="r_ServiceInjector"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d3/dc6/class_amuse_1_1_service_injector.html">ServiceInjector</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">型ごとの生成方法と依存関係を登録するサービス注入器。  <a href="../../d3/dc6/class_amuse_1_1_service_injector.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:ServiceBuilderBase" id="r_ServiceBuilderBase"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../da/d2c/class_amuse_1_1_service_builder_base.html">ServiceBuilderBase</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">サービス生成情報を型消去して扱う基底クラス。  <a href="../../da/d2c/class_amuse_1_1_service_builder_base.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:ServiceBuilder_3C_20T_20_3E" id="r_ServiceBuilder_3C_20T_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d8/d85/class_amuse_1_1_service_builder.html">ServiceBuilder&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">サービス型 T の生成方法と公開する基底型を保持する。  <a href="../../d8/d85/class_amuse_1_1_service_builder.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:ServiceContainer" id="r_ServiceContainer"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../db/dd7/class_amuse_1_1_service_container.html">ServiceContainer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">生成済みサービスの寿命と型インデックスを管理するコンテナ。  <a href="../../db/dd7/class_amuse_1_1_service_container.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:ComponentManager_3C_20T_20_3E" id="r_ComponentManager_3C_20T_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../db/ded/class_amuse_1_1_component_manager.html">ComponentManager&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../db/ded/class_amuse_1_1_component_manager.html" title="ComponentManager">ComponentManager</a>  <a href="../../db/ded/class_amuse_1_1_component_manager.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:ComponentHolder_3C_20T_20_3E" id="r_ComponentHolder_3C_20T_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../db/d52/class_amuse_1_1_component_holder.html">ComponentHolder&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">EntityとManagerを保持するホルダー  <a href="../../db/d52/class_amuse_1_1_component_holder.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Global_3C_20T_20_3E" id="r_Global_3C_20T_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d7/dc8/class_amuse_1_1_global.html">Global&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">グローバルインスタンス  <a href="../../d7/dc8/class_amuse_1_1_global.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:IntrusiveQueue_3C_20T_2C_20pMember_20_3E" id="r_IntrusiveQueue_3C_20T_2C_20pMember_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d6/d0c/class_amuse_1_1_intrusive_queue.html">IntrusiveQueue&lt; T, pMember &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ノード内ポインタを使って要素を連結する侵入型キュー。  <a href="../../d6/d0c/class_amuse_1_1_intrusive_queue.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:HandleManager_3C_20T_2C_20Deleter_20_3E" id="r_HandleManager_3C_20T_2C_20Deleter_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../df/d99/class_amuse_1_1_handle_manager.html">HandleManager&lt; T, Deleter &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ハンドル・マネージャ  <a href="../../df/d99/class_amuse_1_1_handle_manager.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:HandleManager_3C_20T_2C_20Deleter_20_3E_3A_3ANode" id="r_HandleManager_3C_20T_2C_20Deleter_20_3E_3A_3ANode"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../dd/db6/struct_amuse_1_1_handle_manager_1_1_node.html">HandleManager&lt; T, Deleter &gt;::Node</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">管理対象ノードを表す。  <a href="../../dd/db6/struct_amuse_1_1_handle_manager_1_1_node.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:SyncHandleManager_3C_20T_2C_20Deleter_20_3E" id="r_SyncHandleManager_3C_20T_2C_20Deleter_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../dd/dbb/class_amuse_1_1_sync_handle_manager.html">SyncHandleManager&lt; T, Deleter &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">同期付きハンドルマネージャを表す。  <a href="../../dd/dbb/class_amuse_1_1_sync_handle_manager.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:SyncHandleManager_3C_20T_2C_20Deleter_20_3E_3A_3AHasher" id="r_SyncHandleManager_3C_20T_2C_20Deleter_20_3E_3A_3AHasher"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../dd/d35/struct_amuse_1_1_sync_handle_manager_1_1_hasher.html">SyncHandleManager&lt; T, Deleter &gt;::Hasher</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ハンドル用ハッシュ関数を表す。  <a href="../../dd/d35/struct_amuse_1_1_sync_handle_manager_1_1_hasher.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:MemoryStorageBase_3C_20T_2C_20SIZE_2C_20ALIGN_20_3E" id="r_MemoryStorageBase_3C_20T_2C_20SIZE_2C_20ALIGN_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d3/dad/class_amuse_1_1_memory_storage_base.html">MemoryStorageBase&lt; T, SIZE, ALIGN &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">メモリストレージ  <a href="../../d3/dad/class_amuse_1_1_memory_storage_base.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Name" id="r_Name"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d0/d9b/class_amuse_1_1_name.html">Name</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">識別用名  <a href="../../d0/d9b/class_amuse_1_1_name.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Noncopyable" id="r_Noncopyable"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../dd/dd0/class_amuse_1_1_noncopyable.html">Noncopyable</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">クラスコピーの禁止  <a href="../../dd/dd0/class_amuse_1_1_noncopyable.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Nonmovable" id="r_Nonmovable"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddc/class_amuse_1_1_nonmovable.html">Nonmovable</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">クラスムーブの禁止  <a href="../../d5/ddc/class_amuse_1_1_nonmovable.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Pimpl_3C_20T_20_3E" id="r_Pimpl_3C_20T_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d8/dc3/class_amuse_1_1_pimpl.html">Pimpl&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pimplユーティリティ  <a href="../../d8/dc3/class_amuse_1_1_pimpl.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:RefObject" id="r_RefObject"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d0/dcb/class_amuse_1_1_ref_object.html">RefObject</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">参照カウントオブジェクト  <a href="../../d0/dcb/class_amuse_1_1_ref_object.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Ref_3C_20T_20_3E" id="r_Ref_3C_20T_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../de/d8b/class_amuse_1_1_ref.html">Ref&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d0/dcb/class_amuse_1_1_ref_object.html" title="参照カウントオブジェクト">RefObject</a> 用スマートポインタ  <a href="../../de/d8b/class_amuse_1_1_ref.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:ScopeValue_3C_20T_2C_20V_20_3E" id="r_ScopeValue_3C_20T_2C_20V_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d4/ddf/class_amuse_1_1_scope_value.html">ScopeValue&lt; T, V &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">スコープ値  <a href="../../d4/ddf/class_amuse_1_1_scope_value.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:ScopeOutAction" id="r_ScopeOutAction"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d9/dff/class_amuse_1_1_scope_out_action.html">ScopeOutAction</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">スコープ・アウト・アクション  <a href="../../d9/dff/class_amuse_1_1_scope_out_action.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Singleton_3C_20T_20_3E" id="r_Singleton_3C_20T_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../da/d25/class_amuse_1_1_singleton.html">Singleton&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">シングルトン・パターン  <a href="../../da/d25/class_amuse_1_1_singleton.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Swapper_3C_20T_20_3E" id="r_Swapper_3C_20T_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d2/da0/class_amuse_1_1_swapper.html">Swapper&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">入れ替えユーティリティ  <a href="../../d2/da0/class_amuse_1_1_swapper.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:ThreadLocalContext_3C_20T_20_3E" id="r_ThreadLocalContext_3C_20T_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d2/d68/class_amuse_1_1_thread_local_context.html">ThreadLocalContext&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">スレッドごとのコンテキストを表す。  <a href="../../d2/d68/class_amuse_1_1_thread_local_context.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Transition" id="r_Transition"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d6/df6/class_amuse_1_1_transition.html">Transition</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">トランジション  <a href="../../d6/df6/class_amuse_1_1_transition.html#details">[詳解]</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+列挙型</h2></td></tr>
+<tr class="memitem:ga811aa33e65020e8164eeba74920e19bb" id="r_ga811aa33e65020e8164eeba74920e19bb"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#ga811aa33e65020e8164eeba74920e19bb">ExceptionLevel</a> : u32 { <a class="el" href="#gga811aa33e65020e8164eeba74920e19bba882384ec38ce8d9582b57e70861730e4">Fatal</a>
+, <a class="el" href="#gga811aa33e65020e8164eeba74920e19bba902b0d55fddef6f8d651fe1035b7d4bd">Error</a>
+, <a class="el" href="#gga811aa33e65020e8164eeba74920e19bba0eaadb4fcb48a0a0ed7bc9868be9fbaa">Warning</a>
+ }</td></tr>
+<tr class="memdesc:ga811aa33e65020e8164eeba74920e19bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">例外レベル  <a href="#ga811aa33e65020e8164eeba74920e19bb">[詳解]</a><br /></td></tr>
+<tr class="memitem:ga1f5c9152b70695936fa5c2a1fc1b470f" id="r_ga1f5c9152b70695936fa5c2a1fc1b470f"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#ga1f5c9152b70695936fa5c2a1fc1b470f">ByteOrder</a> : u32 { <a class="el" href="#gga1f5c9152b70695936fa5c2a1fc1b470fa06b9281e396db002010bde1de57262eb">Auto</a>
+, <a class="el" href="#gga1f5c9152b70695936fa5c2a1fc1b470fa3c0ba6b22b526d7fd50c3026435a8c02">LittleEndian</a>
+, <a class="el" href="#gga1f5c9152b70695936fa5c2a1fc1b470fa2ce7a92ae43763828ac4acb4560c2a5b">BigEndian</a>
+ }</td></tr>
+<tr class="memdesc:ga1f5c9152b70695936fa5c2a1fc1b470f"><td class="mdescLeft">&#160;</td><td class="mdescRight">バイト順オーダー  <a href="#ga1f5c9152b70695936fa5c2a1fc1b470f">[詳解]</a><br /></td></tr>
+<tr class="memitem:ga6a3bcbca9487980e363eecf1d37a34d6" id="r_ga6a3bcbca9487980e363eecf1d37a34d6"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#ga6a3bcbca9487980e363eecf1d37a34d6">FileAttribut</a> : u32 { <br />
+&#160;&#160;<a class="el" href="#gga6a3bcbca9487980e363eecf1d37a34d6a6adf97f83acf6453d4a6a4b1070f3754">None</a> = get_bit(0)
+, <a class="el" href="#gga6a3bcbca9487980e363eecf1d37a34d6a960b44c579bc2f6818d2daaf9e4c16f0">Normal</a> = get_bit(1)
+, <a class="el" href="#gga6a3bcbca9487980e363eecf1d37a34d6ae73cda510e8bb947f7e61089e5581494">Directory</a> = get_bit(2)
+, <a class="el" href="#gga6a3bcbca9487980e363eecf1d37a34d6a131fb182a881796e7606ed6da27f1197">ReadOnly</a> = get_bit(3)
+, <br />
+&#160;&#160;<a class="el" href="#gga6a3bcbca9487980e363eecf1d37a34d6a7acdf85c69cc3c5305456a293524386e">Hidden</a> = get_bit(4)
+<br />
+ }</td></tr>
+<tr class="memdesc:ga6a3bcbca9487980e363eecf1d37a34d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイル属性  <a href="#ga6a3bcbca9487980e363eecf1d37a34d6">[詳解]</a><br /></td></tr>
+<tr class="memitem:gaa4cf957ee382f67ae8de7925bdda09e3" id="r_gaa4cf957ee382f67ae8de7925bdda09e3"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#gaa4cf957ee382f67ae8de7925bdda09e3">FileOpenMode</a> : u32 { <a class="el" href="#ggaa4cf957ee382f67ae8de7925bdda09e3a7a1a5f3e79fdc91edf2f5ead9d66abb4">Read</a> = get_bit(0)
+, <a class="el" href="#ggaa4cf957ee382f67ae8de7925bdda09e3a1129c0e4d43f2d121652a7302712cff6">Write</a> = get_bit(1)
+, <a class="el" href="#ggaa4cf957ee382f67ae8de7925bdda09e3a3ac4692f3935a49a0b243eecf529faa9">Append</a> = get_bit(2)
+, <a class="el" href="#ggaa4cf957ee382f67ae8de7925bdda09e3a9dffbf69ffba8bc38bc4e01abf4b1675">Text</a> = get_bit(3)
+ }</td></tr>
+<tr class="memdesc:gaa4cf957ee382f67ae8de7925bdda09e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイル・オープン・モード  <a href="#gaa4cf957ee382f67ae8de7925bdda09e3">[詳解]</a><br /></td></tr>
+<tr class="memitem:gaf240c0c3e326e513ec099e7b9de068eb" id="r_gaf240c0c3e326e513ec099e7b9de068eb"><td class="memItemLeft"><a id="gaf240c0c3e326e513ec099e7b9de068eb" name="gaf240c0c3e326e513ec099e7b9de068eb"></a>enum class &#160;</td><td class="memItemRight"><a class="el" href="#gaf240c0c3e326e513ec099e7b9de068eb">FileCopyOption</a> { <br />
+&#160;&#160;<b>None</b> = get_bit(0)
+, <b>SkipExisting</b> = get_bit(1)
+, <b>OverwriteExisting</b> = get_bit(2)
+, <b>UpdateExisting</b> = get_bit(3)
+, <br />
+&#160;&#160;<b>Recursive</b> = get_bit(4)
+, <b>CopySymlinks</b> = get_bit(5)
+, <b>SkipSymLinks</b> = get_bit(6)
+, <b>DirectoriesOnly</b> = get_bit(7)
+, <br />
+&#160;&#160;<b>CreateSymLinks</b> = get_bit(8)
+, <b>CreateHardLinks</b> = get_bit(9)
+<br />
+ }</td></tr>
+<tr class="memdesc:gaf240c0c3e326e513ec099e7b9de068eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルコピーのオプション <br /></td></tr>
+<tr class="memitem:gab40796a2fafb5d9d3fda7510d7aea5b0" id="r_gab40796a2fafb5d9d3fda7510d7aea5b0"><td class="memItemLeft"><a id="gab40796a2fafb5d9d3fda7510d7aea5b0" name="gab40796a2fafb5d9d3fda7510d7aea5b0"></a>enum class &#160;</td><td class="memItemRight"><a class="el" href="#gab40796a2fafb5d9d3fda7510d7aea5b0">SeekOrigin</a> { <b>Begin</b>
+, <b>Current</b>
+, <b>End</b>
+ }</td></tr>
+<tr class="memdesc:gab40796a2fafb5d9d3fda7510d7aea5b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">シーク基準 <br /></td></tr>
+<tr class="memitem:ga60883d4958a60b91661e97027a85072a" id="r_ga60883d4958a60b91661e97027a85072a"><td class="memItemLeft"><a id="ga60883d4958a60b91661e97027a85072a" name="ga60883d4958a60b91661e97027a85072a"></a>enum class &#160;</td><td class="memItemRight"><b>PixelFormat</b> { <b>RGBA8</b>
+, <b>RGBA32</b>
+, <b>Alpha</b>
+ }</td></tr>
+<tr class="memitem:ga22f6b18e781e3c412e7d243f7de6aa5c" id="r_ga22f6b18e781e3c412e7d243f7de6aa5c"><td class="memItemLeft"><a id="ga22f6b18e781e3c412e7d243f7de6aa5c" name="ga22f6b18e781e3c412e7d243f7de6aa5c"></a>enum class &#160;</td><td class="memItemRight"><b>ImageFormat</b> { <b>Unspecified</b>
+, <b>PNG</b>
+ }</td></tr>
+<tr class="memitem:gaa4374c517b4edd4ce31cfde88ae0c8da" id="r_gaa4374c517b4edd4ce31cfde88ae0c8da"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#gaa4374c517b4edd4ce31cfde88ae0c8da">GammaSpace</a> : u8 { <a class="el" href="#ggaa4374c517b4edd4ce31cfde88ae0c8daab2dcec3f1420b39d84d4257b8cd34411">Liner</a>
+, <a class="el" href="#ggaa4374c517b4edd4ce31cfde88ae0c8daa9ed33d9be17d174aeb4393a989586ed9">sRGB</a>
+ }</td></tr>
+<tr class="memdesc:gaa4374c517b4edd4ce31cfde88ae0c8da"><td class="mdescLeft">&#160;</td><td class="mdescRight">色空間列挙型  <a href="#gaa4374c517b4edd4ce31cfde88ae0c8da">[詳解]</a><br /></td></tr>
+<tr class="memitem:ga74aa0b575f596dd91f34dbcfac5075d5" id="r_ga74aa0b575f596dd91f34dbcfac5075d5"><td class="memItemLeft"><a id="ga74aa0b575f596dd91f34dbcfac5075d5" name="ga74aa0b575f596dd91f34dbcfac5075d5"></a>enum class &#160;</td><td class="memItemRight"><a class="el" href="#ga74aa0b575f596dd91f34dbcfac5075d5">ColorCodeFormat</a> : u8 { <br />
+&#160;&#160;<b>ARGB</b>
+, <b>ABGR</b>
+, <b>RGBA</b>
+, <b>BGRA</b>
+, <br />
+&#160;&#160;<b>Default</b> = ARGB
+<br />
+ }</td></tr>
+<tr class="memdesc:ga74aa0b575f596dd91f34dbcfac5075d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">色空間列挙型 <br /></td></tr>
+<tr class="memitem:gaca1fd1d8935433e6ba2e3918214e07f9" id="r_gaca1fd1d8935433e6ba2e3918214e07f9"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#gaca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a> { <br />
+&#160;&#160;<a class="el" href="#ggaca1fd1d8935433e6ba2e3918214e07f9a882384ec38ce8d9582b57e70861730e4">Fatal</a>
+, <a class="el" href="#ggaca1fd1d8935433e6ba2e3918214e07f9a902b0d55fddef6f8d651fe1035b7d4bd">Error</a>
+, <a class="el" href="#ggaca1fd1d8935433e6ba2e3918214e07f9a0eaadb4fcb48a0a0ed7bc9868be9fbaa">Warning</a>
+, <a class="el" href="#ggaca1fd1d8935433e6ba2e3918214e07f9a4059b0251f66a18cb56f544728796875">Info</a>
+, <br />
+&#160;&#160;<a class="el" href="#ggaca1fd1d8935433e6ba2e3918214e07f9add4ec0ac4e58f7c32a01244ae91150b1">Trace</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:gaca1fd1d8935433e6ba2e3918214e07f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">ログのレベル  <a href="#gaca1fd1d8935433e6ba2e3918214e07f9">[詳解]</a><br /></td></tr>
+<tr class="memitem:gabfa8842bf96d56ffad29d312c4edad54" id="r_gabfa8842bf96d56ffad29d312c4edad54"><td class="memItemLeft"><a id="gabfa8842bf96d56ffad29d312c4edad54" name="gabfa8842bf96d56ffad29d312c4edad54"></a>enum class &#160;</td><td class="memItemRight"><a class="el" href="#gabfa8842bf96d56ffad29d312c4edad54">AxisType</a> : u32 { <br />
+&#160;&#160;<b>None</b> = 0
+, <b>X</b> = 1
+, <b>Y</b> = 2
+, <b>Z</b> = 4
+, <br />
+&#160;&#160;<b>Screen</b> = 8
+, <b>XY</b> = X | Y
+, <b>XZ</b> = X | Z
+, <b>YZ</b> = Y | Z
+, <br />
+&#160;&#160;<b>XYZ</b> = X | Y | Z
+<br />
+ }</td></tr>
+<tr class="memdesc:gabfa8842bf96d56ffad29d312c4edad54"><td class="mdescLeft">&#160;</td><td class="mdescRight">軸タイプ <br /></td></tr>
+<tr class="memitem:gab81b58332d5fc8a29dc60c268bd3742b" id="r_gab81b58332d5fc8a29dc60c268bd3742b"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#gab81b58332d5fc8a29dc60c268bd3742b">DayOfWeek</a> { <br />
+&#160;&#160;<a class="el" href="#ggab81b58332d5fc8a29dc60c268bd3742ba9d1a0949c39e66a0cd65240bc0ac9177">Sunday</a> = 0
+, <a class="el" href="#ggab81b58332d5fc8a29dc60c268bd3742ba6f8522e0610541f1ef215a22ffa66ff6">Monday</a>
+, <a class="el" href="#ggab81b58332d5fc8a29dc60c268bd3742ba5792315f09a5d54fb7e3d066672b507f">Tuesday</a>
+, <a class="el" href="#ggab81b58332d5fc8a29dc60c268bd3742ba796c163589f295373e171842f37265d5">Wednesday</a>
+, <br />
+&#160;&#160;<a class="el" href="#ggab81b58332d5fc8a29dc60c268bd3742ba78ae6f0cd191d25147e252dc54768238">Thursday</a>
+, <a class="el" href="#ggab81b58332d5fc8a29dc60c268bd3742bac33b138a163847cdb6caeeb7c9a126b4">Friday</a>
+, <a class="el" href="#ggab81b58332d5fc8a29dc60c268bd3742ba8b7051187b9191cdcdae6ed5a10e5adc">Saturday</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:gab81b58332d5fc8a29dc60c268bd3742b"><td class="mdescLeft">&#160;</td><td class="mdescRight">曜日  <a href="#gab81b58332d5fc8a29dc60c268bd3742b">[詳解]</a><br /></td></tr>
+<tr class="memitem:ga31efdd397a137efc55da3364b5da601e" id="r_ga31efdd397a137efc55da3364b5da601e"><td class="memItemLeft"><a id="ga31efdd397a137efc55da3364b5da601e" name="ga31efdd397a137efc55da3364b5da601e"></a>enum class &#160;</td><td class="memItemRight"><b>ExecutorKind</b> { <b>SingleThreaded</b>
+, <b>MultiThreaded</b>
+ }</td></tr>
+<tr class="memitem:ga90665434e0a7c8d98f421882a584945c" id="r_ga90665434e0a7c8d98f421882a584945c"><td class="memItemLeft"><a id="ga90665434e0a7c8d98f421882a584945c" name="ga90665434e0a7c8d98f421882a584945c"></a>enum class &#160;</td><td class="memItemRight"><b>ScheduleBuildLogLevel</b> { <b>Ignore</b>
+, <b>Warn</b>
+, <b>Error</b>
+ }</td></tr>
+<tr class="memitem:gaeb9a55bb0c8f607de2e885f5030dc468" id="r_gaeb9a55bb0c8f607de2e885f5030dc468"><td class="memItemLeft"><a id="gaeb9a55bb0c8f607de2e885f5030dc468" name="gaeb9a55bb0c8f607de2e885f5030dc468"></a>enum class &#160;</td><td class="memItemRight"><b>ScheduleBuildErrorType</b> { <br />
+&#160;&#160;<b>DuplicateLabel</b>
+, <b>UnresolvedLabel</b>
+, <b>DependencyCycle</b>
+, <b>InvalidSetHierarchy</b>
+, <br />
+&#160;&#160;<b>InvalidNode</b>
+<br />
+ }</td></tr>
+<tr class="memitem:ga7f5a53b4a276b18ce9c72982ab3fc772" id="r_ga7f5a53b4a276b18ce9c72982ab3fc772"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#ga7f5a53b4a276b18ce9c72982ab3fc772">ThreadPriority</a> : u32 { <br />
+&#160;&#160;<a class="el" href="#gga7f5a53b4a276b18ce9c72982ab3fc772a63664aa8bee7544118de87bf48d529ee">Level1</a>
+, <a class="el" href="#gga7f5a53b4a276b18ce9c72982ab3fc772a0cbbfd5a182368f83190bf23d2bd5fde">Level2</a>
+, <a class="el" href="#gga7f5a53b4a276b18ce9c72982ab3fc772a68290d8bb76fe3ceb98d34e8b068f6be">Level3</a>
+, <a class="el" href="#gga7f5a53b4a276b18ce9c72982ab3fc772a881301b7eefadfa7f7b5453c749b804e">Level4</a>
+, <br />
+&#160;&#160;<a class="el" href="#gga7f5a53b4a276b18ce9c72982ab3fc772a69d39c12009d5b7d336c5e87ca922392">Level5</a>
+, <a class="el" href="#gga7f5a53b4a276b18ce9c72982ab3fc772a8b20804a9b0fbb27f3e2f7dc56d9771e">Level6</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ga7f5a53b4a276b18ce9c72982ab3fc772"><td class="mdescLeft">&#160;</td><td class="mdescRight">スレッド生成時に指定する実行優先度。  <a href="#ga7f5a53b4a276b18ce9c72982ab3fc772">[詳解]</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:ga71df63bf0ae0d5fb2cbda55aad5c5528" id="r_ga71df63bf0ae0d5fb2cbda55aad5c5528"><td class="memTemplParams" colspan="2">template&lt;class <a class="el" href="../../d5/d11/class_amuse_1_1_type.html">Type</a>, class TItr = decltype(std::begin(std::declval&lt;Type&gt;())), class = decltype(std::end(std::declval&lt;Type&gt;()))&gt; </td></tr>
+<tr class="memitem:ga71df63bf0ae0d5fb2cbda55aad5c5528 template"><td class="memItemLeft">constexpr auto&#160;</td><td class="memItemRight"><a class="el" href="#ga71df63bf0ae0d5fb2cbda55aad5c5528">IndexedRef</a> (<a class="el" href="../../d5/d11/class_amuse_1_1_type.html">Type</a> &amp;&amp;iterable)</td></tr>
+<tr class="memdesc:ga71df63bf0ae0d5fb2cbda55aad5c5528"><td class="mdescLeft">&#160;</td><td class="mdescRight">インデックス付きEnumerator  <br /></td></tr>
+<tr class="memitem:ga91e0adaf1f007df7d302eb15441fc929" id="r_ga91e0adaf1f007df7d302eb15441fc929"><td class="memTemplParams" colspan="2">template&lt;class <a class="el" href="../../d5/d11/class_amuse_1_1_type.html">Type</a>, class TItr = decltype(std::rbegin(std::declval&lt;Type&gt;())), class = decltype(std::rend(std::declval&lt;Type&gt;()))&gt; </td></tr>
+<tr class="memitem:ga91e0adaf1f007df7d302eb15441fc929 template"><td class="memItemLeft">constexpr auto&#160;</td><td class="memItemRight"><a class="el" href="#ga91e0adaf1f007df7d302eb15441fc929">ReverseIndexedRef</a> (<a class="el" href="../../d5/d11/class_amuse_1_1_type.html">Type</a> &amp;&amp;iterable)</td></tr>
+<tr class="memdesc:ga91e0adaf1f007df7d302eb15441fc929"><td class="mdescLeft">&#160;</td><td class="mdescRight">インデックス付き逆Enumerator  <br /></td></tr>
+</table>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">列挙型詳解</h2>
+<a id="ga1f5c9152b70695936fa5c2a1fc1b470f" name="ga1f5c9152b70695936fa5c2a1fc1b470f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1f5c9152b70695936fa5c2a1fc1b470f">&#9670;&#160;</a></span>ByteOrder</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#ga1f5c9152b70695936fa5c2a1fc1b470f">ByteOrder</a> : u32</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>バイト順オーダー </p>
+<p>メモリ上のエンディアンはCPUの種類によって既定される。 0x1234ABCDという4バイトのデータがあるとき、バイト毎に上位側から「12 34 AB CD」のように並べる順序はビッグエンディアン、 下位側から「CD AB 34 12」のように並べる順序はリトルエンディアンである。 </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="gga1f5c9152b70695936fa5c2a1fc1b470fa06b9281e396db002010bde1de57262eb" name="gga1f5c9152b70695936fa5c2a1fc1b470fa06b9281e396db002010bde1de57262eb"></a>Auto&#160;</td><td class="fielddoc"><p>自動判定 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga1f5c9152b70695936fa5c2a1fc1b470fa3c0ba6b22b526d7fd50c3026435a8c02" name="gga1f5c9152b70695936fa5c2a1fc1b470fa3c0ba6b22b526d7fd50c3026435a8c02"></a>LittleEndian&#160;</td><td class="fielddoc"><p>リトルエンディアン </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga1f5c9152b70695936fa5c2a1fc1b470fa2ce7a92ae43763828ac4acb4560c2a5b" name="gga1f5c9152b70695936fa5c2a1fc1b470fa2ce7a92ae43763828ac4acb4560c2a5b"></a>BigEndian&#160;</td><td class="fielddoc"><p>ビッグエンディアン </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="gab81b58332d5fc8a29dc60c268bd3742b" name="gab81b58332d5fc8a29dc60c268bd3742b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab81b58332d5fc8a29dc60c268bd3742b">&#9670;&#160;</a></span>DayOfWeek</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#gab81b58332d5fc8a29dc60c268bd3742b">DayOfWeek</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>曜日 </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="ggab81b58332d5fc8a29dc60c268bd3742ba9d1a0949c39e66a0cd65240bc0ac9177" name="ggab81b58332d5fc8a29dc60c268bd3742ba9d1a0949c39e66a0cd65240bc0ac9177"></a>Sunday&#160;</td><td class="fielddoc"><p>日曜日 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggab81b58332d5fc8a29dc60c268bd3742ba6f8522e0610541f1ef215a22ffa66ff6" name="ggab81b58332d5fc8a29dc60c268bd3742ba6f8522e0610541f1ef215a22ffa66ff6"></a>Monday&#160;</td><td class="fielddoc"><p>月曜日 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggab81b58332d5fc8a29dc60c268bd3742ba5792315f09a5d54fb7e3d066672b507f" name="ggab81b58332d5fc8a29dc60c268bd3742ba5792315f09a5d54fb7e3d066672b507f"></a>Tuesday&#160;</td><td class="fielddoc"><p>火曜日 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggab81b58332d5fc8a29dc60c268bd3742ba796c163589f295373e171842f37265d5" name="ggab81b58332d5fc8a29dc60c268bd3742ba796c163589f295373e171842f37265d5"></a>Wednesday&#160;</td><td class="fielddoc"><p>水曜日 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggab81b58332d5fc8a29dc60c268bd3742ba78ae6f0cd191d25147e252dc54768238" name="ggab81b58332d5fc8a29dc60c268bd3742ba78ae6f0cd191d25147e252dc54768238"></a>Thursday&#160;</td><td class="fielddoc"><p>木曜日 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggab81b58332d5fc8a29dc60c268bd3742bac33b138a163847cdb6caeeb7c9a126b4" name="ggab81b58332d5fc8a29dc60c268bd3742bac33b138a163847cdb6caeeb7c9a126b4"></a>Friday&#160;</td><td class="fielddoc"><p>金曜日 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggab81b58332d5fc8a29dc60c268bd3742ba8b7051187b9191cdcdae6ed5a10e5adc" name="ggab81b58332d5fc8a29dc60c268bd3742ba8b7051187b9191cdcdae6ed5a10e5adc"></a>Saturday&#160;</td><td class="fielddoc"><p>土曜日 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga811aa33e65020e8164eeba74920e19bb" name="ga811aa33e65020e8164eeba74920e19bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga811aa33e65020e8164eeba74920e19bb">&#9670;&#160;</a></span>ExceptionLevel</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#ga811aa33e65020e8164eeba74920e19bb">ExceptionLevel</a> : u32</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>例外レベル </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="gga811aa33e65020e8164eeba74920e19bba882384ec38ce8d9582b57e70861730e4" name="gga811aa33e65020e8164eeba74920e19bba882384ec38ce8d9582b57e70861730e4"></a>Fatal&#160;</td><td class="fielddoc"><p>プログラムの継続が難しい致命的な例外。プログラムは直ちに終了しなければならない。 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga811aa33e65020e8164eeba74920e19bba902b0d55fddef6f8d651fe1035b7d4bd" name="gga811aa33e65020e8164eeba74920e19bba902b0d55fddef6f8d651fe1035b7d4bd"></a>Error&#160;</td><td class="fielddoc"><p>プログラムが不正な状態になる可能性がある例外。プログラムの継続が危険であり、早急に終了することが望まれる。 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga811aa33e65020e8164eeba74920e19bba0eaadb4fcb48a0a0ed7bc9868be9fbaa" name="gga811aa33e65020e8164eeba74920e19bba0eaadb4fcb48a0a0ed7bc9868be9fbaa"></a>Warning&#160;</td><td class="fielddoc"><p>プログラムの実行中に発生した軽微な例外。プログラムの継続が可能である。 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga6a3bcbca9487980e363eecf1d37a34d6" name="ga6a3bcbca9487980e363eecf1d37a34d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6a3bcbca9487980e363eecf1d37a34d6">&#9670;&#160;</a></span>FileAttribut</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#ga6a3bcbca9487980e363eecf1d37a34d6">FileAttribut</a> : u32</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ファイル属性 </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="gga6a3bcbca9487980e363eecf1d37a34d6a6adf97f83acf6453d4a6a4b1070f3754" name="gga6a3bcbca9487980e363eecf1d37a34d6a6adf97f83acf6453d4a6a4b1070f3754"></a>None&#160;</td><td class="fielddoc"><p>なし </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga6a3bcbca9487980e363eecf1d37a34d6a960b44c579bc2f6818d2daaf9e4c16f0" name="gga6a3bcbca9487980e363eecf1d37a34d6a960b44c579bc2f6818d2daaf9e4c16f0"></a>Normal&#160;</td><td class="fielddoc"><p>通常ファイル </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga6a3bcbca9487980e363eecf1d37a34d6ae73cda510e8bb947f7e61089e5581494" name="gga6a3bcbca9487980e363eecf1d37a34d6ae73cda510e8bb947f7e61089e5581494"></a>Directory&#160;</td><td class="fielddoc"><p>ディレクトリ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga6a3bcbca9487980e363eecf1d37a34d6a131fb182a881796e7606ed6da27f1197" name="gga6a3bcbca9487980e363eecf1d37a34d6a131fb182a881796e7606ed6da27f1197"></a>ReadOnly&#160;</td><td class="fielddoc"><p>読み取り専用 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga6a3bcbca9487980e363eecf1d37a34d6a7acdf85c69cc3c5305456a293524386e" name="gga6a3bcbca9487980e363eecf1d37a34d6a7acdf85c69cc3c5305456a293524386e"></a>Hidden&#160;</td><td class="fielddoc"><p>隠しファイル </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="gaa4cf957ee382f67ae8de7925bdda09e3" name="gaa4cf957ee382f67ae8de7925bdda09e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa4cf957ee382f67ae8de7925bdda09e3">&#9670;&#160;</a></span>FileOpenMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#gaa4cf957ee382f67ae8de7925bdda09e3">FileOpenMode</a> : u32</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ファイル・オープン・モード </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="ggaa4cf957ee382f67ae8de7925bdda09e3a7a1a5f3e79fdc91edf2f5ead9d66abb4" name="ggaa4cf957ee382f67ae8de7925bdda09e3a7a1a5f3e79fdc91edf2f5ead9d66abb4"></a>Read&#160;</td><td class="fielddoc"><p>読み取り </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaa4cf957ee382f67ae8de7925bdda09e3a1129c0e4d43f2d121652a7302712cff6" name="ggaa4cf957ee382f67ae8de7925bdda09e3a1129c0e4d43f2d121652a7302712cff6"></a>Write&#160;</td><td class="fielddoc"><p>書き込み </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaa4cf957ee382f67ae8de7925bdda09e3a3ac4692f3935a49a0b243eecf529faa9" name="ggaa4cf957ee382f67ae8de7925bdda09e3a3ac4692f3935a49a0b243eecf529faa9"></a>Append&#160;</td><td class="fielddoc"><p>追記 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaa4cf957ee382f67ae8de7925bdda09e3a9dffbf69ffba8bc38bc4e01abf4b1675" name="ggaa4cf957ee382f67ae8de7925bdda09e3a9dffbf69ffba8bc38bc4e01abf4b1675"></a>Text&#160;</td><td class="fielddoc"><p>テキスト </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="gaa4374c517b4edd4ce31cfde88ae0c8da" name="gaa4374c517b4edd4ce31cfde88ae0c8da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa4374c517b4edd4ce31cfde88ae0c8da">&#9670;&#160;</a></span>GammaSpace</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#gaa4374c517b4edd4ce31cfde88ae0c8da">GammaSpace</a> : u8</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>色空間列挙型 </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="ggaa4374c517b4edd4ce31cfde88ae0c8daab2dcec3f1420b39d84d4257b8cd34411" name="ggaa4374c517b4edd4ce31cfde88ae0c8daab2dcec3f1420b39d84d4257b8cd34411"></a>Liner&#160;</td><td class="fielddoc"><p>線形 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaa4374c517b4edd4ce31cfde88ae0c8daa9ed33d9be17d174aeb4393a989586ed9" name="ggaa4374c517b4edd4ce31cfde88ae0c8daa9ed33d9be17d174aeb4393a989586ed9"></a>sRGB&#160;</td><td class="fielddoc"><p>ガンマ </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="gaca1fd1d8935433e6ba2e3918214e07f9" name="gaca1fd1d8935433e6ba2e3918214e07f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaca1fd1d8935433e6ba2e3918214e07f9">&#9670;&#160;</a></span>LogLevel</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#gaca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ログのレベル </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="ggaca1fd1d8935433e6ba2e3918214e07f9a882384ec38ce8d9582b57e70861730e4" name="ggaca1fd1d8935433e6ba2e3918214e07f9a882384ec38ce8d9582b57e70861730e4"></a>Fatal&#160;</td><td class="fielddoc"><p>致命的エラー </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaca1fd1d8935433e6ba2e3918214e07f9a902b0d55fddef6f8d651fe1035b7d4bd" name="ggaca1fd1d8935433e6ba2e3918214e07f9a902b0d55fddef6f8d651fe1035b7d4bd"></a>Error&#160;</td><td class="fielddoc"><p>エラー </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaca1fd1d8935433e6ba2e3918214e07f9a0eaadb4fcb48a0a0ed7bc9868be9fbaa" name="ggaca1fd1d8935433e6ba2e3918214e07f9a0eaadb4fcb48a0a0ed7bc9868be9fbaa"></a>Warning&#160;</td><td class="fielddoc"><p>警告表示 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaca1fd1d8935433e6ba2e3918214e07f9a4059b0251f66a18cb56f544728796875" name="ggaca1fd1d8935433e6ba2e3918214e07f9a4059b0251f66a18cb56f544728796875"></a>Info&#160;</td><td class="fielddoc"><p>情報表示 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaca1fd1d8935433e6ba2e3918214e07f9add4ec0ac4e58f7c32a01244ae91150b1" name="ggaca1fd1d8935433e6ba2e3918214e07f9add4ec0ac4e58f7c32a01244ae91150b1"></a>Trace&#160;</td><td class="fielddoc"><p>デバッグ用トレース </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga7f5a53b4a276b18ce9c72982ab3fc772" name="ga7f5a53b4a276b18ce9c72982ab3fc772"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7f5a53b4a276b18ce9c72982ab3fc772">&#9670;&#160;</a></span>ThreadPriority</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#ga7f5a53b4a276b18ce9c72982ab3fc772">ThreadPriority</a> : u32</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>スレッド生成時に指定する実行優先度。 </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="gga7f5a53b4a276b18ce9c72982ab3fc772a63664aa8bee7544118de87bf48d529ee" name="gga7f5a53b4a276b18ce9c72982ab3fc772a63664aa8bee7544118de87bf48d529ee"></a>Level1&#160;</td><td class="fielddoc"><p>Critical </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga7f5a53b4a276b18ce9c72982ab3fc772a0cbbfd5a182368f83190bf23d2bd5fde" name="gga7f5a53b4a276b18ce9c72982ab3fc772a0cbbfd5a182368f83190bf23d2bd5fde"></a>Level2&#160;</td><td class="fielddoc"><p>Highest </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga7f5a53b4a276b18ce9c72982ab3fc772a68290d8bb76fe3ceb98d34e8b068f6be" name="gga7f5a53b4a276b18ce9c72982ab3fc772a68290d8bb76fe3ceb98d34e8b068f6be"></a>Level3&#160;</td><td class="fielddoc"><p>AboveNormal </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga7f5a53b4a276b18ce9c72982ab3fc772a881301b7eefadfa7f7b5453c749b804e" name="gga7f5a53b4a276b18ce9c72982ab3fc772a881301b7eefadfa7f7b5453c749b804e"></a>Level4&#160;</td><td class="fielddoc"><p>Normal </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga7f5a53b4a276b18ce9c72982ab3fc772a69d39c12009d5b7d336c5e87ca922392" name="gga7f5a53b4a276b18ce9c72982ab3fc772a69d39c12009d5b7d336c5e87ca922392"></a>Level5&#160;</td><td class="fielddoc"><p>BelowNormal </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga7f5a53b4a276b18ce9c72982ab3fc772a8b20804a9b0fbb27f3e2f7dc56d9771e" name="gga7f5a53b4a276b18ce9c72982ab3fc772a8b20804a9b0fbb27f3e2f7dc56d9771e"></a>Level6&#160;</td><td class="fielddoc"><p>Lowest </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="ga71df63bf0ae0d5fb2cbda55aad5c5528" name="ga71df63bf0ae0d5fb2cbda55aad5c5528"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga71df63bf0ae0d5fb2cbda55aad5c5528">&#9670;&#160;</a></span>IndexedRef()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class <a class="el" href="../../d5/d11/class_amuse_1_1_type.html">Type</a>, class TItr = decltype(std::begin(std::declval&lt;Type&gt;())), class = decltype(std::end(std::declval&lt;Type&gt;()))&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto IndexedRef </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d11/class_amuse_1_1_type.html">Type</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>iterable</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>インデックス付きEnumerator </p>
+
+</div>
+</div>
+<a id="ga91e0adaf1f007df7d302eb15441fc929" name="ga91e0adaf1f007df7d302eb15441fc929"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga91e0adaf1f007df7d302eb15441fc929">&#9670;&#160;</a></span>ReverseIndexedRef()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class <a class="el" href="../../d5/d11/class_amuse_1_1_type.html">Type</a>, class TItr = decltype(std::rbegin(std::declval&lt;Type&gt;())), class = decltype(std::rend(std::declval&lt;Type&gt;()))&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto ReverseIndexedRef </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d11/class_amuse_1_1_type.html">Type</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>iterable</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>インデックス付き逆Enumerator </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

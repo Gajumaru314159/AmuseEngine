@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['func_5ftype_0',['func_type',['../d1/d4b/struct_amuse_1_1_core_1_1_reflection_function.html#a670ebddbd8b148ea10f28972eb1fc46d',1,'Amuse::Core::ReflectionFunction']]],
-  ['function_5ftype_1',['function_type',['../d3/d42/class_amuse_1_1_core_1_1_event_notifier.html#aa820bd54d8027e2e782d681215095e5d',1,'Amuse::Core::EventNotifier::function_type'],['../d6/d24/class_amuse_1_1_core_1_1_delegate_3_01_r_07_args_8_8_8_08_00_01_buffer_size_01_4.html#a8c4eaa7aed92bbc68d905cea7bb989de',1,'Amuse::Core::Delegate&lt; R(Args...), BufferSize &gt;::function_type']]]
+  ['func_5ftype_0',['func_type',['../d5/d10/struct_amuse_1_1_reflection_function.html#a0ce29dd475397a3635cc5420bd290d2d',1,'Amuse::ReflectionFunction']]],
+  ['function_5ftype_1',['function_type',['../d3/dd8/class_amuse_1_1_event_notifier.html#a0fedccc075468ee47525feaac7dda5b0',1,'Amuse::EventNotifier::function_type'],['../d5/d03/class_amuse_1_1_delegate_3_01_r_07_args_8_8_8_08_00_01_buffer_size_01_4.html#a54fce03bf1d0ee246d984986ee92ce40',1,'Amuse::Delegate&lt; R(Args...), BufferSize &gt;::function_type']]]
 ];

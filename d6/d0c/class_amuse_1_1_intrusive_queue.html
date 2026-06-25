@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: IntrusiveQueue&lt; T, pMember &gt; クラステンプレート</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d6/d0c/class_amuse_1_1_intrusive_queue.html','../../','d8/d64/class_amuse_1_1_intrusive_queue-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-methods">メソッド</a> &#124;
+<a href="../../d8/d64/class_amuse_1_1_intrusive_queue-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">IntrusiveQueue&lt; T, pMember &gt; クラステンプレート<div class="ingroups"><a class="el" href="../../da/d78/group___amuse_core.html">Core</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">説明</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;class T, T *T::* pMember&gt;<br />
+class Amuse::IntrusiveQueue&lt; T, pMember &gt;</div><p>ノード内ポインタを使って要素を連結する侵入型キュー。 </p>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:a6d2b4b0c41b933298ab362e8d8911e61" id="r_a6d2b4b0c41b933298ab362e8d8911e61"><td class="memItemLeft"><a id="a6d2b4b0c41b933298ab362e8d8911e61" name="a6d2b4b0c41b933298ab362e8d8911e61"></a>
+using&#160;</td><td class="memItemRight"><b>this_type</b> = IntrusiveQueue&lt;T, pMember&gt;</td></tr>
+<tr class="memdesc:a6d2b4b0c41b933298ab362e8d8911e61"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="#a6d2b4b0c41b933298ab362e8d8911e61" title="this_type 型のエイリアス。">this_type</a> 型のエイリアス。 <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+メソッド</h2></td></tr>
+<tr class="memitem:acf43a3e0f1bc6785a847563f6470334f" id="r_acf43a3e0f1bc6785a847563f6470334f"><td class="memItemLeft"><a id="acf43a3e0f1bc6785a847563f6470334f" name="acf43a3e0f1bc6785a847563f6470334f"></a>
+&#160;</td><td class="memItemRight"><b>IntrusiveQueue</b> (<a class="el" href="#a6d2b4b0c41b933298ab362e8d8911e61">this_type</a> &amp;&amp;rhs) noexcept</td></tr>
+<tr class="memdesc:acf43a3e0f1bc6785a847563f6470334f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d6/d0c/class_amuse_1_1_intrusive_queue.html" title="ノード内ポインタを使って要素を連結する侵入型キュー。">IntrusiveQueue</a> を初期化する。 <br /></td></tr>
+<tr class="memitem:ad2f63f57dfc3f82f992de3ba75e041b8" id="r_ad2f63f57dfc3f82f992de3ba75e041b8"><td class="memItemLeft"><a id="ad2f63f57dfc3f82f992de3ba75e041b8" name="ad2f63f57dfc3f82f992de3ba75e041b8"></a>
+<a class="el" href="#a6d2b4b0c41b933298ab362e8d8911e61">this_type</a> &amp;&#160;</td><td class="memItemRight"><b>operator=</b> (<a class="el" href="#a6d2b4b0c41b933298ab362e8d8911e61">this_type</a> &amp;&amp;rhs) noexcept</td></tr>
+<tr class="memdesc:ad2f63f57dfc3f82f992de3ba75e041b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">値を代入する。 <br /></td></tr>
+<tr class="memitem:a8c14dcdfe553d8da2e11f66065442c67" id="r_a8c14dcdfe553d8da2e11f66065442c67"><td class="memItemLeft"><a id="a8c14dcdfe553d8da2e11f66065442c67" name="a8c14dcdfe553d8da2e11f66065442c67"></a>
+&#160;</td><td class="memItemRight"><b>IntrusiveQueue</b> (const <a class="el" href="#a6d2b4b0c41b933298ab362e8d8911e61">this_type</a> &amp;)=delete</td></tr>
+<tr class="memitem:a331749a3495d86103c34b00062932141" id="r_a331749a3495d86103c34b00062932141"><td class="memItemLeft"><a id="a331749a3495d86103c34b00062932141" name="a331749a3495d86103c34b00062932141"></a>
+IntrusiveQueue &amp;&#160;</td><td class="memItemRight"><b>operator=</b> (const <a class="el" href="#a6d2b4b0c41b933298ab362e8d8911e61">this_type</a> &amp;)=delete</td></tr>
+<tr class="memitem:ac8bb3912a3ce86b15842e79d0b421204" id="r_ac8bb3912a3ce86b15842e79d0b421204"><td class="memItemLeft"><a id="ac8bb3912a3ce86b15842e79d0b421204" name="ac8bb3912a3ce86b15842e79d0b421204"></a>
+void&#160;</td><td class="memItemRight"><b>clear</b> ()</td></tr>
+<tr class="memdesc:ac8bb3912a3ce86b15842e79d0b421204"><td class="mdescLeft">&#160;</td><td class="mdescRight">全要素を削除する。 <br /></td></tr>
+<tr class="memitem:a852779d300f57c3e5ccd0cd0688fe39f" id="r_a852779d300f57c3e5ccd0cd0688fe39f"><td class="memItemLeft"><a id="a852779d300f57c3e5ccd0cd0688fe39f" name="a852779d300f57c3e5ccd0cd0688fe39f"></a>
+void&#160;</td><td class="memItemRight"><b>enqueue</b> (T &amp;instance)</td></tr>
+<tr class="memdesc:a852779d300f57c3e5ccd0cd0688fe39f"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素をキュー末尾へ追加する。 <br /></td></tr>
+<tr class="memitem:aa942f6af2f5f4d232812036cc9b2afb4" id="r_aa942f6af2f5f4d232812036cc9b2afb4"><td class="memItemLeft"><a id="aa942f6af2f5f4d232812036cc9b2afb4" name="aa942f6af2f5f4d232812036cc9b2afb4"></a>
+T *&#160;</td><td class="memItemRight"><b>dequeue</b> ()</td></tr>
+<tr class="memdesc:aa942f6af2f5f4d232812036cc9b2afb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">キュー先頭の要素を取り出す。 <br /></td></tr>
+<tr class="memitem:a75abcf01066c7559370a3230e782d8bd" id="r_a75abcf01066c7559370a3230e782d8bd"><td class="memItemLeft"><a id="a75abcf01066c7559370a3230e782d8bd" name="a75abcf01066c7559370a3230e782d8bd"></a>
+T *&#160;</td><td class="memItemRight"><b>peek</b> ()</td></tr>
+<tr class="memdesc:a75abcf01066c7559370a3230e782d8bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">キュー先頭の要素を参照する。 <br /></td></tr>
+<tr class="memitem:a644718bb2fb240de962dc3c9a1fdf0dc" id="r_a644718bb2fb240de962dc3c9a1fdf0dc"><td class="memItemLeft"><a id="a644718bb2fb240de962dc3c9a1fdf0dc" name="a644718bb2fb240de962dc3c9a1fdf0dc"></a>
+bool&#160;</td><td class="memItemRight"><b>empty</b> () const</td></tr>
+<tr class="memdesc:a644718bb2fb240de962dc3c9a1fdf0dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">空かどうかを判定する。 <br /></td></tr>
+</table>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>Runtime/Core/Public/Amuse/Core/Utility/<a class="el" href="../../dc/d0b/_handle_manager_8h_source.html">HandleManager.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><a href="../../d6/d0c/class_amuse_1_1_intrusive_queue.html">IntrusiveQueue</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

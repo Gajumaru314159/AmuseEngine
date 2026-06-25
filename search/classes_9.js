@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['jobgroup_0',['JobGroup',['../d0/d57/class_amuse_1_1_core_1_1_job_group.html',1,'Amuse::Core']]],
-  ['jobgrouphandle_1',['JobGroupHandle',['../dc/d1f/class_amuse_1_1_core_1_1_job_group_handle.html',1,'Amuse::Core']]],
-  ['jobhandle_2',['JobHandle',['../da/d98/class_amuse_1_1_core_1_1_job_handle.html',1,'Amuse::Core']]],
-  ['jobsystem_3',['JobSystem',['../da/d28/class_amuse_1_1_core_1_1_job_system.html',1,'Amuse::Core']]]
+  ['jobgroup_0',['JobGroup',['../d5/d64/class_amuse_1_1_job_group.html',1,'Amuse']]],
+  ['jobgrouphandle_1',['JobGroupHandle',['../d3/d81/class_amuse_1_1_job_group_handle.html',1,'Amuse']]],
+  ['jobhandle_2',['JobHandle',['../dc/de3/class_amuse_1_1_job_handle.html',1,'Amuse']]],
+  ['jobsystem_3',['JobSystem',['../d0/db7/class_amuse_1_1_job_system.html',1,'Amuse']]]
 ];

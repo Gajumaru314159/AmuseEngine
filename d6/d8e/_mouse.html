@@ -133,13 +133,13 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('d6/d8e/_mouse.
 <li><span class="tt">MouseButton</span>または<span class="tt">MouseAxis</span>から入力オブジェクトを取得できること。</li>
 </ul>
 <h1>基本設計</h1>
-<div class="fragment"><div class="line"><span class="keywordflow">if</span> (Input::Mouse::Left.down()) {</div>
-<div class="line">    Vec2 pos = Input::Mouse::GetPos();</div>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span> (Mouse::Left.down()) {</div>
+<div class="line">    Vec2 pos = Mouse::GetPos();</div>
 <div class="line">    LOG_INFO(<span class="stringliteral">&quot;Click: {}, {}&quot;</span>, pos.x, pos.y);</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line">f32 wheel = Input::Mouse::Wheel.value();</div>
-<div class="line">Vec2 delta = Input::Mouse::GetDeltaPos();</div>
+<div class="line">f32 wheel = Mouse::Wheel.value();</div>
+<div class="line">Vec2 delta = Mouse::GetDeltaPos();</div>
 </div><!-- fragment --><h1>API</h1>
 <div class="fragment"><div class="line"></div>
 <div class="line"><span class="keyword">static</span> <span class="keyword">constexpr</span> Button GetButton(MouseButton key);</div>

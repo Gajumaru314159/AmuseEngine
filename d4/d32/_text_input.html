@@ -136,14 +136,14 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('d4/d32/_text_i
 <div class="fragment"><div class="line">String text = <span class="stringliteral">&quot;Player&quot;</span>;</div>
 <div class="line"><span class="keywordtype">size_t</span> cursor = text.size();</div>
 <div class="line"> </div>
-<div class="line">cursor = Platform::TextInput::UpdateText(</div>
+<div class="line">cursor = TextInput::UpdateText(</div>
 <div class="line">    text,</div>
 <div class="line">    cursor,</div>
-<div class="line">    Platform::TextInputMode::Default</div>
+<div class="line">    TextInputMode::Default</div>
 <div class="line">);</div>
 <div class="line"> </div>
-<div class="line">String committed = Platform::TextInput::GetText();</div>
-<div class="line">String editing = Platform::TextInput::GetEditingText();</div>
+<div class="line">String committed = TextInput::GetText();</div>
+<div class="line">String editing = TextInput::GetEditingText();</div>
 </div><!-- fragment --><h1>API</h1>
 <div class="fragment"><div class="line"></div>
 <div class="line"><span class="keyword">static</span> String GetText();</div>

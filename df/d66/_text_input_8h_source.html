@@ -127,48 +127,45 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('df/d66/_text_i
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;Amuse/Core/Core.h&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span>Amuse::Platform {</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keyword">using namespace </span>Amuse::Core;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">enum class</span> TextInputMode {</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        DenyCtrl = get_bit(0),</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        AllowEnter = get_bit(1),</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        AllowTab = get_bit(2),</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        AllowBackSpace = get_bit(3),</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        AllowDelete = get_bit(4),</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        Default = AllowEnter | AllowTab | AllowBackSpace | AllowDelete,</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    };</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
-<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="../../dc/d36/class_amuse_1_1_platform_1_1_text_input.html">   23</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../dc/d36/class_amuse_1_1_platform_1_1_text_input.html">TextInput</a> {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="../../dc/d36/class_amuse_1_1_platform_1_1_text_input.html#aaf83a76e6dce8132bf46d0db3fb64133">   27</a></span>        <span class="keyword">static</span> String <a class="code hl_function" href="../../dc/d36/class_amuse_1_1_platform_1_1_text_input.html#aaf83a76e6dce8132bf46d0db3fb64133">GetText</a>();</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="../../dc/d36/class_amuse_1_1_platform_1_1_text_input.html#a7f7be6a70493e5486e9ae1d7b0fdc51f">   29</a></span>        <span class="keyword">static</span> <span class="keywordtype">size_t</span> <a class="code hl_function" href="../../dc/d36/class_amuse_1_1_platform_1_1_text_input.html#a7f7be6a70493e5486e9ae1d7b0fdc51f">UpdateText</a>(StringView text, <span class="keywordtype">size_t</span> cursor, TextInputMode mode = TextInputMode::Default);</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="../../dc/d36/class_amuse_1_1_platform_1_1_text_input.html#a2a1aa8f226e1b5e9e05090d741002455">   31</a></span>        <span class="keyword">static</span> <span class="keywordtype">size_t</span> <a class="code hl_function" href="../../dc/d36/class_amuse_1_1_platform_1_1_text_input.html#a2a1aa8f226e1b5e9e05090d741002455">UpdateText</a>(StringView text, TextInputMode mode = TextInputMode::Default);</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../dc/d36/class_amuse_1_1_platform_1_1_text_input.html#a1f3f393af1eacce9784ec5251d99f797">   33</a></span>        <span class="keyword">static</span> String <a class="code hl_function" href="../../dc/d36/class_amuse_1_1_platform_1_1_text_input.html#a1f3f393af1eacce9784ec5251d99f797">GetEditingText</a>();</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span>Amuse {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keyword">enum class</span> TextInputMode {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        DenyCtrl = get_bit(0),</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        AllowEnter = get_bit(1),</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        AllowTab = get_bit(2),</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        AllowBackSpace = get_bit(3),</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        AllowDelete = get_bit(4),</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        Default = AllowEnter | AllowTab | AllowBackSpace | AllowDelete,</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    };</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span></div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../dc/ddd/class_amuse_1_1_text_input.html">   22</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../dc/ddd/class_amuse_1_1_text_input.html">TextInput</a> {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="../../dc/ddd/class_amuse_1_1_text_input.html#a64c4afbf5d6a4c9843e381214ef79a12">   26</a></span>        <span class="keyword">static</span> String <a class="code hl_function" href="../../dc/ddd/class_amuse_1_1_text_input.html#a64c4afbf5d6a4c9843e381214ef79a12">GetText</a>();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../dc/ddd/class_amuse_1_1_text_input.html#aa59199174e5702e5c8074fe6ea20c6e9">   28</a></span>        <span class="keyword">static</span> <span class="keywordtype">size_t</span> <a class="code hl_function" href="../../dc/ddd/class_amuse_1_1_text_input.html#aa59199174e5702e5c8074fe6ea20c6e9">UpdateText</a>(StringView text, <span class="keywordtype">size_t</span> cursor, TextInputMode mode = TextInputMode::Default);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="../../dc/ddd/class_amuse_1_1_text_input.html#ac9b12ca4ed166460246b3d1fd6535d17">   30</a></span>        <span class="keyword">static</span> <span class="keywordtype">size_t</span> <a class="code hl_function" href="../../dc/ddd/class_amuse_1_1_text_input.html#ac9b12ca4ed166460246b3d1fd6535d17">UpdateText</a>(StringView text, TextInputMode mode = TextInputMode::Default);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="../../dc/ddd/class_amuse_1_1_text_input.html#a93f86ccc6bae3cb1e31d753b507429bf">   32</a></span>        <span class="keyword">static</span> String <a class="code hl_function" href="../../dc/ddd/class_amuse_1_1_text_input.html#a93f86ccc6bae3cb1e31d753b507429bf">GetEditingText</a>();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="comment">//===============================================================</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="comment">// コンストラクタ / デストラクタ</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="comment">//===============================================================</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="comment">//===============================================================</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="comment">// コンストラクタ / デストラクタ</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="comment">//===============================================================</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    };</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    };</div>
 </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>}</div>
-<div class="ttc" id="aclass_amuse_1_1_platform_1_1_text_input_html"><div class="ttname"><a href="../../dc/d36/class_amuse_1_1_platform_1_1_text_input.html">Amuse::Platform::TextInput</a></div><div class="ttdoc">説明</div><div class="ttdef"><b>Definition</b> TextInput.h:23</div></div>
-<div class="ttc" id="aclass_amuse_1_1_platform_1_1_text_input_html_a1f3f393af1eacce9784ec5251d99f797"><div class="ttname"><a href="../../dc/d36/class_amuse_1_1_platform_1_1_text_input.html#a1f3f393af1eacce9784ec5251d99f797">Amuse::Platform::TextInput::GetEditingText</a></div><div class="ttdeci">static String GetEditingText()</div><div class="ttdoc">編集中テキストを取得する</div></div>
-<div class="ttc" id="aclass_amuse_1_1_platform_1_1_text_input_html_a2a1aa8f226e1b5e9e05090d741002455"><div class="ttname"><a href="../../dc/d36/class_amuse_1_1_platform_1_1_text_input.html#a2a1aa8f226e1b5e9e05090d741002455">Amuse::Platform::TextInput::UpdateText</a></div><div class="ttdeci">static size_t UpdateText(StringView text, TextInputMode mode=TextInputMode::Default)</div><div class="ttdoc">入力中テキストを更新する</div></div>
-<div class="ttc" id="aclass_amuse_1_1_platform_1_1_text_input_html_a7f7be6a70493e5486e9ae1d7b0fdc51f"><div class="ttname"><a href="../../dc/d36/class_amuse_1_1_platform_1_1_text_input.html#a7f7be6a70493e5486e9ae1d7b0fdc51f">Amuse::Platform::TextInput::UpdateText</a></div><div class="ttdeci">static size_t UpdateText(StringView text, size_t cursor, TextInputMode mode=TextInputMode::Default)</div><div class="ttdoc">入力中テキストを更新する</div></div>
-<div class="ttc" id="aclass_amuse_1_1_platform_1_1_text_input_html_aaf83a76e6dce8132bf46d0db3fb64133"><div class="ttname"><a href="../../dc/d36/class_amuse_1_1_platform_1_1_text_input.html#aaf83a76e6dce8132bf46d0db3fb64133">Amuse::Platform::TextInput::GetText</a></div><div class="ttdeci">static String GetText()</div><div class="ttdoc">確定済みテキストを取得する</div></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>}</div>
+<div class="ttc" id="aclass_amuse_1_1_text_input_html"><div class="ttname"><a href="../../dc/ddd/class_amuse_1_1_text_input.html">Amuse::TextInput</a></div><div class="ttdoc">説明</div><div class="ttdef"><b>Definition</b> TextInput.h:22</div></div>
+<div class="ttc" id="aclass_amuse_1_1_text_input_html_a64c4afbf5d6a4c9843e381214ef79a12"><div class="ttname"><a href="../../dc/ddd/class_amuse_1_1_text_input.html#a64c4afbf5d6a4c9843e381214ef79a12">Amuse::TextInput::GetText</a></div><div class="ttdeci">static String GetText()</div><div class="ttdoc">確定済みテキストを取得する</div></div>
+<div class="ttc" id="aclass_amuse_1_1_text_input_html_a93f86ccc6bae3cb1e31d753b507429bf"><div class="ttname"><a href="../../dc/ddd/class_amuse_1_1_text_input.html#a93f86ccc6bae3cb1e31d753b507429bf">Amuse::TextInput::GetEditingText</a></div><div class="ttdeci">static String GetEditingText()</div><div class="ttdoc">編集中テキストを取得する</div></div>
+<div class="ttc" id="aclass_amuse_1_1_text_input_html_aa59199174e5702e5c8074fe6ea20c6e9"><div class="ttname"><a href="../../dc/ddd/class_amuse_1_1_text_input.html#aa59199174e5702e5c8074fe6ea20c6e9">Amuse::TextInput::UpdateText</a></div><div class="ttdeci">static size_t UpdateText(StringView text, size_t cursor, TextInputMode mode=TextInputMode::Default)</div><div class="ttdoc">入力中テキストを更新する</div></div>
+<div class="ttc" id="aclass_amuse_1_1_text_input_html_ac9b12ca4ed166460246b3d1fd6535d17"><div class="ttname"><a href="../../dc/ddd/class_amuse_1_1_text_input.html#ac9b12ca4ed166460246b3d1fd6535d17">Amuse::TextInput::UpdateText</a></div><div class="ttdeci">static size_t UpdateText(StringView text, TextInputMode mode=TextInputMode::Default)</div><div class="ttdoc">入力中テキストを更新する</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

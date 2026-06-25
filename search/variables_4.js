@@ -1,15 +1,15 @@
 var searchData=
 [
-  ['empty_0',['Empty',['../d4/d7d/struct_amuse_1_1_core_1_1_box.html#a04808fceef6a3702aae6f655efe6dd9f',1,'Amuse::Core::Box']]],
-  ['enable_1',['enable',['../db/d85/struct_amuse_1_1_r_h_i_1_1_depth_stencil_desc.html#a07c7272b6c99685b0b573242cb60c03f',1,'Amuse::RHI::DepthStencilDesc']]],
-  ['enablebindless_2',['enableBindless',['../d8/d50/struct_amuse_1_1_r_h_i_1_1_r_h_i_config.html#ab7758012caf9043d2ace46986bec3dc0',1,'Amuse::RHI::RHIConfig']]],
-  ['enabledebuglayer_3',['enableDebugLayer',['../da/dbf/struct_amuse_1_1_r_h_i_1_1_direct_x12_r_h_i_config.html#a9396eb082fb3c8b8525b923dcbdfb662',1,'Amuse::RHI::DirectX12RHIConfig::enableDebugLayer'],['../d4/d78/struct_amuse_1_1_r_h_i_1_1_vulkan_r_h_i_config.html#a7101af95e4ccd9f7e335521936bb01e4',1,'Amuse::RHI::VulkanRHIConfig::enableDebugLayer']]],
-  ['enabledirectstorage_4',['enableDirectStorage',['../da/dbf/struct_amuse_1_1_r_h_i_1_1_direct_x12_r_h_i_config.html#aa75e916af29773be7fae0a57c396d841',1,'Amuse::RHI::DirectX12RHIConfig']]],
-  ['enabledirectstoragedebug_5',['enableDirectStorageDebug',['../da/dbf/struct_amuse_1_1_r_h_i_1_1_direct_x12_r_h_i_config.html#a9342011f85dee57cb9b6f37129ecfb76',1,'Amuse::RHI::DirectX12RHIConfig']]],
-  ['enablepix_6',['enablePIX',['../da/dbf/struct_amuse_1_1_r_h_i_1_1_direct_x12_r_h_i_config.html#a2378c896c08c1cf6be76707c4344cdb1',1,'Amuse::RHI::DirectX12RHIConfig']]],
-  ['enableworkstealing_7',['enableWorkStealing',['../de/d86/struct_amuse_1_1_core_1_1_schedule_executor_config.html#a8ee0c781b05f76eaea2c296fcf16ff68',1,'Amuse::Core::ScheduleExecutorConfig']]],
-  ['entries_8',['entries',['../da/d85/struct_amuse_1_1_core_1_1_stack_trace.html#a30e5bf4c4ee3855167575281bce7fcde',1,'Amuse::Core::StackTrace']]],
-  ['enumelements_9',['enumElements',['../d3/d31/struct_amuse_1_1_core_1_1_type_info.html#a7bfcdc393b1017127d8e7f83555d06e2',1,'Amuse::Core::TypeInfo']]],
-  ['enumvaluegetter_10',['enumValueGetter',['../d3/d31/struct_amuse_1_1_core_1_1_type_info.html#abe04a9ea1b2f926e43169fb52395c8b5',1,'Amuse::Core::TypeInfo']]],
-  ['epsilon_11',['EPSILON',['../df/d2e/class_amuse_1_1_core_1_1_math.html#abf403b0deb6b8dd4a5ee841f0d045d54',1,'Amuse::Core::Math']]]
+  ['empty_0',['Empty',['../d3/d41/struct_amuse_1_1_box.html#ad118306ce5213200146e45545996cc7a',1,'Amuse::Box']]],
+  ['enable_1',['enable',['../d2/d66/struct_amuse_1_1_depth_stencil_desc.html#ac842b6c1dcb3b1f11b611620199dc55c',1,'Amuse::DepthStencilDesc']]],
+  ['enablebindless_2',['enableBindless',['../d7/d36/struct_amuse_1_1_r_h_i_config.html#a5168b58aa60c84a6f133936e1166915b',1,'Amuse::RHIConfig']]],
+  ['enabledebuglayer_3',['enableDebugLayer',['../d5/d8c/struct_amuse_1_1_direct_x12_r_h_i_config.html#a601a415f877fb65c30aec2b3be6adaf1',1,'Amuse::DirectX12RHIConfig::enableDebugLayer'],['../d3/d91/struct_amuse_1_1_vulkan_r_h_i_config.html#a601a415f877fb65c30aec2b3be6adaf1',1,'Amuse::VulkanRHIConfig::enableDebugLayer']]],
+  ['enabledirectstorage_4',['enableDirectStorage',['../d5/d8c/struct_amuse_1_1_direct_x12_r_h_i_config.html#ab19424d06981b69915738a2c9ef0b448',1,'Amuse::DirectX12RHIConfig']]],
+  ['enabledirectstoragedebug_5',['enableDirectStorageDebug',['../d5/d8c/struct_amuse_1_1_direct_x12_r_h_i_config.html#aa4cb4635f0e1d515688a55d4ab164246',1,'Amuse::DirectX12RHIConfig']]],
+  ['enablepix_6',['enablePIX',['../d5/d8c/struct_amuse_1_1_direct_x12_r_h_i_config.html#ae25b0b103f9f41bddf679e02ef890714',1,'Amuse::DirectX12RHIConfig']]],
+  ['enableworkstealing_7',['enableWorkStealing',['../d2/dad/struct_amuse_1_1_schedule_executor_config.html#a281703cc2f18c56c915e9f09291fffc0',1,'Amuse::ScheduleExecutorConfig']]],
+  ['entries_8',['entries',['../d7/d5f/struct_amuse_1_1_stack_trace.html#a64e0601cac2b676914b25c4e56f09341',1,'Amuse::StackTrace']]],
+  ['enumelements_9',['enumElements',['../d1/de4/struct_amuse_1_1_type_info.html#ac3e17af45a30ba281ffcf4d608736380',1,'Amuse::TypeInfo']]],
+  ['enumvaluegetter_10',['enumValueGetter',['../d1/de4/struct_amuse_1_1_type_info.html#ab610e9bdcbd2849fd835e74fb1dcc8d6',1,'Amuse::TypeInfo']]],
+  ['epsilon_11',['EPSILON',['../d2/d39/class_amuse_1_1_math.html#af92f8e669b3dda74390bb6371e9dc8a3',1,'Amuse::Math']]]
 ];

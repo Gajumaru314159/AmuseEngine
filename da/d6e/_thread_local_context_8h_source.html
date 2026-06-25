@@ -127,75 +127,76 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('da/d6e/_thread
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;Amuse/Core/Utility/Nonmovable.h&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;Amuse/Core/Thread/Thread.h&gt;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span>Amuse::Core {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span>Amuse {</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="../../da/d56/class_amuse_1_1_core_1_1_thread_local_context.html">   12</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../da/d56/class_amuse_1_1_core_1_1_thread_local_context.html">ThreadLocalContext</a> : <a class="code hl_class" href="../../d6/d34/class_amuse_1_1_core_1_1_nonmovable.html">Nonmovable</a> {</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">public</span>:</div>
-<div class="foldopen" id="foldopen00015" data-start="{" data-end="}">
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../da/d56/class_amuse_1_1_core_1_1_thread_local_context.html#a6e9c9ffa1b5f607d57dddc3dbfcda3c0">   15</a></span>        T&amp; <a class="code hl_function" href="../../da/d56/class_amuse_1_1_core_1_1_thread_local_context.html#a6e9c9ffa1b5f607d57dddc3dbfcda3c0">operator*</a>()</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            <span class="keywordflow">return</span> *<a class="code hl_function" href="../../da/d56/class_amuse_1_1_core_1_1_thread_local_context.html#a87b64bd0ef16d728fcf57b17150ab4f0">operator-&gt;</a>();</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        }</div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../d2/d68/class_amuse_1_1_thread_local_context.html">   13</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d2/d68/class_amuse_1_1_thread_local_context.html">ThreadLocalContext</a> : <a class="code hl_class" href="../../d5/ddc/class_amuse_1_1_nonmovable.html">Nonmovable</a> {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="}">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="../../d2/d68/class_amuse_1_1_thread_local_context.html#a3f534efce0b043d603eb8f5653268e7d">   16</a></span>        <a class="code hl_enumvalue" href="../../d1/da5/group___amuse_input.html#gga7f039edf8ca5f938e3d74c5e6eaf5f51ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>&amp; <a class="code hl_function" href="../../d2/d68/class_amuse_1_1_thread_local_context.html#a3f534efce0b043d603eb8f5653268e7d">operator*</a>()</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            <span class="keywordflow">return</span> *<a class="code hl_function" href="../../d2/d68/class_amuse_1_1_thread_local_context.html#a4442b1b9eab40e7939e1e01cdedcb7ae">operator-&gt;</a>();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        }</div>
 </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span></div>
-<div class="foldopen" id="foldopen00021" data-start="{" data-end="}">
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="../../da/d56/class_amuse_1_1_core_1_1_thread_local_context.html#a87b64bd0ef16d728fcf57b17150ab4f0">   21</a></span>        T* <a class="code hl_function" href="../../da/d56/class_amuse_1_1_core_1_1_thread_local_context.html#a87b64bd0ef16d728fcf57b17150ab4f0">operator-&gt;</a>()</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        {</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            <span class="keyword">thread_local</span> T* pStorage = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            <span class="keywordflow">if</span> (pStorage==<span class="keyword">nullptr</span>)</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            {</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                <a class="code hl_class" href="../../dd/df1/class_amuse_1_1_core_1_1_scope_lock.html">ScopeLock</a> lock(m_lock);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                <span class="keyword">auto</span>&amp; storage = m_storages[<a class="code hl_function" href="../../d4/dc8/class_amuse_1_1_core_1_1_thread.html#a1b5a1c02fe63aee8395792826a41a013">Thread::GetCurrentThreadId</a>()] = std::make_unique&lt;T&gt;();</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                pStorage = storage.get();</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            }</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            <span class="keywordflow">return</span> pStorage;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        }</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../d2/d68/class_amuse_1_1_thread_local_context.html#a4442b1b9eab40e7939e1e01cdedcb7ae">   22</a></span>        <a class="code hl_enumvalue" href="../../d1/da5/group___amuse_input.html#gga7f039edf8ca5f938e3d74c5e6eaf5f51ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>* <a class="code hl_function" href="../../d2/d68/class_amuse_1_1_thread_local_context.html#a4442b1b9eab40e7939e1e01cdedcb7ae">operator-&gt;</a>()</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            <span class="keyword">thread_local</span> <a class="code hl_enumvalue" href="../../d1/da5/group___amuse_input.html#gga7f039edf8ca5f938e3d74c5e6eaf5f51ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>* pStorage = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            <span class="keywordflow">if</span> (pStorage==<span class="keyword">nullptr</span>)</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                <a class="code hl_class" href="../../d2/dea/class_amuse_1_1_scope_lock.html">ScopeLock</a> lock(m_lock);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                <span class="keyword">auto</span>&amp; storage = m_storages[<a class="code hl_function" href="../../d7/d67/class_amuse_1_1_thread.html#a1f84a09690ecb5f0935a8a52fbfe247f">Thread::GetCurrentThreadId</a>()] = std::make_unique&lt;T&gt;();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                pStorage = storage.get();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            }</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <span class="keywordflow">return</span> pStorage;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        }</div>
 </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
-<div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../da/d56/class_amuse_1_1_core_1_1_thread_local_context.html#a2b561f7bb427c8bd7c9486ee196a293c">   36</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../da/d56/class_amuse_1_1_core_1_1_thread_local_context.html#a2b561f7bb427c8bd7c9486ee196a293c">forEach</a>(Func&lt;<span class="keywordtype">void</span>(T&amp;)&gt; visitor)</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <span class="keywordflow">if</span> (!visitor) <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <a class="code hl_class" href="../../dd/df1/class_amuse_1_1_core_1_1_scope_lock.html">ScopeLock</a> lock(m_lock);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; [threadId,storage] : m_storages)</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            {</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                visitor(*storage.get());</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            }</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        }</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span></div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../d2/d68/class_amuse_1_1_thread_local_context.html#a95178525ab3247fb850718a87a94a600">   37</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d68/class_amuse_1_1_thread_local_context.html#a95178525ab3247fb850718a87a94a600">forEach</a>(Func&lt;<span class="keywordtype">void</span>(<a class="code hl_enumvalue" href="../../d1/da5/group___amuse_input.html#gga7f039edf8ca5f938e3d74c5e6eaf5f51ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>&amp;)&gt; visitor)</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <span class="keywordflow">if</span> (!visitor) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <a class="code hl_class" href="../../d2/dea/class_amuse_1_1_scope_lock.html">ScopeLock</a> lock(m_lock);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; [threadId,storage] : m_storages)</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                visitor(*storage.get());</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        }</div>
 </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span></div>
-<div class="foldopen" id="foldopen00047" data-start="{" data-end="}">
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="../../da/d56/class_amuse_1_1_core_1_1_thread_local_context.html#af2b9ce5126e240a55828d294ebabf8b4">   47</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../da/d56/class_amuse_1_1_core_1_1_thread_local_context.html#af2b9ce5126e240a55828d294ebabf8b4">forEach</a>(Func&lt;<span class="keywordtype">void</span>(<span class="keyword">const</span> T&amp;)&gt; visitor)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">        </span>{</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <span class="keywordflow">if</span> (!visitor) <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <a class="code hl_class" href="../../dd/df1/class_amuse_1_1_core_1_1_scope_lock.html">ScopeLock</a> lock(m_lock);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; [threadId,storage] : m_storages)</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            {</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                visitor(*storage.get());</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            }</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span></div>
+<div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="../../d2/d68/class_amuse_1_1_thread_local_context.html#a2f337cbf57b930967838eb1cde16f3e3">   48</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d68/class_amuse_1_1_thread_local_context.html#a2f337cbf57b930967838eb1cde16f3e3">forEach</a>(Func&lt;<span class="keywordtype">void</span>(<span class="keyword">const</span> <a class="code hl_enumvalue" href="../../d1/da5/group___amuse_input.html#gga7f039edf8ca5f938e3d74c5e6eaf5f51ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>&amp;)&gt; visitor)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="keywordflow">if</span> (!visitor) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <a class="code hl_class" href="../../d2/dea/class_amuse_1_1_scope_lock.html">ScopeLock</a> lock(m_lock);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; [threadId,storage] : m_storages)</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                visitor(*storage.get());</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        }</div>
 </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keyword">using </span>ThreadId = u32;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keyword">mutable</span> <a class="code hl_class" href="../../d1/db6/class_amuse_1_1_core_1_1_spin_lock.html">SpinLock</a> m_lock;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        HashMap&lt;ThreadId,UPtr&lt;T&gt;&gt; m_storages;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    };</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keyword">using </span>ThreadId = u32;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keyword">mutable</span> <a class="code hl_class" href="../../d9/d6f/class_amuse_1_1_spin_lock.html">SpinLock</a> m_lock;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        HashMap&lt;ThreadId,UPtr&lt;T&gt;&gt; m_storages;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    };</div>
 </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>}</div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_nonmovable_html"><div class="ttname"><a href="../../d6/d34/class_amuse_1_1_core_1_1_nonmovable.html">Amuse::Core::Nonmovable</a></div><div class="ttdoc">クラスムーブの禁止</div><div class="ttdef"><b>Definition</b> Nonmovable.h:13</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_scope_lock_html"><div class="ttname"><a href="../../dd/df1/class_amuse_1_1_core_1_1_scope_lock.html">Amuse::Core::ScopeLock</a></div><div class="ttdoc">スコープ単位でのロックユーティリティ</div><div class="ttdef"><b>Definition</b> ScopeLock.h:15</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_spin_lock_html"><div class="ttname"><a href="../../d1/db6/class_amuse_1_1_core_1_1_spin_lock.html">Amuse::Core::SpinLock</a></div><div class="ttdoc">スピンロック</div><div class="ttdef"><b>Definition</b> SpinLock.h:18</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_thread_html_a1b5a1c02fe63aee8395792826a41a013"><div class="ttname"><a href="../../d4/dc8/class_amuse_1_1_core_1_1_thread.html#a1b5a1c02fe63aee8395792826a41a013">Amuse::Core::Thread::GetCurrentThreadId</a></div><div class="ttdeci">static u32 GetCurrentThreadId()</div><div class="ttdoc">現在のスレッドIDを取得</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_thread_local_context_html"><div class="ttname"><a href="../../da/d56/class_amuse_1_1_core_1_1_thread_local_context.html">Amuse::Core::ThreadLocalContext</a></div><div class="ttdoc">スレッドごとのコンテキストを表す。</div><div class="ttdef"><b>Definition</b> ThreadLocalContext.h:12</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_thread_local_context_html_a2b561f7bb427c8bd7c9486ee196a293c"><div class="ttname"><a href="../../da/d56/class_amuse_1_1_core_1_1_thread_local_context.html#a2b561f7bb427c8bd7c9486ee196a293c">Amuse::Core::ThreadLocalContext::forEach</a></div><div class="ttdeci">void forEach(Func&lt; void(T &amp;)&gt; visitor)</div><div class="ttdoc">各スレッドに作成済みのコンテキストを走査する。</div><div class="ttdef"><b>Definition</b> ThreadLocalContext.h:36</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_thread_local_context_html_a6e9c9ffa1b5f607d57dddc3dbfcda3c0"><div class="ttname"><a href="../../da/d56/class_amuse_1_1_core_1_1_thread_local_context.html#a6e9c9ffa1b5f607d57dddc3dbfcda3c0">Amuse::Core::ThreadLocalContext::operator*</a></div><div class="ttdeci">T &amp; operator*()</div><div class="ttdoc">参照先または演算結果を取得する。</div><div class="ttdef"><b>Definition</b> ThreadLocalContext.h:15</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_thread_local_context_html_a87b64bd0ef16d728fcf57b17150ab4f0"><div class="ttname"><a href="../../da/d56/class_amuse_1_1_core_1_1_thread_local_context.html#a87b64bd0ef16d728fcf57b17150ab4f0">Amuse::Core::ThreadLocalContext::operator-&gt;</a></div><div class="ttdeci">T * operator-&gt;()</div><div class="ttdoc">参照先メンバーへアクセスする。</div><div class="ttdef"><b>Definition</b> ThreadLocalContext.h:21</div></div>
-<div class="ttc" id="aclass_amuse_1_1_core_1_1_thread_local_context_html_af2b9ce5126e240a55828d294ebabf8b4"><div class="ttname"><a href="../../da/d56/class_amuse_1_1_core_1_1_thread_local_context.html#af2b9ce5126e240a55828d294ebabf8b4">Amuse::Core::ThreadLocalContext::forEach</a></div><div class="ttdeci">void forEach(Func&lt; void(const T &amp;)&gt; visitor) const</div><div class="ttdoc">各スレッドに作成済みのコンテキストを読み取り専用で走査する。</div><div class="ttdef"><b>Definition</b> ThreadLocalContext.h:47</div></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>}</div>
+<div class="ttc" id="aclass_amuse_1_1_nonmovable_html"><div class="ttname"><a href="../../d5/ddc/class_amuse_1_1_nonmovable.html">Amuse::Nonmovable</a></div><div class="ttdoc">クラスムーブの禁止</div><div class="ttdef"><b>Definition</b> Nonmovable.h:14</div></div>
+<div class="ttc" id="aclass_amuse_1_1_scope_lock_html"><div class="ttname"><a href="../../d2/dea/class_amuse_1_1_scope_lock.html">Amuse::ScopeLock</a></div><div class="ttdoc">スコープ単位でのロックユーティリティ</div><div class="ttdef"><b>Definition</b> ScopeLock.h:16</div></div>
+<div class="ttc" id="aclass_amuse_1_1_spin_lock_html"><div class="ttname"><a href="../../d9/d6f/class_amuse_1_1_spin_lock.html">Amuse::SpinLock</a></div><div class="ttdoc">スピンロック</div><div class="ttdef"><b>Definition</b> SpinLock.h:19</div></div>
+<div class="ttc" id="aclass_amuse_1_1_thread_html_a1f84a09690ecb5f0935a8a52fbfe247f"><div class="ttname"><a href="../../d7/d67/class_amuse_1_1_thread.html#a1f84a09690ecb5f0935a8a52fbfe247f">Amuse::Thread::GetCurrentThreadId</a></div><div class="ttdeci">static u32 GetCurrentThreadId()</div><div class="ttdoc">現在のスレッドIDを取得</div></div>
+<div class="ttc" id="aclass_amuse_1_1_thread_local_context_html"><div class="ttname"><a href="../../d2/d68/class_amuse_1_1_thread_local_context.html">Amuse::ThreadLocalContext</a></div><div class="ttdoc">スレッドごとのコンテキストを表す。</div><div class="ttdef"><b>Definition</b> ThreadLocalContext.h:13</div></div>
+<div class="ttc" id="aclass_amuse_1_1_thread_local_context_html_a2f337cbf57b930967838eb1cde16f3e3"><div class="ttname"><a href="../../d2/d68/class_amuse_1_1_thread_local_context.html#a2f337cbf57b930967838eb1cde16f3e3">Amuse::ThreadLocalContext::forEach</a></div><div class="ttdeci">void forEach(Func&lt; void(const T &amp;)&gt; visitor) const</div><div class="ttdoc">各スレッドに作成済みのコンテキストを読み取り専用で走査する。</div><div class="ttdef"><b>Definition</b> ThreadLocalContext.h:48</div></div>
+<div class="ttc" id="aclass_amuse_1_1_thread_local_context_html_a3f534efce0b043d603eb8f5653268e7d"><div class="ttname"><a href="../../d2/d68/class_amuse_1_1_thread_local_context.html#a3f534efce0b043d603eb8f5653268e7d">Amuse::ThreadLocalContext::operator*</a></div><div class="ttdeci">T &amp; operator*()</div><div class="ttdoc">参照先または演算結果を取得する。</div><div class="ttdef"><b>Definition</b> ThreadLocalContext.h:16</div></div>
+<div class="ttc" id="aclass_amuse_1_1_thread_local_context_html_a4442b1b9eab40e7939e1e01cdedcb7ae"><div class="ttname"><a href="../../d2/d68/class_amuse_1_1_thread_local_context.html#a4442b1b9eab40e7939e1e01cdedcb7ae">Amuse::ThreadLocalContext::operator-&gt;</a></div><div class="ttdeci">T * operator-&gt;()</div><div class="ttdoc">参照先メンバーへアクセスする。</div><div class="ttdef"><b>Definition</b> ThreadLocalContext.h:22</div></div>
+<div class="ttc" id="aclass_amuse_1_1_thread_local_context_html_a95178525ab3247fb850718a87a94a600"><div class="ttname"><a href="../../d2/d68/class_amuse_1_1_thread_local_context.html#a95178525ab3247fb850718a87a94a600">Amuse::ThreadLocalContext::forEach</a></div><div class="ttdeci">void forEach(Func&lt; void(T &amp;)&gt; visitor)</div><div class="ttdoc">各スレッドに作成済みのコンテキストを走査する。</div><div class="ttdef"><b>Definition</b> ThreadLocalContext.h:37</div></div>
+<div class="ttc" id="agroup___amuse_input_html_gga7f039edf8ca5f938e3d74c5e6eaf5f51ab9ece18c950afbfa6b0fdbfa4ff731d3"><div class="ttname"><a href="../../d1/da5/group___amuse_input.html#gga7f039edf8ca5f938e3d74c5e6eaf5f51ab9ece18c950afbfa6b0fdbfa4ff731d3">Amuse::Key::T</a></div><div class="ttdeci">@ T</div><div class="ttdoc">T</div><div class="ttdef"><b>Definition</b> InputType.h:84</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

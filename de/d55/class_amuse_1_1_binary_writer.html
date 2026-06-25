@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: BinaryWriter クラス</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('de/d55/class_amuse_1_1_binary_writer.html','../../','de/d07/class_amuse_1_1_binary_writer-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">メソッド</a> &#124;
+<a href="../../de/d07/class_amuse_1_1_binary_writer-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">BinaryWriter クラス<div class="ingroups"><a class="el" href="../../da/d78/group___amuse_core.html">Core</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">説明</h2>
+<div class="textblock"><p>指定したバイトオーダーでストリームへバイナリ値を書き込む。 </p>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+メソッド</h2></td></tr>
+<tr class="memitem:aac8be9b75dc76bb71f79009776a64084" id="r_aac8be9b75dc76bb71f79009776a64084"><td class="memItemLeft"><a id="aac8be9b75dc76bb71f79009776a64084" name="aac8be9b75dc76bb71f79009776a64084"></a>
+&#160;</td><td class="memItemRight"><b>BinaryWriter</b> (<a class="el" href="../../d8/df8/class_amuse_1_1_stream.html">Stream</a> &amp;stream, <a class="el" href="../../da/d78/group___amuse_core.html#ga1f5c9152b70695936fa5c2a1fc1b470f">ByteOrder</a> byteOrder=<a class="el" href="../../da/d78/group___amuse_core.html#gga1f5c9152b70695936fa5c2a1fc1b470fa06b9281e396db002010bde1de57262eb">ByteOrder::Auto</a>)</td></tr>
+<tr class="memdesc:aac8be9b75dc76bb71f79009776a64084"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../de/d55/class_amuse_1_1_binary_writer.html" title="指定したバイトオーダーでストリームへバイナリ値を書き込む。">BinaryWriter</a> を初期化する。 <br /></td></tr>
+<tr class="memitem:a54c425ff806777414ea92c2d11da154c" id="r_a54c425ff806777414ea92c2d11da154c"><td class="memItemLeft"><a id="a54c425ff806777414ea92c2d11da154c" name="a54c425ff806777414ea92c2d11da154c"></a>
+void&#160;</td><td class="memItemRight"><b>writeInt8</b> (s8 value)</td></tr>
+<tr class="memdesc:a54c425ff806777414ea92c2d11da154c"><td class="mdescLeft">&#160;</td><td class="mdescRight">8bit 符号付き整数を書き込む。 <br /></td></tr>
+<tr class="memitem:aca74a3964e1453f8288c1e3f637a38e2" id="r_aca74a3964e1453f8288c1e3f637a38e2"><td class="memItemLeft"><a id="aca74a3964e1453f8288c1e3f637a38e2" name="aca74a3964e1453f8288c1e3f637a38e2"></a>
+void&#160;</td><td class="memItemRight"><b>writeInt16</b> (s16 value)</td></tr>
+<tr class="memdesc:aca74a3964e1453f8288c1e3f637a38e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">16bit 符号付き整数を書き込む。 <br /></td></tr>
+<tr class="memitem:aeb2b77a1d66248f2125b1cdec008ec05" id="r_aeb2b77a1d66248f2125b1cdec008ec05"><td class="memItemLeft"><a id="aeb2b77a1d66248f2125b1cdec008ec05" name="aeb2b77a1d66248f2125b1cdec008ec05"></a>
+void&#160;</td><td class="memItemRight"><b>writeInt32</b> (s32 value)</td></tr>
+<tr class="memdesc:aeb2b77a1d66248f2125b1cdec008ec05"><td class="mdescLeft">&#160;</td><td class="mdescRight">32bit 符号付き整数を書き込む。 <br /></td></tr>
+<tr class="memitem:a76f41d9acfdf0f2fb811bf0bf2b57323" id="r_a76f41d9acfdf0f2fb811bf0bf2b57323"><td class="memItemLeft"><a id="a76f41d9acfdf0f2fb811bf0bf2b57323" name="a76f41d9acfdf0f2fb811bf0bf2b57323"></a>
+void&#160;</td><td class="memItemRight"><b>writeInt64</b> (s64 value)</td></tr>
+<tr class="memdesc:a76f41d9acfdf0f2fb811bf0bf2b57323"><td class="mdescLeft">&#160;</td><td class="mdescRight">64bit 符号付き整数を書き込む。 <br /></td></tr>
+<tr class="memitem:a4de714e94ce92f00d6060345d9ad96bc" id="r_a4de714e94ce92f00d6060345d9ad96bc"><td class="memItemLeft"><a id="a4de714e94ce92f00d6060345d9ad96bc" name="a4de714e94ce92f00d6060345d9ad96bc"></a>
+void&#160;</td><td class="memItemRight"><b>writeUInt8</b> (u8 value)</td></tr>
+<tr class="memdesc:a4de714e94ce92f00d6060345d9ad96bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">8bit 符号なし整数を書き込む。 <br /></td></tr>
+<tr class="memitem:a4a6847baf34ff80ed82d316b824f5f79" id="r_a4a6847baf34ff80ed82d316b824f5f79"><td class="memItemLeft"><a id="a4a6847baf34ff80ed82d316b824f5f79" name="a4a6847baf34ff80ed82d316b824f5f79"></a>
+void&#160;</td><td class="memItemRight"><b>writeUInt16</b> (u16 value)</td></tr>
+<tr class="memdesc:a4a6847baf34ff80ed82d316b824f5f79"><td class="mdescLeft">&#160;</td><td class="mdescRight">16bit 符号なし整数を書き込む。 <br /></td></tr>
+<tr class="memitem:aa68c9d154969eeadb63ccc26af1645d8" id="r_aa68c9d154969eeadb63ccc26af1645d8"><td class="memItemLeft"><a id="aa68c9d154969eeadb63ccc26af1645d8" name="aa68c9d154969eeadb63ccc26af1645d8"></a>
+void&#160;</td><td class="memItemRight"><b>writeUInt32</b> (u32 value)</td></tr>
+<tr class="memdesc:aa68c9d154969eeadb63ccc26af1645d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">32bit 符号なし整数を書き込む。 <br /></td></tr>
+<tr class="memitem:a04e839ed927b4d9bac77dd2e831e7b01" id="r_a04e839ed927b4d9bac77dd2e831e7b01"><td class="memItemLeft"><a id="a04e839ed927b4d9bac77dd2e831e7b01" name="a04e839ed927b4d9bac77dd2e831e7b01"></a>
+void&#160;</td><td class="memItemRight"><b>writeUInt64</b> (u64 value)</td></tr>
+<tr class="memdesc:a04e839ed927b4d9bac77dd2e831e7b01"><td class="mdescLeft">&#160;</td><td class="mdescRight">64bit 符号なし整数を書き込む。 <br /></td></tr>
+<tr class="memitem:aeda98a98b6b8626d871e90d0f2fb4fbb" id="r_aeda98a98b6b8626d871e90d0f2fb4fbb"><td class="memItemLeft"><a id="aeda98a98b6b8626d871e90d0f2fb4fbb" name="aeda98a98b6b8626d871e90d0f2fb4fbb"></a>
+void&#160;</td><td class="memItemRight"><b>writeFloat</b> (f32 value)</td></tr>
+<tr class="memdesc:aeda98a98b6b8626d871e90d0f2fb4fbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">32bit 浮動小数点数を書き込む。 <br /></td></tr>
+<tr class="memitem:ae9ff6afd7e8698d59ee118677c1d93b3" id="r_ae9ff6afd7e8698d59ee118677c1d93b3"><td class="memItemLeft"><a id="ae9ff6afd7e8698d59ee118677c1d93b3" name="ae9ff6afd7e8698d59ee118677c1d93b3"></a>
+void&#160;</td><td class="memItemRight"><b>writeDouble</b> (f64 value)</td></tr>
+<tr class="memdesc:ae9ff6afd7e8698d59ee118677c1d93b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">64bit 浮動小数点数を書き込む。 <br /></td></tr>
+<tr class="memitem:a1878c09085f822ec4606487856ab9ed8" id="r_a1878c09085f822ec4606487856ab9ed8"><td class="memItemLeft"><a id="a1878c09085f822ec4606487856ab9ed8" name="a1878c09085f822ec4606487856ab9ed8"></a>
+void&#160;</td><td class="memItemRight"><b>writeString</b> (StringView value)</td></tr>
+<tr class="memdesc:a1878c09085f822ec4606487856ab9ed8"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列を書き込む。 <br /></td></tr>
+<tr class="memitem:afd03970d656d9ec49d3b255070f8cf2f" id="r_afd03970d656d9ec49d3b255070f8cf2f"><td class="memItemLeft"><a id="afd03970d656d9ec49d3b255070f8cf2f" name="afd03970d656d9ec49d3b255070f8cf2f"></a>
+void&#160;</td><td class="memItemRight"><b>write</b> (const void *buffer, size_t count)</td></tr>
+<tr class="memdesc:afd03970d656d9ec49d3b255070f8cf2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定バイト数の生データを書き込む。 <br /></td></tr>
+<tr class="memitem:aa7304e60031df837a0735c7a46697762" id="r_aa7304e60031df837a0735c7a46697762"><td class="memItemLeft"><a id="aa7304e60031df837a0735c7a46697762" name="aa7304e60031df837a0735c7a46697762"></a>
+void&#160;</td><td class="memItemRight"><b>seek</b> (offset_t offset)</td></tr>
+<tr class="memdesc:aa7304e60031df837a0735c7a46697762"><td class="mdescLeft">&#160;</td><td class="mdescRight">書き込み位置を指定オフセットへ移動する。 <br /></td></tr>
+<tr class="memitem:adac116554b543b7c4228c018a85882f5" id="r_adac116554b543b7c4228c018a85882f5"><td class="memItemLeft"><a id="adac116554b543b7c4228c018a85882f5" name="adac116554b543b7c4228c018a85882f5"></a>
+void&#160;</td><td class="memItemRight"><b>flush</b> ()</td></tr>
+<tr class="memdesc:adac116554b543b7c4228c018a85882f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">バッファリングされた書き込み内容をストリームへ反映する。 <br /></td></tr>
+<tr class="memitem:a32efbfa782e056ca1bd68c64648ad917" id="r_a32efbfa782e056ca1bd68c64648ad917"><td class="memTemplParams" colspan="2"><a id="a32efbfa782e056ca1bd68c64648ad917" name="a32efbfa782e056ca1bd68c64648ad917"></a>
+template&lt;class T&gt; </td></tr>
+<tr class="memitem:a32efbfa782e056ca1bd68c64648ad917 template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><b>write</b> (const T &amp;value)</td></tr>
+<tr class="memdesc:a32efbfa782e056ca1bd68c64648ad917"><td class="mdescLeft">&#160;</td><td class="mdescRight">対応する算術型の値をバイナリ形式で書き込む。 <br /></td></tr>
+</table>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>Runtime/Core/Public/Amuse/Core/File/<a class="el" href="../../d1/d80/_binary_writer_8h_source.html">BinaryWriter.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><a href="../../de/d55/class_amuse_1_1_binary_writer.html">BinaryWriter</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

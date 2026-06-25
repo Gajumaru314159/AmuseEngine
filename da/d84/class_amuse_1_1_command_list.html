@@ -1,0 +1,300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: CommandList クラス</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('da/d84/class_amuse_1_1_command_list.html','../../','df/de6/class_amuse_1_1_command_list-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">メソッド</a> &#124;
+<a href="#pub-static-methods">静的関数</a> &#124;
+<a href="../../df/de6/class_amuse_1_1_command_list-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">CommandList クラス<span class="mlabels"><span class="mlabel abstract">abstract</span></span><div class="ingroups"><a class="el" href="../../d9/de0/group___amuse_r_h_i.html">RHI</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">説明</h2>
+<div class="textblock"><p>コマンドリスト </p>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+メソッド</h2></td></tr>
+<tr class="memitem:aaf893c33f3c041e289a12c153dcc9789" id="r_aaf893c33f3c041e289a12c153dcc9789"><td class="memItemLeft"><a id="aaf893c33f3c041e289a12c153dcc9789" name="aaf893c33f3c041e289a12c153dcc9789"></a>
+virtual void&#160;</td><td class="memItemRight"><b>begin</b> ()=0</td></tr>
+<tr class="memdesc:aaf893c33f3c041e289a12c153dcc9789"><td class="mdescLeft">&#160;</td><td class="mdescRight">コマンド記録を開始する <br /></td></tr>
+<tr class="memitem:aa540e86022c1f72380d1014d98f38f43" id="r_aa540e86022c1f72380d1014d98f38f43"><td class="memItemLeft"><a id="aa540e86022c1f72380d1014d98f38f43" name="aa540e86022c1f72380d1014d98f38f43"></a>
+virtual void&#160;</td><td class="memItemRight"><b>end</b> ()=0</td></tr>
+<tr class="memdesc:aa540e86022c1f72380d1014d98f38f43"><td class="mdescLeft">&#160;</td><td class="mdescRight">コマンド記録を終了する <br /></td></tr>
+<tr class="memitem:a03eb54366275bf679a4899da7909cbe9" id="r_a03eb54366275bf679a4899da7909cbe9"><td class="memItemLeft"><a id="a03eb54366275bf679a4899da7909cbe9" name="a03eb54366275bf679a4899da7909cbe9"></a>
+virtual void&#160;</td><td class="memItemRight"><b>setEnableAutomaticBarriers</b> (bool enable)=0</td></tr>
+<tr class="memdesc:a03eb54366275bf679a4899da7909cbe9"><td class="mdescLeft">&#160;</td><td class="mdescRight">自動バリアの有効状態を設定する <br /></td></tr>
+<tr class="memitem:a9b599f8dade039d355bddbce6115ac4c" id="r_a9b599f8dade039d355bddbce6115ac4c"><td class="memItemLeft"><a id="a9b599f8dade039d355bddbce6115ac4c" name="a9b599f8dade039d355bddbce6115ac4c"></a>
+virtual void&#160;</td><td class="memItemRight"><b>addTextureBarrier</b> (const <a class="el" href="../../d7/df6/struct_amuse_1_1_texture_barrier.html">TextureBarrier</a> &amp;barrier)=0</td></tr>
+<tr class="memdesc:a9b599f8dade039d355bddbce6115ac4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャバリアを追加する <br /></td></tr>
+<tr class="memitem:a3b60bed1cb0012fe0c0e5d64a9265bd6" id="r_a3b60bed1cb0012fe0c0e5d64a9265bd6"><td class="memItemLeft"><a id="a3b60bed1cb0012fe0c0e5d64a9265bd6" name="a3b60bed1cb0012fe0c0e5d64a9265bd6"></a>
+virtual void&#160;</td><td class="memItemRight"><b>addBufferBarrier</b> (const <a class="el" href="../../d5/d4c/struct_amuse_1_1_buffer_barrier.html">BufferBarrier</a> &amp;barrier)=0</td></tr>
+<tr class="memdesc:a3b60bed1cb0012fe0c0e5d64a9265bd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">バッファバリアを追加する <br /></td></tr>
+<tr class="memitem:a8c06eb60a374098aca0c7a8e1f14ff44" id="r_a8c06eb60a374098aca0c7a8e1f14ff44"><td class="memItemLeft"><a id="a8c06eb60a374098aca0c7a8e1f14ff44" name="a8c06eb60a374098aca0c7a8e1f14ff44"></a>
+virtual void&#160;</td><td class="memItemRight"><b>addUAVBarrier</b> (const <a class="el" href="../../de/d8b/class_amuse_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d2/dcd/class_amuse_1_1_texture.html">Texture</a> &gt; &amp;texture)=0</td></tr>
+<tr class="memdesc:a8c06eb60a374098aca0c7a8e1f14ff44"><td class="mdescLeft">&#160;</td><td class="mdescRight">UAV バリアを追加する <br /></td></tr>
+<tr class="memitem:a704e520f7ed3b134d8460c3c83ad5900" id="r_a704e520f7ed3b134d8460c3c83ad5900"><td class="memItemLeft"><a id="a704e520f7ed3b134d8460c3c83ad5900" name="a704e520f7ed3b134d8460c3c83ad5900"></a>
+virtual void&#160;</td><td class="memItemRight"><b>addUAVBarrier</b> (const <a class="el" href="../../de/d8b/class_amuse_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d9/dd4/class_amuse_1_1_buffer.html">Buffer</a> &gt; &amp;buffer)=0</td></tr>
+<tr class="memdesc:a704e520f7ed3b134d8460c3c83ad5900"><td class="mdescLeft">&#160;</td><td class="mdescRight">UAV バリアを追加する <br /></td></tr>
+<tr class="memitem:a1df659509dca8235bd3ece4662c10f55" id="r_a1df659509dca8235bd3ece4662c10f55"><td class="memItemLeft"><a id="a1df659509dca8235bd3ece4662c10f55" name="a1df659509dca8235bd3ece4662c10f55"></a>
+virtual void&#160;</td><td class="memItemRight"><b>commitBarriers</b> ()=0</td></tr>
+<tr class="memdesc:a1df659509dca8235bd3ece4662c10f55"><td class="mdescLeft">&#160;</td><td class="mdescRight">登録済みバリアを反映する <br /></td></tr>
+<tr class="memitem:afb7a5c5868c61ccae5622e3a86915530" id="r_afb7a5c5868c61ccae5622e3a86915530"><td class="memItemLeft"><a id="afb7a5c5868c61ccae5622e3a86915530" name="afb7a5c5868c61ccae5622e3a86915530"></a>
+virtual void&#160;</td><td class="memItemRight"><b>copyBuffer</b> (const <a class="el" href="../../de/dd2/struct_amuse_1_1_buffer_copy_region.html">BufferCopyRegion</a> &amp;region)=0</td></tr>
+<tr class="memdesc:afb7a5c5868c61ccae5622e3a86915530"><td class="mdescLeft">&#160;</td><td class="mdescRight">バッファをコピー <br /></td></tr>
+<tr class="memitem:aa7234aba581ef9fe39edf793a90a3371" id="r_aa7234aba581ef9fe39edf793a90a3371"><td class="memItemLeft"><a id="aa7234aba581ef9fe39edf793a90a3371" name="aa7234aba581ef9fe39edf793a90a3371"></a>
+virtual void&#160;</td><td class="memItemRight"><b>copyTexture</b> (const <a class="el" href="../../d8/dfc/struct_amuse_1_1_texture_copy_region.html">TextureCopyRegion</a> &amp;region)=0</td></tr>
+<tr class="memdesc:aa7234aba581ef9fe39edf793a90a3371"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャをコピー <br /></td></tr>
+<tr class="memitem:a72d74ac86b8bb9d474d36d95a6254145" id="r_a72d74ac86b8bb9d474d36d95a6254145"><td class="memItemLeft"><a id="a72d74ac86b8bb9d474d36d95a6254145" name="a72d74ac86b8bb9d474d36d95a6254145"></a>
+virtual void&#160;</td><td class="memItemRight"><b>copyBufferToTexture</b> (const <a class="el" href="../../de/d51/struct_amuse_1_1_buffer_texture_copy_region.html">BufferTextureCopyRegion</a> &amp;region)=0</td></tr>
+<tr class="memdesc:a72d74ac86b8bb9d474d36d95a6254145"><td class="mdescLeft">&#160;</td><td class="mdescRight">バッファからテクスチャへコピー <br /></td></tr>
+<tr class="memitem:acaae0c1fb2362b4897bd22457ae3e9c6" id="r_acaae0c1fb2362b4897bd22457ae3e9c6"><td class="memItemLeft"><a id="acaae0c1fb2362b4897bd22457ae3e9c6" name="acaae0c1fb2362b4897bd22457ae3e9c6"></a>
+virtual void&#160;</td><td class="memItemRight"><b>copyTextureToBuffer</b> (const <a class="el" href="../../de/d51/struct_amuse_1_1_buffer_texture_copy_region.html">BufferTextureCopyRegion</a> &amp;region)=0</td></tr>
+<tr class="memdesc:acaae0c1fb2362b4897bd22457ae3e9c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャからバッファへコピー <br /></td></tr>
+<tr class="memitem:a47584d327d87910236fbb7abb3d29194" id="r_a47584d327d87910236fbb7abb3d29194"><td class="memItemLeft"><a id="a47584d327d87910236fbb7abb3d29194" name="a47584d327d87910236fbb7abb3d29194"></a>
+virtual void&#160;</td><td class="memItemRight"><b>writeTexture</b> (const <a class="el" href="../../de/d8b/class_amuse_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d2/dcd/class_amuse_1_1_texture.html">Texture</a> &gt; &amp;texture, const <a class="el" href="../../df/d95/struct_amuse_1_1_texture_subresource.html">TextureSubresource</a> &amp;subresource, <a class="el" href="../../da/d45/class_amuse_1_1_blob_view.html">BlobView</a> data, u32 rowPitch, u32 depthPitch=0)=0</td></tr>
+<tr class="memdesc:a47584d327d87910236fbb7abb3d29194"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャへデータを書き込む <br /></td></tr>
+<tr class="memitem:a245e537cb830a416ce07babd6433e679" id="r_a245e537cb830a416ce07babd6433e679"><td class="memItemLeft"><a id="a245e537cb830a416ce07babd6433e679" name="a245e537cb830a416ce07babd6433e679"></a>
+virtual void&#160;</td><td class="memItemRight"><b>clearColorTexture</b> (const <a class="el" href="../../de/d8b/class_amuse_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d2/dcd/class_amuse_1_1_texture.html">Texture</a> &gt; &amp;texture, const <a class="el" href="../../d0/dde/struct_amuse_1_1_texture_subresource_range.html">TextureSubresourceRange</a> &amp;range, const <a class="el" href="../../da/d55/struct_amuse_1_1_color.html">Color</a> &amp;color)=0</td></tr>
+<tr class="memdesc:a245e537cb830a416ce07babd6433e679"><td class="mdescLeft">&#160;</td><td class="mdescRight">カラーテクスチャをクリア <br /></td></tr>
+<tr class="memitem:a989d69579f766a1bc4ca26da28b84216" id="r_a989d69579f766a1bc4ca26da28b84216"><td class="memItemLeft"><a id="a989d69579f766a1bc4ca26da28b84216" name="a989d69579f766a1bc4ca26da28b84216"></a>
+virtual void&#160;</td><td class="memItemRight"><b>clearDepthStencilTexture</b> (const <a class="el" href="../../de/d8b/class_amuse_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d2/dcd/class_amuse_1_1_texture.html">Texture</a> &gt; &amp;texture, const <a class="el" href="../../d0/dde/struct_amuse_1_1_texture_subresource_range.html">TextureSubresourceRange</a> &amp;range, bool clearDepth, f32 depth, bool clearStencil, u8 stencil)=0</td></tr>
+<tr class="memdesc:a989d69579f766a1bc4ca26da28b84216"><td class="mdescLeft">&#160;</td><td class="mdescRight">深度ステンシルテクスチャをクリア <br /></td></tr>
+<tr class="memitem:a0fc165580b55fa373246af7a28f1486d" id="r_a0fc165580b55fa373246af7a28f1486d"><td class="memItemLeft"><a id="a0fc165580b55fa373246af7a28f1486d" name="a0fc165580b55fa373246af7a28f1486d"></a>
+virtual void&#160;</td><td class="memItemRight"><b>clearBufferUInt</b> (const <a class="el" href="../../de/d8b/class_amuse_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d9/dd4/class_amuse_1_1_buffer.html">Buffer</a> &gt; &amp;buffer, u32 value)=0</td></tr>
+<tr class="memdesc:a0fc165580b55fa373246af7a28f1486d"><td class="mdescLeft">&#160;</td><td class="mdescRight">バッファを32bit整数値でクリア <br /></td></tr>
+<tr class="memitem:a88919239ef4b08126a940d1dc883ee96" id="r_a88919239ef4b08126a940d1dc883ee96"><td class="memItemLeft"><a id="a88919239ef4b08126a940d1dc883ee96" name="a88919239ef4b08126a940d1dc883ee96"></a>
+virtual void&#160;</td><td class="memItemRight"><b>resolveTexture</b> (const <a class="el" href="../../de/d8b/class_amuse_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d2/dcd/class_amuse_1_1_texture.html">Texture</a> &gt; &amp;source, const <a class="el" href="../../de/d8b/class_amuse_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d2/dcd/class_amuse_1_1_texture.html">Texture</a> &gt; &amp;target, const <a class="el" href="../../d0/dde/struct_amuse_1_1_texture_subresource_range.html">TextureSubresourceRange</a> &amp;sourceRange, const <a class="el" href="../../d0/dde/struct_amuse_1_1_texture_subresource_range.html">TextureSubresourceRange</a> &amp;targetRange)=0</td></tr>
+<tr class="memdesc:a88919239ef4b08126a940d1dc883ee96"><td class="mdescLeft">&#160;</td><td class="mdescRight">MSAAテクスチャをResolve <br /></td></tr>
+<tr class="memitem:a9178a27d59ce151e3cc5b36dbc1b68f0" id="r_a9178a27d59ce151e3cc5b36dbc1b68f0"><td class="memItemLeft"><a id="a9178a27d59ce151e3cc5b36dbc1b68f0" name="a9178a27d59ce151e3cc5b36dbc1b68f0"></a>
+virtual void&#160;</td><td class="memItemRight"><b>beginRenderPass</b> (const <a class="el" href="../../da/d5b/struct_amuse_1_1_begin_pass_param.html">BeginPassParam</a> &amp;param)=0</td></tr>
+<tr class="memdesc:a9178a27d59ce151e3cc5b36dbc1b68f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">レンダーパスを開始する <br /></td></tr>
+<tr class="memitem:a8836d5a731f57aa12af3c6d41e253a91" id="r_a8836d5a731f57aa12af3c6d41e253a91"><td class="memItemLeft"><a id="a8836d5a731f57aa12af3c6d41e253a91" name="a8836d5a731f57aa12af3c6d41e253a91"></a>
+virtual void&#160;</td><td class="memItemRight"><b>endRenderPass</b> ()=0</td></tr>
+<tr class="memdesc:a8836d5a731f57aa12af3c6d41e253a91"><td class="mdescLeft">&#160;</td><td class="mdescRight">レンダーパスを終了する <br /></td></tr>
+<tr class="memitem:aa0b6f0a81c120e5a225c209cbee9f05d" id="r_aa0b6f0a81c120e5a225c209cbee9f05d"><td class="memItemLeft"><a id="aa0b6f0a81c120e5a225c209cbee9f05d" name="aa0b6f0a81c120e5a225c209cbee9f05d"></a>
+virtual void&#160;</td><td class="memItemRight"><b>applySwapChain</b> (const <a class="el" href="../../de/d8b/class_amuse_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../db/de4/class_amuse_1_1_swap_chain.html">SwapChain</a> &gt; &amp;swapChain, const <a class="el" href="../../de/d8b/class_amuse_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../db/ded/class_amuse_1_1_render_texture.html">RenderTexture</a> &gt; &amp;texture)=0</td></tr>
+<tr class="memdesc:aa0b6f0a81c120e5a225c209cbee9f05d"><td class="mdescLeft">&#160;</td><td class="mdescRight">スワップチェーンの表示先を適用する <br /></td></tr>
+<tr class="memitem:a23ff55d72a4dc26090d96df6c75f9d62" id="r_a23ff55d72a4dc26090d96df6c75f9d62"><td class="memItemLeft"><a id="a23ff55d72a4dc26090d96df6c75f9d62" name="a23ff55d72a4dc26090d96df6c75f9d62"></a>
+virtual void&#160;</td><td class="memItemRight"><b>setViewport</b> (const <a class="el" href="../../d0/d44/struct_amuse_1_1_viewport.html">Viewport</a> *pViewport, s32 num)=0</td></tr>
+<tr class="memdesc:a23ff55d72a4dc26090d96df6c75f9d62"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビューポートを設定 <br /></td></tr>
+<tr class="memitem:a3123656ea78bca7fcfd979357108fa4c" id="r_a3123656ea78bca7fcfd979357108fa4c"><td class="memItemLeft"><a id="a3123656ea78bca7fcfd979357108fa4c" name="a3123656ea78bca7fcfd979357108fa4c"></a>
+virtual void&#160;</td><td class="memItemRight"><b>setScissorRect</b> (const <a class="el" href="../../da/d1a/struct_amuse_1_1_int_rect.html">IntRect</a> *pRect, s32 num)=0</td></tr>
+<tr class="memdesc:a3123656ea78bca7fcfd979357108fa4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">シザー矩形を設定 <br /></td></tr>
+<tr class="memitem:acc27d3113228ec6f78c9fa3fe5040a7d" id="r_acc27d3113228ec6f78c9fa3fe5040a7d"><td class="memItemLeft"><a id="acc27d3113228ec6f78c9fa3fe5040a7d" name="acc27d3113228ec6f78c9fa3fe5040a7d"></a>
+void&#160;</td><td class="memItemRight"><b>setVertexBuffer</b> (const <a class="el" href="../../de/d8b/class_amuse_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d9/dd4/class_amuse_1_1_buffer.html">Buffer</a> &gt; &amp;buffer)</td></tr>
+<tr class="memdesc:acc27d3113228ec6f78c9fa3fe5040a7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点バッファ設定 <br /></td></tr>
+<tr class="memitem:ade1bdadff4037c2ba6930cc17d67d011" id="r_ade1bdadff4037c2ba6930cc17d67d011"><td class="memItemLeft"><a id="ade1bdadff4037c2ba6930cc17d67d011" name="ade1bdadff4037c2ba6930cc17d67d011"></a>
+virtual void&#160;</td><td class="memItemRight"><b>setVertexBuffers</b> (Span&lt; <a class="el" href="../../de/d8b/class_amuse_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d9/dd4/class_amuse_1_1_buffer.html">Buffer</a> &gt; &gt; buffers, s32 first=0)=0</td></tr>
+<tr class="memdesc:ade1bdadff4037c2ba6930cc17d67d011"><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点バッファ設定 <br /></td></tr>
+<tr class="memitem:a2b6dd20d714a0c032ec4c4ab3d11d833" id="r_a2b6dd20d714a0c032ec4c4ab3d11d833"><td class="memItemLeft"><a id="a2b6dd20d714a0c032ec4c4ab3d11d833" name="a2b6dd20d714a0c032ec4c4ab3d11d833"></a>
+virtual void&#160;</td><td class="memItemRight"><b>setIndexBuffer</b> (const <a class="el" href="../../de/d8b/class_amuse_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d9/dd4/class_amuse_1_1_buffer.html">Buffer</a> &gt; &amp;buffer)=0</td></tr>
+<tr class="memdesc:a2b6dd20d714a0c032ec4c4ab3d11d833"><td class="mdescLeft">&#160;</td><td class="mdescRight">インデックスバッファ設定 <br /></td></tr>
+<tr class="memitem:a36ecc239535bf3b1abac42a89ef64b10" id="r_a36ecc239535bf3b1abac42a89ef64b10"><td class="memItemLeft"><a id="a36ecc239535bf3b1abac42a89ef64b10" name="a36ecc239535bf3b1abac42a89ef64b10"></a>
+virtual void&#160;</td><td class="memItemRight"><b>setPipelineState</b> (const <a class="el" href="../../de/d8b/class_amuse_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../da/d67/class_amuse_1_1_pipeline_state.html">PipelineState</a> &gt; &amp;)=0</td></tr>
+<tr class="memdesc:a36ecc239535bf3b1abac42a89ef64b10"><td class="mdescLeft">&#160;</td><td class="mdescRight">パイプライン設定 <br /></td></tr>
+<tr class="memitem:ae4f32f4d7765f030f454fee93860a5f3" id="r_ae4f32f4d7765f030f454fee93860a5f3"><td class="memItemLeft"><a id="ae4f32f4d7765f030f454fee93860a5f3" name="ae4f32f4d7765f030f454fee93860a5f3"></a>
+virtual void&#160;</td><td class="memItemRight"><b>setComputePipelineState</b> (const <a class="el" href="../../de/d8b/class_amuse_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d0/d63/class_amuse_1_1_compute_pipeline_state.html">ComputePipelineState</a> &gt; &amp;)=0</td></tr>
+<tr class="memdesc:ae4f32f4d7765f030f454fee93860a5f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンピュートパイプライン設定 <br /></td></tr>
+<tr class="memitem:aa414d2e8585bf8836f75e6299ab13940" id="r_aa414d2e8585bf8836f75e6299ab13940"><td class="memItemLeft"><a id="aa414d2e8585bf8836f75e6299ab13940" name="aa414d2e8585bf8836f75e6299ab13940"></a>
+virtual void&#160;</td><td class="memItemRight"><b>setDescriptorTables</b> (const <a class="el" href="../../df/d16/struct_amuse_1_1_set_descriptor_table_param.html">SetDescriptorTableParam</a> *, s32 num)=0</td></tr>
+<tr class="memdesc:aa414d2e8585bf8836f75e6299ab13940"><td class="mdescLeft">&#160;</td><td class="mdescRight">setDescriptorTables を実行する <br /></td></tr>
+<tr class="memitem:a9c1be3240724df53bc21d94d41bcbac2" id="r_a9c1be3240724df53bc21d94d41bcbac2"><td class="memItemLeft"><a id="a9c1be3240724df53bc21d94d41bcbac2" name="a9c1be3240724df53bc21d94d41bcbac2"></a>
+virtual void&#160;</td><td class="memItemRight"><b>setRootConstant</b> (const <a class="el" href="../../d4/d7a/struct_amuse_1_1_set_root_constants_param.html">SetRootConstantsParam</a> &amp;)=0</td></tr>
+<tr class="memdesc:a9c1be3240724df53bc21d94d41bcbac2"><td class="mdescLeft">&#160;</td><td class="mdescRight">setRootConstant を実行する <br /></td></tr>
+<tr class="memitem:a19f4f4c504690f42b6756a0940212fa0" id="r_a19f4f4c504690f42b6756a0940212fa0"><td class="memItemLeft"><a id="a19f4f4c504690f42b6756a0940212fa0" name="a19f4f4c504690f42b6756a0940212fa0"></a>
+virtual void&#160;</td><td class="memItemRight"><b>draw</b> (const <a class="el" href="../../d6/d2c/struct_amuse_1_1_draw_param.html">DrawParam</a> &amp;param)=0</td></tr>
+<tr class="memdesc:a19f4f4c504690f42b6756a0940212fa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画コマンドを記録する <br /></td></tr>
+<tr class="memitem:ae86fb795312b2b96a7f2e60cb6359c3b" id="r_ae86fb795312b2b96a7f2e60cb6359c3b"><td class="memItemLeft"><a id="ae86fb795312b2b96a7f2e60cb6359c3b" name="ae86fb795312b2b96a7f2e60cb6359c3b"></a>
+virtual void&#160;</td><td class="memItemRight"><b>drawIndexed</b> (const <a class="el" href="../../d6/d2c/struct_amuse_1_1_draw_indexed_param.html">DrawIndexedParam</a> &amp;param)=0</td></tr>
+<tr class="memdesc:ae86fb795312b2b96a7f2e60cb6359c3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">インデックス付き描画コマンドを記録する <br /></td></tr>
+<tr class="memitem:abd7be970430d26264cbea65704fead23" id="r_abd7be970430d26264cbea65704fead23"><td class="memItemLeft"><a id="abd7be970430d26264cbea65704fead23" name="abd7be970430d26264cbea65704fead23"></a>
+virtual void&#160;</td><td class="memItemRight"><b>dispatch</b> (const <a class="el" href="../../d0/da4/struct_amuse_1_1_dispatch_param.html">DispatchParam</a> &amp;param)=0</td></tr>
+<tr class="memdesc:abd7be970430d26264cbea65704fead23"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンピュートディスパッチを記録する <br /></td></tr>
+<tr class="memitem:a9ada0ae851955f827b61f1534fd4920e" id="r_a9ada0ae851955f827b61f1534fd4920e"><td class="memItemLeft"><a id="a9ada0ae851955f827b61f1534fd4920e" name="a9ada0ae851955f827b61f1534fd4920e"></a>
+void&#160;</td><td class="memItemRight"><b>dispatch</b> (u32 groupX, u32 groupY=1, u32 groupZ=1)</td></tr>
+<tr class="memdesc:a9ada0ae851955f827b61f1534fd4920e"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンピュートディスパッチを記録する <br /></td></tr>
+<tr class="memitem:a1563528c070d00f0c9afb20675e6b529" id="r_a1563528c070d00f0c9afb20675e6b529"><td class="memItemLeft"><a id="a1563528c070d00f0c9afb20675e6b529" name="a1563528c070d00f0c9afb20675e6b529"></a>
+virtual void&#160;</td><td class="memItemRight"><b>drawIndirect</b> (const <a class="el" href="../../d4/d19/struct_amuse_1_1_indirect_command_param.html">IndirectCommandParam</a> &amp;param)=0</td></tr>
+<tr class="memdesc:a1563528c070d00f0c9afb20675e6b529"><td class="mdescLeft">&#160;</td><td class="mdescRight">drawIndirect を実行する <br /></td></tr>
+<tr class="memitem:a47ef4b2b7d422a3e41747091594b5b38" id="r_a47ef4b2b7d422a3e41747091594b5b38"><td class="memItemLeft"><a id="a47ef4b2b7d422a3e41747091594b5b38" name="a47ef4b2b7d422a3e41747091594b5b38"></a>
+virtual void&#160;</td><td class="memItemRight"><b>drawIndexedIndirect</b> (const <a class="el" href="../../d4/d19/struct_amuse_1_1_indirect_command_param.html">IndirectCommandParam</a> &amp;param)=0</td></tr>
+<tr class="memdesc:a47ef4b2b7d422a3e41747091594b5b38"><td class="mdescLeft">&#160;</td><td class="mdescRight">drawIndexedIndirect を実行する <br /></td></tr>
+<tr class="memitem:a06de261f59839e4c4a46c1d2e8728512" id="r_a06de261f59839e4c4a46c1d2e8728512"><td class="memItemLeft"><a id="a06de261f59839e4c4a46c1d2e8728512" name="a06de261f59839e4c4a46c1d2e8728512"></a>
+virtual void&#160;</td><td class="memItemRight"><b>dispatchIndirect</b> (const <a class="el" href="../../d4/d19/struct_amuse_1_1_indirect_command_param.html">IndirectCommandParam</a> &amp;param)=0</td></tr>
+<tr class="memdesc:a06de261f59839e4c4a46c1d2e8728512"><td class="mdescLeft">&#160;</td><td class="mdescRight">dispatchIndirect を実行する <br /></td></tr>
+<tr class="memitem:a1264d3e60e6a8755adeb35544ab67d75" id="r_a1264d3e60e6a8755adeb35544ab67d75"><td class="memItemLeft"><a id="a1264d3e60e6a8755adeb35544ab67d75" name="a1264d3e60e6a8755adeb35544ab67d75"></a>
+virtual void&#160;</td><td class="memItemRight"><b>pushMarker</b> (StringView name)=0</td></tr>
+<tr class="memdesc:a1264d3e60e6a8755adeb35544ab67d75"><td class="mdescLeft">&#160;</td><td class="mdescRight">pushMarker を実行する <br /></td></tr>
+<tr class="memitem:a13ff528bbe33c648ccdfb6664c5f7efe" id="r_a13ff528bbe33c648ccdfb6664c5f7efe"><td class="memItemLeft"><a id="a13ff528bbe33c648ccdfb6664c5f7efe" name="a13ff528bbe33c648ccdfb6664c5f7efe"></a>
+virtual void&#160;</td><td class="memItemRight"><b>popMarker</b> ()=0</td></tr>
+<tr class="memdesc:a13ff528bbe33c648ccdfb6664c5f7efe"><td class="mdescLeft">&#160;</td><td class="mdescRight">popMarker を実行する <br /></td></tr>
+<tr class="memitem:a33c9ed3b77f94358ea72ce18ad26e679" id="r_a33c9ed3b77f94358ea72ce18ad26e679"><td class="memItemLeft"><a id="a33c9ed3b77f94358ea72ce18ad26e679" name="a33c9ed3b77f94358ea72ce18ad26e679"></a>
+virtual void&#160;</td><td class="memItemRight"><b>setEventQuery</b> (const <a class="el" href="../../de/d8b/class_amuse_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d6/d48/class_amuse_1_1_event_query.html">EventQuery</a> &gt; &amp;query)=0</td></tr>
+<tr class="memdesc:a33c9ed3b77f94358ea72ce18ad26e679"><td class="mdescLeft">&#160;</td><td class="mdescRight">setEventQuery を実行する <br /></td></tr>
+<tr class="memitem:a54b06fc553d2094445da26fde1a44e57" id="r_a54b06fc553d2094445da26fde1a44e57"><td class="memItemLeft"><a id="a54b06fc553d2094445da26fde1a44e57" name="a54b06fc553d2094445da26fde1a44e57"></a>
+virtual void&#160;</td><td class="memItemRight"><b>beginTimerQuery</b> (const <a class="el" href="../../de/d8b/class_amuse_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d9/d52/class_amuse_1_1_timer_query.html">TimerQuery</a> &gt; &amp;query)=0</td></tr>
+<tr class="memdesc:a54b06fc553d2094445da26fde1a44e57"><td class="mdescLeft">&#160;</td><td class="mdescRight">beginTimerQuery を実行する <br /></td></tr>
+<tr class="memitem:aabc6dbd447e2d89d88ab165218d17a52" id="r_aabc6dbd447e2d89d88ab165218d17a52"><td class="memItemLeft"><a id="aabc6dbd447e2d89d88ab165218d17a52" name="aabc6dbd447e2d89d88ab165218d17a52"></a>
+virtual void&#160;</td><td class="memItemRight"><b>endTimerQuery</b> (const <a class="el" href="../../de/d8b/class_amuse_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d9/d52/class_amuse_1_1_timer_query.html">TimerQuery</a> &gt; &amp;query)=0</td></tr>
+<tr class="memdesc:aabc6dbd447e2d89d88ab165218d17a52"><td class="mdescLeft">&#160;</td><td class="mdescRight">endTimerQuery を実行する <br /></td></tr>
+<tr class="inherit_header pub_methods_class_amuse_1_1_graphic_object"><td colspan="2">基底クラス <a class="el" href="../../d8/d33/class_amuse_1_1_graphic_object.html">GraphicObject</a> に属する継承メソッド</td></tr>
+<tr class="memitem:ac185ad5a26ad834cadc0a2a256a43b59 pub_methods_class_amuse_1_1_graphic_object" id="r_ac185ad5a26ad834cadc0a2a256a43b59"><td class="memItemLeft">
+&#160;</td><td class="memItemRight"><b>~GraphicObject</b> () override</td></tr>
+<tr class="memdesc:ac185ad5a26ad834cadc0a2a256a43b59 pub_methods_class_amuse_1_1_graphic_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ <br /></td></tr>
+<tr class="memitem:a58342f06ea505c0672c2fa276fd2817f pub_methods_class_amuse_1_1_graphic_object" id="r_a58342f06ea505c0672c2fa276fd2817f"><td class="memItemLeft">virtual const String &amp;&#160;</td><td class="memItemRight"><a class="el" href="../../d8/d33/class_amuse_1_1_graphic_object.html#a58342f06ea505c0672c2fa276fd2817f">getName</a> () const =0</td></tr>
+<tr class="memdesc:a58342f06ea505c0672c2fa276fd2817f pub_methods_class_amuse_1_1_graphic_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">名前を取得  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静的関数</h2></td></tr>
+<tr class="memitem:aa63b58b187dd79878522ddf051b5e440" id="r_aa63b58b187dd79878522ddf051b5e440"><td class="memItemLeft"><a id="aa63b58b187dd79878522ddf051b5e440" name="aa63b58b187dd79878522ddf051b5e440"></a>
+static <a class="el" href="../../de/d8b/class_amuse_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../da/d84/class_amuse_1_1_command_list.html">CommandList</a> &gt;&#160;</td><td class="memItemRight"><b>Create</b> (const <a class="el" href="../../d8/def/struct_amuse_1_1_command_list_desc.html">CommandListDesc</a> &amp;desc)</td></tr>
+<tr class="memdesc:aa63b58b187dd79878522ddf051b5e440"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンスを生成する <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+その他の継承メンバ</h2></td></tr>
+<tr class="inherit_header pro_methods_class_amuse_1_1_graphic_object"><td colspan="2">基底クラス <a class="el" href="../../d8/d33/class_amuse_1_1_graphic_object.html">GraphicObject</a> に属する継承限定公開メンバ関数</td></tr>
+<tr class="memitem:a88d0c0fe599829a09853497dd7c746ae pro_methods_class_amuse_1_1_graphic_object" id="r_a88d0c0fe599829a09853497dd7c746ae"><td class="memItemLeft">
+&#160;</td><td class="memItemRight"><b>GraphicObject</b> ()</td></tr>
+<tr class="memdesc:a88d0c0fe599829a09853497dd7c746ae pro_methods_class_amuse_1_1_graphic_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ <br /></td></tr>
+<tr class="memitem:a1995b7067b60bfccab10fa91c0973d26 pro_methods_class_amuse_1_1_graphic_object" id="r_a1995b7067b60bfccab10fa91c0973d26"><td class="memItemLeft">
+void&#160;</td><td class="memItemRight"><b>manage</b> ()</td></tr>
+<tr class="memdesc:a1995b7067b60bfccab10fa91c0973d26 pro_methods_class_amuse_1_1_graphic_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">グラフィックオブジェクトを管理対象にする <br /></td></tr>
+<tr class="inherit_header pro_methods_class_amuse_1_1_ref_object"><td colspan="2">基底クラス <a class="el" href="../../d0/dcb/class_amuse_1_1_ref_object.html">RefObject</a> に属する継承限定公開メンバ関数</td></tr>
+<tr class="memitem:a54e7592a1879afe888737819461f0bd6 pro_methods_class_amuse_1_1_ref_object" id="r_a54e7592a1879afe888737819461f0bd6"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="../../d0/dcb/class_amuse_1_1_ref_object.html#a54e7592a1879afe888737819461f0bd6">RefObject</a> ()</td></tr>
+<tr class="memdesc:a54e7592a1879afe888737819461f0bd6 pro_methods_class_amuse_1_1_ref_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <br /></td></tr>
+<tr class="memitem:a926c5f9b99365954b5d7865b52e9bb4b pro_methods_class_amuse_1_1_ref_object" id="r_a926c5f9b99365954b5d7865b52e9bb4b"><td class="memItemLeft">
+virtual&#160;</td><td class="memItemRight"><b>~RefObject</b> ()</td></tr>
+<tr class="memdesc:a926c5f9b99365954b5d7865b52e9bb4b pro_methods_class_amuse_1_1_ref_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ <br /></td></tr>
+</table>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>Runtime/RHI/Public/Amuse/RHI/<a class="el" href="../../d0/d37/_command_list_8h_source.html">CommandList.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><a href="../../da/d84/class_amuse_1_1_command_list.html">CommandList</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

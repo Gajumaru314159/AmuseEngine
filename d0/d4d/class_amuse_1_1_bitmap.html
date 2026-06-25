@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: Bitmap クラス</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d0/d4d/class_amuse_1_1_bitmap.html','../../','d8/da7/class_amuse_1_1_bitmap-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-methods">メソッド</a> &#124;
+<a href="../../d8/da7/class_amuse_1_1_bitmap-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">Bitmap クラス<div class="ingroups"><a class="el" href="../../da/d78/group___amuse_core.html">Core</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">説明</h2>
+<div class="textblock"><p>ビットマップ </p>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:abd1ef853ca07974a54d714b9b81ccc9f" id="r_abd1ef853ca07974a54d714b9b81ccc9f"><td class="memItemLeft"><a id="abd1ef853ca07974a54d714b9b81ccc9f" name="abd1ef853ca07974a54d714b9b81ccc9f"></a>
+using&#160;</td><td class="memItemRight"><b>base_type</b> = Vector&lt;<a class="el" href="../../d9/dc1/struct_amuse_1_1_int_color.html">IntColor</a>&gt;</td></tr>
+<tr class="memdesc:abd1ef853ca07974a54d714b9b81ccc9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">ベース型 <br /></td></tr>
+<tr class="memitem:a890efd79e5a369ae8dfe7018b421a367" id="r_a890efd79e5a369ae8dfe7018b421a367"><td class="memItemLeft"><a id="a890efd79e5a369ae8dfe7018b421a367" name="a890efd79e5a369ae8dfe7018b421a367"></a>
+using&#160;</td><td class="memItemRight"><b>iterator</b> = base_type::iterator</td></tr>
+<tr class="memdesc:a890efd79e5a369ae8dfe7018b421a367"><td class="mdescLeft">&#160;</td><td class="mdescRight">イテレータ <br /></td></tr>
+<tr class="memitem:a03e021754df44f4d97102e2b86e63a7a" id="r_a03e021754df44f4d97102e2b86e63a7a"><td class="memItemLeft"><a id="a03e021754df44f4d97102e2b86e63a7a" name="a03e021754df44f4d97102e2b86e63a7a"></a>
+using&#160;</td><td class="memItemRight"><b>const_iterator</b> = base_type::const_iterator</td></tr>
+<tr class="memdesc:a03e021754df44f4d97102e2b86e63a7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">const イテレータ <br /></td></tr>
+<tr class="memitem:af9c8909542f1af835e7f840ec9d21d87" id="r_af9c8909542f1af835e7f840ec9d21d87"><td class="memItemLeft"><a id="af9c8909542f1af835e7f840ec9d21d87" name="af9c8909542f1af835e7f840ec9d21d87"></a>
+using&#160;</td><td class="memItemRight"><b>reverse_iterator</b> = base_type::reverse_iterator</td></tr>
+<tr class="memdesc:af9c8909542f1af835e7f840ec9d21d87"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆イテレータ <br /></td></tr>
+<tr class="memitem:a4563d54ea15d534bf6b93c38e866695d" id="r_a4563d54ea15d534bf6b93c38e866695d"><td class="memItemLeft"><a id="a4563d54ea15d534bf6b93c38e866695d" name="a4563d54ea15d534bf6b93c38e866695d"></a>
+using&#160;</td><td class="memItemRight"><b>const_reverse_iterator</b> = base_type::const_reverse_iterator</td></tr>
+<tr class="memdesc:a4563d54ea15d534bf6b93c38e866695d"><td class="mdescLeft">&#160;</td><td class="mdescRight">const 逆イテレータ <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+メソッド</h2></td></tr>
+<tr class="memitem:a57a1c88e94b954306748f03846942bf4" id="r_a57a1c88e94b954306748f03846942bf4"><td class="memItemLeft"><a id="a57a1c88e94b954306748f03846942bf4" name="a57a1c88e94b954306748f03846942bf4"></a>
+&#160;</td><td class="memItemRight"><b>Bitmap</b> (s32 width, s32 height, <a class="el" href="../../d9/dc1/struct_amuse_1_1_int_color.html">IntColor</a> color=<a class="el" href="../../d9/dc1/struct_amuse_1_1_int_color.html#a97f6329e6be7c1ff599073963b343c28">IntColor::Black</a>)</td></tr>
+<tr class="memdesc:a57a1c88e94b954306748f03846942bf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定サイズと色でビットマップを初期化する。 <br /></td></tr>
+<tr class="memitem:a85eadc488df9a94b41b468870e458d40" id="r_a85eadc488df9a94b41b468870e458d40"><td class="memTemplParams" colspan="2"><a id="a85eadc488df9a94b41b468870e458d40" name="a85eadc488df9a94b41b468870e458d40"></a>
+template&lt;class TGen&gt; </td></tr>
+<tr class="memitem:a85eadc488df9a94b41b468870e458d40 template"><td class="memItemLeft">&#160;</td><td class="memItemRight"><b>Bitmap</b> (s32 width, s32 height, TGen generator)</td></tr>
+<tr class="memdesc:a85eadc488df9a94b41b468870e458d40"><td class="mdescLeft">&#160;</td><td class="mdescRight">ジェネレータで各ピクセルを初期化するビットマップを生成する。 <br /></td></tr>
+<tr class="memitem:acfc8af07d87aaa66e407297f8f8e8cdf" id="r_acfc8af07d87aaa66e407297f8f8e8cdf"><td class="memItemLeft"><a id="acfc8af07d87aaa66e407297f8f8e8cdf" name="acfc8af07d87aaa66e407297f8f8e8cdf"></a>
+&#160;</td><td class="memItemRight"><b>Bitmap</b> (StringView path, ImageFormat format=ImageFormat::Unspecified)</td></tr>
+<tr class="memdesc:acfc8af07d87aaa66e407297f8f8e8cdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">画像ファイルを読み込んでビットマップを生成する。 <br /></td></tr>
+<tr class="memitem:a5c2f8adff2a911e8fede880cd40ae70f" id="r_a5c2f8adff2a911e8fede880cd40ae70f"><td class="memItemLeft"><a id="a5c2f8adff2a911e8fede880cd40ae70f" name="a5c2f8adff2a911e8fede880cd40ae70f"></a>
+s32&#160;</td><td class="memItemRight"><b>width</b> () const noexcept</td></tr>
+<tr class="memdesc:a5c2f8adff2a911e8fede880cd40ae70f"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビットマップの幅をピクセル単位で取得する。 <br /></td></tr>
+<tr class="memitem:af6de5402a96aad5e6e18c3836c85d299" id="r_af6de5402a96aad5e6e18c3836c85d299"><td class="memItemLeft"><a id="af6de5402a96aad5e6e18c3836c85d299" name="af6de5402a96aad5e6e18c3836c85d299"></a>
+s32&#160;</td><td class="memItemRight"><b>height</b> () const noexcept</td></tr>
+<tr class="memdesc:af6de5402a96aad5e6e18c3836c85d299"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビットマップの高さをピクセル単位で取得する。 <br /></td></tr>
+<tr class="memitem:a76302d03886d816373ed2a10c0357593" id="r_a76302d03886d816373ed2a10c0357593"><td class="memItemLeft"><a id="a76302d03886d816373ed2a10c0357593" name="a76302d03886d816373ed2a10c0357593"></a>
+<a class="el" href="../../de/d61/struct_amuse_1_1_size.html">Size</a>&#160;</td><td class="memItemRight"><b>size</b> () const noexcept</td></tr>
+<tr class="memdesc:a76302d03886d816373ed2a10c0357593"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビットマップの幅と高さを取得する。 <br /></td></tr>
+<tr class="memitem:ac9da59c0f25e9db4f4cf6c00db7c2124" id="r_ac9da59c0f25e9db4f4cf6c00db7c2124"><td class="memItemLeft"><a id="ac9da59c0f25e9db4f4cf6c00db7c2124" name="ac9da59c0f25e9db4f4cf6c00db7c2124"></a>
+s32&#160;</td><td class="memItemRight"><b>stride</b> () const noexcept</td></tr>
+<tr class="memdesc:ac9da59c0f25e9db4f4cf6c00db7c2124"><td class="mdescLeft">&#160;</td><td class="mdescRight">配列要素間のバイト幅を取得する。 <br /></td></tr>
+<tr class="memitem:afdc0e5150849afebec4d6d5fec936458" id="r_afdc0e5150849afebec4d6d5fec936458"><td class="memItemLeft"><a id="afdc0e5150849afebec4d6d5fec936458" name="afdc0e5150849afebec4d6d5fec936458"></a>
+size_t&#160;</td><td class="memItemRight"><b>pixelCount</b> () const noexcept</td></tr>
+<tr class="memdesc:afdc0e5150849afebec4d6d5fec936458"><td class="mdescLeft">&#160;</td><td class="mdescRight">保持しているピクセル数を取得する。 <br /></td></tr>
+<tr class="memitem:a5e0fd1eff46cc6e6c4a9584f46a0bbe8" id="r_a5e0fd1eff46cc6e6c4a9584f46a0bbe8"><td class="memItemLeft"><a id="a5e0fd1eff46cc6e6c4a9584f46a0bbe8" name="a5e0fd1eff46cc6e6c4a9584f46a0bbe8"></a>
+size_t&#160;</td><td class="memItemRight"><b>byteSize</b> () const noexcept</td></tr>
+<tr class="memdesc:a5e0fd1eff46cc6e6c4a9584f46a0bbe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">ピクセルバッファの総バイト数を取得する。 <br /></td></tr>
+<tr class="memitem:a3f6fc5de06a318920d84f3c3742db07f" id="r_a3f6fc5de06a318920d84f3c3742db07f"><td class="memItemLeft"><a id="a3f6fc5de06a318920d84f3c3742db07f" name="a3f6fc5de06a318920d84f3c3742db07f"></a>
+bool&#160;</td><td class="memItemRight"><b>empty</b> () const noexcept</td></tr>
+<tr class="memdesc:a3f6fc5de06a318920d84f3c3742db07f"><td class="mdescLeft">&#160;</td><td class="mdescRight">空かどうかを判定する。 <br /></td></tr>
+<tr class="memitem:a5f16304f80b6fb253c7b0ead3e16dd18" id="r_a5f16304f80b6fb253c7b0ead3e16dd18"><td class="memItemLeft"><a id="a5f16304f80b6fb253c7b0ead3e16dd18" name="a5f16304f80b6fb253c7b0ead3e16dd18"></a>
+void&#160;</td><td class="memItemRight"><b>shrink_to_fit</b> ()</td></tr>
+<tr class="memdesc:a5f16304f80b6fb253c7b0ead3e16dd18"><td class="mdescLeft">&#160;</td><td class="mdescRight">ピクセルバッファの余剰容量を解放する。 <br /></td></tr>
+<tr class="memitem:ac8bb3912a3ce86b15842e79d0b421204" id="r_ac8bb3912a3ce86b15842e79d0b421204"><td class="memItemLeft"><a id="ac8bb3912a3ce86b15842e79d0b421204" name="ac8bb3912a3ce86b15842e79d0b421204"></a>
+void&#160;</td><td class="memItemRight"><b>clear</b> ()</td></tr>
+<tr class="memdesc:ac8bb3912a3ce86b15842e79d0b421204"><td class="mdescLeft">&#160;</td><td class="mdescRight">全要素を削除する。 <br /></td></tr>
+<tr class="memitem:ae48ff5ec89cca224188994f46dd9e523" id="r_ae48ff5ec89cca224188994f46dd9e523"><td class="memItemLeft"><a id="ae48ff5ec89cca224188994f46dd9e523" name="ae48ff5ec89cca224188994f46dd9e523"></a>
+<a class="el" href="../../d9/dc1/struct_amuse_1_1_int_color.html">IntColor</a> *&#160;</td><td class="memItemRight"><b>operator[]</b> (size_t y)</td></tr>
+<tr class="memdesc:ae48ff5ec89cca224188994f46dd9e523"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した要素へアクセスする。 <br /></td></tr>
+<tr class="memitem:aea00b67cea9eb63d9db5a4e898df169b" id="r_aea00b67cea9eb63d9db5a4e898df169b"><td class="memItemLeft"><a id="aea00b67cea9eb63d9db5a4e898df169b" name="aea00b67cea9eb63d9db5a4e898df169b"></a>
+const <a class="el" href="../../d9/dc1/struct_amuse_1_1_int_color.html">IntColor</a> *&#160;</td><td class="memItemRight"><b>operator[]</b> (size_t y) const</td></tr>
+<tr class="memdesc:aea00b67cea9eb63d9db5a4e898df169b"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した要素へアクセスする。 <br /></td></tr>
+<tr class="memitem:accc1d0b9318e3de4a0bba87a27a99efb" id="r_accc1d0b9318e3de4a0bba87a27a99efb"><td class="memItemLeft"><a id="accc1d0b9318e3de4a0bba87a27a99efb" name="accc1d0b9318e3de4a0bba87a27a99efb"></a>
+<a class="el" href="../../d9/dc1/struct_amuse_1_1_int_color.html">IntColor</a> &amp;&#160;</td><td class="memItemRight"><b>at</b> (s32 x, s32 y)</td></tr>
+<tr class="memdesc:accc1d0b9318e3de4a0bba87a27a99efb"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定位置の要素へアクセスする。 <br /></td></tr>
+<tr class="memitem:ac74b2814b2767bab0b34812bd4f3d0c6" id="r_ac74b2814b2767bab0b34812bd4f3d0c6"><td class="memItemLeft"><a id="ac74b2814b2767bab0b34812bd4f3d0c6" name="ac74b2814b2767bab0b34812bd4f3d0c6"></a>
+const <a class="el" href="../../d9/dc1/struct_amuse_1_1_int_color.html">IntColor</a> &amp;&#160;</td><td class="memItemRight"><b>at</b> (s32 x, s32 y) const</td></tr>
+<tr class="memdesc:ac74b2814b2767bab0b34812bd4f3d0c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定位置の要素へアクセスする。 <br /></td></tr>
+<tr class="memitem:a6a3de1e4a0f5d692cc03ca55495fa562" id="r_a6a3de1e4a0f5d692cc03ca55495fa562"><td class="memItemLeft"><a id="a6a3de1e4a0f5d692cc03ca55495fa562" name="a6a3de1e4a0f5d692cc03ca55495fa562"></a>
+<a class="el" href="../../d9/dc1/struct_amuse_1_1_int_color.html">IntColor</a> *&#160;</td><td class="memItemRight"><b>data</b> ()</td></tr>
+<tr class="memdesc:a6a3de1e4a0f5d692cc03ca55495fa562"><td class="mdescLeft">&#160;</td><td class="mdescRight">内部データへのポインタを取得する。 <br /></td></tr>
+<tr class="memitem:a6f15237d8bfab6306a7da85103b439f7" id="r_a6f15237d8bfab6306a7da85103b439f7"><td class="memItemLeft"><a id="a6f15237d8bfab6306a7da85103b439f7" name="a6f15237d8bfab6306a7da85103b439f7"></a>
+const <a class="el" href="../../d9/dc1/struct_amuse_1_1_int_color.html">IntColor</a> *&#160;</td><td class="memItemRight"><b>data</b> () const</td></tr>
+<tr class="memdesc:a6f15237d8bfab6306a7da85103b439f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">内部データへのポインタを取得する。 <br /></td></tr>
+<tr class="memitem:acdf5901509044d6041e9fb617f86e185" id="r_acdf5901509044d6041e9fb617f86e185"><td class="memItemLeft"><a id="acdf5901509044d6041e9fb617f86e185" name="acdf5901509044d6041e9fb617f86e185"></a>
+void&#160;</td><td class="memItemRight"><b>fill</b> (<a class="el" href="../../d9/dc1/struct_amuse_1_1_int_color.html">IntColor</a> color)</td></tr>
+<tr class="memdesc:acdf5901509044d6041e9fb617f86e185"><td class="mdescLeft">&#160;</td><td class="mdescRight">全ピクセルを指定色で塗りつぶす。 <br /></td></tr>
+<tr class="memitem:ae305960e566381477d8c56ae482ba807" id="r_ae305960e566381477d8c56ae482ba807"><td class="memItemLeft"><a id="ae305960e566381477d8c56ae482ba807" name="ae305960e566381477d8c56ae482ba807"></a>
+void&#160;</td><td class="memItemRight"><b>resize</b> (s32 width, s32 height, <a class="el" href="../../d9/dc1/struct_amuse_1_1_int_color.html">IntColor</a> color=<a class="el" href="../../d9/dc1/struct_amuse_1_1_int_color.html#a97f6329e6be7c1ff599073963b343c28">IntColor::Black</a>)</td></tr>
+<tr class="memdesc:ae305960e566381477d8c56ae482ba807"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定サイズにリサイズし、追加領域を指定色で初期化する。 <br /></td></tr>
+<tr class="memitem:a98e831a295bb865c035fa9f8e11cfb22" id="r_a98e831a295bb865c035fa9f8e11cfb22"><td class="memItemLeft"><a id="a98e831a295bb865c035fa9f8e11cfb22" name="a98e831a295bb865c035fa9f8e11cfb22"></a>
+void&#160;</td><td class="memItemRight"><b>resize</b> (<a class="el" href="../../de/d61/struct_amuse_1_1_size.html">Size</a> size, <a class="el" href="../../d9/dc1/struct_amuse_1_1_int_color.html">IntColor</a> color=<a class="el" href="../../d9/dc1/struct_amuse_1_1_int_color.html#a97f6329e6be7c1ff599073963b343c28">IntColor::Black</a>)</td></tr>
+<tr class="memdesc:a98e831a295bb865c035fa9f8e11cfb22"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定サイズにリサイズし、追加領域を指定色で初期化する。 <br /></td></tr>
+<tr class="memitem:ad16f19d7a9380ba2d7138bd71f482527" id="r_ad16f19d7a9380ba2d7138bd71f482527"><td class="memItemLeft"><a id="ad16f19d7a9380ba2d7138bd71f482527" name="ad16f19d7a9380ba2d7138bd71f482527"></a>
+void&#160;</td><td class="memItemRight"><b>flipX</b> ()</td></tr>
+<tr class="memdesc:ad16f19d7a9380ba2d7138bd71f482527"><td class="mdescLeft">&#160;</td><td class="mdescRight">画像を左右反転する。 <br /></td></tr>
+<tr class="memitem:a6e36efd0eaa9d3d6cb7a197e4b8c310b" id="r_a6e36efd0eaa9d3d6cb7a197e4b8c310b"><td class="memItemLeft"><a id="a6e36efd0eaa9d3d6cb7a197e4b8c310b" name="a6e36efd0eaa9d3d6cb7a197e4b8c310b"></a>
+void&#160;</td><td class="memItemRight"><b>flipY</b> ()</td></tr>
+<tr class="memdesc:a6e36efd0eaa9d3d6cb7a197e4b8c310b"><td class="mdescLeft">&#160;</td><td class="mdescRight">画像を上下反転する。 <br /></td></tr>
+<tr class="memitem:a49c5f1bd5e1d97ae4f55c29cbec25d0d" id="r_a49c5f1bd5e1d97ae4f55c29cbec25d0d"><td class="memItemLeft"><a id="a49c5f1bd5e1d97ae4f55c29cbec25d0d" name="a49c5f1bd5e1d97ae4f55c29cbec25d0d"></a>
+Bitmap&#160;</td><td class="memItemRight"><b>clipped</b> (const <a class="el" href="../../da/d1a/struct_amuse_1_1_int_rect.html">IntRect</a> &amp;rect) const</td></tr>
+<tr class="memdesc:a49c5f1bd5e1d97ae4f55c29cbec25d0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定矩形で切り出したビットマップを返す。 <br /></td></tr>
+<tr class="memitem:a067ae2e26ae80b99f44e331e5b6bdfad" id="r_a067ae2e26ae80b99f44e331e5b6bdfad"><td class="memItemLeft"><a id="a067ae2e26ae80b99f44e331e5b6bdfad" name="a067ae2e26ae80b99f44e331e5b6bdfad"></a>
+Bitmap&#160;</td><td class="memItemRight"><b>clipped</b> (s32 x, s32 y, s32 w, s32 h) const</td></tr>
+<tr class="memdesc:a067ae2e26ae80b99f44e331e5b6bdfad"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定座標とサイズで切り出したビットマップを返す。 <br /></td></tr>
+<tr class="memitem:a552cef5abfeb5933675fd5be9a961066" id="r_a552cef5abfeb5933675fd5be9a961066"><td class="memTemplParams" colspan="2"><a id="a552cef5abfeb5933675fd5be9a961066" name="a552cef5abfeb5933675fd5be9a961066"></a>
+template&lt;class TFunc&gt; </td></tr>
+<tr class="memitem:a552cef5abfeb5933675fd5be9a961066 template"><td class="memItemLeft">Bitmap &amp;&#160;</td><td class="memItemRight"><b>forEach</b> (TFunc func)</td></tr>
+<tr class="memdesc:a552cef5abfeb5933675fd5be9a961066"><td class="mdescLeft">&#160;</td><td class="mdescRight">各ピクセルを走査して関数を適用する。 <br /></td></tr>
+<tr class="memitem:a1eff5506a63cfb1f60ebad106a37f5e4" id="r_a1eff5506a63cfb1f60ebad106a37f5e4"><td class="memTemplParams" colspan="2"><a id="a1eff5506a63cfb1f60ebad106a37f5e4" name="a1eff5506a63cfb1f60ebad106a37f5e4"></a>
+template&lt;class TFunc&gt; </td></tr>
+<tr class="memitem:a1eff5506a63cfb1f60ebad106a37f5e4 template"><td class="memItemLeft">const Bitmap &amp;&#160;</td><td class="memItemRight"><b>forEach</b> (TFunc func) const</td></tr>
+<tr class="memdesc:a1eff5506a63cfb1f60ebad106a37f5e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">各ピクセルを読み取り専用で走査して関数を適用する。 <br /></td></tr>
+<tr class="memitem:a979556eb331ec35eb33472a90a160f99" id="r_a979556eb331ec35eb33472a90a160f99"><td class="memItemLeft"><a id="a979556eb331ec35eb33472a90a160f99" name="a979556eb331ec35eb33472a90a160f99"></a>
+<a class="el" href="#a890efd79e5a369ae8dfe7018b421a367">iterator</a>&#160;</td><td class="memItemRight"><b>begin</b> () noexcept</td></tr>
+<tr class="memdesc:a979556eb331ec35eb33472a90a160f99"><td class="mdescLeft">&#160;</td><td class="mdescRight">先頭イテレータを取得する。 <br /></td></tr>
+<tr class="memitem:afc5380afa64b233d0df01a147616974b" id="r_afc5380afa64b233d0df01a147616974b"><td class="memItemLeft"><a id="afc5380afa64b233d0df01a147616974b" name="afc5380afa64b233d0df01a147616974b"></a>
+<a class="el" href="#a890efd79e5a369ae8dfe7018b421a367">iterator</a>&#160;</td><td class="memItemRight"><b>end</b> () noexcept</td></tr>
+<tr class="memdesc:afc5380afa64b233d0df01a147616974b"><td class="mdescLeft">&#160;</td><td class="mdescRight">終端イテレータを取得する。 <br /></td></tr>
+<tr class="memitem:a1ca1fc2c9fc3e169d5d0decfd1e54221" id="r_a1ca1fc2c9fc3e169d5d0decfd1e54221"><td class="memItemLeft"><a id="a1ca1fc2c9fc3e169d5d0decfd1e54221" name="a1ca1fc2c9fc3e169d5d0decfd1e54221"></a>
+<a class="el" href="#a03e021754df44f4d97102e2b86e63a7a">const_iterator</a>&#160;</td><td class="memItemRight"><b>begin</b> () const noexcept</td></tr>
+<tr class="memdesc:a1ca1fc2c9fc3e169d5d0decfd1e54221"><td class="mdescLeft">&#160;</td><td class="mdescRight">先頭イテレータを取得する。 <br /></td></tr>
+<tr class="memitem:a5b9b57293fae9b18b26349ac0b3fdcd3" id="r_a5b9b57293fae9b18b26349ac0b3fdcd3"><td class="memItemLeft"><a id="a5b9b57293fae9b18b26349ac0b3fdcd3" name="a5b9b57293fae9b18b26349ac0b3fdcd3"></a>
+<a class="el" href="#a03e021754df44f4d97102e2b86e63a7a">const_iterator</a>&#160;</td><td class="memItemRight"><b>end</b> () const noexcept</td></tr>
+<tr class="memdesc:a5b9b57293fae9b18b26349ac0b3fdcd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">終端イテレータを取得する。 <br /></td></tr>
+<tr class="memitem:abeb76f7f3414f270020e6f467586bd93" id="r_abeb76f7f3414f270020e6f467586bd93"><td class="memItemLeft"><a id="abeb76f7f3414f270020e6f467586bd93" name="abeb76f7f3414f270020e6f467586bd93"></a>
+<a class="el" href="#a03e021754df44f4d97102e2b86e63a7a">const_iterator</a>&#160;</td><td class="memItemRight"><b>cbegin</b> () const noexcept</td></tr>
+<tr class="memdesc:abeb76f7f3414f270020e6f467586bd93"><td class="mdescLeft">&#160;</td><td class="mdescRight">読み取り専用の先頭イテレータを取得する。 <br /></td></tr>
+<tr class="memitem:a9859a454bb6f50c654e280274d6a9d13" id="r_a9859a454bb6f50c654e280274d6a9d13"><td class="memItemLeft"><a id="a9859a454bb6f50c654e280274d6a9d13" name="a9859a454bb6f50c654e280274d6a9d13"></a>
+<a class="el" href="#a03e021754df44f4d97102e2b86e63a7a">const_iterator</a>&#160;</td><td class="memItemRight"><b>cend</b> () const noexcept</td></tr>
+<tr class="memdesc:a9859a454bb6f50c654e280274d6a9d13"><td class="mdescLeft">&#160;</td><td class="mdescRight">読み取り専用の終端イテレータを取得する。 <br /></td></tr>
+<tr class="memitem:ac7cd69c57ab7c76ac6eb26c474a43053" id="r_ac7cd69c57ab7c76ac6eb26c474a43053"><td class="memItemLeft"><a id="ac7cd69c57ab7c76ac6eb26c474a43053" name="ac7cd69c57ab7c76ac6eb26c474a43053"></a>
+<a class="el" href="#af9c8909542f1af835e7f840ec9d21d87">reverse_iterator</a>&#160;</td><td class="memItemRight"><b>rbegin</b> () noexcept</td></tr>
+<tr class="memdesc:ac7cd69c57ab7c76ac6eb26c474a43053"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆順の先頭イテレータを取得する。 <br /></td></tr>
+<tr class="memitem:ad4e3dd675f301e0b86183699a2db7d79" id="r_ad4e3dd675f301e0b86183699a2db7d79"><td class="memItemLeft"><a id="ad4e3dd675f301e0b86183699a2db7d79" name="ad4e3dd675f301e0b86183699a2db7d79"></a>
+<a class="el" href="#af9c8909542f1af835e7f840ec9d21d87">reverse_iterator</a>&#160;</td><td class="memItemRight"><b>rend</b> () noexcept</td></tr>
+<tr class="memdesc:ad4e3dd675f301e0b86183699a2db7d79"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆順の終端イテレータを取得する。 <br /></td></tr>
+<tr class="memitem:aff2c14a4e54378db02316aa5dacce912" id="r_aff2c14a4e54378db02316aa5dacce912"><td class="memItemLeft"><a id="aff2c14a4e54378db02316aa5dacce912" name="aff2c14a4e54378db02316aa5dacce912"></a>
+<a class="el" href="#a4563d54ea15d534bf6b93c38e866695d">const_reverse_iterator</a>&#160;</td><td class="memItemRight"><b>rbegin</b> () const noexcept</td></tr>
+<tr class="memdesc:aff2c14a4e54378db02316aa5dacce912"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆順の先頭イテレータを取得する。 <br /></td></tr>
+<tr class="memitem:ac5bfd48090cb59d7dd635954831415df" id="r_ac5bfd48090cb59d7dd635954831415df"><td class="memItemLeft"><a id="ac5bfd48090cb59d7dd635954831415df" name="ac5bfd48090cb59d7dd635954831415df"></a>
+<a class="el" href="#a4563d54ea15d534bf6b93c38e866695d">const_reverse_iterator</a>&#160;</td><td class="memItemRight"><b>rend</b> () const noexcept</td></tr>
+<tr class="memdesc:ac5bfd48090cb59d7dd635954831415df"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆順の終端イテレータを取得する。 <br /></td></tr>
+<tr class="memitem:abd227f43fec65b1bfeb96751b5eea9c4" id="r_abd227f43fec65b1bfeb96751b5eea9c4"><td class="memItemLeft"><a id="abd227f43fec65b1bfeb96751b5eea9c4" name="abd227f43fec65b1bfeb96751b5eea9c4"></a>
+<a class="el" href="#a4563d54ea15d534bf6b93c38e866695d">const_reverse_iterator</a>&#160;</td><td class="memItemRight"><b>crbegin</b> () const noexcept</td></tr>
+<tr class="memdesc:abd227f43fec65b1bfeb96751b5eea9c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">読み取り専用の逆順先頭イテレータを取得する。 <br /></td></tr>
+<tr class="memitem:acbe115c4709d004c9899ef5855f96288" id="r_acbe115c4709d004c9899ef5855f96288"><td class="memItemLeft"><a id="acbe115c4709d004c9899ef5855f96288" name="acbe115c4709d004c9899ef5855f96288"></a>
+<a class="el" href="#a4563d54ea15d534bf6b93c38e866695d">const_reverse_iterator</a>&#160;</td><td class="memItemRight"><b>crend</b> () const noexcept</td></tr>
+<tr class="memdesc:acbe115c4709d004c9899ef5855f96288"><td class="mdescLeft">&#160;</td><td class="mdescRight">読み取り専用の逆順終端イテレータを取得する。 <br /></td></tr>
+</table>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>Runtime/Core/Public/Amuse/Core/Graphic/<a class="el" href="../../dd/df1/_bitmap_8h_source.html">Bitmap.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><a href="../../d0/d4d/class_amuse_1_1_bitmap.html">Bitmap</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

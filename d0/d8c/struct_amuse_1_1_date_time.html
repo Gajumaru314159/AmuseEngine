@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: DateTime 構造体</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d0/d8c/struct_amuse_1_1_date_time.html','../../','d3/d21/struct_amuse_1_1_date_time-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">メソッド</a> &#124;
+<a href="#pub-static-methods">静的関数</a> &#124;
+<a href="#pub-attribs">変数</a> &#124;
+<a href="../../d3/d21/struct_amuse_1_1_date_time-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">DateTime 構造体<div class="ingroups"><a class="el" href="../../da/d78/group___amuse_core.html">Core</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">説明</h2>
+<div class="textblock"><p>日時型 </p>
+<p>各種関数は時刻が正規化されているものとして計算されます。 </p>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+メソッド</h2></td></tr>
+<tr class="memitem:a30d73527665a6b136070874aeb9b4c2e" id="r_a30d73527665a6b136070874aeb9b4c2e"><td class="memItemLeft"><a id="a30d73527665a6b136070874aeb9b4c2e" name="a30d73527665a6b136070874aeb9b4c2e"></a>
+bool&#160;</td><td class="memItemRight"><b>operator==</b> (const <a class="el" href="../../d0/d8c/struct_amuse_1_1_date_time.html">DateTime</a> &amp;rhs) const noexcept</td></tr>
+<tr class="memdesc:a30d73527665a6b136070874aeb9b4c2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">等価演算子 <br /></td></tr>
+<tr class="memitem:ac9b0839d6be50242b118d69b0ead3e24" id="r_ac9b0839d6be50242b118d69b0ead3e24"><td class="memItemLeft"><a id="ac9b0839d6be50242b118d69b0ead3e24" name="ac9b0839d6be50242b118d69b0ead3e24"></a>
+bool&#160;</td><td class="memItemRight"><b>operator!=</b> (const <a class="el" href="../../d0/d8c/struct_amuse_1_1_date_time.html">DateTime</a> &amp;rhs) const noexcept</td></tr>
+<tr class="memdesc:ac9b0839d6be50242b118d69b0ead3e24"><td class="mdescLeft">&#160;</td><td class="mdescRight">否等価演算子 <br /></td></tr>
+<tr class="memitem:a16dffc2ee84f6e10fd3271e9b0cb5306" id="r_a16dffc2ee84f6e10fd3271e9b0cb5306"><td class="memItemLeft"><a id="a16dffc2ee84f6e10fd3271e9b0cb5306" name="a16dffc2ee84f6e10fd3271e9b0cb5306"></a>
+bool&#160;</td><td class="memItemRight"><b>operator&lt;</b> (const <a class="el" href="../../d0/d8c/struct_amuse_1_1_date_time.html">DateTime</a> &amp;rhs) const noexcept</td></tr>
+<tr class="memdesc:a16dffc2ee84f6e10fd3271e9b0cb5306"><td class="mdescLeft">&#160;</td><td class="mdescRight">比較演算子 <br /></td></tr>
+<tr class="memitem:a40adc1eacbf9ed88ac1cc35dc3d51f30" id="r_a40adc1eacbf9ed88ac1cc35dc3d51f30"><td class="memItemLeft"><a id="a40adc1eacbf9ed88ac1cc35dc3d51f30" name="a40adc1eacbf9ed88ac1cc35dc3d51f30"></a>
+bool&#160;</td><td class="memItemRight"><b>operator&lt;=</b> (const <a class="el" href="../../d0/d8c/struct_amuse_1_1_date_time.html">DateTime</a> &amp;rhs) const noexcept</td></tr>
+<tr class="memdesc:a40adc1eacbf9ed88ac1cc35dc3d51f30"><td class="mdescLeft">&#160;</td><td class="mdescRight">比較演算子 <br /></td></tr>
+<tr class="memitem:ae96fabdd15f3dfd300e7d399b12305bc" id="r_ae96fabdd15f3dfd300e7d399b12305bc"><td class="memItemLeft"><a id="ae96fabdd15f3dfd300e7d399b12305bc" name="ae96fabdd15f3dfd300e7d399b12305bc"></a>
+bool&#160;</td><td class="memItemRight"><b>operator&gt;</b> (const <a class="el" href="../../d0/d8c/struct_amuse_1_1_date_time.html">DateTime</a> &amp;rhs) const noexcept</td></tr>
+<tr class="memdesc:ae96fabdd15f3dfd300e7d399b12305bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">比較演算子 <br /></td></tr>
+<tr class="memitem:adc2ea02a36b0f48b50f6e863facd20e6" id="r_adc2ea02a36b0f48b50f6e863facd20e6"><td class="memItemLeft"><a id="adc2ea02a36b0f48b50f6e863facd20e6" name="adc2ea02a36b0f48b50f6e863facd20e6"></a>
+bool&#160;</td><td class="memItemRight"><b>operator&gt;=</b> (const <a class="el" href="../../d0/d8c/struct_amuse_1_1_date_time.html">DateTime</a> &amp;rhs) const noexcept</td></tr>
+<tr class="memdesc:adc2ea02a36b0f48b50f6e863facd20e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">比較演算子 <br /></td></tr>
+<tr class="memitem:a379774c95810124f2e7e182883b2fde0" id="r_a379774c95810124f2e7e182883b2fde0"><td class="memItemLeft"><a id="a379774c95810124f2e7e182883b2fde0" name="a379774c95810124f2e7e182883b2fde0"></a>
+bool&#160;</td><td class="memItemRight"><b>isMorning</b> () const</td></tr>
+<tr class="memdesc:a379774c95810124f2e7e182883b2fde0"><td class="mdescLeft">&#160;</td><td class="mdescRight">午前か <br /></td></tr>
+<tr class="memitem:a0f20adab499bb48ede04d7c3faaf6351" id="r_a0f20adab499bb48ede04d7c3faaf6351"><td class="memItemLeft"><a id="a0f20adab499bb48ede04d7c3faaf6351" name="a0f20adab499bb48ede04d7c3faaf6351"></a>
+bool&#160;</td><td class="memItemRight"><b>isAfternoon</b> () const</td></tr>
+<tr class="memdesc:a0f20adab499bb48ede04d7c3faaf6351"><td class="mdescLeft">&#160;</td><td class="mdescRight">午後か <br /></td></tr>
+<tr class="memitem:a7ce41daa6d3df16debd762d0b7861cd8" id="r_a7ce41daa6d3df16debd762d0b7861cd8"><td class="memItemLeft"><a id="a7ce41daa6d3df16debd762d0b7861cd8" name="a7ce41daa6d3df16debd762d0b7861cd8"></a>
+<a class="el" href="../../da/d78/group___amuse_core.html#gab81b58332d5fc8a29dc60c268bd3742b">DayOfWeek</a>&#160;</td><td class="memItemRight"><b>dayOfWeek</b> () const</td></tr>
+<tr class="memdesc:a7ce41daa6d3df16debd762d0b7861cd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">曜日 <br /></td></tr>
+<tr class="memitem:a4d9ea732af0d881cbc636ed0712d5850" id="r_a4d9ea732af0d881cbc636ed0712d5850"><td class="memItemLeft">s32&#160;</td><td class="memItemRight"><a class="el" href="#a4d9ea732af0d881cbc636ed0712d5850">daysInYear</a> () const</td></tr>
+<tr class="memdesc:a4d9ea732af0d881cbc636ed0712d5850"><td class="mdescLeft">&#160;</td><td class="mdescRight">1月1日から数えて何日目か  <br /></td></tr>
+<tr class="memitem:a5899b5f7a6df00227d5804cd0b910f51" id="r_a5899b5f7a6df00227d5804cd0b910f51"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a5899b5f7a6df00227d5804cd0b910f51">toString</a> (StringView format=&quot;yyyy-MM-dd HH:mm:ss.ff&quot;) const</td></tr>
+<tr class="memdesc:a5899b5f7a6df00227d5804cd0b910f51"><td class="mdescLeft">&#160;</td><td class="mdescRight">日時を文字列に変換  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静的関数</h2></td></tr>
+<tr class="memitem:a3a962b567a1aa26d8722f8fb9a6fef94" id="r_a3a962b567a1aa26d8722f8fb9a6fef94"><td class="memItemLeft"><a id="a3a962b567a1aa26d8722f8fb9a6fef94" name="a3a962b567a1aa26d8722f8fb9a6fef94"></a>
+static bool&#160;</td><td class="memItemRight"><b>IsLerpYear</b> (s32 year)</td></tr>
+<tr class="memdesc:a3a962b567a1aa26d8722f8fb9a6fef94"><td class="mdescLeft">&#160;</td><td class="mdescRight">閏年か <br /></td></tr>
+<tr class="memitem:adbfb104c6855020d65a04bc2566186eb" id="r_adbfb104c6855020d65a04bc2566186eb"><td class="memItemLeft"><a id="adbfb104c6855020d65a04bc2566186eb" name="adbfb104c6855020d65a04bc2566186eb"></a>
+static s32&#160;</td><td class="memItemRight"><b>DayInMonth</b> (s32 month, s32 year)</td></tr>
+<tr class="memdesc:adbfb104c6855020d65a04bc2566186eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">月の日数を計算 <br /></td></tr>
+<tr class="memitem:a6ee5860b195aae7230d461e16257fb6e" id="r_a6ee5860b195aae7230d461e16257fb6e"><td class="memItemLeft"><a id="a6ee5860b195aae7230d461e16257fb6e" name="a6ee5860b195aae7230d461e16257fb6e"></a>
+static <a class="el" href="../../d0/d8c/struct_amuse_1_1_date_time.html">DateTime</a>&#160;</td><td class="memItemRight"><b>Now</b> ()</td></tr>
+<tr class="memdesc:a6ee5860b195aae7230d461e16257fb6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">[brief システムの現在時刻を取得 <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+変数</h2></td></tr>
+<tr class="memitem:a965a419f8bf3a8b37c6b644a1ce6a258" id="r_a965a419f8bf3a8b37c6b644a1ce6a258"><td class="memItemLeft"><a id="a965a419f8bf3a8b37c6b644a1ce6a258" name="a965a419f8bf3a8b37c6b644a1ce6a258"></a>
+s32&#160;</td><td class="memItemRight"><b>year</b> = 0</td></tr>
+<tr class="memdesc:a965a419f8bf3a8b37c6b644a1ce6a258"><td class="mdescLeft">&#160;</td><td class="mdescRight">年 <br /></td></tr>
+<tr class="memitem:abc3e36ede51a7fb64db7cee209d46446" id="r_abc3e36ede51a7fb64db7cee209d46446"><td class="memItemLeft"><a id="abc3e36ede51a7fb64db7cee209d46446" name="abc3e36ede51a7fb64db7cee209d46446"></a>
+s32&#160;</td><td class="memItemRight"><b>month</b> = 1</td></tr>
+<tr class="memdesc:abc3e36ede51a7fb64db7cee209d46446"><td class="mdescLeft">&#160;</td><td class="mdescRight">月(1-12) <br /></td></tr>
+<tr class="memitem:a7c51f4a55a14f4a6806ec1a6d07927d7" id="r_a7c51f4a55a14f4a6806ec1a6d07927d7"><td class="memItemLeft"><a id="a7c51f4a55a14f4a6806ec1a6d07927d7" name="a7c51f4a55a14f4a6806ec1a6d07927d7"></a>
+s32&#160;</td><td class="memItemRight"><b>day</b> = 1</td></tr>
+<tr class="memdesc:a7c51f4a55a14f4a6806ec1a6d07927d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">日(1-31) <br /></td></tr>
+<tr class="memitem:a4a9a241e4e8536d83875e23097d0246d" id="r_a4a9a241e4e8536d83875e23097d0246d"><td class="memItemLeft"><a id="a4a9a241e4e8536d83875e23097d0246d" name="a4a9a241e4e8536d83875e23097d0246d"></a>
+s32&#160;</td><td class="memItemRight"><b>hour</b> = 0</td></tr>
+<tr class="memdesc:a4a9a241e4e8536d83875e23097d0246d"><td class="mdescLeft">&#160;</td><td class="mdescRight">時間(0-23 <br /></td></tr>
+<tr class="memitem:abb9e1b8fda7e04c158c6b1bad404c3c5" id="r_abb9e1b8fda7e04c158c6b1bad404c3c5"><td class="memItemLeft"><a id="abb9e1b8fda7e04c158c6b1bad404c3c5" name="abb9e1b8fda7e04c158c6b1bad404c3c5"></a>
+s32&#160;</td><td class="memItemRight"><b>minute</b> = 0</td></tr>
+<tr class="memdesc:abb9e1b8fda7e04c158c6b1bad404c3c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">分(0-59) <br /></td></tr>
+<tr class="memitem:a0f77d26d2da69171791db691e2b829d4" id="r_a0f77d26d2da69171791db691e2b829d4"><td class="memItemLeft"><a id="a0f77d26d2da69171791db691e2b829d4" name="a0f77d26d2da69171791db691e2b829d4"></a>
+s32&#160;</td><td class="memItemRight"><b>second</b> = 0</td></tr>
+<tr class="memdesc:a0f77d26d2da69171791db691e2b829d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">秒(0-59) <br /></td></tr>
+<tr class="memitem:a9797fd53e1a1dff77b3a1c60eb7e00f8" id="r_a9797fd53e1a1dff77b3a1c60eb7e00f8"><td class="memItemLeft"><a id="a9797fd53e1a1dff77b3a1c60eb7e00f8" name="a9797fd53e1a1dff77b3a1c60eb7e00f8"></a>
+s32&#160;</td><td class="memItemRight"><b>milliSecond</b> = 0</td></tr>
+<tr class="memdesc:a9797fd53e1a1dff77b3a1c60eb7e00f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">ミリ秒(0-999) <br /></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="a4d9ea732af0d881cbc636ed0712d5850" name="a4d9ea732af0d881cbc636ed0712d5850"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d9ea732af0d881cbc636ed0712d5850">&#9670;&#160;</a></span>daysInYear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">s32 daysInYear </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>1月1日から数えて何日目か </p>
+<p>1月1日を1として何日目かを返す。 閏年の場合3月以降の日数がずれる。 </p>
+
+</div>
+</div>
+<a id="a5899b5f7a6df00227d5804cd0b910f51" name="a5899b5f7a6df00227d5804cd0b910f51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5899b5f7a6df00227d5804cd0b910f51">&#9670;&#160;</a></span>toString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String toString </td>
+          <td>(</td>
+          <td class="paramtype">StringView</td>          <td class="paramname"><span class="paramname"><em>format</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;yyyy-MM-dd&#160;HH:mm:ss.ff&quot;</span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>日時を文字列に変換 </p>
+<p>使用可能なフォーマットは以下の通りです。 必要に応じてエスケープ文字を使用してください。</p><ul>
+<li>yyyyy 年 (5 桁の数値)</li>
+<li>yyyy 年 (4 桁の数値)</li>
+<li>yy 年 (00 ～ 99)</li>
+<li>y 年 ( 0 ～ 99)</li>
+<li>MMMM 英語の月名 (January-February)</li>
+<li>MMM 英語の月名の略称 (Jan-Feb)</li>
+<li>MM 月 (01 ～ 12)</li>
+<li>M 月 ( 1 ～ 12)</li>
+<li>dddd 英語の曜日 (Sunday-Saturday)</li>
+<li>ddd 英語の曜日の略称 (Sun-Sat)</li>
+<li>dd 月の日にち (1 ～ 31)</li>
+<li>d 月の日にち (01 ～ 31)</li>
+<li>tt AM / PM</li>
+<li>t A / P</li>
+<li>HH 24 時間形式の時間 (00 ～ 23)</li>
+<li>H 24 時間形式の時間 (0 ～ 23)</li>
+<li>hh 12 時間形式の時間 (01 ～ 12)</li>
+<li>h 12 時間形式の時間 (1 ～ 12)</li>
+<li>mm 分 (00 ～ 59)</li>
+<li>m 分 ( 0 ～ 59)</li>
+<li>ss 秒 (00 ～ 59)</li>
+<li>s 秒 ( 0 ～ 59)</li>
+<li>fff 小数点以下3桁の秒</li>
+<li>ff 小数点以下2桁の秒</li>
+<li>f 小数点以下1桁の秒 <dl class="section see"><dt>参照</dt><dd><a href="https://learn.microsoft.com/ja-jp/dotnet/standard/base-types/custom-date-and-time-format-strings">https://learn.microsoft.com/ja-jp/dotnet/standard/base-types/custom-date-and-time-format-strings</a> </dd></dl>
+</li>
+</ul>
+
+</div>
+</div>
+<hr/>この構造体詳解は次のファイルから抽出されました:<ul>
+<li>Runtime/Core/Public/Amuse/Core/Misc/<a class="el" href="../../df/da8/_date_time_8h_source.html">DateTime.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><a href="../../d0/d8c/struct_amuse_1_1_date_time.html">DateTime</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

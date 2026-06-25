@@ -1,0 +1,295 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: Triangle クラス</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('dd/dca/class_amuse_1_1_triangle.html','../../','d6/d4c/class_amuse_1_1_triangle-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">メソッド</a> &#124;
+<a href="#pub-static-methods">静的関数</a> &#124;
+<a href="#pub-attribs">変数</a> &#124;
+<a href="../../d6/d4c/class_amuse_1_1_triangle-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">Triangle クラス<div class="ingroups"><a class="el" href="../../da/d78/group___amuse_core.html">Core</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">説明</h2>
+<div class="textblock"><p>三角形 </p>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+メソッド</h2></td></tr>
+<tr class="memitem:ae7078ca6b2242a48ae0bac74cebe3df2" id="r_ae7078ca6b2242a48ae0bac74cebe3df2"><td class="memItemLeft"><a id="ae7078ca6b2242a48ae0bac74cebe3df2" name="ae7078ca6b2242a48ae0bac74cebe3df2"></a>
+&#160;</td><td class="memItemRight"><b>Triangle</b> ()=default</td></tr>
+<tr class="memdesc:ae7078ca6b2242a48ae0bac74cebe3df2"><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトコンストラクタ <br /></td></tr>
+<tr class="memitem:a2f3e678a9226155b14557852f26c6db5" id="r_a2f3e678a9226155b14557852f26c6db5"><td class="memItemLeft"><a id="a2f3e678a9226155b14557852f26c6db5" name="a2f3e678a9226155b14557852f26c6db5"></a>
+constexpr&#160;</td><td class="memItemRight"><b>Triangle</b> (<a class="el" href="../../d0/dcc/struct_amuse_1_1_vec3.html">Vec3</a> p0, <a class="el" href="../../d0/dcc/struct_amuse_1_1_vec3.html">Vec3</a> p1, <a class="el" href="../../d0/dcc/struct_amuse_1_1_vec3.html">Vec3</a> p2)</td></tr>
+<tr class="memdesc:a2f3e678a9226155b14557852f26c6db5"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ(Vec3) <br /></td></tr>
+<tr class="memitem:afe080fd6ba05b8ee0e615f6513648154" id="r_afe080fd6ba05b8ee0e615f6513648154"><td class="memItemLeft"><a id="afe080fd6ba05b8ee0e615f6513648154" name="afe080fd6ba05b8ee0e615f6513648154"></a>
+constexpr&#160;</td><td class="memItemRight"><b>Triangle</b> (<a class="el" href="../../d3/d51/struct_amuse_1_1_vec2.html">Vec2</a> p0, <a class="el" href="../../d3/d51/struct_amuse_1_1_vec2.html">Vec2</a> p1, <a class="el" href="../../d3/d51/struct_amuse_1_1_vec2.html">Vec2</a> p2)</td></tr>
+<tr class="memdesc:afe080fd6ba05b8ee0e615f6513648154"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ(Vec2) <br /></td></tr>
+<tr class="memitem:a43ce55a5abd7b85b0bbfb9f5398b96fc" id="r_a43ce55a5abd7b85b0bbfb9f5398b96fc"><td class="memItemLeft"><a id="a43ce55a5abd7b85b0bbfb9f5398b96fc" name="a43ce55a5abd7b85b0bbfb9f5398b96fc"></a>
+constexpr bool&#160;</td><td class="memItemRight"><b>operator==</b> (const <a class="el" href="#ae7078ca6b2242a48ae0bac74cebe3df2">Triangle</a> &amp;another) const noexcept</td></tr>
+<tr class="memdesc:a43ce55a5abd7b85b0bbfb9f5398b96fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">等価演算子 <br /></td></tr>
+<tr class="memitem:a46f193bd60dfabd7c2e379d93c446301" id="r_a46f193bd60dfabd7c2e379d93c446301"><td class="memItemLeft"><a id="a46f193bd60dfabd7c2e379d93c446301" name="a46f193bd60dfabd7c2e379d93c446301"></a>
+constexpr bool&#160;</td><td class="memItemRight"><b>operator!=</b> (const <a class="el" href="#ae7078ca6b2242a48ae0bac74cebe3df2">Triangle</a> &amp;another) const noexcept</td></tr>
+<tr class="memdesc:a46f193bd60dfabd7c2e379d93c446301"><td class="mdescLeft">&#160;</td><td class="mdescRight">否等価演算子 <br /></td></tr>
+<tr class="memitem:ad749428099804c1571cac0e8baaedd00" id="r_ad749428099804c1571cac0e8baaedd00"><td class="memItemLeft"><a class="el" href="../../d0/dcc/struct_amuse_1_1_vec3.html">Vec3</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad749428099804c1571cac0e8baaedd00">normal</a> () const</td></tr>
+<tr class="memdesc:ad749428099804c1571cac0e8baaedd00"><td class="mdescLeft">&#160;</td><td class="mdescRight">法線を取得  <br /></td></tr>
+<tr class="memitem:a60f0575618ee5bfd181d234602d3a5fc" id="r_a60f0575618ee5bfd181d234602d3a5fc"><td class="memItemLeft"><a id="a60f0575618ee5bfd181d234602d3a5fc" name="a60f0575618ee5bfd181d234602d3a5fc"></a>
+constexpr <a class="el" href="../../d0/dcc/struct_amuse_1_1_vec3.html">Vec3</a>&#160;</td><td class="memItemRight"><b>centerOfGravity</b> () const noexcept</td></tr>
+<tr class="memdesc:a60f0575618ee5bfd181d234602d3a5fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">重心を計算 <br /></td></tr>
+<tr class="memitem:acd8104e9e039ec2e3c61ef9821cc5906" id="r_acd8104e9e039ec2e3c61ef9821cc5906"><td class="memItemLeft"><a id="acd8104e9e039ec2e3c61ef9821cc5906" name="acd8104e9e039ec2e3c61ef9821cc5906"></a>
+<a class="el" href="../../d0/dcc/struct_amuse_1_1_vec3.html">Vec3</a>&#160;</td><td class="memItemRight"><b>innerGravity</b> () const noexcept</td></tr>
+<tr class="memdesc:acd8104e9e039ec2e3c61ef9821cc5906"><td class="mdescLeft">&#160;</td><td class="mdescRight">内心を計算 <br /></td></tr>
+<tr class="memitem:ad36e0292f2f364d691ec03957a39f0a6" id="r_ad36e0292f2f364d691ec03957a39f0a6"><td class="memItemLeft"><a id="ad36e0292f2f364d691ec03957a39f0a6" name="ad36e0292f2f364d691ec03957a39f0a6"></a>
+<a class="el" href="../../d0/dcc/struct_amuse_1_1_vec3.html">Vec3</a>&#160;</td><td class="memItemRight"><b>circumcenter</b> () const noexcept</td></tr>
+<tr class="memdesc:ad36e0292f2f364d691ec03957a39f0a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">外心を計算 <br /></td></tr>
+<tr class="memitem:afd816248dc54fb7dbd4292310a2dc71f" id="r_afd816248dc54fb7dbd4292310a2dc71f"><td class="memItemLeft"><a id="afd816248dc54fb7dbd4292310a2dc71f" name="afd816248dc54fb7dbd4292310a2dc71f"></a>
+f32&#160;</td><td class="memItemRight"><b>area</b> () const noexcept</td></tr>
+<tr class="memdesc:afd816248dc54fb7dbd4292310a2dc71f"><td class="mdescLeft">&#160;</td><td class="mdescRight">面積を計算 <br /></td></tr>
+<tr class="memitem:acb768ede3ec4ccf4e614e22600142e7a" id="r_acb768ede3ec4ccf4e614e22600142e7a"><td class="memItemLeft"><a id="acb768ede3ec4ccf4e614e22600142e7a" name="acb768ede3ec4ccf4e614e22600142e7a"></a>
+f32&#160;</td><td class="memItemRight"><b>perimeter</b> () const noexcept</td></tr>
+<tr class="memdesc:acb768ede3ec4ccf4e614e22600142e7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">外周を計算 <br /></td></tr>
+<tr class="memitem:a33fced36c194e1f446a040ebe86a654d" id="r_a33fced36c194e1f446a040ebe86a654d"><td class="memItemLeft"><a class="el" href="#ae7078ca6b2242a48ae0bac74cebe3df2">Triangle</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a33fced36c194e1f446a040ebe86a654d">flip</a> () noexcept</td></tr>
+<tr class="memdesc:a33fced36c194e1f446a040ebe86a654d"><td class="mdescLeft">&#160;</td><td class="mdescRight">面を反転  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静的関数</h2></td></tr>
+<tr class="memitem:aa6bd762571ce03ced19b90e3fb68a9b2" id="r_aa6bd762571ce03ced19b90e3fb68a9b2"><td class="memItemLeft">static constexpr <a class="el" href="#ae7078ca6b2242a48ae0bac74cebe3df2">Triangle</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa6bd762571ce03ced19b90e3fb68a9b2">Lerp</a> (const <a class="el" href="#ae7078ca6b2242a48ae0bac74cebe3df2">Triangle</a> &amp;a, const <a class="el" href="#ae7078ca6b2242a48ae0bac74cebe3df2">Triangle</a> &amp;b, f32 t) noexcept</td></tr>
+<tr class="memdesc:aa6bd762571ce03ced19b90e3fb68a9b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">補間  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+変数</h2></td></tr>
+<tr class="memitem:ad92ea0137d5540de737e5b8574d7d36a" id="r_ad92ea0137d5540de737e5b8574d7d36a"><td class="memItemLeft"><a id="ad92ea0137d5540de737e5b8574d7d36a" name="ad92ea0137d5540de737e5b8574d7d36a"></a>
+<a class="el" href="../../d0/dcc/struct_amuse_1_1_vec3.html">Vec3</a>&#160;</td><td class="memItemRight"><b>p0</b></td></tr>
+<tr class="memdesc:ad92ea0137d5540de737e5b8574d7d36a"><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点0 <br /></td></tr>
+<tr class="memitem:ae123d54fbb077dd317e8f79aac92e502" id="r_ae123d54fbb077dd317e8f79aac92e502"><td class="memItemLeft"><a id="ae123d54fbb077dd317e8f79aac92e502" name="ae123d54fbb077dd317e8f79aac92e502"></a>
+<a class="el" href="../../d0/dcc/struct_amuse_1_1_vec3.html">Vec3</a>&#160;</td><td class="memItemRight"><b>p1</b></td></tr>
+<tr class="memdesc:ae123d54fbb077dd317e8f79aac92e502"><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点1 <br /></td></tr>
+<tr class="memitem:ac9f01785c001f828671da89569d874a3" id="r_ac9f01785c001f828671da89569d874a3"><td class="memItemLeft"><a id="ac9f01785c001f828671da89569d874a3" name="ac9f01785c001f828671da89569d874a3"></a>
+<a class="el" href="../../d0/dcc/struct_amuse_1_1_vec3.html">Vec3</a>&#160;</td><td class="memItemRight"><b>p2</b></td></tr>
+<tr class="memdesc:ac9f01785c001f828671da89569d874a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点2 <br /></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="a33fced36c194e1f446a040ebe86a654d" name="a33fced36c194e1f446a040ebe86a654d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33fced36c194e1f446a040ebe86a654d">&#9670;&#160;</a></span>flip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ae7078ca6b2242a48ae0bac74cebe3df2">Triangle</a> &amp; flip </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>面を反転 </p>
+<p>p1 と p2 をスワップします。 </p>
+
+</div>
+</div>
+<a id="aa6bd762571ce03ced19b90e3fb68a9b2" name="aa6bd762571ce03ced19b90e3fb68a9b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6bd762571ce03ced19b90e3fb68a9b2">&#9670;&#160;</a></span>Lerp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="#ae7078ca6b2242a48ae0bac74cebe3df2">Triangle</a> Lerp </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#ae7078ca6b2242a48ae0bac74cebe3df2">Triangle</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="#ae7078ca6b2242a48ae0bac74cebe3df2">Triangle</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>t</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>補間 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>開始 </td></tr>
+    <tr><td class="paramname">b</td><td>終了 </td></tr>
+    <tr><td class="paramname">t</td><td>補間係数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>t=0のときa、t=1の時bを返す。 </dd></dl>
+
+</div>
+</div>
+<a id="ad749428099804c1571cac0e8baaedd00" name="ad749428099804c1571cac0e8baaedd00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad749428099804c1571cac0e8baaedd00">&#9670;&#160;</a></span>normal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/dcc/struct_amuse_1_1_vec3.html">Vec3</a> normal </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>法線を取得 </p>
+<p>領域がないときゼロベクトルを返す </p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>Runtime/Core/Public/Amuse/Core/Geometry/<a class="el" href="../../db/de5/_triangle_8h_source.html">Triangle.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><a href="../../dd/dca/class_amuse_1_1_triangle.html">Triangle</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

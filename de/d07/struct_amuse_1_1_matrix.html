@@ -1,0 +1,967 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: Matrix 構造体</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('de/d07/struct_amuse_1_1_matrix.html','../../','db/d10/struct_amuse_1_1_matrix-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">メソッド</a> &#124;
+<a href="#pub-static-methods">静的関数</a> &#124;
+<a href="#pub-attribs">変数</a> &#124;
+<a href="#pub-static-attribs">静的変数</a> &#124;
+<a href="../../db/d10/struct_amuse_1_1_matrix-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">Matrix 構造体<div class="ingroups"><a class="el" href="../../da/d78/group___amuse_core.html">Core</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">説明</h2>
+<div class="textblock"><p>行列クラス </p>
+<p>数学的表現は列優先表現です。Vec4は列ベクトルとして扱います。DirectXとは異なるので注意してください。 行列A、B、Cとベクトルvがあるとき、数学同様<br  />
+ <span class="tt">v' = ABCv = A*B*C*v</span><br  />
+ と記述しても正しい結果を得られますが、プログラムだと<br  />
+ <span class="tt">v' = ABCv = ((A*B)*C)*v</span><br  />
+ というように行列同士の計算が先にされパフォーマンス的に良くありません。 複数の行列とベクトルを計算する場合は明示的に行列とベクトルの合成を先にするようにしてください。 <br  />
+<br  />
+ メモリレイアウトはシェーダと合わせるために列優先データです。 </p>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+メソッド</h2></td></tr>
+<tr class="memitem:a4fac5e840a331c085a19a5793a3ee148" id="r_a4fac5e840a331c085a19a5793a3ee148"><td class="memItemLeft"><a id="a4fac5e840a331c085a19a5793a3ee148" name="a4fac5e840a331c085a19a5793a3ee148"></a>
+constexpr&#160;</td><td class="memItemRight"><b>Matrix</b> ()</td></tr>
+<tr class="memdesc:a4fac5e840a331c085a19a5793a3ee148"><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトコンストラクタ(初期化なし) <br /></td></tr>
+<tr class="memitem:a8510b0a0571ef52a7bf5cd7a3c693992" id="r_a8510b0a0571ef52a7bf5cd7a3c693992"><td class="memItemLeft"><a id="a8510b0a0571ef52a7bf5cd7a3c693992" name="a8510b0a0571ef52a7bf5cd7a3c693992"></a>
+constexpr&#160;</td><td class="memItemRight"><b>Matrix</b> (f32 m00, f32 m01, f32 m02, f32 m03, f32 m10, f32 m11, f32 m12, f32 m13, f32 m20, f32 m21, f32 m22, f32 m23, f32 m30, f32 m31, f32 m32, f32 m33)</td></tr>
+<tr class="memdesc:a8510b0a0571ef52a7bf5cd7a3c693992"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素を指定して初期化 <br /></td></tr>
+<tr class="memitem:af85a7c4f160713c5a8bb1fb031e6f4a0" id="r_af85a7c4f160713c5a8bb1fb031e6f4a0"><td class="memItemLeft"><a id="af85a7c4f160713c5a8bb1fb031e6f4a0" name="af85a7c4f160713c5a8bb1fb031e6f4a0"></a>
+bool&#160;</td><td class="memItemRight"><b>operator==</b> (const <a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a> &amp;v) const</td></tr>
+<tr class="memdesc:af85a7c4f160713c5a8bb1fb031e6f4a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">等価演算子 <br /></td></tr>
+<tr class="memitem:acc2c42e26fd908c1e73e49b87b8dd060" id="r_acc2c42e26fd908c1e73e49b87b8dd060"><td class="memItemLeft"><a id="acc2c42e26fd908c1e73e49b87b8dd060" name="acc2c42e26fd908c1e73e49b87b8dd060"></a>
+bool&#160;</td><td class="memItemRight"><b>operator!=</b> (const <a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a> &amp;v) const</td></tr>
+<tr class="memdesc:acc2c42e26fd908c1e73e49b87b8dd060"><td class="mdescLeft">&#160;</td><td class="mdescRight">否等価演算子 <br /></td></tr>
+<tr class="memitem:a019e8788b1c69ac794a3b0aad253df2d" id="r_a019e8788b1c69ac794a3b0aad253df2d"><td class="memItemLeft"><a id="a019e8788b1c69ac794a3b0aad253df2d" name="a019e8788b1c69ac794a3b0aad253df2d"></a>
+constexpr <a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a>&#160;</td><td class="memItemRight"><b>operator*</b> (const <a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a> &amp;other) const</td></tr>
+<tr class="memdesc:a019e8788b1c69ac794a3b0aad253df2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">行列演算子 <br /></td></tr>
+<tr class="memitem:a37c0574067607a3073f2b6b5e83823b2" id="r_a37c0574067607a3073f2b6b5e83823b2"><td class="memItemLeft"><a id="a37c0574067607a3073f2b6b5e83823b2" name="a37c0574067607a3073f2b6b5e83823b2"></a>
+constexpr <a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a> &amp;&#160;</td><td class="memItemRight"><b>operator*=</b> (const <a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a> &amp;o)</td></tr>
+<tr class="memdesc:a37c0574067607a3073f2b6b5e83823b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">行列演算代入演算子 <br /></td></tr>
+<tr class="memitem:a34bb22e87dcb8c05bada8243cee928b0" id="r_a34bb22e87dcb8c05bada8243cee928b0"><td class="memItemLeft"><a id="a34bb22e87dcb8c05bada8243cee928b0" name="a34bb22e87dcb8c05bada8243cee928b0"></a>
+<a class="el" href="../../d0/dcc/struct_amuse_1_1_vec3.html">Vec3</a>&#160;</td><td class="memItemRight"><b>operator*</b> (const <a class="el" href="../../d0/dcc/struct_amuse_1_1_vec3.html">Vec3</a> &amp;v) const</td></tr>
+<tr class="memdesc:a34bb22e87dcb8c05bada8243cee928b0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d0/dcc/struct_amuse_1_1_vec3.html" title="三次元ベクトル">Vec3</a> 合成代入演算子 <br /></td></tr>
+<tr class="memitem:a9937938b898c7be53db95093d0716d74" id="r_a9937938b898c7be53db95093d0716d74"><td class="memItemLeft"><a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a9937938b898c7be53db95093d0716d74">setColumn</a> (s32 index, <a class="el" href="../../d2/da2/struct_amuse_1_1_vec4.html">Vec4</a> column)</td></tr>
+<tr class="memdesc:a9937938b898c7be53db95093d0716d74"><td class="mdescLeft">&#160;</td><td class="mdescRight">行を設定  <br /></td></tr>
+<tr class="memitem:adad743c6d185176f229c99a35e98512f" id="r_adad743c6d185176f229c99a35e98512f"><td class="memItemLeft"><a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#adad743c6d185176f229c99a35e98512f">setRow</a> (s32 index, <a class="el" href="../../d2/da2/struct_amuse_1_1_vec4.html">Vec4</a> row)</td></tr>
+<tr class="memdesc:adad743c6d185176f229c99a35e98512f"><td class="mdescLeft">&#160;</td><td class="mdescRight">列を設定  <br /></td></tr>
+<tr class="memitem:aa33ff86158ae368795694089236b4877" id="r_aa33ff86158ae368795694089236b4877"><td class="memItemLeft"><a class="el" href="../../d2/da2/struct_amuse_1_1_vec4.html">Vec4</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa33ff86158ae368795694089236b4877">getColumn</a> (s32 index) const</td></tr>
+<tr class="memdesc:aa33ff86158ae368795694089236b4877"><td class="mdescLeft">&#160;</td><td class="mdescRight">行列の行を取得  <br /></td></tr>
+<tr class="memitem:a7804baad0596e0bbfa068075429b2394" id="r_a7804baad0596e0bbfa068075429b2394"><td class="memItemLeft"><a class="el" href="../../d2/da2/struct_amuse_1_1_vec4.html">Vec4</a>&#160;</td><td class="memItemRight"><a class="el" href="#a7804baad0596e0bbfa068075429b2394">getRow</a> (s32 index) const</td></tr>
+<tr class="memdesc:a7804baad0596e0bbfa068075429b2394"><td class="mdescLeft">&#160;</td><td class="mdescRight">行列の列を取得  <br /></td></tr>
+<tr class="memitem:a62b29dfa49217097b153eff40dedd85a" id="r_a62b29dfa49217097b153eff40dedd85a"><td class="memItemLeft"><a id="a62b29dfa49217097b153eff40dedd85a" name="a62b29dfa49217097b153eff40dedd85a"></a>
+<a class="el" href="../../d0/dcc/struct_amuse_1_1_vec3.html">Vec3</a>&#160;</td><td class="memItemRight"><b>getTrans</b> () const</td></tr>
+<tr class="memdesc:a62b29dfa49217097b153eff40dedd85a"><td class="mdescLeft">&#160;</td><td class="mdescRight">行列から回転量を計算 <br /></td></tr>
+<tr class="memitem:ac5a98fd9c69e284d38f5a175ae8407cc" id="r_ac5a98fd9c69e284d38f5a175ae8407cc"><td class="memItemLeft"><a id="ac5a98fd9c69e284d38f5a175ae8407cc" name="ac5a98fd9c69e284d38f5a175ae8407cc"></a>
+<a class="el" href="../../de/d8b/struct_amuse_1_1_rot.html">Rot</a>&#160;</td><td class="memItemRight"><b>getRot</b> () const</td></tr>
+<tr class="memdesc:ac5a98fd9c69e284d38f5a175ae8407cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">行列から回転量を計算 <br /></td></tr>
+<tr class="memitem:a6729f7f92708f9a8585e30c912911848" id="r_a6729f7f92708f9a8585e30c912911848"><td class="memItemLeft"><a id="a6729f7f92708f9a8585e30c912911848" name="a6729f7f92708f9a8585e30c912911848"></a>
+<a class="el" href="../../d0/dcc/struct_amuse_1_1_vec3.html">Vec3</a>&#160;</td><td class="memItemRight"><b>getScale</b> () const</td></tr>
+<tr class="memdesc:a6729f7f92708f9a8585e30c912911848"><td class="mdescLeft">&#160;</td><td class="mdescRight">行列から拡大量を計算 <br /></td></tr>
+<tr class="memitem:a43366a5b3882d5d89507238adb583032" id="r_a43366a5b3882d5d89507238adb583032"><td class="memItemLeft"><a id="a43366a5b3882d5d89507238adb583032" name="a43366a5b3882d5d89507238adb583032"></a>
+<a class="el" href="../../d6/d48/struct_amuse_1_1_quat.html">Quat</a>&#160;</td><td class="memItemRight"><b>getQuat</b> () const</td></tr>
+<tr class="memdesc:a43366a5b3882d5d89507238adb583032"><td class="mdescLeft">&#160;</td><td class="mdescRight">行列から回転量を計算 <br /></td></tr>
+<tr class="memitem:a9dfc2fb810eada7578a18a1310a798e8" id="r_a9dfc2fb810eada7578a18a1310a798e8"><td class="memItemLeft"><a id="a9dfc2fb810eada7578a18a1310a798e8" name="a9dfc2fb810eada7578a18a1310a798e8"></a>
+f32&#160;</td><td class="memItemRight"><b>determinant</b> () const</td></tr>
+<tr class="memdesc:a9dfc2fb810eada7578a18a1310a798e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">行列式の計算 <br /></td></tr>
+<tr class="memitem:ae65b494155d9653f7017cb6463766288" id="r_ae65b494155d9653f7017cb6463766288"><td class="memItemLeft"><a id="ae65b494155d9653f7017cb6463766288" name="ae65b494155d9653f7017cb6463766288"></a>
+bool&#160;</td><td class="memItemRight"><b>hasInverse</b> () const</td></tr>
+<tr class="memdesc:ae65b494155d9653f7017cb6463766288"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆行列を持つか <br /></td></tr>
+<tr class="memitem:a14c7a0f3e71f7adcc6b812f719114704" id="r_a14c7a0f3e71f7adcc6b812f719114704"><td class="memItemLeft"><a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a>&#160;</td><td class="memItemRight"><a class="el" href="#a14c7a0f3e71f7adcc6b812f719114704">inverse</a> () const</td></tr>
+<tr class="memdesc:a14c7a0f3e71f7adcc6b812f719114704"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆行列  <br /></td></tr>
+<tr class="memitem:a6f66f1e848663d2c2a8b30ce80a7dc41" id="r_a6f66f1e848663d2c2a8b30ce80a7dc41"><td class="memItemLeft">constexpr <a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6f66f1e848663d2c2a8b30ce80a7dc41">transposed</a> () const</td></tr>
+<tr class="memdesc:a6f66f1e848663d2c2a8b30ce80a7dc41"><td class="mdescLeft">&#160;</td><td class="mdescRight">転置行列の計算  <br /></td></tr>
+<tr class="memitem:a7c5cfcf513d1f1cb4db0378dec9cb1e2" id="r_a7c5cfcf513d1f1cb4db0378dec9cb1e2"><td class="memItemLeft"><a id="a7c5cfcf513d1f1cb4db0378dec9cb1e2" name="a7c5cfcf513d1f1cb4db0378dec9cb1e2"></a>
+constexpr <a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a> &amp;&#160;</td><td class="memItemRight"><b>transpose</b> ()</td></tr>
+<tr class="memdesc:a7c5cfcf513d1f1cb4db0378dec9cb1e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">行列を転置する <br /></td></tr>
+<tr class="memitem:a2e3af33434f9028b5594a7c36e2aace7" id="r_a2e3af33434f9028b5594a7c36e2aace7"><td class="memItemLeft"><a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a2e3af33434f9028b5594a7c36e2aace7">translate</a> (f32 x, f32 y, f32 z)</td></tr>
+<tr class="memdesc:a2e3af33434f9028b5594a7c36e2aace7"><td class="mdescLeft">&#160;</td><td class="mdescRight">行列に平行移動行列を乗算  <br /></td></tr>
+<tr class="memitem:a3d3ba19a0c92ffe69fece68e8ee9ce01" id="r_a3d3ba19a0c92ffe69fece68e8ee9ce01"><td class="memItemLeft"><a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a3d3ba19a0c92ffe69fece68e8ee9ce01">translate</a> (<a class="el" href="../../d0/dcc/struct_amuse_1_1_vec3.html">Vec3</a> trans)</td></tr>
+<tr class="memdesc:a3d3ba19a0c92ffe69fece68e8ee9ce01"><td class="mdescLeft">&#160;</td><td class="mdescRight">行列に平行移動行列を乗算  <br /></td></tr>
+<tr class="memitem:a2a054e255396b49c122e6ebaa9596820" id="r_a2a054e255396b49c122e6ebaa9596820"><td class="memItemLeft"><a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a2a054e255396b49c122e6ebaa9596820">rotate</a> (f32 x, f32 y, f32 z)</td></tr>
+<tr class="memdesc:a2a054e255396b49c122e6ebaa9596820"><td class="mdescLeft">&#160;</td><td class="mdescRight">行列に回転行列を乗算  <br /></td></tr>
+<tr class="memitem:a83ede695b266d234589ea6a9db418701" id="r_a83ede695b266d234589ea6a9db418701"><td class="memItemLeft"><a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a83ede695b266d234589ea6a9db418701">rotate</a> (<a class="el" href="../../de/d8b/struct_amuse_1_1_rot.html">Rot</a> rotation)</td></tr>
+<tr class="memdesc:a83ede695b266d234589ea6a9db418701"><td class="mdescLeft">&#160;</td><td class="mdescRight">行列に回転行列を乗算  <br /></td></tr>
+<tr class="memitem:ac2ff7825a5ccab0a6329284a03d2561b" id="r_ac2ff7825a5ccab0a6329284a03d2561b"><td class="memItemLeft"><a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ac2ff7825a5ccab0a6329284a03d2561b">rotate</a> (<a class="el" href="../../d6/d48/struct_amuse_1_1_quat.html">Quat</a> quat)</td></tr>
+<tr class="memdesc:ac2ff7825a5ccab0a6329284a03d2561b"><td class="mdescLeft">&#160;</td><td class="mdescRight">行列に回転行列を乗算  <br /></td></tr>
+<tr class="memitem:ae7186662cf69403f88509e97460487ae" id="r_ae7186662cf69403f88509e97460487ae"><td class="memItemLeft"><a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ae7186662cf69403f88509e97460487ae">scale</a> (f32 x, f32 y, f32 z)</td></tr>
+<tr class="memdesc:ae7186662cf69403f88509e97460487ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">行列に拡大縮小行列を乗算  <br /></td></tr>
+<tr class="memitem:ac365d5d74c16d9c772213ca736565963" id="r_ac365d5d74c16d9c772213ca736565963"><td class="memItemLeft"><a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ac365d5d74c16d9c772213ca736565963">scale</a> (<a class="el" href="../../d0/dcc/struct_amuse_1_1_vec3.html">Vec3</a> scale)</td></tr>
+<tr class="memdesc:ac365d5d74c16d9c772213ca736565963"><td class="mdescLeft">&#160;</td><td class="mdescRight">行列に拡大縮小行列を乗算  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静的関数</h2></td></tr>
+<tr class="memitem:a60b25a182385a8466fdddeea7b039932" id="r_a60b25a182385a8466fdddeea7b039932"><td class="memItemLeft">static constexpr <a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a>&#160;</td><td class="memItemRight"><a class="el" href="#a60b25a182385a8466fdddeea7b039932">Translate</a> (f32 x, f32 y, f32 z)</td></tr>
+<tr class="memdesc:a60b25a182385a8466fdddeea7b039932"><td class="mdescLeft">&#160;</td><td class="mdescRight">平行移動行列  <br /></td></tr>
+<tr class="memitem:a384572685080db132083968ffb7cf5a9" id="r_a384572685080db132083968ffb7cf5a9"><td class="memItemLeft">static constexpr <a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a>&#160;</td><td class="memItemRight"><a class="el" href="#a384572685080db132083968ffb7cf5a9">Translate</a> (<a class="el" href="../../d0/dcc/struct_amuse_1_1_vec3.html">Vec3</a> trans)</td></tr>
+<tr class="memdesc:a384572685080db132083968ffb7cf5a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">平行移動行列  <br /></td></tr>
+<tr class="memitem:aecec8b014fda0b08d0a54bafb46201c4" id="r_aecec8b014fda0b08d0a54bafb46201c4"><td class="memItemLeft">static <a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a>&#160;</td><td class="memItemRight"><a class="el" href="#aecec8b014fda0b08d0a54bafb46201c4">Rotate</a> (f32 x, f32 y, f32 z)</td></tr>
+<tr class="memdesc:aecec8b014fda0b08d0a54bafb46201c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">回転行列  <br /></td></tr>
+<tr class="memitem:aba10f33f91a306e3f3b822f21eb74b4f" id="r_aba10f33f91a306e3f3b822f21eb74b4f"><td class="memItemLeft">static <a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a>&#160;</td><td class="memItemRight"><a class="el" href="#aba10f33f91a306e3f3b822f21eb74b4f">Rotate</a> (<a class="el" href="../../de/d8b/struct_amuse_1_1_rot.html">Rot</a> rotation)</td></tr>
+<tr class="memdesc:aba10f33f91a306e3f3b822f21eb74b4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">回転行列  <br /></td></tr>
+<tr class="memitem:ae68f94237384626a1844abbb5274aa55" id="r_ae68f94237384626a1844abbb5274aa55"><td class="memItemLeft">static <a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae68f94237384626a1844abbb5274aa55">Rotate</a> (<a class="el" href="../../d6/d48/struct_amuse_1_1_quat.html">Quat</a> quat)</td></tr>
+<tr class="memdesc:ae68f94237384626a1844abbb5274aa55"><td class="mdescLeft">&#160;</td><td class="mdescRight">回転行列  <br /></td></tr>
+<tr class="memitem:a8ad2823fb089bb2973e1b700cedd5e70" id="r_a8ad2823fb089bb2973e1b700cedd5e70"><td class="memItemLeft">static <a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a>&#160;</td><td class="memItemRight"><a class="el" href="#a8ad2823fb089bb2973e1b700cedd5e70">Scale</a> (f32 x, f32 y, f32 z)</td></tr>
+<tr class="memdesc:a8ad2823fb089bb2973e1b700cedd5e70"><td class="mdescLeft">&#160;</td><td class="mdescRight">拡大縮小行列  <br /></td></tr>
+<tr class="memitem:a49a9461507bbff139374714a65c3bcd4" id="r_a49a9461507bbff139374714a65c3bcd4"><td class="memItemLeft">static <a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a>&#160;</td><td class="memItemRight"><a class="el" href="#a49a9461507bbff139374714a65c3bcd4">Scale</a> (<a class="el" href="../../d0/dcc/struct_amuse_1_1_vec3.html">Vec3</a> scale)</td></tr>
+<tr class="memdesc:a49a9461507bbff139374714a65c3bcd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">拡大縮小行列  <br /></td></tr>
+<tr class="memitem:acd34d28b1e2e6b61fee3c53091df3283" id="r_acd34d28b1e2e6b61fee3c53091df3283"><td class="memItemLeft"><a id="acd34d28b1e2e6b61fee3c53091df3283" name="acd34d28b1e2e6b61fee3c53091df3283"></a>
+static <a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a>&#160;</td><td class="memItemRight"><b>TRS</b> (<a class="el" href="../../d0/dcc/struct_amuse_1_1_vec3.html">Vec3</a> trans, <a class="el" href="../../de/d8b/struct_amuse_1_1_rot.html">Rot</a> rot, <a class="el" href="../../d0/dcc/struct_amuse_1_1_vec3.html">Vec3</a> scale)</td></tr>
+<tr class="memdesc:acd34d28b1e2e6b61fee3c53091df3283"><td class="mdescLeft">&#160;</td><td class="mdescRight">トランスフォーム行列 <br /></td></tr>
+<tr class="memitem:aa50f58d5f93ecce45c5c733f30d70d18" id="r_aa50f58d5f93ecce45c5c733f30d70d18"><td class="memItemLeft"><a id="aa50f58d5f93ecce45c5c733f30d70d18" name="aa50f58d5f93ecce45c5c733f30d70d18"></a>
+static <a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a>&#160;</td><td class="memItemRight"><b>TRS</b> (<a class="el" href="../../d0/dcc/struct_amuse_1_1_vec3.html">Vec3</a> trans, <a class="el" href="../../d6/d48/struct_amuse_1_1_quat.html">Quat</a> rot, <a class="el" href="../../d0/dcc/struct_amuse_1_1_vec3.html">Vec3</a> scale)</td></tr>
+<tr class="memdesc:aa50f58d5f93ecce45c5c733f30d70d18"><td class="mdescLeft">&#160;</td><td class="mdescRight">トランスフォーム行列 <br /></td></tr>
+<tr class="memitem:aec41fad21f9f07288cd73582b7846a78" id="r_aec41fad21f9f07288cd73582b7846a78"><td class="memItemLeft"><a id="aec41fad21f9f07288cd73582b7846a78" name="aec41fad21f9f07288cd73582b7846a78"></a>
+static <a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a>&#160;</td><td class="memItemRight"><b>Perspective</b> (f32 fov, f32 aspect, f32 zNear, f32 zFar)</td></tr>
+<tr class="memdesc:aec41fad21f9f07288cd73582b7846a78"><td class="mdescLeft">&#160;</td><td class="mdescRight">透視投影行列の生成 <br /></td></tr>
+<tr class="memitem:a520d6814db2cf6d6f76810958dec881a" id="r_a520d6814db2cf6d6f76810958dec881a"><td class="memItemLeft"><a id="a520d6814db2cf6d6f76810958dec881a" name="a520d6814db2cf6d6f76810958dec881a"></a>
+static <a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a>&#160;</td><td class="memItemRight"><b>Perspective</b> (f32 fov, f32 width, f32 height, f32 zNear, f32 zFar)</td></tr>
+<tr class="memdesc:a520d6814db2cf6d6f76810958dec881a"><td class="mdescLeft">&#160;</td><td class="mdescRight">幅と高さからアスペクト比を求めて透視投影行列を生成する。 <br /></td></tr>
+<tr class="memitem:af6ec0dc44c03e974541ba8a085f488e6" id="r_af6ec0dc44c03e974541ba8a085f488e6"><td class="memItemLeft"><a id="af6ec0dc44c03e974541ba8a085f488e6" name="af6ec0dc44c03e974541ba8a085f488e6"></a>
+static <a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a>&#160;</td><td class="memItemRight"><b>Perspective</b> (f32 fov, <a class="el" href="../../de/d61/struct_amuse_1_1_size.html">Size</a> size, f32 zNear, f32 zFar)</td></tr>
+<tr class="memdesc:af6ec0dc44c03e974541ba8a085f488e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">サイズからアスペクト比を求めて透視投影行列を生成する。 <br /></td></tr>
+<tr class="memitem:a7af68fe5c0d44740c0bf751f666a19d2" id="r_a7af68fe5c0d44740c0bf751f666a19d2"><td class="memItemLeft"><a id="a7af68fe5c0d44740c0bf751f666a19d2" name="a7af68fe5c0d44740c0bf751f666a19d2"></a>
+static <a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a>&#160;</td><td class="memItemRight"><b>Orthographic</b> (f32 left, f32 right, f32 bottom, f32 top, f32 zNear, f32 zFar)</td></tr>
+<tr class="memdesc:a7af68fe5c0d44740c0bf751f666a19d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">平行投影行列の生成 <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+変数</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft anon"><a id="a42b9dd5030b319be65c5b3ffbd95b771" name="a42b9dd5030b319be65c5b3ffbd95b771"></a>
+union {&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memitem:"><td class="memItemLeft anon"><a id="afa9e3369ce6084331c69695008573130" name="afa9e3369ce6084331c69695008573130"></a>
+&#160;&#160;&#160;struct {&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memitem:ab8e9cdfef80aec4f07cec5269994b325" id="r_ab8e9cdfef80aec4f07cec5269994b325"><td class="memItemLeft anon">
+&#160;&#160;&#160;&#160;&#160;&#160;f32&#160;&#160;&#160;<b>m00</b>&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memitem:a06e14a6e9dc7f0b74a34595173891e32" id="r_a06e14a6e9dc7f0b74a34595173891e32"><td class="memItemLeft anon">
+&#160;&#160;&#160;&#160;&#160;&#160;f32&#160;&#160;&#160;<b>m10</b>&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memitem:ad4ae3b5243d1a695dd3e38cb6feb489f" id="r_ad4ae3b5243d1a695dd3e38cb6feb489f"><td class="memItemLeft anon">
+&#160;&#160;&#160;&#160;&#160;&#160;f32&#160;&#160;&#160;<b>m20</b>&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memitem:a0918f916b665f070a539f1d9b2b7e227" id="r_a0918f916b665f070a539f1d9b2b7e227"><td class="memItemLeft anon">
+&#160;&#160;&#160;&#160;&#160;&#160;f32&#160;&#160;&#160;<b>m30</b>&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memitem:ad9f18edd18a272c27163ed7726d055f3" id="r_ad9f18edd18a272c27163ed7726d055f3"><td class="memItemLeft anon">
+&#160;&#160;&#160;&#160;&#160;&#160;f32&#160;&#160;&#160;<b>m01</b>&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memitem:a0f339dfbd1bc302db71449a3de4b6e6b" id="r_a0f339dfbd1bc302db71449a3de4b6e6b"><td class="memItemLeft anon">
+&#160;&#160;&#160;&#160;&#160;&#160;f32&#160;&#160;&#160;<b>m11</b>&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memitem:ac4c0fea50b7ca0d55711a38b5b121b3a" id="r_ac4c0fea50b7ca0d55711a38b5b121b3a"><td class="memItemLeft anon">
+&#160;&#160;&#160;&#160;&#160;&#160;f32&#160;&#160;&#160;<b>m21</b>&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memitem:a621a653cd9ebc813dde5d29eb4f2bed3" id="r_a621a653cd9ebc813dde5d29eb4f2bed3"><td class="memItemLeft anon">
+&#160;&#160;&#160;&#160;&#160;&#160;f32&#160;&#160;&#160;<b>m31</b>&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memitem:a51631c6a68b41d4712bb30a94c1de9b1" id="r_a51631c6a68b41d4712bb30a94c1de9b1"><td class="memItemLeft anon">
+&#160;&#160;&#160;&#160;&#160;&#160;f32&#160;&#160;&#160;<b>m02</b>&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memitem:a310076b82f32dfece777def1753969be" id="r_a310076b82f32dfece777def1753969be"><td class="memItemLeft anon">
+&#160;&#160;&#160;&#160;&#160;&#160;f32&#160;&#160;&#160;<b>m12</b>&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memitem:a1d174ec16be3aa1c42eb1a6f7a1391d3" id="r_a1d174ec16be3aa1c42eb1a6f7a1391d3"><td class="memItemLeft anon">
+&#160;&#160;&#160;&#160;&#160;&#160;f32&#160;&#160;&#160;<b>m22</b>&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memitem:a72cd6a5fc4b2935d84206aaa7569fbdf" id="r_a72cd6a5fc4b2935d84206aaa7569fbdf"><td class="memItemLeft anon">
+&#160;&#160;&#160;&#160;&#160;&#160;f32&#160;&#160;&#160;<b>m32</b>&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memitem:a9c943c55ec82239357b3c8770d5e6936" id="r_a9c943c55ec82239357b3c8770d5e6936"><td class="memItemLeft anon">
+&#160;&#160;&#160;&#160;&#160;&#160;f32&#160;&#160;&#160;<b>m03</b>&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memitem:adee722572064de4dc69090431e5a2d28" id="r_adee722572064de4dc69090431e5a2d28"><td class="memItemLeft anon">
+&#160;&#160;&#160;&#160;&#160;&#160;f32&#160;&#160;&#160;<b>m13</b>&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memitem:a29b0a0aa638167f8a50a44d2baeb68bc" id="r_a29b0a0aa638167f8a50a44d2baeb68bc"><td class="memItemLeft anon">
+&#160;&#160;&#160;&#160;&#160;&#160;f32&#160;&#160;&#160;<b>m23</b>&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memitem:a51e8ef2e9687dc716f8cf5a228b5a146" id="r_a51e8ef2e9687dc716f8cf5a228b5a146"><td class="memItemLeft anon">
+&#160;&#160;&#160;&#160;&#160;&#160;f32&#160;&#160;&#160;<b>m33</b>&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memitem:afa9e3369ce6084331c69695008573130" id="r_afa9e3369ce6084331c69695008573130"><td class="memItemLeft anonEnd">&#160;&#160;&#160;}&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memitem:a91966e195fc536b4332964ae51d39a16" id="r_a91966e195fc536b4332964ae51d39a16"><td class="memItemLeft anon">
+&#160;&#160;&#160;f32&#160;&#160;&#160;<b>m</b> [4][4]&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memdesc:a91966e195fc536b4332964ae51d39a16"><td class="mdescLeft">&#160;</td><td class="mdescRight">内部データ[x][y] (列優先) <br /></td></tr>
+<tr class="memitem:a42b9dd5030b319be65c5b3ffbd95b771" id="r_a42b9dd5030b319be65c5b3ffbd95b771"><td class="memItemLeft anonEnd">};&#160;</td><td class="memItemRight"></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+静的変数</h2></td></tr>
+<tr class="memitem:a2acbcf85ad321f64b7e4c865d51c200b" id="r_a2acbcf85ad321f64b7e4c865d51c200b"><td class="memItemLeft">static const <a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a>&#160;</td><td class="memItemRight"><a class="el" href="#a2acbcf85ad321f64b7e4c865d51c200b">Identity</a></td></tr>
+<tr class="memdesc:a2acbcf85ad321f64b7e4c865d51c200b"><td class="mdescLeft">&#160;</td><td class="mdescRight">行  <br /></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="aa33ff86158ae368795694089236b4877" name="aa33ff86158ae368795694089236b4877"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa33ff86158ae368795694089236b4877">&#9670;&#160;</a></span>getColumn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d2/da2/struct_amuse_1_1_vec4.html">Vec4</a> getColumn </td>
+          <td>(</td>
+          <td class="paramtype">s32</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>行列の行を取得 </p>
+<p>存在しない行を取得しようとした場合はエラー </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>行インデックス </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7804baad0596e0bbfa068075429b2394" name="a7804baad0596e0bbfa068075429b2394"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7804baad0596e0bbfa068075429b2394">&#9670;&#160;</a></span>getRow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d2/da2/struct_amuse_1_1_vec4.html">Vec4</a> getRow </td>
+          <td>(</td>
+          <td class="paramtype">s32</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>行列の列を取得 </p>
+<p>存在しない列を取得しようとした場合はエラー </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>列インデックス </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a14c7a0f3e71f7adcc6b812f719114704" name="a14c7a0f3e71f7adcc6b812f719114704"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14c7a0f3e71f7adcc6b812f719114704">&#9670;&#160;</a></span>inverse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a> inverse </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>逆行列 </p>
+<p>逆行列が計算できない場合は単位行列を返す </p>
+
+</div>
+</div>
+<a id="aecec8b014fda0b08d0a54bafb46201c4" name="aecec8b014fda0b08d0a54bafb46201c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecec8b014fda0b08d0a54bafb46201c4">&#9670;&#160;</a></span>Rotate() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a> Rotate </td>
+          <td>(</td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>z</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>回転行列 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>X軸の回転量(Degrees) </td></tr>
+    <tr><td class="paramname">y</td><td>Y軸の回転量(Degrees) </td></tr>
+    <tr><td class="paramname">z</td><td>Z軸の回転量(Degrees) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae68f94237384626a1844abbb5274aa55" name="ae68f94237384626a1844abbb5274aa55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae68f94237384626a1844abbb5274aa55">&#9670;&#160;</a></span>Rotate() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a> Rotate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/d48/struct_amuse_1_1_quat.html">Quat</a></td>          <td class="paramname"><span class="paramname"><em>quat</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>回転行列 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">quat</td><td>回転量 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aba10f33f91a306e3f3b822f21eb74b4f" name="aba10f33f91a306e3f3b822f21eb74b4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba10f33f91a306e3f3b822f21eb74b4f">&#9670;&#160;</a></span>Rotate() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a> Rotate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../de/d8b/struct_amuse_1_1_rot.html">Rot</a></td>          <td class="paramname"><span class="paramname"><em>rotation</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>回転行列 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rotation</td><td>回転量 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2a054e255396b49c122e6ebaa9596820" name="a2a054e255396b49c122e6ebaa9596820"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a054e255396b49c122e6ebaa9596820">&#9670;&#160;</a></span>rotate() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a> &amp; rotate </td>
+          <td>(</td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>z</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>行列に回転行列を乗算 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>X軸の回転量(Degrees) </td></tr>
+    <tr><td class="paramname">y</td><td>Y軸の回転量(Degrees) </td></tr>
+    <tr><td class="paramname">z</td><td>Z軸の回転量(Degrees) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac2ff7825a5ccab0a6329284a03d2561b" name="ac2ff7825a5ccab0a6329284a03d2561b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2ff7825a5ccab0a6329284a03d2561b">&#9670;&#160;</a></span>rotate() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a> &amp; rotate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/d48/struct_amuse_1_1_quat.html">Quat</a></td>          <td class="paramname"><span class="paramname"><em>quat</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>行列に回転行列を乗算 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">quat</td><td>回転量 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a83ede695b266d234589ea6a9db418701" name="a83ede695b266d234589ea6a9db418701"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83ede695b266d234589ea6a9db418701">&#9670;&#160;</a></span>rotate() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a> &amp; rotate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../de/d8b/struct_amuse_1_1_rot.html">Rot</a></td>          <td class="paramname"><span class="paramname"><em>rotation</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>行列に回転行列を乗算 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rotation</td><td>回転量 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8ad2823fb089bb2973e1b700cedd5e70" name="a8ad2823fb089bb2973e1b700cedd5e70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ad2823fb089bb2973e1b700cedd5e70">&#9670;&#160;</a></span>Scale() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a> Scale </td>
+          <td>(</td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>z</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>拡大縮小行列 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>X軸方向の拡大縮小量 </td></tr>
+    <tr><td class="paramname">y</td><td>Y軸方向の拡大縮小量 </td></tr>
+    <tr><td class="paramname">z</td><td>Z軸方向の拡大縮小量 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a49a9461507bbff139374714a65c3bcd4" name="a49a9461507bbff139374714a65c3bcd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49a9461507bbff139374714a65c3bcd4">&#9670;&#160;</a></span>Scale() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a> Scale </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/dcc/struct_amuse_1_1_vec3.html">Vec3</a></td>          <td class="paramname"><span class="paramname"><em>scale</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>拡大縮小行列 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scale</td><td>拡大縮小量 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae7186662cf69403f88509e97460487ae" name="ae7186662cf69403f88509e97460487ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7186662cf69403f88509e97460487ae">&#9670;&#160;</a></span>scale() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a> &amp; scale </td>
+          <td>(</td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>z</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>行列に拡大縮小行列を乗算 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>X軸方向の拡大縮小量 </td></tr>
+    <tr><td class="paramname">y</td><td>Y軸方向の拡大縮小量 </td></tr>
+    <tr><td class="paramname">z</td><td>Z軸方向の拡大縮小量 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac365d5d74c16d9c772213ca736565963" name="ac365d5d74c16d9c772213ca736565963"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac365d5d74c16d9c772213ca736565963">&#9670;&#160;</a></span>scale() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a> &amp; scale </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/dcc/struct_amuse_1_1_vec3.html">Vec3</a></td>          <td class="paramname"><span class="paramname"><em>scale</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>行列に拡大縮小行列を乗算 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scale</td><td>拡大縮小量 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9937938b898c7be53db95093d0716d74" name="a9937938b898c7be53db95093d0716d74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9937938b898c7be53db95093d0716d74">&#9670;&#160;</a></span>setColumn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a> &amp; setColumn </td>
+          <td>(</td>
+          <td class="paramtype">s32</td>          <td class="paramname"><span class="paramname"><em>index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d2/da2/struct_amuse_1_1_vec4.html">Vec4</a></td>          <td class="paramname"><span class="paramname"><em>column</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>行を設定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>行インデックス </td></tr>
+    <tr><td class="paramname">column</td><td>行ベクトル </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="adad743c6d185176f229c99a35e98512f" name="adad743c6d185176f229c99a35e98512f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adad743c6d185176f229c99a35e98512f">&#9670;&#160;</a></span>setRow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a> &amp; setRow </td>
+          <td>(</td>
+          <td class="paramtype">s32</td>          <td class="paramname"><span class="paramname"><em>index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d2/da2/struct_amuse_1_1_vec4.html">Vec4</a></td>          <td class="paramname"><span class="paramname"><em>row</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>列を設定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>列インデックス </td></tr>
+    <tr><td class="paramname">row</td><td>列ベクトル </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a60b25a182385a8466fdddeea7b039932" name="a60b25a182385a8466fdddeea7b039932"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60b25a182385a8466fdddeea7b039932">&#9670;&#160;</a></span>Translate() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a> Translate </td>
+          <td>(</td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>z</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>平行移動行列 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>X軸方向の移動量 </td></tr>
+    <tr><td class="paramname">y</td><td>Y軸方向の移動量 </td></tr>
+    <tr><td class="paramname">z</td><td>Z軸方向の移動量 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a384572685080db132083968ffb7cf5a9" name="a384572685080db132083968ffb7cf5a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a384572685080db132083968ffb7cf5a9">&#9670;&#160;</a></span>Translate() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a> Translate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/dcc/struct_amuse_1_1_vec3.html">Vec3</a></td>          <td class="paramname"><span class="paramname"><em>trans</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>平行移動行列 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">trans</td><td>移動量 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2e3af33434f9028b5594a7c36e2aace7" name="a2e3af33434f9028b5594a7c36e2aace7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e3af33434f9028b5594a7c36e2aace7">&#9670;&#160;</a></span>translate() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a> &amp; translate </td>
+          <td>(</td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>z</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>行列に平行移動行列を乗算 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>X軸方向の移動量 </td></tr>
+    <tr><td class="paramname">y</td><td>Y軸方向の移動量 </td></tr>
+    <tr><td class="paramname">z</td><td>Z軸方向の移動量 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3d3ba19a0c92ffe69fece68e8ee9ce01" name="a3d3ba19a0c92ffe69fece68e8ee9ce01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d3ba19a0c92ffe69fece68e8ee9ce01">&#9670;&#160;</a></span>translate() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a> &amp; translate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/dcc/struct_amuse_1_1_vec3.html">Vec3</a></td>          <td class="paramname"><span class="paramname"><em>trans</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>行列に平行移動行列を乗算 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">trans</td><td>移動量 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6f66f1e848663d2c2a8b30ce80a7dc41" name="a6f66f1e848663d2c2a8b30ce80a7dc41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f66f1e848663d2c2a8b30ce80a7dc41">&#9670;&#160;</a></span>transposed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a> transposed </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>転置行列の計算 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>直交行列の転置行列は逆行列となる。 </dd></dl>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">メンバ詳解</h2>
+<a id="a2acbcf85ad321f64b7e4c865d51c200b" name="a2acbcf85ad321f64b7e4c865d51c200b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2acbcf85ad321f64b7e4c865d51c200b">&#9670;&#160;</a></span>Identity</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="#a4fac5e840a331c085a19a5793a3ee148">Matrix</a> Identity</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>行 </p>
+<p>単位行列 </p>
+
+</div>
+</div>
+<hr/>この構造体詳解は次のファイルから抽出されました:<ul>
+<li>Runtime/Core/Public/Amuse/Core/Math/<a class="el" href="../../d0/d45/_matrix_8h_source.html">Matrix.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><a href="../../de/d07/struct_amuse_1_1_matrix.html">Matrix</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: Path クラス</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('de/dd4/class_amuse_1_1_path.html','../../','d4/d01/class_amuse_1_1_path-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">静的関数</a> &#124;
+<a href="../../d4/d01/class_amuse_1_1_path-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">Path クラス<div class="ingroups"><a class="el" href="../../da/d78/group___amuse_core.html">Core</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">説明</h2>
+<div class="textblock"><p>ファイルパスのユーティリティ </p>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静的関数</h2></td></tr>
+<tr class="memitem:a785b9f734fbcb788588424c918ebc0d9" id="r_a785b9f734fbcb788588424c918ebc0d9"><td class="memTemplParams" colspan="2"><a id="a785b9f734fbcb788588424c918ebc0d9" name="a785b9f734fbcb788588424c918ebc0d9"></a>
+template&lt;class... TArgs&gt; </td></tr>
+<tr class="memitem:a785b9f734fbcb788588424c918ebc0d9 template"><td class="memItemLeft">static String&#160;</td><td class="memItemRight"><b>Combine</b> (TArgs &amp;&amp;... args)</td></tr>
+<tr class="memdesc:a785b9f734fbcb788588424c918ebc0d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">複数の文字列を結合してPath文字列に変換する。 <br /></td></tr>
+<tr class="memitem:a6bf4e482ac10d955c731320e27768e99" id="r_a6bf4e482ac10d955c731320e27768e99"><td class="memItemLeft"><a id="a6bf4e482ac10d955c731320e27768e99" name="a6bf4e482ac10d955c731320e27768e99"></a>
+static Char&#160;</td><td class="memItemRight"><b>Separator</b> ()</td></tr>
+<tr class="memdesc:a6bf4e482ac10d955c731320e27768e99"><td class="mdescLeft">&#160;</td><td class="mdescRight">区切り文字を取得 <br /></td></tr>
+<tr class="memitem:a455b2df7fd728f2c3627e4558ae5345a" id="r_a455b2df7fd728f2c3627e4558ae5345a"><td class="memItemLeft">static String&#160;</td><td class="memItemRight"><a class="el" href="#a455b2df7fd728f2c3627e4558ae5345a">Normalize</a> (StringView path)</td></tr>
+<tr class="memdesc:a455b2df7fd728f2c3627e4558ae5345a"><td class="mdescLeft">&#160;</td><td class="mdescRight">パス文字列を正規化する  <br /></td></tr>
+<tr class="memitem:a73516cab53d585cc834e4394fc05c32d" id="r_a73516cab53d585cc834e4394fc05c32d"><td class="memItemLeft">static String&#160;</td><td class="memItemRight"><a class="el" href="#a73516cab53d585cc834e4394fc05c32d">FileName</a> (StringView path)</td></tr>
+<tr class="memdesc:a73516cab53d585cc834e4394fc05c32d"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルパスからファイル名を取得  <br /></td></tr>
+<tr class="memitem:aa84f813003c782cec2bd9759392c3289" id="r_aa84f813003c782cec2bd9759392c3289"><td class="memItemLeft">static String&#160;</td><td class="memItemRight"><a class="el" href="#aa84f813003c782cec2bd9759392c3289">Stem</a> (StringView path)</td></tr>
+<tr class="memdesc:aa84f813003c782cec2bd9759392c3289"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルパスからStemを取得  <br /></td></tr>
+<tr class="memitem:ae88190945db5570f9cbdb4f73289d961" id="r_ae88190945db5570f9cbdb4f73289d961"><td class="memItemLeft">static String&#160;</td><td class="memItemRight"><a class="el" href="#ae88190945db5570f9cbdb4f73289d961">Extension</a> (StringView path, WithDot withDot=WithDot::No)</td></tr>
+<tr class="memdesc:ae88190945db5570f9cbdb4f73289d961"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルパスから拡張子を取得  <br /></td></tr>
+<tr class="memitem:a2e22654d7e8970fa85f90e0717c09605" id="r_a2e22654d7e8970fa85f90e0717c09605"><td class="memItemLeft"><a id="a2e22654d7e8970fa85f90e0717c09605" name="a2e22654d7e8970fa85f90e0717c09605"></a>
+static String&#160;</td><td class="memItemRight"><b>Parent</b> (StringView path, s32 level=1)</td></tr>
+<tr class="memdesc:a2e22654d7e8970fa85f90e0717c09605"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルパスから親ディレクトリを取得 <br /></td></tr>
+<tr class="memitem:a6237e7bf909b8670d62e0db8e14de610" id="r_a6237e7bf909b8670d62e0db8e14de610"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#a6237e7bf909b8670d62e0db8e14de610">IsAbsolute</a> (StringView path)</td></tr>
+<tr class="memdesc:a6237e7bf909b8670d62e0db8e14de610"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルパスが絶対パスか  <br /></td></tr>
+<tr class="memitem:a57c34ae578527482f49f21de8de4f41b" id="r_a57c34ae578527482f49f21de8de4f41b"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#a57c34ae578527482f49f21de8de4f41b">IsRelative</a> (StringView path)</td></tr>
+<tr class="memdesc:a57c34ae578527482f49f21de8de4f41b"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルパスが相対パスか  <br /></td></tr>
+<tr class="memitem:a30a68cdebb357dddf91ac7c49fb5945c" id="r_a30a68cdebb357dddf91ac7c49fb5945c"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#a30a68cdebb357dddf91ac7c49fb5945c">HasExtension</a> (StringView path, StringView ext=&quot;&quot;)</td></tr>
+<tr class="memdesc:a30a68cdebb357dddf91ac7c49fb5945c"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルパスが拡張子を持つか  <br /></td></tr>
+<tr class="memitem:a875fbe561dec5e5590e98f9d8e4f66fa" id="r_a875fbe561dec5e5590e98f9d8e4f66fa"><td class="memItemLeft">static String&#160;</td><td class="memItemRight"><a class="el" href="#a875fbe561dec5e5590e98f9d8e4f66fa">ReplaceExtension</a> (StringView path, StringView extension)</td></tr>
+<tr class="memdesc:a875fbe561dec5e5590e98f9d8e4f66fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルパスの拡張子を変更  <br /></td></tr>
+<tr class="memitem:a848973e97937663f61daf7a5ea03deb3" id="r_a848973e97937663f61daf7a5ea03deb3"><td class="memItemLeft"><a id="a848973e97937663f61daf7a5ea03deb3" name="a848973e97937663f61daf7a5ea03deb3"></a>
+static String&#160;</td><td class="memItemRight"><b>ReplaceStem</b> (StringView path, StringView stem)</td></tr>
+<tr class="memdesc:a848973e97937663f61daf7a5ea03deb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルパスのステムを変更 <br /></td></tr>
+<tr class="memitem:a8131ef8d97f0e9f6ee49ab2e75158854" id="r_a8131ef8d97f0e9f6ee49ab2e75158854"><td class="memItemLeft"><a id="a8131ef8d97f0e9f6ee49ab2e75158854" name="a8131ef8d97f0e9f6ee49ab2e75158854"></a>
+static String&#160;</td><td class="memItemRight"><b>ReplaceFileName</b> (StringView path, StringView fileName)</td></tr>
+<tr class="memdesc:a8131ef8d97f0e9f6ee49ab2e75158854"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルパスのファイル名を変更 <br /></td></tr>
+<tr class="memitem:aee32ec44d332e099208b9c5c8b429746" id="r_aee32ec44d332e099208b9c5c8b429746"><td class="memItemLeft"><a id="aee32ec44d332e099208b9c5c8b429746" name="aee32ec44d332e099208b9c5c8b429746"></a>
+static String&#160;</td><td class="memItemRight"><b>RemoveExtension</b> (StringView path)</td></tr>
+<tr class="memdesc:aee32ec44d332e099208b9c5c8b429746"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルパスの拡張子を削除 <br /></td></tr>
+<tr class="memitem:a59c0bbab1ec4c66328466100f5435bab" id="r_a59c0bbab1ec4c66328466100f5435bab"><td class="memItemLeft"><a id="a59c0bbab1ec4c66328466100f5435bab" name="a59c0bbab1ec4c66328466100f5435bab"></a>
+static String&#160;</td><td class="memItemRight"><b>RemoveFileName</b> (StringView path)</td></tr>
+<tr class="memdesc:a59c0bbab1ec4c66328466100f5435bab"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルパスのファイル名を削除 <br /></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="ae88190945db5570f9cbdb4f73289d961" name="ae88190945db5570f9cbdb4f73289d961"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae88190945db5570f9cbdb4f73289d961">&#9670;&#160;</a></span>Extension()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String Extension </td>
+          <td>(</td>
+          <td class="paramtype">StringView</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">WithDot</td>          <td class="paramname"><span class="paramname"><em>withDot</em></span><span class="paramdefsep"> = </span><span class="paramdefval">WithDot::No</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ファイルパスから拡張子を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>ファイルパス </td></tr>
+    <tr><td class="paramname">withDot</td><td>ドットを含めるか</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>例：.txt / txt </p>
+
+</div>
+</div>
+<a id="a73516cab53d585cc834e4394fc05c32d" name="a73516cab53d585cc834e4394fc05c32d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73516cab53d585cc834e4394fc05c32d">&#9670;&#160;</a></span>FileName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String FileName </td>
+          <td>(</td>
+          <td class="paramtype">StringView</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ファイルパスからファイル名を取得 </p>
+<p>StemとExtensionを結合したものを返します。 例：sample.txt </p>
+
+</div>
+</div>
+<a id="a30a68cdebb357dddf91ac7c49fb5945c" name="a30a68cdebb357dddf91ac7c49fb5945c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30a68cdebb357dddf91ac7c49fb5945c">&#9670;&#160;</a></span>HasExtension()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool HasExtension </td>
+          <td>(</td>
+          <td class="paramtype">StringView</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">StringView</td>          <td class="paramname"><span class="paramname"><em>ext</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ファイルパスが拡張子を持つか </p>
+<p>extに拡張子を指定した場合は対象の拡張子を持つか判定します。 </p>
+
+</div>
+</div>
+<a id="a6237e7bf909b8670d62e0db8e14de610" name="a6237e7bf909b8670d62e0db8e14de610"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6237e7bf909b8670d62e0db8e14de610">&#9670;&#160;</a></span>IsAbsolute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsAbsolute </td>
+          <td>(</td>
+          <td class="paramtype">StringView</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ファイルパスが絶対パスか </p>
+<p>Windowsの場合、ドライブ名か//から始まる場合trueを返します。 </p>
+
+</div>
+</div>
+<a id="a57c34ae578527482f49f21de8de4f41b" name="a57c34ae578527482f49f21de8de4f41b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57c34ae578527482f49f21de8de4f41b">&#9670;&#160;</a></span>IsRelative()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsRelative </td>
+          <td>(</td>
+          <td class="paramtype">StringView</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ファイルパスが相対パスか </p>
+<p>絶対パスではない場合trueを返します。 </p>
+
+</div>
+</div>
+<a id="a455b2df7fd728f2c3627e4558ae5345a" name="a455b2df7fd728f2c3627e4558ae5345a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a455b2df7fd728f2c3627e4558ae5345a">&#9670;&#160;</a></span>Normalize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String Normalize </td>
+          <td>(</td>
+          <td class="paramtype">StringView</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>パス文字列を正規化する </p>
+<ul>
+<li>lexically_normalを使用して正規化<ul>
+<li>区切り文字を/に統一 </li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+<a id="a875fbe561dec5e5590e98f9d8e4f66fa" name="a875fbe561dec5e5590e98f9d8e4f66fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a875fbe561dec5e5590e98f9d8e4f66fa">&#9670;&#160;</a></span>ReplaceExtension()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String ReplaceExtension </td>
+          <td>(</td>
+          <td class="paramtype">StringView</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">StringView</td>          <td class="paramname"><span class="paramname"><em>extension</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ファイルパスの拡張子を変更 </p>
+<p>ファイルパスが拡張子を持たない場合はfalseを返します。 </p>
+
+</div>
+</div>
+<a id="aa84f813003c782cec2bd9759392c3289" name="aa84f813003c782cec2bd9759392c3289"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa84f813003c782cec2bd9759392c3289">&#9670;&#160;</a></span>Stem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String Stem </td>
+          <td>(</td>
+          <td class="paramtype">StringView</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ファイルパスからStemを取得 </p>
+<p>拡張子を除いたファイル名を返します。 例：sample </p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>Runtime/Core/Public/Amuse/Core/File/<a class="el" href="../../db/d36/_path_8h_source.html">Path.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><a href="../../de/dd4/class_amuse_1_1_path.html">Path</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

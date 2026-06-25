@@ -1,0 +1,305 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: Random クラス</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d7/d5a/class_amuse_1_1_random.html','../../','d7/d26/class_amuse_1_1_random-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">メソッド</a> &#124;
+<a href="../../d7/d26/class_amuse_1_1_random-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">Random クラス<div class="ingroups"><a class="el" href="../../da/d78/group___amuse_core.html">Core</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">説明</h2>
+<div class="textblock"><p>乱数生成器 </p>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+メソッド</h2></td></tr>
+<tr class="memitem:aa0cd23a16025cfeef7b8810eeb2a5d36" id="r_aa0cd23a16025cfeef7b8810eeb2a5d36"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa0cd23a16025cfeef7b8810eeb2a5d36">Random</a> ()</td></tr>
+<tr class="memdesc:aa0cd23a16025cfeef7b8810eeb2a5d36"><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトコンストラクタ  <br /></td></tr>
+<tr class="memitem:af0865008e2936cf4e5772a127215f325" id="r_af0865008e2936cf4e5772a127215f325"><td class="memItemLeft"><a id="af0865008e2936cf4e5772a127215f325" name="af0865008e2936cf4e5772a127215f325"></a>
+&#160;</td><td class="memItemRight"><b>Random</b> (u32 seed)</td></tr>
+<tr class="memdesc:af0865008e2936cf4e5772a127215f325"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ(シード値指定) <br /></td></tr>
+<tr class="memitem:aa2b867a427edc4c2704beff738a43914" id="r_aa2b867a427edc4c2704beff738a43914"><td class="memItemLeft"><a id="aa2b867a427edc4c2704beff738a43914" name="aa2b867a427edc4c2704beff738a43914"></a>
+void&#160;</td><td class="memItemRight"><b>setSeed</b> (u32 seed)</td></tr>
+<tr class="memdesc:aa2b867a427edc4c2704beff738a43914"><td class="mdescLeft">&#160;</td><td class="mdescRight">乱数のシード値を変更 <br /></td></tr>
+<tr class="memitem:ad98cc72cdab318cc32ccb2922f6924fc" id="r_ad98cc72cdab318cc32ccb2922f6924fc"><td class="memItemLeft"><a id="ad98cc72cdab318cc32ccb2922f6924fc" name="ad98cc72cdab318cc32ccb2922f6924fc"></a>
+u32&#160;</td><td class="memItemRight"><b>getU32</b> ()</td></tr>
+<tr class="memdesc:ad98cc72cdab318cc32ccb2922f6924fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">u32の乱数を生成する <br /></td></tr>
+<tr class="memitem:a11bb85026e75df7b19b742661cb89464" id="r_a11bb85026e75df7b19b742661cb89464"><td class="memItemLeft">s32&#160;</td><td class="memItemRight"><a class="el" href="#a11bb85026e75df7b19b742661cb89464">range</a> (s32 minimum, s32 maximum)</td></tr>
+<tr class="memdesc:a11bb85026e75df7b19b742661cb89464"><td class="mdescLeft">&#160;</td><td class="mdescRight">整数の乱数を生成する  <br /></td></tr>
+<tr class="memitem:a5320f9ec11a59ff7d315a2d574c12694" id="r_a5320f9ec11a59ff7d315a2d574c12694"><td class="memItemLeft">f32&#160;</td><td class="memItemRight"><a class="el" href="#a5320f9ec11a59ff7d315a2d574c12694">range</a> (f32 minimum, f32 maximum)</td></tr>
+<tr class="memdesc:a5320f9ec11a59ff7d315a2d574c12694"><td class="mdescLeft">&#160;</td><td class="mdescRight">小数の乱数を生成する  <br /></td></tr>
+<tr class="memitem:a8e05df49060d4a233377945c9d673cb4" id="r_a8e05df49060d4a233377945c9d673cb4"><td class="memItemLeft">f32&#160;</td><td class="memItemRight"><a class="el" href="#a8e05df49060d4a233377945c9d673cb4">get0_1</a> ()</td></tr>
+<tr class="memdesc:a8e05df49060d4a233377945c9d673cb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">0～1の乱数を生成する  <br /></td></tr>
+<tr class="memitem:a1bb7c9ffa35065b424e8bf2ecb1cf55d" id="r_a1bb7c9ffa35065b424e8bf2ecb1cf55d"><td class="memItemLeft">f32&#160;</td><td class="memItemRight"><a class="el" href="#a1bb7c9ffa35065b424e8bf2ecb1cf55d">get1_1</a> ()</td></tr>
+<tr class="memdesc:a1bb7c9ffa35065b424e8bf2ecb1cf55d"><td class="mdescLeft">&#160;</td><td class="mdescRight">-1～1の乱数を生成する  <br /></td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">コンストラクタ</h2>
+<a id="aa0cd23a16025cfeef7b8810eeb2a5d36" name="aa0cd23a16025cfeef7b8810eeb2a5d36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0cd23a16025cfeef7b8810eeb2a5d36">&#9670;&#160;</a></span>Random()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Random </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>デフォルトコンストラクタ </p>
+<p>シード値はコンストラクタ呼び出したときの時間から設定されます。 </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="a8e05df49060d4a233377945c9d673cb4" name="a8e05df49060d4a233377945c9d673cb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e05df49060d4a233377945c9d673cb4">&#9670;&#160;</a></span>get0_1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">f32 get0_1 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>0～1の乱数を生成する </p>
+<p>0以上1以下の乱数を生成する </p>
+
+</div>
+</div>
+<a id="a1bb7c9ffa35065b424e8bf2ecb1cf55d" name="a1bb7c9ffa35065b424e8bf2ecb1cf55d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bb7c9ffa35065b424e8bf2ecb1cf55d">&#9670;&#160;</a></span>get1_1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">f32 get1_1 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>-1～1の乱数を生成する </p>
+<p>-1以上1以下の乱数を生成する </p>
+
+</div>
+</div>
+<a id="a5320f9ec11a59ff7d315a2d574c12694" name="a5320f9ec11a59ff7d315a2d574c12694"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5320f9ec11a59ff7d315a2d574c12694">&#9670;&#160;</a></span>range() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">f32 range </td>
+          <td>(</td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>minimum</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>maximum</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>小数の乱数を生成する </p>
+<p>minimum以上maximum以下の乱数を生成する </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">minimum</td><td>乱数の最小値 </td></tr>
+    <tr><td class="paramname">maximum</td><td>乱数の最大値 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a11bb85026e75df7b19b742661cb89464" name="a11bb85026e75df7b19b742661cb89464"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11bb85026e75df7b19b742661cb89464">&#9670;&#160;</a></span>range() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">s32 range </td>
+          <td>(</td>
+          <td class="paramtype">s32</td>          <td class="paramname"><span class="paramname"><em>minimum</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">s32</td>          <td class="paramname"><span class="paramname"><em>maximum</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>整数の乱数を生成する </p>
+<p>minimum以上maximum以下の乱数を生成する </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">minimum</td><td>乱数の最小値 </td></tr>
+    <tr><td class="paramname">maximum</td><td>乱数の最大値 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>Runtime/Core/Public/Amuse/Core/Math/<a class="el" href="../../d0/d80/_random_8h_source.html">Random.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><a href="../../d7/d5a/class_amuse_1_1_random.html">Random</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

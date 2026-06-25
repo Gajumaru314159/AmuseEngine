@@ -171,20 +171,20 @@ NetBSD  </td><td class="markdownTableBodyNone">char  </td><td class="markdownTab
 </div><!-- fragment --><p>書式文字列の詳細は<a href="https://cpprefjp.github.io/reference/format/format.html">std::format</a>を参考にしてください。</p>
 <h2>formatter対応</h2>
 <p>独自追加した型をFormatに対応する場合はstd::formatterを直接特殊化してください。以下はRange型のformatterの例です。</p>
-<div class="fragment"><div class="line"><span class="keyword">template</span> &lt;&gt; <span class="keyword">struct </span>std::formatter&lt;Amuse::Core::Range, Amuse::Core::Char&gt; {</div>
+<div class="fragment"><div class="line"><span class="keyword">template</span> &lt;&gt; <span class="keyword">struct </span>std::formatter&lt;Amuse::Range, Amuse::Char&gt; {</div>
 <div class="line">    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ParseContext&gt;</div>
 <div class="line">    <span class="keyword">constexpr</span> <span class="keyword">auto</span> parse(ParseContext&amp; ctx) -&gt; <span class="keyword">decltype</span>(ctx.begin()) {</div>
 <div class="line">        <span class="keywordflow">return</span> ctx.end();</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> FormatContext&gt;</div>
-<div class="line">    <span class="keyword">auto</span> format(<a class="code hl_struct" href="../../d5/d54/struct_amuse_1_1_core_1_1_range.html">Amuse::Core::Range</a> value, FormatContext&amp; ctx)<span class="keyword"> const </span>{</div>
-<div class="line">        <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;({},{})&quot;</span>, value.<a class="code hl_variable" href="../../d5/d54/struct_amuse_1_1_core_1_1_range.html#a486748c027803b52fb1f7c35ec647606">min</a>,value.<a class="code hl_variable" href="../../d5/d54/struct_amuse_1_1_core_1_1_range.html#a30e044c16beecdbd9100c05d38722f5b">max</a>);</div>
+<div class="line">    <span class="keyword">auto</span> format(<a class="code hl_struct" href="../../d6/d2c/struct_amuse_1_1_range.html">Amuse::Range</a> value, FormatContext&amp; ctx)<span class="keyword"> const </span>{</div>
+<div class="line">        <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;({},{})&quot;</span>, value.<a class="code hl_variable" href="../../d6/d2c/struct_amuse_1_1_range.html#aa09d7985d58e87f3c1ed4d6945f84edc">min</a>,value.<a class="code hl_variable" href="../../d6/d2c/struct_amuse_1_1_range.html#a319dd1a4c80df1f7e3663a5353808819">max</a>);</div>
 <div class="line">    }</div>
 <div class="line">};</div>
-<div class="ttc" id="astruct_amuse_1_1_core_1_1_range_html"><div class="ttname"><a href="../../d5/d54/struct_amuse_1_1_core_1_1_range.html">Amuse::Core::Range</a></div><div class="ttdoc">範囲</div><div class="ttdef"><b>Definition</b> Range.h:11</div></div>
-<div class="ttc" id="astruct_amuse_1_1_core_1_1_range_html_a30e044c16beecdbd9100c05d38722f5b"><div class="ttname"><a href="../../d5/d54/struct_amuse_1_1_core_1_1_range.html#a30e044c16beecdbd9100c05d38722f5b">Amuse::Core::Range::max</a></div><div class="ttdeci">f32 max</div><div class="ttdoc">最大値</div><div class="ttdef"><b>Definition</b> Range.h:96</div></div>
-<div class="ttc" id="astruct_amuse_1_1_core_1_1_range_html_a486748c027803b52fb1f7c35ec647606"><div class="ttname"><a href="../../d5/d54/struct_amuse_1_1_core_1_1_range.html#a486748c027803b52fb1f7c35ec647606">Amuse::Core::Range::min</a></div><div class="ttdeci">f32 min</div><div class="ttdoc">最小値</div><div class="ttdef"><b>Definition</b> Range.h:95</div></div>
+<div class="ttc" id="astruct_amuse_1_1_range_html"><div class="ttname"><a href="../../d6/d2c/struct_amuse_1_1_range.html">Amuse::Range</a></div><div class="ttdoc">範囲</div><div class="ttdef"><b>Definition</b> Range.h:12</div></div>
+<div class="ttc" id="astruct_amuse_1_1_range_html_a319dd1a4c80df1f7e3663a5353808819"><div class="ttname"><a href="../../d6/d2c/struct_amuse_1_1_range.html#a319dd1a4c80df1f7e3663a5353808819">Amuse::Range::max</a></div><div class="ttdeci">f32 max</div><div class="ttdoc">最大値</div><div class="ttdef"><b>Definition</b> Range.h:97</div></div>
+<div class="ttc" id="astruct_amuse_1_1_range_html_aa09d7985d58e87f3c1ed4d6945f84edc"><div class="ttname"><a href="../../d6/d2c/struct_amuse_1_1_range.html#aa09d7985d58e87f3c1ed4d6945f84edc">Amuse::Range::min</a></div><div class="ttdeci">f32 min</div><div class="ttdoc">最小値</div><div class="ttdef"><b>Definition</b> Range.h:96</div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

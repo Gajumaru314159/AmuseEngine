@@ -1,0 +1,316 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: RPI</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('db/db7/group___amuse_r_p_i.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#enum-members">列挙型</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle"><div class="title">RPI </div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳細</h2>
+<div class="textblock"><p>レンダーパイプライン、マテリアル、メッシュなどの描画上位機能。 </p>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:FGResources" id="r_FGResources"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d7/d17/class_amuse_1_1_f_g_resources.html">FGResources</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">FrameGraphのリソース管理クラス  <a href="../../d7/d17/class_amuse_1_1_f_g_resources.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:FGBuilder" id="r_FGBuilder"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../de/dd5/class_amuse_1_1_f_g_builder.html">FGBuilder</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">FrameGraphで使用するリソースを生成するクラス  <a href="../../de/dd5/class_amuse_1_1_f_g_builder.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:FGConnections" id="r_FGConnections"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d4/d1d/class_amuse_1_1_f_g_connections.html">FGConnections</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">パス間の名前付きリソース接続  <a href="../../d4/d1d/class_amuse_1_1_f_g_connections.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:FG" id="r_FG"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d9/d73/class_amuse_1_1_f_g.html">FG</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">FrameGraph  <a href="../../d9/d73/class_amuse_1_1_f_g.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:FG_3A_3ANoData" id="r_FG_3A_3ANoData"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../db/d56/struct_amuse_1_1_f_g_1_1_no_data.html">FG::NoData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">パス固有データを持たないことを表す型  <a href="../../db/d56/struct_amuse_1_1_f_g_1_1_no_data.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:FGData" id="r_FGData"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../dd/da1/struct_amuse_1_1_f_g_data.html">FGData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">FG(FrameGraph)の内部構造データ  <a href="../../dd/da1/struct_amuse_1_1_f_g_data.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:FGData_3A_3AResource" id="r_FGData_3A_3AResource"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d8/df1/struct_amuse_1_1_f_g_data_1_1_resource.html">FGData::Resource</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">FrameGraph リソースのデバッグ情報  <a href="../../d8/df1/struct_amuse_1_1_f_g_data_1_1_resource.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:FGDataWriter" id="r_FGDataWriter"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../de/dd9/class_amuse_1_1_f_g_data_writer.html">FGDataWriter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d9/d73/class_amuse_1_1_f_g.html#ae629f6ff70e206a0e672848fcd0cf2bc" title="FrameGraph のデバッグ情報を Writer に出力する">FG::debugOutput()</a> を使用してFG(FrameGraph)の内部データを <a class="el" href="../../dd/da1/struct_amuse_1_1_f_g_data.html" title="FG(FrameGraph)の内部構造データ">FGData</a> に書き込むクラス  <a href="../../de/dd9/class_amuse_1_1_f_g_data_writer.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:FGResource" id="r_FGResource"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d1/dbe/struct_amuse_1_1_f_g_resource.html">FGResource</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">フレームグラフリソースを表す構造体  <a href="../../d1/dbe/struct_amuse_1_1_f_g_resource.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Graphics" id="r_Graphics"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d7/df8/class_amuse_1_1_graphics.html">Graphics</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">グラフィック  <a href="../../d7/df8/class_amuse_1_1_graphics.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Material" id="r_Material"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d0/dfb/class_amuse_1_1_material.html">Material</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアル  <a href="../../d0/dfb/class_amuse_1_1_material.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:MaterialBlockDesc" id="r_MaterialBlockDesc"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../df/d51/struct_amuse_1_1_material_block_desc.html">MaterialBlockDesc</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアル定義  <a href="../../df/d51/struct_amuse_1_1_material_block_desc.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:MaterialBlock" id="r_MaterialBlock"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d4/d9d/class_amuse_1_1_material_block.html">MaterialBlock</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアルのパラメーターを管理するクラス  <a href="../../d4/d9d/class_amuse_1_1_material_block.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:InputLayout" id="r_InputLayout"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d4/d27/struct_amuse_1_1_input_layout.html">InputLayout</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点属性  <a href="../../d4/d27/struct_amuse_1_1_input_layout.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:ShaderSet" id="r_ShaderSet"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d7/d3a/struct_amuse_1_1_shader_set.html">ShaderSet</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアルパスの品質別シェーダ設定  <a href="../../d7/d3a/struct_amuse_1_1_shader_set.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:MaterialPass" id="r_MaterialPass"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d5/d52/struct_amuse_1_1_material_pass.html">MaterialPass</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアルの描画パス設定  <a href="../../d5/d52/struct_amuse_1_1_material_pass.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:MaterialDesc" id="r_MaterialDesc"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../da/ddc/struct_amuse_1_1_material_desc.html">MaterialDesc</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアル定義  <a href="../../da/ddc/struct_amuse_1_1_material_desc.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:MaterialPropertiesDesc" id="r_MaterialPropertiesDesc"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d2/d24/struct_amuse_1_1_material_properties_desc.html">MaterialPropertiesDesc</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアルプロパティ名の集合  <a href="../../d2/d24/struct_amuse_1_1_material_properties_desc.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:MaterialPropertiesSetDesc" id="r_MaterialPropertiesSetDesc"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d4/da3/struct_amuse_1_1_material_properties_set_desc.html">MaterialPropertiesSetDesc</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">グローバル・シーン・ビュー別のマテリアルプロパティ集合  <a href="../../d4/da3/struct_amuse_1_1_material_properties_set_desc.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:MaterialShader" id="r_MaterialShader"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d4/d01/class_amuse_1_1_material_shader.html">MaterialShader</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアルシェーダー  <a href="../../d4/d01/class_amuse_1_1_material_shader.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:MaterialSystemDesc" id="r_MaterialSystemDesc"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d8/d26/struct_amuse_1_1_material_system_desc.html">MaterialSystemDesc</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアルシステム初期化設定  <a href="../../d8/d26/struct_amuse_1_1_material_system_desc.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:MaterialSystem" id="r_MaterialSystem"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d4/d8d/class_amuse_1_1_material_system.html">MaterialSystem</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアルシステム  <a href="../../d4/d8d/class_amuse_1_1_material_system.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:MaterialSystem_3A_3AMateriaBlockDescSet" id="r_MaterialSystem_3A_3AMateriaBlockDescSet"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d2/dd9/struct_amuse_1_1_material_system_1_1_materia_block_desc_set.html">MaterialSystem::MateriaBlockDescSet</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">グローバル・シーン・ビュー別のブロック定義  <a href="../../d2/dd9/struct_amuse_1_1_material_system_1_1_materia_block_desc_set.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:MaterialBlockSet" id="r_MaterialBlockSet"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d4/dd1/struct_amuse_1_1_material_block_set.html">MaterialBlockSet</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画時に使用するマテリアルブロック一式  <a href="../../d4/dd1/struct_amuse_1_1_material_block_set.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:MaterialValuePropertyDesc" id="r_MaterialValuePropertyDesc"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../db/db6/struct_amuse_1_1_material_value_property_desc.html">MaterialValuePropertyDesc</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアル値プロパティの配置情報  <a href="../../db/db6/struct_amuse_1_1_material_value_property_desc.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:MeshLodBuffer" id="r_MeshLodBuffer"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d4/d49/struct_amuse_1_1_mesh_lod_buffer.html">MeshLodBuffer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">メッシュ LOD の GPU バッファ  <a href="../../d4/d49/struct_amuse_1_1_mesh_lod_buffer.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:MeshLodSource" id="r_MeshLodSource"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d2/df5/struct_amuse_1_1_mesh_lod_source.html">MeshLodSource</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">メッシュ LOD の CPU 側頂点ソース  <a href="../../d2/df5/struct_amuse_1_1_mesh_lod_source.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:MeshSection" id="r_MeshSection"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d2/dde/struct_amuse_1_1_mesh_section.html">MeshSection</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">メッシュ内のマテリアル割り当て範囲  <a href="../../d2/dde/struct_amuse_1_1_mesh_section.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:MeshLod" id="r_MeshLod"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d1/d5a/struct_amuse_1_1_mesh_lod.html">MeshLod</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">メッシュの LOD データ  <a href="../../d1/d5a/struct_amuse_1_1_mesh_lod.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Mesh" id="r_Mesh"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d3/d95/class_amuse_1_1_mesh.html">Mesh</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画用メッシュリソース  <a href="../../d3/d95/class_amuse_1_1_mesh.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:CameraRenderFeature" id="r_CameraRenderFeature"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../da/d67/class_amuse_1_1_camera_render_feature.html">CameraRenderFeature</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアル描画機能  <a href="../../da/d67/class_amuse_1_1_camera_render_feature.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:ImGuiRenderFeature" id="r_ImGuiRenderFeature"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d4/d89/class_amuse_1_1_im_gui_render_feature.html">ImGuiRenderFeature</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ImGui描画機能  <a href="../../d4/d89/class_amuse_1_1_im_gui_render_feature.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:DirectionalLightData" id="r_DirectionalLightData"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d5/d2b/struct_amuse_1_1_directional_light_data.html">DirectionalLightData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">平行光源データ  <a href="../../d5/d2b/struct_amuse_1_1_directional_light_data.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:PointLightData" id="r_PointLightData"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../dc/d9e/struct_amuse_1_1_point_light_data.html">PointLightData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">点光源データ  <a href="../../dc/d9e/struct_amuse_1_1_point_light_data.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:SpotLightData" id="r_SpotLightData"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../de/d77/struct_amuse_1_1_spot_light_data.html">SpotLightData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">スポットライトデータ  <a href="../../de/d77/struct_amuse_1_1_spot_light_data.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:ResizableBuffer" id="r_ResizableBuffer"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d4/d40/class_amuse_1_1_resizable_buffer.html">ResizableBuffer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素数に応じて拡張する GPU バッファ  <a href="../../d4/d40/class_amuse_1_1_resizable_buffer.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:PointLightRenderFeature" id="r_PointLightRenderFeature"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d6/d38/class_amuse_1_1_point_light_render_feature.html">PointLightRenderFeature</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアル描画機能  <a href="../../d6/d38/class_amuse_1_1_point_light_render_feature.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:MaterialDrawPacket" id="r_MaterialDrawPacket"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../de/dc8/struct_amuse_1_1_material_draw_packet.html">MaterialDrawPacket</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d1/da5/class_amuse_1_1_material_render_feature.html" title="マテリアル描画機能">MaterialRenderFeature</a> に渡す描画要求  <a href="../../de/dc8/struct_amuse_1_1_material_draw_packet.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:MaterialDrawItem" id="r_MaterialDrawItem"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d7/d31/struct_amuse_1_1_material_draw_item.html">MaterialDrawItem</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">パイプライン解決後の描画項目  <a href="../../d7/d31/struct_amuse_1_1_material_draw_item.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:MaterialDrawPass" id="r_MaterialDrawPass"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d1/d3e/struct_amuse_1_1_material_draw_pass.html">MaterialDrawPass</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアルパス単位の描画項目リスト  <a href="../../d1/d3e/struct_amuse_1_1_material_draw_pass.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:MaterialRenderFeature" id="r_MaterialRenderFeature"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d1/da5/class_amuse_1_1_material_render_feature.html">MaterialRenderFeature</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアル描画機能  <a href="../../d1/da5/class_amuse_1_1_material_render_feature.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:SparseUploadBuffer_3C_20T_20_3E" id="r_SparseUploadBuffer_3C_20T_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d3/d37/class_amuse_1_1_sparse_upload_buffer.html">SparseUploadBuffer&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPU 側の疎配列領域を GPU バッファへアップロードするバッファ  <a href="../../d3/d37/class_amuse_1_1_sparse_upload_buffer.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:MeshUnitKey" id="r_MeshUnitKey"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d0/d27/struct_amuse_1_1_mesh_unit_key.html">MeshUnitKey</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">同一描画単位を識別するキー  <a href="../../d0/d27/struct_amuse_1_1_mesh_unit_key.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:MeshUnitKeyHasher" id="r_MeshUnitKeyHasher"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d8/d6f/struct_amuse_1_1_mesh_unit_key_hasher.html">MeshUnitKeyHasher</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d0/d27/struct_amuse_1_1_mesh_unit_key.html" title="同一描画単位を識別するキー">MeshUnitKey</a> 用ハッシュ  <a href="../../d8/d6f/struct_amuse_1_1_mesh_unit_key_hasher.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:MeshProxy" id="r_MeshProxy"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d4/d57/struct_amuse_1_1_mesh_proxy.html">MeshProxy</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">シーン内に配置されたメッシュインスタンス  <a href="../../d4/d57/struct_amuse_1_1_mesh_proxy.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:MeshRenderFeature" id="r_MeshRenderFeature"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d0/d90/class_amuse_1_1_mesh_render_feature.html">MeshRenderFeature</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアル描画機能  <a href="../../d0/d90/class_amuse_1_1_mesh_render_feature.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:MeshRenderFeature_3A_3AMeshCommand" id="r_MeshRenderFeature_3A_3AMeshCommand"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d7/d61/struct_amuse_1_1_mesh_render_feature_1_1_mesh_command.html">MeshRenderFeature::MeshCommand</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">メッシュ更新コマンド  <a href="../../d7/d61/struct_amuse_1_1_mesh_render_feature_1_1_mesh_command.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:MeshRenderFeature_3A_3AMeshViewData_3A_3ACPUData" id="r_MeshRenderFeature_3A_3AMeshViewData_3A_3ACPUData"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d2/d0b/struct_amuse_1_1_mesh_render_feature_1_1_mesh_view_data_1_1_c_p_u_data.html">MeshRenderFeature::MeshViewData::CPUData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPU 側メッシュ描画データ  <a href="../../d2/d0b/struct_amuse_1_1_mesh_render_feature_1_1_mesh_view_data_1_1_c_p_u_data.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:MeshRenderFeature_3A_3AMeshViewData_3A_3AGPUData" id="r_MeshRenderFeature_3A_3AMeshViewData_3A_3AGPUData"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d6/d84/struct_amuse_1_1_mesh_render_feature_1_1_mesh_view_data_1_1_g_p_u_data.html">MeshRenderFeature::MeshViewData::GPUData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">GPU 側メッシュ描画データ  <a href="../../d6/d84/struct_amuse_1_1_mesh_render_feature_1_1_mesh_view_data_1_1_g_p_u_data.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:DeferredData" id="r_DeferredData"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d0/da2/struct_amuse_1_1_deferred_data.html">DeferredData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d0/d7d/class_amuse_1_1_deferred_pass.html" title="GBuffer をライティングしてカラーへ合成する描画パス">DeferredPass</a> のビュー別データ  <a href="../../d0/da2/struct_amuse_1_1_deferred_data.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:DeferredPass_3A_3AInput" id="r_DeferredPass_3A_3AInput"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d2/d1e/struct_amuse_1_1_deferred_pass_1_1_input.html">DeferredPass::Input</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d0/d7d/class_amuse_1_1_deferred_pass.html" title="GBuffer をライティングしてカラーへ合成する描画パス">DeferredPass</a> の入力リソース  <a href="../../d2/d1e/struct_amuse_1_1_deferred_pass_1_1_input.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:DeferredPass_3A_3AOutput" id="r_DeferredPass_3A_3AOutput"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d1/d73/struct_amuse_1_1_deferred_pass_1_1_output.html">DeferredPass::Output</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d0/d7d/class_amuse_1_1_deferred_pass.html" title="GBuffer をライティングしてカラーへ合成する描画パス">DeferredPass</a> の出力リソース  <a href="../../d1/d73/struct_amuse_1_1_deferred_pass_1_1_output.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:EarlyZPass" id="r_EarlyZPass"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../dd/d14/class_amuse_1_1_early_z_pass.html">EarlyZPass</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">深度のみを先行描画するパス  <a href="../../dd/d14/class_amuse_1_1_early_z_pass.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:EarlyZPass_3A_3AOutput" id="r_EarlyZPass_3A_3AOutput"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../dc/d8d/struct_amuse_1_1_early_z_pass_1_1_output.html">EarlyZPass::Output</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../dd/d14/class_amuse_1_1_early_z_pass.html" title="深度のみを先行描画するパス">EarlyZPass</a> の出力リソース  <a href="../../dc/d8d/struct_amuse_1_1_early_z_pass_1_1_output.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:OpaquePass" id="r_OpaquePass"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d5/df3/class_amuse_1_1_opaque_pass.html">OpaquePass</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">不透明メッシュを GBuffer へ描画するパス  <a href="../../d5/df3/class_amuse_1_1_opaque_pass.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:OpaquePass_3A_3AOutput" id="r_OpaquePass_3A_3AOutput"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d6/d61/struct_amuse_1_1_opaque_pass_1_1_output.html">OpaquePass::Output</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d5/df3/class_amuse_1_1_opaque_pass.html" title="不透明メッシュを GBuffer へ描画するパス">OpaquePass</a> の出力リソース  <a href="../../d6/d61/struct_amuse_1_1_opaque_pass_1_1_output.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:MaskedPass" id="r_MaskedPass"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../db/d84/class_amuse_1_1_masked_pass.html">MaskedPass</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">マスク付きメッシュを GBuffer へ描画するパス  <a href="../../db/d84/class_amuse_1_1_masked_pass.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:MaskedPass_3A_3AOutput" id="r_MaskedPass_3A_3AOutput"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d2/d91/struct_amuse_1_1_masked_pass_1_1_output.html">MaskedPass::Output</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../db/d84/class_amuse_1_1_masked_pass.html" title="マスク付きメッシュを GBuffer へ描画するパス">MaskedPass</a> の出力リソース  <a href="../../d2/d91/struct_amuse_1_1_masked_pass_1_1_output.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:GBufferPass" id="r_GBufferPass"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d9/d69/class_amuse_1_1_g_buffer_pass.html">GBufferPass</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">GBuffer 生成に必要なパスをまとめた描画パス  <a href="../../d9/d69/class_amuse_1_1_g_buffer_pass.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:GBufferPass_3A_3AOutput" id="r_GBufferPass_3A_3AOutput"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d2/de6/struct_amuse_1_1_g_buffer_pass_1_1_output.html">GBufferPass::Output</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d9/d69/class_amuse_1_1_g_buffer_pass.html" title="GBuffer 生成に必要なパスをまとめた描画パス">GBufferPass</a> の出力リソース  <a href="../../d2/de6/struct_amuse_1_1_g_buffer_pass_1_1_output.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:ImGuiPass" id="r_ImGuiPass"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d1/dcf/class_amuse_1_1_im_gui_pass.html">ImGuiPass</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RenderView毎のImGui描画処理  <a href="../../d1/dcf/class_amuse_1_1_im_gui_pass.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:ImGuiPass_3A_3AOutput" id="r_ImGuiPass_3A_3AOutput"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d5/d40/struct_amuse_1_1_im_gui_pass_1_1_output.html">ImGuiPass::Output</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d1/dcf/class_amuse_1_1_im_gui_pass.html" title="RenderView毎のImGui描画処理">ImGuiPass</a> の出力リソース  <a href="../../d5/d40/struct_amuse_1_1_im_gui_pass_1_1_output.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:OutputViewData" id="r_OutputViewData"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d0/d22/struct_amuse_1_1_output_view_data.html">OutputViewData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d0/d86/class_amuse_1_1_output_pass.html" title="最終カラーをスワップチェーンまたはテクスチャへ出力するパス">OutputPass</a> のビュー別出力先情報  <a href="../../d0/d22/struct_amuse_1_1_output_view_data.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:OutputPass" id="r_OutputPass"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d0/d86/class_amuse_1_1_output_pass.html">OutputPass</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">最終カラーをスワップチェーンまたはテクスチャへ出力するパス  <a href="../../d0/d86/class_amuse_1_1_output_pass.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:OutputPass_3A_3AOutput" id="r_OutputPass_3A_3AOutput"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d3/d12/struct_amuse_1_1_output_pass_1_1_output.html">OutputPass::Output</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d0/d86/class_amuse_1_1_output_pass.html" title="最終カラーをスワップチェーンまたはテクスチャへ出力するパス">OutputPass</a> の出力リソース  <a href="../../d3/d12/struct_amuse_1_1_output_pass_1_1_output.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:ImGuiRenderPipeline" id="r_ImGuiRenderPipeline"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d4/ddd/class_amuse_1_1_im_gui_render_pipeline.html">ImGuiRenderPipeline</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ImGui 表示用の描画パイプライン  <a href="../../d4/ddd/class_amuse_1_1_im_gui_render_pipeline.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:UniversalRenderPipeline" id="r_UniversalRenderPipeline"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d8/d38/class_amuse_1_1_universal_render_pipeline.html">UniversalRenderPipeline</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">標準的な GBuffer/Deferred/ImGui/Output を行う描画パイプライン  <a href="../../d8/d38/class_amuse_1_1_universal_render_pipeline.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:RenderFeature" id="r_RenderFeature"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../df/de6/class_amuse_1_1_render_feature.html">RenderFeature</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画機能  <a href="../../df/de6/class_amuse_1_1_render_feature.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:RenderPass" id="r_RenderPass"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d0/d61/class_amuse_1_1_render_pass.html">RenderPass</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d0/dd5/class_amuse_1_1_render_pipeline.html" title="シーンとビューの描画手順を定義する基底クラス">RenderPipeline</a> で使用する描画パス基底クラス  <a href="../../d0/d61/class_amuse_1_1_render_pass.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:RenderPipeline" id="r_RenderPipeline"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d0/dd5/class_amuse_1_1_render_pipeline.html">RenderPipeline</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">シーンとビューの描画手順を定義する基底クラス  <a href="../../d0/dd5/class_amuse_1_1_render_pipeline.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:RenderFeatureSet" id="r_RenderFeatureSet"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../da/d14/class_amuse_1_1_render_feature_set.html">RenderFeatureSet</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../df/deb/class_amuse_1_1_render_scene.html" title="描画シーン RenderScene">RenderScene</a> が保持する描画機能の集合  <a href="../../da/d14/class_amuse_1_1_render_feature_set.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:RenderScene" id="r_RenderScene"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../df/deb/class_amuse_1_1_render_scene.html">RenderScene</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画シーン <a class="el" href="../../df/deb/class_amuse_1_1_render_scene.html" title="RenderScene">RenderScene</a>  <a href="../../df/deb/class_amuse_1_1_render_scene.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:RenderViewData" id="r_RenderViewData"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d3/d26/struct_amuse_1_1_render_view_data.html">RenderViewData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d2/df2/class_amuse_1_1_render_view.html" title="レンダー・ビュー RenderView">RenderView</a> の生成設定  <a href="../../d3/d26/struct_amuse_1_1_render_view_data.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:RenderView" id="r_RenderView"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d2/df2/class_amuse_1_1_render_view.html">RenderView</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">レンダー・ビュー <a class="el" href="../../d2/df2/class_amuse_1_1_render_view.html" title="RenderView">RenderView</a>  <a href="../../d2/df2/class_amuse_1_1_render_view.html#details">[詳解]</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+列挙型</h2></td></tr>
+<tr class="memitem:ga5f4e50fa3321f68dc9d3dcba85ee4060" id="r_ga5f4e50fa3321f68dc9d3dcba85ee4060"><td class="memItemLeft"><a id="ga5f4e50fa3321f68dc9d3dcba85ee4060" name="ga5f4e50fa3321f68dc9d3dcba85ee4060"></a>enum class &#160;</td><td class="memItemRight"><a class="el" href="#ga5f4e50fa3321f68dc9d3dcba85ee4060">FGResourceType</a> : s32 { <b>Invalid</b>
+, <b>Texture</b>
+, <b>Buffer</b>
+, <b>Dummy</b>
+ }</td></tr>
+<tr class="memdesc:ga5f4e50fa3321f68dc9d3dcba85ee4060"><td class="mdescLeft">&#160;</td><td class="mdescRight">FrameGraphで使用されるリソースの種類 <br /></td></tr>
+<tr class="memitem:ga0b9818fa7e1385f219224e19c3e95a71" id="r_ga0b9818fa7e1385f219224e19c3e95a71"><td class="memItemLeft"><a id="ga0b9818fa7e1385f219224e19c3e95a71" name="ga0b9818fa7e1385f219224e19c3e95a71"></a>enum class &#160;</td><td class="memItemRight"><a class="el" href="#ga0b9818fa7e1385f219224e19c3e95a71">VertexLayoutId</a> : s32 </td></tr>
+<tr class="memdesc:ga0b9818fa7e1385f219224e19c3e95a71"><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点レイアウト識別子 <br /></td></tr>
+<tr class="memitem:ga8741375d30175cb44a9f774440fecf15" id="r_ga8741375d30175cb44a9f774440fecf15"><td class="memItemLeft"><a id="ga8741375d30175cb44a9f774440fecf15" name="ga8741375d30175cb44a9f774440fecf15"></a>enum class &#160;</td><td class="memItemRight"><a class="el" href="#ga8741375d30175cb44a9f774440fecf15">MeshCommandType</a> { <b>Add</b>
+, <b>Remove</b>
+, <b>Update</b>
+ }</td></tr>
+<tr class="memdesc:ga8741375d30175cb44a9f774440fecf15"><td class="mdescLeft">&#160;</td><td class="mdescRight">メッシュ更新コマンド種別 <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:gaa557f8c00dcd2ce57b2a236c08044304" id="r_gaa557f8c00dcd2ce57b2a236c08044304"><td class="memItemLeft"><a id="gaa557f8c00dcd2ce57b2a236c08044304" name="gaa557f8c00dcd2ce57b2a236c08044304"></a>
+struct <a class="el" href="../../d2/d0b/struct_amuse_1_1_mesh_render_feature_1_1_mesh_view_data_1_1_c_p_u_data.html">Amuse::MeshRenderFeature::MeshViewData::CPUData</a>&#160;</td><td class="memItemRight"><b>cpu</b></td></tr>
+<tr class="memitem:ga991cc915f30eb8bcdc2ecdd299c324f2" id="r_ga991cc915f30eb8bcdc2ecdd299c324f2"><td class="memItemLeft"><a id="ga991cc915f30eb8bcdc2ecdd299c324f2" name="ga991cc915f30eb8bcdc2ecdd299c324f2"></a>
+struct <a class="el" href="../../d6/d84/struct_amuse_1_1_mesh_render_feature_1_1_mesh_view_data_1_1_g_p_u_data.html">Amuse::MeshRenderFeature::MeshViewData::GPUData</a>&#160;</td><td class="memItemRight"><b>gpu</b></td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

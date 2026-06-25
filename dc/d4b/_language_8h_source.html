@@ -127,72 +127,85 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('dc/d4b/_langua
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;Amuse/Core/Core.h&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span>Amuse::Platform {</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keyword">using namespace </span>Amuse::Core;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">enum class</span> Language {</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        Unknown = -1,       </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        Japanese,           </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        English,            </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        French,             </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        Italian,            </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        German,             </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        Spanish,            </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        Korean,             </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        Portuguese,         </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        Russian,            </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        Chinese,            </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span>Amuse {</div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="../../df/de5/group___amuse_platform.html#ga315ca917ad583797f709ea477dd28705">   11</a></span>    <span class="keyword">enum class</span> <a class="code hl_enumeration" href="../../df/de5/group___amuse_platform.html#ga315ca917ad583797f709ea477dd28705">Language</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="../../df/de5/group___amuse_platform.html#gga315ca917ad583797f709ea477dd28705a88183b946cc5f0e8c96b2e66e1c74a7e">   12</a></span>        <a class="code hl_enumvalue" href="../../d1/da5/group___amuse_input.html#gga7f039edf8ca5f938e3d74c5e6eaf5f51a88183b946cc5f0e8c96b2e66e1c74a7e">Unknown</a> = -1,       </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="../../df/de5/group___amuse_platform.html#gga315ca917ad583797f709ea477dd28705af32ced6a9ba164c4b3c047fd1d7c882e">   14</a></span>        <a class="code hl_enumvalue" href="../../df/de5/group___amuse_platform.html#gga315ca917ad583797f709ea477dd28705af32ced6a9ba164c4b3c047fd1d7c882e">Japanese</a>,           </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../df/de5/group___amuse_platform.html#gga315ca917ad583797f709ea477dd28705a78463a384a5aa4fad5fa73e2f506ecfc">   15</a></span>        <a class="code hl_enumvalue" href="../../df/de5/group___amuse_platform.html#gga315ca917ad583797f709ea477dd28705a78463a384a5aa4fad5fa73e2f506ecfc">English</a>,            </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="../../df/de5/group___amuse_platform.html#gga315ca917ad583797f709ea477dd28705aad225f707802ba118c22987186dd38e8">   16</a></span>        <a class="code hl_enumvalue" href="../../df/de5/group___amuse_platform.html#gga315ca917ad583797f709ea477dd28705aad225f707802ba118c22987186dd38e8">French</a>,             </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../df/de5/group___amuse_platform.html#gga315ca917ad583797f709ea477dd28705a4be8e06d27bca7e1828f2fa9a49ca985">   17</a></span>        <a class="code hl_enumvalue" href="../../df/de5/group___amuse_platform.html#gga315ca917ad583797f709ea477dd28705a4be8e06d27bca7e1828f2fa9a49ca985">Italian</a>,            </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="../../df/de5/group___amuse_platform.html#gga315ca917ad583797f709ea477dd28705a86bc3115eb4e9873ac96904a4a68e19e">   18</a></span>        <a class="code hl_enumvalue" href="../../df/de5/group___amuse_platform.html#gga315ca917ad583797f709ea477dd28705a86bc3115eb4e9873ac96904a4a68e19e">German</a>,             </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="../../df/de5/group___amuse_platform.html#gga315ca917ad583797f709ea477dd28705acb5480c32e71778852b08ae1e8712775">   19</a></span>        <a class="code hl_enumvalue" href="../../df/de5/group___amuse_platform.html#gga315ca917ad583797f709ea477dd28705acb5480c32e71778852b08ae1e8712775">Spanish</a>,            </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="../../df/de5/group___amuse_platform.html#gga315ca917ad583797f709ea477dd28705ad0bdb3cde477d82e766da05ebda50ccb">   20</a></span>        <a class="code hl_enumvalue" href="../../df/de5/group___amuse_platform.html#gga315ca917ad583797f709ea477dd28705ad0bdb3cde477d82e766da05ebda50ccb">Korean</a>,             </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="../../df/de5/group___amuse_platform.html#gga315ca917ad583797f709ea477dd28705a30e32c7c4cf434e9c75e60c14c442541">   21</a></span>        <a class="code hl_enumvalue" href="../../df/de5/group___amuse_platform.html#gga315ca917ad583797f709ea477dd28705a30e32c7c4cf434e9c75e60c14c442541">Portuguese</a>,         </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../df/de5/group___amuse_platform.html#gga315ca917ad583797f709ea477dd28705adeba6920e70615401385fe1fb5a379ec">   22</a></span>        <a class="code hl_enumvalue" href="../../df/de5/group___amuse_platform.html#gga315ca917ad583797f709ea477dd28705adeba6920e70615401385fe1fb5a379ec">Russian</a>,            </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="../../df/de5/group___amuse_platform.html#gga315ca917ad583797f709ea477dd28705a3b261136e3c33f35e0a58611b1f344cb">   23</a></span>        <a class="code hl_enumvalue" href="../../df/de5/group___amuse_platform.html#gga315ca917ad583797f709ea477dd28705a3b261136e3c33f35e0a58611b1f344cb">Chinese</a>,            </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="comment">/*</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">        Afrikaans,          // アフリカ語</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">        Arabic,             // アラビア語</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">        Basque,             // バスク語</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">        Belarusian,         // ベラルーシ語</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">        Bulgarian,          // ブルガリア語</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">        Catalan,            // カタロニア語</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">        Chinese,            // 中国語</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">        Czech,              // チェコ語</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">        Danish,             // デンマーク語</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">        Dutch,              // オランダ語</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">        English,            // 英語</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">        Estonian,           // エストニア語</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">        Faroese,            // フェロー語</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">        Finnish,            // フィンランド語</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">        French,             // フランス語</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">        German,             // ドイツ語</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">        Greek,              // ギリシャ語</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">        Hebrew,             // ヘブライ語</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">        Icelandic,          // アイスランド語</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">        Indonesian,         // インドネシア語</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">        Italian,            // イタリア語</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">        Japanese,           // 日本語</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">        Korean,             // 韓国語</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">        Latvian,            // ラトビア語</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">        Lithuanian,         // リトアニア語</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">        Norwegian,          // ノルウェー語</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">        Polish,             // ポーランド語</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">        Portuguese,         // ポルトガル語</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">        Romanian,           // ルーマニア語</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">        Russian,            // ロシア語</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">        SerboCroatian,      // セルビアクロアチア語</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">        Slovak,             // スロバキア語</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">        Slovenian,          // スロベニア語</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">        Spanish,            // スペイン語</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">        Swedish,            // スウェーデン語</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment">        Thai,               // タイ語</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">        Turkish,            // トルコ語</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">        Ukrainian,          // ウクライナ語</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment">        Vietnamese,         // ベトナム語</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">        ChineseSimplified,  // 中国語簡体字</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">        ChineseTraditional, // 中国語繁体字</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment">        Hungarian,          // ハンガリー語</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment">        */</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        MAX,                <span class="comment">// 言語数</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    };</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>}</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="comment">/*</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">        Afrikaans,          // アフリカ語</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">        Arabic,             // アラビア語</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">        Basque,             // バスク語</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">        Belarusian,         // ベラルーシ語</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">        Bulgarian,          // ブルガリア語</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">        Catalan,            // カタロニア語</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">        Chinese,            // 中国語</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">        Czech,              // チェコ語</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">        Danish,             // デンマーク語</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">        Dutch,              // オランダ語</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">        English,            // 英語</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">        Estonian,           // エストニア語</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">        Faroese,            // フェロー語</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">        Finnish,            // フィンランド語</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">        French,             // フランス語</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">        German,             // ドイツ語</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">        Greek,              // ギリシャ語</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">        Hebrew,             // ヘブライ語</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">        Icelandic,          // アイスランド語</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">        Indonesian,         // インドネシア語</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">        Italian,            // イタリア語</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">        Japanese,           // 日本語</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">        Korean,             // 韓国語</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">        Latvian,            // ラトビア語</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">        Lithuanian,         // リトアニア語</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">        Norwegian,          // ノルウェー語</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">        Polish,             // ポーランド語</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">        Portuguese,         // ポルトガル語</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">        Romanian,           // ルーマニア語</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">        Russian,            // ロシア語</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">        SerboCroatian,      // セルビアクロアチア語</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">        Slovak,             // スロバキア語</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">        Slovenian,          // スロベニア語</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">        Spanish,            // スペイン語</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">        Swedish,            // スウェーデン語</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">        Thai,               // タイ語</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment">        Turkish,            // トルコ語</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">        Ukrainian,          // ウクライナ語</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">        Vietnamese,         // ベトナム語</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment">        ChineseSimplified,  // 中国語簡体字</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">        ChineseTraditional, // 中国語繁体字</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">        Hungarian,          // ハンガリー語</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment">        */</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <a class="code hl_enumvalue" href="../../d1/da5/group___amuse_input.html#gga7f039edf8ca5f938e3d74c5e6eaf5f51a26a4b44a837bf97b972628509912b4a5">MAX</a>,                <span class="comment">// 言語数</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    };</div>
+</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>}</div>
+<div class="ttc" id="agroup___amuse_input_html_gga7f039edf8ca5f938e3d74c5e6eaf5f51a26a4b44a837bf97b972628509912b4a5"><div class="ttname"><a href="../../d1/da5/group___amuse_input.html#gga7f039edf8ca5f938e3d74c5e6eaf5f51a26a4b44a837bf97b972628509912b4a5">Amuse::Key::MAX</a></div><div class="ttdeci">@ MAX</div><div class="ttdoc">最大</div><div class="ttdef"><b>Definition</b> InputType.h:172</div></div>
+<div class="ttc" id="agroup___amuse_input_html_gga7f039edf8ca5f938e3d74c5e6eaf5f51a88183b946cc5f0e8c96b2e66e1c74a7e"><div class="ttname"><a href="../../d1/da5/group___amuse_input.html#gga7f039edf8ca5f938e3d74c5e6eaf5f51a88183b946cc5f0e8c96b2e66e1c74a7e">Amuse::Key::Unknown</a></div><div class="ttdeci">@ Unknown</div><div class="ttdoc">不明</div><div class="ttdef"><b>Definition</b> InputType.h:22</div></div>
+<div class="ttc" id="agroup___amuse_platform_html_ga315ca917ad583797f709ea477dd28705"><div class="ttname"><a href="../../df/de5/group___amuse_platform.html#ga315ca917ad583797f709ea477dd28705">Amuse::Language</a></div><div class="ttdeci">Language</div><div class="ttdoc">言語</div><div class="ttdef"><b>Definition</b> Language.h:11</div></div>
+<div class="ttc" id="agroup___amuse_platform_html_gga315ca917ad583797f709ea477dd28705a30e32c7c4cf434e9c75e60c14c442541"><div class="ttname"><a href="../../df/de5/group___amuse_platform.html#gga315ca917ad583797f709ea477dd28705a30e32c7c4cf434e9c75e60c14c442541">Amuse::Language::Portuguese</a></div><div class="ttdeci">@ Portuguese</div><div class="ttdoc">ポルトガル語</div><div class="ttdef"><b>Definition</b> Language.h:21</div></div>
+<div class="ttc" id="agroup___amuse_platform_html_gga315ca917ad583797f709ea477dd28705a3b261136e3c33f35e0a58611b1f344cb"><div class="ttname"><a href="../../df/de5/group___amuse_platform.html#gga315ca917ad583797f709ea477dd28705a3b261136e3c33f35e0a58611b1f344cb">Amuse::Language::Chinese</a></div><div class="ttdeci">@ Chinese</div><div class="ttdoc">中国語</div><div class="ttdef"><b>Definition</b> Language.h:23</div></div>
+<div class="ttc" id="agroup___amuse_platform_html_gga315ca917ad583797f709ea477dd28705a4be8e06d27bca7e1828f2fa9a49ca985"><div class="ttname"><a href="../../df/de5/group___amuse_platform.html#gga315ca917ad583797f709ea477dd28705a4be8e06d27bca7e1828f2fa9a49ca985">Amuse::Language::Italian</a></div><div class="ttdeci">@ Italian</div><div class="ttdoc">イタリア語</div><div class="ttdef"><b>Definition</b> Language.h:17</div></div>
+<div class="ttc" id="agroup___amuse_platform_html_gga315ca917ad583797f709ea477dd28705a78463a384a5aa4fad5fa73e2f506ecfc"><div class="ttname"><a href="../../df/de5/group___amuse_platform.html#gga315ca917ad583797f709ea477dd28705a78463a384a5aa4fad5fa73e2f506ecfc">Amuse::Language::English</a></div><div class="ttdeci">@ English</div><div class="ttdoc">英語</div><div class="ttdef"><b>Definition</b> Language.h:15</div></div>
+<div class="ttc" id="agroup___amuse_platform_html_gga315ca917ad583797f709ea477dd28705a86bc3115eb4e9873ac96904a4a68e19e"><div class="ttname"><a href="../../df/de5/group___amuse_platform.html#gga315ca917ad583797f709ea477dd28705a86bc3115eb4e9873ac96904a4a68e19e">Amuse::Language::German</a></div><div class="ttdeci">@ German</div><div class="ttdoc">ドイツ語</div><div class="ttdef"><b>Definition</b> Language.h:18</div></div>
+<div class="ttc" id="agroup___amuse_platform_html_gga315ca917ad583797f709ea477dd28705aad225f707802ba118c22987186dd38e8"><div class="ttname"><a href="../../df/de5/group___amuse_platform.html#gga315ca917ad583797f709ea477dd28705aad225f707802ba118c22987186dd38e8">Amuse::Language::French</a></div><div class="ttdeci">@ French</div><div class="ttdoc">フランス語</div><div class="ttdef"><b>Definition</b> Language.h:16</div></div>
+<div class="ttc" id="agroup___amuse_platform_html_gga315ca917ad583797f709ea477dd28705acb5480c32e71778852b08ae1e8712775"><div class="ttname"><a href="../../df/de5/group___amuse_platform.html#gga315ca917ad583797f709ea477dd28705acb5480c32e71778852b08ae1e8712775">Amuse::Language::Spanish</a></div><div class="ttdeci">@ Spanish</div><div class="ttdoc">スペイン語</div><div class="ttdef"><b>Definition</b> Language.h:19</div></div>
+<div class="ttc" id="agroup___amuse_platform_html_gga315ca917ad583797f709ea477dd28705ad0bdb3cde477d82e766da05ebda50ccb"><div class="ttname"><a href="../../df/de5/group___amuse_platform.html#gga315ca917ad583797f709ea477dd28705ad0bdb3cde477d82e766da05ebda50ccb">Amuse::Language::Korean</a></div><div class="ttdeci">@ Korean</div><div class="ttdoc">韓国語</div><div class="ttdef"><b>Definition</b> Language.h:20</div></div>
+<div class="ttc" id="agroup___amuse_platform_html_gga315ca917ad583797f709ea477dd28705adeba6920e70615401385fe1fb5a379ec"><div class="ttname"><a href="../../df/de5/group___amuse_platform.html#gga315ca917ad583797f709ea477dd28705adeba6920e70615401385fe1fb5a379ec">Amuse::Language::Russian</a></div><div class="ttdeci">@ Russian</div><div class="ttdoc">ロシア語</div><div class="ttdef"><b>Definition</b> Language.h:22</div></div>
+<div class="ttc" id="agroup___amuse_platform_html_gga315ca917ad583797f709ea477dd28705af32ced6a9ba164c4b3c047fd1d7c882e"><div class="ttname"><a href="../../df/de5/group___amuse_platform.html#gga315ca917ad583797f709ea477dd28705af32ced6a9ba164c4b3c047fd1d7c882e">Amuse::Language::Japanese</a></div><div class="ttdeci">@ Japanese</div><div class="ttdoc">日本語</div><div class="ttdef"><b>Definition</b> Language.h:14</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

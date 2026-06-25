@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: ScheduleExecutor クラス</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('db/dd8/class_amuse_1_1_schedule_executor.html','../../','da/d43/class_amuse_1_1_schedule_executor-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">メソッド</a> &#124;
+<a href="../../da/d43/class_amuse_1_1_schedule_executor-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">ScheduleExecutor クラス<div class="ingroups"><a class="el" href="../../da/d78/group___amuse_core.html">Core</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">説明</h2>
+<div class="textblock"><p>スケジュール実行器を表す。 </p>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+メソッド</h2></td></tr>
+<tr class="memitem:a8e660902297789af41e06c11c22a2390" id="r_a8e660902297789af41e06c11c22a2390"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a8e660902297789af41e06c11c22a2390">ScheduleExecutor</a> (const <a class="el" href="../../d2/dad/struct_amuse_1_1_schedule_executor_config.html">ScheduleExecutorConfig</a> &amp;config={})</td></tr>
+<tr class="memdesc:a8e660902297789af41e06c11c22a2390"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executor を作成  <br /></td></tr>
+<tr class="memitem:a1933138666c8ff92b22a2adc7fd2ef3c" id="r_a1933138666c8ff92b22a2adc7fd2ef3c"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a1933138666c8ff92b22a2adc7fd2ef3c">~ScheduleExecutor</a> ()</td></tr>
+<tr class="memdesc:a1933138666c8ff92b22a2adc7fd2ef3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ  <br /></td></tr>
+<tr class="memitem:a8f0f857bf104f8f5a98fd3c46b8f4dd0" id="r_a8f0f857bf104f8f5a98fd3c46b8f4dd0"><td class="memItemLeft"><a id="a8f0f857bf104f8f5a98fd3c46b8f4dd0" name="a8f0f857bf104f8f5a98fd3c46b8f4dd0"></a>
+&#160;</td><td class="memItemRight"><b>ScheduleExecutor</b> (const ScheduleExecutor &amp;)=delete</td></tr>
+<tr class="memitem:a3f7880e351c110c1d5e22776b7c9ad09" id="r_a3f7880e351c110c1d5e22776b7c9ad09"><td class="memItemLeft"><a id="a3f7880e351c110c1d5e22776b7c9ad09" name="a3f7880e351c110c1d5e22776b7c9ad09"></a>
+<a class="el" href="#a8e660902297789af41e06c11c22a2390">ScheduleExecutor</a> &amp;&#160;</td><td class="memItemRight"><b>operator=</b> (const <a class="el" href="#a8e660902297789af41e06c11c22a2390">ScheduleExecutor</a> &amp;)=delete</td></tr>
+<tr class="memitem:ac76ca218018de7dc658c5b1c10e6ce1a" id="r_ac76ca218018de7dc658c5b1c10e6ce1a"><td class="memItemLeft"><a id="ac76ca218018de7dc658c5b1c10e6ce1a" name="ac76ca218018de7dc658c5b1c10e6ce1a"></a>
+auto&#160;</td><td class="memItemRight"><b>workerCount</b> () const -&gt; s32</td></tr>
+<tr class="memdesc:ac76ca218018de7dc658c5b1c10e6ce1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">ワーカースレッド数を取得 <br /></td></tr>
+<tr class="memitem:ad1d81b72af85f4ed2c1636694c238b54" id="r_ad1d81b72af85f4ed2c1636694c238b54"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad1d81b72af85f4ed2c1636694c238b54">enqueue</a> (Action &amp;&amp;action)</td></tr>
+<tr class="memdesc:ad1d81b72af85f4ed2c1636694c238b54"><td class="mdescLeft">&#160;</td><td class="mdescRight">ジョブを投入  <br /></td></tr>
+<tr class="memitem:aa3b21853f890838c88d047d6c2786917" id="r_aa3b21853f890838c88d047d6c2786917"><td class="memItemLeft"><a id="aa3b21853f890838c88d047d6c2786917" name="aa3b21853f890838c88d047d6c2786917"></a>
+void&#160;</td><td class="memItemRight"><b>wait</b> ()</td></tr>
+<tr class="memdesc:aa3b21853f890838c88d047d6c2786917"><td class="mdescLeft">&#160;</td><td class="mdescRight">投入済みジョブの完了を待機 <br /></td></tr>
+<tr class="memitem:a8208309cbeb1e215351952167c1b89d6" id="r_a8208309cbeb1e215351952167c1b89d6"><td class="memItemLeft"><a id="a8208309cbeb1e215351952167c1b89d6" name="a8208309cbeb1e215351952167c1b89d6"></a>
+auto&#160;</td><td class="memItemRight"><b>isWorkerThread</b> () const -&gt; bool</td></tr>
+<tr class="memdesc:a8208309cbeb1e215351952167c1b89d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在のスレッドがこの Executor のワーカーか判定 <br /></td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">コンストラクタ</h2>
+<a id="a8e660902297789af41e06c11c22a2390" name="a8e660902297789af41e06c11c22a2390"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e660902297789af41e06c11c22a2390">&#9670;&#160;</a></span>ScheduleExecutor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ScheduleExecutor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d2/dad/struct_amuse_1_1_schedule_executor_config.html">ScheduleExecutorConfig</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>config</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Executor を作成 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">config</td><td>ワーカースレッド数などの設定 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1933138666c8ff92b22a2adc7fd2ef3c" name="a1933138666c8ff92b22a2adc7fd2ef3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1933138666c8ff92b22a2adc7fd2ef3c">&#9670;&#160;</a></span>~ScheduleExecutor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="#a8e660902297789af41e06c11c22a2390">ScheduleExecutor</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>デストラクタ </p>
+<p>実行中のジョブがあれば完了を待って停止する。 </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="ad1d81b72af85f4ed2c1636694c238b54" name="ad1d81b72af85f4ed2c1636694c238b54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1d81b72af85f4ed2c1636694c238b54">&#9670;&#160;</a></span>enqueue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void enqueue </td>
+          <td>(</td>
+          <td class="paramtype">Action &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>action</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ジョブを投入 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">action</td><td>実行する処理 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>Runtime/Core/Public/Amuse/Core/Misc/<a class="el" href="../../d4/dfa/_scheduler_8h_source.html">Scheduler.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><a href="../../db/dd8/class_amuse_1_1_schedule_executor.html">ScheduleExecutor</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

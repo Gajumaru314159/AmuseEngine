@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AmuseEngine: Mesh クラス</title>
+<link rel="icon" href="../../logo.png" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../header.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">AmuseEngine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('../../',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d3/d95/class_amuse_1_1_mesh.html','../../','db/d6a/class_amuse_1_1_mesh-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-methods">メソッド</a> &#124;
+<a href="#pub-static-methods">静的関数</a> &#124;
+<a href="#pub-attribs">変数</a> &#124;
+<a href="../../db/d6a/class_amuse_1_1_mesh-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">Mesh クラス<div class="ingroups"><a class="el" href="../../db/db7/group___amuse_r_p_i.html">RPI</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">説明</h2>
+<div class="textblock"><p>描画用メッシュリソース </p>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:a93df814dc743a73419feb36aa03f583d" id="r_a93df814dc743a73419feb36aa03f583d"><td class="memItemLeft"><a id="a93df814dc743a73419feb36aa03f583d" name="a93df814dc743a73419feb36aa03f583d"></a>
+using&#160;</td><td class="memItemRight"><b>VertexLayout</b> = <a class="el" href="../../dd/d6b/class_amuse_1_1_vertex_layout.html">Amuse::VertexLayout</a></td></tr>
+<tr class="memdesc:a93df814dc743a73419feb36aa03f583d"><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点レイアウト型 <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+メソッド</h2></td></tr>
+<tr class="memitem:a95067243b72a23863ec07c821797455c" id="r_a95067243b72a23863ec07c821797455c"><td class="memItemLeft"><a id="a95067243b72a23863ec07c821797455c" name="a95067243b72a23863ec07c821797455c"></a>
+void&#160;</td><td class="memItemRight"><b>apply</b> ()</td></tr>
+<tr class="memdesc:a95067243b72a23863ec07c821797455c"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPU 側ソースから GPU バッファを生成する <br /></td></tr>
+<tr class="memitem:a5518ded6c5d539cb2a57cf107be4b9b3" id="r_a5518ded6c5d539cb2a57cf107be4b9b3"><td class="memItemLeft"><a id="a5518ded6c5d539cb2a57cf107be4b9b3" name="a5518ded6c5d539cb2a57cf107be4b9b3"></a>
+void&#160;</td><td class="memItemRight"><b>clearSources</b> ()</td></tr>
+<tr class="memdesc:a5518ded6c5d539cb2a57cf107be4b9b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPU 側ソースを破棄する <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静的関数</h2></td></tr>
+<tr class="memitem:af93b06c2d4f977efb1ad10c2bb9bb681" id="r_af93b06c2d4f977efb1ad10c2bb9bb681"><td class="memItemLeft"><a id="af93b06c2d4f977efb1ad10c2bb9bb681" name="af93b06c2d4f977efb1ad10c2bb9bb681"></a>
+static Ref&lt; Mesh &gt;&#160;</td><td class="memItemRight"><b>Create</b> ()</td></tr>
+<tr class="memdesc:af93b06c2d4f977efb1ad10c2bb9bb681"><td class="mdescLeft">&#160;</td><td class="mdescRight">空のメッシュを生成する <br /></td></tr>
+<tr class="memitem:ab9238ed1cb61c02635dca4ddd725d174" id="r_ab9238ed1cb61c02635dca4ddd725d174"><td class="memItemLeft"><a id="ab9238ed1cb61c02635dca4ddd725d174" name="ab9238ed1cb61c02635dca4ddd725d174"></a>
+static Ref&lt; Mesh &gt;&#160;</td><td class="memItemRight"><b>Load</b> (StringView path)</td></tr>
+<tr class="memdesc:ab9238ed1cb61c02635dca4ddd725d174"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルからメッシュを読み込む <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+変数</h2></td></tr>
+<tr class="memitem:a024318f4225ee6bedb20b7f865205d34" id="r_a024318f4225ee6bedb20b7f865205d34"><td class="memItemLeft"><a id="a024318f4225ee6bedb20b7f865205d34" name="a024318f4225ee6bedb20b7f865205d34"></a>
+<a class="el" href="../../df/d24/struct_amuse_1_1_bounds.html">Bounds</a>&#160;</td><td class="memItemRight"><b>bounds</b></td></tr>
+<tr class="memdesc:a024318f4225ee6bedb20b7f865205d34"><td class="mdescLeft">&#160;</td><td class="mdescRight">境界ボックス <br /></td></tr>
+<tr class="memitem:a2b425504073618ef7e657596523121d9" id="r_a2b425504073618ef7e657596523121d9"><td class="memItemLeft"><a id="a2b425504073618ef7e657596523121d9" name="a2b425504073618ef7e657596523121d9"></a>
+Vector&lt; <a class="el" href="../../d1/d5a/struct_amuse_1_1_mesh_lod.html">MeshLod</a> &gt;&#160;</td><td class="memItemRight"><b>lods</b></td></tr>
+<tr class="memdesc:a2b425504073618ef7e657596523121d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">LOD 一覧 <br /></td></tr>
+<tr class="memitem:a74d97f5d461ee22248a136cd641dd99d" id="r_a74d97f5d461ee22248a136cd641dd99d"><td class="memItemLeft"><a id="a74d97f5d461ee22248a136cd641dd99d" name="a74d97f5d461ee22248a136cd641dd99d"></a>
+Vector&lt; Ref&lt; <a class="el" href="../../d0/dfb/class_amuse_1_1_material.html">Material</a> &gt; &gt;&#160;</td><td class="memItemRight"><b>materials</b></td></tr>
+<tr class="memdesc:a74d97f5d461ee22248a136cd641dd99d"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアル一覧 <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+その他の継承メンバ</h2></td></tr>
+<tr class="inherit_header pro_methods_class_amuse_1_1_ref_object"><td colspan="2">基底クラス <a class="el" href="../../d0/dcb/class_amuse_1_1_ref_object.html">RefObject</a> に属する継承限定公開メンバ関数</td></tr>
+<tr class="memitem:a54e7592a1879afe888737819461f0bd6 pro_methods_class_amuse_1_1_ref_object" id="r_a54e7592a1879afe888737819461f0bd6"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="../../d0/dcb/class_amuse_1_1_ref_object.html#a54e7592a1879afe888737819461f0bd6">RefObject</a> ()</td></tr>
+<tr class="memdesc:a54e7592a1879afe888737819461f0bd6 pro_methods_class_amuse_1_1_ref_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <br /></td></tr>
+<tr class="memitem:a926c5f9b99365954b5d7865b52e9bb4b pro_methods_class_amuse_1_1_ref_object" id="r_a926c5f9b99365954b5d7865b52e9bb4b"><td class="memItemLeft">
+virtual&#160;</td><td class="memItemRight"><b>~RefObject</b> ()</td></tr>
+<tr class="memdesc:a926c5f9b99365954b5d7865b52e9bb4b pro_methods_class_amuse_1_1_ref_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ <br /></td></tr>
+<tr class="memitem:a4e44143f72657f0e69d2a1816b6cc54d pro_methods_class_amuse_1_1_ref_object" id="r_a4e44143f72657f0e69d2a1816b6cc54d"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="../../d0/dcb/class_amuse_1_1_ref_object.html#a4e44143f72657f0e69d2a1816b6cc54d">finalize</a> ()</td></tr>
+<tr class="memdesc:a4e44143f72657f0e69d2a1816b6cc54d pro_methods_class_amuse_1_1_ref_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">参照カウントが0になったときの処理  <br /></td></tr>
+</table>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>Runtime/RPI/Public/Amuse/RPI/Mesh/<a class="el" href="../../d2/da1/_mesh_8h_source.html">Mesh.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><a href="../../d3/d95/class_amuse_1_1_mesh.html">Mesh</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>
