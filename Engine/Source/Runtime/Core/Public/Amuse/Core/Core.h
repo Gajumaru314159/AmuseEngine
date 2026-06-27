@@ -94,6 +94,3 @@
 #include <Amuse/Core/Utility/Name.h>
 
 #include <Amuse/Core/CoreForward.h>
-
-namespace Amuse {
-}
