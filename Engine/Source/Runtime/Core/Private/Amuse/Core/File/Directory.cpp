@@ -80,12 +80,12 @@ namespace Amuse {
     auto Directory::Contents(StringView path, Recursive recursive) -> Vector<String> {
         Vector<String> result;
         if (recursive) {
-            for (auto& p : std::filesystem::directory_iterator(ToStdPath(path))) {
+            for (auto& p : std::filesystem::recursive_directory_iterator(ToStdPath(path))) {
                 result.push_back(ToString(p.path()));
             }
         }
         else {
-            for (auto& p : std::filesystem::recursive_directory_iterator(ToStdPath(path))) {
+            for (auto& p : std::filesystem::directory_iterator(ToStdPath(path))) {
                 result.push_back(ToString(p.path()));
             }
         }
