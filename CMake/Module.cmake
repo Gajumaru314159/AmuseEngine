@@ -177,7 +177,6 @@ endfunction()
 #------------------------------------------------------------------------------
 function(amuse_add_test)
 	if(AMUSE_TEST)
-
         # GoogleTestをリンク
         list(APPEND private_libs GTest::gtest_main)
         
@@ -189,7 +188,13 @@ function(amuse_add_test)
         _amuse_module_setup()
 
         # テストを登録
-        gtest_discover_tests(${PROJECT_NAME})
+        if(working_directory)
+            gtest_discover_tests(${PROJECT_NAME}
+                WORKING_DIRECTORY "${working_directory}"
+            )
+        else()
+            gtest_discover_tests(${PROJECT_NAME})
+        endif()
 		
 	endif()
 endfunction()

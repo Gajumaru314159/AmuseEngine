@@ -17,5 +17,6 @@ endif()
 # インクルードディレクトリ設定
 set(public_includes "")
 set(private_includes "")
+set(working_directory "${CMAKE_SOURCE_DIR}/Engine/Test/Resouces")
 
 amuse_add_test()

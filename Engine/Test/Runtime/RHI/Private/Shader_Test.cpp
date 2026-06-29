@@ -3,6 +3,9 @@
 //! @author		Gajumaru
 //***********************************************************
 #include <RHITestBase.h>
+#include <Amuse/Core/File/Directory.h>
+#include <Amuse/Core/File/File.h>
+#include <Amuse/Core/File/Path.h>
 #include <magic_enum.hpp>
 
 using namespace Amuse;
@@ -174,4 +177,58 @@ TYPED_TEST(RHITest, Shader_Pixel) {
 	} else {
 		EXPECT_TRUE(shader == nullptr);
 	}
+}
+
+TYPED_TEST(RHITest, Shader_CompileResourceFiles) {
+	const String shaderRoot = "Shaders";
+	ASSERT_TRUE(Directory::Exists(shaderRoot)) << "Shaders directory is not found.";
+
+	const Array<ShaderStage, 6> stages{
+		ShaderStage::Vertex,
+		ShaderStage::Hull,
+		ShaderStage::Domain,
+		ShaderStage::Geometry,
+		ShaderStage::Pixel,
+		ShaderStage::Compute,
+	};
+
+	size_t shaderFileCount = 0;
+	size_t compileCount = 0;
+	for (const auto& path : Directory::Contents(shaderRoot, Recursive::Yes)) {
+		const String shaderPath = Path::Normalize(path);
+		if (!File::Exists(shaderPath) || Path::Extension(shaderPath, WithDot::Yes) != ".hlsl") {
+			continue;
+		}
+
+		++shaderFileCount;
+		const auto code = File::ReadAllText(shaderPath);
+		ASSERT_TRUE(code.has_value()) << shaderPath;
+
+		size_t entryPointCount = 0;
+		for (const auto stage : stages) {
+			if (!code->contains(Shader::GetEntryName(stage))) {
+				continue;
+			}
+			++entryPointCount;
+
+			if (!Shader::Supports(stage)) {
+				continue;
+			}
+
+			ShaderCompileDesc desc;
+			desc.name = shaderPath;
+			desc.code = code.value();
+			desc.stage = stage;
+			desc.directories.push_back(".");
+			desc.directories.push_back(Path::Parent(shaderPath));
+
+			EXPECT_TRUE(Shader::Compile(desc) != nullptr)
+				<< shaderPath << " " << magic_enum::enum_name(stage);
+			++compileCount;
+		}
+		EXPECT_NE(entryPointCount, 0u) << shaderPath;
+	}
+
+	EXPECT_NE(shaderFileCount, 0u);
+	EXPECT_NE(compileCount, 0u);
 }
