@@ -43,7 +43,7 @@ namespace Amuse {
 	public:
 
 		//! @brief マテリアルシステムを初期化する
-		MaterialSystem(const MaterialSystemDesc& desc);
+		MaterialSystem(const MaterialSystemDesc& desc, Device&);
 
 		//! @brief 共通レイアウトを取得する
 		const MaterialLayoutSet& getLayouts() const { return m_layouts; }

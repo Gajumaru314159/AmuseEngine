@@ -11,6 +11,7 @@
 #endif
 #include <Amuse/VulkanRHI/System.h>
 #include <Amuse/VulkanRHI/VulkanRHIConfig.h>
+#include <Amuse/RPI/Material/MaterialSystem.h>
 #include <Amuse/Platform/System.h>
 #include <magic_enum.hpp>
 
@@ -62,7 +63,7 @@ protected:
 #endif
 		injector.bind(m_vkconfig);
 
-		injector.createAll<Amuse::SystemResource, Amuse::Graphics>(m_container);
+		injector.createAll<Amuse::SystemResource, Amuse::Graphics, Amuse::MaterialSystem>(m_container);
 
 	};
 	virtual void TearDown() {};

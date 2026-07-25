@@ -6,6 +6,7 @@
 #include <Amuse/RPI/FrameGraph/FG.h>
 #include <Amuse/RPI/Graphics.h>
 #include <Amuse/RPI/Material/MaterialManager.h>
+#include <Amuse/RPI/Material/MaterialSystem.h>
 #include <Amuse/RPI/Render/RenderScene.h>
 #include <Amuse/RHI/CommandList.h>
 #include <Amuse/RHI/RHI.h>
@@ -17,6 +18,8 @@ namespace Amuse {
 	//! @brief      システムをServiceInjectorに登録
 	void RegisterGraphicsService(ServiceInjector& injector) {
 		injector.bind<MaterialManager>();
+		injector.bind<MaterialSystem>();
+		injector.bind<MaterialSystemDesc>();
 		injector.bind<Graphics>();
 		RegisterRHIService(injector);
 		Name::Register(injector);

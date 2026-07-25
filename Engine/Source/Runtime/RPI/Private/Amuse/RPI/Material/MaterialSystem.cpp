@@ -22,7 +22,7 @@ namespace Amuse {
 		return blockDesc;
 	}
 
-	MaterialSystem::MaterialSystem(const MaterialSystemDesc& desc) {
+	MaterialSystem::MaterialSystem(const MaterialSystemDesc& desc,Device&) {
 
 		m_descs.global = Convert("MaterialGlobal", desc.properties.global);
 		m_descs.scene = Convert("MaterialScene", desc.properties.scene);
