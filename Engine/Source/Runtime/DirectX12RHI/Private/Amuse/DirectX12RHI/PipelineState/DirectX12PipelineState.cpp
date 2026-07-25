@@ -25,11 +25,11 @@ namespace Amuse {
 			return;
 		}
 
-		if (!m_desc.vs) {
+		if (!desc.vs) {
 			LOG_ERROR_EX("Graphic", "パイプラインステートの構築に失敗。頂点シェーダが設定されていません。");
 			return;
 		}
-		if (!m_desc.ps && !desc.colors.empty()) {
+		if (!desc.ps && !desc.colors.empty()) {
 			LOG_ERROR_EX("Graphic", "パイプラインステートの構築に失敗。ピクセルシェーダが設定されていません。");
 			return;
 		}
