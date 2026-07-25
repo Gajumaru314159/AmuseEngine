@@ -23,9 +23,6 @@ namespace Amuse {
 TYPED_TEST(BindfullRPITest, MaterialBlock) {
 #pragma region
 	using namespace Amuse;
-	using namespace Amuse;
-	using namespace Amuse;
-	using namespace Amuse;
 
 	// ウィンドウ生成
 	WindowDesc windowDesc;
@@ -242,9 +239,6 @@ PsOut PS_Main(PsIn i){
 
 TYPED_TEST(BindlessRPITest, MaterialBlock) {
 #pragma region
-	using namespace Amuse;
-	using namespace Amuse;
-	using namespace Amuse;
 	using namespace Amuse;
 	// ウィンドウ生成
 	WindowDesc windowDesc;
@@ -490,9 +484,6 @@ PsOut PS_Main(PsIn i){
 
 TYPED_TEST(BindlessRPITest, MultiMaterialBlock) {
 #pragma region
-	using namespace Amuse;
-	using namespace Amuse;
-	using namespace Amuse;
 	using namespace Amuse;
 
 	// ウィンドウ生成
