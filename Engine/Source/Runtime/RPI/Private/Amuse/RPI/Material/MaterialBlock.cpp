@@ -123,7 +123,7 @@ namespace Amuse {
 		}
 
 		// バッファ生成
-		size_t size = align_up(offset,16);
+		size_t size = std::max(align_up(offset,16),16);
 		auto bufferDesc = BufferDesc::ByteAddress(size);
 		bufferDesc.name = Format("MaterialParameter ({})", desc.name);
 		m_valuesBuffer = Buffer::Create(bufferDesc);
