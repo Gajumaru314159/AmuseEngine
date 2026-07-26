@@ -47,7 +47,7 @@ namespace Amuse {
 
 			// マテリアル生成
 			Ref<Material> material = [&] {
-				MaterialDesc desc;
+				MaterialShaderDesc desc;
 				desc.name = path;
 				desc.textures = { "Main", "Normal", "Params" };
 				desc.matrices = { "Matrix" };

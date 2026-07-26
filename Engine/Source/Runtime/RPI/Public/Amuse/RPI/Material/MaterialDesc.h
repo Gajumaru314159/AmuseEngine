@@ -60,7 +60,7 @@ namespace Amuse {
 
     //! @brief  マテリアル定義
     //! @ingroup AmuseRPI
-    struct MaterialDesc{
+    struct MaterialShaderDesc{
         String          name; //!< マテリアル名
         
         Vector<String>  textures; //!< テクスチャ名

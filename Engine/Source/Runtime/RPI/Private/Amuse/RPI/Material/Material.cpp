@@ -17,7 +17,7 @@ namespace Amuse {
 	}
 
 	//! @brief  生成
-	Ref<Material> Material::Create(const MaterialDesc& desc) {
+	Ref<Material> Material::Create(const MaterialShaderDesc& desc) {
 		return Create(MaterialShader::Create(desc));
 	}
 
@@ -26,7 +26,7 @@ namespace Amuse {
 		m_block = MaterialBlock(shader->getBlockDesc());
 	}
 
-	const MaterialDesc& Material::getDesc() const {
+	const MaterialShaderDesc& Material::getDesc() const {
 		return m_shader->getDesc();
 	}
 

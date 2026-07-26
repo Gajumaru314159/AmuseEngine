@@ -24,12 +24,12 @@ namespace Amuse {
 		//! @brief  生成
 		static Ref<Material> Create(const Ref<MaterialShader>& shader);
 		//! @brief マテリアル定義から生成する
-		static Ref<Material> Create(const MaterialDesc& desc);
+		static Ref<Material> Create(const MaterialShaderDesc& desc);
 
 	public:
 
 		//! @brief マテリアル定義を取得する
-		const MaterialDesc& getDesc()const;
+		const MaterialShaderDesc& getDesc()const;
 		//! @brief 共有シェーダを取得する
 		const Ref<MaterialShader>& getShader()const { return m_shader; }
 

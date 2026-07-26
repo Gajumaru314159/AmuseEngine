@@ -13,11 +13,11 @@
 namespace Amuse {
 
 
-	Ref<MaterialShader> MaterialShader::Create(const MaterialDesc& desc) {
+	Ref<MaterialShader> MaterialShader::Create(const MaterialShaderDesc& desc) {
 		return new MaterialShader(desc);
 	}
 
-	MaterialShader::MaterialShader(const MaterialDesc& desc) {
+	MaterialShader::MaterialShader(const MaterialShaderDesc& desc) {
 		m_desc = desc;
 
 		bool isBindless = Device::Instance().getConfig().enableBindless;

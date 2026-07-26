@@ -22,10 +22,10 @@ namespace Amuse {
 		using RootSignature = Amuse::RootSignature; //!< ルートシグネチャ型
 	public:
 		//! @brief  生成
-		static Ref<MaterialShader> Create(const MaterialDesc& desc);
+		static Ref<MaterialShader> Create(const MaterialShaderDesc& desc);
 
 		//! @brief マテリアル定義を取得する
-		const MaterialDesc& getDesc()const { return m_desc; }
+		const MaterialShaderDesc& getDesc()const { return m_desc; }
 		//! @brief マテリアルブロック定義を取得する
 		const MaterialBlockDesc& getBlockDesc()const { return m_blockDesc; }
 		//! @brief ルートシグネチャを取得する
@@ -39,7 +39,7 @@ namespace Amuse {
 		Ref<PipelineState> getPipeline(const Ref<VertexLayout>& layout, StringView pass, s32 quality);
 
 	private:
-		MaterialShader(const MaterialDesc& desc);
+		MaterialShader(const MaterialShaderDesc& desc);
 
 	private:
 		//! @ingroup AmuseRPI
@@ -62,7 +62,7 @@ namespace Amuse {
 		Ref<PipelineState> createPipeline(const PipelineKey& key, const ShaderSet& shaders, const Ref<VertexLayout>& vertexLayout);
 
 	private:
-		MaterialDesc		m_desc;
+		MaterialShaderDesc		m_desc;
 		MaterialBlockDesc	m_blockDesc;
 		Ref<RootSignature>  m_signature;
 

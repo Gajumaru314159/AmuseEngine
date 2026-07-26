@@ -86,7 +86,7 @@ namespace Amuse {
 				auto code = File::ReadAllText("Assets/Shader/DeferredLight.hlsl");
 				AMUSE_ASSERT(code, "ファイル読み込み失敗");
 
-				MaterialDesc desc;
+				MaterialShaderDesc desc;
 				desc.name = "DeferredLight";
 				desc.textures = { "Main" ,"Normal","Params", "Depth" };
 				desc.integers = { "GBuffer" };
