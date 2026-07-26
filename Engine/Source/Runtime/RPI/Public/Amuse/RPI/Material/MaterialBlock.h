@@ -46,7 +46,7 @@ namespace Amuse {
     class MaterialBlock {
     public:
         //! @brief MaterialBlockDescに対応するDescriptorLayoutを生成するユーティリティ関数
-        static Ref<DescriptorLayout> CreateLayout(const MaterialBlockDesc& desc);
+        static Ref<DescriptorLayout> CreateLayout(const MaterialBlockDesc& desc,s32 baseRegister);
     public:
 
         //! @brief 空のマテリアルブロックを生成する

@@ -28,9 +28,9 @@ namespace Amuse {
 		m_descs.scene = Convert("MaterialScene", desc.properties.scene);
 		m_descs.view = Convert("MaterialView", desc.properties.view);
 		if (!Device::Instance().getConfig().enableBindless) {
-			m_descs.global.layout = m_layouts.global = MaterialBlock::CreateLayout(m_descs.global);
-			m_descs.scene.layout = m_layouts.scene = MaterialBlock::CreateLayout(m_descs.scene);
-			m_descs.view.layout = m_layouts.view = MaterialBlock::CreateLayout(m_descs.view);
+			m_descs.global.layout = m_layouts.global = MaterialBlock::CreateLayout(m_descs.global,100);
+			m_descs.scene.layout = m_layouts.scene = MaterialBlock::CreateLayout(m_descs.scene,200);
+			m_descs.view.layout = m_layouts.view = MaterialBlock::CreateLayout(m_descs.view,300);
 		}
 
 		m_globalBlock = MaterialBlock(m_descs.global);

@@ -14,11 +14,11 @@
 namespace Amuse {
 
 	//! @brief MaterialBlockDescに対応するDescriptorLayoutを生成するユーティリティ関数
-	Ref<DescriptorLayout> MaterialBlock::CreateLayout(const MaterialBlockDesc& desc) {
+	Ref<DescriptorLayout> MaterialBlock::CreateLayout(const MaterialBlockDesc& desc, s32 baseRegister) {
 		DescriptorLayoutDesc layoutDesc;
 		layoutDesc.name = desc.name;
 
-		s32 index = 0;
+		s32 index = baseRegister;
 		for ([[maybe_unused]] auto& name : desc.textures) {
 			layoutDesc.items.emplace_back(Binding::Texture(index++));
 			layoutDesc.items.emplace_back(Binding::Sampler(index++));

@@ -30,7 +30,7 @@ namespace Amuse {
 		m_blockDesc.scalars = desc.scalars;
 		m_blockDesc.integers = desc.integers;
 		if (!isBindless) {
-			m_blockDesc.layout = MaterialBlock::CreateLayout(m_blockDesc);
+			m_blockDesc.layout = MaterialBlock::CreateLayout(m_blockDesc,0);
 		}
 
 		auto& layouts = MaterialSystem::Instance().getLayouts();
