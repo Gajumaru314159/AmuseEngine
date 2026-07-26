@@ -153,7 +153,6 @@ PsOut PS_Main(PsIn i){
 
 	MaterialBlockDesc desc;
 	desc.name = "TestBlock";
-	desc.layout = layout;
 	desc.textures = { "Texture" };
 	desc.buffers = { "Buffer" };
 	desc.vectors = { "Color" };
