@@ -18,9 +18,6 @@ namespace Amuse {
 	class MaterialShader : public RefObject
 	{
 	public:
-		using PipelineState = Amuse::PipelineState; //!< パイプラインステート型
-		using RootSignature = Amuse::RootSignature; //!< ルートシグネチャ型
-	public:
 		//! @brief  生成
 		static Ref<MaterialShader> Create(const MaterialShaderDesc& desc);
 

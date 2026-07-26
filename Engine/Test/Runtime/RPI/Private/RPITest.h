@@ -16,8 +16,6 @@
 #include <magic_enum.hpp>
 
 using namespace Amuse;
-using namespace Amuse;
-using namespace Amuse;
 
 namespace Amuse {
 	class SystemResource;

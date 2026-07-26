@@ -6,7 +6,6 @@
 #include <magic_enum.hpp>
 
 using namespace Amuse;
-using namespace Amuse;
 
 // Emptyテスト
 TYPED_TEST(RHITest, RootSignature_Empty) {

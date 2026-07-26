@@ -92,7 +92,7 @@ namespace Amuse {
 		return index;
 	}
 
-	Ref<MaterialShader::PipelineState> MaterialShader::getPipeline(const Ref<VertexLayout>& layout, StringView passName, s32 quality) {
+	Ref<PipelineState> MaterialShader::getPipeline(const Ref<VertexLayout>& layout, StringView passName, s32 quality) {
 
 		if (!layout) return nullptr;
 
@@ -126,7 +126,7 @@ namespace Amuse {
 	}
 
 	//! @brief PipelineStateを作成 
-	Ref<MaterialShader::PipelineState> MaterialShader::createPipeline(const PipelineKey& key, const ShaderSet& shaders, const Ref<VertexLayout>& vertexLayout) {
+	Ref<PipelineState> MaterialShader::createPipeline(const PipelineKey& key, const ShaderSet& shaders, const Ref<VertexLayout>& vertexLayout) {
 		// 既に作成済み
 		{
 			ScopeLock lock(m_pipelinesLock);

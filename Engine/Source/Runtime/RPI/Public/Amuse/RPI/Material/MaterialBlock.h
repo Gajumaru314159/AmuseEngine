@@ -45,13 +45,6 @@ namespace Amuse {
     //! @ingroup AmuseRPI
     class MaterialBlock {
     public:
-        using CommandList = Amuse::CommandList; //!< コマンドリスト型
-        using DescriptorLayout = Amuse::DescriptorLayout; //!< デスクリプタレイアウト型
-        using DescriptorTable = Amuse::DescriptorTable; //!< デスクリプタテーブル型
-        using Sampler = Amuse::Sampler; //!< サンプラ型
-        using Texture = Amuse::Texture; //!< テクスチャ型
-        using Buffer = Amuse::Buffer; //!< バッファ型
-    public:
         //! @brief MaterialBlockDescに対応するDescriptorLayoutを生成するユーティリティ関数
         static Ref<DescriptorLayout> CreateLayout(const MaterialBlockDesc& desc);
     public:

@@ -39,7 +39,6 @@ namespace Amuse {
 			MaterialBlockDesc scene; //!< シーンブロック定義
 			MaterialBlockDesc view; //!< ビューブロック定義
 		};
-		using VertexLayout = Amuse::VertexLayout; //!< 頂点レイアウト型
 	public:
 
 		//! @brief マテリアルシステムを初期化する

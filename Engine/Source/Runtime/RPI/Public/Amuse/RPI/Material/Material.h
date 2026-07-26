@@ -16,10 +16,6 @@ namespace Amuse {
 	//! @ingroup AmuseRPI
 	class Material : public RefObject {
 	public:
-		using Texture = Amuse::Texture; //!< テクスチャ型
-		using Sampler = Amuse::Sampler; //!< サンプラ型
-		using Buffer = Amuse::Buffer; //!< バッファ型
-	public:
 
 		//! @brief  生成
 		static Ref<Material> Create(const Ref<MaterialShader>& shader);

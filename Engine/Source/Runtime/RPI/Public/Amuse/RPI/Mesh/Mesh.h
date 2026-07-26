@@ -57,8 +57,6 @@ namespace Amuse {
 	class Mesh : public RefObject
 	{
 	public:
-		using VertexLayout = Amuse::VertexLayout; //!< 頂点レイアウト型
-
 		Bounds bounds; //!< 境界ボックス
 		Vector<MeshLod> lods; //!< LOD 一覧
 		Vector<Ref<Material>> materials; //!< マテリアル一覧

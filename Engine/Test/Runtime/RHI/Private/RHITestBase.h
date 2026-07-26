@@ -13,8 +13,6 @@
 #include <Amuse/DirectX12RHI/DirectX12RHIConfig.h>
 #endif
 using namespace Amuse;
-using namespace Amuse;
-using namespace Amuse;
 
 struct DirectX12Tag {};
 struct VulkanTag {};

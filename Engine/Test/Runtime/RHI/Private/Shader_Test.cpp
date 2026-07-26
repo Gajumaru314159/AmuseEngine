@@ -9,7 +9,6 @@
 #include <magic_enum.hpp>
 
 using namespace Amuse;
-using namespace Amuse;
 
 static const char* s_code =
 R"(

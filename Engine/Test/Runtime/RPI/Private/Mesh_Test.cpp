@@ -6,7 +6,6 @@
 #include <Amuse/RPI/Mesh/Mesh.h>
 
 using namespace Amuse;
-using namespace Amuse;
 
 TYPED_TEST(BindfullRPITest, MeshCreate) {
 

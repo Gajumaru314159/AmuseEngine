@@ -9,7 +9,6 @@ using namespace Amuse;
 
 TEST(Window, ShowHide) {
 
-    using namespace Amuse;
     WindowDesc desc;
     auto window = Window::Create(desc);
 
@@ -30,7 +29,6 @@ TEST(Window, ShowHide) {
 
 TEST(Window, Title) {
 
-    using namespace Amuse;
     WindowDesc desc;
     desc.title = "AAA";
     auto window = Window::Create(desc);
@@ -43,7 +41,6 @@ TEST(Window, Title) {
 
 TEST(Window, PosSize) {
 
-    using namespace Amuse;
     WindowDesc desc;
     desc.clientSize = { 512, 256 };
     auto window = Window::Create(desc);

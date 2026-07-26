@@ -13,8 +13,6 @@
 
 namespace Amuse {
 	using Microsoft::WRL::ComPtr;
-	using Amuse::TLSFMapper;
-	using Amuse::TLSFBlock;
 
 	// 前方宣言
 	class SmallBufferAllocator;

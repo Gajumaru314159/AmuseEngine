@@ -6,12 +6,8 @@
 #include <magic_enum.hpp>
 
 using namespace Amuse;
-using namespace Amuse;
 
 TYPED_TEST(RHITest, Triangle_Test) {
-
-	using namespace Amuse;
-
 
 	{
 

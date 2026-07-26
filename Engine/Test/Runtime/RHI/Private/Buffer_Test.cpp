@@ -7,7 +7,6 @@
 #include <cstring>
 
 using namespace Amuse;
-using namespace Amuse;
 
 TYPED_TEST(RHITest, Buffer_Create) {
 

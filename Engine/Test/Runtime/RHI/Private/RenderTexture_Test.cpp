@@ -6,7 +6,6 @@
 #include <magic_enum.hpp>
 
 using namespace Amuse;
-using namespace Amuse;
 
 TYPED_TEST(RHITest, RenderTexture_Create) {
 
