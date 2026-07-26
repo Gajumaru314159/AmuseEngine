@@ -84,6 +84,67 @@ TYPED_TEST(RHITest, Buffer_CreateUtility) {
 
 }
 
+TYPED_TEST(RHITest, Buffer_CreateFactory) {
+
+	// Vertex
+	{
+		auto buffer = Buffer::CreateVertex<Vec4>("VertexBuffer", 100);
+		ASSERT_NE(buffer, nullptr);
+		EXPECT_EQ(buffer->getDesc().name, "VertexBuffer");
+		EXPECT_EQ(buffer->getDesc().state, BufferState::Vertex);
+		EXPECT_EQ(buffer->getDesc().size, sizeof(Vec4) * 100);
+		EXPECT_EQ(buffer->getDesc().stride, sizeof(Vec4));
+		EXPECT_EQ(buffer->getDesc().flags, BufferFlags(BufferFlag::Vertex));
+	}
+
+	// Index
+	{
+		auto buffer = Buffer::CreateIndex<u16>("IndexBuffer", 100);
+		ASSERT_NE(buffer, nullptr);
+		EXPECT_EQ(buffer->getDesc().name, "IndexBuffer");
+		EXPECT_EQ(buffer->getDesc().state, BufferState::Index);
+		EXPECT_EQ(buffer->getDesc().size, sizeof(u16) * 100);
+		EXPECT_EQ(buffer->getDesc().stride, sizeof(u16));
+		EXPECT_EQ(buffer->getDesc().flags, BufferFlags(BufferFlag::Index));
+	}
+
+	// Constant
+	{
+		auto buffer = Buffer::CreateConstant("ConstantBuffer", 100);
+		ASSERT_NE(buffer, nullptr);
+		EXPECT_EQ(buffer->getDesc().name, "ConstantBuffer");
+		EXPECT_EQ(buffer->getDesc().state, BufferState::Constant);
+		EXPECT_EQ(buffer->getDesc().size, 256);
+		EXPECT_EQ(buffer->getDesc().stride, 0);
+		EXPECT_EQ(buffer->getDesc().flags, BufferFlags(BufferFlag::Constant));
+	}
+
+	// ByteAddress
+	{
+		auto buffer = Buffer::CreateByteAddress("ByteAddressBuffer", 100);
+		ASSERT_NE(buffer, nullptr);
+		EXPECT_EQ(buffer->getDesc().name, "ByteAddressBuffer");
+		EXPECT_EQ(buffer->getDesc().state, BufferState::ShaderResource);
+		EXPECT_EQ(buffer->getDesc().size, 112);
+		EXPECT_EQ(buffer->getDesc().stride, 0);
+		EXPECT_EQ(buffer->getDesc().flags, BufferFlags(BufferFlag::ShaderResource));
+	}
+
+	// Structured
+	{
+		auto buffer = Buffer::CreateStructured<Vec4>("StructuredBuffer", 100);
+		ASSERT_NE(buffer, nullptr);
+		EXPECT_EQ(buffer->getDesc().name, "StructuredBuffer");
+		EXPECT_EQ(buffer->getDesc().state, BufferState::ShaderResource);
+		EXPECT_EQ(buffer->getDesc().size, sizeof(Vec4) * 100);
+		EXPECT_EQ(buffer->getDesc().stride, sizeof(Vec4));
+		EXPECT_EQ(
+			buffer->getDesc().flags,
+			BufferFlags(BufferFlag::ShaderResource | BufferFlag::UnorderedAccess));
+	}
+
+}
+
 TYPED_TEST(RHITest, Buffer_Update) {
 
 	// バッファの作成
