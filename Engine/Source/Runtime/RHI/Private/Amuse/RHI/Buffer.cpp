@@ -35,11 +35,7 @@ namespace Amuse {
     }
 
     //! @brief  定数バッファを作成
-    Ref<Buffer> Buffer::CreateConstant(
-        StringView name,
-        u64 size,
-        BufferState initialState,
-        BufferFlags flags)
+    Ref<Buffer> Buffer::CreateConstant(StringView name, u64 size, BufferState initialState, BufferFlags flags)
     {
         auto desc = BufferDesc::Constant(size, initialState, flags);
         desc.name = name;
@@ -48,11 +44,7 @@ namespace Amuse {
 
 
     //! @brief  ByteAddressバッファを作成
-    Ref<Buffer> Buffer::CreateByteAddress(
-        StringView name,
-        u64 size,
-        BufferState initialState,
-        BufferFlags flags)
+    Ref<Buffer> Buffer::CreateByteAddress(StringView name, u64 size, BufferState initialState, BufferFlags flags)
     {
         auto desc = BufferDesc::ByteAddress(size, initialState, flags);
         desc.name = name;
