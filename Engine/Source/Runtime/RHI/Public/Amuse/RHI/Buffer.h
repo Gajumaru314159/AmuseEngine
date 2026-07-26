@@ -30,6 +30,51 @@ namespace Amuse {
 		//! @brief  ベースのバッファを指定して異なるビューを持つバッファを作成
 		static Ref<Buffer> Create(const BufferViewDesc& desc);
 
+		//! @brief  頂点バッファを作成
+		template<typename TVertex>
+		static Ref<Buffer> CreateVertex(StringView name, u64 count, BufferFlags flags = BufferFlag::Vertex) {
+			auto desc = BufferDesc::Vertex<TVertex>(count, flags);
+			desc.name = name;
+			return Create(desc);
+		}
+
+		//! @brief  インデックスバッファを作成
+		template<typename TIndex>
+		static Ref<Buffer> CreateIndex(StringView name, u64 count, BufferFlags flags = BufferFlag::Index) {
+			auto desc = BufferDesc::Index<TIndex>(count, flags);
+			desc.name = name;
+			return Create(desc);
+		}
+
+		//! @brief  定数バッファを作成
+		//! @details サイズが256の倍数になるように調整されます。
+		static Ref<Buffer> CreateConstant(
+			StringView name,
+			u64 size,
+			BufferState initialState = BufferState::Constant,
+			BufferFlags flags = BufferFlag::Constant);
+
+		//! @brief  ByteAddressバッファを作成
+		//! @details サイズが16の倍数になるように調整されます。
+		static Ref<Buffer> CreateByteAddress(
+			StringView name,
+			u64 size,
+			BufferState initialState = BufferState::ShaderResource,
+			BufferFlags flags = BufferFlag::ShaderResource);
+
+		//! @brief  Structuredバッファを作成
+		template<typename T>
+		static Ref<Buffer> CreateStructured(
+			StringView name,
+			u64 count,
+			BufferState initialState = BufferState::ShaderResource,
+			BufferFlags flags = BufferFlag::ShaderResource | BufferFlag::UnorderedAccess)
+		{
+			auto desc = BufferDesc::Structured<T>(count, initialState, flags);
+			desc.name = name;
+			return Create(desc);
+		}
+
 	public:
 
 		//! @brief		定義を取得

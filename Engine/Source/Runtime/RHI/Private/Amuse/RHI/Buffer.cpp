@@ -34,6 +34,31 @@ namespace Amuse {
         return nullptr;
     }
 
+    //! @brief  定数バッファを作成
+    Ref<Buffer> Buffer::CreateConstant(
+        StringView name,
+        u64 size,
+        BufferState initialState,
+        BufferFlags flags)
+    {
+        auto desc = BufferDesc::Constant(size, initialState, flags);
+        desc.name = name;
+        return Create(desc);
+    }
+
+
+    //! @brief  ByteAddressバッファを作成
+    Ref<Buffer> Buffer::CreateByteAddress(
+        StringView name,
+        u64 size,
+        BufferState initialState,
+        BufferFlags flags)
+    {
+        auto desc = BufferDesc::ByteAddress(size, initialState, flags);
+        desc.name = name;
+        return Create(desc);
+    }
+
 
     //! @brief      drawIndirect() 用の引数を書き込む
     void Buffer::writeDrawParam(const DrawParam& param, u64 offset) {
