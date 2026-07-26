@@ -45,7 +45,6 @@ namespace Amuse {
         Optional<TextureFormat>	depth; //!< 深度フォーマット
 		SampleDesc		            sample; //!< サンプル設定
 		BlendDescList		        blend; //!< ブレンド設定
-        BlendDescList		        blends; //!< 複数ブレンド設定
         RasterizerDesc		        rasterizer; //!< ラスタライザ設定
         DepthStencilDesc	        depthStencil; //!< 深度ステンシル設定
     };
