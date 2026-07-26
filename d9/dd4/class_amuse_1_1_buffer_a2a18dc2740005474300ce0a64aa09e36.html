@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>AmuseEngine: Core</title>
+<title>AmuseEngine: Amuse::Buffer::CreateConstant</title>
 <link rel="icon" href="../../logo.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../codefolding.js"></script>
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
   </div>
 </div>
 <script type="text/javascript">
-document.addEventListener('DOMContentLoaded',() => { initNavTree('d9/dd9/_core.html','../../',''); });
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d9/dd4/class_amuse_1_1_buffer_a2a18dc2740005474300ce0a64aa09e36.html','../../',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -118,31 +118,56 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('d9/dd9/_core.h
 </div>
 </div>
 
-<div><div class="header">
-  <div class="headertitle"><div class="title">Core </div></div>
-</div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md__runtime_2_core_2_document_2_core"></a></p>
-<h1>概要</h1>
-<p>Coreモジュールは、MathやContainerなどの特定のマネージャーの状態に依存しない、基本的な機能を提供するクラスを実装しています。 Platform固有の実装は許可されていますが、特定のプラットフォームにしか存在しないかつフォールバックを実装できないような処理はPlatformに実装します。</p>
-<h1>サブページ</h1>
-<ul>
-<li><a class="el" href="../../d6/dd9/_arguments.html" title="Arguments">Arguments</a></li>
-<li><a class="el" href="../../d0/def/_container.html" title="コンテナ">コンテナ</a></li>
-<li><a class="el" href="../../da/dc9/_d_i.html" title="DI (Dependency Injection)">DI (Dependency Injection)</a></li>
-<li><a class="el" href="../../d9/d70/_log.html" title="Log">Log</a></li>
-<li><a class="el" href="../../d8/dfa/_reflection.html" title="Reflection">Reflection</a></li>
-<li><a class="el" href="../../dd/d35/_string.html" title="String">String</a></li>
-<li><a class="el" href="../../d8/dfd/_scheduler.html" title="Scheduler">Scheduler</a> </li>
-</ul>
-</div></div><!-- contents -->
-</div><!-- PageDoc -->
+<a id="a2a18dc2740005474300ce0a64aa09e36" name="a2a18dc2740005474300ce0a64aa09e36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a18dc2740005474300ce0a64aa09e36">&#9670;&#160;</a></span>CreateConstant()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/d8b/class_amuse_1_1_ref.html">Ref</a>&lt; <a class="el" href="../../d9/dd4/class_amuse_1_1_buffer.html">Buffer</a> &gt; CreateConstant </td>
+          <td>(</td>
+          <td class="paramtype">StringView</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u64</td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d9/de0/group___amuse_r_h_i_ga83ecb2e2f53d94c9339969a2968fd174.html#ga83ecb2e2f53d94c9339969a2968fd174">BufferState</a></td>          <td class="paramname"><span class="paramname"><em>initialState</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="../../d9/de0/group___amuse_r_h_i_ga83ecb2e2f53d94c9339969a2968fd174.html#gga83ecb2e2f53d94c9339969a2968fd174acb17869fe51048b5a5c4c6106551a255">BufferState::Constant</a></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BufferFlags</td>          <td class="paramname"><span class="paramname"><em>flags</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="../../d9/de0/group___amuse_r_h_i_ga387022dde7b78e245f4cf3e9894e57d2.html#gga387022dde7b78e245f4cf3e9894e57d2acb17869fe51048b5a5c4c6106551a255">BufferFlag::Constant</a></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>定数バッファを作成 </p>
+<p>サイズが256の倍数になるように調整されます。 </p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="../../index.html">AmuseEngine</a></li><li class="navelem"><a href="../../dc/d7c/_features.html">Features</a></li><li class="navelem"><a href="../../d2/de4/_runtime.html">Runtime</a></li>
+    <li class="navelem"><b>Amuse</b></li><li class="navelem"><a href="../../d9/dd4/class_amuse_1_1_buffer.html">Buffer</a></li>
     <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>AmuseEngine: Runtime/Platform/Public/Amuse/Platform/Arguments.h ソースファイル</title>
+<title>AmuseEngine: Runtime/Core/Public/Amuse/Core/Misc/Arguments.h ソースファイル</title>
 <link rel="icon" href="../../logo.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../codefolding.js"></script>
@@ -125,53 +125,56 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('d3/da0/_argume
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//***********************************************************</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//***********************************************************</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;Amuse/Core/Core.h&gt;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span>Amuse {</div>
-<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="../../db/d22/class_amuse_1_1_arguments.html">   11</a></span>    <span class="keyword">class </span><a class="code hl_function" href="../../db/d22/class_amuse_1_1_arguments.html#a952acb9f28daf0e657ea9d14a64f5378">Arguments</a> {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../db/d22/class_amuse_1_1_arguments.html#aec1d4159410043d6a00fa17d17e049ef">   13</a></span>        <span class="keyword">using </span><a class="code hl_typedef" href="../../db/d22/class_amuse_1_1_arguments.html#aec1d4159410043d6a00fa17d17e049ef">container_type</a> = Vector&lt;String&gt;;                       </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="../../db/d22/class_amuse_1_1_arguments.html#ad3f89b11591ebd7805b1398788dff54e">   14</a></span>        <span class="keyword">using </span><a class="code hl_typedef" href="../../db/d22/class_amuse_1_1_arguments.html#ad3f89b11591ebd7805b1398788dff54e">iterator</a> = container_type::iterator;                  </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../db/d22/class_amuse_1_1_arguments.html#a2970d1933ad75bdce5623932ed55bab1">   15</a></span>        <span class="keyword">using </span><a class="code hl_typedef" href="../../db/d22/class_amuse_1_1_arguments.html#a2970d1933ad75bdce5623932ed55bab1">const_iterator</a> = container_type::const_iterator;      </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="../../db/d22/class_amuse_1_1_arguments.html#a952acb9f28daf0e657ea9d14a64f5378">   19</a></span>        <a class="code hl_function" href="../../db/d22/class_amuse_1_1_arguments.html#a952acb9f28daf0e657ea9d14a64f5378">Arguments</a>();</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;Amuse/Core/CoreTypes.h&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;Amuse/Core/String/String.h&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;Amuse/Core/Template/Container/Vector.h&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span>Amuse {</div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="../../db/d22/class_amuse_1_1_arguments.html">   14</a></span>    <span class="keyword">class </span><a class="code hl_function" href="../../db/d22/class_amuse_1_1_arguments.html#a952acb9f28daf0e657ea9d14a64f5378">Arguments</a> {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="../../db/d22/class_amuse_1_1_arguments.html#aec1d4159410043d6a00fa17d17e049ef">   16</a></span>        <span class="keyword">using </span><a class="code hl_typedef" href="../../db/d22/class_amuse_1_1_arguments.html#aec1d4159410043d6a00fa17d17e049ef">container_type</a> = Vector&lt;String&gt;;                       </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../db/d22/class_amuse_1_1_arguments.html#ad3f89b11591ebd7805b1398788dff54e">   17</a></span>        <span class="keyword">using </span><a class="code hl_typedef" href="../../db/d22/class_amuse_1_1_arguments.html#ad3f89b11591ebd7805b1398788dff54e">iterator</a> = container_type::iterator;                  </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="../../db/d22/class_amuse_1_1_arguments.html#a2970d1933ad75bdce5623932ed55bab1">   18</a></span>        <span class="keyword">using </span><a class="code hl_typedef" href="../../db/d22/class_amuse_1_1_arguments.html#a2970d1933ad75bdce5623932ed55bab1">const_iterator</a> = container_type::const_iterator;      </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="../../db/d22/class_amuse_1_1_arguments_a7c89a3d3cfb20274fd6a9c1234498d00.html#a7c89a3d3cfb20274fd6a9c1234498d00">   24</a></span>        <span class="keyword">const</span> String&amp; <a class="code hl_function" href="../../db/d22/class_amuse_1_1_arguments_a7c89a3d3cfb20274fd6a9c1234498d00.html#a7c89a3d3cfb20274fd6a9c1234498d00">at</a>(s32 index)<span class="keyword">const</span>;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="../../db/d22/class_amuse_1_1_arguments.html#a1ca1fc2c9fc3e169d5d0decfd1e54221">   27</a></span>        <a class="code hl_typedef" href="../../db/d22/class_amuse_1_1_arguments.html#a2970d1933ad75bdce5623932ed55bab1">const_iterator</a> <a class="code hl_function" href="../../db/d22/class_amuse_1_1_arguments.html#a1ca1fc2c9fc3e169d5d0decfd1e54221">begin</a>()const noexcept;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../db/d22/class_amuse_1_1_arguments.html#a952acb9f28daf0e657ea9d14a64f5378">   22</a></span>        <a class="code hl_function" href="../../db/d22/class_amuse_1_1_arguments.html#a952acb9f28daf0e657ea9d14a64f5378">Arguments</a>();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="../../db/d22/class_amuse_1_1_arguments_a7c89a3d3cfb20274fd6a9c1234498d00.html#a7c89a3d3cfb20274fd6a9c1234498d00">   27</a></span>        <span class="keyword">const</span> String&amp; <a class="code hl_function" href="../../db/d22/class_amuse_1_1_arguments_a7c89a3d3cfb20274fd6a9c1234498d00.html#a7c89a3d3cfb20274fd6a9c1234498d00">at</a>(s32 index)<span class="keyword">const</span>;</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="../../db/d22/class_amuse_1_1_arguments.html#a5b9b57293fae9b18b26349ac0b3fdcd3">   30</a></span>        <a class="code hl_typedef" href="../../db/d22/class_amuse_1_1_arguments.html#a2970d1933ad75bdce5623932ed55bab1">const_iterator</a> <a class="code hl_function" href="../../db/d22/class_amuse_1_1_arguments.html#a5b9b57293fae9b18b26349ac0b3fdcd3">end</a>()const noexcept;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="../../db/d22/class_amuse_1_1_arguments.html#a1ca1fc2c9fc3e169d5d0decfd1e54221">   30</a></span>        <a class="code hl_typedef" href="../../db/d22/class_amuse_1_1_arguments.html#a2970d1933ad75bdce5623932ed55bab1">const_iterator</a> <a class="code hl_function" href="../../db/d22/class_amuse_1_1_arguments.html#a1ca1fc2c9fc3e169d5d0decfd1e54221">begin</a>()const noexcept;</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../db/d22/class_amuse_1_1_arguments.html#a11245877381a9e1da742081eb8baecb2">   33</a></span>        s32 <a class="code hl_function" href="../../db/d22/class_amuse_1_1_arguments.html#a11245877381a9e1da742081eb8baecb2">size</a>()const noexcept;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../db/d22/class_amuse_1_1_arguments.html#a5b9b57293fae9b18b26349ac0b3fdcd3">   33</a></span>        <a class="code hl_typedef" href="../../db/d22/class_amuse_1_1_arguments.html#a2970d1933ad75bdce5623932ed55bab1">const_iterator</a> <a class="code hl_function" href="../../db/d22/class_amuse_1_1_arguments.html#a5b9b57293fae9b18b26349ac0b3fdcd3">end</a>()const noexcept;</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../db/d22/class_amuse_1_1_arguments.html#a3f6fc5de06a318920d84f3c3742db07f">   36</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../db/d22/class_amuse_1_1_arguments.html#a3f6fc5de06a318920d84f3c3742db07f">empty</a>()const noexcept;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    private:</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        Vector&lt;String&gt; m_args;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    };</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../db/d22/class_amuse_1_1_arguments.html#a11245877381a9e1da742081eb8baecb2">   36</a></span>        s32 <a class="code hl_function" href="../../db/d22/class_amuse_1_1_arguments.html#a11245877381a9e1da742081eb8baecb2">size</a>()const noexcept;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../db/d22/class_amuse_1_1_arguments.html#a3f6fc5de06a318920d84f3c3742db07f">   39</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../db/d22/class_amuse_1_1_arguments.html#a3f6fc5de06a318920d84f3c3742db07f">empty</a>()const noexcept;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    private:</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        Vector&lt;String&gt; m_args;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    };</div>
 </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>}</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>}</div>
 <div class="ttc" id="aclass_amuse_1_1_arguments_a7c89a3d3cfb20274fd6a9c1234498d00_html_a7c89a3d3cfb20274fd6a9c1234498d00"><div class="ttname"><a href="../../db/d22/class_amuse_1_1_arguments_a7c89a3d3cfb20274fd6a9c1234498d00.html#a7c89a3d3cfb20274fd6a9c1234498d00">Amuse::Arguments::at</a></div><div class="ttdeci">const String &amp; at(s32 index) const</div><div class="ttdoc">引数を取得</div></div>
 <div class="ttc" id="aclass_amuse_1_1_arguments_html_a11245877381a9e1da742081eb8baecb2"><div class="ttname"><a href="../../db/d22/class_amuse_1_1_arguments.html#a11245877381a9e1da742081eb8baecb2">Amuse::Arguments::size</a></div><div class="ttdeci">s32 size() const noexcept</div><div class="ttdoc">引数の数を取得する</div></div>
 <div class="ttc" id="aclass_amuse_1_1_arguments_html_a1ca1fc2c9fc3e169d5d0decfd1e54221"><div class="ttname"><a href="../../db/d22/class_amuse_1_1_arguments.html#a1ca1fc2c9fc3e169d5d0decfd1e54221">Amuse::Arguments::begin</a></div><div class="ttdeci">const_iterator begin() const noexcept</div><div class="ttdoc">先頭の要素を指す読み取り専用イテレータを取得する</div></div>
-<div class="ttc" id="aclass_amuse_1_1_arguments_html_a2970d1933ad75bdce5623932ed55bab1"><div class="ttname"><a href="../../db/d22/class_amuse_1_1_arguments.html#a2970d1933ad75bdce5623932ed55bab1">Amuse::Arguments::const_iterator</a></div><div class="ttdeci">container_type::const_iterator const_iterator</div><div class="ttdoc">constイテレータ</div><div class="ttdef"><b>Definition</b> Arguments.h:15</div></div>
+<div class="ttc" id="aclass_amuse_1_1_arguments_html_a2970d1933ad75bdce5623932ed55bab1"><div class="ttname"><a href="../../db/d22/class_amuse_1_1_arguments.html#a2970d1933ad75bdce5623932ed55bab1">Amuse::Arguments::const_iterator</a></div><div class="ttdeci">container_type::const_iterator const_iterator</div><div class="ttdoc">constイテレータ</div><div class="ttdef"><b>Definition</b> Arguments.h:18</div></div>
 <div class="ttc" id="aclass_amuse_1_1_arguments_html_a3f6fc5de06a318920d84f3c3742db07f"><div class="ttname"><a href="../../db/d22/class_amuse_1_1_arguments.html#a3f6fc5de06a318920d84f3c3742db07f">Amuse::Arguments::empty</a></div><div class="ttdeci">bool empty() const noexcept</div><div class="ttdoc">空か</div></div>
 <div class="ttc" id="aclass_amuse_1_1_arguments_html_a5b9b57293fae9b18b26349ac0b3fdcd3"><div class="ttname"><a href="../../db/d22/class_amuse_1_1_arguments.html#a5b9b57293fae9b18b26349ac0b3fdcd3">Amuse::Arguments::end</a></div><div class="ttdeci">const_iterator end() const noexcept</div><div class="ttdoc">末尾の次を指す読み取り専用イテレータを取得する</div></div>
 <div class="ttc" id="aclass_amuse_1_1_arguments_html_a952acb9f28daf0e657ea9d14a64f5378"><div class="ttname"><a href="../../db/d22/class_amuse_1_1_arguments.html#a952acb9f28daf0e657ea9d14a64f5378">Amuse::Arguments::Arguments</a></div><div class="ttdeci">Arguments()</div><div class="ttdoc">コンストラクタ</div></div>
-<div class="ttc" id="aclass_amuse_1_1_arguments_html_ad3f89b11591ebd7805b1398788dff54e"><div class="ttname"><a href="../../db/d22/class_amuse_1_1_arguments.html#ad3f89b11591ebd7805b1398788dff54e">Amuse::Arguments::iterator</a></div><div class="ttdeci">container_type::iterator iterator</div><div class="ttdoc">イテレータ</div><div class="ttdef"><b>Definition</b> Arguments.h:14</div></div>
-<div class="ttc" id="aclass_amuse_1_1_arguments_html_aec1d4159410043d6a00fa17d17e049ef"><div class="ttname"><a href="../../db/d22/class_amuse_1_1_arguments.html#aec1d4159410043d6a00fa17d17e049ef">Amuse::Arguments::container_type</a></div><div class="ttdeci">Vector&lt; String &gt; container_type</div><div class="ttdoc">引数コンテナ</div><div class="ttdef"><b>Definition</b> Arguments.h:13</div></div>
+<div class="ttc" id="aclass_amuse_1_1_arguments_html_ad3f89b11591ebd7805b1398788dff54e"><div class="ttname"><a href="../../db/d22/class_amuse_1_1_arguments.html#ad3f89b11591ebd7805b1398788dff54e">Amuse::Arguments::iterator</a></div><div class="ttdeci">container_type::iterator iterator</div><div class="ttdoc">イテレータ</div><div class="ttdef"><b>Definition</b> Arguments.h:17</div></div>
+<div class="ttc" id="aclass_amuse_1_1_arguments_html_aec1d4159410043d6a00fa17d17e049ef"><div class="ttname"><a href="../../db/d22/class_amuse_1_1_arguments.html#aec1d4159410043d6a00fa17d17e049ef">Amuse::Arguments::container_type</a></div><div class="ttdeci">Vector&lt; String &gt; container_type</div><div class="ttdoc">引数コンテナ</div><div class="ttdef"><b>Definition</b> Arguments.h:16</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>Runtime</b></li><li class="navelem"><b>Platform</b></li><li class="navelem"><b>Public</b></li><li class="navelem"><b>Amuse</b></li><li class="navelem"><b>Platform</b></li><li class="navelem"><b>Arguments.h</b></li>
+    <li class="navelem"><b>Runtime</b></li><li class="navelem"><b>Core</b></li><li class="navelem"><b>Public</b></li><li class="navelem"><b>Amuse</b></li><li class="navelem"><b>Core</b></li><li class="navelem"><b>Misc</b></li><li class="navelem"><b>Arguments.h</b></li>
     <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>

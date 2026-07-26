@@ -81,12 +81,9 @@ var group___amuse_r_p_i =
       [ "wait", "d7/df8/class_amuse_1_1_graphics.html#aa3b21853f890838c88d047d6c2786917", null ]
     ] ],
     [ "Material", "d0/dfb/class_amuse_1_1_material.html", [
-      [ "Buffer", "d0/dfb/class_amuse_1_1_material.html#adef607cd50811e77d8cdaaf86b0ba378", null ],
-      [ "Sampler", "d0/dfb/class_amuse_1_1_material.html#a11fe1abf800d9702dfeed7f9e9ad816d", null ],
-      [ "Texture", "d0/dfb/class_amuse_1_1_material.html#aefdf74da07a4d30ebf753203c31ba0af", null ],
       [ "calcQualityIndex", "d0/dfb/class_amuse_1_1_material.html#ad9575e034745920530644914ba1c2a3a", null ],
       [ "getBlock", "d0/dfb/class_amuse_1_1_material.html#ab317be1fee24f00de0dd03e95987f11b", null ],
-      [ "getDesc", "d0/dfb/class_amuse_1_1_material.html#a398c8212c7ac770436d4fdb84f3acc3a", null ],
+      [ "getDesc", "d0/dfb/class_amuse_1_1_material.html#a3224a6ad98463484f20308c49e3f02df", null ],
       [ "getShader", "d0/dfb/class_amuse_1_1_material.html#a5bdc0363f2d27f7330a200a79dc6d145", null ],
       [ "hasBuffer", "d0/dfb/class_amuse_1_1_material.html#ad06963cfe41e0569626952865c9f48c0", null ],
       [ "hasInteger", "d0/dfb/class_amuse_1_1_material.html#ac679a6bb4161e8ec4a11405e5051a054", null ],
@@ -115,12 +112,6 @@ var group___amuse_r_p_i =
       [ "vectors", "df/d51/struct_amuse_1_1_material_block_desc.html#a54a93a3fba523f801c036cbe39eab56e", null ]
     ] ],
     [ "MaterialBlock", "d4/d9d/class_amuse_1_1_material_block.html", [
-      [ "Buffer", "d4/d9d/class_amuse_1_1_material_block.html#adef607cd50811e77d8cdaaf86b0ba378", null ],
-      [ "CommandList", "d4/d9d/class_amuse_1_1_material_block.html#a13484cb65727b108a0dcc6075cf58964", null ],
-      [ "DescriptorLayout", "d4/d9d/class_amuse_1_1_material_block.html#a420a4e5d2249d0f287d8b8cfca7070b3", null ],
-      [ "DescriptorTable", "d4/d9d/class_amuse_1_1_material_block.html#a984684f0a492e10b5ed7e0c61dab820b", null ],
-      [ "Sampler", "d4/d9d/class_amuse_1_1_material_block.html#a11fe1abf800d9702dfeed7f9e9ad816d", null ],
-      [ "Texture", "d4/d9d/class_amuse_1_1_material_block.html#aefdf74da07a4d30ebf753203c31ba0af", null ],
       [ "MaterialBlock", "d4/d9d/class_amuse_1_1_material_block.html#afa96fc7ddcff840ca9281052ee1f627f", null ],
       [ "MaterialBlock", "d4/d9d/class_amuse_1_1_material_block.html#a3348ad522a8d7f0f6855415141d96e11", null ],
       [ "getLayout", "d4/d9d/class_amuse_1_1_material_block.html#aade18d594188aa1b830133aa26fffb45", null ],
@@ -149,7 +140,6 @@ var group___amuse_r_p_i =
     ] ],
     [ "ShaderSet", "d7/d3a/struct_amuse_1_1_shader_set.html", [
       [ "blend", "d7/d3a/struct_amuse_1_1_shader_set.html#a8403e75faecda5523014a600e6e3c5b8", null ],
-      [ "blends", "d7/d3a/struct_amuse_1_1_shader_set.html#aca9f797e65d2b2ea90d0a94c3ae41e03", null ],
       [ "colors", "d7/d3a/struct_amuse_1_1_shader_set.html#aea84a0bc5e5cae87cb161d9992b29a9a", null ],
       [ "depth", "d7/d3a/struct_amuse_1_1_shader_set.html#ad53ed8bf2e2311361591640352019b4f", null ],
       [ "depthStencil", "d7/d3a/struct_amuse_1_1_shader_set.html#a90a04ef6c06db53b8ec8d8590bee4f07", null ],
@@ -163,15 +153,15 @@ var group___amuse_r_p_i =
     [ "MaterialPass", "d5/d52/struct_amuse_1_1_material_pass.html", [
       [ "qualities", "d5/d52/struct_amuse_1_1_material_pass.html#a378092d2ac9626617279030ef36f3682", null ]
     ] ],
-    [ "MaterialDesc", "da/ddc/struct_amuse_1_1_material_desc.html", [
-      [ "buffers", "da/ddc/struct_amuse_1_1_material_desc.html#a151d63d8dd6849099d5d9219c6284fa8", null ],
-      [ "integers", "da/ddc/struct_amuse_1_1_material_desc.html#a5f256a1339a4ffa314190096257584da", null ],
-      [ "matrices", "da/ddc/struct_amuse_1_1_material_desc.html#a50f26c267afd7f85e5338e9d87518c0d", null ],
-      [ "name", "da/ddc/struct_amuse_1_1_material_desc.html#a9a2326f35466e54c36c070829245c557", null ],
-      [ "passes", "da/ddc/struct_amuse_1_1_material_desc.html#a702c3ff635bbc483d27487074860505f", null ],
-      [ "scalars", "da/ddc/struct_amuse_1_1_material_desc.html#a74f781d8a3a6516d8bc7cfb30db19b25", null ],
-      [ "textures", "da/ddc/struct_amuse_1_1_material_desc.html#a3603ffce626f73f449d4de210d5ccf93", null ],
-      [ "vectors", "da/ddc/struct_amuse_1_1_material_desc.html#a54a93a3fba523f801c036cbe39eab56e", null ]
+    [ "MaterialShaderDesc", "d2/d56/struct_amuse_1_1_material_shader_desc.html", [
+      [ "buffers", "d2/d56/struct_amuse_1_1_material_shader_desc.html#a151d63d8dd6849099d5d9219c6284fa8", null ],
+      [ "integers", "d2/d56/struct_amuse_1_1_material_shader_desc.html#a5f256a1339a4ffa314190096257584da", null ],
+      [ "matrices", "d2/d56/struct_amuse_1_1_material_shader_desc.html#a50f26c267afd7f85e5338e9d87518c0d", null ],
+      [ "name", "d2/d56/struct_amuse_1_1_material_shader_desc.html#a9a2326f35466e54c36c070829245c557", null ],
+      [ "passes", "d2/d56/struct_amuse_1_1_material_shader_desc.html#a702c3ff635bbc483d27487074860505f", null ],
+      [ "scalars", "d2/d56/struct_amuse_1_1_material_shader_desc.html#a74f781d8a3a6516d8bc7cfb30db19b25", null ],
+      [ "textures", "d2/d56/struct_amuse_1_1_material_shader_desc.html#a3603ffce626f73f449d4de210d5ccf93", null ],
+      [ "vectors", "d2/d56/struct_amuse_1_1_material_shader_desc.html#a54a93a3fba523f801c036cbe39eab56e", null ]
     ] ],
     [ "MaterialPropertiesDesc", "d2/d24/struct_amuse_1_1_material_properties_desc.html", [
       [ "merge", "d2/d24/struct_amuse_1_1_material_properties_desc_a13a2dd3cffe62f1103113f548e5ecccf.html#a13a2dd3cffe62f1103113f548e5ecccf", null ],
@@ -189,11 +179,9 @@ var group___amuse_r_p_i =
       [ "view", "d4/da3/struct_amuse_1_1_material_properties_set_desc.html#ab9dbb29d875496c3de40d92d609fa342", null ]
     ] ],
     [ "MaterialShader", "d4/d01/class_amuse_1_1_material_shader.html", [
-      [ "PipelineState", "d4/d01/class_amuse_1_1_material_shader.html#af7359700815551accca8788b4d6ee2e5", null ],
-      [ "RootSignature", "d4/d01/class_amuse_1_1_material_shader.html#a4a60e0a6088fcd43894b3f8d4dd934c2", null ],
       [ "calcQualityIndex", "d4/d01/class_amuse_1_1_material_shader.html#ad9575e034745920530644914ba1c2a3a", null ],
       [ "getBlockDesc", "d4/d01/class_amuse_1_1_material_shader.html#a35146de3dcd811b5857e221d14e5d994", null ],
-      [ "getDesc", "d4/d01/class_amuse_1_1_material_shader.html#a398c8212c7ac770436d4fdb84f3acc3a", null ],
+      [ "getDesc", "d4/d01/class_amuse_1_1_material_shader.html#a3224a6ad98463484f20308c49e3f02df", null ],
       [ "getPipeline", "d4/d01/class_amuse_1_1_material_shader.html#a1375034db983c59f8c4de69f70ca5859", null ],
       [ "getRootSignature", "d4/d01/class_amuse_1_1_material_shader.html#aeca7f9a538b413ac1c13d7a9221d6993", null ],
       [ "prepare", "d4/d01/class_amuse_1_1_material_shader.html#aec6ee2909ec45d147d8fcdf37833bfeb", null ]
@@ -207,8 +195,7 @@ var group___amuse_r_p_i =
         [ "scene", "d2/d6e/struct_amuse_1_1_material_system_1_1_material_layout_set.html#aae4834bfd2fd3c1544ef91f1a5d950cd", null ],
         [ "view", "d2/d6e/struct_amuse_1_1_material_system_1_1_material_layout_set.html#afbacefc4dcbe097073016d2f88c4bdd8", null ]
       ] ],
-      [ "VertexLayout", "d4/d8d/class_amuse_1_1_material_system.html#a93df814dc743a73419feb36aa03f583d", null ],
-      [ "MaterialSystem", "d4/d8d/class_amuse_1_1_material_system.html#a1d8d0f100d528a60839425b29c7aeb54", null ],
+      [ "MaterialSystem", "d4/d8d/class_amuse_1_1_material_system.html#a5773779bb1ecbb7f85d1a87c7c84aee5", null ],
       [ "createSceneBlock", "d4/d8d/class_amuse_1_1_material_system.html#a52487e4fab3effc2663842d2cd5dbb4b", null ],
       [ "createViewBlock", "d4/d8d/class_amuse_1_1_material_system.html#ad6779fb5308f6390b9266c218cc6e7ef", null ],
       [ "getGlobalBlock", "d4/d8d/class_amuse_1_1_material_system.html#a84793a87b06d9ffda12f43aee70bd885", null ],
@@ -261,7 +248,6 @@ var group___amuse_r_p_i =
       [ "source", "d1/d5a/struct_amuse_1_1_mesh_lod.html#a8e095b495ec4f728a24c4b5a2d47ac80", null ]
     ] ],
     [ "Mesh", "d3/d95/class_amuse_1_1_mesh.html", [
-      [ "VertexLayout", "d3/d95/class_amuse_1_1_mesh.html#a93df814dc743a73419feb36aa03f583d", null ],
       [ "apply", "d3/d95/class_amuse_1_1_mesh.html#a95067243b72a23863ec07c821797455c", null ],
       [ "clearSources", "d3/d95/class_amuse_1_1_mesh.html#a5518ded6c5d539cb2a57cf107be4b9b3", null ],
       [ "bounds", "d3/d95/class_amuse_1_1_mesh.html#a024318f4225ee6bedb20b7f865205d34", null ],

@@ -122,9 +122,9 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('d6/dd9/_argume
   <div class="headertitle"><div class="title">Arguments </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md__runtime_2_platform_2_document_2_arguments"></a></p>
+<div class="textblock"><p><a class="anchor" id="md__runtime_2_core_2_document_2_arguments"></a></p>
 <h1>概要</h1>
-<p>Argumentsは、アプリケーション起動時のコマンドライン引数を取得するためのクラスです。 OSごとに異なる引数取得処理をPlatformモジュール内で吸収し、利用側には<span class="tt">Vector&lt;String&gt;</span>に近い読み取りAPIを提供します。</p>
+<p>Argumentsは、アプリケーション起動時のコマンドライン引数を取得するためのクラスです。 OSごとに異なる引数取得処理をCoreモジュール内で吸収し、利用側には<span class="tt">Vector&lt;String&gt;</span>に近い読み取りAPIを提供します。</p>
 <h1>機能要件</h1>
 <ul>
 <li>起動時に渡された引数を順序付きで参照できること。</li>
@@ -159,6 +159,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('d6/dd9/_argume
 <ul>
 <li><span class="tt">at()</span>は範囲外アクセス時にCoreコンテナ側の挙動に従います。</li>
 <li>引数の文字コード変換は各OS実装側で行い、公開APIでは<span class="tt">String</span>として扱います。</li>
+<li>Linuxではエントリ関数でキャッシュした<span class="tt">argc</span>/<span class="tt">argv</span>を参照して引数を取得します。</li>
 <li>引数を変更するAPIは提供しません。 </li>
 </ul>
 </div></div><!-- contents -->
@@ -168,7 +169,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('d6/dd9/_argume
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="../../index.html">AmuseEngine</a></li><li class="navelem"><a href="../../dc/d7c/_features.html">Features</a></li><li class="navelem"><a href="../../d2/de4/_runtime.html">Runtime</a></li><li class="navelem"><a href="../../d5/d75/_platform.html">Platform</a></li>
+    <li class="navelem"><a href="../../index.html">AmuseEngine</a></li><li class="navelem"><a href="../../dc/d7c/_features.html">Features</a></li><li class="navelem"><a href="../../d2/de4/_runtime.html">Runtime</a></li><li class="navelem"><a href="../../d9/dd9/_core.html">Core</a></li>
     <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>

@@ -1,16 +1,5 @@
 var group___amuse_platform =
 [
-    [ "Arguments", "db/d22/class_amuse_1_1_arguments.html", [
-      [ "const_iterator", "db/d22/class_amuse_1_1_arguments.html#a2970d1933ad75bdce5623932ed55bab1", null ],
-      [ "container_type", "db/d22/class_amuse_1_1_arguments.html#aec1d4159410043d6a00fa17d17e049ef", null ],
-      [ "iterator", "db/d22/class_amuse_1_1_arguments.html#ad3f89b11591ebd7805b1398788dff54e", null ],
-      [ "Arguments", "db/d22/class_amuse_1_1_arguments.html#a952acb9f28daf0e657ea9d14a64f5378", null ],
-      [ "at", "db/d22/class_amuse_1_1_arguments_a7c89a3d3cfb20274fd6a9c1234498d00.html#a7c89a3d3cfb20274fd6a9c1234498d00", null ],
-      [ "begin", "db/d22/class_amuse_1_1_arguments.html#a1ca1fc2c9fc3e169d5d0decfd1e54221", null ],
-      [ "empty", "db/d22/class_amuse_1_1_arguments.html#a3f6fc5de06a318920d84f3c3742db07f", null ],
-      [ "end", "db/d22/class_amuse_1_1_arguments.html#a5b9b57293fae9b18b26349ac0b3fdcd3", null ],
-      [ "size", "db/d22/class_amuse_1_1_arguments.html#a11245877381a9e1da742081eb8baecb2", null ]
-    ] ],
     [ "DLL", "d6/d5d/class_amuse_1_1_d_l_l.html", [
       [ "DLL", "d6/d5d/class_amuse_1_1_d_l_l_a3bd46b9400594acd02acc35a0381a606.html#a3bd46b9400594acd02acc35a0381a606", null ],
       [ "~DLL", "d6/d5d/class_amuse_1_1_d_l_l.html#a0be96a863e3217086ab425306de71386", null ],

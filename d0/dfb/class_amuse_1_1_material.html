@@ -120,7 +120,6 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('d0/dfb/class_a
 
 <div class="header">
   <div class="summary">
-<a href="#pub-types">公開型</a> &#124;
 <a href="#pub-methods">メソッド</a> &#124;
 <a href="#pub-static-methods">静的関数</a> &#124;
 <a href="../../d1/df9/class_amuse_1_1_material-members.html">全メンバ一覧</a>  </div>
@@ -130,23 +129,11 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('d0/dfb/class_a
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">説明</h2>
 <div class="textblock"><p>マテリアル </p>
 </div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
-公開型</h2></td></tr>
-<tr class="memitem:aefdf74da07a4d30ebf753203c31ba0af" id="r_aefdf74da07a4d30ebf753203c31ba0af"><td class="memItemLeft"><a id="aefdf74da07a4d30ebf753203c31ba0af" name="aefdf74da07a4d30ebf753203c31ba0af"></a>
-using&#160;</td><td class="memItemRight"><b>Texture</b> = <a class="el" href="../../d2/dcd/class_amuse_1_1_texture.html">Amuse::Texture</a></td></tr>
-<tr class="memdesc:aefdf74da07a4d30ebf753203c31ba0af"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャ型 <br /></td></tr>
-<tr class="memitem:a11fe1abf800d9702dfeed7f9e9ad816d" id="r_a11fe1abf800d9702dfeed7f9e9ad816d"><td class="memItemLeft"><a id="a11fe1abf800d9702dfeed7f9e9ad816d" name="a11fe1abf800d9702dfeed7f9e9ad816d"></a>
-using&#160;</td><td class="memItemRight"><b>Sampler</b> = <a class="el" href="../../dd/d5a/class_amuse_1_1_sampler.html">Amuse::Sampler</a></td></tr>
-<tr class="memdesc:a11fe1abf800d9702dfeed7f9e9ad816d"><td class="mdescLeft">&#160;</td><td class="mdescRight">サンプラ型 <br /></td></tr>
-<tr class="memitem:adef607cd50811e77d8cdaaf86b0ba378" id="r_adef607cd50811e77d8cdaaf86b0ba378"><td class="memItemLeft"><a id="adef607cd50811e77d8cdaaf86b0ba378" name="adef607cd50811e77d8cdaaf86b0ba378"></a>
-using&#160;</td><td class="memItemRight"><b>Buffer</b> = <a class="el" href="../../d9/dd4/class_amuse_1_1_buffer.html">Amuse::Buffer</a></td></tr>
-<tr class="memdesc:adef607cd50811e77d8cdaaf86b0ba378"><td class="mdescLeft">&#160;</td><td class="mdescRight">バッファ型 <br /></td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 メソッド</h2></td></tr>
-<tr class="memitem:a398c8212c7ac770436d4fdb84f3acc3a" id="r_a398c8212c7ac770436d4fdb84f3acc3a"><td class="memItemLeft"><a id="a398c8212c7ac770436d4fdb84f3acc3a" name="a398c8212c7ac770436d4fdb84f3acc3a"></a>
-const <a class="el" href="../../da/ddc/struct_amuse_1_1_material_desc.html">MaterialDesc</a> &amp;&#160;</td><td class="memItemRight"><b>getDesc</b> () const</td></tr>
-<tr class="memdesc:a398c8212c7ac770436d4fdb84f3acc3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアル定義を取得する <br /></td></tr>
+<tr class="memitem:a3224a6ad98463484f20308c49e3f02df" id="r_a3224a6ad98463484f20308c49e3f02df"><td class="memItemLeft"><a id="a3224a6ad98463484f20308c49e3f02df" name="a3224a6ad98463484f20308c49e3f02df"></a>
+const <a class="el" href="../../d2/d56/struct_amuse_1_1_material_shader_desc.html">MaterialShaderDesc</a> &amp;&#160;</td><td class="memItemRight"><b>getDesc</b> () const</td></tr>
+<tr class="memdesc:a3224a6ad98463484f20308c49e3f02df"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアル定義を取得する <br /></td></tr>
 <tr class="memitem:a5bdc0363f2d27f7330a200a79dc6d145" id="r_a5bdc0363f2d27f7330a200a79dc6d145"><td class="memItemLeft"><a id="a5bdc0363f2d27f7330a200a79dc6d145" name="a5bdc0363f2d27f7330a200a79dc6d145"></a>
 const Ref&lt; <a class="el" href="../../d4/d01/class_amuse_1_1_material_shader.html">MaterialShader</a> &gt; &amp;&#160;</td><td class="memItemRight"><b>getShader</b> () const</td></tr>
 <tr class="memdesc:a5bdc0363f2d27f7330a200a79dc6d145"><td class="mdescLeft">&#160;</td><td class="mdescRight">共有シェーダを取得する <br /></td></tr>
@@ -172,10 +159,10 @@ bool&#160;</td><td class="memItemRight"><b>hasScalar</b> (StringView name) const
 bool&#160;</td><td class="memItemRight"><b>hasInteger</b> (StringView name) const</td></tr>
 <tr class="memdesc:ac679a6bb4161e8ec4a11405e5051a054"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアルパラメータが存在するか    <br /></td></tr>
 <tr class="memitem:ad1dfccc52290ff38e18d75ba43c875f1" id="r_ad1dfccc52290ff38e18d75ba43c875f1"><td class="memItemLeft"><a id="ad1dfccc52290ff38e18d75ba43c875f1" name="ad1dfccc52290ff38e18d75ba43c875f1"></a>
-void&#160;</td><td class="memItemRight"><b>setTexture</b> (StringView name, const Ref&lt; <a class="el" href="#aefdf74da07a4d30ebf753203c31ba0af">Texture</a> &gt; &amp;value)</td></tr>
+void&#160;</td><td class="memItemRight"><b>setTexture</b> (StringView name, const Ref&lt; <a class="el" href="../../d2/dcd/class_amuse_1_1_texture.html">Texture</a> &gt; &amp;value)</td></tr>
 <tr class="memdesc:ad1dfccc52290ff38e18d75ba43c875f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアルパラメータを設定 <br /></td></tr>
 <tr class="memitem:abda89543d7139fb6275b5b559d0b5535" id="r_abda89543d7139fb6275b5b559d0b5535"><td class="memItemLeft"><a id="abda89543d7139fb6275b5b559d0b5535" name="abda89543d7139fb6275b5b559d0b5535"></a>
-void&#160;</td><td class="memItemRight"><b>setBuffer</b> (StringView name, const Ref&lt; <a class="el" href="#adef607cd50811e77d8cdaaf86b0ba378">Buffer</a> &gt; &amp;value)</td></tr>
+void&#160;</td><td class="memItemRight"><b>setBuffer</b> (StringView name, const Ref&lt; <a class="el" href="../../d9/dd4/class_amuse_1_1_buffer.html">Buffer</a> &gt; &amp;value)</td></tr>
 <tr class="memdesc:abda89543d7139fb6275b5b559d0b5535"><td class="mdescLeft">&#160;</td><td class="mdescRight">バッファパラメータを設定する <br /></td></tr>
 <tr class="memitem:a14d99867a309636edd781e560877c155" id="r_a14d99867a309636edd781e560877c155"><td class="memItemLeft"><a id="a14d99867a309636edd781e560877c155" name="a14d99867a309636edd781e560877c155"></a>
 void&#160;</td><td class="memItemRight"><b>setMatrix</b> (StringView name, const <a class="el" href="../../de/d07/struct_amuse_1_1_matrix.html">Matrix</a> &amp;value)</td></tr>
@@ -206,15 +193,15 @@ auto &amp;&#160;</td><td class="memItemRight"><b>getBlock</b> ()</td></tr>
 <tr class="memitem:ac8b82c6bb6e1b126fab7fe83d8c171e3" id="r_ac8b82c6bb6e1b126fab7fe83d8c171e3"><td class="memItemLeft"><a id="ac8b82c6bb6e1b126fab7fe83d8c171e3" name="ac8b82c6bb6e1b126fab7fe83d8c171e3"></a>
 static Ref&lt; Material &gt;&#160;</td><td class="memItemRight"><b>Create</b> (const Ref&lt; <a class="el" href="../../d4/d01/class_amuse_1_1_material_shader.html">MaterialShader</a> &gt; &amp;shader)</td></tr>
 <tr class="memdesc:ac8b82c6bb6e1b126fab7fe83d8c171e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">生成 <br /></td></tr>
-<tr class="memitem:a443dac36094d884efec790f004eb0910" id="r_a443dac36094d884efec790f004eb0910"><td class="memItemLeft"><a id="a443dac36094d884efec790f004eb0910" name="a443dac36094d884efec790f004eb0910"></a>
-static Ref&lt; Material &gt;&#160;</td><td class="memItemRight"><b>Create</b> (const <a class="el" href="../../da/ddc/struct_amuse_1_1_material_desc.html">MaterialDesc</a> &amp;desc)</td></tr>
-<tr class="memdesc:a443dac36094d884efec790f004eb0910"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアル定義から生成する <br /></td></tr>
+<tr class="memitem:ad97bd037b08cbf5fd7f79a12b4c609c4" id="r_ad97bd037b08cbf5fd7f79a12b4c609c4"><td class="memItemLeft"><a id="ad97bd037b08cbf5fd7f79a12b4c609c4" name="ad97bd037b08cbf5fd7f79a12b4c609c4"></a>
+static Ref&lt; Material &gt;&#160;</td><td class="memItemRight"><b>Create</b> (const <a class="el" href="../../d2/d56/struct_amuse_1_1_material_shader_desc.html">MaterialShaderDesc</a> &amp;desc)</td></tr>
+<tr class="memdesc:ad97bd037b08cbf5fd7f79a12b4c609c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアル定義から生成する <br /></td></tr>
 <tr id="pub-static-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a67f8ec7502a24c062b6fa9ae69ed491e" id="r_a67f8ec7502a24c062b6fa9ae69ed491e"><td class="memItemLeft"><a id="a67f8ec7502a24c062b6fa9ae69ed491e" name="a67f8ec7502a24c062b6fa9ae69ed491e"></a>
-static void&#160;</td><td class="memItemRight"><b>SetGlobalTexture</b> (StringView name, const Ref&lt; <a class="el" href="#aefdf74da07a4d30ebf753203c31ba0af">Texture</a> &gt; &amp;value)</td></tr>
+static void&#160;</td><td class="memItemRight"><b>SetGlobalTexture</b> (StringView name, const Ref&lt; <a class="el" href="../../d2/dcd/class_amuse_1_1_texture.html">Texture</a> &gt; &amp;value)</td></tr>
 <tr class="memdesc:a67f8ec7502a24c062b6fa9ae69ed491e"><td class="mdescLeft">&#160;</td><td class="mdescRight">グローバルマテリアルパラメータを設定 <br /></td></tr>
 <tr class="memitem:a5967def51e7b97072d38614ffd654011" id="r_a5967def51e7b97072d38614ffd654011"><td class="memItemLeft"><a id="a5967def51e7b97072d38614ffd654011" name="a5967def51e7b97072d38614ffd654011"></a>
-static void&#160;</td><td class="memItemRight"><b>SetGlobalBuffer</b> (StringView name, const Ref&lt; <a class="el" href="#adef607cd50811e77d8cdaaf86b0ba378">Buffer</a> &gt; &amp;value)</td></tr>
+static void&#160;</td><td class="memItemRight"><b>SetGlobalBuffer</b> (StringView name, const Ref&lt; <a class="el" href="../../d9/dd4/class_amuse_1_1_buffer.html">Buffer</a> &gt; &amp;value)</td></tr>
 <tr class="memdesc:a5967def51e7b97072d38614ffd654011"><td class="mdescLeft">&#160;</td><td class="mdescRight">グローバルマテリアルパラメータを設定    <br /></td></tr>
 <tr class="memitem:a050539fea95927f84fa51742d34778fb" id="r_a050539fea95927f84fa51742d34778fb"><td class="memItemLeft"><a id="a050539fea95927f84fa51742d34778fb" name="a050539fea95927f84fa51742d34778fb"></a>
 static void&#160;</td><td class="memItemRight"><b>SetGlobalMatrix</b> (StringView name, const <a class="el" href="../../de/d07/struct_amuse_1_1_matrix.html">Matrix</a> &amp;value)</td></tr>

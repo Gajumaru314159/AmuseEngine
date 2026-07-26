@@ -1,5 +1,6 @@
 var _core =
 [
+    [ "Arguments", "d6/dd9/_arguments.html", null ],
     [ "コンテナ", "d0/def/_container.html", null ],
     [ "DI (Dependency Injection)", "da/dc9/_d_i.html", null ],
     [ "Log", "d9/d70/_log.html", null ],
