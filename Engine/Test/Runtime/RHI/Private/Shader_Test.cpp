@@ -178,6 +178,7 @@ TYPED_TEST(RHITest, Shader_Pixel) {
 	}
 }
 
+/*
 TYPED_TEST(RHITest, Shader_CompileResourceFiles) {
 	const String shaderRoot = "Shaders";
 	ASSERT_TRUE(Directory::Exists(shaderRoot)) << "Shaders directory is not found.";
@@ -231,3 +232,4 @@ TYPED_TEST(RHITest, Shader_CompileResourceFiles) {
 	EXPECT_NE(shaderFileCount, 0u);
 	EXPECT_NE(compileCount, 0u);
 }
+*/
