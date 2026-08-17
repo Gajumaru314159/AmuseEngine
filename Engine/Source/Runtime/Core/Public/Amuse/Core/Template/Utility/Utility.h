@@ -145,13 +145,23 @@ namespace Amuse {
     }
 
 
-    //! @brief                  Fallback値を指定して配列から値を検索
+    //! @brief                  Fallback値を指定して配列から値を検索（ポインタ版）
+    //! 
+    //! @param container        コンテナ
+    //! @param index            インデックス
+    //! @param fallback         要素が見つからない場合のFallbackポインタ
+    template <typename Container>
+    auto try_get(const Container& container, size_t index, const typename Container::value_type* fallback = nullptr) -> const typename Container::value_type* {
+        return is_in_range(index, container) ? &container.at(index) : fallback;
+    }
+
+    //! @brief                  Fallback値を指定して配列から値を検索（値版）
     //! 
     //! @param container        コンテナ
     //! @param index            インデックス
     //! @param fallback         要素が見つからない場合のFallback値
-    template <typename Container, typename Fallback>
-    auto try_get(const Container& container, size_t index, typename Container::pointer fallback = nullptr) -> Container::pointer {
+    template <typename Container>
+    auto try_get(const Container& container, size_t index, const typename Container::value_type& fallback) -> typename Container::value_type {
         return is_in_range(index, container) ? container.at(index) : fallback;
     }
 
