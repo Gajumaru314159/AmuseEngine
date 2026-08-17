@@ -13,7 +13,7 @@ namespace Amuse {
 	//! @tparam		TEnum ビットフラグに用いるenum型
 	//! @tparam		TBitsType 内部でビットを管理する変数の型
 	//! @ingroup AmuseCore
-	template<typename TEnum, typename TBitsType = u32>
+	template<typename TEnum, typename TBitsType = std::underlying_type_t<TEnum>>
 	class BitFlags {
 	public:
 
