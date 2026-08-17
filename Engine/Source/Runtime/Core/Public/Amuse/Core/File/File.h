@@ -40,7 +40,7 @@ namespace Amuse {
 		static Optional<String> ReadAllText(StringView path);
 
 		//! @brief  ファイルをバイナリデータとして全て読み込む
-		static Optional<Blob> ReadAllByte(StringView path);
+		static Optional<Blob> ReadAllBytes(StringView path);
 
 	public:
 

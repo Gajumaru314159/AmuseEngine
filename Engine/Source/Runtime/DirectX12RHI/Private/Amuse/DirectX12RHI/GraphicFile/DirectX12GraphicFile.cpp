@@ -312,7 +312,7 @@ namespace Amuse {
 		compressionLevel = compressionLevelMap[compressionLevel];
 		bool useCompression = 0 < compressionLevel;
 
-		if (auto optblob = File::ReadAllByte(input)) {
+		if (auto optblob = File::ReadAllBytes(input)) {
 
 			auto& inputBlob = *optblob;
 

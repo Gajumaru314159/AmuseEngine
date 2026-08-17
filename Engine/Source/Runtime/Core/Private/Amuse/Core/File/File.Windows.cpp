@@ -256,7 +256,7 @@ namespace Amuse {
 	}
 
 	//! @brief  ファイルをバイナリデータとして全て読み込む
-	Optional<Blob> File::ReadAllByte(StringView path) {
+	Optional<Blob> File::ReadAllBytes(StringView path) {
 		File file(path);
 		if (!file.canRead())return std::nullopt;
 
