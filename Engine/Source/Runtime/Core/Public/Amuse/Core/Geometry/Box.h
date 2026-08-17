@@ -31,7 +31,7 @@ namespace Amuse {
         //! 
         //! @details        指定された点群をすべて含む最小のボックスを構築する。
         //!                 要素数が1以下の時は Empty が設定される
-        explicit Box(Span<Vec3> points)noexcept;
+        explicit Box(Span<const Vec3> points)noexcept;
 
 
         //! @brief      始点と終点を指定して Box を設定
