@@ -16,26 +16,26 @@ TEST(BitFlags, Constructor)
 {
     {
         BitFlags<Flags> flags;
-        EXPECT_EQ(static_cast<unsigned int>(0), static_cast<unsigned int>(flags));
+        EXPECT_EQ(static_cast<s32>(0), static_cast<s32>(flags));
     }
     {
         BitFlags<Flags> flags(Flags::A);
-        EXPECT_EQ(static_cast<unsigned int>(Flags::A), static_cast<unsigned int>(flags));
+        EXPECT_EQ(static_cast<s32>(Flags::A), static_cast<s32>(flags));
     }
     {
-        BitFlags<Flags> flags(static_cast<unsigned int>(Flags::A));
-        EXPECT_EQ(static_cast<unsigned int>(Flags::A), static_cast<unsigned int>(flags));
+        BitFlags<Flags> flags(static_cast<s32>(Flags::A));
+        EXPECT_EQ(static_cast<s32>(Flags::A), static_cast<s32>(flags));
     }
     {
         BitFlags<Flags> flags(Flags::A);
         BitFlags<Flags> flags2(flags);
-        EXPECT_EQ(static_cast<unsigned int>(Flags::A), static_cast<unsigned int>(flags2));
+        EXPECT_EQ(static_cast<s32>(Flags::A), static_cast<s32>(flags2));
     }
     {
         BitFlags<Flags> flags(Flags::A);
         BitFlags<Flags> flags2;
         flags2 = flags;
-        EXPECT_EQ(static_cast<unsigned int>(Flags::A), static_cast<unsigned int>(flags2));
+        EXPECT_EQ(static_cast<s32>(Flags::A), static_cast<s32>(flags2));
     }
 }
 
@@ -44,24 +44,24 @@ TEST(BitFlags, Operaor)
     {
         BitFlags<Flags> flags(Flags::A);
         flags |= Flags::B;
-        EXPECT_EQ(static_cast<unsigned int>(Flags::A | Flags::B), static_cast<unsigned int>(flags));
+        EXPECT_EQ(static_cast<s32>(Flags::A | Flags::B), static_cast<s32>(flags));
     }
     {
         BitFlags<Flags> flags(Flags::A | Flags::B);
         BitFlags<Flags> flags2(Flags::A);
         flags &= flags2;
-        EXPECT_EQ(static_cast<unsigned int>(Flags::A), static_cast<unsigned int>(flags));
+        EXPECT_EQ(static_cast<s32>(Flags::A), static_cast<s32>(flags));
     }
     {
         BitFlags<Flags> flags(Flags::A | Flags::B);
         BitFlags<Flags> flags2(Flags::A | Flags::C);
         flags ^= flags2;
-        EXPECT_EQ(static_cast<unsigned int>(Flags::B | Flags::C), static_cast<unsigned int>(flags));
+        EXPECT_EQ(static_cast<s32>(Flags::B | Flags::C), static_cast<s32>(flags));
     }
     {
         BitFlags<Flags> flags(Flags::A | Flags::B);
         BitFlags<Flags> result = ~flags;
-        EXPECT_EQ(static_cast<unsigned int>(~static_cast<unsigned int>(Flags::A | Flags::B)), static_cast<unsigned int>(result));
+        EXPECT_EQ(static_cast<s32>(~static_cast<s32>(Flags::A | Flags::B)), static_cast<s32>(result));
     }
     {
         BitFlags<Flags> flags(Flags::A);
