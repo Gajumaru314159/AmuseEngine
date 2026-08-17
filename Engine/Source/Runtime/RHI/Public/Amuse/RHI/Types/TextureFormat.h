@@ -8,7 +8,7 @@
 namespace Amuse {
     //! @brief  テクスチャ・フォーマット
     //! @ingroup AmuseRHI
-    enum class TextureFormat {
+    enum class TextureFormat :u8 {
         Unknown = -1,    //!< 不明なフォーマット
 #include "TextureFormat_Color.h"
 #include "TextureFormat_Depth.h"
@@ -17,7 +17,7 @@ namespace Amuse {
 
     //! @brief  カラー・テクスチャ・フォーマット
     //! @ingroup AmuseRHI
-    enum class ColorTextureFormat {
+    enum class ColorTextureFormat :u8 {
         Unknown = -1,    //!< 不明なフォーマット
 #include "TextureFormat_Color.h"
     };
@@ -25,7 +25,7 @@ namespace Amuse {
 
     //! @brief  デプス・テクスチャ・フォーマット
     //! @ingroup AmuseRHI
-    enum class DepthTextureFormat {
+    enum class DepthTextureFormat :u8 {
         Unknown = -1,    //!< 不明なフォーマット
 #include "TextureFormat_Depth.h"
     };

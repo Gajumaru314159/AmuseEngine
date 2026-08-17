@@ -10,7 +10,7 @@
 namespace Amuse {
 	//! @brief CPUアクセス種別
 	//! @ingroup AmuseRHI
-	enum class CpuAccess {
+	enum class CpuAccess :u8 {
 		Read,		//!< 読み取り
 		Write,		//!< 書き込み
 		ReadWrite,	//!< 読み書き
@@ -31,7 +31,7 @@ namespace Amuse {
 	//!             | CopyDest                          | COPY_DEST                         | TRANSFER_SRC_OPTIMAL          |
 	//!             | CopySource                        | COPY_SOURCE                       | TRANSFER_DST_OPTIMAL          |
 	//! @ingroup AmuseRHI
-	enum class BufferState {
+	enum class BufferState :u8 {
 		Unknown,				//!< 現在状態をRHIが知らない
 		Common,					//!< 
 		Vertex,					//!< 頂点
@@ -46,7 +46,7 @@ namespace Amuse {
 
 	//! @brief  バインド・フラグ
 	//! @ingroup AmuseRHI
-	enum class BufferFlag {
+	enum class BufferFlag :u8 {
 		Vertex				= get_bit(0),	//!< 頂点バッファ許可
 		Index				= get_bit(1),	//!< インデックスバッファ許可
 		Constant			= get_bit(2),	//!< 定数バッファ許可
@@ -62,7 +62,7 @@ namespace Amuse {
 	//! @brief	バッファリソースをどのリソースタイプとして参照するか
 	//! @see	BindingType
 	//! @ingroup AmuseRHI
-	enum class BufferViewType {
+	enum class BufferViewType :u8 {
 		None,
 		Buffer,
 		RWBuffer,

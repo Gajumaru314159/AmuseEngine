@@ -10,7 +10,7 @@ namespace Amuse {
 
     //! @brief  コマンドリスト・タイプ
     //! @ingroup AmuseRHI
-    enum class CommandListType :u32 {
+    enum class CommandListType :u8 {
         Graphic,    //!< グラフィック
         Compute,    //!< コンピュート
         Copy

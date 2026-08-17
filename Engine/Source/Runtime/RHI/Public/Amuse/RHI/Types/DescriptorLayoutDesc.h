@@ -22,8 +22,8 @@ namespace Amuse {
 	//! | ConstantBuffer		| (b) ConstantBuffer		| CBV				| uniform			| eUniformBuffer		|
 	//! | Sampler				| (s) SamplerState			| Sampler			| sampler			| eSampler				|
 	//! @ingroup AmuseRHI
-	enum class BindingType : u32 {
-		Unknown = 0xFFFFFFFF,
+	enum class BindingType :u8{
+		Unknown = 0xFF,
 		Texture = 0,
 		RWTexture,
 		Buffer,

@@ -77,16 +77,13 @@ namespace Amuse {
 			:sampler(sampler), registerNo(registerNo), registerSpace(registerSpace), visibility(visibility) {}
 	};
 
-	//! @brief      静的サンプラー・配列
-	using StaticSamplerArray = FixedVector<StaticSamplerDesc, STATIC_SAMPLER_MAX>;
-
 
 	//! @brief ルートシグネチャ定義
 	//! @ingroup AmuseRHI
 	struct RootSignatureDesc {
 		String							name;		//!< 名前
 		Vector<Ref<DescriptorLayout>>	layouts;	//!< バインディングスロット
-		StaticSamplerArray				samplers;	//!< 静的サンプラー
+		Vector< StaticSamplerDesc>		samplers;	//!< 静的サンプラー
 		RootConstantsDesc				constants;	//!< ルートコンスタント
 		RootSignatureFlags				flags;		//!< フラグ
 

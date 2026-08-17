@@ -24,7 +24,7 @@ namespace Amuse {
 
 	//! @brief  フォーマット利用用途
 	//! @ingroup AmuseRHI
-	enum class FormatSupport {
+	enum class FormatSupport :u8 {
 		Texture,			//!< Textureとして利用可能
 		RenderTarget,	//!< RenderTargetとして利用可能
 		DepthStencil,	//!< DepthStencilとして利用可能

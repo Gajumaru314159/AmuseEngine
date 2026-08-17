@@ -10,7 +10,7 @@
 namespace Amuse {
     //! @brief  テクスチャ・タイプ
     //! @ingroup AmuseRHI
-    enum class TextureType {
+    enum class TextureType :u8 {
         Texture1D,          //!< 1Dテクスチャ
         Texture2D,          //!< 2Dテクスチャ
         Texture3D,          //!< 3Dテクスチャ
@@ -33,7 +33,7 @@ namespace Amuse {
     //!             | CopySource                        | COPY_SOURCE                       | TRANSFER_DST                  |
     //!             | Present                           | PRESENT                           | PRESENT_SRC_KHR               |
     //! @ingroup AmuseRHI
-    enum class TextureState {
+    enum class TextureState :u8 {
         Unknown,            //!< 現在状態をRHIが知らない
         Common,
         ShaderResource,
@@ -50,7 +50,7 @@ namespace Amuse {
 
 
     //! @ingroup AmuseRHI
-    enum class TextureFlag {
+    enum class TextureFlag :u8 {
         ShaderResource = get_bit(0),	//!< シェーダでバインド許可
         UnorderedAccess = get_bit(1),   //!< UnorderedAccessのバインド許可
 	};
@@ -58,7 +58,7 @@ namespace Amuse {
 
 
     //! @ingroup AmuseRHI
-    enum class TextureViewType {
+    enum class TextureViewType :u8 {
         Texture,
         RWTexture,
     };

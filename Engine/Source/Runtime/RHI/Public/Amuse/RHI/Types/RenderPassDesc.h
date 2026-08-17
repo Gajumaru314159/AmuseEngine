@@ -19,7 +19,7 @@ namespace Amuse {
     // };
 
     //! @ingroup AmuseRHI
-    enum class RenderPassFlag {
+    enum class RenderPassFlag :u8 {
         AllowUAVWrite       = get_bit(0),   //!< RenderPass内でのUAVへの書き込みを許可する
         SuspendingPass      = get_bit(1),   //!< 中断中のレンダーパスである
         ResumingPass        = get_bit(2),   //!< 再開するレンダーパスである
@@ -28,7 +28,7 @@ namespace Amuse {
 
 
     //! @ingroup AmuseRHI
-    enum class RenderPassBeforeAccessType {
+    enum class RenderPassBeforeAccessType :u8 {
         Discard,                // 以前のコンテンツに依存していない。
         Preserve,               // 以前のコンテンツに依存している
         Clear,                  // リソースをクリアする必要がある
@@ -36,7 +36,7 @@ namespace Amuse {
     };
 
     //! @ingroup AmuseRHI
-    enum class RenderPassAfterAccessType {
+    enum class RenderPassAfterAccessType :u8 {
         Discard,                // このRenderPass中二書き込んだデータに将来の依存関係がない。
         Preserve,               // 以降のコンテンツが依存している
         NoAccess,               // 読み取りも書き込みもしない。 TODO Vulkanとの対応関係を確認

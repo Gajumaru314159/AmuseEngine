@@ -13,7 +13,7 @@ namespace Amuse {
     //! 
     //! @see        BlendState    
     //! @ingroup AmuseRHI
-    enum class BlendFactor :u32 {
+    enum class BlendFactor :u8 {
         Zero,                       //!< ブレンド係数は (0, 0, 0, 0)
         One,                        //!< ブレンド係数は (1, 1, 1, 1)
         SrcColor,                   //!< ブレンド係数は (Rs, Gs, Bs, As)
@@ -32,7 +32,7 @@ namespace Amuse {
     //! @details    ピクセルシェーダが出力するRGBまたはAのレンダーターゲットへのブレンド方法です。
     //! @see        BlendState    
     //! @ingroup AmuseRHI
-    enum class BlendOp :u32 {
+    enum class BlendOp :u8 {
         Add,        //!< A+B
         Sub,        //!< A-B
         RevSub,     //!< B-A
@@ -46,7 +46,7 @@ namespace Amuse {
     //! @details    現在使用されていません。
     //! @see        BlendState    
     //! @ingroup AmuseRHI
-    enum class LogicOp :u32 {
+    enum class LogicOp :u8 {
         Clear,			//!< 0
         Set,			//!< 1
         Copy,			//!< src

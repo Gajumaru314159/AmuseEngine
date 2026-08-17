@@ -10,7 +10,7 @@ namespace Amuse {
 
 	//! @brief      ステンシル・オペレータ
 	//! @ingroup AmuseRHI
-	enum class StencilOp :u32 {
+	enum class StencilOp :u8 {
 		Keep,				//!< 			
 		Replace,			//!< 
 		Zero,				//!< 
@@ -24,7 +24,7 @@ namespace Amuse {
 
 	//! @brief      比較関数 
 	//! @ingroup AmuseRHI
-	enum class ComparisonFunc :u32 {
+	enum class ComparisonFunc :u8 {
 		Never,			//!< 必ず失敗
 		Always,			//!< 常に成功
 		Equal,			//!< ソースとデストが等しい場合成功

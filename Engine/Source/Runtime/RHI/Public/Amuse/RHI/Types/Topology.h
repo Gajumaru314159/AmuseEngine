@@ -8,7 +8,7 @@
 namespace Amuse {
 	//! @brief      トポロジー
 	//! @ingroup AmuseRHI
-	enum class Topology :u32 {
+	enum class Topology :u8 {
 		PointList,		//!< 頂点リスト
 		LineList,		//!< 線分リスト
 		TriangleList,	//!< 三角形リスト

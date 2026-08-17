@@ -17,7 +17,7 @@ namespace Amuse {
     //!             ガンマカーブにはHLG(Hybrid Log-Gamma)とPG(Perceptual Quantizer)が存在します。
     //!             [参考](https://ja.wikipedia.org/wiki/ハイダイナミックレンジビデオ)
     //! @ingroup AmuseRHI
-    enum class ColorSpace {
+    enum class ColorSpace :u8 {
         BT709_G22,              //!< SDR(8bit) Gamma=2.2
         BT709_G10,              //!< SDR(8bit) Gamma=1.0
         BT2020_G2084,           //!< HDR(10bit/12bit) SMPTE ST 2084

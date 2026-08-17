@@ -12,7 +12,7 @@ namespace Amuse {
 	//! 
 	//! @details	ポリゴン描画時にどこを塗りつぶすか
 	//! @ingroup AmuseRHI
-	enum class FillMode :u32 {
+	enum class FillMode :u8 {
 		Solid,		//<! 全面
 		Wireframe,	//<! 辺のみ
 		Point,		//<! 頂点のみ
@@ -21,7 +21,7 @@ namespace Amuse {
 
 	//! @brief      カリング方法
 	//! @ingroup AmuseRHI
-	enum class CullMode :u32 {
+	enum class CullMode :u8 {
 		None,		//!< なし
 		Front,		//!< 前面を非表示
 		Back,		//!< 背面を非表示 

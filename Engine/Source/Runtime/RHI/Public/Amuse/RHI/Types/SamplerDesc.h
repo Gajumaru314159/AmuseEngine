@@ -10,7 +10,7 @@ namespace Amuse {
 
     //! @brief      テクスチャ・フィルター
     //! @ingroup AmuseRHI
-    enum class TextureFilter :u32 {
+    enum class TextureFilter :u8 {
         Point,  //!< 最近ピクセルのテクセルを使用
         Linear, //!< 2*2の線形補完値を使用
     };
@@ -18,7 +18,7 @@ namespace Amuse {
 
     //! @brief      ミップマップ・フィルター
     //! @ingroup AmuseRHI
-    enum class MipFilter :u32 {
+    enum class MipFilter :u8 {
         Point,  //!< 最近ピクセルのテクセルを使用
         Linear, //!< 2*2の線形補完値を使用
     };
@@ -26,7 +26,7 @@ namespace Amuse {
 
     //! @brief      異方性レベル
     //! @ingroup AmuseRHI
-    enum class Anisotropy : u32 {
+    enum class Anisotropy : u8 {
         None,
         Level1,
         Level2,
@@ -40,7 +40,7 @@ namespace Amuse {
     //! 
     //! @details    テクスチャサンプル時、UV座標が0～1を超えた場合にどのようにサンプルするか。
     //! @ingroup AmuseRHI
-    enum class TextureAddress {
+    enum class TextureAddress :u8 {
         Repeat, //!< 繰り返して表示
         Clamp,  //!< 端を伸ばして表示
         Mirror, //!< ミラー処理して表示

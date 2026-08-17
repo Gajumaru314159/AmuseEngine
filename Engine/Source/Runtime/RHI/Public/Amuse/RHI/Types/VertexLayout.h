@@ -12,7 +12,7 @@ namespace Amuse {
 	//! @see		VertexAttribute
 	//! @see		VertexLayout
 	//! @ingroup AmuseRHI
-	enum class ElementType : u32 {
+	enum class ElementType : u8 {
 		Int8,
 		Int16,
 		Int32,
@@ -47,7 +47,7 @@ namespace Amuse {
 	//! @see		VertexAttribute
 	//! @see		VertexLayout
 	//! @ingroup AmuseRHI
-	enum class Semantic : u32 {
+	enum class Semantic : u8 {
 		Position,		//!< 頂点
 		Normal,			//!< 法線
 		Binormal,		//!< 従法線
@@ -60,7 +60,7 @@ namespace Amuse {
 	};
 
 	//! @ingroup AmuseRHI
-	enum class VertexInputRate : u32 {
+	enum class VertexInputRate : u8 {
 		Vertex,			//!< 頂点ごと
 		Instance,		//!< インスタンスごと
 	};

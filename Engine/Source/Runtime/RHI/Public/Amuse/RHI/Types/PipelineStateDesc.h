@@ -31,9 +31,6 @@ namespace Amuse {
 		
 		String					name;							//!< 名前
 
-		RenderTargetFormatArray	colors;						//!< 描画先フォーマット
-		Optional<TextureFormat>	depth; //!< 深度値
-
 		Ref<RootSignature>		rootSignature;					//!< ルートシグネチャ
 		Ref<VertexLayout>		vertexLayout;					//!< 頂点レイアウト
 
@@ -43,10 +40,13 @@ namespace Amuse {
 		Ref<Shader>				ds;								//!< ドメインシェーダ
 		Ref<Shader>				ps;								//!< ピクセルシェーダ
 
-		SampleDesc				sample;							//!< サンプル定義
-		BlendDescList			blend;							//!< ブレンド定義
+		RenderTargetFormatArray	colors;							//!< 描画先フォーマット
+		Optional<TextureFormat>	depth;							//!< 深度値
+
 		RasterizerDesc			rasterizer;						//!< ラスタライズ定義
 		DepthStencilDesc		depthStencil;					//!< デプス・ステンシル定義
+		BlendDescList			blend;							//!< ブレンド定義
+		SampleDesc				sample;							//!< サンプル定義
 
 		Topology				topology=Topology::TriangleList;//!< GeometryShaderでのトポロジー
 		u32						sampleMask=~static_cast<u32>(0);//!< マルチレンダーターゲットの何枚目に書き込むか(下位ビットから)
