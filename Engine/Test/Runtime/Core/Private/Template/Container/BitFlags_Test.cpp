@@ -5,7 +5,7 @@
 using namespace Amuse;
 #include <Amuse/Core/Template/Container/BitFlags.h>
 
-enum class Flags
+enum class Flags : s32
 {
     A= get_bit(0),
     B= get_bit(1),
