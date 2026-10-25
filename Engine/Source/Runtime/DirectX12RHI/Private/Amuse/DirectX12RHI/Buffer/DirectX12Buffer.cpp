@@ -114,7 +114,7 @@ namespace Amuse {
 		auto canUseSmallAllocator =
 			!IsCpuAccessBuffer(desc) &&
 			(desc.flags & BufferFlag::UnorderedAccess) &&
-			(1 < BitOp::GetBitCount(static_cast<u32>(desc.flags))) &&
+			(1 < BitOp::GetBitCount(static_cast<u8>(desc.flags))) &&
 			(desc.size > 65536);
 
 		// SmallBufferAllocatorを試す
