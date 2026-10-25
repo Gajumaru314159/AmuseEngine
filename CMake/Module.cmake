@@ -43,6 +43,7 @@ function(_amuse_glob_sources result)
 			files
 			ABSOLUTE
 			"${abs_dir}/*.natvis"
+			"${abs_dir}/*.md"
 			"${abs_dir}/*.h"
 			"${abs_dir}/*.cpp")
 		
