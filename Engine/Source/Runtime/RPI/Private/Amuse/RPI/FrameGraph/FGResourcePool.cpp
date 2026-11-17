@@ -45,7 +45,7 @@ namespace std {
 				Amuse::enum_cast(desc.state),
 				desc.size, 
 				desc.stride,
-				(Amuse::u32)desc.flags
+				Amuse::enum_cast(desc.flags.get_enum())
 			);
 			return h;
 		}

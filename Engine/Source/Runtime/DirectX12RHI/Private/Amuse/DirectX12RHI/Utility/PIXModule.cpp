@@ -2,8 +2,8 @@
 //! @file
 //! @author		Gajumaru
 //***********************************************************
+#include <Amuse/DirectX12RHI/Utility/PIXModule.h>
 #ifdef AMUSE_DEBUG
-#include "PIXModule.h"
 #include <filesystem>
 #include <shlobj.h>
 

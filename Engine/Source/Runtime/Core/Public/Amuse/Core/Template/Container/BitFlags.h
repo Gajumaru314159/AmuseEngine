@@ -19,6 +19,7 @@ namespace Amuse {
 
 		//! @brief bit_flags<TEnum, TBitsType>
 		using this_type = BitFlags<TEnum, TBitsType>;
+		using enum_type = TEnum;
 
 	public:
 

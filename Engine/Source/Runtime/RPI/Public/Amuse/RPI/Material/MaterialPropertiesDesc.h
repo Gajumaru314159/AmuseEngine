@@ -3,6 +3,7 @@
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
+#include <Amuse/Core/Core.h>
 
 namespace Amuse {
 
