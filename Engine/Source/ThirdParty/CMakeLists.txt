@@ -28,14 +28,6 @@ set(FG_BUILD_TEST OFF)
 # glslang
 set(BUILD_SHARED_LIBS OFF)
 
-# assimp
-set(ASSIMP_BUILD_TESTS FALSE)
-set(ASSIMP_INSTALL FALSE)
-set(ASSIMP_BUILD_ASSIMP_TOOLS FALSE)
-set(ASSIMP_BUILD_ZLIB ON)
-set(P2T_STATIC_EXPORTS TRUE)
-
-
 #------------------------------------------------------------------------------
 # ローダー
 #------------------------------------------------------------------------------
@@ -60,7 +52,15 @@ amuse_fetch_git_with_tag(GSL https://github.com/microsoft/GSL.git "v4.0.0")
 amuse_fetch_git_with_tag(utf8cpp https://github.com/nemtrif/utfcpp.git "v4.0.5")
 amuse_fetch_git_with_tag(magic_enum https://github.com/Neargye/magic_enum.git "v0.8.0")
 amuse_fetch_git_with_tag(googletest https://github.com/google/googletest.git "v1.15.2")
-amuse_fetch_git_with_tag(assimp https://github.com/assimp/assimp.git "v6.0.5")
+amuse_fetch_git_with_tag(ufbx https://github.com/ufbx/ufbx.git "v0.23.1")
+FetchContent_GetProperties(ufbx)
+# ufbxはCMakeターゲットを提供しないため、単一のCソースから静的ライブラリを作成する
+add_library(ufbx STATIC "${ufbx_SOURCE_DIR}/ufbx.c")
+target_include_directories(ufbx PUBLIC "${ufbx_SOURCE_DIR}")
+target_compile_features(ufbx PRIVATE c_std_99)
+if(UNIX)
+    target_link_libraries(ufbx PRIVATE m)
+endif()
 amuse_fetch_git_with_tag(EnTT https://github.com/skypjack/entt.git "v4.0.0")
 amuse_fetch_git(FrameGraph https://github.com/skaarj1989/FrameGraph.git)
 
