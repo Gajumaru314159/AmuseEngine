@@ -9,5 +9,6 @@ var searchData=
   ['handlemanager_3c_20t_2c_20deleter_20_3e_6',['HandleManager&lt; T, Deleter &gt;',['../df/d99/class_amuse_1_1_handle_manager.html',1,'Amuse']]],
   ['hash_7',['Hash',['../d3/d5e/class_amuse_1_1_hash.html',1,'Amuse']]],
   ['hasher_8',['Hasher',['../dd/d35/struct_amuse_1_1_sync_handle_manager_1_1_hasher.html',1,'Amuse::SyncHandleManager']]],
-  ['hsv_9',['HSV',['../d3/d64/struct_amuse_1_1_h_s_v.html',1,'Amuse']]]
+  ['hierarchycomponent_9',['HierarchyComponent',['../df/da9/struct_amuse_1_1_hierarchy_component.html',1,'Amuse']]],
+  ['hsv_10',['HSV',['../d3/d64/struct_amuse_1_1_h_s_v.html',1,'Amuse']]]
 ];

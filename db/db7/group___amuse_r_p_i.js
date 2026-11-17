@@ -375,7 +375,7 @@ var group___amuse_r_p_i =
       [ "instances", "d2/d0b/struct_amuse_1_1_mesh_render_feature_1_1_mesh_view_data_1_1_c_p_u_data.html#a0a6f9c14789815c093737e4bd42ef127", null ],
       [ "lods", "d2/d0b/struct_amuse_1_1_mesh_render_feature_1_1_mesh_view_data_1_1_c_p_u_data.html#a99754e7dbec3c97ceed84597cfe1ffe1", null ],
       [ "packets", "d2/d0b/struct_amuse_1_1_mesh_render_feature_1_1_mesh_view_data_1_1_c_p_u_data.html#a4a842b56cefaee4783cff7d8381e1652", null ],
-      [ "units", "d2/d0b/struct_amuse_1_1_mesh_render_feature_1_1_mesh_view_data_1_1_c_p_u_data.html#a31150bfbfb8330f722496aa86c0bbdfb", null ]
+      [ "units", "d2/d0b/struct_amuse_1_1_mesh_render_feature_1_1_mesh_view_data_1_1_c_p_u_data.html#abaf0c6e915bba254965d75e1ac407949", null ]
     ] ],
     [ "MeshRenderFeature::MeshViewData::GPUData", "d6/d84/struct_amuse_1_1_mesh_render_feature_1_1_mesh_view_data_1_1_g_p_u_data.html", [
       [ "update", "d6/d84/struct_amuse_1_1_mesh_render_feature_1_1_mesh_view_data_1_1_g_p_u_data.html#a196c4be4b25f133c5a61e01566e2b743", null ],

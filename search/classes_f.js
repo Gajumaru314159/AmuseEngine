@@ -13,11 +13,13 @@ var searchData=
   ['pipelinestatedesc_10',['PipelineStateDesc',['../da/d80/struct_amuse_1_1_pipeline_state_desc.html',1,'Amuse']]],
   ['plane_11',['Plane',['../dc/de1/struct_amuse_1_1_plane.html',1,'Amuse']]],
   ['point_12',['Point',['../d1/d4b/struct_amuse_1_1_point.html',1,'Amuse']]],
-  ['pointlightdata_13',['PointLightData',['../dc/d9e/struct_amuse_1_1_point_light_data.html',1,'Amuse']]],
-  ['pointlightrenderfeature_14',['PointLightRenderFeature',['../d6/d38/class_amuse_1_1_point_light_render_feature.html',1,'Amuse']]],
-  ['primitivebuilder_15',['PrimitiveBuilder',['../d9/d95/class_amuse_1_1_primitive_builder.html',1,'Amuse']]],
-  ['primitivebuildertemplate_16',['PrimitiveBuilderTemplate',['../de/d17/class_amuse_1_1_primitive_builder_template.html',1,'Amuse']]],
-  ['property_17',['Property',['../d3/d62/class_amuse_1_1_property.html',1,'Amuse']]],
-  ['propertyinfo_18',['PropertyInfo',['../d0/db9/struct_amuse_1_1_property_info.html',1,'Amuse']]],
-  ['proxy_19',['Proxy',['../df/d21/class_amuse_1_1_event_notifier_1_1_proxy.html',1,'Amuse::EventNotifier']]]
+  ['pointlightcompoennt_13',['PointLightCompoennt',['../db/d0d/struct_amuse_1_1_point_light_compoennt.html',1,'Amuse']]],
+  ['pointlightdata_14',['PointLightData',['../dc/d9e/struct_amuse_1_1_point_light_data.html',1,'Amuse']]],
+  ['pointlightrenderfeature_15',['PointLightRenderFeature',['../d6/d38/class_amuse_1_1_point_light_render_feature.html',1,'Amuse']]],
+  ['postprocesscomponent_16',['PostProcessComponent',['../d7/d03/struct_amuse_1_1_post_process_component.html',1,'Amuse']]],
+  ['primitivebuilder_17',['PrimitiveBuilder',['../d9/d95/class_amuse_1_1_primitive_builder.html',1,'Amuse']]],
+  ['primitivebuildertemplate_18',['PrimitiveBuilderTemplate',['../de/d17/class_amuse_1_1_primitive_builder_template.html',1,'Amuse']]],
+  ['property_19',['Property',['../d3/d62/class_amuse_1_1_property.html',1,'Amuse']]],
+  ['propertyinfo_20',['PropertyInfo',['../d0/db9/struct_amuse_1_1_property_info.html',1,'Amuse']]],
+  ['proxy_21',['Proxy',['../df/d21/class_amuse_1_1_event_notifier_1_1_proxy.html',1,'Amuse::EventNotifier']]]
 ];

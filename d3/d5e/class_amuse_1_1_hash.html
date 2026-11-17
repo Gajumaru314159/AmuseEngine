@@ -130,14 +130,14 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('d3/d5e/class_a
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静的関数</h2></td></tr>
-<tr class="memitem:ac03d0f1d1ee8f55c2add93954724c46b" id="r_ac03d0f1d1ee8f55c2add93954724c46b"><td class="memTemplParams" colspan="2"><a id="ac03d0f1d1ee8f55c2add93954724c46b" name="ac03d0f1d1ee8f55c2add93954724c46b"></a>
-template&lt;class T&gt; </td></tr>
-<tr class="memitem:ac03d0f1d1ee8f55c2add93954724c46b template"><td class="memItemLeft">static constexpr void&#160;</td><td class="memItemRight"><b>Combine</b> (size_t &amp;seed, const T &amp;v)</td></tr>
-<tr class="memdesc:ac03d0f1d1ee8f55c2add93954724c46b"><td class="mdescLeft">&#160;</td><td class="mdescRight">既存のハッシュシードに値のハッシュを合成する。 <br /></td></tr>
-<tr class="memitem:a6eb56e97f5a19ab508ce2f500bf44c60" id="r_a6eb56e97f5a19ab508ce2f500bf44c60"><td class="memTemplParams" colspan="2"><a id="a6eb56e97f5a19ab508ce2f500bf44c60" name="a6eb56e97f5a19ab508ce2f500bf44c60"></a>
+<tr class="memitem:a31baaacda6601fc473204c1a5e52bd29" id="r_a31baaacda6601fc473204c1a5e52bd29"><td class="memTemplParams" colspan="2"><a id="a31baaacda6601fc473204c1a5e52bd29" name="a31baaacda6601fc473204c1a5e52bd29"></a>
 template&lt;class T, class... Args&gt; </td></tr>
-<tr class="memitem:a6eb56e97f5a19ab508ce2f500bf44c60 template"><td class="memItemLeft">static constexpr void&#160;</td><td class="memItemRight"><b>Combine</b> (size_t &amp;seed, const T &amp;v, const Args &amp;... args)</td></tr>
-<tr class="memdesc:a6eb56e97f5a19ab508ce2f500bf44c60"><td class="mdescLeft">&#160;</td><td class="mdescRight">複数の値のハッシュを順にシードへ合成する。 <br /></td></tr>
+<tr class="memitem:a31baaacda6601fc473204c1a5e52bd29 template"><td class="memItemLeft">static constexpr size_t&#160;</td><td class="memItemRight"><b>Combine</b> (const T &amp;v, const Args &amp;... args)</td></tr>
+<tr class="memdesc:a31baaacda6601fc473204c1a5e52bd29"><td class="mdescLeft">&#160;</td><td class="mdescRight">0を初期値として値のハッシュを引数順に合成し、結果を返す。 <br /></td></tr>
+<tr class="memitem:a1b2803f8d315bd081d7fdded97d83e9a" id="r_a1b2803f8d315bd081d7fdded97d83e9a"><td class="memTemplParams" colspan="2"><a id="a1b2803f8d315bd081d7fdded97d83e9a" name="a1b2803f8d315bd081d7fdded97d83e9a"></a>
+template&lt;class... Args&gt; </td></tr>
+<tr class="memitem:a1b2803f8d315bd081d7fdded97d83e9a template"><td class="memItemLeft">static constexpr void&#160;</td><td class="memItemRight"><b>Append</b> (size_t &amp;seed, const Args &amp;... args)</td></tr>
+<tr class="memdesc:a1b2803f8d315bd081d7fdded97d83e9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">既存のシードに値のハッシュを引数順に追加する。値の指定がなければ変更しない。 <br /></td></tr>
 <tr class="memitem:a57ee9daf2cf0c37b8d1d5ffbaa6f73a2" id="r_a57ee9daf2cf0c37b8d1d5ffbaa6f73a2"><td class="memTemplParams" colspan="2"><a id="a57ee9daf2cf0c37b8d1d5ffbaa6f73a2" name="a57ee9daf2cf0c37b8d1d5ffbaa6f73a2"></a>
 template&lt;class TChar&gt; </td></tr>
 <tr class="memitem:a57ee9daf2cf0c37b8d1d5ffbaa6f73a2 template"><td class="memItemLeft">static constexpr u32&#160;</td><td class="memItemRight"><b>FNV32</b> (<a class="el" href="../../d8/d9a/class_amuse_1_1_string_view_base.html">StringViewBase</a>&lt; TChar &gt; text)</td></tr>

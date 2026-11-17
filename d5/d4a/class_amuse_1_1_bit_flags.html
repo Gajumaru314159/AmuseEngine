@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('d5/d4a/class_a
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">説明</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;typename TEnum, typename TBitsType = u32&gt;<br />
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename TEnum, typename TBitsType = std::underlying_type_t&lt;TEnum&gt;&gt;<br />
 class Amuse::BitFlags&lt; TEnum, TBitsType &gt;</div><p>enum値をビットフラグとして扱うためのラップクラス </p>
 <p>enum型の内部値が1以上TBitsTypeの最大値以下の2のべき乗である必要があります。 </p><dl class="tparams"><dt>テンプレート引数</dt><dd>
   <table class="tparams">
@@ -142,6 +142,8 @@ class Amuse::BitFlags&lt; TEnum, TBitsType &gt;</div><p>enum値をビットフ�
 <tr class="memitem:a04042d3cb6f66206327f9fe005cb014b" id="r_a04042d3cb6f66206327f9fe005cb014b"><td class="memItemLeft"><a id="a04042d3cb6f66206327f9fe005cb014b" name="a04042d3cb6f66206327f9fe005cb014b"></a>
 using&#160;</td><td class="memItemRight"><b>this_type</b> = <a class="el" href="#a56bb073126c948eb51496e7145e41838">BitFlags</a>&lt;TEnum, TBitsType&gt;</td></tr>
 <tr class="memdesc:a04042d3cb6f66206327f9fe005cb014b"><td class="mdescLeft">&#160;</td><td class="mdescRight">bit_flags&lt;TEnum, TBitsType&gt; <br /></td></tr>
+<tr class="memitem:a9643dfe7b825c3897b5eabd174a42fb6" id="r_a9643dfe7b825c3897b5eabd174a42fb6"><td class="memItemLeft"><a id="a9643dfe7b825c3897b5eabd174a42fb6" name="a9643dfe7b825c3897b5eabd174a42fb6"></a>
+using&#160;</td><td class="memItemRight"><b>enum_type</b> = TEnum</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 メソッド</h2></td></tr>
@@ -210,6 +212,8 @@ void&#160;</td><td class="memItemRight"><b>clear</b> ()</td></tr>
 <tr class="memdesc:ac8bb3912a3ce86b15842e79d0b421204"><td class="mdescLeft">&#160;</td><td class="mdescRight">クリア <br /></td></tr>
 <tr class="memitem:a91a684581ebf0a6bad23c25401e06676" id="r_a91a684581ebf0a6bad23c25401e06676"><td class="memItemLeft">TEnum&#160;</td><td class="memItemRight"><a class="el" href="../../d5/d4a/class_amuse_1_1_bit_flags_a91a684581ebf0a6bad23c25401e06676.html#a91a684581ebf0a6bad23c25401e06676">get_enum</a> () const</td></tr>
 <tr class="memdesc:a91a684581ebf0a6bad23c25401e06676"><td class="mdescLeft">&#160;</td><td class="mdescRight">内部値をenum値として取得する  <br /></td></tr>
+<tr class="memitem:a3f22d022ed4bb8963c43a07842c50d41" id="r_a3f22d022ed4bb8963c43a07842c50d41"><td class="memItemLeft">TBitsType&#160;</td><td class="memItemRight"><a class="el" href="../../d5/d4a/class_amuse_1_1_bit_flags_a3f22d022ed4bb8963c43a07842c50d41.html#a3f22d022ed4bb8963c43a07842c50d41">value</a> () const</td></tr>
+<tr class="memdesc:a3f22d022ed4bb8963c43a07842c50d41"><td class="mdescLeft">&#160;</td><td class="mdescRight">内部値を整数値として受け取る  <br /></td></tr>
 </table>
 <hr/>このクラス詳解は次のファイルから抽出されました:<ul>
 <li>Runtime/Core/Public/Amuse/Core/Template/Container/<a class="el" href="../../d7/d85/_bit_flags_8h_source.html">BitFlags.h</a></li>

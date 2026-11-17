@@ -282,7 +282,7 @@ var group___amuse_core =
     [ "Box", "d3/d41/struct_amuse_1_1_box.html", [
       [ "Box", "d3/d41/struct_amuse_1_1_box.html#a8555c410f62b68910d613b955ef16781", null ],
       [ "Box", "d3/d41/struct_amuse_1_1_box.html#a65c1a5acded16184567cb97fe3070cc4", null ],
-      [ "Box", "d3/d41/struct_amuse_1_1_box_ab569fd4e491a0dd354e2d2c5d5dfdb02.html#ab569fd4e491a0dd354e2d2c5d5dfdb02", null ],
+      [ "Box", "d3/d41/struct_amuse_1_1_box_a4851d96198b85b96ef2062d5368b72cb.html#a4851d96198b85b96ef2062d5368b72cb", null ],
       [ "empty", "d3/d41/struct_amuse_1_1_box.html#af34f0f34e77bda4a88ebd9b127634992", null ],
       [ "max", "d3/d41/struct_amuse_1_1_box_aec988daee12894626cd57f45d3c23a08.html#aec988daee12894626cd57f45d3c23a08", null ],
       [ "min", "d3/d41/struct_amuse_1_1_box_a631ce836af6623965f6c1a5fc3977fee.html#a631ce836af6623965f6c1a5fc3977fee", null ],
@@ -1742,7 +1742,8 @@ var group___amuse_core =
       [ "operator|", "d5/d4a/class_amuse_1_1_bit_flags.html#a1a4b80bec31eb2c64ac96f9e469e954d", null ],
       [ "operator|=", "d5/d4a/class_amuse_1_1_bit_flags.html#a84e419b92423aa3f94cedeea31a0ef2f", null ],
       [ "operator~", "d5/d4a/class_amuse_1_1_bit_flags.html#a18c7d4487bb050200a41aa1f944d0e41", null ],
-      [ "set", "d5/d4a/class_amuse_1_1_bit_flags_abaf7f08e1c75cfa8eb85a1b7bbe89467.html#abaf7f08e1c75cfa8eb85a1b7bbe89467", null ]
+      [ "set", "d5/d4a/class_amuse_1_1_bit_flags_abaf7f08e1c75cfa8eb85a1b7bbe89467.html#abaf7f08e1c75cfa8eb85a1b7bbe89467", null ],
+      [ "value", "d5/d4a/class_amuse_1_1_bit_flags_a3f22d022ed4bb8963c43a07842c50d41.html#a3f22d022ed4bb8963c43a07842c50d41", null ]
     ] ],
     [ "FixedVector&lt; T, N &gt;", "d1/d4e/class_amuse_1_1_fixed_vector.html", [
       [ "const_iterator", "d1/d4e/class_amuse_1_1_fixed_vector.html#ad87bb1fc9faef3a1c95e8e610b922dd3", null ],

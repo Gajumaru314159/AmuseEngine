@@ -6,7 +6,7 @@ var searchData=
   ['nearz_3',['nearZ',['../d0/d44/struct_amuse_1_1_viewport.html#abbbef3b84a1b436f7b7cdcb272beebb4',1,'Amuse::Viewport']]],
   ['newpos_4',['newPos',['../d1/d68/struct_amuse_1_1_window_event_args.html#ab6aa409cc11cade1613c1f498d355ce2',1,'Amuse::WindowEventArgs']]],
   ['newsize_5',['newSize',['../d1/d68/struct_amuse_1_1_window_event_args.html#ab144a2a4aaaaf2ff871f5f97464ccdcc',1,'Amuse::WindowEventArgs']]],
-  ['next_6',['next',['../d5/d10/struct_amuse_1_1_reflection_function.html#ab69bdec2d24aa446b9d793982a24e7b9',1,'Amuse::ReflectionFunction::next'],['../dd/db6/struct_amuse_1_1_handle_manager_1_1_node.html#a00dd0a636d0c9134072b4bc7951d08c2',1,'Amuse::HandleManager::Node::next']]],
+  ['next_6',['next',['../d5/d10/struct_amuse_1_1_reflection_function.html#ab69bdec2d24aa446b9d793982a24e7b9',1,'Amuse::ReflectionFunction::next'],['../dd/db6/struct_amuse_1_1_handle_manager_1_1_node.html#a00dd0a636d0c9134072b4bc7951d08c2',1,'Amuse::HandleManager::Node::next'],['../df/da9/struct_amuse_1_1_hierarchy_component.html#ab63582cf15897d1142f010358bc8b6e4',1,'Amuse::HierarchyComponent::next']]],
   ['no_7',['No',['../dd/d99/class_amuse_1_1_yes_no.html#a7a0a712a6865b930cf65f18fe384d1ea',1,'Amuse::YesNo']]],
   ['nodecount_8',['nodeCount',['../df/db1/struct_amuse_1_1_device_adapter_info.html#aaf8ab15ab56b98a34edf17f7915ad011',1,'Amuse::DeviceAdapterInfo']]],
   ['nodes_9',['nodes',['../d8/d0e/struct_amuse_1_1_schedule_build_error.html#a5da81cdfc427560a5972232726ba7175',1,'Amuse::ScheduleBuildError::nodes'],['../df/d77/struct_amuse_1_1_schedule_build_warning.html#a5da81cdfc427560a5972232726ba7175',1,'Amuse::ScheduleBuildWarning::nodes']]],

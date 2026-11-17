@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('d5/d4a/class_a
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename TEnum, typename TBitsType = u32&gt; </div>
+template&lt;typename TEnum, typename TBitsType = std::underlying_type_t&lt;TEnum&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">

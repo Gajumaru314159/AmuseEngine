@@ -24,4 +24,5 @@
 */
 var menudata={children:[
 {text:"Top",url:"index.html"},
+{text:"諸情報",url:"pages.html"},
 {text:"API Reference",url:"topics.html"}]}
