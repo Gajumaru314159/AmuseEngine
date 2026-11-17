@@ -92,70 +92,58 @@ TEST(Hash, FNV64Const) {
 
 TEST(Hash, Combine) {
 
-    // 2つの値のCombine（従来の動作確認）
+    // 単一の値からハッシュを取得できる
     {
-        size_t seed1 = 0;
-        Hash::Combine(seed1, 42);
-        Hash::Combine(seed1, 100);
-        
-        size_t seed2 = 0;
-        Hash::Combine(seed2, 42, 100);
-        
-        EXPECT_EQ(seed1, seed2);
+        size_t hash = Hash::Combine(42);
+        EXPECT_EQ(hash, Hash::Combine(42));
+        EXPECT_NE(hash, Hash::Combine(100));
     }
 
-    // 3つの値のCombine
+    // 2つの値のどちらも結果に反映される
     {
-        size_t seed1 = 0;
-        Hash::Combine(seed1, 1);
-        Hash::Combine(seed1, 2);
-        Hash::Combine(seed1, 3);
-        
-        size_t seed2 = 0;
-        Hash::Combine(seed2, 1, 2, 3);
-        
-        EXPECT_EQ(seed1, seed2);
+        size_t hash = Hash::Combine(42, 100);
+        EXPECT_EQ(hash, Hash::Combine(42, 100));
+        EXPECT_NE(hash, Hash::Combine(43, 100));
+        EXPECT_NE(hash, Hash::Combine(42, 101));
     }
 
-    // 異なる型の値のCombine
+    // 3つの値のすべてが結果に反映される
     {
-        size_t seed1 = 0;
-        Hash::Combine(seed1, 42);
-        Hash::Combine(seed1, 3.14f);
-        Hash::Combine(seed1, true);
-        Hash::Combine(seed1, std::string("test"));
-        
-        size_t seed2 = 0;
-        Hash::Combine(seed2, 42, 3.14f, true, std::string("test"));
-        
-        EXPECT_EQ(seed1, seed2);
+        size_t hash = Hash::Combine(1, 2, 3);
+        EXPECT_NE(hash, Hash::Combine(4, 2, 3));
+        EXPECT_NE(hash, Hash::Combine(1, 4, 3));
+        EXPECT_NE(hash, Hash::Combine(1, 2, 4));
+    }
+
+    // 異なる型の値もすべて結果に反映される
+    {
+        size_t hash = Hash::Combine(42, 3.14f, true, std::string("test"));
+        EXPECT_EQ(hash, Hash::Combine(42, 3.14f, true, std::string("test")));
+        EXPECT_NE(hash, Hash::Combine(43, 3.14f, true, std::string("test")));
+        EXPECT_NE(hash, Hash::Combine(42, 2.71f, true, std::string("test")));
+        EXPECT_NE(hash, Hash::Combine(42, 3.14f, false, std::string("test")));
+        EXPECT_NE(hash, Hash::Combine(42, 3.14f, true, std::string("other")));
     }
 
     // 順序の違いで異なるハッシュ値になることを確認
     {
-        size_t seed1 = 0;
-        Hash::Combine(seed1, 1, 2, 3);
-        
-        size_t seed2 = 0;
-        Hash::Combine(seed2, 3, 2, 1);
-        
-        EXPECT_NE(seed1, seed2);
+        EXPECT_NE(Hash::Combine(1, 2, 3), Hash::Combine(3, 2, 1));
     }
 
-    // 多くの引数のCombine
+    // 多くの引数の末尾まで結果に反映される
     {
-        size_t seed1 = 0;
-        Hash::Combine(seed1, 1);
-        Hash::Combine(seed1, 2);
-        Hash::Combine(seed1, 3);
-        Hash::Combine(seed1, 4);
-        Hash::Combine(seed1, 5);
-        Hash::Combine(seed1, 6);
-        
-        size_t seed2 = 0;
-        Hash::Combine(seed2, 1, 2, 3, 4, 5, 6);
-        
-        EXPECT_EQ(seed1, seed2);
+        size_t hash = Hash::Combine(1, 2, 3, 4, 5, 6);
+        EXPECT_EQ(hash, Hash::Combine(1, 2, 3, 4, 5, 6));
+        EXPECT_NE(hash, Hash::Combine(1, 2, 3, 4, 5, 7));
     }
 
+    // size_tの変数も入力値として扱い、書き換えない
+    {
+        size_t value = 42;
+        const size_t constValue = value;
+        EXPECT_EQ(Hash::Combine(value), Hash::Combine(size_t{42}));
+        EXPECT_EQ(Hash::Combine(value, 100), Hash::Combine(constValue, 100));
+        EXPECT_EQ(Hash::Combine(value, 100, 200), Hash::Combine(size_t{42}, 100, 200));
+        EXPECT_EQ(value, 42u);
+    }
 }

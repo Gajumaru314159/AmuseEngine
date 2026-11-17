@@ -3,6 +3,7 @@
 //! @author		Gajumaru
 //***********************************************************
 #include <Amuse/RPI/FrameGraph/FGResourcePool.h>
+#include <Amuse/Core/Hash/Hash.h>
 #include <Amuse/RHI/RHI.h>
 #include <Amuse/RHI/RenderTexture.h>
 #include <Amuse/RHI/Buffer.h>
@@ -10,44 +11,31 @@
 #include <Amuse/RPI/FrameGraph/FGBuffer.h>
 
 namespace std {
-	
-	inline void hash_combine(std::size_t& seed) { }
-
-	template <typename T, typename... Rest>
-	inline void hash_combine(std::size_t& seed, const T& v, Rest... rest) {
-		std::hash<T> hasher;
-		seed ^= hasher(v) + 0x9e3779b9 + (seed << 6) + (seed >> 2);
-		hash_combine(seed, rest...);
-	}
 
 	template<>
 	struct hash<::Amuse::RenderTextureDesc> {
+		//! @brief レンダーテクスチャ定義のハッシュ値を計算する。
 		size_t operator()(const ::Amuse::RenderTextureDesc& desc) {
-			size_t h = 0;
-			hash_combine(
-				h, 
+			return Amuse::Hash::Combine(
 				desc.format, 
 				desc.size.width, 
 				desc.size.height, 
 				desc.size.depth
 			);
-			return h;
 		}
 	};
 
 	template<>
 	struct hash<::Amuse::BufferDesc> {
+		//! @brief バッファ定義のハッシュ値を計算する。
 		size_t operator()(const ::Amuse::BufferDesc& desc) {
-			size_t h = 0;
-			hash_combine(
-				h, 
+			return Amuse::Hash::Combine(
 				Amuse::enum_cast(desc.state),
 				Amuse::enum_cast(desc.state),
 				desc.size, 
 				desc.stride,
 				Amuse::enum_cast(desc.flags.get_enum())
 			);
-			return h;
 		}
 	};
 

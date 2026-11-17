@@ -5,6 +5,9 @@
 #include <Amuse/Engine/System/TransformSystem.h>
 
 namespace Amuse {
+
+	//! @brief 親の変換を合成して子階層まで再帰的に更新する。
+	static void UpdateTransformRecursively(entt::registry& world, Entity entity, const TransformComponent* parent = nullptr);
 	
 	SystemAccess TransformSystem::Access = SystemAccess{}
 		.read<TransformComponent,HierarchyComponent>()
@@ -22,7 +25,7 @@ namespace Amuse {
 			do {
 				auto& hierarchy = world.get<HierarchyComponent>(entity);
 
-				if (world.try_get<TransformDirtyFlag>(hierarchy.parent)) {
+				if (world.all_of<TransformDirtyFlag>(hierarchy.parent)) {
 					root = entt::null;
 					break;
 				}
@@ -41,7 +44,8 @@ namespace Amuse {
 
 	}
 
-	void UpdateTransformRecursively(entt::registry& world, Entity entity,const TransformComponent* parent = nullptr) {
+	//! @brief 親の変換を合成して子階層まで再帰的に更新する。
+	static void UpdateTransformRecursively(entt::registry& world, Entity entity,const TransformComponent* parent) {
 
 		auto& hierarchy = world.get<HierarchyComponent>(entity);
 		auto& child = world.get<TransformComponent>(entity);

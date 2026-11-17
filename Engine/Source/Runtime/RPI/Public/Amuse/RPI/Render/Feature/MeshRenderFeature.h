@@ -32,7 +32,7 @@ namespace Amuse {
 				return m_cpu[index];
 			}
 			//! @brief 要素へアクセスする
-			const T& operator[](size_t index) const{
+			const T& operator[](size_t index) const {
 				return m_cpu[index];
 			}
 		private:
@@ -87,11 +87,10 @@ namespace Amuse {
 		//! @brief MeshUnitKey のハッシュ値を計算する
 		size_t operator()(const MeshUnitKey& key) const
 		{
-			size_t hash = 0;
-			Hash::Combine(hash,reinterpret_cast<size_t>(key.mesh.get()));
+			size_t hash = Hash::Combine(reinterpret_cast<size_t>(key.mesh.get()));
 			for (const auto& material : key.overrideMaterials)
 			{
-				Hash::Combine(hash, reinterpret_cast<size_t>(material.get()));
+				Hash::Append(hash, reinterpret_cast<size_t>(material.get()));
 			}
 			return hash;
 		}
@@ -149,7 +148,7 @@ namespace Amuse {
 		void update(UpdateContext& context);
 
 		//! @brief メッシュインスタンスを追加する
-		MeshProxy* addMesh(const Ref<Mesh>& mesh,const Matrix& matrix)
+		MeshProxy* addMesh(const Ref<Mesh>& mesh, const Matrix& matrix)
 		{
 			auto& command = m_commands.emplace_back();
 			command.type = MeshCommandType::Add;
@@ -181,7 +180,7 @@ namespace Amuse {
 					};
 					Vector<LOD> lods; //!< LOD 一覧
 				};
-				HashMap<MeshUnitKey,Unit,MeshUnitKeyHasher> units; //!< メッシュ単位データ
+				HashMap<MeshUnitKey, Unit, MeshUnitKeyHasher> units; //!< メッシュ単位データ
 				Vector<bool> culls; //!< カリング結果
 				Vector<s8>   lods; //!< 選択 LOD
 				Vector<s32>  instances; //!< インスタンス一覧
@@ -209,7 +208,7 @@ namespace Amuse {
 
 		SparseUploadBuffer<u32> m_instances;
 
-		HashMap<MeshUnitKey,MeshUnit,MeshUnitKeyHasher> m_units;
+		HashMap<MeshUnitKey, MeshUnit, MeshUnitKeyHasher> m_units;
 	};
 
 }

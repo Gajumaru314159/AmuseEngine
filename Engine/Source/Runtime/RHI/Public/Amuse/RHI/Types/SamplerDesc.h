@@ -135,19 +135,10 @@ namespace Amuse {
 		//! @brief 演算子処理を行う
 		size_t operator()(const SamplerDesc& desc) const noexcept
 		{
-			size_t hash = 0;
-			Hash::Combine(hash, desc.name);
-			Hash::Combine(hash, desc.filter);
-			Hash::Combine(hash, desc.mipFilter);
-			Hash::Combine(hash, desc.zFilter);
-			Hash::Combine(hash, desc.anisotropy);
-			Hash::Combine(hash, desc.addressU);
-			Hash::Combine(hash, desc.addressV);
-			Hash::Combine(hash, desc.addressW);
-			Hash::Combine(hash, desc.mipLodBias);
-			Hash::Combine(hash, desc.mipLodRange.min);
-			Hash::Combine(hash, desc.mipLodRange.max);
-			return hash;
+			return Hash::Combine(
+				desc.name, desc.filter, desc.mipFilter, desc.zFilter,
+				desc.anisotropy, desc.addressU, desc.addressV, desc.addressW,
+				desc.mipLodBias, desc.mipLodRange.min, desc.mipLodRange.max);
 		}
 	};
 	//! @brief サンプラ設定の等値比較

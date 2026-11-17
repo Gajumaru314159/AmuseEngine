@@ -13,29 +13,30 @@ namespace Amuse {
 	class Hash {
 	public:
 
-		template <class T>
-		//! @brief 既存のハッシュシードに値のハッシュを合成する。
-		static constexpr void Combine(size_t& seed, const T& v)
-		{
-			std::hash<T> hasher;
-			constexpr std::size_t kMul = 0x9ddfea08eb382d69ULL;
-			size_t a = (hasher(v) ^ seed) * kMul;
-			a ^= (a >> 47);
-			size_t b = (seed ^ a) * kMul;
-			b ^= (b >> 47);
-			seed = b * kMul;
-		}
-
 		template <class T, class... Args>
-		//! @brief 複数の値のハッシュを順にシードへ合成する。
-		static constexpr void Combine(size_t& seed, const T& v, const Args&... args)
+		//! @brief 0を初期値として値のハッシュを引数順に合成し、結果を返す。
+		[[nodiscard]] static constexpr size_t Combine(const T& v, const Args&... args)
 		{
-			Combine(seed, v);
-			if constexpr (sizeof...(args) > 0) {
-				Combine(seed, args...);
-			}
+			size_t seed = 0;
+			Append(seed, v, args...);
+			return seed;
 		}
 
+		template <class... Args>
+		//! @brief 既存のシードに値のハッシュを引数順に追加する。値の指定がなければ変更しない。
+		static constexpr void Append(size_t& seed, const Args&... args)
+		{
+			auto append = [&seed]<class TValue>(const TValue& value) {
+				std::hash<TValue> hasher;
+				constexpr std::size_t kMul = 0x9ddfea08eb382d69ULL;
+				size_t a = (hasher(value) ^ seed) * kMul;
+				a ^= (a >> 47);
+				size_t b = (seed ^ a) * kMul;
+				b ^= (b >> 47);
+				seed = b * kMul;
+			};
+			(append(args), ...);
+		}
 
 		//! @brief  FNV-1aによる文字列のハッシュ化
 		template<class TChar>

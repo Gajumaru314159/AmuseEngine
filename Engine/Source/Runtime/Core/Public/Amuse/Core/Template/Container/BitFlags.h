@@ -160,6 +160,12 @@ namespace Amuse {
 			return static_cast<TEnum>(m_bits);
 		}
 
+		//! @brief			内部値を整数値として受け取る
+		//! @return			内部値
+		TBitsType value()const {
+			return m_bits;
+		}
+
 	private:
 
 		TBitsType m_bits;	//!< 内部データ

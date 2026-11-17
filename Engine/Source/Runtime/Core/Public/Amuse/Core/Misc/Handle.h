@@ -108,9 +108,7 @@ template<class T>
 struct std::hash<Amuse::Handle<T>>
 {
     constexpr size_t operator()(const Amuse::Handle<T>& value)const noexcept {
-        size_t result = 0;
-        Amuse::Hash::Combine(result,value.index());
-        return result;
+        return Amuse::Hash::Combine(value.index());
     }
 
 };
