@@ -5,6 +5,7 @@ add_subdirectory("Input")
 add_subdirectory("RHI")
 add_subdirectory("ImGui")
 add_subdirectory("RPI")
+add_subdirectory("Engine")
 
 if(AMUSE_DIRECTX AND WIN32)
     add_subdirectory("DirectX12RHI")

@@ -61,6 +61,7 @@ amuse_fetch_git_with_tag(utf8cpp https://github.com/nemtrif/utfcpp.git "v4.0.5")
 amuse_fetch_git_with_tag(magic_enum https://github.com/Neargye/magic_enum.git "v0.8.0")
 amuse_fetch_git_with_tag(googletest https://github.com/google/googletest.git "v1.15.2")
 amuse_fetch_git_with_tag(assimp https://github.com/assimp/assimp.git "v6.0.5")
+amuse_fetch_git_with_tag(EnTT https://github.com/skypjack/entt.git "v4.0.0")
 amuse_fetch_git(FrameGraph https://github.com/skaarj1989/FrameGraph.git)
 
 if(AMUSE_DIRECTX AND WIN32)
