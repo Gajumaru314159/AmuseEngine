@@ -3,9 +3,9 @@
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
-#include <Amuse/VulkanRHI/pch.h>
 #include <Amuse/Core/Core.h>
 #include <Amuse/RHI/Sampler.h>
+#include <Amuse/VulkanRHI/VulkanShared.h>
 #include <Amuse/VulkanRHI/Descriptor/VulkanDescriptorHandle.h>
 
 namespace Amuse {

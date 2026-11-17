@@ -1,7 +1,5 @@
 project (VulkanRHI)
 
-set(pch_header "Amuse/VulkanRHI/pch.h")
-
 # 追加の依存ライブラリ
 set(public_libs 
     Core

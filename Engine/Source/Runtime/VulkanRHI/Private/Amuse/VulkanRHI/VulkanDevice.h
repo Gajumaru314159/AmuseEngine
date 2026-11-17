@@ -3,10 +3,10 @@
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
-#include <Amuse/VulkanRHI/pch.h>
 #include <Amuse/Core/Core.h>
 #include <Amuse/RHI/RHI.h>
 #include <Amuse/RHI/Config.h>
+#include <Amuse/VulkanRHI/VulkanShared.h>
 #include <Amuse/VulkanRHI/Buffer/VulkanBufferUploader.h>
 #include <Amuse/VulkanRHI/Texture/VulkanTextureUploader.h>
 #include <Amuse/VulkanRHI/Command/VulkanCommandQueue.h>

@@ -3,11 +3,11 @@
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
-#include <Amuse/VulkanRHI/pch.h>
 #include <Amuse/Core/Core.h>
-#include <Amuse/RHI/Buffer.h>
 #include <Amuse/Core/Utility/Swapper.h>
+#include <Amuse/RHI/Buffer.h>
 #include <Amuse/RHI/CommandList.h>
+#include <Amuse/VulkanRHI/VulkanShared.h>
 
 namespace Amuse {
 	class VulkanDevice;

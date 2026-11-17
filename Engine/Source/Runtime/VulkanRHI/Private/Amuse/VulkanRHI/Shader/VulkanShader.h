@@ -3,11 +3,10 @@
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
-#include <Amuse/VulkanRHI/pch.h>
 #include <Amuse/Core/Core.h>
 #include <Amuse/RHI/Shader.h>
 #include <Amuse/Core/Misc/Blob.h>
-#include <Amuse/RHI/Types/PipelineStateDesc.h>
+#include <Amuse/VulkanRHI/VulkanShared.h>
 
 namespace Amuse {
     //! @brief  シェーダ実装(DirectX12)

@@ -3,9 +3,9 @@
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
-#include <Amuse/VulkanRHI/pch.h>
 #include <Amuse/Core/Core.h>
 #include <Amuse/RHI/DescriptorTable.h>
+#include <Amuse/VulkanRHI/VulkanShared.h>
 
 namespace Amuse {
 	class VulkanDescriptorLayout;

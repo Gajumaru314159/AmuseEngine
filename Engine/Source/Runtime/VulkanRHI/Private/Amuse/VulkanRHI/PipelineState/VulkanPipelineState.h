@@ -3,9 +3,9 @@
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
-#include <Amuse/VulkanRHI/pch.h>
 #include <Amuse/Core/Core.h>
 #include <Amuse/RHI/PipelineState.h>
+#include <Amuse/VulkanRHI/VulkanShared.h>
 
 namespace Amuse {
     //! @brief		グラフィック・パイプライン実装(DirectX12)

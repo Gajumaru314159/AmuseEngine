@@ -3,12 +3,11 @@
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
-#include <Amuse/VulkanRHI/pch.h>
 #include <Amuse/Core/Core.h>
 #include <Amuse/RHI/CommandList.h>
 #include <Amuse/RHI/Types/CommandListDesc.h>
 #include <Amuse/RHI/Query.h>
-#include <Amuse/Core/Utility/Swapper.h>
+#include <Amuse/VulkanRHI/VulkanShared.h>
 #include <Amuse/VulkanRHI/Command/VulkanResourceStateCache.h>
 
 namespace Amuse {

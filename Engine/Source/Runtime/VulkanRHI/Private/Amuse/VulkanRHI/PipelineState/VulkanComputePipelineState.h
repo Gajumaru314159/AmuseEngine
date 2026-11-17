@@ -3,11 +3,11 @@
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
-#include <Amuse/VulkanRHI/pch.h>
 #include <Amuse/Core/Core.h>
 #include <Amuse/RHI/ComputePipelineState.h>
 #include <Amuse/RHI/Types/ComputePipelineStateDesc.h>
 #include <Amuse/VulkanRHI/RootSignature/VulkanRootSignature.h>
+#include <Amuse/VulkanRHI/VulkanShared.h>
 
 //===============================================================
 // 前方宣言

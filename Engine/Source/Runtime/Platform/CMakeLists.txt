@@ -1,7 +1,5 @@
 project (Platform)
 
-set(pch_header "Amuse/Platform/pch.h")
-
 # インクルードディレクトリ設定
 set(public_includes "")
 set(private_includes "")

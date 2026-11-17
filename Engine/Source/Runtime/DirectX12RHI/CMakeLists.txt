@@ -1,7 +1,5 @@
 project (DirectX12RHI)
 
-set(pch_header "Amuse/DirectX12RHI/pch.h")
-
 # 依存ライブラリ設定
 set(public_libs 
     Core

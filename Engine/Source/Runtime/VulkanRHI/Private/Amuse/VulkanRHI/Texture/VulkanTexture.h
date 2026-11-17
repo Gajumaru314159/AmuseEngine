@@ -3,11 +3,11 @@
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
-#include <Amuse/VulkanRHI/pch.h>
 #include <Amuse/Core/Core.h>
 #include <Amuse/RHI/RenderTexture.h>
 #include <Amuse/RHI/Types/TextureDesc.h>
 #include <Amuse/Core/Misc/BlobView.h>
+#include <Amuse/VulkanRHI/VulkanShared.h>
 #include <Amuse/VulkanRHI/Descriptor/VulkanDescriptorHandle.h>
 
 namespace Amuse {

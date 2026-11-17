@@ -3,7 +3,6 @@
 //! @author		Gajumaru
 //***********************************************************
 #pragma once
-#include <Amuse/VulkanRHI/pch.h>
 #include <Amuse/Core/Core.h>
 #include <Amuse/RHI/Types/TextureFormat.h>
 #include <Amuse/RHI/Types/RootSignatureDesc.h>
@@ -13,6 +12,7 @@
 #include <Amuse/RHI/Types/BufferDesc.h>
 #include <Amuse/RHI/Types/RenderPassDesc.h>
 #include <Amuse/RHI/Types/VertexLayout.h>
+#include <Amuse/VulkanRHI/VulkanShared.h>
 
 namespace Amuse {
 	//! @ingroup AmuseVulkanRHI

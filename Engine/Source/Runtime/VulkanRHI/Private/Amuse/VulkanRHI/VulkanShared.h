@@ -5,18 +5,12 @@
 #pragma once
 
 //============================================
-// System Base
-//============================================
-#include <Amuse/Core/Core.h>
-
-
-//============================================
 // Vulkan
 //============================================
 #ifdef OS_WINDOWS
-#	define VK_USE_PLATFORM_WIN32_KHR
+#define VK_USE_PLATFORM_WIN32_KHR
 #elif defined(OS_LINUX)
-#	define VK_USE_PLATFORM_XLIB_KHR
+#define VK_USE_PLATFORM_XLIB_KHR
 #endif
 
 #define GLFW_INCLUDE_VULKAN
@@ -28,7 +22,8 @@
 
 #include <Amuse/VulkanRHI/Utility/Utility.h>
 
-namespace Amuse {
+namespace Amuse
+{
 	class VulkanDevice;
 }
 
@@ -36,7 +31,7 @@ namespace Amuse {
 // DirectX Compiler
 //============================================
 #ifdef OS_WINDOWS
-#pragma warning(disable:4100)
+#pragma warning(disable : 4100)
 #include <d3d12shader.h>
 #include <dxcapi.h>
 #include <wrl/client.h>
@@ -44,7 +39,7 @@ using Microsoft::WRL::ComPtr;
 #endif
 #ifdef OS_LINUX
 #include <dxcapi.h>
-template<class T>
+template <class T>
 using ComPtr = CComPtr<T>;
 #undef None
 #undef Always
