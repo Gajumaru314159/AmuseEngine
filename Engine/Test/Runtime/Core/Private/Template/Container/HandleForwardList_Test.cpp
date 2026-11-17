@@ -2,6 +2,7 @@
 //! @file
 //! @author		Gajumaru
 //***********************************************************
+#include <Amuse/Core/HAL/PrimitiveType.h>
 #include <Amuse/Core/Template/Container/HandleForwardList.h>
 using namespace Amuse;
 

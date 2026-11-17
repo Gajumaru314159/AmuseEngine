@@ -2,12 +2,18 @@
 //! @file
 //! @author		Gajumaru
 //***********************************************************
-using namespace Amuse;
 #include <Amuse/Core/Math/Vectors.h>
 #include <Amuse/Core/Math/Quaternion.h>
 #include <Amuse/Core/Math/Rotation.h>
 #include <Amuse/Core/Misc/DateTime.h>
 #include <Amuse/Core/Misc/TimeSpan.h>
+#include <Amuse/Core/Misc/UUID.h>
+#include <Amuse/Core/Graphic/Color.h>
+#include <Amuse/Core/Graphic/IntColor.h>
+#include <Amuse/Core/Graphic/HSV.h>
+#include <Amuse/Core/String/Format.h>
+
+using namespace Amuse;
 
 TEST(UserDefinedFormat, DateTime) {
 	auto a = Format("{:.3}", Vec4(3.1415f, 2.235e6f, -0.01f, -123.5e-5f));

@@ -2,8 +2,9 @@
 //! @file
 //! @author		Gajumaru
 //***********************************************************
-using namespace Amuse;
 #include <Amuse/Core/Template/Container/HandleList.h>
+
+using namespace Amuse;
 
 struct Hoge {
     Hoge(int a, int b) :val(a* b) {}

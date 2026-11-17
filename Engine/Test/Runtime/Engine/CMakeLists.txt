@@ -1,7 +1,5 @@
 ﻿project (Engine-test)
 
-set(pch_header "pch.h")
-
 # 依存ライブラリ設定
 set(public_libs Core EnTT)
 set(private_libs "")

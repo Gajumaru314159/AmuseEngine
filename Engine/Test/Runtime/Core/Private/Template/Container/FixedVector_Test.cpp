@@ -2,8 +2,10 @@
 //! @file
 //! @author		Gajumaru
 //***********************************************************
-using namespace Amuse;
+#include <Amuse/Core/HAL/PrimitiveType.h>
 #include <Amuse/Core/Template/Container/FixedVector.h>
+
+using namespace Amuse;
 
 TEST(FixedVector, Constructors) {
 	FixedVector<int, 100> fakeEmpty, fake(5, 10), fakeCopy(fake), fakeArray{ 2, 3, 4, 5, 7 };

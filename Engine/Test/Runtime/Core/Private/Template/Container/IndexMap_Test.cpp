@@ -2,9 +2,10 @@
 //! @file
 //! @author		Gajumaru
 //***********************************************************
-using namespace Amuse;
 #include <string>
 #include <Amuse/Core/Template/Container/IndexMap.h>
+
+using namespace Amuse;
 
 TEST(IndexMap, InsertAndIterationOrder) {
 	IndexMap<int, const char*> map;

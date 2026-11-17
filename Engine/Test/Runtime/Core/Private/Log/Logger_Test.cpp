@@ -2,6 +2,10 @@
 //! @file
 //! @author		Gajumaru
 //***********************************************************
+#include <Amuse/Core/Log/Logger.h>
+#include <Amuse/Core/Log/LogMacro.h>
+#include <Amuse/Core/String/String.h>
+
 using namespace Amuse;
 
 namespace {

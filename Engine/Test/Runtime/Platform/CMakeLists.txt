@@ -1,7 +1,5 @@
 project (Platform-test)
 
-set(pch_header "pch.h")
-
 # 依存ライブラリ設定
 set(public_libs Platform)
 set(private_libs "")

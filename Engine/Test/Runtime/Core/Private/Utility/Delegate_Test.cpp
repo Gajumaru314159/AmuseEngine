@@ -3,6 +3,7 @@
 //! @author		Gajumaru
 //***********************************************************
 #include <Amuse/Core/Template/Container/BitSet.h>
+#include <Amuse/Core/Template/Container/Array.h>
 #include <Amuse/Core/Template/Utility/MiniDelegate.h>
 
 #if 0

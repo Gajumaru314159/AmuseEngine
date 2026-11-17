@@ -2,8 +2,10 @@
 //! @file
 //! @author		Gajumaru
 //***********************************************************
-using namespace Amuse;
 #include <Amuse/Core/Template/Container/BitFlags.h>
+#include <Amuse/Core/Template/Utility/Utility.h>
+
+using namespace Amuse;
 
 enum class Flags : s32
 {

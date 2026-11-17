@@ -85,21 +85,6 @@ function(_amuse_module_setup)
     # 定義
 	#list(APPEND private_definitions "${PROJECT_NAME}_API=AMUSE_API_EXPORT")
 	target_compile_definitions(${PROJECT_NAME} PUBLIC ${public_definitions} PRIVATE ${private_definitions})
-	
-	# プリコンパイルヘッダを設定
-	if(NOT pch_header AND EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/Private/pch.h)
-		set(pch_header "pch.h")
-	endif()
-	if(pch_header)
-		set(pch_header_path "${pch_header}")
-
-		target_precompile_headers(${PROJECT_NAME} PRIVATE "$<$<COMPILE_LANGUAGE:CXX>:${pch_header_path}>")
-		if(MSVC)
-			target_compile_options(${PROJECT_NAME} PRIVATE "/FI${pch_header}")
-		else()
-			target_compile_options(${PROJECT_NAME} PRIVATE "-include" "${pch_header}")
-		endif()
-	endif()
     
 	# ランタイムライブラリ設定
 	set_property(TARGET ${PROJECT_NAME} PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
@@ -187,6 +172,13 @@ function(amuse_add_test)
         
         # 共通セットアップ
         _amuse_module_setup()
+
+        # すべてのC++テストソースでGoogleTestを読み込む
+        if(MSVC)
+            target_compile_options(${PROJECT_NAME} PRIVATE "$<$<COMPILE_LANGUAGE:CXX>:/FIgtest/gtest.h>")
+        else()
+            target_compile_options(${PROJECT_NAME} PRIVATE "$<$<COMPILE_LANGUAGE:CXX>:SHELL:-include gtest/gtest.h>")
+        endif()
 
         # テストを登録
         if(working_directory)

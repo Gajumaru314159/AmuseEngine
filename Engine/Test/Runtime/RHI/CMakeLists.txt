@@ -1,7 +1,5 @@
 project (RHI-test)
 
-set(pch_header "pch.h")
-
 # 依存ライブラリ設定
 set(public_libs RHI)
 set(private_libs "")

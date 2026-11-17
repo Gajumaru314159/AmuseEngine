@@ -3,6 +3,7 @@
 //! @author		Gajumaru
 //***********************************************************
 #include <Amuse/Core/Misc/Scheduler.h>
+#include <Amuse/Core/File/File.h>
 #include <atomic>
 #include <fstream>
 

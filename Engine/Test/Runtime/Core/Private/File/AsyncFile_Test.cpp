@@ -4,6 +4,7 @@
 //***********************************************************
 #include <gtest/gtest.h>
 #include <Amuse/Core/File/AsyncFile.h>
+#include <Amuse/Core/File/File.h>
 
 using namespace Amuse;
 

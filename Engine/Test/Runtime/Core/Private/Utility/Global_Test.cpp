@@ -2,7 +2,7 @@
 //! @file
 //! @author		Gajumaru
 //***********************************************************
-#include <Amuse/Core/Core.h>
+#include <Amuse/Core/Log/LogMacro.h>
 #include <Amuse/Core/Utility/Global.h>
 
 using namespace Amuse;

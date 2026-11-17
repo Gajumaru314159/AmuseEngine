@@ -3,6 +3,7 @@
 //! @author		Gajumaru
 //***********************************************************
 #include <Amuse/Core/Hash/Hash.h>
+#include <Amuse/Core/Utility/ConstValue.h>
 
 using namespace Amuse;
 

@@ -2,8 +2,10 @@
 //! @file
 //! @author		Gajumaru
 //***********************************************************
-using namespace Amuse;
+#include <Amuse/Core/HAL/PrimitiveType.h>
 #include <Amuse/Core/Template/Utility/Delegate.h>
+
+using namespace Amuse;
 
 static int s_calledNo = 0;
 
